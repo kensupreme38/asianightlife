@@ -106,25 +106,6 @@ export const HeroBanner = () => {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-white"
-        onClick={prevSlide}
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </Button>
-      
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-white"
-        onClick={nextSlide}
-      >
-        <ChevronRight className="h-6 w-6" />
-      </Button>
-
       {/* Dots Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
         {banners.map((_, index) => (
