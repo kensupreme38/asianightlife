@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface VenueGalleryProps {
   images: string[];
@@ -28,10 +29,11 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
           className="col-span-3 relative cursor-pointer overflow-hidden rounded-lg"
           onClick={() => setShowLightbox(true)}
         >
-          <img 
+          <Image 
             src={images[currentImage]} 
             alt={`${venueName} - Image ${currentImage + 1}`}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           <div className="absolute bottom-4 left-4 text-white">
@@ -51,9 +53,10 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
               }`}
               onClick={() => setCurrentImage(index)}
             >
-              <img 
+              <Image 
                 src={image} 
                 alt={`${venueName} thumbnail ${index + 1}`}
+                fill
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               {index === 3 && images.length > 4 && (
@@ -70,10 +73,11 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
       {showLightbox && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
           <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
-            <img 
+            <Image 
               src={images[currentImage]} 
               alt={`${venueName} - Image ${currentImage + 1}`}
-              className="w-full h-full object-contain"
+              fill
+              className="object-contain"
             />
             
             {/* Close Button */}

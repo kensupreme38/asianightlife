@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, MapPin, Clock, MessageCircle, Heart } from "lucide-react";
+import Image from 'next/image';
 
 interface VenueCardProps {
   venue: {
@@ -29,14 +30,15 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
   };
 
   return (
-    <Link to={`/venue/${venue.id}`} className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 block"
+    <Link href={`/venue/${venue.id}`} className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 block"
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <img 
+        <Image 
           src={venue.image} 
           alt={venue.name}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         

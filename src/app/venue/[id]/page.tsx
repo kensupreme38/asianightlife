@@ -1,4 +1,6 @@
-import { useParams, Link } from "react-router-dom";
+'use client';
+import { useParams } from 'next/navigation';
+import Link from "next/link";
 import { ArrowLeft, Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
@@ -12,7 +14,8 @@ import livehouseSample from "@/assets/livehouse-sample.jpg";
 import heroBanner from "@/assets/hero-banner.jpg";
 
 const VenueDetail = () => {
-  const { id } = useParams();
+  const params = useParams();
+  const id = params.id as string;
 
   // Mock data - in real app, this would fetch based on ID
   const venue = {
@@ -40,12 +43,12 @@ const VenueDetail = () => {
   };
 
   const images = [
-    ktvSample,
-    clubSample,
-    livehouseSample,
-    heroBanner,
-    ktvSample,
-    clubSample
+    ktvSample.src,
+    clubSample.src,
+    livehouseSample.src,
+    heroBanner.src,
+    ktvSample.src,
+    clubSample.src
   ];
 
   const handleShare = () => {
@@ -67,7 +70,7 @@ const VenueDetail = () => {
       <main className="container py-8">
         {/* Breadcrumb & Actions */}
         <div className="flex items-center justify-between mb-8">
-          <Link to="/">
+          <Link href="/">
             <Button variant="ghost" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
               Quay lại danh sách

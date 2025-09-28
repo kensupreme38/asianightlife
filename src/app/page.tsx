@@ -1,23 +1,26 @@
-'use client'
+'use client';
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroBanner } from "@/components/home/HeroBanner";
+import { CountrySelector } from "@/components/home/CountrySelector";
+import { CategoryTabs } from "@/components/home/CategoryTabs";
+import { SearchSection } from "@/components/home/SearchSection";
+import { VenueGrid } from "@/components/home/VenueGrid";
 
-import { useState } from 'react'
-import ProjectSetup from '@/components/app/project-setup'
-import EditorLayout from '@/components/app/editor-layout'
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroBanner />
+        <CountrySelector />
+        <CategoryTabs />
+        <SearchSection />
+        <VenueGrid />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-export default function Home() {
-  const [repoUrl, setRepoUrl] = useState<string | null>(null)
-
-  const handleImport = (url: string) => {
-    setRepoUrl(url)
-  }
-  
-  const handleBack = () => {
-    setRepoUrl(null);
-  }
-
-  if (!repoUrl) {
-    return <ProjectSetup onImport={handleImport} />
-  }
-
-  return <EditorLayout repoUrl={repoUrl} onBack={handleBack} />
-}
+export default Index;

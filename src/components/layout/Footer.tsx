@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Music, MessageCircle, Instagram, Facebook, Send } from "lucide-react";
+import Link from 'next/link';
 
 export const Footer = () => {
   const socialLinks = [
@@ -45,10 +46,10 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Liên Kết Nhanh</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Trang Chủ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Địa Điểm</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Đặt Chỗ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Liên Hệ</a></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">Trang Chủ</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Địa Điểm</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Đặt Chỗ</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Liên Hệ</Link></li>
             </ul>
           </div>
 
@@ -56,10 +57,10 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Danh Mục</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">KTV</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Clubs</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Live House</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Khuyến Mãi</a></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">KTV</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Clubs</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Live House</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Khuyến Mãi</Link></li>
             </ul>
           </div>
 
@@ -67,10 +68,10 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Quốc Gia</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">🇸🇬 Singapore</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">🇻🇳 Vietnam</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">🇹🇭 Thailand</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">🇲🇾 Malaysia</a></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">🇸🇬 Singapore</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">🇻🇳 Vietnam</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">🇹🇭 Thailand</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">🇲🇾 Malaysia</Link></li>
             </ul>
           </div>
         </div>
@@ -80,15 +81,15 @@ export const Footer = () => {
             © 2024 NightLife. Tất cả quyền được bảo lưu.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Điều Khoản
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Chính Sách
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Hỗ Trợ
-            </a>
+            </Link>
           </div>
         </div>
       </div>

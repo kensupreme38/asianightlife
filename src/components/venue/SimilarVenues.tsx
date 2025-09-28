@@ -1,7 +1,6 @@
 import { VenueCard } from "@/components/home/VenueCard";
 import ktvSample from "@/assets/ktv-sample.jpg";
 import clubSample from "@/assets/club-sample.jpg";
-import livehouseSample from "@/assets/livehouse-sample.jpg";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -15,7 +14,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     {
       id: "2", 
       name: "Platinum KTV",
-      image: ktvSample,
+      image: ktvSample.src,
       category: "KTV",
       address: "Orchard Road, Singapore",
       price: "$90/giờ",
@@ -27,7 +26,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     {
       id: "3",
       name: "Diamond Club",
-      image: clubSample,
+      image: clubSample.src,
       category: "Club", 
       address: "Marina Bay, Singapore",
       price: "$85/người",
@@ -39,7 +38,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     {
       id: "4",
       name: "Royal KTV Lounge",
-      image: ktvSample,
+      image: ktvSample.src,
       category: "KTV",
       address: "Clarke Quay, Singapore", 
       price: "$75/giờ",

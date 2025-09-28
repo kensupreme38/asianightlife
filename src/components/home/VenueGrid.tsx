@@ -10,7 +10,7 @@ export const VenueGrid = () => {
     {
       id: "1",
       name: "Sky Lounge KTV",
-      image: ktvSample,
+      image: ktvSample.src,
       category: "KTV",
       address: "Marina Bay, Singapore",
       price: "$80/giờ",
@@ -22,7 +22,7 @@ export const VenueGrid = () => {
     {
       id: "2", 
       name: "Neon Club",
-      image: clubSample,
+      image: clubSample.src,
       category: "Club",
       address: "Quận 1, TP.HCM",
       price: "$50/người",
@@ -34,7 +34,7 @@ export const VenueGrid = () => {
     {
       id: "3",
       name: "Echo Live House",
-      image: livehouseSample,
+      image: livehouseSample.src,
       category: "Live House",
       address: "Bangkok, Thailand",
       price: "$25/vé",
@@ -46,7 +46,7 @@ export const VenueGrid = () => {
     {
       id: "4",
       name: "Royal KTV Palace",
-      image: ktvSample,
+      image: ktvSample.src,
       category: "KTV",
       address: "Kuala Lumpur, Malaysia",
       price: "$60/giờ",
@@ -58,7 +58,7 @@ export const VenueGrid = () => {
     {
       id: "5",
       name: "Underground Club",
-      image: clubSample,
+      image: clubSample.src,
       category: "Club",
       address: "Clarke Quay, Singapore",
       price: "$70/người",
@@ -70,7 +70,7 @@ export const VenueGrid = () => {
     {
       id: "6",
       name: "Harmony Live",
-      image: livehouseSample,
+      image: livehouseSample.src,
       category: "Live House",
       address: "Hà Nội, Vietnam",
       price: "$20/vé",
