@@ -1,6 +1,6 @@
+'use client';
 import { VenueCard } from "@/components/home/VenueCard";
-import ktvSample from "@/assets/ktv-sample.jpg";
-import clubSample from "@/assets/club-sample.jpg";
+import { getImage } from "@/lib/placeholder-images";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -9,12 +9,16 @@ interface SimilarVenuesProps {
 }
 
 export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenuesProps) => {
+  const ktvImage = getImage('ktv-sample');
+  const clubImage = getImage('club-sample');
+
   // Mock data - in real app, this would filter based on category/country and exclude current venue
   const similarVenues = [
     {
       id: "2", 
       name: "Platinum KTV",
-      image: ktvSample.src,
+      image: ktvImage?.imageUrl || "https://picsum.photos/seed/ktv2/600/400",
+      imageHint: ktvImage?.imageHint,
       category: "KTV",
       address: "Orchard Road, Singapore",
       price: "$90/giờ",
@@ -26,7 +30,8 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     {
       id: "3",
       name: "Diamond Club",
-      image: clubSample.src,
+      image: clubImage?.imageUrl || "https://picsum.photos/seed/club2/600/400",
+      imageHint: clubImage?.imageHint,
       category: "Club", 
       address: "Marina Bay, Singapore",
       price: "$85/người",
@@ -38,7 +43,8 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     {
       id: "4",
       name: "Royal KTV Lounge",
-      image: ktvSample.src,
+      image: ktvImage?.imageUrl || "https://picsum.photos/seed/ktv3/600/400",
+      imageHint: ktvImage?.imageHint,
       category: "KTV",
       address: "Clarke Quay, Singapore", 
       price: "$75/giờ",

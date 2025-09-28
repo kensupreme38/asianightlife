@@ -8,14 +8,16 @@ import { Footer } from "@/components/layout/Footer";
 import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
-import ktvSample from "@/assets/ktv-sample.jpg";
-import clubSample from "@/assets/club-sample.jpg";
-import livehouseSample from "@/assets/livehouse-sample.jpg";
-import heroBanner from "@/assets/hero-banner.jpg";
+import { getImage } from '@/lib/placeholder-images';
 
 const VenueDetail = () => {
   const params = useParams();
   const id = params.id as string;
+
+  const ktvSample = getImage('ktv-sample');
+  const clubSample = getImage('club-sample');
+  const livehouseSample = getImage('livehouse-sample');
+  const heroBanner = getImage('hero-banner');
 
   // Mock data - in real app, this would fetch based on ID
   const venue = {
@@ -43,13 +45,13 @@ const VenueDetail = () => {
   };
 
   const images = [
-    ktvSample.src,
-    clubSample.src,
-    livehouseSample.src,
-    heroBanner.src,
-    ktvSample.src,
-    clubSample.src
-  ];
+    ktvSample?.imageUrl || '',
+    clubSample?.imageUrl || '',
+    livehouseSample?.imageUrl || '',
+    heroBanner?.imageUrl || '',
+    ktvSample?.imageUrl || '',
+    clubSample?.imageUrl || ''
+  ].filter(Boolean);
 
   const handleShare = () => {
     if (navigator.share) {

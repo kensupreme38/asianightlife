@@ -4,8 +4,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from 'next-themes';
+import Providers from '@/components/app/providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,17 +26,6 @@ export const metadata: Metadata = {
     images: ['https://lovable.dev/opengraph-image-p98pqg.png'],
   },
 };
-
-// As this is a client component, QueryClientProvider needs to be wrapped in a client component.
-const queryClient = new QueryClient();
-
-function Providers({ children }: { children: React.ReactNode }) {
-  return (
-    <QueryClientProvider client={queryClient}>
-        {children}
-    </QueryClientProvider>
-  )
-}
 
 export default function RootLayout({
   children,

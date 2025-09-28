@@ -1,16 +1,18 @@
+'use client';
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBanner from "@/assets/hero-banner.jpg";
 import Image from "next/image";
+import { getImage } from "@/lib/placeholder-images";
 
 export const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const heroBannerImage = getImage('hero-banner');
   
   const banners = [
     {
       id: 1,
-      image: heroBanner.src,
+      image: heroBannerImage?.imageUrl || "https://picsum.photos/seed/hero/1200/600",
       title: "Khám Phá Những Địa Điểm Hot Nhất",
       subtitle: "Singapore • Vietnam • Thailand • Malaysia",
       description: "Đặt chỗ ngay tại các club, KTV và live house hàng đầu Đông Nam Á",
@@ -18,7 +20,7 @@ export const HeroBanner = () => {
     },
     {
       id: 2,
-      image: heroBanner.src,
+      image: heroBannerImage?.imageUrl || "https://picsum.photos/seed/hero2/1200/600",
       title: "Ưu Đãi Đặc Biệt Cuối Tuần",
       subtitle: "Giảm 30% cho booking trước 6PM",
       description: "Đừng bỏ lỡ cơ hội trải nghiệm những địa điểm giải trí tuyệt vời",
@@ -58,6 +60,7 @@ export const HeroBanner = () => {
               fill
               className="object-cover"
               priority={index === 0}
+              data-ai-hint={heroBannerImage?.imageHint}
             />
             
             {/* Overlay */}

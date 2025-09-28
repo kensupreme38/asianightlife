@@ -1,16 +1,20 @@
+'use client';
 import { VenueCard } from "./VenueCard";
 import { Button } from "@/components/ui/button";
-import ktvSample from "@/assets/ktv-sample.jpg";
-import clubSample from "@/assets/club-sample.jpg";
-import livehouseSample from "@/assets/livehouse-sample.jpg";
+import { getImage } from "@/lib/placeholder-images";
 
 export const VenueGrid = () => {
+  const ktvImage = getImage('ktv-sample');
+  const clubImage = getImage('club-sample');
+  const livehouseImage = getImage('livehouse-sample');
+
   // Mock data for demonstration
   const venues = [
     {
       id: "1",
       name: "Sky Lounge KTV",
-      image: ktvSample.src,
+      image: ktvImage?.imageUrl || "https://picsum.photos/seed/ktv/600/400",
+      imageHint: ktvImage?.imageHint,
       category: "KTV",
       address: "Marina Bay, Singapore",
       price: "$80/giờ",
@@ -22,7 +26,8 @@ export const VenueGrid = () => {
     {
       id: "2", 
       name: "Neon Club",
-      image: clubSample.src,
+      image: clubImage?.imageUrl || "https://picsum.photos/seed/club/600/400",
+      imageHint: clubImage?.imageHint,
       category: "Club",
       address: "Quận 1, TP.HCM",
       price: "$50/người",
@@ -34,7 +39,8 @@ export const VenueGrid = () => {
     {
       id: "3",
       name: "Echo Live House",
-      image: livehouseSample.src,
+      image: livehouseImage?.imageUrl || "https://picsum.photos/seed/livehouse/600/400",
+      imageHint: livehouseImage?.imageHint,
       category: "Live House",
       address: "Bangkok, Thailand",
       price: "$25/vé",
@@ -46,7 +52,8 @@ export const VenueGrid = () => {
     {
       id: "4",
       name: "Royal KTV Palace",
-      image: ktvSample.src,
+      image: ktvImage?.imageUrl || "https://picsum.photos/seed/ktv2/600/400",
+      imageHint: ktvImage?.imageHint,
       category: "KTV",
       address: "Kuala Lumpur, Malaysia",
       price: "$60/giờ",
@@ -58,7 +65,8 @@ export const VenueGrid = () => {
     {
       id: "5",
       name: "Underground Club",
-      image: clubSample.src,
+      image: clubImage?.imageUrl || "https://picsum.photos/seed/club2/600/400",
+      imageHint: clubImage?.imageHint,
       category: "Club",
       address: "Clarke Quay, Singapore",
       price: "$70/người",
@@ -70,7 +78,8 @@ export const VenueGrid = () => {
     {
       id: "6",
       name: "Harmony Live",
-      image: livehouseSample.src,
+      image: livehouseImage?.imageUrl || "https://picsum.photos/seed/livehouse2/600/400",
+      imageHint: livehouseImage?.imageHint,
       category: "Live House",
       address: "Hà Nội, Vietnam",
       price: "$20/vé",
