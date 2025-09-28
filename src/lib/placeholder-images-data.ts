@@ -1,0 +1,26 @@
+export const placeholderImagesData = [
+    {
+      "id": "hero-banner",
+      "description": "A vibrant nightlife scene in a bustling city.",
+      "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuaWdodCUyMGNsdWIlMjBwYXJ0eXxlbnwwfHx8fDE3NTkwNzI4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nightclub party"
+    },
+    {
+      "id": "ktv-sample",
+      "description": "A modern and luxurious KTV room with comfortable seating.",
+      "imageUrl": "https://images.unsplash.com/photo-1738156793840-e7ad46384761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrYXJhb2tlJTIwcm9vbXxlbnwwfHx8fDE3NTkwNzE0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "karaoke room"
+    },
+    {
+      "id": "club-sample",
+      "description": "A lively club with a dance floor and colorful lights.",
+      "imageUrl": "https://images.unsplash.com/photo-1570872626485-d8ffea69f463?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGNsdWJ8ZW58MHx8fHwxNzU4OTg0Mjg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "night club"
+    },
+    {
+      "id": "livehouse-sample",
+      "description": "A live music performance at an intimate venue.",
+      "imageUrl": "https://images.unsplash.com/photo-1656283384093-1e227e621fad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGNvbmNlcnR8ZW58MHx8fHwxNzU5MDE1NzI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "music concert"
+    }
+  ];
