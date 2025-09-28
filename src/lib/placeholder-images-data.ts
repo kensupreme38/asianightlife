@@ -6,6 +6,12 @@ export const placeholderImagesData = [
       "imageHint": "nightclub party"
     },
     {
+      "id": "hero-banner-2",
+      "description": "Special promotion banner with a person in a stylish setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "fashion style"
+    },
+    {
       "id": "ktv-sample",
       "description": "A modern and luxurious KTV room with comfortable seating.",
       "imageUrl": "https://images.unsplash.com/photo-1738156793840-e7ad46384761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrYXJhb2tlJTIwcm9vbXxlbnwwfHx8fDE3NTkwNzE0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",

@@ -8,11 +8,13 @@ import { getImage } from "@/lib/placeholder-images";
 export const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroBannerImage = getImage('hero-banner');
+  const heroBannerImage2 = getImage('hero-banner-2');
   
   const banners = [
     {
       id: 1,
       image: heroBannerImage?.imageUrl || "https://picsum.photos/seed/hero/1200/600",
+      imageHint: heroBannerImage?.imageHint,
       title: "Khám Phá Những Địa Điểm Hot Nhất",
       subtitle: "Singapore • Vietnam • Thailand • Malaysia",
       description: "Đặt chỗ ngay tại các club, KTV và live house hàng đầu Đông Nam Á",
@@ -20,7 +22,8 @@ export const HeroBanner = () => {
     },
     {
       id: 2,
-      image: heroBannerImage?.imageUrl || "https://picsum.photos/seed/hero2/1200/600",
+      image: heroBannerImage2?.imageUrl || "https://picsum.photos/seed/hero2/1200/600",
+      imageHint: heroBannerImage2?.imageHint,
       title: "Ưu Đãi Đặc Biệt Cuối Tuần",
       subtitle: "Giảm 30% cho booking trước 6PM",
       description: "Đừng bỏ lỡ cơ hội trải nghiệm những địa điểm giải trí tuyệt vời",
@@ -60,7 +63,7 @@ export const HeroBanner = () => {
               fill
               className="object-cover"
               priority={index === 0}
-              data-ai-hint={heroBannerImage?.imageHint}
+              data-ai-hint={banner.imageHint}
             />
             
             {/* Overlay */}
