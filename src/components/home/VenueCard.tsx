@@ -35,7 +35,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
     <Link href={`/venue/${venue.id}`} className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 block"
     >
       {/* Image */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-56 overflow-hidden">
         <Image 
           src={venue.image} 
           alt={venue.name}
@@ -82,32 +82,22 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
       </div>
 
       {/* Content */}
-      <div className="p-4">
-        <div className="flex items-start justify-between mb-2">
-          <h3 className="font-bold text-lg line-clamp-1 group-hover:text-primary transition-colors">
-            {venue.name}
-          </h3>
-          <div className="flex items-center space-x-1 shrink-0 ml-2">
-            <Star className="h-4 w-4 text-gold fill-current" />
-            <span className="text-sm font-medium">{venue.rating}</span>
+      <div className="p-4 space-y-4">
+        <div>
+          <div className="flex items-start justify-between mb-2">
+            <h3 className="font-bold text-lg line-clamp-1 group-hover:text-primary transition-colors">
+              {venue.name}
+            </h3>
+            <div className="flex items-center space-x-1 shrink-0 ml-2">
+              <Star className="h-4 w-4 text-gold fill-current" />
+              <span className="text-sm font-medium">{venue.rating}</span>
+            </div>
           </div>
-        </div>
 
-        <div className="flex items-center text-muted-foreground text-sm mb-3">
-          <MapPin className="h-4 w-4 mr-1 shrink-0" />
-          <span className="line-clamp-1">{venue.address}</span>
-        </div>
-
-        {/* Features */}
-        <div className="flex flex-wrap gap-1 mb-4">
-          {venue.features.slice(0, 3).map((feature, index) => (
-            <span 
-              key={index}
-              className="text-xs px-2 py-1 bg-secondary rounded-full text-muted-foreground"
-            >
-              {feature}
-            </span>
-          ))}
+          <div className="flex items-center text-muted-foreground text-sm">
+            <MapPin className="h-4 w-4 mr-1 shrink-0" />
+            <span className="line-clamp-1">{venue.address}</span>
+          </div>
         </div>
 
         {/* Booking Button */}
