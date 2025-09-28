@@ -2,7 +2,7 @@ export const placeholderImagesData = [
     {
       "id": "hero-banner",
       "description": "A vibrant nightlife scene in a bustling city.",
-      "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuaWdodCUyMGNsdWIlMjBwYXJ0eXxlbnwwfHx8fDE3NTkwNzI4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "nightclub party"
     },
     {
