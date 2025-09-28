@@ -3,8 +3,8 @@
     {
       "id": "hero-banner",
       "description": "A vibrant nightlife scene in a bustling city.",
-      "imageUrl": "https://images.unsplash.com/photo-1596048879706-0990d4ce2b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmlnaHRsaWZlJTIwY2l0eXxlbnwwfHx8fDE3NTkwNzE0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nightlife city"
+      "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuaWdodCUyMGNsdWIlMjBwYXJ0eXxlbnwwfHx8fDE3NTkwNzI4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nightclub party"
     },
     {
       "id": "ktv-sample",
