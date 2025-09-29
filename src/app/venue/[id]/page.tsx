@@ -121,7 +121,8 @@ const VenueDetail = () => {
         </div>
 
         {/* Masonry Gallery */}
-        <div className="mb-12">
+        <div className="card-elevated p-6 rounded-xl mb-12">
+           <h3 className="text-xl font-bold mb-4">Thư Viện Ảnh</h3>
            <VenueImageMasonry images={images} />
         </div>
 
