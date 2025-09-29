@@ -25,7 +25,8 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'nightlifeasia.wiki',
-        pathname: '/images/**',
+        port: '',
+        pathname: '/**',
       },
     ],
   },
