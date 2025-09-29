@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface VenueGalleryProps {
   images: string[];
@@ -9,42 +8,26 @@ interface VenueGalleryProps {
 }
 
 export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [showLightbox, setShowLightbox] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   if (!images || images.length === 0) {
-    return null;
+    return <Skeleton className="h-[550px] w-full rounded-lg" />;
   }
 
-  const openLightbox = (index: number) => {
-    setCurrentImage(index);
-    setShowLightbox(true);
-  };
-
-  const closeLightbox = () => {
-    setShowLightbox(false);
-  };
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
-  };
-
   return (
-    <>
-      {/* Main Gallery */}
-      <div className="relative h-[550px] w-full rounded-lg overflow-hidden group">
-        <Image
-          src={images[0]}
-          alt={`${venueName} - Image 1`}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
-    </>
+    <div className="relative h-[550px] w-full rounded-lg overflow-hidden group">
+      {isLoading && <Skeleton className="h-full w-full absolute inset-0" />}
+      <Image
+        src={images[0]}
+        alt={`${venueName} - Image 1`}
+        fill
+        className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`}
+        onLoad={() => setIsLoading(false)}
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+    </div>
   );
 };
