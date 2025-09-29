@@ -17,7 +17,7 @@ const VenueDetail = () => {
   const id = params.id as string;
 
   const venue = useMemo(() => {
-    const foundVenue = ktvData.find(v => v.id === id);
+    const foundVenue = ktvData.find(v => v.id.toString() === id);
     if (foundVenue) {
       return {
         ...foundVenue,
@@ -136,7 +136,7 @@ const VenueDetail = () => {
 
         {/* Similar Venues */}
         <SimilarVenues 
-          currentVenueId={venue.id}
+          currentVenueId={venue.id.toString()}
           category={venue.category}
           country={venue.country}
         />

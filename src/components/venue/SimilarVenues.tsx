@@ -11,7 +11,7 @@ interface SimilarVenuesProps {
 export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenuesProps) => {
   
   const similarVenues = ktvData
-    .filter(venue => venue.id !== currentVenueId && venue.category === category)
+    .filter(venue => venue.id.toString() !== currentVenueId && venue.category === category)
     .slice(0, 3)
     .map(v => ({
       ...v,
