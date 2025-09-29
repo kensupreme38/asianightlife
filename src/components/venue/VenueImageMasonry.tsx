@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Masonry from 'react-masonry-css';
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -67,6 +67,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
 
       <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] w-full p-0 bg-transparent border-0 flex items-center justify-center">
+            <DialogTitle className="sr-only">Image Lightbox</DialogTitle>
             <div className="relative">
               <Image
                 src={images[selectedImageIndex]}
