@@ -19,6 +19,11 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
   const prevImage = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
+  
+  const openLightbox = (index: number) => {
+    setCurrentImage(index);
+    setShowLightbox(true);
+  }
 
   return (
     <>
@@ -26,8 +31,8 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
       <div className="grid grid-cols-4 gap-2 h-96">
         {/* Main Image */}
         <div 
-          className="col-span-3 relative overflow-hidden rounded-lg"
-          onClick={() => setShowLightbox(true)}
+          className="col-span-3 relative overflow-hidden rounded-lg cursor-pointer"
+          onClick={() => openLightbox(currentImage)}
         >
           <Image 
             src={images[currentImage]} 
@@ -49,7 +54,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
             <div 
               key={index}
               className={`relative cursor-pointer overflow-hidden rounded-lg h-[22%] ${
-                index === currentImage ? 'ring-2 ring-primary' : ''
+                currentImage === index ? 'ring-2 ring-primary' : ''
               }`}
               onClick={() => setCurrentImage(index)}
             >
@@ -62,7 +67,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
               {index === 3 && images.length > 4 && (
                 <div 
                   className="absolute inset-0 bg-black/60 flex items-center justify-center text-white font-medium"
-                  onClick={() => setShowLightbox(true)}
+                  onClick={() => openLightbox(index)}
                 >
                   +{images.length - 4}
                 </div>
@@ -74,8 +79,8 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
 
       {/* Lightbox */}
       {showLightbox && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
-          <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center" onClick={() => setShowLightbox(false)}>
+          <div className="relative w-full h-full max-w-4xl max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
             <Image 
               src={images[currentImage]} 
               alt={`${venueName} - Image ${currentImage + 1}`}
@@ -87,7 +92,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-4 right-4 text-white hover:bg-white/20"
+              className="absolute -top-10 right-0 text-white hover:bg-white/20"
               onClick={() => setShowLightbox(false)}
             >
               <X className="h-6 w-6" />
@@ -97,19 +102,19 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 h-12 w-12"
               onClick={prevImage}
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-8 w-8" />
             </Button>
             
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 h-12 w-12"
               onClick={nextImage}
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-8 w-8" />
             </Button>
 
             {/* Image Counter */}
