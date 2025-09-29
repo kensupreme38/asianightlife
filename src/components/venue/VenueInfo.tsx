@@ -94,7 +94,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
             onClick={handleBooking}
             size="lg" 
             variant="neon"
-            className="flex-1"
+            className="flex-1 py-4 sm:py-2"
             disabled={!isOpen}
           >
             <MessageCircle className="h-5 w-5 mr-2" />
@@ -104,7 +104,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
             onClick={handleCall}
             size="lg" 
             variant="outline"
-            className="flex-1"
+            className="flex-1 py-4 sm:py-2"
           >
             <Phone className="h-5 w-5 mr-2" />
             Call Now
@@ -156,10 +156,10 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
       </div>
 
       {/* Features & Amenities */}
-      <div className="grid md:grid-cols-1 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="card-elevated p-6 rounded-xl">
           <h3 className="text-lg font-bold mb-4">Amenities</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             {venue.amenities.map((amenity, index) => {
               const IconComponent = amenityIcons[amenity] || CheckCircle;
               return (
