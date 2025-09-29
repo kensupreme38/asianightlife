@@ -10,6 +10,7 @@ import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
 import { getImage } from '@/lib/placeholder-images';
+import { VenueImageMasonry } from '@/components/venue/VenueImageMasonry';
 
 const VenueDetail = () => {
   const params = useParams();
@@ -115,7 +116,14 @@ const VenueDetail = () => {
         </div>
 
         {/* Venue Info */}
-        <VenueInfo venue={venue} />
+        <div className="mb-12">
+          <VenueInfo venue={venue} />
+        </div>
+
+        {/* Masonry Gallery */}
+        <div className="mb-12">
+           <VenueImageMasonry images={images} />
+        </div>
 
         {/* Similar Venues */}
         <SimilarVenues 
