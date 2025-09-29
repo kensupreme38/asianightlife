@@ -39,6 +39,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           src={venue.main_image_url} 
           alt={venue.name}
           fill
+          unoptimized
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           data-ai-hint={venue.imageHint}
