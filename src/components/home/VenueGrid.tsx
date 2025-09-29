@@ -13,7 +13,7 @@ export const VenueGrid = () => {
       category: "KTV",
       address: ktv.address,
       price: ktv.price,
-      rating: parseFloat((Math.random() * (5 - 4.2) + 4.2).toFixed(1)),
+      rating: 4.5,
       status: "open" as const,
       features: ktv.features,
       country: "singapore"
@@ -53,5 +53,3 @@ export const VenueGrid = () => {
     </section>
   );
 };
-
-    
