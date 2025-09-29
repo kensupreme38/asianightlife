@@ -39,10 +39,10 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           src={venue.main_image_url} 
           alt={venue.name}
           fill
-          unoptimized
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           data-ai-hint={venue.imageHint}
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         
@@ -56,19 +56,6 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
             {isOpen ? "Open" : "Closed"}
           </Badge>
         </div>
-
-        {/* Heart Icon */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute top-3 right-3 h-8 w-8 bg-black/40 hover:bg-black/60 text-white"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-          }}
-        >
-          <Heart className="h-4 w-4" />
-        </Button>
 
         {/* Category & Price */}
         <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end">
