@@ -95,7 +95,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           disabled={!isOpen}
         >
           <MessageCircle className="h-4 w-4 mr-2" />
-          {isOpen ? "Book Now" : "Temporarily Closed"}
+          {isOpen ? "Make A Booking" : "Temporarily Closed"}
         </Button>
       </div>
     </Link>

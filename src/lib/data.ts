@@ -18,13 +18,38 @@ export const ktvData = [
     "id": 2,
     "name": "Supreme KTV",
     "main_image_url": "https://nightlifeasia.wiki/images/thumb/c/c6/Supreme-ktv.jpg/350px-Supreme-ktv.jpg",
-    "images": ["https://nightlifeasia.wiki/images/thumb/f/f0/Supreme_2024_Liquor_Promo.jpg/91px-Supreme_2024_Liquor_Promo.jpg", "https://nightlifeasia.wiki/images/thumb/b/bf/Supreme_2024_Beer_Promo.jpg/92px-Supreme_2024_Beer_Promo.jpg", "https://nightlifeasia.wiki/images/thumb/6/6b/Supreme_2024_HH_Promo.jpg/55px-Supreme_2024_HH_Promo.jpg", "https://nightlifeasia.wiki/images/thumb/7/79/Supreme_Menu_1.jpg/85px-Supreme_Menu_1.jpg", "https://nightlifeasia.wiki/images/thumb/6/62/Supreme_Menu_2.jpg/85px-Supreme_Menu_2.jpg"],
+    "images": ["https://chiongbuddy.com/wp-content/uploads/2024/01/Supreme-KTV-Price-Happy-Hour-Promotion-768x1003.jpg", "https://chiongbuddy.com/wp-content/uploads/2024/01/Supreme-KTV-Price.jpg", "https://chiongbuddy.com/wp-content/uploads/2023/12/Supreme-KTV-Room-1.jpg"],
     "address": "545 Orchard Road, #B1-22, Far East Shopping Centre",
     "country": "Singapore",
-    "phone": "",
+    "phone": "+65 9777 2575",
     "category": "KTV",
-    "price": "$78, $98, $108",
-    "description": "Supreme KTV is an iconic establishment in Singapore with at least 10 years of history. We were there recently, and they have super hot hostesses and very good playability. Supreme has re-established itself as a top KTV in Singapore and we highly recommend a visit. All rooms also have 2 TV screens and service is always good. Highly recommended.",
+    "price": "$324",
+    "description": `
+### Opening Hours & Tips
+- Mon-Sat 6-10 $100
+- Mon-Sat 10-2 $100
+- Sun 8-2 $100
+- Mon-Sun 2-6am $150, mami $100
+
+### Promotion
+- HH 3free1 and 3free2 towers
+
+### Surcharges
+- Service Charge 10%
+- GST 9%
+
+### Minimum Spend
+- S room (4 pax) - 1 tower / 1 bottle
+- M room (6 pax) - 4 towers / 2 bottles
+- L room (8 pax) - 8 towers / 3 bottles
+- VIP room w Pool Table (12 pax) - 12 towers / 4 bottles
+
+### Recommended For
+- High Playability
+- Pretty Girls
+- Wide Variety
+- Pool table in VIP room
+`,
     "hours": "5PM - 6AM",
     "contact": "JK787393 (Wechat)"
   },
