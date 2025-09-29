@@ -84,15 +84,13 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
             <DialogTitle className="sr-only">Image Lightbox</DialogTitle>
             
             {/* Image */}
-            <div className="relative w-full h-full flex items-center justify-center">
-              <Image
-                src={images[selectedImageIndex]}
-                alt={`Venue gallery image ${selectedImageIndex + 1}`}
-                fill
-                unoptimized
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <Image
+              src={images[selectedImageIndex]}
+              alt={`Venue gallery image ${selectedImageIndex + 1}`}
+              fill
+              unoptimized
+              className="object-contain"
+            />
 
             {/* Close Button */}
             <Button
