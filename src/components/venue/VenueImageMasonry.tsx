@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Masonry from 'react-masonry-css';
 
 interface VenueImageMasonryProps {
   images: string[];
@@ -10,11 +11,22 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
     return null;
   }
 
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1
+  };
+
   return (
     <div>
-      <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="masonry-grid"
+        columnClassName="masonry-grid_column"
+      >
         {images.map((src, index) => (
-          <div key={index} className="break-inside-avoid">
+          <div key={index}>
             <Image
               src={src}
               alt={`Venue gallery image ${index + 1}`}
@@ -24,7 +36,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
             />
           </div>
         ))}
-      </div>
+      </Masonry>
     </div>
   );
 };
