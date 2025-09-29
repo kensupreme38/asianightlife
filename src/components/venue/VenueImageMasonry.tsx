@@ -11,7 +11,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
   }
 
   return (
-    <section>
+    <div>
       <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {images.map((src, index) => (
           <div key={index} className="break-inside-avoid">
@@ -25,6 +25,6 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
