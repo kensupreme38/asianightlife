@@ -26,7 +26,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
       <div className="grid grid-cols-4 gap-2 h-96">
         {/* Main Image */}
         <div 
-          className="col-span-3 relative cursor-pointer overflow-hidden rounded-lg"
+          className="col-span-3 relative overflow-hidden rounded-lg"
           onClick={() => setShowLightbox(true)}
         >
           <Image 
@@ -60,7 +60,10 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               {index === 3 && images.length > 4 && (
-                <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-white font-medium">
+                <div 
+                  className="absolute inset-0 bg-black/60 flex items-center justify-center text-white font-medium"
+                  onClick={() => setShowLightbox(true)}
+                >
                   +{images.length - 4}
                 </div>
               )}
