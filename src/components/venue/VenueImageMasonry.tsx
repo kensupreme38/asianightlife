@@ -12,14 +12,6 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
 
   return (
     <section>
-      <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          <span className="gradient-text">Thư Viện Ảnh</span>
-        </h2>
-        <p className="text-muted-foreground">
-          Những khoảnh khắc đáng nhớ tại đây
-        </p>
-      </div>
       <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {images.map((src, index) => (
           <div key={index} className="break-inside-avoid">
