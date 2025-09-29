@@ -154,24 +154,6 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           </div>
         </div>
       </div>
-
-      {/* Features & Amenities */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div className="card-elevated p-6 rounded-xl">
-          <h3 className="text-lg font-bold mb-4">Amenities</h3>
-          <div className="grid grid-cols-1 gap-3">
-            {venue.amenities.map((amenity, index) => {
-              const IconComponent = amenityIcons[amenity] || CheckCircle;
-              return (
-                <div key={index} className="flex items-center gap-3">
-                  <IconComponent className="h-4 w-4 text-green-500" />
-                  <span className="text-muted-foreground">{amenity}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

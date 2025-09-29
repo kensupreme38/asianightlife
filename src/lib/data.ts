@@ -4,12 +4,12 @@ export const ktvData = [
     "id": 1,
     "name": "Iconic KTV",
     "main_image_url": "https://nightlifeasia.wiki/images/thumb/b/b5/Iconic-logo.jpg/350px-Iconic-logo.jpg",
-    "images": ["https://nightlifeasia.wiki/images/thumb/7/72/Iconic-Beer.jpg/128px-Iconic-Beer.jpg", "https://nightlifeasia.wiki/images/thumb/b/b7/Iconic-Bottles.jpg/128px-Iconic-Bottles.jpg", "https://nightlifeasia.wiki/images/thumb/4/47/New-K2-Room1.jpg/240px-New-K2-Room1.jpg", "https://nightlifeasia.wiki/images/thumb/5/5e/New-K2-Room2.jpg/240px-New-K2-Room2.jpg", "https://nightlifeasia.wiki/images/thumb/9/9e/New-K2-Room3.jpg/135px-New-K2-Room3.jpg"],
+    "images": ["https://chiongbuddy.com/wp-content/uploads/2024/01/Iconic-Beer.jpeg", "https://chiongbuddy.com/wp-content/uploads/2024/01/Iconic-Bottle.jpeg"],
     "address": "35 Selegie Rd, #03-07, Parklane Shopping Mall",
     "country": "Singapore",
     "phone": "+65 87501825",
     "category": "KTV",
-    "price": "S$88/S$138",
+    "price": "$248",
     "description": "Iconic is newly opened with over 30 girls. The premises are at the New K2 location, however, it is a huge change from yesteryears and girls are hot, playable and lots to choose from! It gets our seal of recommendation from NAW.",
     "hours": "4PM - 3AM",
     "contact": "JK787393 (Wechat)"
@@ -24,32 +24,30 @@ export const ktvData = [
     "phone": "+65 9777 2575",
     "category": "KTV",
     "price": "$324",
-    "description": `
-### Opening Hours & Tips
-- Mon-Sat 6-10 $100
-- Mon-Sat 10-2 $100
-- Sun 8-2 $100
-- Mon-Sun 2-6am $150, mami $100
+    "description": `Opening Hours & Tips:
+Mon-Sat 6-10 $100
+Mon-Sat 10-2 $100
+Sun 8-2 $100
+Mon-Sun 2-6am $150, mami $100
 
-### Promotion
-- HH 3free1 and 3free2 towers
+Promotion:
+HH 3free1 and 3free2 towers
 
-### Surcharges
-- Service Charge 10%
-- GST 9%
+Surcharges:
+Service Charge 10%
+GST 9%
 
-### Minimum Spend
-- S room (4 pax) - 1 tower / 1 bottle
-- M room (6 pax) - 4 towers / 2 bottles
-- L room (8 pax) - 8 towers / 3 bottles
-- VIP room w Pool Table (12 pax) - 12 towers / 4 bottles
+Minimum Spend:
+S room (4 pax) - 1 tower / 1 bottle
+M room (6 pax) - 4 towers / 2 bottles
+L room (8 pax) - 8 towers / 3 bottles
+VIP room w Pool Table (12 pax) - 12 towers / 4 bottles
 
-### Recommended For
-- High Playability
-- Pretty Girls
-- Wide Variety
-- Pool table in VIP room
-`,
+Recommended For:
+High Playability
+Pretty Girls
+Wide Variety
+Pool table in VIP room`,
     "hours": "5PM - 6AM",
     "contact": "JK787393 (Wechat)"
   },
@@ -57,7 +55,7 @@ export const ktvData = [
     "id": 3,
     "name": "Club Galaxy",
     "main_image_url": "https://nightlifeasia.wiki/images/c/c1/Galaxy-ktv.jpg",
-    "images": ["https://nightlifeasia.wiki/images/thumb/4/48/Galaxy_Bottle_2024.jpg/80px-Galaxy_Bottle_2024.jpg", "https://nightlifeasia.wiki/images/thumb/a/ab/Galaxy_Beer_2024.jpg/80px-Galaxy_Beer_2024.jpg"],
+    "images": ["https://chiongbuddy.com/wp-content/uploads/2024/01/Galaxy-KTV-Price-Beer-Tower-1.jpg", "https://chiongbuddy.com/wp-content/uploads/2024/01/Galaxy-KTV-Price-Liquor-1.jpg"],
     "address": "10 Jalan Besar, #05-02, Sim Lim Tower",
     "country": "Singapore",
     "phone": "+6511112224",
@@ -71,7 +69,7 @@ export const ktvData = [
     "id": 4,
     "name": "MEILI KTV",
     "main_image_url": "https://nightlifeasia.wiki/images/thumb/2/29/Meili-Banner.jpg/350px-Meili-Banner.jpg",
-    "images": ["https://nightlifeasia.wiki/images/thumb/4/41/Meili-Beer.jpg/85px-Meili-Beer.jpg", "https://nightlifeasia.wiki/images/thumb/e/ef/Meili-Bottles.jpg/85px-Meili-Bottles.jpg"],
+    "images": ["https://chiongbuddy.com/wp-content/uploads/2023/12/Meili-Beer.jpeg", "https://chiongbuddy.com/wp-content/uploads/2023/12/Meili-Bottle.jpeg"],
     "address": "B1-00 TPI Building, 62 Cecil Street",
     "country": "Singapore",
     "phone": "+65 9238 1098",
@@ -85,7 +83,7 @@ export const ktvData = [
     "id": 5,
     "name": "Avatar KTV",
     "main_image_url": "https://nightlifeasia.wiki/images/thumb/4/40/Avatar_ktv_logo1.png/350px-Avatar_ktv_logo1.png",
-    "images": ["https://nightlifeasia.wiki/images/thumb/8/80/Avatar_ktv_alcohol_menu1.jpg/85px-Avatar_ktv_alcohol_menu1.jpg", "https://nightlifeasia.wiki/images/thumb/2/2d/Avatar_ktv_alcohol_menu2.jpg/85px-Avatar_ktv_alcohol_menu2.jpg"],
+    "images": ["https://chiongbuddy.com/wp-content/uploads/2024/10/Avatar-HH.jpeg", "https://chiongbuddy.com/wp-content/uploads/2024/10/Avatar-NH.jpeg"],
     "address": "35 Selegie Road, #05-26, Parklane Shopping Mall",
     "country": "Singapore",
     "phone": "+65 92381098",
