@@ -23,6 +23,7 @@ const MasonryImage = ({ src, index, openLightbox }: { src: string, index: number
                 alt={`Venue gallery image ${index + 1}`}
                 width={500}
                 height={500}
+                unoptimized
                 className={cn("w-full h-auto object-cover rounded-lg shadow-lg hover-glow transition-opacity duration-300", 
                     isLoading ? "opacity-0" : "opacity-100"
                 )}
@@ -87,6 +88,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
                 alt={`Venue gallery image ${selectedImageIndex + 1}`}
                 width={1200}
                 height={800}
+                unoptimized
                 className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg"
               />
               <Button
