@@ -18,7 +18,6 @@ export const HeroBanner = () => {
       title: "Discover the Hottest Venues",
       subtitle: "Singapore • Vietnam • Thailand • Malaysia",
       description: "Book now at the top clubs, KTVs, and live houses in Southeast Asia.",
-      cta: "Discover Now"
     },
     {
       id: 2,
@@ -27,7 +26,6 @@ export const HeroBanner = () => {
       title: "Special Weekend Offer",
       subtitle: "30% off for bookings before 6 PM",
       description: "Don't miss the chance to experience amazing entertainment venues.",
-      cta: "Book Now"
     }
   ];
 
@@ -95,9 +93,6 @@ export const HeroBanner = () => {
                     {banner.description}
                   </p>
                   
-                  <Button variant="neon" size="lg" className="text-lg px-8 py-6 hover-glow">
-                    {banner.cta}
-                  </Button>
                 </div>
               </div>
             </div>
