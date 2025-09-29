@@ -54,17 +54,33 @@ const VenueDetail = () => {
     clubSample?.imageUrl || ''
   ].filter(Boolean);
 
-  const handleShare = useCallback(() => {
-    if (typeof window !== 'undefined') {
+  const handleShare = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+
+    const shareData = {
+      title: venue.name,
+      text: `Khám phá ${venue.name} - ${venue.address}`,
+      url: window.location.href,
+    };
+
+    try {
       if (navigator.share) {
-        navigator.share({
-          title: venue.name,
-          text: `Khám phá ${venue.name} - ${venue.address}`,
-          url: window.location.href,
-        });
+        await navigator.share(shareData);
       } else {
-        navigator.clipboard.writeText(window.location.href);
-        // Maybe show a toast notification that the link has been copied.
+        await navigator.clipboard.writeText(window.location.href);
+        // Optional: Show a toast notification that the link has been copied.
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      console.error("Share failed:", error);
+      // Fallback to clipboard copy if sharing fails for any reason
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        // Optional: Show a toast notification.
+        alert('Sharing failed, link copied to clipboard!');
+      } catch (copyError) {
+        console.error("Copying to clipboard failed:", copyError);
+        alert("Could not share or copy link.");
       }
     }
   }, [venue.name, venue.address]);
