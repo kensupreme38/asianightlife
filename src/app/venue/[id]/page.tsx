@@ -1,6 +1,7 @@
 'use client';
 import { useParams } from 'next/navigation';
 import Link from "next/link";
+import { useCallback } from 'react';
 import { ArrowLeft, Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
@@ -53,17 +54,20 @@ const VenueDetail = () => {
     clubSample?.imageUrl || ''
   ].filter(Boolean);
 
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: venue.name,
-        text: `Khám phá ${venue.name} - ${venue.address}`,
-        url: window.location.href,
-      });
-    } else {
-      navigator.clipboard.writeText(window.location.href);
+  const handleShare = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      if (navigator.share) {
+        navigator.share({
+          title: venue.name,
+          text: `Khám phá ${venue.name} - ${venue.address}`,
+          url: window.location.href,
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        // Maybe show a toast notification that the link has been copied.
+      }
     }
-  };
+  }, [venue.name, venue.address]);
 
   return (
     <div className="min-h-screen bg-background">
