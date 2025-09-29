@@ -2,108 +2,25 @@
 import { VenueCard } from "./VenueCard";
 import { Button } from "@/components/ui/button";
 import { getImage } from "@/lib/placeholder-images";
+import { ktvData } from "@/lib/data";
 
 export const VenueGrid = () => {
   const clubImage = getImage('club-sample');
   const livehouseImage = getImage('livehouse-sample');
 
   const venues = [
-    {
-        id: "1",
-        name: "277 KTV",
-        image: "https://nightlifeasia.wiki/images/thumb/0/0c/277-ktv.jpg/100px-277-ktv.jpg",
-        category: "KTV",
-        address: "277 Geylang Rd",
-        price: "S$50 (HH)",
-        rating: 4.5,
-        status: "open" as const,
-        features: ["Vietnam", "Medium - High"],
-        country: "singapore"
-    },
-    {
-        id: "2",
-        name: "Ace Club",
-        image: "https://nightlifeasia.wiki/images/thumb/9/92/Club-ace-ktv.jpg/100px-Club-ace-ktv.jpg",
-        category: "KTV",
-        address: "48 Foch Rd, Level 2, Singapore 209272",
-        price: "S$50 (HH)",
-        rating: 4.6,
-        status: "open" as const,
-        features: ["Vietnam", "High"],
-        country: "singapore"
-    },
-    {
-        id: "3",
-        name: "Avatar KTV",
-        image: "https://nightlifeasia.wiki/images/thumb/4/40/Avatar_ktv_logo1.png/100px-Avatar_ktv_logo1.png",
-        category: "KTV",
-        address: "35 Selegie Road, #05-26, Parklane Shopping Mall",
-        price: "S$100 (NH)",
-        rating: 4.8,
-        status: "open" as const,
-        features: ["Vietnam", "Hot"],
-        country: "singapore"
-    },
-    {
-        id: "4",
-        name: "Azit Korean KTV",
-        image: "https://nightlifeasia.wiki/images/thumb/c/ce/Azit_korean_ktv_logo1.png/100px-Azit_korean_ktv_logo1.png",
-        category: "KTV",
-        address: "5 Coleman Street Excelsior Tower Lobby, Hotel, #05-00 Peninsula Excelsior",
-        price: "???",
-        rating: 4.2,
-        status: "open" as const,
-        features: ["Korea"],
-        country: "singapore"
-    },
-    {
-        id: "5",
-        name: "B12 KTV",
-        image: "https://nightlifeasia.wiki/images/thumb/4/4c/B12-Delux-Logo.jpg/100px-B12-Delux-Logo.jpg",
-        category: "KTV",
-        address: "#B1-19, Havelock 2, 2 Havelock Rd",
-        price: "$50 HH",
-        rating: 4.7,
-        status: "open" as const,
-        features: ["Vietnam", "High"],
-        country: "singapore"
-    },
-    {
-        id: "6",
-        name: "Catwalk KTV (Singapore)",
-        image: "https://nightlifeasia.wiki/images/thumb/c/cc/Catwalk-ktv2.jpg/100px-Catwalk-ktv2.jpg",
-        category: "KTV",
-        address: "200 Jalan Sultan Textile Centre Level 7",
-        price: "S$70 (HH)",
-        rating: 4.8,
-        status: "open" as const,
-        features: ["Vietnam", "Hot"],
-        country: "singapore"
-    },
-    {
-        id: "7",
-        name: "Club Chanel",
-        image: "https://nightlifeasia.wiki/images/thumb/a/ae/Club-chanel.jpg/100px-Club-chanel.jpg",
-        category: "KTV",
-        address: "35 Selegie Road, #B1-09, Parklane Shopping Mall",
-        price: "S$100",
-        rating: 4.3,
-        status: "open" as const,
-        features: ["China", "Low"],
-        country: "singapore"
-    },
-    {
-        id: "8",
-        name: "Club Diamond",
-        image: "https://nightlifeasia.wiki/images/thumb/c/ca/Club_diamond_logo1.jpg/100px-Club_diamond_logo1.jpg",
-        category: "KTV",
-        address: "6001 Beach Road, Golden Mile Tower #B1-10",
-        price: "???",
-        rating: 4.4,
-        status: "open" as const,
-        features: ["Thailand"],
-        country: "singapore"
-    },
+    ...ktvData.map(ktv => ({
+      id: ktv.id,
+      name: ktv.name,
+      image: ktv.image,
+      category: "KTV",
+      address: ktv.address,
+      price: ktv.price,
+      rating: (Math.random() * (5 - 4.2) + 4.2).toFixed(1),
+      status: "open" as const,
+      features: ktv.features,
+      country: "singapore"
+    })),
     {
       id: "9", 
       name: "Neon Club",
@@ -191,3 +108,5 @@ export const VenueGrid = () => {
     </section>
   );
 };
+
+    
