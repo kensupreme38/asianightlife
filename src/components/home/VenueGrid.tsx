@@ -16,63 +16,11 @@ export const VenueGrid = () => {
       category: "KTV",
       address: ktv.address,
       price: ktv.price,
-      rating: (Math.random() * (5 - 4.2) + 4.2).toFixed(1),
+      rating: parseFloat((Math.random() * (5 - 4.2) + 4.2).toFixed(1)),
       status: "open" as const,
       features: ktv.features,
       country: "singapore"
-    })),
-    {
-      id: "9", 
-      name: "Neon Club",
-      image: clubImage?.imageUrl || "https://picsum.photos/seed/club/600/400",
-      imageHint: clubImage?.imageHint,
-      category: "Club",
-      address: "Quận 1, TP.HCM",
-      price: "$50/người",
-      rating: 4.6,
-      status: "open" as const,
-      features: ["DJ quốc tế", "Tầng nhảy rộng", "Bar service"],
-      country: "vietnam"
-    },
-    {
-      id: "10",
-      name: "Echo Live House",
-      image: livehouseImage?.imageUrl || "https://picsum.photos/seed/livehouse/600/400",
-      imageHint: livehouseImage?.imageHint,
-      category: "Live House",
-      address: "Bangkok, Thailand",
-      price: "$25/vé",
-      rating: 4.7,
-      status: "closed" as const,
-      features: ["Nhạc sống", "Acoustic tuyệt vời", "Không gian ấm cúng"],
-      country: "thailand"
-    },
-    {
-      id: "11",
-      name: "Underground Club",
-      image: clubImage?.imageUrl || "https://picsum.photos/seed/club2/600/400",
-      imageHint: clubImage?.imageHint,
-      category: "Club",
-      address: "Clarke Quay, Singapore",
-      price: "$70/người",
-      rating: 4.9,
-      status: "open" as const,
-      features: ["Rooftop view", "Premium drinks", "Celebrity DJ"],
-      country: "singapore"
-    },
-    {
-      id: "12",
-      name: "Harmony Live",
-      image: livehouseImage?.imageUrl || "https://picsum.photos/seed/livehouse2/600/400",
-      imageHint: livehouseImage?.imageHint,
-      category: "Live House",
-      address: "Hà Nội, Vietnam",
-      price: "$20/vé",
-      rating: 4.4,
-      status: "open" as const,
-      features: ["Indie music", "Craft beer", "Weekly events"],
-      country: "vietnam"
-    }
+    }))
   ];
 
   return (
