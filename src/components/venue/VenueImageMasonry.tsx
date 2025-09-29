@@ -80,44 +80,53 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
       </Masonry>
 
       <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-        <DialogContent className="max-w-6xl max-h-[90vh] w-full p-0 bg-transparent border-0 flex items-center justify-center">
+        <DialogContent className="fixed inset-0 z-[9999] flex h-screen w-screen items-center justify-center border-0 bg-black/90 p-0">
             <DialogTitle className="sr-only">Image Lightbox</DialogTitle>
-            <div className="relative">
+            
+            {/* Image */}
+            <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src={images[selectedImageIndex]}
                 alt={`Venue gallery image ${selectedImageIndex + 1}`}
-                width={1600}
-                height={1200}
+                fill
                 unoptimized
-                className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg"
+                className="w-full h-full object-contain"
               />
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-2 right-2 text-white bg-black/30 hover:bg-black/50"
-                onClick={closeLightbox}
-              >
-                <X className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/30 hover:bg-black/50"
-                onClick={showPrevImage}
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/30 hover:bg-black/50"
-                onClick={showNextImage}
-              >
-                <ChevronRight className="h-6 w-6" />
-              </Button>
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded">
-                {selectedImageIndex + 1} / {images.length}
-              </div>
+            </div>
+
+            {/* Close Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute top-4 right-4 z-10 text-white bg-black/30 hover:bg-black/50"
+              onClick={closeLightbox}
+            >
+              <X className="h-8 w-8" />
+            </Button>
+            
+            {/* Previous Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 text-white bg-black/30 hover:bg-black/50"
+              onClick={showPrevImage}
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </Button>
+
+            {/* Next Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 text-white bg-black/30 hover:bg-black/50"
+              onClick={showNextImage}
+            >
+              <ChevronRight className="h-8 w-8" />
+            </Button>
+
+            {/* Counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded">
+              {selectedImageIndex + 1} / {images.length}
             </div>
         </DialogContent>
       </Dialog>
