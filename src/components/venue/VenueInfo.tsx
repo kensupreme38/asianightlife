@@ -1,3 +1,4 @@
+'use client';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -27,7 +28,6 @@ interface VenueInfoProps {
     hours: string;
     description: string;
     amenities: string[];
-    rules: string[];
     country: string;
   };
 }
@@ -156,10 +156,10 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
       </div>
 
       {/* Features & Amenities */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-1 gap-6">
         <div className="card-elevated p-6 rounded-xl">
           <h3 className="text-lg font-bold mb-4">Amenities</h3>
-          <div className="grid grid-cols-1 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {venue.amenities.map((amenity, index) => {
               const IconComponent = amenityIcons[amenity] || CheckCircle;
               return (
@@ -170,18 +170,6 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               );
             })}
           </div>
-        </div>
-
-        <div className="card-elevated p-6 rounded-xl">
-          <h3 className="text-lg font-bold mb-4">Rules</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            {venue.rules.map((rule, index) => (
-                <li key={index} className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-500 mt-1 shrink-0" />
-                <span>{rule}</span>
-                </li>
-            ))}
-          </ul>
         </div>
       </div>
     </div>

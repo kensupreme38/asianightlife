@@ -24,14 +24,6 @@ const VenueDetail = () => {
         rating: 4.8,
         status: "open" as const,
         amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
-        rules: [
-          "Minimum age: 18+",
-          "No smoking in rooms",
-          "Payment before use",
-          "Max 8 people per room",
-          "No outside food",
-          "Keep facilities clean"
-        ],
       };
     }
 
@@ -55,14 +47,6 @@ const VenueDetail = () => {
         "https://picsum.photos/seed/ktv-fallback-3/1200/800",
       ],
       amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
-      rules: [
-          "Minimum age: 18+",
-          "No smoking in rooms",
-          "Payment before use",
-          "Max 8 people per room",
-          "No outside food",
-          "Keep facilities clean"
-      ],
     };
   }, [id]);
 
