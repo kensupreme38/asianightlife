@@ -69,6 +69,20 @@ export const ktvData = [
     "description": "Avatar is recommended KTV at Parklane with young girls, regular themed events and good playability. Karaoke system is great, with youtube options as well. Book your rooms early as it is quite popular.",
     "hours": "4PM - 3AM",
     "contact": "JK787393"
+  },
+  {
+    "id": 6,
+    "name": "1127 KTV",
+    "main_image_url": "https://nightlifeasia.wiki/images/thumb/e/e6/1127-ktv-location.jpg/350px-1127-ktv-location.jpg",
+    "images": ["https://nightlifeasia.wiki/images/thumb/d/d2/1127-ktv2.jpg/300px-1127-ktv2.jpg", "https://nightlifeasia.wiki/images/thumb/c/c5/1127-ktv3.jpg/300px-1127-ktv3.jpg", "https://nightlifeasia.wiki/images/thumb/c/cb/1127_ktv1.jpg/300px-1127_ktv1.jpg"],
+    "address": "1127 Trần Hưng Đạo, Phường 5",
+    "country": "Vietnam",
+    "phone": "+84 769 484 462",
+    "category": "KTV",
+    "price": "3000K",
+    "description": "1127 KTV is another chinese KTV and is newly renovated. When taking grab or taxi, just indicate the destination as Fortune Hotel II. By now you'll realize that many KTVs are located in Q5 due to their proximity to Chinatown. We saw some really hot videos online. If its your first time at a vietnamese KTV, remember to ask for the strip dance. It's quite the experience.There are some pretty hostesses here, but we'd say only about 10-15% of them. The others are run-of-the-mill and nothing really stands out. You might get hotter girls at larger KTVs like Boss and Catwalk. The upside is you get really good prices here and won't burn a hole in your pocket.",
+    "hours": "2PM - 4AM",
+    "contact": "Vy Midu - vyvy1810 (Wechat)"
   }
 ]
     

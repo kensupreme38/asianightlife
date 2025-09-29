@@ -56,8 +56,8 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
     <div className="space-y-8">
       {/* Header Info */}
       <div>
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-          <div>
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+          <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
               <Badge variant="secondary">{venue.category}</Badge>
               <Badge 
@@ -69,7 +69,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               </Badge>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{venue.name}</h1>
-            <div className="flex items-center gap-4 text-muted-foreground">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
               <div className="flex items-center gap-1">
                 <Star className="h-4 w-4 text-gold fill-current" />
                 <span className="font-medium">{venue.rating}</span>
@@ -82,7 +82,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
             </div>
           </div>
           
-          <div className="text-right">
+          <div className="text-left md:text-right shrink-0">
             <div className="text-3xl font-bold gradient-text mb-1">{venue.price}</div>
             <div className="text-sm text-muted-foreground">Starting price</div>
           </div>
