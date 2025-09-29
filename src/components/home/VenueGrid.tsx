@@ -5,9 +5,6 @@ import { getImage } from "@/lib/placeholder-images";
 import { ktvData } from "@/lib/data";
 
 export const VenueGrid = () => {
-  const clubImage = getImage('club-sample');
-  const livehouseImage = getImage('livehouse-sample');
-
   const venues = [
     ...ktvData.map(ktv => ({
       id: ktv.id,
