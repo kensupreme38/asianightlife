@@ -9,14 +9,13 @@ interface VenueCardProps {
   venue: {
     id: string;
     name: string;
-    image: string;
+    main_image_url: string;
     imageHint?: string;
     category: string;
     address: string;
     price: string;
     rating: number;
     status: "open" | "closed";
-    features: string[];
     country: string;
   };
 }
@@ -37,7 +36,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
       {/* Image */}
       <div className="relative h-56 overflow-hidden">
         <Image 
-          src={venue.image} 
+          src={venue.main_image_url} 
           alt={venue.name}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"

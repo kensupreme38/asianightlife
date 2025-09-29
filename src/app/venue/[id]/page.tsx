@@ -1,7 +1,7 @@
 'use client';
 import { useParams } from 'next/navigation';
 import Link from "next/link";
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { ArrowLeft, Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
@@ -9,58 +9,69 @@ import { Footer } from "@/components/layout/Footer";
 import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
-import { getImage } from '@/lib/placeholder-images';
 import { VenueImageMasonry } from '@/components/venue/VenueImageMasonry';
+import { ktvData } from '@/lib/data';
 
 const VenueDetail = () => {
   const params = useParams();
   const id = params.id as string;
 
-  const ktvSample = getImage('ktv-sample');
-  const clubSample = getImage('club-sample');
-  const livehouseSample = getImage('livehouse-sample');
-  const heroBanner = getImage('hero-banner');
+  const venue = useMemo(() => {
+    const foundVenue = ktvData.find(v => v.id === id);
+    if (foundVenue) {
+      return {
+        ...foundVenue,
+        rating: 4.8,
+        status: "open" as const,
+        amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
+        rules: [
+          "Minimum age: 18+",
+          "No smoking in rooms",
+          "Payment before use",
+          "Max 8 people per room",
+          "No outside food",
+          "Keep facilities clean"
+        ],
+      };
+    }
 
-  // Mock data - in real app, this would fetch based on ID
-  const venue = {
-    id: id || "1",
-    name: "Sky Lounge KTV",
-    category: "KTV",
-    address: "Marina Bay Sands, Singapore 018956",
-    phone: "+6591234567",
-    price: "$80/giờ",
-    rating: 4.8,
-    status: "open" as const,
-    openHours: "18:00 - 03:00",
-    description: "Sky Lounge KTV là một trong những địa điểm karaoke cao cấp nhất tại Singapore. Với thiết kế hiện đại, âm thanh chất lượng cao và dịch vụ tuyệt vời, chúng tôi mang đến trải nghiệm giải trí đẳng cấp. Các phòng được trang bị hệ thống karaoke 4K, âm thanh vòm và không gian sang trọng. Thích hợp cho các buổi tiệc sinh nhật, họp mặt bạn bè, hay các sự kiện công ty.",
-    features: ["Phòng VIP", "Đồ uống cao cấp", "Âm thanh 4K", "Dịch vụ 24/7", "Buffet premium"],
-    amenities: ["Wifi miễn phí", "Bãi đỗ xe", "Âm thanh cao cấp", "Phòng VIP", "Thanh toán thẻ"],
-    rules: [
-      "Tuổi tối thiểu: 18+",
-      "Không hút thuốc trong phòng",
-      "Thanh toán trước khi sử dụng",
-      "Tối đa 8 người/phòng",
-      "Không mang đồ ăn từ bên ngoài",
-      "Giữ gìn vệ sinh và trang thiết bị"
-    ],
-    country: "singapore"
-  };
-
-  const images = [
-    ktvSample?.imageUrl || '',
-    clubSample?.imageUrl || '',
-    livehouseSample?.imageUrl || '',
-    heroBanner?.imageUrl || '',
-    ktvSample?.imageUrl || '',
-    clubSample?.imageUrl || ''
-  ].filter(Boolean);
+    // Fallback mock data if not found, using some defaults
+    return {
+      id: id || "1",
+      name: "Sky Lounge KTV",
+      category: "KTV",
+      address: "Marina Bay Sands, Singapore 018956",
+      phone: "+6591234567",
+      price: "$80/hour",
+      rating: 4.8,
+      status: "open" as const,
+      hours: "18:00 - 03:00",
+      description: "Sky Lounge KTV is one of the most premium karaoke places in Singapore. With a modern design, high-quality sound, and excellent service, we deliver a top-class entertainment experience. Rooms are equipped with 4K karaoke systems, surround sound, and luxurious spaces. Suitable for birthday parties, friend gatherings, or corporate events.",
+      country: "singapore",
+      main_image_url: "https://picsum.photos/seed/ktv-fallback/1200/800",
+      images: [
+        "https://picsum.photos/seed/ktv-fallback-1/1200/800",
+        "https://picsum.photos/seed/ktv-fallback-2/1200/800",
+        "https://picsum.photos/seed/ktv-fallback-3/1200/800",
+      ],
+      amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
+      rules: [
+          "Minimum age: 18+",
+          "No smoking in rooms",
+          "Payment before use",
+          "Max 8 people per room",
+          "No outside food",
+          "Keep facilities clean"
+      ],
+    };
+  }, [id]);
 
   const handleShare = useCallback(async () => {
     if (typeof window === 'undefined') return;
 
     const shareData = {
       title: venue.name,
-      text: `Khám phá ${venue.name} - ${venue.address}`,
+      text: `Discover ${venue.name} - ${venue.address}`,
       url: window.location.href,
     };
 
@@ -69,15 +80,12 @@ const VenueDetail = () => {
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(window.location.href);
-        // Optional: Show a toast notification that the link has been copied.
         alert('Link copied to clipboard!');
       }
     } catch (error) {
       console.error("Share failed:", error);
-      // Fallback to clipboard copy if sharing fails for any reason
       try {
         await navigator.clipboard.writeText(window.location.href);
-        // Optional: Show a toast notification.
         alert('Sharing failed, link copied to clipboard!');
       } catch (copyError) {
         console.error("Copying to clipboard failed:", copyError);
@@ -96,7 +104,7 @@ const VenueDetail = () => {
           <Link href="/">
             <Button variant="ghost" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
-              Quay lại danh sách
+              Back to list
             </Button>
           </Link>
           
@@ -112,7 +120,7 @@ const VenueDetail = () => {
 
         {/* Gallery */}
         <div className="mb-8">
-          <VenueGallery images={images} venueName={venue.name} />
+          <VenueGallery images={venue.images} venueName={venue.name} />
         </div>
 
         {/* Venue Info */}
@@ -122,8 +130,8 @@ const VenueDetail = () => {
 
         {/* Masonry Gallery */}
         <div className="card-elevated p-6 rounded-xl mb-12">
-           <h3 className="text-xl font-bold mb-4">Thư Viện Ảnh</h3>
-           <VenueImageMasonry images={images} />
+           <h3 className="text-xl font-bold mb-4">Image Library</h3>
+           <VenueImageMasonry images={venue.images} />
         </div>
 
         {/* Similar Venues */}

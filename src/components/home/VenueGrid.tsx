@@ -6,16 +6,10 @@ import { ktvData } from "@/lib/data";
 export const VenueGrid = () => {
   const venues = [
     ...ktvData.map(ktv => ({
-      id: ktv.id,
-      name: ktv.name,
-      image: ktv.image,
-      category: "KTV",
-      address: ktv.address,
-      price: ktv.price,
+      ...ktv,
       rating: 4.5,
       status: "open" as const,
-      features: ktv.features,
-      country: "singapore"
+      imageHint: "ktv lounge"
     }))
   ];
 

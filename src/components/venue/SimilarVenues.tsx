@@ -1,6 +1,6 @@
 'use client';
 import { VenueCard } from "@/components/home/VenueCard";
-import { getImage } from "@/lib/placeholder-images";
+import { ktvData } from "@/lib/data";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -9,61 +9,26 @@ interface SimilarVenuesProps {
 }
 
 export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenuesProps) => {
-  const ktvImage = getImage('ktv-sample');
-  const clubImage = getImage('club-sample');
+  
+  const similarVenues = ktvData
+    .filter(venue => venue.id !== currentVenueId && venue.category === category)
+    .slice(0, 3)
+    .map(v => ({
+      ...v,
+      rating: 4.5 + Math.random() * 0.4,
+      status: "open" as const,
+    }));
 
-  // Mock data - in real app, this would filter based on category/country and exclude current venue
-  const similarVenues = [
-    {
-      id: "2", 
-      name: "Platinum KTV",
-      image: ktvImage?.imageUrl || "https://picsum.photos/seed/ktv2/600/400",
-      imageHint: ktvImage?.imageHint,
-      category: "KTV",
-      address: "Orchard Road, Singapore",
-      price: "$90/giờ",
-      rating: 4.7,
-      status: "open" as const,
-      features: ["Phòng gia đình", "Buffet cao cấp", "Karaoke 4K"],
-      country: "singapore"
-    },
-    {
-      id: "3",
-      name: "Diamond Club",
-      image: clubImage?.imageUrl || "https://picsum.photos/seed/club2/600/400",
-      imageHint: clubImage?.imageHint,
-      category: "Club", 
-      address: "Marina Bay, Singapore",
-      price: "$85/người",
-      rating: 4.8,
-      status: "open" as const,
-      features: ["Rooftop terrace", "Premium bar", "Celebrity DJ"],
-      country: "singapore"
-    },
-    {
-      id: "4",
-      name: "Royal KTV Lounge",
-      image: ktvImage?.imageUrl || "https://picsum.photos/seed/ktv3/600/400",
-      imageHint: ktvImage?.imageHint,
-      category: "KTV",
-      address: "Clarke Quay, Singapore", 
-      price: "$75/giờ",
-      rating: 4.6,
-      status: "open" as const,
-      features: ["Private rooms", "Premium sound", "24/7 service"],
-      country: "singapore"
-    }
-  ].filter(venue => venue.id !== currentVenueId);
 
   return (
     <section className="py-12 border-t border-border/40">
       <div className="container">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            <span className="gradient-text">Địa Điểm Tương Tự</span>
+            <span className="gradient-text">Similar Venues</span>
           </h2>
           <p className="text-muted-foreground">
-            Khám phá thêm các {category.toLowerCase()} khác tại {country === 'singapore' ? 'Singapore' : country}
+            Discover more {category.toLowerCase()}s in {country}
           </p>
         </div>
 
@@ -75,7 +40,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
 
         <div className="text-center mt-8">
           <p className="text-muted-foreground mb-4">
-            Tìm thấy {similarVenues.length} địa điểm tương tự
+            Found {similarVenues.length} similar venues
           </p>
         </div>
       </div>
