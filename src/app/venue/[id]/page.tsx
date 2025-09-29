@@ -94,6 +94,8 @@ const VenueDetail = () => {
     }
   }, [venue.name, venue.address]);
 
+  const galleryImages = [venue.main_image_url, ...venue.images];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -120,7 +122,7 @@ const VenueDetail = () => {
 
         {/* Gallery */}
         <div className="mb-8">
-          <VenueGallery images={venue.images} venueName={venue.name} />
+          <VenueGallery images={galleryImages} venueName={venue.name} />
         </div>
 
         {/* Venue Info */}
@@ -131,7 +133,7 @@ const VenueDetail = () => {
         {/* Masonry Gallery */}
         <div className="card-elevated p-6 rounded-xl mb-12">
            <h3 className="text-xl font-bold mb-4">Image Library</h3>
-           <VenueImageMasonry images={venue.images} />
+           <VenueImageMasonry images={galleryImages} />
         </div>
 
         {/* Similar Venues */}
