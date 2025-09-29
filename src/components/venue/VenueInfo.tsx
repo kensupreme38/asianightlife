@@ -184,19 +184,6 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           </div>
         </div>
       </div>
-
-      {/* Rules */}
-      <div className="card-elevated p-6 rounded-xl">
-        <h3 className="text-lg font-bold mb-4">Quy Định</h3>
-        <ul className="space-y-2 text-muted-foreground">
-          {venue.rules.map((rule, index) => (
-            <li key={index} className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
-              <span>{rule}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 };
