@@ -5,9 +5,31 @@ import Masonry from 'react-masonry-css';
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 
 interface VenueImageMasonryProps {
   images: string[];
+}
+
+const MasonryImage = ({ src, index, openLightbox }: { src: string, index: number, openLightbox: (index: number) => void }) => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    return (
+        <div className="relative cursor-pointer" onClick={() => openLightbox(index)}>
+            {isLoading && <Skeleton className="absolute inset-0 w-full h-full rounded-lg" />}
+            <Image
+                src={src}
+                alt={`Venue gallery image ${index + 1}`}
+                width={500}
+                height={500}
+                className={cn("w-full h-auto object-cover rounded-lg shadow-lg hover-glow transition-opacity duration-300", 
+                    isLoading ? "opacity-0" : "opacity-100"
+                )}
+                onLoad={() => setIsLoading(false)}
+            />
+        </div>
+    )
 }
 
 export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
@@ -37,7 +59,6 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
     setSelectedImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
@@ -53,15 +74,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
         columnClassName="masonry-grid_column"
       >
         {images.map((src, index) => (
-          <div key={index} onClick={() => openLightbox(index)} className="cursor-pointer">
-            <Image
-              src={src}
-              alt={`Venue gallery image ${index + 1}`}
-              width={500}
-              height={500}
-              className="w-full h-auto object-cover rounded-lg shadow-lg hover-glow"
-            />
-          </div>
+          <MasonryImage key={index} src={src} index={index} openLightbox={openLightbox} />
         ))}
       </Masonry>
 
