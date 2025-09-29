@@ -118,26 +118,23 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
         <p className="text-muted-foreground leading-relaxed">{venue.description}</p>
       </div>
 
-      {/* Hours & Contact */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="card-elevated p-6 rounded-xl">
-          <h3 className="text-lg font-bold mb-4">Operating Hours</h3>
+      {/* Info */}
+      <div className="card-elevated p-6 rounded-xl">
+        <h3 className="text-lg font-bold mb-4">Info</h3>
+        <div className="space-y-4">
           <div className="space-y-2 text-muted-foreground">
-            <div className="flex justify-between">
-              <span>Monday - Sunday</span>
-              <span className="font-medium">{venue.hours}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Current Status</span>
-              <span className={`font-medium ${isOpen ? 'text-green-500' : 'text-red-500'}`}>
-                {isOpen ? "Open" : "Closed"}
-              </span>
-            </div>
+              <div className="flex justify-between">
+                <span>Monday - Sunday</span>
+                <span className="font-medium">{venue.hours}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Current Status</span>
+                <span className={`font-medium ${isOpen ? 'text-green-500' : 'text-red-500'}`}>
+                  {isOpen ? "Open" : "Closed"}
+                </span>
+              </div>
           </div>
-        </div>
-
-        <div className="card-elevated p-6 rounded-xl">
-          <h3 className="text-lg font-bold mb-4">Contact</h3>
+          <div className="border-t border-border/40 my-4"></div>
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-muted-foreground">
               <Phone className="h-4 w-4" />
