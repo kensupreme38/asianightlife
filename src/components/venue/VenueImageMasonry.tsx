@@ -80,14 +80,14 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
       </Masonry>
 
       <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] w-full p-0 bg-transparent border-0 flex items-center justify-center">
+        <DialogContent className="max-w-6xl max-h-[90vh] w-full p-0 bg-transparent border-0 flex items-center justify-center">
             <DialogTitle className="sr-only">Image Lightbox</DialogTitle>
             <div className="relative">
               <Image
                 src={images[selectedImageIndex]}
                 alt={`Venue gallery image ${selectedImageIndex + 1}`}
-                width={1200}
-                height={800}
+                width={1600}
+                height={1200}
                 unoptimized
                 className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg"
               />
