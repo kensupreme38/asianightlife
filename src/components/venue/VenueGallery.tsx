@@ -31,8 +31,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
       <div className="grid grid-cols-4 gap-2 h-96">
         {/* Main Image */}
         <div 
-          className="col-span-3 relative overflow-hidden rounded-lg cursor-pointer"
-          onClick={() => openLightbox(currentImage)}
+          className="col-span-3 relative overflow-hidden rounded-lg"
         >
           <Image 
             src={images[currentImage]} 
@@ -42,9 +41,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           <div className="absolute bottom-4 left-4 text-white">
-            <span className="text-sm bg-black/60 px-2 py-1 rounded">
-              {currentImage + 1} / {images.length}
-            </span>
+            {/* This span was removed as per user request */}
           </div>
         </div>
 
@@ -80,43 +77,46 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
       {/* Lightbox */}
       {showLightbox && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center" onClick={() => setShowLightbox(false)}>
-          <div className="relative w-full h-full max-w-4xl max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+          
+          {/* Close Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-4 right-4 text-white hover:bg-white/20 z-10 h-10 w-10"
+            onClick={() => setShowLightbox(false)}
+          >
+            <X className="h-6 w-6" />
+          </Button>
+
+          {/* Navigation */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 h-12 w-12"
+            onClick={(e) => { e.stopPropagation(); prevImage(); }}
+          >
+            <ChevronLeft className="h-8 w-8" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 h-12 w-12"
+            onClick={(e) => { e.stopPropagation(); nextImage(); }}
+          >
+            <ChevronRight className="h-8 w-8" />
+          </Button>
+
+          <div 
+            className="relative w-full h-full max-w-4xl max-h-[90vh]" 
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image 
               src={images[currentImage]} 
               alt={`${venueName} - Image ${currentImage + 1}`}
               fill
               className="object-contain"
             />
-            
-            {/* Close Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute -top-10 right-0 text-white hover:bg-white/20"
-              onClick={() => setShowLightbox(false)}
-            >
-              <X className="h-6 w-6" />
-            </Button>
-
-            {/* Navigation */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 h-12 w-12"
-              onClick={prevImage}
-            >
-              <ChevronLeft className="h-8 w-8" />
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 h-12 w-12"
-              onClick={nextImage}
-            >
-              <ChevronRight className="h-8 w-8" />
-            </Button>
-
             {/* Image Counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded">
               {currentImage + 1} / {images.length}
