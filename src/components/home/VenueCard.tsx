@@ -27,7 +27,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
   const handleBooking = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    const message = `Chào bạn! Tôi muốn đặt chỗ tại ${venue.name} - ${venue.address}`;
+    const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -54,7 +54,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
             className={`${isOpen ? 'bg-green-500 hover:bg-green-600' : ''} text-white font-medium`}
           >
             <Clock className="h-3 w-3 mr-1" />
-            {isOpen ? "Đang Mở" : "Đã Đóng"}
+            {isOpen ? "Open" : "Closed"}
           </Badge>
         </div>
 
@@ -109,7 +109,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           disabled={!isOpen}
         >
           <MessageCircle className="h-4 w-4 mr-2" />
-          {isOpen ? "Đặt Chỗ Ngay" : "Tạm Đóng Cửa"}
+          {isOpen ? "Book Now" : "Temporarily Closed"}
         </Button>
       </div>
     </Link>

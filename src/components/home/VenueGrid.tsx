@@ -1,7 +1,6 @@
 'use client';
 import { VenueCard } from "./VenueCard";
 import { Button } from "@/components/ui/button";
-import { getImage } from "@/lib/placeholder-images";
 import { ktvData } from "@/lib/data";
 
 export const VenueGrid = () => {
@@ -26,15 +25,15 @@ export const VenueGrid = () => {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold mb-2">
-              <span className="gradient-text">Địa Điểm Nổi Bật</span>
+              <span className="gradient-text">Featured Venues</span>
             </h2>
             <p className="text-muted-foreground">
-              {venues.length} địa điểm được tìm thấy
+              {venues.length} venues found
             </p>
           </div>
           
           <div className="text-sm text-muted-foreground">
-            Cập nhật: vài phút trước
+            Updated: a few minutes ago
           </div>
         </div>
 
@@ -46,7 +45,7 @@ export const VenueGrid = () => {
 
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" className="px-8">
-            Xem Thêm Địa Điểm
+            View More Venues
           </Button>
         </div>
       </div>

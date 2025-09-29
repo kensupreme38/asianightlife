@@ -9,13 +9,13 @@ import Providers from '@/components/app/providers';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'NightLife - Đặt Chỗ Địa Điểm Giải Trí Hàng Đầu',
-  description: 'Nền tảng đặt chỗ hàng đầu cho KTV, Club và Live House tại Singapore, Vietnam, Thailand, Malaysia. Khám phá và đặt chỗ ngay!',
+  title: 'NightLife - Premier Entertainment Venue Booking',
+  description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Singapore, Vietnam, Thailand, Malaysia. Discover and book now!',
   authors: [{ name: 'NightLife Platform' }],
-  keywords: 'ktv, club, live house, đặt chỗ, karaoke, nightlife, singapore, vietnam, thailand, malaysia',
+  keywords: 'ktv, club, live house, booking, karaoke, nightlife, singapore, vietnam, thailand, malaysia',
   openGraph: {
-    title: 'NightLife - Đặt Chỗ Địa Điểm Giải Trí Hàng Đầu',
-    description: 'Nền tảng đặt chỗ hàng đầu cho KTV, Club và Live House tại Đông Nam Á',
+    title: 'NightLife - Premier Entertainment Venue Booking',
+    description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Southeast Asia',
     type: 'website',
     images: ['https://lovable.dev/opengraph-image-p98pqg.png'],
   },

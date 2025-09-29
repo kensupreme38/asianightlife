@@ -47,15 +47,15 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
         <DialogHeader className="px-6 pt-4 pb-2">
           <DialogTitle className="text-2xl font-bold flex items-center gap-2">
             <PartyPopper className="h-6 w-6 text-accent" />
-            Chào Mừng Bạn!
+            Welcome!
           </DialogTitle>
           <DialogDescription className="text-muted-foreground pt-2">
-            Khám phá và đặt chỗ tại những địa điểm giải trí sôi động nhất Đông Nam Á. Ưu đãi đặc biệt đang chờ bạn!
+            Discover and book the most vibrant entertainment venues in Southeast Asia. Special offers await you!
           </DialogDescription>
         </DialogHeader>
         <div className="px-6 text-sm">
-          <p className="font-semibold text-primary">🎉 Giảm 20% cho lần đặt chỗ đầu tiên!</p>
-          <p className="text-muted-foreground">Sử dụng mã <b className="text-foreground">NIGHTLIFE20</b> khi thanh toán.</p>
+          <p className="font-semibold text-primary">🎉 20% off your first booking!</p>
+          <p className="text-muted-foreground">Use code <b className="text-foreground">NIGHTLIFE20</b> at checkout.</p>
         </div>
         <DialogFooter className="p-6 bg-secondary/30">
           <Button
@@ -64,7 +64,7 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
             className="w-full"
             onClick={() => onOpenChange(false)}
           >
-            Khám Phá Ngay
+            Discover Now
           </Button>
         </DialogFooter>
       </DialogContent>

@@ -15,19 +15,19 @@ export const HeroBanner = () => {
       id: 1,
       image: heroBannerImage?.imageUrl || "https://picsum.photos/seed/hero/1200/600",
       imageHint: heroBannerImage?.imageHint,
-      title: "Khám Phá Những Địa Điểm Hot Nhất",
+      title: "Discover the Hottest Venues",
       subtitle: "Singapore • Vietnam • Thailand • Malaysia",
-      description: "Đặt chỗ ngay tại các club, KTV và live house hàng đầu Đông Nam Á",
-      cta: "Khám Phá Ngay"
+      description: "Book now at the top clubs, KTVs, and live houses in Southeast Asia.",
+      cta: "Discover Now"
     },
     {
       id: 2,
       image: heroBannerImage2?.imageUrl || "https://picsum.photos/seed/hero2/1200/600",
       imageHint: heroBannerImage2?.imageHint,
-      title: "Ưu Đãi Đặc Biệt Cuối Tuần",
-      subtitle: "Giảm 30% cho booking trước 6PM",
-      description: "Đừng bỏ lỡ cơ hội trải nghiệm những địa điểm giải trí tuyệt vời",
-      cta: "Đặt Ngay"
+      title: "Special Weekend Offer",
+      subtitle: "30% off for bookings before 6 PM",
+      description: "Don't miss the chance to experience amazing entertainment venues.",
+      cta: "Book Now"
     }
   ];
 

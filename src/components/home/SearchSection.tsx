@@ -9,10 +9,10 @@ export const SearchSection = () => {
   const [sortBy, setSortBy] = useState("recommended");
 
   const sortOptions = [
-    { value: "recommended", label: "Được Đề Xuất" },
-    { value: "price", label: "Giá Cả" },
-    { value: "looks", label: "Đẹp Nhất" },
-    { value: "playability", label: "Vui Nhất" }
+    { value: "recommended", label: "Recommended" },
+    { value: "price", label: "Price" },
+    { value: "looks", label: "Best Looking" },
+    { value: "playability", label: "Most Fun" }
   ];
 
   return (
@@ -24,7 +24,7 @@ export const SearchSection = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Tìm kiếm địa điểm, khu vực..."
+                placeholder="Search for venues, areas..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 h-12 bg-background/60 backdrop-blur-sm border-border/40 focus:border-primary"
@@ -34,7 +34,7 @@ export const SearchSection = () => {
             {/* Location */}
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-neon-pink" />
-              <span>Khu vực hiện tại</span>
+              <span>Current Area</span>
             </div>
 
             {/* Sort Select */}
@@ -54,7 +54,7 @@ export const SearchSection = () => {
             {/* Filter Button */}
             <Button variant="outline" size="lg" className="h-12 px-6">
               <SlidersHorizontal className="h-4 w-4 mr-2" />
-              Bộ Lọc
+              Filters
             </Button>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const CountrySelector = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const countries = [
-    { id: 'all', name: 'Tất Cả', flag: '🌏' },
+    { id: 'all', name: 'All', flag: '🌏' },
     { id: 'singapore', name: 'Singapore', flag: '🇸🇬' },
     { id: 'vietnam', name: 'Vietnam', flag: '🇻🇳' },
     { id: 'thailand', name: 'Thailand', flag: '🇹🇭' },
@@ -16,7 +16,7 @@ export const CountrySelector = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'Tất Cả', icon: Music },
+    { id: 'all', name: 'All', icon: Music },
     { id: 'ktv', name: 'KTVs', icon: Mic },
     { id: 'club', name: 'Clubs', icon: Radio },
     { id: 'livehouse', name: 'Live House', icon: Music },
@@ -30,7 +30,7 @@ export const CountrySelector = () => {
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
               <Globe className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold">Chọn Quốc Gia</h2>
+              <h2 className="text-2xl font-bold">Select Country</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {countries.map((country) => (
@@ -55,7 +55,7 @@ export const CountrySelector = () => {
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
               <Music className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold">Loại Hình Giải Trí</h2>
+              <h2 className="text-2xl font-bold">Entertainment Type</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => {

@@ -23,7 +23,7 @@ export const Footer = () => {
               <span className="font-bold text-xl gradient-text">NightLife</span>
             </div>
             <p className="text-muted-foreground mb-4">
-              Nền tảng đặt chỗ hàng đầu cho các địa điểm giải trí tại Đông Nam Á.
+              The leading booking platform for entertainment venues in Southeast Asia.
             </p>
             <div className="flex space-x-2">
               {socialLinks.map((social) => (
@@ -44,29 +44,29 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Liên Kết Nhanh</h3>
+            <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition-colors">Trang Chủ</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Địa Điểm</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Đặt Chỗ</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Liên Hệ</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Venues</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Bookings</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           {/* Categories */}
           <div>
-            <h3 className="font-semibold mb-4">Danh Mục</h3>
+            <h3 className="font-semibold mb-4">Categories</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="#" className="hover:text-primary transition-colors">KTV</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Clubs</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Live House</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Khuyến Mãi</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Promotions</Link></li>
             </ul>
           </div>
 
           {/* Countries */}
           <div>
-            <h3 className="font-semibold mb-4">Quốc Gia</h3>
+            <h3 className="font-semibold mb-4">Countries</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="#" className="hover:text-primary transition-colors">🇸🇬 Singapore</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">🇻🇳 Vietnam</Link></li>
@@ -78,17 +78,17 @@ export const Footer = () => {
 
         <div className="border-t border-border/40 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 NightLife. Tất cả quyền được bảo lưu.
+            © 2024 NightLife. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Điều Khoản
+              Terms
             </Link>
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Chính Sách
+              Policy
             </Link>
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Hỗ Trợ
+              Support
             </Link>
           </div>
         </div>
