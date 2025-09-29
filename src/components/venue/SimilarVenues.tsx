@@ -15,7 +15,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     .slice(0, 3)
     .map(v => ({
       ...v,
-      rating: 4.5 + Math.random() * 0.4,
+      rating: 4.5,
       status: "open" as const,
     }));
 
