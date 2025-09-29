@@ -32,6 +32,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
         {/* Main Image */}
         <div 
           className="col-span-3 relative overflow-hidden rounded-lg"
+          onClick={() => openLightbox(currentImage)}
         >
           <Image 
             src={images[currentImage]} 
@@ -61,14 +62,6 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
                 fill
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
-              {index === 3 && images.length > 4 && (
-                <div 
-                  className="absolute inset-0 bg-black/60 flex items-center justify-center text-white font-medium"
-                  onClick={() => openLightbox(index)}
-                >
-                  +{images.length - 4}
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -111,12 +104,15 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
             className="relative w-full h-full max-w-4xl max-h-[90vh]" 
             onClick={(e) => e.stopPropagation()}
           >
-            <Image 
-              src={images[currentImage]} 
-              alt={`${venueName} - Image ${currentImage + 1}`}
-              fill
-              className="object-contain"
-            />
+            <div className="relative w-full h-full">
+              <Image 
+                src={images[currentImage]} 
+                alt={`${venueName} - Image ${currentImage + 1}`}
+                layout="fill"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </div>
             {/* Image Counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded">
               {currentImage + 1} / {images.length}
