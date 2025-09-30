@@ -1,14 +1,25 @@
 'use client'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const NotFound = () => {
   const pathname = usePathname();
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", pathname);
-  }, [pathname]);
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (hasMounted) {
+      console.error("404 Error: User attempted to access non-existent route:", pathname);
+    }
+  }, [pathname, hasMounted]);
+
+  if (!hasMounted) {
+    return null; // Or a loading indicator
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
