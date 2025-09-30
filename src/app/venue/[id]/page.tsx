@@ -1,8 +1,8 @@
 'use client';
 import { useParams } from 'next/navigation';
 import Link from "next/link";
-import { useCallback, useMemo } from 'react';
-import { ArrowLeft, Share2, Heart } from "lucide-react";
+import { useCallback, useMemo, useState, useEffect } from 'react';
+import { ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -11,12 +11,20 @@ import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
 import { VenueImageMasonry } from '@/components/venue/VenueImageMasonry';
 import { ktvData } from '@/lib/data';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const VenueDetail = () => {
   const params = useParams();
   const id = params.id as string;
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const venue = useMemo(() => {
+    if (!hasMounted) return null;
+
     const foundVenue = ktvData.find(v => v.id.toString() === id);
     if (foundVenue) {
       return {
@@ -48,10 +56,10 @@ const VenueDetail = () => {
       ],
       amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
     };
-  }, [id]);
+  }, [id, hasMounted]);
 
   const handleShare = useCallback(async () => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !venue) return;
 
     const shareData = {
       title: venue.name,
@@ -76,7 +84,22 @@ const VenueDetail = () => {
         alert("Could not share or copy link.");
       }
     }
-  }, [venue.name, venue.address]);
+  }, [venue]);
+
+  if (!hasMounted || !venue) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="container py-8">
+          <Skeleton className="h-10 w-32 mb-8" />
+          <Skeleton className="h-[550px] w-full rounded-lg mb-8" />
+          <Skeleton className="h-40 w-full rounded-lg mb-12" />
+          <Skeleton className="h-64 w-full rounded-lg" />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   const galleryImages = [venue.main_image_url, ...venue.images];
 
