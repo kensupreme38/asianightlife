@@ -6,13 +6,7 @@ import {
   MapPin, 
   Clock, 
   Phone, 
-  MessageCircle, 
-  Wifi, 
-  Car, 
-  Music,
-  Users,
-  CreditCard,
-  CheckCircle
+  MessageCircle
 } from "lucide-react";
 
 interface VenueInfoProps {
@@ -44,13 +38,6 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
     window.open(`tel:${venue.phone}`, '_self');
   };
 
-  const amenityIcons: { [key: string]: any } = {
-    "Free Wifi": Wifi,
-    "Parking": Car,
-    "Premium Sound": Music,
-    "VIP Rooms": Users,
-    "Card Payment": CreditCard,
-  };
 
   return (
     <div className="space-y-8">
