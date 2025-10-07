@@ -9,6 +9,7 @@ import {
   LogIn,
   UserPlus 
 } from "lucide-react";
+import Image from "next/image";
 
 export const Header = () => {
   const socialLinks = [
@@ -25,7 +26,14 @@ export const Header = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="h-8 w-8 rounded bg-gradient-primary flex items-center justify-center">
-            <Music className="h-5 w-5 text-white" />
+            {/* <Music className="h-5 w-5 text-white" /> */}
+            <Image
+              src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
+              alt="NightLife Logo"
+              width={32}
+              height={32}
+              className="object-cover"
+            />
           </div>
           <span className="font-bold text-xl gradient-text">NightLife</span>
         </Link>

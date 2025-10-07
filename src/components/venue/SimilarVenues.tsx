@@ -15,6 +15,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     .slice(0, 3)
     .map(v => ({
       ...v,
+      id: v.id.toString(),
       rating: 4.5,
       status: "open" as const,
     }));

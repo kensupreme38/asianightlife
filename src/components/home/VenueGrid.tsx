@@ -7,6 +7,7 @@ export const VenueGrid = () => {
   const venues = [
     ...ktvData.map(ktv => ({
       ...ktv,
+      id: ktv.id.toString(),
       rating: 4.5,
       status: "open" as const,
       imageHint: "ktv lounge"
