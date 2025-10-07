@@ -26,6 +26,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
     if (foundVenue) {
       return {
         ...foundVenue,
+        id: foundVenue.id.toString(),
         rating: 4.8,
         status: "open" as const,
         amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
