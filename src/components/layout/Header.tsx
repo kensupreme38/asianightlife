@@ -5,9 +5,7 @@ import {
   Instagram, 
   Music, 
   Facebook, 
-  Send,
-  LogIn,
-  UserPlus 
+  Send
 } from "lucide-react";
 import Image from "next/image";
 
@@ -39,7 +37,7 @@ export const Header = () => {
         </Link>
 
         {/* Social Links */}
-        <div className="hidden md:flex items-center space-x-1">
+        <div className="flex items-center space-x-1">
           {socialLinks.map((social) => (
             <Button
               key={social.label}
@@ -58,18 +56,6 @@ export const Header = () => {
               </a>
             </Button>
           ))}
-        </div>
-
-        {/* Auth Buttons */}
-        <div className="flex items-center space-x-2">
-          <Button variant="ghost" size="sm" className="text-sm">
-            <LogIn className="h-4 w-4 mr-2" />
-            LOGIN
-          </Button>
-          <Button variant="neon" size="sm" className="text-sm">
-            <UserPlus className="h-4 w-4 mr-2" />
-            JOIN
-          </Button>
         </div>
       </div>
     </header>
