@@ -12,12 +12,13 @@ import { WelcomeDialog } from '@/components/home/WelcomeDialog';
 const HomeComponent = () => {
   const [isWelcomeDialogOpen, setWelcomeDialogOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState('all');
 
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  
   const selectedCategory = searchParams.get('type') || 'all';
+  const selectedCountry = searchParams.get('country') || 'all';
 
   useEffect(() => {
     setHasMounted(true);
@@ -37,11 +38,21 @@ const HomeComponent = () => {
   }, [hasMounted]);
 
   const handleCategoryChange = (category: string) => {
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
     if (category === 'all') {
       params.delete('type');
     } else {
       params.set('type', category);
+    }
+    router.push(`${pathname}?${params.toString()}`);
+  };
+
+  const handleCountryChange = (country: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (country === 'all') {
+      params.delete('country');
+    } else {
+      params.set('country', country);
     }
     router.push(`${pathname}?${params.toString()}`);
   };
@@ -57,7 +68,7 @@ const HomeComponent = () => {
         <HeroBanner />
         <CountrySelector 
           selectedCountry={selectedCountry}
-          onCountryChange={setSelectedCountry}
+          onCountryChange={handleCountryChange}
           selectedCategory={selectedCategory}
           onCategoryChange={handleCategoryChange}
         />
