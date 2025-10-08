@@ -45,7 +45,7 @@ const HomeComponent = () => {
     } else {
       params.set('type', category);
     }
-    router.push(`${pathname}?${params.toString()}`);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   const handleCountryChange = (country: string) => {
@@ -55,7 +55,7 @@ const HomeComponent = () => {
     } else {
       params.set('country', country);
     }
-    router.push(`${pathname}?${params.toString()}`);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   const handleSearchChange = (query: string) => {
@@ -65,7 +65,7 @@ const HomeComponent = () => {
     } else {
       params.delete('q');
     }
-    router.push(`${pathname}?${params.toString()}`);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
   if (!hasMounted) {
