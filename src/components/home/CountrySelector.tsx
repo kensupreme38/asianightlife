@@ -3,16 +3,20 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Globe, Mic, Music, Radio } from 'lucide-react';
 
-export const CountrySelector = () => {
-  const [selectedCountry, setSelectedCountry] = useState('all');
+interface CountrySelectorProps {
+  selectedCountry: string;
+  onCountryChange: (country: string) => void;
+}
+
+export const CountrySelector = ({ selectedCountry, onCountryChange }: CountrySelectorProps) => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const countries = [
     { id: 'all', name: 'All', flag: '🌏' },
-    { id: 'singapore', name: 'Singapore', flag: '🇸🇬' },
-    { id: 'vietnam', name: 'Vietnam', flag: '🇻🇳' },
-    { id: 'thailand', name: 'Thailand', flag: '🇹🇭' },
-    { id: 'malaysia', name: 'Malaysia', flag: '🇲🇾' },
+    { id: 'Singapore', name: 'Singapore', flag: '🇸🇬' },
+    { id: 'Vietnam', name: 'Vietnam', flag: '🇻🇳' },
+    { id: 'Thailand', name: 'Thailand', flag: '🇹🇭' },
+    { id: 'Malaysia', name: 'Malaysia', flag: '🇲🇾' },
   ];
 
   const categories = [
@@ -42,7 +46,7 @@ export const CountrySelector = () => {
                       ? 'neon-glow'
                       : 'hover:border-primary/50 hover-glow'
                   }`}
-                  onClick={() => setSelectedCountry(country.id)}
+                  onClick={() => onCountryChange(country.id)}
                 >
                   <span className="text-lg">{country.flag}</span>
                   <span className="font-medium">{country.name}</span>

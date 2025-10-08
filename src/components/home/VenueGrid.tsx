@@ -3,16 +3,20 @@ import { VenueCard } from "./VenueCard";
 import { Button } from "@/components/ui/button";
 import { ktvData } from "@/lib/data";
 
-export const VenueGrid = () => {
-  const venues = [
-    ...ktvData.map(ktv => ({
+interface VenueGridProps {
+  selectedCountry: string;
+}
+
+export const VenueGrid = ({ selectedCountry }: VenueGridProps) => {
+  const venues = ktvData
+    .filter(venue => selectedCountry === 'all' || venue.country === selectedCountry)
+    .map(ktv => ({
       ...ktv,
       id: ktv.id.toString(),
       rating: 4.5,
       status: "open" as const,
       imageHint: "ktv lounge"
-    }))
-  ];
+    }));
 
   return (
     <section className="py-12">

@@ -11,6 +11,7 @@ import { WelcomeDialog } from '@/components/home/WelcomeDialog';
 const HomeComponent = () => {
   const [isWelcomeDialogOpen, setWelcomeDialogOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('all');
 
   useEffect(() => {
     setHasMounted(true);
@@ -38,9 +39,12 @@ const HomeComponent = () => {
       <Header />
       <main>
         <HeroBanner />
-        <CountrySelector />
+        <CountrySelector 
+          selectedCountry={selectedCountry}
+          onCountryChange={setSelectedCountry}
+        />
         <SearchSection />
-        <VenueGrid />
+        <VenueGrid selectedCountry={selectedCountry} />
       </main>
       <Footer />
       <WelcomeDialog open={isWelcomeDialogOpen} onOpenChange={setWelcomeDialogOpen} />

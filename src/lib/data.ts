@@ -241,6 +241,291 @@ Pool table in VIP room`,
     "description": "Gala KTV (formerly BVL KTV) in Singapore offers various time slots with surcharges for fruits, service, and GST. Minimum spending depends on the room type, based on beer towers/bottles.",
     "hours": "Daily 4PM - 3AM",
     "contact": "Booking via +65 9777 2575"
+  }, 
+  {
+    "id": 14,
+    "name": "Fyou KTV (ex Myth KTV)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/01/Myth-KTV-Main-2.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/Fyou-Price-List.jpeg"
+    ],
+    "address": "Golden Mile Tower B1-35, Singapore 199589",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$260",
+    "description": "Fyou KTV (ex Myth KTV)",
+    "hours": {
+      "Mon-Sat 4-7": "$50",
+      "Mon-Fri 7-11 / 11-3": "$100",
+      "Sat, Sun 7-11 / 11-3": "$70"
+    },
+    "contact": "+65 9777 2575",
+    "surcharges": {
+      "compulsory food item": "$15-20",
+      "GST": "9%"
+    },
+    "minimum_spend": {
+      "S room (2 pax)": "1 tower / 1 bottle",
+      "M room (4 pax)": "2 towers / 2 bottles",
+      "L room (6 pax)": "5 towers / 3 bottles",
+      "Deluxe room (10 pax)": "8 towers / 4 bottles"
+    }
+  },
+  {
+    "id": 15,
+    "name": "New Lisbo KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/01/New-Lisbo-KTV-Main-2.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/New-Lisbo-KTV-Price-Beer-Tower-723x1024.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/New-Lisbo-KTV-Price-Liquor-727x1024.jpg"
+    ],
+    "address": "2 Foch Road, Singapore 209252",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$238",
+    "description": "New Lisbo KTV is one of the most popular spots located at Foch Road. Offering multiple room sizes from S to VIP7, each with different minimum spends. Known for its vibrant atmosphere and friendly hostesses, guests can enjoy tower or liquor packages. Surcharges include Fruits ($20 for S/M/L rooms, $40 for VIP), 10% service charge and 9% GST. Minimum spend ranges from 1 tower to 8 towers depending on room type.",
+    "hours": "Mon-Sat 4PM-7PM (Happy Hour); Mon-Fri 7PM-11PM / 11PM-3AM; Sat 7PM-11PM / 11PM-4AM; Sun 7PM-11PM / 11PM-3AM",
+    "contact": "+65 9777 2575"
+  },
+  {
+    "id": 16,
+    "name": "277 KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2023/12/277-KTV-Main-2.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/277-Alcohol.jpeg"
+    ],
+    "address": "277 Geylang Road, Level 2, Singapore 389327",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$229",
+    "description": "277 KTV at Geylang Road. They run happy hour sessions from 4-7pm at $50, and regular sessions from 7-11pm / 11pm-3am at $70. Surcharges include fruits $20 and 10% service charge. Minimum spend depends on room size: S room (2 pax) – 1 tower / 1 bottle; M (4 pax) – 3 towers / 1 bottle; L (6 pax) – 5 towers / 2 bottles; VIP (8 pax) – 8 towers / 3 bottles. Recommended for budget playability. ",
+    "hours": "Mon-Sat 4-7pm (HH); Mon-Sun 7-11pm / 11pm-3am",
+    "contact": "Make A Booking via +65 9777 2575"
+  },
+  {
+    "id": 17,
+    "name": "B12 KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/01/B12-KTV-Main-1.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/B12-Price-List-1078x1536.jpeg"
+    ],
+    "address": "Havelock 2 B1-19, Singapore 059763",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$296",
+    "description": "B12 KTV located at Havelock 2 B1-19. Opening hours include Mon-Sat 4-7pm at $50, and regular sessions 7-11pm / 11pm-3am at $100; Sun 7-11pm / 11pm-3am at $70. Promotion: HH (Happy Hour) 1 tower for $68 only. 7-11pm Chivas12 bottle deal at $228. Surcharges: Fruits $15, Service Charge 10%. Minimum spend: S room (3 pax) – 2 towers / 1 bottle; M room (5 pax) – 3 towers / 1 bottle; L (8 pax) – 5 towers / 2 bottles; VIP room (10 pax) – 8 towers / 3 bottles.",
+    "hours": "Mon-Sat 4-7pm; Mon-Sat 7-11pm / 11pm-3am; Sun 7-11pm / 11pm-3am",
+    "contact": "+65 9777 2575"
+  },
+  {
+    "id": 18,
+    "name": "Deluxe KTV (Singapore Girls)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/01/Deluxe-KTV-Main-1.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/Deluxe-KTV-Price-662x1024.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/Deluxe-KTV-Price-2-768x768.jpg"
+    ],
+    "address": "Peninsula Plaza B1-07, Singapore 179098",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$490",
+    "description": "Deluxe KTV (Singapore Girls) located at Peninsula Plaza B1-07. Sessions run daily from 9 pm to 3 am. SG girls tip is $200, and mami tip is $150. Surcharges include fruits $20 and 10% service charge. Minimum spend: S room (2 pax) – 1 tower / 1 bottle; M room (4 pax) – 3 towers / 1 bottle; L room (6 pax) – 5 towers / 2 bottles.",
+    "hours": "Mon-Sun 9pm-3am",
+    "contact": "Make A Booking"
+  },
+  {
+    "id": 19,
+    "name": "Malay KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/01/Malay-KTV-Main-3.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/Malay-KTV-Price-1-461x1024.jpg"
+    ],
+    "address": "212A Syed Alwi Road Level 3, Singapore 207745",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$591",
+    "description": "Malay KTV located at Syed Alwi Road. Sessions run Mon–Sat 9:30 pm to 3 am. There is a “Butterfly” option at $100 and standard booking $400. Surcharges include Fruits $20 and 10% service charge. Minimum spend depends on room size: S room (2 pax) – 1 tower / 1 bottle; M room (4 pax) – 3 towers / 1 bottle; L room (6 pax) – 5 towers / 2 bottles.",
+    "hours": "Mon-Sat 9:30pm-3am",
+    "contact": "+65 9777 2575"
+  },
+  {
+    "id": 20,
+    "name": "Ace Club KTV (Singapore Girls) (Closed)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Main-1.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-2024-Promotion-768x765.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Beer-Tower-Promotion-1-300x300.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Liquor-Promotion-1-300x300.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Beer-Tower-Promotion-2-300x281.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Beer-Tower-Promotion-3-300x277.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Beer-Tower-300x278.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Liquor-1-300x300.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Liquor-2-300x300.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Liquor-Promotion-2-300x300.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2023/12/Ace-KTV-Price-Liquor-Promotion-3-300x300.jpg"
+    ],
+    "address": "48A Foch Road, Singapore 209272",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$238",
+    "description": "Ace Club KTV is currently closed. Prior to closure, they operated sessions with Happy Hour from 4-7pm at $50, and regular sessions 7-11pm / 11pm-3am at $100. Singapore girls only after 11pm cost $150. Promotions included HH (3 free 1 towers $218) and NH (3 free 1 towers $288). Surcharges were fruits $20 and service charge 10%. Minimum spend varied by room: S room (2 pax) – 1 tower / 1 bottle; M room (3 pax) – 2 towers / 1 bottle; L room (5 pax) – 3 towers / 2 bottles; VIP (6 pax) – 5 towers / 3 bottles; VVIP (8 pax) – 6 towers / 3 bottles; SVIP (10 pax) – 8 towers / 4 bottles.",
+    "hours": "Mon-Sat 4-7pm; Mon-Sun 7-11pm / 11pm-3am",
+    "contact": "Make A Booking"
+  },
+  {
+    "id": 21,
+    "name": "Phoenix KTV (West Side)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/08/Phoenix-KTV-main.jpg",
+    "images": [],
+    "address": "Super Bowl Jurong Complex, 1 Yuan Ching Road #01-07, Singapore 618640",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$233",
+    "description": "Phoenix KTV (West Side) located at Super Bowl Jurong Complex, offering a starting price of $233. Tel: +65 9777 2575. Make A Booking via ChiongBuddy.  :contentReference[oaicite:0]{index=0}",
+    "hours": "",
+    "contact": "Make A Booking"
+  },
+  {
+    "id": 22,
+    "name": "Club MG KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/01/MG-KTV-Main.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/MG-KTV-Price-Beer-Tower-705x1024.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2024/01/MG-KTV-Price-Liquor-707x1024.jpg"
+    ],
+    "address": "212A Syed Alwi Road level 2, Singapore 207745",
+    "country": "Singapore",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "$241",
+    "description": "Club MG KTV located at 212A Syed Alwi Road level 2. Session rates: Mon-Sat 6-10pm at $50, and Mon-Sun 10pm-3am at $70. Surcharges include Fruits $18 and 10% service charge. Minimum spend: S room (2 pax) – 1 tower / 1 bottle; M room (4 pax) – 3 towers / 1 bottle; L room (8 pax) – 5 towers / 2 bottles.",
+    "hours": "Mon-Sat 6PM-10PM; Mon-Sun 10PM-3AM",
+    "contact": "Make A Booking"
+  },
+  {
+    "id": 23,
+    "name": "Matrix KTV Ho Chi Minh",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/08/Matrix-main-1.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2025/08/Matrix-KTV-Menu-1086x1536.jpeg"
+    ],
+    "address": "124 Đường số 9A, Khu dân cư Trung Sơn, Bình Chánh, Hồ Chí Minh",  
+    "country": "Vietnam",
+    "phone": "+84 941 252 119",
+    "category": "KTV",
+    "price": "Starting from S room 800,000 VND/hr",
+    "description": "Matrix KTV offers luxury karaoke rooms with different room sizes: S (2 pax), M (6 pax), L (10 pax), VIP (16 pax). Lady tip: 1.5 million VND (3h), mommy tip: 1.5 million VND, waiter tip: 500k VND. Surcharges: fruits 500-750k, 5% service charge, 10% VAT, 5% credit card surcharge.",
+    "hours": "",
+    "contact": "Make A Booking via ChiongBuddy"
+  },
+  {
+    "id": 24,
+    "name": "57 Tulip KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/05/Tulip-Main-3.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Tulip-Menu-1.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Tulip-Menu-2.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Tulip-Menu-3.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Tulip-Room-1-1536x1152.jpg"
+    ],
+    "address": "57 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh",
+    "country": "Vietnam",
+    "phone": "+84 877 218 317",
+    "category": "KTV",
+    "price": "Small Room: 799k VND/hr; Big Room: 999k VND/hr",
+    "description": "57 Tulip KTV is a premier karaoke club in Ho Chi Minh City, known for its modern rooms and vibrant entertainment. They serve bottles of beer like Tiger, Saigon, Ken (69k VND), Corona (95k VND), with fruits (499k VND) and shisha (680k VND) as extras. Hostess & mummy tip: 1,000k VND for 3h or 1,500k VND for 3-5h. Waiter tip: 500k VND.",
+    "hours": "6:00 PM – 3:00 AM",
+    "contact": "WhatsApp / Telegram / Zalo: +84 877 218 317"
+  },
+  {
+    "id": 25,
+    "name": "Lucky KTV (Ho Chi Minh)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/06/Lucky-main-1.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2025/06/Lucky-ktv-bottles.jpeg"
+    ],
+    "address": "171 Cho Lon, Ward 11, District 6, Ho Chi Minh",
+    "country": "Vietnam",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "Starting from 700k (normal), 1.5m (sexy)",
+    "description": "Lucky KTV is located at 171 Cho Lon, District 6, HCMC. It offers two pricing tiers: normal (700k) and sexy (1.5m). Promotions include beer at 60k per can, balloons 6.5m per tank. Surcharges: fruits 490k, VAT 10%. Room charges: S room (8 pax) 600k/hr, M room (12 pax) 1.2m/hr, L room (20 pax) 1.5m/hr. Cash only — no card payment accepted.",
+    "hours": "",
+    "contact": "+65 9777 2575"
+  },
+  {
+    "id": 26,
+    "name": "Atlantis Karaoke & Restaurant",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-main.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-ktv-menu4.jpeg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-ktv-menu3.jpeg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-ktv-menu1-729x1024.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-ktv-menu2-725x1024.jpg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-ktv-menu5.jpeg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/Atlantis-room-1-1536x1024.jpg"
+    ],
+    "address": "31 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh",
+    "country": "Vietnam",
+    "phone": "",
+    "category": "KTV / Karaoke & Restaurant",
+    "price": "Small: 560,000 VND/hr; Medium: 770,000 VND/hr; Big: 930,000 VND/hr",
+    "description": "Atlantis Karaoke & Restaurant is located in District 1, operating from 5:00 PM to 3:00 AM. They feature over 100 girls to choose from, luxury private rooms, high-end sound systems. Fruit platter: 640,000 VND. Beer bottles: 69,000 VND each. Girl tip for first 3 hours: 1,000,000 VND; from 4th hour: 500,000 VND/hr. Mummy & waiter tip: 2,000,000 VND.",
+    "hours": "5:00 PM – 3:00 AM",
+    "contact": "WhatsApp Mama: +84 877 218 317; WeChat: may333sea"
+  },
+  {
+    "id": 27,
+    "name": "1127 KTV",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/05/1127-main.jpg",
+    "images": [
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/1127-menu.jpeg",
+      "https://chiongbuddy.com/wp-content/uploads/2025/05/1127-room-1.jpg"
+    ],
+    "address": "1127 Trần Hưng Đạo, Ward 5, District 5, Ho Chi Minh City",  
+    "country": "Vietnam",
+    "phone": "0388221127",
+    "category": "KTV",
+    "price": "Starting from S room 500,000 VND/hr",
+    "description": "1127 KTV is located at 1127 Trần Hưng Đạo, District 5. Room rates: Small room 500k/hr, Medium 800k/hr, VIP 1,000k/hr. Surcharges include fruits 480k VND, ticket 100k/pax, VAT 10%, credit card surcharge 10%. Popular for its large rooms and extensive entertainment offerings. :contentReference[oaicite:0]{index=0}",
+    "hours": "2:00 PM – 4:00 AM",
+    "contact": "Make A Booking via 0388221127"
+  },
+  {
+    "id": 28,
+    "name": "Pearl KTV (Ho Chi Minh)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2024/02/UMe-KTV-Main.jpg",
+    "images": [],
+    "address": "93 An Duong Vuong, Ward 7, District 5, Ho Chi Minh",  
+    "country": "Vietnam",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "1m VND (Starting from)",  
+    "description": "Pearl KTV (Ho Chi Minh) located at 93 An Duong Vuong. Session price starts from 1 million VND. Surcharges, minimum spend, tips are listed under ‘Opening Hours & Tips’ on the booking site. :contentReference[oaicite:0]{index=0}",
+    "hours": "",
+    "contact": "+65 9777 2575"
+  },
+  {
+    "id": 29,
+    "name": "Luxury 21 KTV (Ho Chi Minh)",
+    "main_image_url": "https://chiongbuddy.com/wp-content/uploads/2025/05/Luxury-21-Main.jpg",
+    "images": [],
+    "address": "21 Bui Thi Xuan, Ward Pham Ngu Lao, District 1, Ho Chi Minh",  
+    "country": "Vietnam",
+    "phone": "+65 9777 2575",
+    "category": "KTV",
+    "price": "1m VND (Starting from)",  
+    "description": "Luxury 21 KTV (Ho Chi Minh). Opening Hours & Tips: 1m VND. Promotion: —. Surcharges: Fruits 550k VND, VAT 18%. Minimum Spend: Room charge 690k VND/hr. Recommended For: Playful girls. Contact to book. :contentReference[oaicite:0]{index=0}",
+    "hours": "",
+    "contact": "Make A Booking via +65 9777 2575"
   }
 ]
     
