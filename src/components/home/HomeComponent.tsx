@@ -19,6 +19,7 @@ const HomeComponent = () => {
   
   const selectedCategory = searchParams.get('type') || 'all';
   const selectedCountry = searchParams.get('country') || 'all';
+  const searchQuery = searchParams.get('q') || '';
 
   useEffect(() => {
     setHasMounted(true);
@@ -57,6 +58,16 @@ const HomeComponent = () => {
     router.push(`${pathname}?${params.toString()}`);
   };
 
+  const handleSearchChange = (query: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (query) {
+      params.set('q', query);
+    } else {
+      params.delete('q');
+    }
+    router.push(`${pathname}?${params.toString()}`);
+  }
+
   if (!hasMounted) {
     return null; // or a loading skeleton
   }
@@ -72,8 +83,12 @@ const HomeComponent = () => {
           selectedCategory={selectedCategory}
           onCategoryChange={handleCategoryChange}
         />
-        <SearchSection />
-        <VenueGrid selectedCountry={selectedCountry} selectedCategory={selectedCategory} />
+        <SearchSection searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+        <VenueGrid 
+          selectedCountry={selectedCountry} 
+          selectedCategory={selectedCategory}
+          searchQuery={searchQuery} 
+        />
       </main>
       <Footer />
       <WelcomeDialog open={isWelcomeDialogOpen} onOpenChange={setWelcomeDialogOpen} />

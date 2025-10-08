@@ -1,12 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search, SlidersHorizontal, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export const SearchSection = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+interface SearchSectionProps {
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+}
+
+export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProps) => {
   const [sortBy, setSortBy] = useState("recommended");
+  const [inputValue, setInputValue] = useState(searchQuery);
+
+  useEffect(() => {
+    setInputValue(searchQuery);
+  }, [searchQuery]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      onSearchChange(inputValue);
+    }
+  };
+
 
   const sortOptions = [
     { value: "recommended", label: "Recommended" },
@@ -21,12 +41,13 @@ export const SearchSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             {/* Search Input */}
-            <div className="relative flex-1">
+            <div className="relative flex-1 w-full">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="Search for venues, areas..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                value={inputValue}
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
                 className="pl-10 h-12 bg-background/60 backdrop-blur-sm border-border/40 focus:border-primary"
               />
             </div>
