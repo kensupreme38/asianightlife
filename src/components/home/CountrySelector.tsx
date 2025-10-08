@@ -1,15 +1,20 @@
 'use client';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Globe, Mic, Music, Radio } from 'lucide-react';
 
 interface CountrySelectorProps {
   selectedCountry: string;
   onCountryChange: (country: string) => void;
+  selectedCategory: string;
+  onCategoryChange: (category: string) => void;
 }
 
-export const CountrySelector = ({ selectedCountry, onCountryChange }: CountrySelectorProps) => {
-  const [activeCategory, setActiveCategory] = useState('all');
+export const CountrySelector = ({ 
+  selectedCountry, 
+  onCountryChange,
+  selectedCategory,
+  onCategoryChange
+}: CountrySelectorProps) => {
 
   const countries = [
     { id: 'all', name: 'All', flag: '🌏' },
@@ -21,9 +26,9 @@ export const CountrySelector = ({ selectedCountry, onCountryChange }: CountrySel
 
   const categories = [
     { id: 'all', name: 'All', icon: Music },
-    { id: 'ktv', name: 'KTVs', icon: Mic },
-    { id: 'club', name: 'Clubs', icon: Radio },
-    { id: 'livehouse', name: 'Live House', icon: Music },
+    { id: 'KTV', name: 'KTVs', icon: Mic },
+    { id: 'Club', name: 'Clubs', icon: Radio },
+    { id: 'Live House', name: 'Live House', icon: Music },
   ];
 
   return (
@@ -67,13 +72,13 @@ export const CountrySelector = ({ selectedCountry, onCountryChange }: CountrySel
                 return (
                   <Button
                     key={category.id}
-                    variant={activeCategory === category.id ? 'neon' : 'outline'}
+                    variant={selectedCategory === category.id ? 'neon' : 'outline'}
                     className={`flex items-center space-x-2 px-4 py-2 transition-all duration-300 ${
-                      activeCategory === category.id
+                      selectedCategory === category.id
                         ? 'neon-glow'
                         : 'hover:border-primary/50 hover-glow'
                     }`}
-                    onClick={() => setActiveCategory(category.id)}
+                    onClick={() => onCategoryChange(category.id)}
                   >
                     <Icon className="h-4 w-4" />
                     <span className="font-medium">{category.name}</span>

@@ -5,11 +5,13 @@ import { ktvData } from "@/lib/data";
 
 interface VenueGridProps {
   selectedCountry: string;
+  selectedCategory: string;
 }
 
-export const VenueGrid = ({ selectedCountry }: VenueGridProps) => {
+export const VenueGrid = ({ selectedCountry, selectedCategory }: VenueGridProps) => {
   const venues = ktvData
     .filter(venue => selectedCountry === 'all' || venue.country === selectedCountry)
+    .filter(venue => selectedCategory === 'all' || venue.category === selectedCategory)
     .map(ktv => ({
       ...ktv,
       id: ktv.id.toString(),

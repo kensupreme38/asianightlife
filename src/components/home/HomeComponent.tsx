@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroBanner } from "@/components/home/HeroBanner";
@@ -12,6 +13,11 @@ const HomeComponent = () => {
   const [isWelcomeDialogOpen, setWelcomeDialogOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('all');
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const selectedCategory = searchParams.get('type') || 'all';
 
   useEffect(() => {
     setHasMounted(true);
@@ -30,6 +36,16 @@ const HomeComponent = () => {
     }
   }, [hasMounted]);
 
+  const handleCategoryChange = (category: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (category === 'all') {
+      params.delete('type');
+    } else {
+      params.set('type', category);
+    }
+    router.push(`${pathname}?${params.toString()}`);
+  };
+
   if (!hasMounted) {
     return null; // or a loading skeleton
   }
@@ -42,9 +58,11 @@ const HomeComponent = () => {
         <CountrySelector 
           selectedCountry={selectedCountry}
           onCountryChange={setSelectedCountry}
+          selectedCategory={selectedCategory}
+          onCategoryChange={handleCategoryChange}
         />
         <SearchSection />
-        <VenueGrid selectedCountry={selectedCountry} />
+        <VenueGrid selectedCountry={selectedCountry} selectedCategory={selectedCategory} />
       </main>
       <Footer />
       <WelcomeDialog open={isWelcomeDialogOpen} onOpenChange={setWelcomeDialogOpen} />
