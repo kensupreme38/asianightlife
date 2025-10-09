@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# 🎉 KTV Nightlife Venue Directory
 
-## Project info
+Một ứng dụng web hiện đại để tìm kiếm và khám phá các địa điểm giải trí về đêm, karaoke và venue.
 
-**URL**: https://lovable.dev/projects/a8502408-cc67-4f80-bc81-22894f556ab3
+## 🚀 Tech Stack
 
-## How can I edit this code?
+- **Framework**: Next.js 15.5.4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI + shadcn/ui
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- 🎯 Tìm kiếm venue theo địa điểm
+- 🖼️ Gallery ảnh với Masonry layout
+- 📱 Responsive design
+- 🌙 Dark/Light mode support
+- 🔍 Advanced filtering
+- 📍 Location-based search
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a8502408-cc67-4f80-bc81-22894f556ab3) and start prompting.
+## 🛠️ Development
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Install dependencies
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+
+# Run linting
+npm run lint
 ```
 
-**Edit a file directly in GitHub**
+## 🌐 Live Demo
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Deploy link sẽ được cập nhật sau khi deploy lên Vercel.
 
-**Use GitHub Codespaces**
+## 📝 License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a8502408-cc67-4f80-bc81-22894f556ab3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Private project - All rights reserved.
