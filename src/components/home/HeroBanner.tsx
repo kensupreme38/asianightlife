@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Star, MapPin } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
 
@@ -35,14 +34,6 @@ export const HeroBanner = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [banners.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % banners.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
-  };
 
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">

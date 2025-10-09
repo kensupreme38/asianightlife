@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Clock, MessageCircle, Heart } from "lucide-react";
+import { Star, MapPin, Clock, MessageCircle } from "lucide-react";
 import Image from 'next/image';
 
 interface VenueCardProps {

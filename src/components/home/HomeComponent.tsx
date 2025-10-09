@@ -27,13 +27,16 @@ const HomeComponent = () => {
 
   useEffect(() => {
     if (hasMounted) {
-      const hasSeenWelcome = sessionStorage.getItem('hasSeenWelcomeDialog');
-      if (!hasSeenWelcome) {
-        const timer = setTimeout(() => {
-          setWelcomeDialogOpen(true);
-          sessionStorage.setItem('hasSeenWelcomeDialog', 'true');
-        }, 1000); // Show dialog after 1 second
-        return () => clearTimeout(timer);
+      // Check if we're in the browser environment
+      if (typeof window !== 'undefined') {
+        const hasSeenWelcome = sessionStorage.getItem('hasSeenWelcomeDialog');
+        if (!hasSeenWelcome) {
+          const timer = setTimeout(() => {
+            setWelcomeDialogOpen(true);
+            sessionStorage.setItem('hasSeenWelcomeDialog', 'true');
+          }, 1000); // Show dialog after 1 second
+          return () => clearTimeout(timer);
+        }
       }
     }
   }, [hasMounted]);
