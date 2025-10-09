@@ -1,3 +1,4 @@
+'use client';
 import VenueDetailClient from "@/components/venue/VenueDetailClient";
 
 type VenueDetailPageProps = {
