@@ -34,7 +34,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
     <Link href={`/venue/${venue.id}`} className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 block"
     >
       {/* Image */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative aspect-video overflow-hidden">
         <Image 
           src={venue.main_image_url} 
           alt={venue.name}

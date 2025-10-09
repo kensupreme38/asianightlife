@@ -6,8 +6,8 @@ import tsParser from "@typescript-eslint/parser";
 
 const eslintConfig = [
   {
-    files: ["src/**/*.{ts,tsx}"],
-    ignores: ["src/ai/dev.ts"],
+    files: ["**/*.{ts,tsx}"],
+    ignores: [".next/**", "node_modules/**", "src/ai/dev.ts"],
     plugins: {
       "@typescript-eslint": tsPlugin,
       react: reactPlugin,
@@ -21,6 +21,9 @@ const eslintConfig = [
         ecmaFeatures: {
           jsx: true,
         },
+      },
+      globals: {
+        React: "readonly",
       },
     },
     rules: {

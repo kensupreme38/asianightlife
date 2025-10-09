@@ -24,7 +24,7 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[480px] p-0 overflow-hidden card-elevated">
-        <div className="relative h-48">
+        <div className="relative aspect-video">
           {welcomeImage && (
             <Image
               src={welcomeImage.imageUrl}

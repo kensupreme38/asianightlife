@@ -47,7 +47,7 @@ export const HeroBanner = () => {
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
       {/* Banner Slides */}
-      <div className="relative h-full">
+      <div className="relative w-full h-full">
         {banners.map((banner, index) => (
           <div
             key={banner.id}

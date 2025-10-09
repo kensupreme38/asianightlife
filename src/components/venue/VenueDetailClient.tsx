@@ -30,6 +30,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
         rating: 4.8,
         status: "open" as const,
         amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
+        hours: typeof foundVenue.hours === 'object' ? 'Various' : foundVenue.hours,
       };
     }
 

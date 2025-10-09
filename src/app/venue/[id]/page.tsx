@@ -1,5 +1,9 @@
 import VenueDetailClient from "@/components/venue/VenueDetailClient";
 
-export default function VenueDetailPage({ params }: { params: { id: string } }) {
+type VenueDetailPageProps = {
+  params: { id: string };
+};
+
+export default function VenueDetailPage({ params }: VenueDetailPageProps) {
   return <VenueDetailClient id={params.id} />;
 }
