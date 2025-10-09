@@ -1,7 +1,15 @@
-'use client'
+'use client';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const NotFound = () => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.error("404 Error: Route not found:", pathname);
+  }, [pathname]);
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="text-center">
