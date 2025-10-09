@@ -21,7 +21,7 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
         src={images[0]}
         alt={`${venueName} - Image 1`}
         fill
-        className={`object-contain group-hover:scale-105 transition-transform duration-300 ${
+        className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
           isLoading ? 'opacity-0' : 'opacity-100'
         }`}
         onLoad={() => setIsLoading(false)}
