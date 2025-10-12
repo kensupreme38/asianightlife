@@ -1,6 +1,7 @@
 'use client';
 import Link from "next/link";
 import { useCallback, useMemo, useState, useEffect } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
@@ -14,10 +15,28 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 const VenueDetailClient = ({ id }: { id: string }) => {
   const [hasMounted, setHasMounted] = useState(false);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const params = useMemo(() => {
+    return new URLSearchParams(searchParams?.toString() ?? '');
+  }, [searchParams]);
+
+  const searchQuery = params.get('q') || '';
 
   useEffect(() => {
     setHasMounted(true);
   }, []);
+
+  const handleSearchChange = (query: string) => {
+    const newParams = new URLSearchParams(params.toString());
+    if (query) {
+      newParams.set('q', query);
+    } else {
+      newParams.delete('q');
+    }
+    router.push(`/?${newParams.toString()}`);
+  };
 
   const venue = useMemo(() => {
     if (!hasMounted) return null;
@@ -30,31 +49,11 @@ const VenueDetailClient = ({ id }: { id: string }) => {
         rating: 4.8,
         status: "open" as const,
         amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
-        hours: typeof foundVenue.hours === 'object' ? 'Various' : foundVenue.hours,
+        hours: typeof foundVenue.hours === 'string' ? foundVenue.hours : "Check with venue",
+        description: foundVenue.description || "No description available",
       };
     }
-
-    // Fallback mock data if not found, using some defaults
-    return {
-      id: id || "1",
-      name: "Sky Lounge KTV",
-      category: "KTV",
-      address: "Marina Bay Sands, Singapore 018956",
-      phone: "+6591234567",
-      price: "$80/hour",
-      rating: 4.8,
-      status: "open" as const,
-      hours: "18:00 - 03:00",
-      description: "Sky Lounge KTV is one of the most premium karaoke places in Singapore. With a modern design, high-quality sound, and excellent service, we deliver a top-class entertainment experience. Rooms are equipped with 4K karaoke systems, surround sound, and luxurious spaces. Suitable for birthday parties, friend gatherings, or corporate events.",
-      country: "singapore",
-      main_image_url: "https://picsum.photos/seed/ktv-fallback/1200/800",
-      images: [
-        "https://picsum.photos/seed/ktv-fallback-1/1200/800",
-        "https://picsum.photos/seed/ktv-fallback-2/1200/800",
-        "https://picsum.photos/seed/ktv-fallback-3/1200/800",
-      ],
-      amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
-    };
+    return null;
   }, [id, hasMounted]);
 
   const handleShare = useCallback(async () => {
@@ -89,7 +88,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="container py-8">
+        <main className="container py-8 px-4 sm:px-8">
           <Skeleton className="h-10 w-32 mb-8" />
           <Skeleton className="h-[550px] w-full rounded-lg mb-8" />
           <Skeleton className="h-40 w-full rounded-lg mb-12" />
@@ -104,9 +103,9 @@ const VenueDetailClient = ({ id }: { id: string }) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
       
-      <main className="container py-8">
+      <main className="container py-8 px-4 sm:px-8">
         {/* Breadcrumb & Actions */}
         <div className="flex items-center justify-between mb-8">
           <Link href="/">

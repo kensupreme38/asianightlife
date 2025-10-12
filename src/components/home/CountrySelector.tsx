@@ -1,91 +1,159 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import { Globe, Mic, Music, Radio } from 'lucide-react';
+import { Building2, Globe, Utensils, Music, Mic, Radio, Beer, Martini, Building, Bath, HeartHandshake, Hotel, Coffee, Soup } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { cn } from '@/lib/utils';
 
 interface CountrySelectorProps {
   selectedCountry: string;
   onCountryChange: (country: string) => void;
+  selectedCity: string;
+  onCityChange: (city: string) => void;
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
 }
 
+const countries = [
+  { id: 'all', name: 'All Countries', flag: '🌏' },
+  { id: 'Singapore', name: 'Singapore', flag: '🇸🇬' },
+  { id: 'Vietnam', name: 'Vietnam', flag: '🇻🇳' },
+  { id: 'Thailand', name: 'Thailand', flag: '🇹🇭' },
+  { id: 'Malaysia', name: 'Malaysia', flag: '🇲🇾' },
+  { id: 'Cambodia', name: 'Cambodia', flag: '🇰🇭' },
+  { id: 'Indonesia', name: 'Indonesia', flag: '🇮🇩' },
+  { id: 'Japan', name: 'Japan', flag: '🇯🇵' },
+  { id: 'Macao', name: 'Macao', flag: '🇲🇴' },
+  { id: 'Philippines', name: 'Philippines', flag: '🇵🇭' },
+  { id: 'South Korea', name: 'South Korea', flag: '🇰🇷' },
+  { id: 'Taiwan', name: 'Taiwan', flag: '🇹🇼' },
+];
+
+const categories = [
+  { id: 'all', name: 'All', icon: Music },
+  { id: 'Night market', name: 'Night market', icon: Utensils },
+  { id: 'KTV', name: 'KTV', icon: Mic },
+  { id: 'Nightclub', name: 'Nightclub', icon: Radio },
+  { id: 'Live house / Beer club', name: 'Live house / Beer club', icon: Beer },
+  { id: 'Pub', name: 'Pub', icon: Beer },
+  { id: 'Lounge / Speakeasy bar', name: 'Lounge / Speakeasy bar', icon: Martini },
+  { id: 'Sky Bar', name: 'Sky Bar', icon: Building },
+  { id: 'Spa / Osen', name: 'Spa / Osen', icon: Bath },
+  { id: 'Massage', name: 'Massage', icon: HeartHandshake },
+  { id: 'Hotel', name: 'Hotel', icon: Hotel },
+  { id: 'Breakfast', name: 'Breakfast', icon: Coffee },
+  { id: 'Supper (after 12 midnight)', name: 'Supper (after 12 midnight)', icon: Soup },
+];
+
+const citiesByCountry: Record<string, { id: string, name: string }[]> = {
+  'Vietnam': [
+    { id: 'all', name: 'All cities' },
+    { id: 'Hanoi', name: 'Hanoi' },
+    { id: 'Ha Long Bay', name: 'Ha Long Bay' },
+    { id: 'Danang', name: 'Danang' },
+    { id: 'Nha Trang', name: 'Nha Trang' },
+    { id: 'Ho Chi Minh City', name: 'Ho Chi Minh City' },
+    { id: 'Can Tho', name: 'Can Tho' },
+    { id: 'Phu Quoc', name: 'Phu Quoc' },
+  ],
+  'Thailand': [
+    { id: 'all', name: 'All cities' },
+    { id: 'Bangkok', name: 'Bangkok' },
+    { id: 'Chiang Mai', name: 'Chiang Mai' },
+    { id: 'Pattaya', name: 'Pattaya' },
+    { id: 'Phuket', name: 'Phuket' },
+    { id: 'Hat Yai', name: 'Hat Yai' },
+  ],
+  'Malaysia': [
+    { id: 'all', name: 'All cities' },
+    { id: 'Penang', name: 'Penang' },
+    { id: 'Kuala Lumpur', name: 'Kuala Lumpur' },
+    { id: 'Johor Bahru', name: 'Johor Bahru' },
+    { id: 'Kota Kinabalu', name: 'Kota Kinabalu' },
+  ]
+};
+
 export const CountrySelector = ({ 
   selectedCountry, 
   onCountryChange,
+  selectedCity,
+  onCityChange,
   selectedCategory,
   onCategoryChange
 }: CountrySelectorProps) => {
 
-  const countries = [
-    { id: 'all', name: 'All', flag: '🌏' },
-    { id: 'Singapore', name: 'Singapore', flag: '🇸🇬' },
-    { id: 'Vietnam', name: 'Vietnam', flag: '🇻🇳' },
-    { id: 'Thailand', name: 'Thailand', flag: '🇹🇭' },
-    { id: 'Malaysia', name: 'Malaysia', flag: '🇲🇾' },
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All', icon: Music },
-    { id: 'KTV', name: 'KTVs', icon: Mic },
-    { id: 'Club', name: 'Clubs', icon: Radio },
-    { id: 'Live House', name: 'Live House', icon: Music },
-  ];
+  const availableCities = citiesByCountry[selectedCountry] || [];
+  const isCitySelectorEnabled = availableCities.length > 0;
 
   return (
     <section className="py-8 border-b border-border/40">
       <div className="container">
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           {/* Countries */}
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-4">
-              <Globe className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold">Select Country</h2>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <Globe className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <h2 className="text-xl md:text-2xl font-bold">Select Country</h2>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {countries.map((country) => (
-                <Button
-                  key={country.id}
-                  variant={selectedCountry === country.id ? 'neon' : 'outline'}
-                  className={`flex items-center space-x-2 px-4 py-2 transition-all duration-300 ${
-                    selectedCountry === country.id
-                      ? 'neon-glow'
-                      : 'hover:border-primary/50 hover-glow'
-                  }`}
-                  onClick={() => onCountryChange(country.id)}
-                >
-                  <span className="text-lg">{country.flag}</span>
-                  <span className="font-medium">{country.name}</span>
-                </Button>
-              ))}
+            <Select value={selectedCountry} onValueChange={onCountryChange}>
+              <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
+                <SelectValue placeholder="Select a country" />
+              </SelectTrigger>
+              <SelectContent>
+                {countries.map((country) => (
+                  <SelectItem key={country.id} value={country.id}>
+                    <div className="flex items-center gap-2">
+                      <span className={cn(country.id === 'all' && 'grayscale')}>{country.flag}</span>
+                      <span>{country.name}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Cities */}
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <h2 className="text-xl md:text-2xl font-bold">Select City</h2>
             </div>
+            <Select value={selectedCity} onValueChange={onCityChange} disabled={!isCitySelectorEnabled}>
+              <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
+                <SelectValue placeholder={isCitySelectorEnabled ? "Select a city" : "Select a country first"} />
+              </SelectTrigger>
+              <SelectContent>
+                {availableCities.map((city) => (
+                  <SelectItem key={city.id} value={city.id}>
+                    {city.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           {/* Categories */}
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-4">
-              <Music className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold">Entertainment Type</h2>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <Music className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <h2 className="text-xl md:text-2xl font-bold">Entertainment Type</h2>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => {
-                const Icon = category.icon;
-                return (
-                  <Button
-                    key={category.id}
-                    variant={selectedCategory === category.id ? 'neon' : 'outline'}
-                    className={`flex items-center space-x-2 px-4 py-2 transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'neon-glow'
-                        : 'hover:border-primary/50 hover-glow'
-                    }`}
-                    onClick={() => onCategoryChange(category.id)}
-                  >
-                    <Icon className="h-4 w-4" />
-                    <span className="font-medium">{category.name}</span>
-                  </Button>
-                );
-              })}
-            </div>
+            <Select value={selectedCategory} onValueChange={onCategoryChange}>
+                <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
+                  <SelectValue placeholder="Select a type" />
+                </SelectTrigger>
+                <SelectContent>
+                    {categories.map((category) => {
+                        const Icon = category.icon;
+                        return (
+                        <SelectItem key={category.id} value={category.id}>
+                            <div className="flex items-center gap-2">
+                                <Icon className="h-4 w-4" />
+                                <span>{category.name}</span>
+                            </div>
+                        </SelectItem>
+                        );
+                    })}
+                </SelectContent>
+            </Select>
           </div>
         </div>
       </div>

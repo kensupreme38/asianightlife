@@ -1,6 +1,5 @@
 import VenueDetailClient from "@/components/venue/VenueDetailClient";
 
-// Correct type definition for dynamic route segment props in App Router (Next.js 15+)
 type VenueDetailPageProps = {
   params: Promise<{ id: string }>;
 };

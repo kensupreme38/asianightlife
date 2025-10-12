@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -95,7 +94,22 @@ export default {
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
-        }
+        },
+        "ring-bell": {
+          "0%": { transform: "rotate(0)" },
+          "10%": { transform: "rotate(15deg)" },
+          "20%": { transform: "rotate(-10deg)" },
+          "30%": { transform: "rotate(15deg)" },
+          "40%": { transform: "rotate(-5deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "60%": { transform: "rotate(0)" },
+          "100%": { transform: "rotate(0)" }
+        },
+        "ripple": {
+          '0%': { boxShadow: '0 0 0 0 hsl(var(--primary) / 0.7)' },
+          '70%': { boxShadow: '0 0 0 1rem hsl(var(--primary) / 0)' },
+          '100%': { boxShadow: '0 0 0 0 hsl(var(--primary) / 0)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -103,7 +117,9 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in": "slide-in 0.4s ease-out",
         "pulse-neon": "pulse-neon 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite"
+        "float": "float 3s ease-in-out infinite",
+        "ring-bell": "ring-bell 2.5s ease-in-out infinite",
+        "ripple": "ripple 10s infinite",
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
@@ -112,5 +128,5 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

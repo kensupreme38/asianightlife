@@ -11,8 +11,7 @@ export const ktvData = [
     "category": "KTV",
     "price": "$248",
     "description": "Iconic is newly opened with over 30 girls. The premises are at the New K2 location, however, it is a huge change from yesteryears and girls are hot, playable and lots to choose from! It gets our seal of recommendation from NAW.",
-    "hours": "4PM - 3AM",
-    "contact": "JK787393 (Wechat)"
+    "hours": "4PM - 3AM"
   },
   {
     "id": 2,
@@ -48,8 +47,7 @@ High Playability
 Pretty Girls
 Wide Variety
 Pool table in VIP room`,
-    "hours": "5PM - 6AM",
-    "contact": "JK787393 (Wechat)"
+    "hours": "5PM - 6AM"
   },
   {
     "id": 3,
@@ -62,8 +60,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "S$78",
     "description": "Galaxy is recently opened and has surprised us at Nightlifeasia with a pretty rotation of girls and very high playability - no questions asked they would just get on top of you. If we could come here everyday, we would. Price point is great, and you will get the sekukyaba experience here.",
-    "hours": "3:30PM - 3AM",
-    "contact": "JK787393"
+    "hours": "3:30PM - 3AM"
   },
   {
     "id": 4,
@@ -76,8 +73,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "S$78",
     "description": "Meili is launching with more competitive HH beer packages, new girls and a refreshed brand! This place promises high playability, affordable alcohol and overall a good experience.",
-    "hours": "4PM - 3AM",
-    "contact": "JK787393"
+    "hours": "4PM - 3AM"
   },
   {
     "id": 5,
@@ -92,8 +88,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "S$128",
     "description": "Avatar is recommended KTV at Parklane with young girls, regular themed events and good playability. Karaoke system is great, with youtube options as well. Book your rooms early as it is quite popular.",
-    "hours": "4PM - 3AM",
-    "contact": "JK787393"
+    "hours": "4PM - 3AM"
   },
   {
     "id": 6,
@@ -106,8 +101,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "3000K",
     "description": "1127 KTV is another chinese KTV and is newly renovated. When taking grab or taxi, just indicate the destination as Fortune Hotel II. By now you'll realize that many KTVs are located in Q5 due to their proximity to Chinatown. We saw some really hot videos online. If its your first time at a vietnamese KTV, remember to ask for the strip dance. It's quite the experience.There are some pretty hostesses here, but we'd say only about 10-15% of them. The others are run-of-the-mill and nothing really stands out. You might get hotter girls at larger KTVs like Boss and Catwalk. The upside is you get really good prices here and won't burn a hole in your pocket.",
-    "hours": "2PM - 4AM",
-    "contact": "Vy Midu - vyvy1810 (Wechat)"
+    "hours": "2PM - 4AM"
   },
   {
     "id": 7,
@@ -123,8 +117,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$287",
     "description": "Largest KTV in SG with 55 rooms. Recommended for pretty girls, VIP room has pool table. Surcharges: Fruits $20, Service Charge 19%. Minimum spend rules depend on room type.",
-    "hours": "Daily 4PM - 4AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 4PM - 4AM"
   },
   {
     "id": 8,
@@ -141,8 +134,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$230",
     "description": "Modern KTV in Singapore. Surcharges: Fruits $15, Service Charge 10%, GST 9%. Minimum spend rules depend on room size. VIP rooms have attached restroom. (Source: chiongbuddy.com)",
-    "hours": "Daily 4PM - 3AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 9,
@@ -162,8 +154,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$254",
     "description": "Official District1 KTV. Surcharges: 1 compulsory food item $15‑$20, Service Charge 10%. Minimum spend rules vary by room size. Recommended for pretty girls, wide variety, nice rooms, happy hour.",
-    "hours": "Daily 4PM - 3AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 10,
@@ -182,8 +173,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$224",
     "description": "Located at Hotel Royal Singapore, UMe KTV is known for good happy hour deals, spacious rooms, and VVIP room with 100\" LED screen. Surcharges include 10% Service Charge and 9% GST. Minimum spend varies by room size: S/M/L/VIP/VVIP — based on required number of towers or bottles. Recommended for young girls and weekend sessions.",
-    "hours": "Daily 4PM - 3AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 11,
@@ -202,8 +192,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$264",
     "description": "Level9 / Space7 is located at 114 Middle Road. They offer happy hour and night hour sessions. The VIP / VVIP rooms may have additional features such as a pool table. Surcharges include fruits $16, 10% service charge, and 9% GST. Minimum spend varies by room size (S, M, L, VIP, VVIP, SVIP).",
-    "hours": "Daily 4PM - 3AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 12,
@@ -221,8 +210,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$341",
     "description": "Empire KTV at Orchard Plaza Singapore — high-end KTV rooms, minimum 2 beer towers required. Promotions available for different time slots. Surcharges: fruits $20, 10% service charge, 9% GST. Room types: S, M, L, VIP with pool table.",
-    "hours": "Daily 3PM - 6AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 3PM - 6AM"
   },
   {
     "id": 13,
@@ -239,8 +227,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$239",
     "description": "Gala KTV (formerly BVL KTV) in Singapore offers various time slots with surcharges for fruits, service, and GST. Minimum spending depends on the room type, based on beer towers/bottles.",
-    "hours": "Daily 4PM - 3AM",
-    "contact": "Booking via +65 9777 2575"
+    "hours": "Daily 4PM - 3AM"
   }, 
   {
     "id": 14,
@@ -256,20 +243,9 @@ Pool table in VIP room`,
     "price": "$260",
     "description": "Fyou KTV (ex Myth KTV)",
     "hours": {
-      "Mon-Sat 4-7": "$50",
-      "Mon-Fri 7-11 / 11-3": "$100",
-      "Sat, Sun 7-11 / 11-3": "$70"
-    },
-    "contact": "+65 9777 2575",
-    "surcharges": {
-      "compulsory food item": "$15-20",
-      "GST": "9%"
-    },
-    "minimum_spend": {
-      "S room (2 pax)": "1 tower / 1 bottle",
-      "M room (4 pax)": "2 towers / 2 bottles",
-      "L room (6 pax)": "5 towers / 3 bottles",
-      "Deluxe room (10 pax)": "8 towers / 4 bottles"
+      "Mon-Sat": "4-7: $50",
+      "Mon-Fri": "7-11 / 11-3: $100",
+      "Sat, Sun": "7-11 / 11-3: $70"
     }
   },
   {
@@ -286,8 +262,12 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$238",
     "description": "New Lisbo KTV is one of the most popular spots located at Foch Road. Offering multiple room sizes from S to VIP7, each with different minimum spends. Known for its vibrant atmosphere and friendly hostesses, guests can enjoy tower or liquor packages. Surcharges include Fruits ($20 for S/M/L rooms, $40 for VIP), 10% service charge and 9% GST. Minimum spend ranges from 1 tower to 8 towers depending on room type.",
-    "hours": "Mon-Sat 4PM-7PM (Happy Hour); Mon-Fri 7PM-11PM / 11PM-3AM; Sat 7PM-11PM / 11PM-4AM; Sun 7PM-11PM / 11PM-3AM",
-    "contact": "+65 9777 2575"
+    "hours": {
+      "Mon-Sat": "4PM-7PM (Happy Hour)",
+      "Mon-Fri": "7PM-11PM / 11PM-3AM",
+      "Sat": "7PM-11PM / 11PM-4AM",
+      "Sun": "7PM-11PM / 11PM-3AM"
+    }
   },
   {
     "id": 16,
@@ -302,8 +282,10 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$229",
     "description": "277 KTV at Geylang Road. They run happy hour sessions from 4-7pm at $50, and regular sessions from 7-11pm / 11pm-3am at $70. Surcharges include fruits $20 and 10% service charge. Minimum spend depends on room size: S room (2 pax) – 1 tower / 1 bottle; M (4 pax) – 3 towers / 1 bottle; L (6 pax) – 5 towers / 2 bottles; VIP (8 pax) – 8 towers / 3 bottles. Recommended for budget playability. ",
-    "hours": "Mon-Sat 4-7pm (HH); Mon-Sun 7-11pm / 11pm-3am",
-    "contact": "Make A Booking via +65 9777 2575"
+    "hours": {
+      "Mon-Sat": "4-7pm (HH)",
+      "Mon-Sun": "7-11pm / 11pm-3am"
+    }
   },
   {
     "id": 17,
@@ -318,8 +300,10 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$296",
     "description": "B12 KTV located at Havelock 2 B1-19. Opening hours include Mon-Sat 4-7pm at $50, and regular sessions 7-11pm / 11pm-3am at $100; Sun 7-11pm / 11pm-3am at $70. Promotion: HH (Happy Hour) 1 tower for $68 only. 7-11pm Chivas12 bottle deal at $228. Surcharges: Fruits $15, Service Charge 10%. Minimum spend: S room (3 pax) – 2 towers / 1 bottle; M room (5 pax) – 3 towers / 1 bottle; L (8 pax) – 5 towers / 2 bottles; VIP room (10 pax) – 8 towers / 3 bottles.",
-    "hours": "Mon-Sat 4-7pm; Mon-Sat 7-11pm / 11pm-3am; Sun 7-11pm / 11pm-3am",
-    "contact": "+65 9777 2575"
+    "hours": {
+      "Mon-Sat": "4-7pm",
+      "Mon-Sun": "7-11pm / 11pm-3am"
+    }
   },
   {
     "id": 18,
@@ -335,8 +319,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$490",
     "description": "Deluxe KTV (Singapore Girls) located at Peninsula Plaza B1-07. Sessions run daily from 9 pm to 3 am. SG girls tip is $200, and mami tip is $150. Surcharges include fruits $20 and 10% service charge. Minimum spend: S room (2 pax) – 1 tower / 1 bottle; M room (4 pax) – 3 towers / 1 bottle; L room (6 pax) – 5 towers / 2 bottles.",
-    "hours": "Mon-Sun 9pm-3am",
-    "contact": "Make A Booking"
+    "hours": "Mon-Sun 9pm-3am"
   },
   {
     "id": 19,
@@ -351,8 +334,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$591",
     "description": "Malay KTV located at Syed Alwi Road. Sessions run Mon–Sat 9:30 pm to 3 am. There is a “Butterfly” option at $100 and standard booking $400. Surcharges include Fruits $20 and 10% service charge. Minimum spend depends on room size: S room (2 pax) – 1 tower / 1 bottle; M room (4 pax) – 3 towers / 1 bottle; L room (6 pax) – 5 towers / 2 bottles.",
-    "hours": "Mon-Sat 9:30pm-3am",
-    "contact": "+65 9777 2575"
+    "hours": "Mon-Sat 9:30pm-3am"
   },
   {
     "id": 20,
@@ -376,8 +358,10 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$238",
     "description": "Ace Club KTV is currently closed. Prior to closure, they operated sessions with Happy Hour from 4-7pm at $50, and regular sessions 7-11pm / 11pm-3am at $100. Singapore girls only after 11pm cost $150. Promotions included HH (3 free 1 towers $218) and NH (3 free 1 towers $288). Surcharges were fruits $20 and service charge 10%. Minimum spend varied by room: S room (2 pax) – 1 tower / 1 bottle; M room (3 pax) – 2 towers / 1 bottle; L room (5 pax) – 3 towers / 2 bottles; VIP (6 pax) – 5 towers / 3 bottles; VVIP (8 pax) – 6 towers / 3 bottles; SVIP (10 pax) – 8 towers / 4 bottles.",
-    "hours": "Mon-Sat 4-7pm; Mon-Sun 7-11pm / 11pm-3am",
-    "contact": "Make A Booking"
+    "hours": {
+      "Mon-Sat": "4-7pm",
+      "Mon-Sun": "7-11pm / 11pm-3am"
+    }
   },
   {
     "id": 21,
@@ -389,9 +373,8 @@ Pool table in VIP room`,
     "phone": "+65 9777 2575",
     "category": "KTV",
     "price": "$233",
-    "description": "Phoenix KTV (West Side) located at Super Bowl Jurong Complex, offering a starting price of $233. Tel: +65 9777 2575. Make A Booking via ChiongBuddy.  :contentReference[oaicite:0]{index=0}",
-    "hours": "",
-    "contact": "Make A Booking"
+    "description": "Phoenix KTV (West Side) located at Super Bowl Jurong Complex, offering a starting price of $233. Tel: +65 9777 2575. Make A Booking via ChiongBuddy.",
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 22,
@@ -407,8 +390,10 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "$241",
     "description": "Club MG KTV located at 212A Syed Alwi Road level 2. Session rates: Mon-Sat 6-10pm at $50, and Mon-Sun 10pm-3am at $70. Surcharges include Fruits $18 and 10% service charge. Minimum spend: S room (2 pax) – 1 tower / 1 bottle; M room (4 pax) – 3 towers / 1 bottle; L room (8 pax) – 5 towers / 2 bottles.",
-    "hours": "Mon-Sat 6PM-10PM; Mon-Sun 10PM-3AM",
-    "contact": "Make A Booking"
+    "hours": {
+      "Mon-Sat": "6PM-10PM",
+      "Mon-Sun": "10PM-3AM"
+    }
   },
   {
     "id": 23,
@@ -423,8 +408,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "Starting from S room 800,000 VND/hr",
     "description": "Matrix KTV offers luxury karaoke rooms with different room sizes: S (2 pax), M (6 pax), L (10 pax), VIP (16 pax). Lady tip: 1.5 million VND (3h), mommy tip: 1.5 million VND, waiter tip: 500k VND. Surcharges: fruits 500-750k, 5% service charge, 10% VAT, 5% credit card surcharge.",
-    "hours": "",
-    "contact": "Make A Booking via ChiongBuddy"
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 24,
@@ -442,8 +426,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "Small Room: 799k VND/hr; Big Room: 999k VND/hr",
     "description": "57 Tulip KTV is a premier karaoke club in Ho Chi Minh City, known for its modern rooms and vibrant entertainment. They serve bottles of beer like Tiger, Saigon, Ken (69k VND), Corona (95k VND), with fruits (499k VND) and shisha (680k VND) as extras. Hostess & mummy tip: 1,000k VND for 3h or 1,500k VND for 3-5h. Waiter tip: 500k VND.",
-    "hours": "6:00 PM – 3:00 AM",
-    "contact": "WhatsApp / Telegram / Zalo: +84 877 218 317"
+    "hours": "6:00 PM – 3:00 AM"
   },
   {
     "id": 25,
@@ -458,8 +441,7 @@ Pool table in VIP room`,
     "category": "KTV",
     "price": "Starting from 700k (normal), 1.5m (sexy)",
     "description": "Lucky KTV is located at 171 Cho Lon, District 6, HCMC. It offers two pricing tiers: normal (700k) and sexy (1.5m). Promotions include beer at 60k per can, balloons 6.5m per tank. Surcharges: fruits 490k, VAT 10%. Room charges: S room (8 pax) 600k/hr, M room (12 pax) 1.2m/hr, L room (20 pax) 1.5m/hr. Cash only — no card payment accepted.",
-    "hours": "",
-    "contact": "+65 9777 2575"
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 26,
@@ -475,12 +457,11 @@ Pool table in VIP room`,
     ],
     "address": "31 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh",
     "country": "Vietnam",
-    "phone": "",
+    "phone": "+84 877 218 317",
     "category": "KTV / Karaoke & Restaurant",
     "price": "Small: 560,000 VND/hr; Medium: 770,000 VND/hr; Big: 930,000 VND/hr",
     "description": "Atlantis Karaoke & Restaurant is located in District 1, operating from 5:00 PM to 3:00 AM. They feature over 100 girls to choose from, luxury private rooms, high-end sound systems. Fruit platter: 640,000 VND. Beer bottles: 69,000 VND each. Girl tip for first 3 hours: 1,000,000 VND; from 4th hour: 500,000 VND/hr. Mummy & waiter tip: 2,000,000 VND.",
-    "hours": "5:00 PM – 3:00 AM",
-    "contact": "WhatsApp Mama: +84 877 218 317; WeChat: may333sea"
+    "hours": "5:00 PM – 3:00 AM"
   },
   {
     "id": 27,
@@ -495,9 +476,8 @@ Pool table in VIP room`,
     "phone": "0388221127",
     "category": "KTV",
     "price": "Starting from S room 500,000 VND/hr",
-    "description": "1127 KTV is located at 1127 Trần Hưng Đạo, District 5. Room rates: Small room 500k/hr, Medium 800k/hr, VIP 1,000k/hr. Surcharges include fruits 480k VND, ticket 100k/pax, VAT 10%, credit card surcharge 10%. Popular for its large rooms and extensive entertainment offerings. :contentReference[oaicite:0]{index=0}",
-    "hours": "2:00 PM – 4:00 AM",
-    "contact": "Make A Booking via 0388221127"
+    "description": "1127 KTV is located at 1127 Trần Hưng Đạo, District 5. Room rates: Small room 500k/hr, Medium 800k/hr, VIP 1,000k/hr. Surcharges include fruits 480k VND, ticket 100k/pax, VAT 10%, credit card surcharge 10%. Popular for its large rooms and extensive entertainment offerings.",
+    "hours": "2:00 PM – 4:00 AM"
   },
   {
     "id": 28,
@@ -509,9 +489,8 @@ Pool table in VIP room`,
     "phone": "+65 9777 2575",
     "category": "KTV",
     "price": "1m VND (Starting from)",  
-    "description": "Pearl KTV (Ho Chi Minh) located at 93 An Duong Vuong. Session price starts from 1 million VND. Surcharges, minimum spend, tips are listed under ‘Opening Hours & Tips’ on the booking site. :contentReference[oaicite:0]{index=0}",
-    "hours": "",
-    "contact": "+65 9777 2575"
+    "description": "Pearl KTV (Ho Chi Minh) located at 93 An Duong Vuong. Session price starts from 1 million VND. Surcharges, minimum spend, tips are listed under ‘Opening Hours & Tips’ on the booking site.",
+    "hours": "Daily 4PM - 3AM"
   },
   {
     "id": 29,
@@ -523,9 +502,8 @@ Pool table in VIP room`,
     "phone": "+65 9777 2575",
     "category": "KTV",
     "price": "1m VND (Starting from)",  
-    "description": "Luxury 21 KTV (Ho Chi Minh). Opening Hours & Tips: 1m VND. Promotion: —. Surcharges: Fruits 550k VND, VAT 18%. Minimum Spend: Room charge 690k VND/hr. Recommended For: Playful girls. Contact to book. :contentReference[oaicite:0]{index=0}",
-    "hours": "",
-    "contact": "Make A Booking via +65 9777 2575"
+    "description": "Luxury 21 KTV (Ho Chi Minh). Opening Hours & Tips: 1m VND. Promotion: —. Surcharges: Fruits 550k VND, VAT 18%. Minimum Spend: Room charge 690k VND/hr. Recommended For: Playful girls. Contact to book.",
+    "hours": "Daily 4PM - 3AM"
   }
 ]
     

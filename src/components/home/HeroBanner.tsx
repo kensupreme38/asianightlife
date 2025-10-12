@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-import { Star, MapPin } from "lucide-react";
+import {Star, MapPin } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
 
@@ -35,8 +35,16 @@ export const HeroBanner = () => {
     return () => clearInterval(timer);
   }, [banners.length]);
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % banners.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
+  };
+
   return (
-    <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <section className="relative w-full aspect-video overflow-hidden">
       {/* Banner Slides */}
       <div className="relative w-full h-full">
         {banners.map((banner, index) => (
@@ -59,7 +67,7 @@ export const HeroBanner = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
             
             {/* Content */}
-            <div className="relative h-full flex items-center">
+            <div className="relative h-full hidden md:flex items-center">
               <div className="container">
                 <div className="max-w-2xl animate-fade-in">
                   <div className="flex items-center space-x-2 mb-4">

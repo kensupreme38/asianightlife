@@ -1,19 +1,29 @@
 'use client';
-import { VenueCard } from "./VenueCard";
-import { Button } from "@/components/ui/button";
+import { VenueCard } from "@/components/home/VenueCard";
 import { ktvData } from "@/lib/data";
+import { SearchX } from "lucide-react";
 
 interface VenueGridProps {
   selectedCountry: string;
+  selectedCity: string;
   selectedCategory: string;
   searchQuery: string;
 }
 
-export const VenueGrid = ({ selectedCountry, selectedCategory, searchQuery }: VenueGridProps) => {
+export const VenueGrid = ({ selectedCountry, selectedCity, selectedCategory, searchQuery }: VenueGridProps) => {
   const venues = ktvData
     .filter(venue => selectedCountry === 'all' || venue.country === selectedCountry)
+    .filter(venue => {
+      // The city filter is prepared for when city data is available in ktvData
+      if (selectedCountry !== 'all' && selectedCity !== 'all') {
+        // Assuming venue object will have a 'city' property
+        // return venue.city === selectedCity;
+        return true; // Currently returning true to not filter out everything
+      }
+      return true;
+    })
     .filter(venue => selectedCategory === 'all' || venue.category === selectedCategory)
-    .filter(venue => !searchQuery || venue.name.toLowerCase().includes(searchQuery.toLowerCase()))
+    .filter(venue => !searchQuery || venue.name.toLowerCase().includes(searchQuery.toLowerCase()) || venue.address.toLowerCase().includes(searchQuery.toLowerCase()))
     .map(ktv => ({
       ...ktv,
       id: ktv.id.toString(),
@@ -34,23 +44,22 @@ export const VenueGrid = ({ selectedCountry, selectedCategory, searchQuery }: Ve
               {venues.length} venues found
             </p>
           </div>
-          
-          <div className="text-sm text-muted-foreground">
-            Updated: a few minutes ago
+        </div>
+        {venues.length > 0 ? (
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            {venues.map((venue) => (
+              <VenueCard key={venue.id} venue={venue} />
+            ))}
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {venues.map((venue) => (
-            <VenueCard key={venue.id} venue={venue} />
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="px-8">
-            View More Venues
-          </Button>
-        </div>
+        ) : (
+          <div className="text-center py-16 card-elevated rounded-xl">
+            <SearchX className="mx-auto h-12 w-12 text-muted-foreground" />
+            <h3 className="mt-4 text-lg font-semibold">No results found</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Try adjusting your search or filters to find what you're looking for.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

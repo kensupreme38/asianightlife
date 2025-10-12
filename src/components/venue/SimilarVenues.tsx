@@ -1,6 +1,7 @@
 'use client';
 import { VenueCard } from "@/components/home/VenueCard";
 import { ktvData } from "@/lib/data";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -12,19 +13,19 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
   
   const similarVenues = ktvData
     .filter(venue => venue.id.toString() !== currentVenueId && venue.category === category)
-    .slice(0, 3)
+    .slice(0, 8)
     .map(v => ({
       ...v,
       id: v.id.toString(),
       rating: 4.5,
       status: "open" as const,
+      imageHint: "ktv lounge"
     }));
 
-
   return (
-    <section className="py-12 border-t border-border/40">
-      <div className="container">
-        <div className="mb-8">
+    <section className="border-t border-border/40 w-full overflow-hidden">
+      <div className="py-8">
+        <div className="container mb-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             <span className="gradient-text">Similar Venues</span>
           </h2>
@@ -33,13 +34,25 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {similarVenues.map((venue) => (
-            <VenueCard key={venue.id} venue={venue} />
-          ))}
+        <div className="md:container">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="ml-4 md:-ml-4">
+              {similarVenues.map((venue) => (
+                <CarouselItem key={venue.id} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <VenueCard venue={venue} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-8 container">
           <p className="text-muted-foreground mb-4">
             Found {similarVenues.length} similar venues
           </p>

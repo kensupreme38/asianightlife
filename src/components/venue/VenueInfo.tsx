@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Star, 
   MapPin, 
   Clock, 
   Phone, 
@@ -19,7 +18,7 @@ interface VenueInfoProps {
     price: string;
     rating: number;
     status: "open" | "closed";
-    hours: string;
+    hours: string | Record<string, string>;
     description: string;
     amenities: string[];
     country: string;
@@ -31,13 +30,12 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
   
   const handleBooking = () => {
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
-    window.open(`https://wa.me/${venue.phone}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/${venue.phone.replace(/\s/g, '')}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const handleCall = () => {
-    window.open(`tel:${venue.phone}`, '_self');
+    window.open(`tel:${venue.phone.replace(/\s/g, '')}`);
   };
-
 
   return (
     <div className="space-y-8">
@@ -57,11 +55,6 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
             </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{venue.name}</h1>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 text-gold fill-current" />
-                <span className="font-medium">{venue.rating}</span>
-                <span className="text-sm">(128 reviews)</span>
-              </div>
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
                 <span>{venue.address}</span>
@@ -111,10 +104,19 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           <h3 className="text-lg font-bold mb-4">Info</h3>
           <div className="space-y-4">
             <div className="space-y-2 text-muted-foreground">
-                <div className="flex justify-between">
-                  <span>Monday - Sunday</span>
-                  <span className="font-medium">{venue.hours}</span>
-                </div>
+                {typeof venue.hours === 'string' ? (
+                  <div className="flex justify-between">
+                    <span>Monday - Sunday</span>
+                    <span className="font-medium">{venue.hours}</span>
+                  </div>
+                ) : (
+                  Object.entries(venue.hours).map(([day, time]) => (
+                    <div className="flex justify-between" key={day}>
+                      <span>{day}</span>
+                      <span className="font-medium">{time}</span>
+                    </div>
+                  ))
+                )}
                 <div className="flex justify-between">
                   <span>Current Status</span>
                   <span className={`font-medium ${isOpen ? 'text-green-500' : 'text-red-500'}`}>
