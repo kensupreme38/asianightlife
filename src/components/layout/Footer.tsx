@@ -71,8 +71,8 @@ export const Footer = () => {
 
           {/* Connect with us */}
           <div>
-            <h3 className="font-semibold mb-4">KẾT NỐI VỚI CHÚNG TÔI</h3>
-            <p className="text-muted-foreground text-sm mb-4">Liên hệ ngay! Chúng tôi luôn sẵn sàng hỗ trợ 24/7</p>
+            <h3 className="font-semibold mb-4">CONNECT WITH US</h3>
+            <p className="text-muted-foreground text-sm mb-4">Contact us now! We are always ready to support you 24/7</p>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((link) => (
                 <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">

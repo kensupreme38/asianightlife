@@ -118,6 +118,16 @@ All colors MUST be HSL.
     background: linear-gradient(45deg, hsl(var(--electric-purple)), hsl(var(--neon-pink)));
     border-radius: 4px;
   }
+  
+  /* Remove scrollbar */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
 }
 
 @layer components {

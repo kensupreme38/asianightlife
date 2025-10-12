@@ -53,10 +53,6 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
             Discover and book the most vibrant entertainment venues in Southeast Asia. Special offers await you!
           </DialogDescription>
         </DialogHeader>
-        <div className="px-6 text-sm">
-          <p className="font-semibold text-primary">🎉 20% off your first booking!</p>
-          <p className="text-muted-foreground">Use code <b className="text-foreground">NIGHTLIFE20</b> at checkout.</p>
-        </div>
         <DialogFooter className="p-6 bg-secondary/30">
           <Button
             variant="neon"
