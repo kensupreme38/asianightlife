@@ -1,7 +1,12 @@
-'use client';
+"use client";
 import { VenueCard } from "@/components/home/VenueCard";
 import { ktvData } from "@/lib/data";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { Venue } from "@/hooks/use-venues";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -9,18 +14,26 @@ interface SimilarVenuesProps {
   country: string;
 }
 
-export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenuesProps) => {
-  
+export const SimilarVenues = ({
+  currentVenueId,
+  category,
+  country,
+}: SimilarVenuesProps) => {
   const similarVenues = ktvData
-    .filter(venue => venue.id.toString() !== currentVenueId && venue.category === category)
+    .filter(
+      (venue) =>
+        venue.id.toString() !== currentVenueId && venue.category === category
+    )
     .slice(0, 8)
-    .map(v => ({
-      ...v,
-      id: v.id.toString(),
-      rating: 4.5,
-      status: "open" as const,
-      imageHint: "ktv lounge"
-    }));
+    .map(
+      (v): Venue => ({
+        ...v,
+        id: v.id.toString(),
+        rating: 4.5,
+        status: "open" as const,
+        imageHint: "ktv lounge",
+      })
+    );
 
   return (
     <section className="border-t border-border/40 w-full overflow-hidden">
@@ -44,7 +57,10 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
           >
             <CarouselContent className="ml-4 md:-ml-4">
               {similarVenues.map((venue) => (
-                <CarouselItem key={venue.id} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <CarouselItem
+                  key={venue.id}
+                  className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                >
                   <VenueCard venue={venue} />
                 </CarouselItem>
               ))}

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, MessageCircle } from "lucide-react";
-import Image from 'next/image';
+import { SimpleImage } from "@/components/ui/simple-image";
 
 interface VenueCardProps {
   venue: {
@@ -17,38 +17,44 @@ interface VenueCardProps {
     rating: number;
     status: "open" | "closed";
     country: string;
+    hours?: string | Record<string, string | undefined>;
   };
 }
 
 export const VenueCard = ({ venue }: VenueCardProps) => {
   const isOpen = venue.status === "open";
-  
+
   const handleBooking = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}`;
-    window.open(`https://wa.me/6582808072?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(
+      `https://wa.me/6582808072?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   return (
-    <Link href={`/venue/${venue.id}`} className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 block"
+    <Link
+      href={`/venue/${venue.id}`}
+      className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 block"
     >
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
-        <Image 
-          src={venue.main_image_url} 
+        <SimpleImage
+          src={venue.main_image_url}
           alt={venue.name}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          data-ai-hint={venue.imageHint}
         />
-        
+
         {/* Status Badge */}
         <div className="absolute top-3 left-3">
-          <Badge 
+          <Badge
             variant={isOpen ? "default" : "destructive"}
-            className={`${isOpen ? 'bg-green-500 hover:bg-green-600' : ''} text-white font-medium`}
+            className={`${
+              isOpen ? "bg-green-500 hover:bg-green-600" : ""
+            } text-white font-medium`}
           >
             <Clock className="h-3 w-3 mr-1" />
             {isOpen ? "Open" : "Closed"}
@@ -81,17 +87,21 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           </div>
         </div>
 
-        {/* Booking Button */}
-        <Button 
-          onClick={handleBooking}
-          className="w-full"
-          size="sm"
-          variant="neon"
-          disabled={!isOpen}
-        >
-          <MessageCircle className="h-4 w-4 md:mr-2" />
-          <span className="hidden md:inline">{isOpen ? (venue.category === 'Hotel' ? "Book Now" : "Make A Booking") : "Temporarily Closed"}</span>
-        </Button>
+        {/* Booking Button - Hidden for Hotels */}
+        {venue.category !== "Hotel" && (
+          <Button
+            onClick={handleBooking}
+            className="w-full"
+            size="sm"
+            variant="neon"
+            disabled={!isOpen}
+          >
+            <MessageCircle className="h-4 w-4 md:mr-2" />
+            <span className="hidden md:inline">
+              {isOpen ? "Make A Booking" : "Temporarily Closed"}
+            </span>
+          </Button>
+        )}
       </div>
     </Link>
   );

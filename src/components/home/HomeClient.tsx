@@ -1,12 +1,14 @@
-'use client';
-import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import HomeComponent from '@/components/home/HomeComponent';
-import { WelcomeDialog } from '@/components/home/WelcomeDialog';
+"use client";
+import { useState, useEffect, useMemo } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import HomeComponent from "@/components/home/HomeComponent";
+import { WelcomeDialog } from "@/components/home/WelcomeDialog";
+import { SplashScreen } from "@/components/ui/splash-screen";
 
 const HomeClient = () => {
   const [isWelcomeDialogOpen, setWelcomeDialogOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const [showSplash, setShowSplash] = useState(false);
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -16,23 +18,32 @@ const HomeClient = () => {
     const sp = searchParams ?? new URLSearchParams(); // fallback rỗng nếu null
     return new URLSearchParams(sp.toString());
   }, [searchParams]);
-  
-  const selectedCategory = params.get('type') || 'all';
-  const selectedCountry = params.get('country') || 'all';
-  const selectedCity = params.get('city') || 'all';
-  const searchQuery = params.get('q') || '';
+
+  const selectedCategory = params.get("type") || "all";
+  const selectedCountry = params.get("country") || "all";
+  const selectedCity = params.get("city") || "all";
+  const searchQuery = params.get("q") || "";
 
   useEffect(() => {
-    setHasMounted(true);
+    // Check if user has seen splash screen before
+    const hasSeenSplash = sessionStorage.getItem("hasSeenSplashScreen");
+
+    if (!hasSeenSplash) {
+      setShowSplash(true);
+      sessionStorage.setItem("hasSeenSplashScreen", "true");
+    } else {
+      // If already seen splash, mount immediately
+      setHasMounted(true);
+    }
   }, []);
 
   useEffect(() => {
     if (hasMounted) {
-      const hasSeenWelcome = sessionStorage.getItem('hasSeenWelcomeDialog');
+      const hasSeenWelcome = sessionStorage.getItem("hasSeenWelcomeDialog");
       if (!hasSeenWelcome) {
         const timer = setTimeout(() => {
           setWelcomeDialogOpen(true);
-          sessionStorage.setItem('hasSeenWelcomeDialog', 'true');
+          sessionStorage.setItem("hasSeenWelcomeDialog", "true");
         }, 1000); // Show dialog after 1 second
         return () => clearTimeout(timer);
       }
@@ -41,32 +52,32 @@ const HomeClient = () => {
 
   const handleCategoryChange = (category: string) => {
     const newParams = new URLSearchParams(params.toString());
-    if (category === 'all') {
-      newParams.delete('type');
+    if (category === "all") {
+      newParams.delete("type");
     } else {
-      newParams.set('type', category);
+      newParams.set("type", category);
     }
     router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
   };
 
   const handleCountryChange = (country: string) => {
     const newParams = new URLSearchParams(params.toString());
-    if (country === 'all') {
-      newParams.delete('country');
+    if (country === "all") {
+      newParams.delete("country");
     } else {
-      newParams.set('country', country);
+      newParams.set("country", country);
     }
     // Reset city when country changes
-    newParams.delete('city');
+    newParams.delete("city");
     router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
   };
 
   const handleCityChange = (city: string) => {
     const newParams = new URLSearchParams(params.toString());
-    if (city === 'all') {
-      newParams.delete('city');
+    if (city === "all") {
+      newParams.delete("city");
     } else {
-      newParams.set('city', city);
+      newParams.set("city", city);
     }
     router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
   };
@@ -74,15 +85,29 @@ const HomeClient = () => {
   const handleSearchChange = (query: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (query) {
-      newParams.set('q', query);
+      newParams.set("q", query);
     } else {
-      newParams.delete('q');
+      newParams.delete("q");
     }
     router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
+  };
+
+  // Show splash screen only on first visit to homepage
+  if (showSplash) {
+    return (
+      <SplashScreen
+        onComplete={() => {
+          setShowSplash(false);
+          setHasMounted(true);
+        }}
+        duration={2500}
+      />
+    );
   }
 
+  // No loading state - just show content directly if not showing splash
   if (!hasMounted) {
-    return null; // or a loading skeleton
+    return null;
   }
 
   return (
@@ -97,7 +122,10 @@ const HomeClient = () => {
         onCityChange={handleCityChange}
         onSearchChange={handleSearchChange}
       />
-      <WelcomeDialog open={isWelcomeDialogOpen} onOpenChange={setWelcomeDialogOpen} />
+      <WelcomeDialog
+        open={isWelcomeDialogOpen}
+        onOpenChange={setWelcomeDialogOpen}
+      />
     </>
   );
 };

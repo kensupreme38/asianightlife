@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import Link from "next/link";
-import { useCallback, useMemo, useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useCallback, useMemo, useState, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
@@ -9,9 +9,9 @@ import { Footer } from "@/components/layout/Footer";
 import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
-import { VenueImageMasonry } from '@/components/venue/VenueImageMasonry';
-import { ktvData } from '@/lib/data';
-import { Skeleton } from '@/components/ui/skeleton';
+import { VenueImageMasonry } from "@/components/venue/VenueImageMasonry";
+import { ktvData } from "@/lib/data";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const VenueDetailClient = ({ id }: { id: string }) => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -19,21 +19,22 @@ const VenueDetailClient = ({ id }: { id: string }) => {
   const router = useRouter();
 
   const params = useMemo(() => {
-    return new URLSearchParams(searchParams?.toString() ?? '');
+    return new URLSearchParams(searchParams?.toString() ?? "");
   }, [searchParams]);
 
-  const searchQuery = params.get('q') || '';
+  const searchQuery = params.get("q") || "";
 
   useEffect(() => {
+    // Mount immediately for venue detail pages
     setHasMounted(true);
   }, []);
 
   const handleSearchChange = (query: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (query) {
-      newParams.set('q', query);
+      newParams.set("q", query);
     } else {
-      newParams.delete('q');
+      newParams.delete("q");
     }
     router.push(`/?${newParams.toString()}`);
   };
@@ -41,15 +42,24 @@ const VenueDetailClient = ({ id }: { id: string }) => {
   const venue = useMemo(() => {
     if (!hasMounted) return null;
 
-    const foundVenue = ktvData.find(v => v.id.toString() === id);
+    const foundVenue = ktvData.find((v) => v.id.toString() === id);
     if (foundVenue) {
       return {
         ...foundVenue,
         id: foundVenue.id.toString(),
         rating: 4.8,
         status: "open" as const,
-        amenities: ["Free Wifi", "Parking", "Premium Sound", "VIP Rooms", "Card Payment"],
-        hours: typeof foundVenue.hours === 'string' ? foundVenue.hours : "Check with venue",
+        amenities: [
+          "Free Wifi",
+          "Parking",
+          "Premium Sound",
+          "VIP Rooms",
+          "Card Payment",
+        ],
+        hours:
+          typeof foundVenue.hours === "string"
+            ? foundVenue.hours
+            : "Check with venue",
         description: foundVenue.description || "No description available",
       };
     }
@@ -57,7 +67,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
   }, [id, hasMounted]);
 
   const handleShare = useCallback(async () => {
-    if (typeof window === 'undefined' || !venue) return;
+    if (typeof window === "undefined" || !venue) return;
 
     const shareData = {
       title: venue.name,
@@ -70,13 +80,13 @@ const VenueDetailClient = ({ id }: { id: string }) => {
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(window.location.href);
-        alert('Link copied to clipboard!');
+        alert("Link copied to clipboard!");
       }
     } catch (error) {
       console.error("Share failed:", error);
       try {
         await navigator.clipboard.writeText(window.location.href);
-        alert('Sharing failed, link copied to clipboard!');
+        alert("Sharing failed, link copied to clipboard!");
       } catch (copyError) {
         console.error("Copying to clipboard failed:", copyError);
         alert("Could not share or copy link.");
@@ -85,18 +95,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
   }, [venue]);
 
   if (!hasMounted || !venue) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <main className="container py-8 px-4 sm:px-8">
-          <Skeleton className="h-10 w-32 mb-8" />
-          <Skeleton className="h-[550px] w-full rounded-lg mb-8" />
-          <Skeleton className="h-40 w-full rounded-lg mb-12" />
-          <Skeleton className="h-64 w-full rounded-lg" />
-        </main>
-        <Footer />
-      </div>
-    );
+    return null;
   }
 
   const galleryImages = [venue.main_image_url, ...venue.images];
@@ -104,7 +103,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
-      
+
       <main className="container py-8 px-4 sm:px-8">
         {/* Breadcrumb & Actions */}
         <div className="flex items-center justify-between mb-8">
@@ -114,7 +113,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
               Back to list
             </Button>
           </Link>
-          
+
           <div className="flex gap-2">
             <Button variant="ghost" size="icon" onClick={handleShare}>
               <Share2 className="h-4 w-4" />
@@ -134,12 +133,14 @@ const VenueDetailClient = ({ id }: { id: string }) => {
 
         {/* Masonry Gallery */}
         <div className="card-elevated p-6 rounded-xl mb-12">
-           <h3 className="text-xl font-bold mb-4 font-headline">Image Library</h3>
-           <VenueImageMasonry images={galleryImages} />
+          <h3 className="text-xl font-bold mb-4 font-headline">
+            Image Library
+          </h3>
+          <VenueImageMasonry images={galleryImages} />
         </div>
 
         {/* Similar Venues */}
-        <SimilarVenues 
+        <SimilarVenues
           currentVenueId={venue.id.toString()}
           category={venue.category}
           country={venue.country}

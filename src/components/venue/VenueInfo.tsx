@@ -1,13 +1,8 @@
-'use client';
+"use client";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  MapPin, 
-  Clock, 
-  MessageCircle,
-  Send
-} from "lucide-react";
-import ReactMarkdown from 'react-markdown';
+import { MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 interface VenueInfoProps {
   venue: {
@@ -28,15 +23,21 @@ interface VenueInfoProps {
 
 export const VenueInfo = ({ venue }: VenueInfoProps) => {
   const isOpen = venue.status === "open";
-  
+
   const handleWhatsAppBooking = () => {
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
-    window.open(`https://wa.me/6582808072?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(
+      `https://wa.me/6582808072?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   const handleTelegramBooking = () => {
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
-    window.open(`https://t.me/supremektv?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(
+      `https://t.me/supremektv?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   return (
@@ -47,15 +48,19 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
               <Badge variant="secondary">{venue.category}</Badge>
-              <Badge 
+              <Badge
                 variant={isOpen ? "default" : "destructive"}
-                className={`${isOpen ? 'bg-green-500 hover:bg-green-600' : ''} text-white`}
+                className={`${
+                  isOpen ? "bg-green-500 hover:bg-green-600" : ""
+                } text-white`}
               >
                 <Clock className="h-3 w-3 mr-1" />
                 {isOpen ? "Open" : "Closed"}
               </Badge>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 font-headline">{venue.name}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 font-headline">
+              {venue.name}
+            </h1>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
@@ -63,39 +68,43 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               </div>
             </div>
           </div>
-          
+
           <div className="text-left md:text-right shrink-0">
-            <div className="text-3xl font-bold gradient-text mb-1">{venue.price}</div>
+            <div className="text-3xl font-bold gradient-text mb-1">
+              {venue.price}
+            </div>
             <div className="text-sm text-muted-foreground">Starting price</div>
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          {/* Main Line - WhatsApp */}
-          <Button 
-            onClick={handleWhatsAppBooking}
-            size="lg" 
-            variant="neon"
-            className="flex-1 py-4 sm:py-2"
-            disabled={!isOpen}
-          >
-            <MessageCircle className="h-5 w-5 mr-2" />
-            {isOpen ? (venue.category === 'Hotel' ? "Book Room via WhatsApp" : "Book via WhatsApp") : "Temporarily Closed"}
-          </Button>
-          
-          {/* Second Line - Telegram */}
-          <Button 
-            onClick={handleTelegramBooking}
-            size="lg" 
-            variant="outline"
-            className="flex-1 py-4 sm:py-2"
-            disabled={!isOpen}
-          >
-            <Send className="h-5 w-5 mr-2" />
-            {isOpen ? (venue.category === 'Hotel' ? "Book Room via Telegram" : "Book via Telegram") : "Temporarily Closed"}
-          </Button>
-        </div>
+        {/* Action Buttons - Hidden for Hotels */}
+        {venue.category !== "Hotel" && (
+          <div className="flex flex-col gap-3">
+            {/* First Row - WhatsApp */}
+            <Button
+              onClick={handleWhatsAppBooking}
+              size="lg"
+              variant="neon"
+              className="w-full py-4"
+              disabled={!isOpen}
+            >
+              <MessageCircle className="h-5 w-5 mr-2" />
+              {isOpen ? "Book via WhatsApp" : "Temporarily Closed"}
+            </Button>
+
+            {/* Second Row - Telegram */}
+            <Button
+              onClick={handleTelegramBooking}
+              size="lg"
+              variant="outline"
+              className="w-full py-4"
+              disabled={!isOpen}
+            >
+              <Send className="h-5 w-5 mr-2" />
+              {isOpen ? "Book via Telegram" : "Temporarily Closed"}
+            </Button>
+          </div>
+        )}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -112,25 +121,29 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           <h3 className="text-lg font-bold mb-4 font-headline">Info</h3>
           <div className="space-y-4">
             <div className="space-y-2 text-muted-foreground">
-                {typeof venue.hours === 'string' ? (
-                  <div className="flex justify-between">
-                    <span>Monday - Sunday</span>
-                    <span className="font-medium">{venue.hours}</span>
-                  </div>
-                ) : (
-                  Object.entries(venue.hours).map(([day, time]) => (
-                    <div className="flex justify-between" key={day}>
-                      <span>{day}</span>
-                      <span className="font-medium">{time}</span>
-                    </div>
-                  ))
-                )}
+              {typeof venue.hours === "string" ? (
                 <div className="flex justify-between">
-                  <span>Current Status</span>
-                  <span className={`font-medium ${isOpen ? 'text-green-500' : 'text-red-500'}`}>
-                    {isOpen ? "Open" : "Closed"}
-                  </span>
+                  <span>Monday - Sunday</span>
+                  <span className="font-medium">{venue.hours}</span>
                 </div>
+              ) : (
+                Object.entries(venue.hours).map(([day, time]) => (
+                  <div className="flex justify-between" key={day}>
+                    <span>{day}</span>
+                    <span className="font-medium">{time}</span>
+                  </div>
+                ))
+              )}
+              <div className="flex justify-between">
+                <span>Current Status</span>
+                <span
+                  className={`font-medium ${
+                    isOpen ? "text-green-500" : "text-red-500"
+                  }`}
+                >
+                  {isOpen ? "Open" : "Closed"}
+                </span>
+              </div>
             </div>
             <div className="border-t border-border/40 my-4"></div>
             <div className="space-y-3">
@@ -143,16 +156,21 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
                 <span>24/7 WhatsApp Support</span>
               </div>
             </div>
-            
+
             {/* Amenities for Hotels */}
-            {venue.category === 'Hotel' && venue.amenities && (
+            {venue.category === "Hotel" && venue.amenities && (
               <>
                 <div className="border-t border-border/40 my-4"></div>
                 <div>
-                  <h4 className="text-md font-semibold mb-3 font-headline">Amenities</h4>
+                  <h4 className="text-md font-semibold mb-3 font-headline">
+                    Amenities
+                  </h4>
                   <div className="grid grid-cols-2 gap-2">
                     {venue.amenities.map((amenity, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div
+                        key={index}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
                         <div className="w-2 h-2 bg-primary rounded-full"></div>
                         <span>{amenity}</span>
                       </div>
