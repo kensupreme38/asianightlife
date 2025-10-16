@@ -7,6 +7,7 @@ import {
   MessageCircle,
   Send
 } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
 
 interface VenueInfoProps {
   venue: {
@@ -101,7 +102,9 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
         {/* Description */}
         <div className="card-elevated p-6 rounded-xl">
           <h2 className="text-xl font-bold mb-4 font-headline">Description</h2>
-          <p className="text-muted-foreground leading-relaxed">{venue.description}</p>
+          <div className="text-muted-foreground leading-relaxed prose prose-sm max-w-none prose-headings:font-headline prose-headings:text-foreground prose-strong:text-foreground prose-strong:font-semibold">
+            <ReactMarkdown>{venue.description}</ReactMarkdown>
+          </div>
         </div>
 
         {/* Info */}
