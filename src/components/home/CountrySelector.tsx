@@ -51,6 +51,7 @@ const citiesByCountry: Record<string, { id: string, name: string }[]> = {
     { id: 'Danang', name: 'Danang' },
     { id: 'Nha Trang', name: 'Nha Trang' },
     { id: 'Ho Chi Minh City', name: 'Ho Chi Minh City' },
+    { id: 'Vung Tau', name: 'Vung Tau' },
     { id: 'Can Tho', name: 'Can Tho' },
     { id: 'Phu Quoc', name: 'Phu Quoc' },
   ],
@@ -91,7 +92,7 @@ export const CountrySelector = ({
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              <h2 className="text-xl md:text-2xl font-bold">Select Country</h2>
+              <h2 className="text-xl md:text-2xl font-bold font-headline">Select Country</h2>
             </div>
             <Select value={selectedCountry} onValueChange={onCountryChange}>
               <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
@@ -114,7 +115,7 @@ export const CountrySelector = ({
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              <h2 className="text-xl md:text-2xl font-bold">Select City</h2>
+              <h2 className="text-xl md:text-2xl font-bold font-headline">Select City</h2>
             </div>
             <Select value={selectedCity} onValueChange={onCityChange} disabled={!isCitySelectorEnabled}>
               <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
@@ -134,7 +135,7 @@ export const CountrySelector = ({
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <Music className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              <h2 className="text-xl md:text-2xl font-bold">Entertainment Type</h2>
+              <h2 className="text-xl md:text-2xl font-bold font-headline">Entertainment Type</h2>
             </div>
             <Select value={selectedCategory} onValueChange={onCategoryChange}>
                 <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">

@@ -39,7 +39,7 @@ const steps: Step[] = [
       {
         icon: Phone,
         title: "BOOK BY PHONE",
-        description: "0868.460.008",
+        description: "+65 8280 8072",
       },
       {
         icon: Headset,
@@ -72,7 +72,7 @@ const StepIcon = ({ icon: Icon }: { icon: React.ElementType }) => (
 const StepCard = ({ number, title, description, icon }: {number: number; title: string; description: string; icon: React.ElementType}) => (
   <div className="relative flex flex-col items-center text-center">
     <StepIcon icon={icon} />
-    <h3 className="text-lg font-bold text-primary">{title}</h3>
+    <h3 className="text-lg font-bold text-primary font-headline">{title}</h3>
     <p className="text-muted-foreground mt-1 text-sm">{description}</p>
     <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-border bg-background font-bold text-primary">
       {number}
@@ -85,13 +85,13 @@ const DoubleStepComponent = ({ number, options }: { number: number; options: [Do
     <div className="flex items-start justify-center gap-8">
       <div>
         <StepIcon icon={options[0].icon} />
-        <h3 className="text-lg font-bold text-primary">{options[0].title}</h3>
+        <h3 className="text-lg font-bold text-primary font-headline">{options[0].title}</h3>
         <p className="text-muted-foreground mt-1 text-sm">{options[0].description}</p>
       </div>
       <span className="text-muted-foreground font-bold mt-10">Or</span>
       <div>
         <StepIcon icon={options[1].icon} />
-        <h3 className="text-lg font-bold text-primary">{options[1].title}</h3>
+        <h3 className="text-lg font-bold text-primary font-headline">{options[1].title}</h3>
         {options[1].link ? (
            <Link href={options[1].link} target="_blank" rel="noopener noreferrer">
               <p className="text-muted-foreground mt-1 hover:text-primary transition-colors text-sm">{options[1].description}</p>
@@ -121,7 +121,7 @@ export const BookingGuide = () => {
     <section className="py-24 bg-secondary/20">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Booking Guide</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 font-headline">Booking Guide</h2>
           <p className="text-muted-foreground">
             See detailed guide <Link href="#" className="text-primary hover:underline">here</Link>
           </p>

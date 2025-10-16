@@ -134,7 +134,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
 
         {/* Masonry Gallery */}
         <div className="card-elevated p-6 rounded-xl mb-12">
-           <h3 className="text-xl font-bold mb-4">Image Library</h3>
+           <h3 className="text-xl font-bold mb-4 font-headline">Image Library</h3>
            <VenueImageMasonry images={galleryImages} />
         </div>
 

@@ -504,6 +504,82 @@ Pool table in VIP room`,
     "price": "1m VND (Starting from)",  
     "description": "Luxury 21 KTV (Ho Chi Minh). Opening Hours & Tips: 1m VND. Promotion: —. Surcharges: Fruits 550k VND, VAT 18%. Minimum Spend: Room charge 690k VND/hr. Recommended For: Playful girls. Contact to book.",
     "hours": "Daily 4PM - 3AM"
+  },
+  {
+    "id": 30,
+    "name": "M Village Hotel",
+    "main_image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+    ],
+    "address": "123 Orchard Road, Singapore 238896",
+    "country": "Singapore",
+    "phone": "+65 6280 8072",
+    "category": "Hotel",
+    "price": "$180",
+    "description": "M Village Hotel offers premium accommodation in the heart of Singapore. Experience luxury with modern amenities, exceptional service, and convenient location near Orchard Road shopping district. Perfect for business and leisure travelers.",
+    "hours": "24/7 Check-in/Check-out",
+    "status": "open",
+    "amenities": ["Free WiFi", "Swimming Pool", "Fitness Center", "Restaurant", "Room Service", "Concierge"]
+  },
+  {
+    "id": 31,
+    "name": "SIGNATURE by M VILLAGE",
+    "main_image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+    ],
+    "address": "456 Marina Bay, Singapore 018956",
+    "country": "Singapore",
+    "phone": "+65 6280 8072",
+    "category": "Hotel",
+    "price": "$320",
+    "description": "SIGNATURE by M VILLAGE represents the pinnacle of luxury hospitality. Exclusive suites with panoramic city views, personalized butler service, and world-class amenities. The ultimate destination for discerning travelers seeking unparalleled luxury.",
+    "hours": "24/7 Check-in/Check-out",
+    "status": "open",
+    "amenities": ["Butler Service", "Private Balcony", "Premium Spa", "Fine Dining", "Luxury Transport", "Concierge"]
+  },
+  {
+    "id": 32,
+    "name": "M VILLAGE LIVING",
+    "main_image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+    ],
+    "address": "789 Sentosa Gateway, Singapore 098269",
+    "country": "Singapore",
+    "phone": "+65 6280 8072",
+    "category": "Hotel",
+    "price": "$250",
+    "description": "M VILLAGE LIVING offers extended stay accommodations with residential-style comfort. Spacious suites with full kitchens, living areas, and resort-style amenities. Perfect for long-term stays and families seeking home-like comfort.",
+    "hours": "24/7 Check-in/Check-out",
+    "status": "open",
+    "amenities": ["Full Kitchen", "Living Room", "Laundry Service", "Gym", "Pool", "Business Center"]
+  },
+  {
+    "id": 33,
+    "name": "express by M VILLAGE",
+    "main_image_url": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+    ],
+    "address": "321 Airport Boulevard, Singapore 819642",
+    "country": "Singapore",
+    "phone": "+65 6280 8072",
+    "category": "Hotel",
+    "price": "$120",
+    "description": "express by M VILLAGE provides efficient, comfortable accommodation for business travelers and transit guests. Modern rooms with essential amenities, quick check-in/out, and convenient location near Changi Airport. Smart choice for value-conscious travelers.",
+    "hours": "24/7 Check-in/Check-out",
+    "status": "open",
+    "amenities": ["Free WiFi", "Airport Shuttle", "Business Center", "24/7 Reception", "Laundry", "Café"]
   }
 ]
     

@@ -26,7 +26,7 @@ export const SimilarVenues = ({ currentVenueId, category, country }: SimilarVenu
     <section className="border-t border-border/40 w-full overflow-hidden">
       <div className="py-8">
         <div className="container mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 font-headline">
             <span className="gradient-text">Similar Venues</span>
           </h2>
           <p className="text-muted-foreground">

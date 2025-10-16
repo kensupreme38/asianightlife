@@ -7,33 +7,15 @@ import { useEffect, useState } from "react";
 
 const contactLinks = [
   {
-    name: 'WeChat',
-    icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon2_imec.png?v=156" alt="WeChat" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'weixin://',
-    isImage: true,
-  },
-  {
     name: 'WhatsApp',
     icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon1_imec.png?v=156" alt="WhatsApp" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://wa.me/',
+    href: 'https://wa.me/6582808072',
     isImage: true,
   },
   {
     name: 'Telegram',
     icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon3_imec.png?v=156" alt="Telegram" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://t.me/asianightlifesg',
-    isImage: true,
-  },
-  {
-    name: 'KakaoTalk',
-    icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon4_imec.png?v=156" alt="KakaoTalk" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'kakaotalk://',
-    isImage: true,
-  },
-  {
-    name: 'Zalo',
-    icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon5_imec.png?v=156" alt="Zalo" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://zalo.me/',
+    href: 'https://t.me/supremektv',
     isImage: true,
   },
   {

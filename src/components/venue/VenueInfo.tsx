@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { 
   MapPin, 
   Clock, 
-  Phone, 
-  MessageCircle
+  MessageCircle,
+  Send
 } from "lucide-react";
 
 interface VenueInfoProps {
@@ -28,13 +28,14 @@ interface VenueInfoProps {
 export const VenueInfo = ({ venue }: VenueInfoProps) => {
   const isOpen = venue.status === "open";
   
-  const handleBooking = () => {
+  const handleWhatsAppBooking = () => {
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
-    window.open(`https://wa.me/${venue.phone.replace(/\s/g, '')}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/6582808072?text=${encodeURIComponent(message)}`, '_blank');
   };
 
-  const handleCall = () => {
-    window.open(`tel:${venue.phone.replace(/\s/g, '')}`);
+  const handleTelegramBooking = () => {
+    const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
+    window.open(`https://t.me/supremektv?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
@@ -53,7 +54,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
                 {isOpen ? "Open" : "Closed"}
               </Badge>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">{venue.name}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 font-headline">{venue.name}</h1>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
@@ -70,24 +71,28 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3">
+          {/* Main Line - WhatsApp */}
           <Button 
-            onClick={handleBooking}
+            onClick={handleWhatsAppBooking}
             size="lg" 
             variant="neon"
             className="flex-1 py-4 sm:py-2"
             disabled={!isOpen}
           >
             <MessageCircle className="h-5 w-5 mr-2" />
-            {isOpen ? "Book via WhatsApp" : "Temporarily Closed"}
+            {isOpen ? (venue.category === 'Hotel' ? "Book Room via WhatsApp" : "Book via WhatsApp") : "Temporarily Closed"}
           </Button>
+          
+          {/* Second Line - Telegram */}
           <Button 
-            onClick={handleCall}
+            onClick={handleTelegramBooking}
             size="lg" 
             variant="outline"
             className="flex-1 py-4 sm:py-2"
+            disabled={!isOpen}
           >
-            <Phone className="h-5 w-5 mr-2" />
-            Call Now
+            <Send className="h-5 w-5 mr-2" />
+            {isOpen ? (venue.category === 'Hotel' ? "Book Room via Telegram" : "Book via Telegram") : "Temporarily Closed"}
           </Button>
         </div>
       </div>
@@ -95,13 +100,13 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Description */}
         <div className="card-elevated p-6 rounded-xl">
-          <h2 className="text-xl font-bold mb-4">Description</h2>
+          <h2 className="text-xl font-bold mb-4 font-headline">Description</h2>
           <p className="text-muted-foreground leading-relaxed">{venue.description}</p>
         </div>
 
         {/* Info */}
         <div className="card-elevated p-6 rounded-xl">
-          <h3 className="text-lg font-bold mb-4">Info</h3>
+          <h3 className="text-lg font-bold mb-4 font-headline">Info</h3>
           <div className="space-y-4">
             <div className="space-y-2 text-muted-foreground">
                 {typeof venue.hours === 'string' ? (
@@ -127,10 +132,6 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
             <div className="border-t border-border/40 my-4"></div>
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>{venue.phone}</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
                 <span>{venue.address}</span>
               </div>
@@ -139,6 +140,24 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
                 <span>24/7 WhatsApp Support</span>
               </div>
             </div>
+            
+            {/* Amenities for Hotels */}
+            {venue.category === 'Hotel' && venue.amenities && (
+              <>
+                <div className="border-t border-border/40 my-4"></div>
+                <div>
+                  <h4 className="text-md font-semibold mb-3 font-headline">Amenities</h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {venue.amenities.map((amenity, index) => (
+                      <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span>{amenity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

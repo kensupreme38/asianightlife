@@ -2,10 +2,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { 
-  MessageCircle, 
-  Instagram, 
+  Instagram,
   Facebook, 
-  Send,
   Search,
   Youtube,
   Menu,
@@ -42,12 +40,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   };
 
   const socialLinks = [
-    { icon: MessageCircle, href: "https://wa.me/", label: "WhatsApp" },
+    { icon: Youtube, href: "https://www.youtube.com/@anlasianightlife", label: "YouTube" },
     { icon: Instagram, href: "https://www.instagram.com/asianightlife.sg?igsh=MWZzdjUzN21uZG00Yg==", label: "Instagram" },
     { icon: 'https://img.icons8.com/ios-filled/50/ffffff/tiktok--v1.png', href: "https://www.tiktok.com/@asianightlife.sg?_t=ZS-90Sk98gy6Se&_r=1", label: "TikTok" },
-    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61581713529692&mibextid=ZbWKwL", label: "Facebook" },
-    { icon: Send, href: "https://t.me/asianightlifesg", label: "Telegram" },
-    { icon: Youtube, href: "https://www.youtube.com/@anlasianightlife", label: "YouTube" }
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61581713529692&mibextid=ZbWKwL", label: "Facebook" }
   ];
 
   return (
@@ -57,12 +53,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         {/* --- Desktop View --- */}
         <div className="hidden md:flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-12 w-12 rounded bg-gradient-primary flex items-center justify-center">
+            <div className="h-16 w-16 rounded bg-gradient-primary flex items-center justify-center">
               <Image
                 src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
                 alt="NightLife Logo"
-                width={48}
-                height={48}
+                width={64}
+                height={64}
                 className="object-cover"
               />
             </div>
@@ -122,7 +118,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 <SheetTitle className="sr-only">Menu</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col h-full">
-                <h2 className="text-lg font-semibold mb-4">Connect With Us</h2>
+                <h2 className="text-lg font-semibold mb-4 font-headline">Connect With Us</h2>
                 <div className="flex flex-col space-y-2">
                   {socialLinks.map((social) => (
                     <a
@@ -147,12 +143,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           </Sheet>
 
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-12 w-12 rounded bg-gradient-primary flex items-center justify-center">
+            <div className="h-14 w-14 rounded bg-gradient-primary flex items-center justify-center">
               <Image
                 src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
                 alt="NightLife Logo"
-                width={48}
-                height={48}
+                width={56}
+                height={56}
                 className="object-cover"
               />
             </div>

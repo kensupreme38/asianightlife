@@ -27,7 +27,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
     e.preventDefault();
     e.stopPropagation();
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/6582808072?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
@@ -70,7 +70,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
       <div className="p-4 space-y-3">
         <div>
           <div className="flex items-start justify-between mb-1">
-            <h3 className="font-bold text-sm md:text-lg line-clamp-1 group-hover:text-primary transition-colors">
+            <h3 className="font-bold text-sm md:text-lg line-clamp-1 group-hover:text-primary transition-colors font-headline">
               {venue.name}
             </h3>
           </div>
@@ -90,7 +90,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           disabled={!isOpen}
         >
           <MessageCircle className="h-4 w-4 md:mr-2" />
-          <span className="hidden md:inline">{isOpen ? "Make A Booking" : "Temporarily Closed"}</span>
+          <span className="hidden md:inline">{isOpen ? (venue.category === 'Hotel' ? "Book Now" : "Make A Booking") : "Temporarily Closed"}</span>
         </Button>
       </div>
     </Link>

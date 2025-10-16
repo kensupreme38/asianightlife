@@ -77,7 +77,7 @@ export const HeroBanner = () => {
                     </span>
                   </div>
                   
-                  <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                  <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight font-headline">
                     <span className="gradient-text">{banner.title}</span>
                   </h1>
                   
