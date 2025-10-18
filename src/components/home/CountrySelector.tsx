@@ -128,7 +128,7 @@ export const CountrySelector = ({
               <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
                 <SelectValue placeholder="Select a country" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent position="item-aligned">
                 {countries.map((country) => (
                   <SelectItem key={country.id} value={country.id}>
                     <div className="flex items-center gap-2">
@@ -165,7 +165,7 @@ export const CountrySelector = ({
                   }
                 />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent position="item-aligned">
                 {availableCities.map((city) => (
                   <SelectItem key={city.id} value={city.id}>
                     {city.name}
@@ -187,7 +187,7 @@ export const CountrySelector = ({
               <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
                 <SelectValue placeholder="Select a type" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent position="item-aligned">
                 {categories.map((category) => {
                   const Icon = category.icon;
                   return (

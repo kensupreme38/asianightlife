@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import HomeComponent from "@/components/home/HomeComponent";
 import { WelcomeDialog } from "@/components/home/WelcomeDialog";
@@ -50,17 +50,18 @@ const HomeClient = () => {
     }
   }, [hasMounted]);
 
-  const handleCategoryChange = (category: string) => {
+  const handleCategoryChange = useCallback((category: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (category === "all") {
       newParams.delete("type");
     } else {
       newParams.set("type", category);
     }
-    router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
-  };
+    const newUrl = `${pathname}?${newParams.toString()}`;
+    router.replace(newUrl, { scroll: false });
+  }, [params, pathname, router]);
 
-  const handleCountryChange = (country: string) => {
+  const handleCountryChange = useCallback((country: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (country === "all") {
       newParams.delete("country");
@@ -69,28 +70,31 @@ const HomeClient = () => {
     }
     // Reset city when country changes
     newParams.delete("city");
-    router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
-  };
+    const newUrl = `${pathname}?${newParams.toString()}`;
+    router.replace(newUrl, { scroll: false });
+  }, [params, pathname, router]);
 
-  const handleCityChange = (city: string) => {
+  const handleCityChange = useCallback((city: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (city === "all") {
       newParams.delete("city");
     } else {
       newParams.set("city", city);
     }
-    router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
-  };
+    const newUrl = `${pathname}?${newParams.toString()}`;
+    router.replace(newUrl, { scroll: false });
+  }, [params, pathname, router]);
 
-  const handleSearchChange = (query: string) => {
+  const handleSearchChange = useCallback((query: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (query) {
       newParams.set("q", query);
     } else {
       newParams.delete("q");
     }
-    router.push(`${pathname}?${newParams.toString()}`, { scroll: false });
-  };
+    const newUrl = `${pathname}?${newParams.toString()}`;
+    router.replace(newUrl, { scroll: false });
+  }, [params, pathname, router]);
 
   // Show splash screen only on first visit to homepage
   if (showSplash) {

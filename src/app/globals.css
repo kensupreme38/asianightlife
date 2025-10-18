@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent scroll to top on filter changes */
+html {
+  scroll-behavior: smooth;
+  scroll-restoration: manual;
+}
+
+/* Prevent unwanted scroll jumps */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Ensure select dropdowns don't cause scroll issues */
+[data-radix-select-content] {
+  z-index: 9999;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
