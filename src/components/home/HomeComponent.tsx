@@ -1,10 +1,12 @@
 'use client';
+import { memo } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroBanner } from "@/components/home/HeroBanner";
 import { CountrySelector } from "@/components/home/CountrySelector";
 import { VenueGrid } from "@/components/home/VenueGrid";
 import { BookingGuide } from '@/components/home/BookingGuide';
+import { LazyBookingGuide } from '@/components/lazy/BookingGuide';
 
 type HomeComponentProps = {
   selectedCountry: string;
@@ -17,7 +19,7 @@ type HomeComponentProps = {
   onSearchChange: (query: string) => void;
 };
 
-const HomeComponent = ({
+const HomeComponent = memo(({
   selectedCountry,
   selectedCity,
   selectedCategory,
@@ -46,11 +48,13 @@ const HomeComponent = ({
           selectedCategory={selectedCategory}
           searchQuery={searchQuery} 
         />
-        <BookingGuide />
+        <LazyBookingGuide />
       </main>
       <Footer />
     </div>
   );
-};
+});
+
+HomeComponent.displayName = 'HomeComponent';
 
 export default HomeComponent;

@@ -47,7 +47,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
-              <Badge variant="secondary">{venue.category}</Badge>
+              <Badge variant="secondary" className="truncate max-w-[200px]">{venue.category}</Badge>
               <Badge
                 variant={isOpen ? "default" : "destructive"}
                 className={`${

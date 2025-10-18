@@ -2,9 +2,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Search, Youtube, Menu, X } from "lucide-react";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import Image from "next/image";
 import { Input } from "../ui/input";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import {
   Sheet,
   SheetContent,
@@ -18,10 +20,18 @@ interface HeaderProps {
   onSearchChange?: (query: string) => void;
 }
 
+interface SocialLink {
+  icon: any;
+  href: string;
+  label: string;
+  className?: string;
+}
+
 export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const [inputValue, setInputValue] = useState(searchQuery ?? "");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setInputValue(searchQuery ?? "");
@@ -38,7 +48,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     }
   };
 
-  const socialLinks = [
+  const socialLinks: SocialLink[] = [
     {
       icon: Youtube,
       href: "https://www.youtube.com/@anlasianightlife",
@@ -50,9 +60,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
       label: "Instagram",
     },
     {
-      icon: "https://img.icons8.com/ios-filled/50/ffffff/tiktok--v1.png",
+      icon: "https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png",
       href: "https://www.tiktok.com/@asianightlife.sg?_t=ZS-90Sk98gy6Se&_r=1",
       label: "TikTok",
+      className: "dark:invert",
     },
     {
       icon: Facebook,
@@ -95,6 +106,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         </div>
 
         <div className="hidden md:flex items-center space-x-1">
+          <ThemeSwitcher />
           {socialLinks.map((social) => (
             <Button
               key={social.label}
@@ -115,6 +127,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                     alt={social.label}
                     width={16}
                     height={16}
+                    className={social.className || ""}
                   />
                 ) : (
                   <social.icon className="h-4 w-4" />
@@ -212,6 +225,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                             alt={social.label}
                             width={20}
                             height={20}
+                            className={social.className || ""}
                           />
                         ) : (
                           <social.icon className="h-5 w-5" />
@@ -219,6 +233,20 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                         <span>{social.label}</span>
                       </a>
                     ))}
+                  </div>
+                </div>
+
+                {/* Theme Switcher */}
+                <div>
+                  <h2 className="text-lg font-semibold mb-4 font-headline">
+                    Theme
+                  </h2>
+                  <div 
+                    className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  >
+                    <ThemeSwitcher />
+                    <span className="text-sm text-muted-foreground">Toggle theme</span>
                   </div>
                 </div>
               </div>

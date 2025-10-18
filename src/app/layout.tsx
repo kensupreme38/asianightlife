@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Singapore, Vietnam, Thailand, Malaysia. Discover and book now!',
   authors: [{ name: 'NightLife Platform' }],
   keywords: 'ktv, club, live house, booking, karaoke, nightlife, singapore, vietnam, thailand, malaysia',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: 'NightLife - Premier Entertainment Venue Booking',
     description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Southeast Asia',

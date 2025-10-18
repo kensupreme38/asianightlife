@@ -16,8 +16,9 @@ export const Footer = () => {
     },
     {
       name: "TikTok",
-      icon: "https://cdn-icons-png.flaticon.com/128/4782/4782345.png",
+      icon: "https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png",
       href: "https://www.tiktok.com/@asianightlife.sg?_t=ZS-90Sk98gy6Se&_r=1",
+      className: "dark:invert",
     },
     {
       name: "Facebook",
@@ -112,7 +113,7 @@ export const Footer = () => {
                     alt={link.name}
                     width={40}
                     height={40}
-                    className="rounded-full shadow-lg hover:scale-110 transition-transform"
+                    className={`rounded-full shadow-lg hover:scale-110 transition-transform ${link.className || ""}`}
                   />
                 </Link>
               ))}

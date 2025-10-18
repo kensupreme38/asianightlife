@@ -23,7 +23,10 @@ const MasonryImage = ({ src, index, openLightbox }: { src: string, index: number
                 alt={`Venue gallery image ${index + 1}`}
                 width={500}
                 height={500}
-                unoptimized
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                sizes="(max-width: 500px) 50vw, (max-width: 1100px) 33vw, 25vw"
                 className={cn("w-full h-auto object-cover rounded-lg shadow-lg hover-glow transition-opacity duration-300", 
                     isLoading ? "opacity-0" : "opacity-100"
                 )}
@@ -41,6 +44,9 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
     return null;
   }
 
+  // Remove duplicate images to prevent showing the same image twice
+  const uniqueImages = Array.from(new Set(images));
+
   const openLightbox = (index: number) => {
     setSelectedImageIndex(index);
     setLightboxOpen(true);
@@ -52,12 +58,12 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
 
   const showNextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setSelectedImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setSelectedImageIndex((prevIndex) => (prevIndex + 1) % uniqueImages.length);
   };
 
   const showPrevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setSelectedImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setSelectedImageIndex((prevIndex) => (prevIndex - 1 + uniqueImages.length) % uniqueImages.length);
   };
 
   const breakpointColumnsObj = {
@@ -74,8 +80,8 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
         className="masonry-grid"
         columnClassName="masonry-grid_column"
       >
-        {images.map((src, index) => (
-          <MasonryImage key={index} src={src} index={index} openLightbox={openLightbox} />
+        {uniqueImages.map((src, index) => (
+          <MasonryImage key={`${src}-${index}`} src={src} index={index} openLightbox={openLightbox} />
         ))}
       </Masonry>
 
@@ -86,11 +92,12 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
             {/* Image */}
             <div className="relative w-full h-full">
               <Image
-                src={images[selectedImageIndex]}
+                src={uniqueImages[selectedImageIndex]}
                 alt={`Venue gallery image ${selectedImageIndex + 1}`}
                 fill
-                unoptimized
+                priority
                 className="object-contain"
+                sizes="100vw"
               />
             </div>
 
@@ -126,7 +133,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
 
             {/* Counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded">
-              {selectedImageIndex + 1} / {images.length}
+              {selectedImageIndex + 1} / {uniqueImages.length}
             </div>
         </DialogContent>
       </Dialog>

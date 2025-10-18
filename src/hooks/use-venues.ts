@@ -1,5 +1,5 @@
 "use client";
-import { useMemo } from "react";
+import { useMemo, useCallback } from "react";
 import { ktvData } from "@/lib/data";
 import { useDebounce } from "./use-debounce";
 
@@ -28,6 +28,32 @@ interface UseVenuesProps {
   limit?: number;
 }
 
+// City patterns mapping - moved outside component for better performance
+const CITY_PATTERNS: Record<string, string[]> = {
+  hanoi: ["hanoi", "hà nội", "hoan kiem district", "tho nhuom", "tran hung dao ward"],
+  "ho chi minh city": [
+    "ho chi minh", "hồ chí minh", "ho chi minh city", "hcm", "saigon", "sài gòn",
+    "district 1", "district 3", "district 5", "district 6", "quận 1", "quận 3", "quận 5", "quận 6",
+    "trần hưng đạo", "phạm viết chánh", "đề thám", "an duong vuong", "bui thi xuan",
+    "cho lon", "võ thị sáu", "hoang sa", "le thanh ton", "lê thánh tôn", "ben nghe ward", "hcmc",
+  ],
+  danang: ["da nang", "đà nẵng", "da nang city"],
+  "nha trang": ["nha trang", "nha trang"],
+  "vung tau": ["vung tau", "vũng tàu"],
+  "can tho": ["can tho", "cần thơ"],
+  "phu quoc": ["phu quoc", "phú quốc"],
+  singapore: ["singapore"],
+  bangkok: ["bangkok"],
+  "chiang mai": ["chiang mai", "chiangmai"],
+  pattaya: ["pattaya"],
+  phuket: ["phuket"],
+  "hat yai": ["hat yai"],
+  penang: ["penang"],
+  "kuala lumpur": ["kuala lumpur", "kl"],
+  "johor bahru": ["johor bahru", "jb"],
+  "kota kinabalu": ["kota kinabalu"],
+};
+
 export const useVenues = ({
   selectedCountry = "all",
   selectedCity = "all",
@@ -38,81 +64,45 @@ export const useVenues = ({
   // Debounce search query to avoid excessive filtering
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
+  // Memoized filtering functions
+  const filterByCountry = useCallback((venue: any) => 
+    selectedCountry === "all" || venue.country === selectedCountry, 
+    [selectedCountry]
+  );
+
+  const filterByCity = useCallback((venue: any) => {
+    if (selectedCity === "all") return true;
+    const address = venue.address.toLowerCase();
+    const city = selectedCity.toLowerCase();
+    const patterns = CITY_PATTERNS[city] || [city];
+    return patterns.some((pattern) => address.includes(pattern));
+  }, [selectedCity]);
+
+  const filterByCategory = useCallback((venue: any) => 
+    selectedCategory === "all" || venue.category === selectedCategory, 
+    [selectedCategory]
+  );
+
+  const filterBySearch = useCallback((venue: any) => {
+    if (!debouncedSearchQuery) return true;
+    const query = debouncedSearchQuery.toLowerCase();
+    return venue.name.toLowerCase().includes(query) || 
+           venue.address.toLowerCase().includes(query);
+  }, [debouncedSearchQuery]);
+
   const venues = useMemo(() => {
     let filteredVenues = ktvData
-      .filter(
-        (venue) =>
-          selectedCountry === "all" || venue.country === selectedCountry
-      )
-      .filter((venue) => {
-        // Filter by city based on address content
-        if (selectedCity !== "all") {
-          const address = venue.address.toLowerCase();
-          const city = selectedCity.toLowerCase();
-
-          // Map city names to common address patterns
-          const cityPatterns: Record<string, string[]> = {
-            hanoi: ["hanoi", "hà nội"],
-            "ho chi minh city": [
-              "ho chi minh",
-              "hồ chí minh",
-              "hcm",
-              "saigon",
-              "sài gòn",
-              "district 1",
-              "district 3",
-              "district 5",
-              "district 6",
-              "quận 1",
-              "quận 3",
-              "quận 5",
-              "quận 6",
-            ],
-            danang: ["da nang", "đà nẵng"],
-            "nha trang": ["nha trang", "nha trang"],
-            "vung tau": ["vung tau", "vũng tàu"],
-            "can tho": ["can tho", "cần thơ"],
-            "phu quoc": ["phu quoc", "phú quốc"],
-            singapore: ["singapore"],
-            bangkok: ["bangkok"],
-            "chiang mai": ["chiang mai", "chiangmai"],
-            pattaya: ["pattaya"],
-            phuket: ["phuket"],
-            "hat yai": ["hat yai"],
-            penang: ["penang"],
-            "kuala lumpur": ["kuala lumpur", "kl"],
-            "johor bahru": ["johor bahru", "jb"],
-            "kota kinabalu": ["kota kinabalu"],
-          };
-
-          const patterns = cityPatterns[city] || [city];
-          return patterns.some((pattern) => address.includes(pattern));
-        }
-        return true;
-      })
-      .filter(
-        (venue) =>
-          selectedCategory === "all" || venue.category === selectedCategory
-      )
-      .filter(
-        (venue) =>
-          !debouncedSearchQuery ||
-          venue.name
-            .toLowerCase()
-            .includes(debouncedSearchQuery.toLowerCase()) ||
-          venue.address
-            .toLowerCase()
-            .includes(debouncedSearchQuery.toLowerCase())
-      )
-      .map(
-        (ktv): Venue => ({
-          ...ktv,
-          id: ktv.id.toString(),
-          rating: 4.5,
-          status: "open" as const,
-          imageHint: "ktv lounge",
-        })
-      );
+      .filter(filterByCountry)
+      .filter(filterByCity)
+      .filter(filterByCategory)
+      .filter(filterBySearch)
+      .map((ktv): Venue => ({
+        ...ktv,
+        id: ktv.id.toString(),
+        rating: 4.5,
+        status: "open" as const,
+        imageHint: "ktv lounge",
+      }));
 
     // Apply limit if specified
     if (limit && limit > 0) {
@@ -120,81 +110,16 @@ export const useVenues = ({
     }
 
     return filteredVenues;
-  }, [
-    selectedCountry,
-    selectedCity,
-    selectedCategory,
-    debouncedSearchQuery,
-    limit,
-  ]);
+  }, [filterByCountry, filterByCity, filterByCategory, filterBySearch, limit]);
 
   const totalCount = useMemo(() => {
     return ktvData
-      .filter(
-        (venue) =>
-          selectedCountry === "all" || venue.country === selectedCountry
-      )
-      .filter((venue) => {
-        // Filter by city based on address content
-        if (selectedCity !== "all") {
-          const address = venue.address.toLowerCase();
-          const city = selectedCity.toLowerCase();
-
-          // Map city names to common address patterns
-          const cityPatterns: Record<string, string[]> = {
-            hanoi: ["hanoi", "hà nội"],
-            "ho chi minh city": [
-              "ho chi minh",
-              "hồ chí minh",
-              "hcm",
-              "saigon",
-              "sài gòn",
-              "district 1",
-              "district 3",
-              "district 5",
-              "district 6",
-              "quận 1",
-              "quận 3",
-              "quận 5",
-              "quận 6",
-            ],
-            danang: ["da nang", "đà nẵng"],
-            "nha trang": ["nha trang", "nha trang"],
-            "vung tau": ["vung tau", "vũng tàu"],
-            "can tho": ["can tho", "cần thơ"],
-            "phu quoc": ["phu quoc", "phú quốc"],
-            singapore: ["singapore"],
-            bangkok: ["bangkok"],
-            "chiang mai": ["chiang mai", "chiangmai"],
-            pattaya: ["pattaya"],
-            phuket: ["phuket"],
-            "hat yai": ["hat yai"],
-            penang: ["penang"],
-            "kuala lumpur": ["kuala lumpur", "kl"],
-            "johor bahru": ["johor bahru", "jb"],
-            "kota kinabalu": ["kota kinabalu"],
-          };
-
-          const patterns = cityPatterns[city] || [city];
-          return patterns.some((pattern) => address.includes(pattern));
-        }
-        return true;
-      })
-      .filter(
-        (venue) =>
-          selectedCategory === "all" || venue.category === selectedCategory
-      )
-      .filter(
-        (venue) =>
-          !debouncedSearchQuery ||
-          venue.name
-            .toLowerCase()
-            .includes(debouncedSearchQuery.toLowerCase()) ||
-          venue.address
-            .toLowerCase()
-            .includes(debouncedSearchQuery.toLowerCase())
-      ).length;
-  }, [selectedCountry, selectedCity, selectedCategory, debouncedSearchQuery]);
+      .filter(filterByCountry)
+      .filter(filterByCity)
+      .filter(filterByCategory)
+      .filter(filterBySearch)
+      .length;
+  }, [filterByCountry, filterByCity, filterByCategory, filterBySearch]);
 
   return {
     venues,

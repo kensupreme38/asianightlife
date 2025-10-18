@@ -19,12 +19,10 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
   }
 
   const handleLoad = () => {
-    console.log("VenueGallery: Image loaded successfully:", images[0]);
     setIsLoading(false);
   };
 
   const handleError = (e: any) => {
-    console.error("VenueGallery: Image failed to load:", images[0], e);
     setIsLoading(false);
     setHasError(true);
   };
@@ -54,6 +52,8 @@ export const VenueGallery = ({ images, venueName }: VenueGalleryProps) => {
           onLoad={handleLoad}
           onError={handleError}
           priority
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
         />
       )}

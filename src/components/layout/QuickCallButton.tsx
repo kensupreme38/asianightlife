@@ -10,10 +10,14 @@ const QuickCallButton = () => {
     setHasMounted(true);
   }, []);
 
-  const phoneNumber = '0868460008';
+  const phoneNumber = '6582808072'; // WhatsApp number
 
-  const handleCall = () => {
-    window.location.href = `tel:${phoneNumber}`;
+  const handleWhatsApp = () => {
+    const message = 'Hello! I would like to get more information about your services.';
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   if (!hasMounted) {
@@ -25,12 +29,12 @@ const QuickCallButton = () => {
       <Button
         variant="neon"
         size="icon"
-        onClick={handleCall}
+        onClick={handleWhatsApp}
         className='relative h-12 w-12 rounded-full shadow-lg transition-opacity animate-ripple'
         style={{
           animationDuration: '1s',
         }}
-        aria-label="Call Now"
+        aria-label="WhatsApp Now"
       >
         <Phone className="h-6 w-6" />
       </Button>
