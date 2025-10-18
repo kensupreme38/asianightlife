@@ -45,11 +45,48 @@ export const useVenues = ({
           selectedCountry === "all" || venue.country === selectedCountry
       )
       .filter((venue) => {
-        // The city filter is prepared for when city data is available in ktvData
-        if (selectedCountry !== "all" && selectedCity !== "all") {
-          // Assuming venue object will have a 'city' property
-          // return venue.city === selectedCity;
-          return true; // Currently returning true to not filter out everything
+        // Filter by city based on address content
+        if (selectedCity !== "all") {
+          const address = venue.address.toLowerCase();
+          const city = selectedCity.toLowerCase();
+
+          // Map city names to common address patterns
+          const cityPatterns: Record<string, string[]> = {
+            hanoi: ["hanoi", "hà nội"],
+            "ho chi minh city": [
+              "ho chi minh",
+              "hồ chí minh",
+              "hcm",
+              "saigon",
+              "sài gòn",
+              "district 1",
+              "district 3",
+              "district 5",
+              "district 6",
+              "quận 1",
+              "quận 3",
+              "quận 5",
+              "quận 6",
+            ],
+            danang: ["da nang", "đà nẵng"],
+            "nha trang": ["nha trang", "nha trang"],
+            "vung tau": ["vung tau", "vũng tàu"],
+            "can tho": ["can tho", "cần thơ"],
+            "phu quoc": ["phu quoc", "phú quốc"],
+            singapore: ["singapore"],
+            bangkok: ["bangkok"],
+            "chiang mai": ["chiang mai", "chiangmai"],
+            pattaya: ["pattaya"],
+            phuket: ["phuket"],
+            "hat yai": ["hat yai"],
+            penang: ["penang"],
+            "kuala lumpur": ["kuala lumpur", "kl"],
+            "johor bahru": ["johor bahru", "jb"],
+            "kota kinabalu": ["kota kinabalu"],
+          };
+
+          const patterns = cityPatterns[city] || [city];
+          return patterns.some((pattern) => address.includes(pattern));
         }
         return true;
       })
@@ -97,6 +134,52 @@ export const useVenues = ({
         (venue) =>
           selectedCountry === "all" || venue.country === selectedCountry
       )
+      .filter((venue) => {
+        // Filter by city based on address content
+        if (selectedCity !== "all") {
+          const address = venue.address.toLowerCase();
+          const city = selectedCity.toLowerCase();
+
+          // Map city names to common address patterns
+          const cityPatterns: Record<string, string[]> = {
+            hanoi: ["hanoi", "hà nội"],
+            "ho chi minh city": [
+              "ho chi minh",
+              "hồ chí minh",
+              "hcm",
+              "saigon",
+              "sài gòn",
+              "district 1",
+              "district 3",
+              "district 5",
+              "district 6",
+              "quận 1",
+              "quận 3",
+              "quận 5",
+              "quận 6",
+            ],
+            danang: ["da nang", "đà nẵng"],
+            "nha trang": ["nha trang", "nha trang"],
+            "vung tau": ["vung tau", "vũng tàu"],
+            "can tho": ["can tho", "cần thơ"],
+            "phu quoc": ["phu quoc", "phú quốc"],
+            singapore: ["singapore"],
+            bangkok: ["bangkok"],
+            "chiang mai": ["chiang mai", "chiangmai"],
+            pattaya: ["pattaya"],
+            phuket: ["phuket"],
+            "hat yai": ["hat yai"],
+            penang: ["penang"],
+            "kuala lumpur": ["kuala lumpur", "kl"],
+            "johor bahru": ["johor bahru", "jb"],
+            "kota kinabalu": ["kota kinabalu"],
+          };
+
+          const patterns = cityPatterns[city] || [city];
+          return patterns.some((pattern) => address.includes(pattern));
+        }
+        return true;
+      })
       .filter(
         (venue) =>
           selectedCategory === "all" || venue.category === selectedCategory
@@ -111,7 +194,7 @@ export const useVenues = ({
             .toLowerCase()
             .includes(debouncedSearchQuery.toLowerCase())
       ).length;
-  }, [selectedCountry, selectedCategory, debouncedSearchQuery]);
+  }, [selectedCountry, selectedCity, selectedCategory, debouncedSearchQuery]);
 
   return {
     venues,
