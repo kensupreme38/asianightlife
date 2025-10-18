@@ -37,7 +37,7 @@ export const Footer = () => {
               <div className="h-8 w-8 rounded bg-gradient-primary flex items-center justify-center">
                 <Music className="h-5 w-5 text-white" />
               </div>
-              <span className="font-bold text-xl gradient-text">NightLife</span>
+              <span className="font-bold text-xl gradient-text">Asian Nightlife</span>
             </div>
             <p className="text-muted-foreground mb-4">
               The leading booking platform for entertainment venues in Southeast

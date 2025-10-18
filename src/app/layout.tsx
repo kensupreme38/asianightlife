@@ -15,15 +15,15 @@ const heroBannerImage = getImage('hero-banner');
 const imagePreviewUrl = `${heroBannerImage?.imageUrl}&v=1`;
 
 export const metadata: Metadata = {
-  title: 'NightLife - Premier Entertainment Venue Booking',
+  title: 'Asian Nightlife - Premier Entertainment Venue Booking',
   description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Singapore, Vietnam, Thailand, Malaysia. Discover and book now!',
-  authors: [{ name: 'NightLife Platform' }],
+  authors: [{ name: 'Asian Nightlife Platform' }],
   keywords: 'ktv, club, live house, booking, karaoke, nightlife, singapore, vietnam, thailand, malaysia',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'NightLife - Premier Entertainment Venue Booking',
+    title: 'Asian Nightlife - Premier Entertainment Venue Booking',
     description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Southeast Asia',
     type: 'website',
     images: [imagePreviewUrl],
