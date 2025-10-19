@@ -24,8 +24,8 @@ export const VenueGrid = ({
   });
 
   return (
-    <section className="py-12">
-      <div className="container">
+    <section className="md:py-12 py-6">
+      <div className="md:container px-3">
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold mb-2 font-headline">

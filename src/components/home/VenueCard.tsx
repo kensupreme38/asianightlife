@@ -73,7 +73,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
       </div>
 
       {/* Content */}
-      <div className="p-4 space-y-3">
+      <div className="md:p-4 p-2.5 space-y-3">
         <div>
           <div className="flex items-start justify-between mb-1">
             <h3 className="font-bold text-sm md:text-lg line-clamp-1 group-hover:text-primary transition-colors font-headline">
@@ -82,7 +82,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           </div>
 
           <div className="flex items-center text-muted-foreground text-xs md:text-sm">
-            <MapPin className="h-4 w-4 mr-1 shrink-0" />
+            <MapPin className="h-3 w-3 md:w-4 md:h-4 mr-1 shrink-0" />
             <span className="line-clamp-1">{venue.address}</span>
           </div>
         </div>
