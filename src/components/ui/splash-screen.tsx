@@ -44,7 +44,7 @@ export const SplashScreen = ({
             heroBannerImage?.imageUrl ||
             "https://picsum.photos/seed/hero/1200/600"
           }
-          alt="NightLife Splash"
+          alt="Asia Night Life Splash"
           fill
           className="object-cover"
           priority
@@ -57,11 +57,23 @@ export const SplashScreen = ({
       <div className="relative z-10 text-center text-white">
         {/* Logo/Title */}
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold font-headline mb-4">
-            <span className="bg-gradient-to-r from-neon-pink via-purple-500 to-neon-cyan bg-clip-text text-transparent">
-              NightLife
-            </span>
-          </h1>
+          <div className="flex flex-col items-center mb-6">
+            <div className="h-24 w-24 md:h-32 md:w-32 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 shadow-2xl">
+              <Image
+                src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
+                alt="Asia Night Life Logo"
+                width={120}
+                height={120}
+                className="object-cover"
+                priority
+              />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-2">
+              <span className="bg-gradient-to-r from-neon-pink via-purple-500 to-neon-cyan bg-clip-text text-transparent">
+                Asia Night Life
+              </span>
+            </h1>
+          </div>
           <p className="text-xl md:text-2xl text-white/80 font-medium">
             Premier Entertainment Venue Booking
           </p>

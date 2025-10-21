@@ -1,36 +1,39 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Providers from '@/components/app/providers';
-import { getImage } from '@/lib/placeholder-images';
-import ClientLayout from '@/components/layout/ClientLayout';
+import Providers from "@/components/app/providers";
+import { getImage } from "@/lib/placeholder-images";
+import ClientLayout from "@/components/layout/ClientLayout";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
-const heroBannerImage = getImage('hero-banner');
+const heroBannerImage = getImage("hero-banner");
 // By adding a unique version query parameter, we can force social media platforms to refetch the image.
 const imagePreviewUrl = `${heroBannerImage?.imageUrl}&v=1`;
 
 export const metadata: Metadata = {
-  title: 'Asian Nightlife - Premier Entertainment Venue Booking',
-  description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Singapore, Vietnam, Thailand, Malaysia. Discover and book now!',
-  authors: [{ name: 'Asian Nightlife Platform' }],
-  keywords: 'ktv, club, live house, booking, karaoke, nightlife, singapore, vietnam, thailand, malaysia',
+  title: "Asia Night Life - Premier Entertainment Venue Booking",
+  description:
+    "The leading booking platform for KTVs, Clubs, and Live Houses in Singapore, Vietnam, Thailand, Malaysia. Discover and book now!",
+  authors: [{ name: "Asia Night Life Platform" }],
+  keywords:
+    "ktv, club, live house, booking, karaoke, nightlife, singapore, vietnam, thailand, malaysia",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: 'Asian Nightlife - Premier Entertainment Venue Booking',
-    description: 'The leading booking platform for KTVs, Clubs, and Live Houses in Southeast Asia',
-    type: 'website',
+    title: "Asia Night Life - Premier Entertainment Venue Booking",
+    description:
+      "The leading booking platform for KTVs, Clubs, and Live Houses in Southeast Asia",
+    type: "website",
     images: [imagePreviewUrl],
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@lovable_dev',
+    card: "summary_large_image",
+    site: "@lovable_dev",
     images: [imagePreviewUrl],
   },
 };
@@ -47,9 +50,7 @@ export default function RootLayout({
           <TooltipProvider>
             <Toaster />
             <Sonner />
-            <ClientLayout>
-              {children}
-            </ClientLayout>
+            <ClientLayout>{children}</ClientLayout>
           </TooltipProvider>
         </Providers>
       </body>

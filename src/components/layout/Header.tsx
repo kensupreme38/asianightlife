@@ -81,7 +81,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
             <div className="h-16 w-16 rounded bg-gradient-primary flex items-center justify-center">
               <Image
                 src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                alt="NightLife Logo"
+                alt="Asia Night Life Logo"
                 width={64}
                 height={64}
                 className="object-cover"
@@ -241,12 +241,16 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   <h2 className="text-lg font-semibold mb-4 font-headline">
                     Theme
                   </h2>
-                  <div 
+                  <div
                     className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
-                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
                   >
                     <ThemeSwitcher />
-                    <span className="text-sm text-muted-foreground">Toggle theme</span>
+                    <span className="text-sm text-muted-foreground">
+                      Toggle theme
+                    </span>
                   </div>
                 </div>
               </div>
@@ -257,7 +261,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
             <div className="h-14 w-14 rounded bg-gradient-primary flex items-center justify-center">
               <Image
                 src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                alt="NightLife Logo"
+                alt="Asia Night Life Logo"
                 width={56}
                 height={56}
                 className="object-cover"

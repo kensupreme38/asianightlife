@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Dialog,
@@ -7,11 +7,11 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter,
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Music, PartyPopper } from 'lucide-react';
-import Image from 'next/image';
-import { getImage } from '@/lib/placeholder-images';
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { PartyPopper } from "lucide-react";
+import Image from "next/image";
+import { getImage } from "@/lib/placeholder-images";
 
 interface WelcomeDialogProps {
   open: boolean;
@@ -19,7 +19,7 @@ interface WelcomeDialogProps {
 }
 
 export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
-  const welcomeImage = getImage('hero-banner');
+  const welcomeImage = getImage("hero-banner");
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -28,7 +28,7 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
           {welcomeImage && (
             <Image
               src={welcomeImage.imageUrl}
-              alt="Welcome to NightLife"
+              alt="Welcome to Asia Night Life"
               fill
               className="object-cover"
               data-ai-hint={welcomeImage.imageHint}
@@ -38,9 +38,17 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
           <div className="absolute bottom-4 left-6">
             <div className="flex items-center space-x-2 mb-2">
               <div className="h-10 w-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Music className="h-6 w-6 text-white" />
+                <Image
+                  src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
+                  alt="Asia Night Life Logo"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
               </div>
-              <span className="font-bold text-2xl gradient-text">NightLife</span>
+              <span className="font-bold text-2xl gradient-text">
+                Asia Night Life
+              </span>
             </div>
           </div>
         </div>
@@ -50,7 +58,8 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
             Welcome!
           </DialogTitle>
           <DialogDescription className="text-muted-foreground pt-2">
-            Discover and book the most vibrant entertainment venues in Southeast Asia. Special offers await you!
+            Discover and book the most vibrant entertainment venues in Southeast
+            Asia. Special offers await you!
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="p-6 bg-secondary/30">

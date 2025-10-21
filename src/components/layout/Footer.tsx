@@ -1,4 +1,3 @@
-import { Music } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,9 +34,17 @@ export const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="h-8 w-8 rounded bg-gradient-primary flex items-center justify-center">
-                <Music className="h-5 w-5 text-white" />
+                <Image
+                  src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
+                  alt="Asia Night Life Logo"
+                  width={32}
+                  height={32}
+                  className="object-cover"
+                />
               </div>
-              <span className="font-bold text-xl gradient-text">Asian Nightlife</span>
+              <span className="font-bold text-xl gradient-text">
+                Asia Night Life
+              </span>
             </div>
             <p className="text-muted-foreground mb-4">
               The leading booking platform for entertainment venues in Southeast
@@ -113,7 +120,9 @@ export const Footer = () => {
                     alt={link.name}
                     width={40}
                     height={40}
-                    className={`rounded-full shadow-lg hover:scale-110 transition-transform ${link.className || ""}`}
+                    className={`rounded-full shadow-lg hover:scale-110 transition-transform ${
+                      link.className || ""
+                    }`}
                   />
                 </Link>
               ))}

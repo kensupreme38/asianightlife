@@ -1096,7 +1096,8 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
   {
     id: 30,
     name: "Signature by M Village Tho Nhuom",
-    main_image_url: "https://img.mvillage.vn/0k5haPx88Q2rmguCyOhj-aanCofax6JY6Bm-SFg6fXw/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FA0205845_Enhanced_NR_69c3cfbcc8.png",
+    main_image_url:
+      "https://img.mvillage.vn/0k5haPx88Q2rmguCyOhj-aanCofax6JY6Bm-SFg6fXw/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FA0205845_Enhanced_NR_69c3cfbcc8.png",
     images: [
       "https://img.mvillage.vn/zqT6vM0XCRI7msVUAm6gh0r165saEGQZitY_o6Qfar8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_221983614_8f1036401a.jpg",
       "https://img.mvillage.vn/OrhYcn4kjmmfMtK1X3lHK6WAj1O3Vuomh87wXSa349Q/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2857561818_cc75f5d42c.jpg",
@@ -1107,7 +1108,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "From 270,000 VND",
+    price: "From 800,000 VND/night",
     description: `## About Signature by M Village Tho Nhuom
 Signature by M Village Thợ Nhuộm is designed with inspiration from the heritage of fabric dyeing, situated right in the heart of the Old Quarter and only 5 minutes to Hoan Kiem Lake. The hotel features 162 rooms, each equipped with windows for natural light and premium amenities, catering to various accommodation needs.
 
@@ -1144,7 +1145,8 @@ Signature by M Village Thợ Nhuộm is designed with inspiration from the herit
   {
     id: 31,
     name: "M Village Living Vo Thi Sau",
-    main_image_url: "https://img.mvillage.vn/1vmGgYqa8nu7Su00754-Wk1NsXKaNt4BFM-6nGvFeNQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_d5_3304_0e839b32a1.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/1vmGgYqa8nu7Su00754-Wk1NsXKaNt4BFM-6nGvFeNQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_d5_3304_0e839b32a1.JPG",
     images: [
       "https://img.mvillage.vn/XsiCv_91l9KF3AScTXCBPK6ox7Z25lBPS2sm9kVU1Qo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3980787945_78b9088137.jpg",
       "https://img.mvillage.vn/N3H3KCOQFNQ-_ibBofi5BHwQe8bd7f33veC7cJLLmNc/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2798977620_a984f0354a.jpg",
@@ -1154,7 +1156,7 @@ Signature by M Village Thợ Nhuộm is designed with inspiration from the herit
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Vo Thi Sau
 M Village Living Vo Thi Sau is located near the center of District 1 with many spacious common spaces and filled with greenery in every corner. The building area is chill but also dynamic with the youthful cafe Every Half right inside.
 
@@ -1188,7 +1190,8 @@ M Village Living Vo Thi Sau is located near the center of District 1 with many s
   {
     id: 32,
     name: "Express by M Village Hoang Sa",
-    main_image_url: "https://img.mvillage.vn/UxXnv-Jqmm5YiOdZifY4Huaf5XUeBXuXPYPpGMHnNNM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_HS_THUMBNAIL_c980f7361f.png",
+    main_image_url:
+      "https://img.mvillage.vn/UxXnv-Jqmm5YiOdZifY4Huaf5XUeBXuXPYPpGMHnNNM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_HS_THUMBNAIL_c980f7361f.png",
     images: [
       "https://img.mvillage.vn/s2H0DyTVcPjGgFZVj61DgCma9yH_pMuB2efCfrXcHpY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FSanh_R1_92debbb3ea.JPG",
       "https://img.mvillage.vn/zQkDk2lKxzA0V12RkWToOKlUdvu7O5WnKHP217FpT4w/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FCo_working_R1_99d49735f4.JPG",
@@ -1198,7 +1201,7 @@ M Village Living Vo Thi Sau is located near the center of District 1 with many s
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Express by M Village Hoang Sa
 Located in the heart of District 1 yet offering rare sense of tranquility, Express by M Village Hoang Sa combines modern minimalist design with natural light and riverside greenery. With cozy lobby, shared kitchen, self-service laundry and co-working area, this place creates the perfect setting for both productivity and relaxation.
 
@@ -1236,7 +1239,8 @@ Located in the heart of District 1 yet offering rare sense of tranquility, Expre
   {
     id: 33,
     name: "Signature by M Village Le Thanh Ton",
-    main_image_url: "https://img.mvillage.vn/Z4QF6bDxcGzhyiEF7VxrqILy0LZOltIO4Nsqazk0Cq4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LTT_1_1878_1c314289b6.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/Z4QF6bDxcGzhyiEF7VxrqILy0LZOltIO4Nsqazk0Cq4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LTT_1_1878_1c314289b6.JPG",
     images: [
       "https://img.mvillage.vn/bJrxGF5S0vgB20eVH9C6sj0JnQ7wTBl-2_J9CCZuCeM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMVLLT_0007_af4430b92b.JPG",
       "https://img.mvillage.vn/3CzXwZUx8MucBJS1wB3ng4_l05vnh-4WkUxiQhypHzs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Vilage0268_08c62fecb7.jpg",
@@ -1246,7 +1250,7 @@ Located in the heart of District 1 yet offering rare sense of tranquility, Expre
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Signature by M Village Le Thanh Ton
 Signature by M Village Le Thanh Ton is a premium hotel located in the heart of District 1, Ho Chi Minh City. This modern establishment offers luxury accommodations with contemporary design and exceptional amenities.
 
@@ -1281,7 +1285,8 @@ Signature by M Village Le Thanh Ton is a premium hotel located in the heart of D
   {
     id: 34,
     name: "M Village Hotel Tao Dan Park",
-    main_image_url: "https://img.mvillage.vn/14qO3nA8wybBQyQtOBMBFDS0zU_1HsZfBR4IuAWMVJI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_other_15_c1e79ebf33.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/14qO3nA8wybBQyQtOBMBFDS0zU_1HsZfBR4IuAWMVJI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_other_15_c1e79ebf33.jpg",
     images: [
       "https://img.mvillage.vn/1LOr6Bp8vcuo-BIhf4GcGE5k0vwJYsj-3ndQqjziM74/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_554955009_0c31123c76.jpg",
       "https://img.mvillage.vn/Y7iKJ7XRHbOqVNpNpidgqoVEmO1Kmf8EL6OLhiVaQUs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3739363490_8d91ac97c0.jpg",
@@ -1291,7 +1296,7 @@ Signature by M Village Le Thanh Ton is a premium hotel located in the heart of D
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Tao Dan Park
 A trendy hotel in District 1 gateway, perfect for young travelers seeking a vibrant & stylish stay. Wake up bright and energetic in the mornings with a cup of good coffee offered at the cafe or pamper yourself with a mini-spa right at the hotel. Recharge yourself with a panoramic greenery view.
 
@@ -1334,7 +1339,8 @@ A trendy hotel in District 1 gateway, perfect for young travelers seeking a vibr
   {
     id: 35,
     name: "Signature by M Village Da Nang Heritage",
-    main_image_url: "https://img.mvillage.vn/nVNZb-zE4Q92ZnRJO115xPln2b2YfQOdtMO60hg5Up8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_Facade_0037_R2_8e1e2976fd.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/nVNZb-zE4Q92ZnRJO115xPln2b2YfQOdtMO60hg5Up8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_Facade_0037_R2_8e1e2976fd.jpg",
     images: [
       "https://img.mvillage.vn/Q-Chdk5-sNEM38QVVe_Zfaucd2QN39OWX6FvjX9-vj0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMVDN_1008_2f2d656f5f.jpg",
       "https://img.mvillage.vn/N5CImDsNksJbLxZEb2UQVADqdhoeRgGdGuaLbgXTLEg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_Facade_9066_R2_098043157d.jpg",
@@ -1344,7 +1350,7 @@ A trendy hotel in District 1 gateway, perfect for young travelers seeking a vibr
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Signature by M Village Da Nang Heritage
 Touching the century-old story of the city from a historic villa in Thạch Thang ward, right in the heart of the city. Signature by M Village Danang Heritage is not just a top-tier hotel with a collection of heritage-inspired amenities: Tourane de Ville Restaurant and Lounge, Co-working space, Cafe Terrace, and laundry facilities that meet all accommodation needs.
 
@@ -1388,7 +1394,8 @@ Touching the century-old story of the city from a historic villa in Thạch Than
   {
     id: 36,
     name: "President Maison Signature by M Village",
-    main_image_url: "https://img.mvillage.vn/Ybm7OMsHRE7jd8Q6_Edlc5Qrh0uM1JIgpKmPzPTcFmk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FGreen_House_6508_0d29d81a67.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/Ybm7OMsHRE7jd8Q6_Edlc5Qrh0uM1JIgpKmPzPTcFmk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FGreen_House_6508_0d29d81a67.jpg",
     images: [
       "https://img.mvillage.vn/Da_mIjaL8E-LFXZnhQ34UTnm-MKULyXJ41YjJXJ3dQ8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FPool_9713_6c85065ee3.jpg",
       "https://img.mvillage.vn/RK-Er6ERH1DCsNP700b0_NnuaA5vOzMjB1uWRP8ifJI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FGarden_2336_911596fe8d.jpg",
@@ -1398,7 +1405,7 @@ Touching the century-old story of the city from a historic villa in Thạch Than
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About President Maison Signature by M Village
 Nestled quietly on Tú Xương Street in the heart of District 3, President Maison transforms a historic villa into a serene retreat. Surrounded by lush greenery and warm sunlight, its "Green House" design shields you from the daily hustle and bustle. The spacious rooms, filled with natural light, offer the perfect balance of tranquility for rest and inspiration.
 
@@ -1443,7 +1450,8 @@ Nestled quietly on Tú Xương Street in the heart of District 3, President Mais
   {
     id: 37,
     name: "M Village Premier Hotel Thi Sach",
-    main_image_url: "https://img.mvillage.vn/z19nc_KIyP1do4x0QgZbwC-lF-FPNOlZboWIkonu_jE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_Pool_5191_cf7f6095fc.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/z19nc_KIyP1do4x0QgZbwC-lF-FPNOlZboWIkonu_jE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_Pool_5191_cf7f6095fc.jpg",
     images: [
       "https://img.mvillage.vn/3TMRBH7pVhR4ZrQepAlEq9N2yzeStU0Ugdn2-vvB2Vs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FArtboard_7_06834c6793.png",
       "https://img.mvillage.vn/xkhvSGseGjUaqIUuyvOWmu71VoubhFFVRa6dD7UYlPo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_Lobby_9399_cbee80961b.jpg",
@@ -1453,7 +1461,7 @@ Nestled quietly on Tú Xương Street in the heart of District 3, President Mais
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Premier Hotel Thi Sach
 Right in the heart of District 1, M Village Premier Hotel Thi Sách blends East-Asian charm with Saigon's vibrant energy. Our 79 modern rooms are bathed in natural light, with lush green views over Thi Sách Street—your perfect bleisure stay in the city.
 
@@ -1499,7 +1507,8 @@ Right in the heart of District 1, M Village Premier Hotel Thi Sách blends East-
   {
     id: 38,
     name: "Signature by M Village Hai Ba Trung",
-    main_image_url: "https://img.mvillage.vn/U1bKRrKjcestvnMyJW3Zhnf4-rcCaM0nFquMyPqlXhI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FFacade_2_42fcc35307.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/U1bKRrKjcestvnMyJW3Zhnf4-rcCaM0nFquMyPqlXhI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FFacade_2_42fcc35307.jpg",
     images: [
       "https://img.mvillage.vn/0DsS3spnB1Ym0xGj1tqLKl4c8Ffu_d8vuQSkMAo8ShU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1985539670_c3e40ca1b6.jpg",
       "https://img.mvillage.vn/94elzo-mrxsS69Zs9uPnB1HR8Hi7d3DwWkbd9g3bnzs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1291495524_700110942e.jpg",
@@ -1508,7 +1517,7 @@ Right in the heart of District 1, M Village Premier Hotel Thi Sách blends East-
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Signature by M Village Hai Ba Trung
 The art of Indochina wonders. A meticulous hospitality experience inside the contemporary Indochina architecture. A great location to enjoy the stunning view of the most famous landmarks in Sai Gon's center.
 
@@ -1555,17 +1564,19 @@ The art of Indochina wonders. A meticulous hospitality experience inside the con
   {
     id: 39,
     name: "Express by M Village 46 Thao Dien",
-    main_image_url: "https://img.mvillage.vn/nyd9rUia3NwgGXwQbJtLrWRBHuezrE31i4_WOz99GYE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_Thao_Dien4904_copy_940df71ec3.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/nyd9rUia3NwgGXwQbJtLrWRBHuezrE31i4_WOz99GYE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_Thao_Dien4904_copy_940df71ec3.JPG",
     images: [
       "https://img.mvillage.vn/cPSQrjpkhZOccfm6hXSksY8oHrYm39SViBvm5HjwP_8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_Thao_Dien1459_copy_e03a496029.JPG",
       "https://img.mvillage.vn/RkMXO5_2cnU_LtA0YOAT0LJyzJCt1YpAy7AwKWL-VNc/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_Thao_Dien4478_copy_790100524f.JPG",
       "https://img.mvillage.vn/7hxB0XvEVvpWa7nRwVy2Gr67qM2GBY_Q-1In_8nwZhU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_Thao_Dien4211_copy_ed02f3174f.JPG",
     ],
-    address: "46 Thao Dien Street, Thao Dien Ward, District 2, Ho Chi Minh City",
+    address:
+      "46 Thao Dien Street, Thao Dien Ward, District 2, Ho Chi Minh City",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Express by M Village 46 Thao Dien
 Located in the heart of Thảo Điền's creative and energetic scene, Express Thảo Điền brings you compact, thoughtfully designed rooms with full amenities for both short and long stays. Featuring mid-century charm, co-working space, gym, bar lounge, shared kitchen, and laundry area, it's your smart, flexible base to live, work, and unwind.
 
@@ -1611,7 +1622,8 @@ Located in the heart of Thảo Điền's creative and energetic scene, Express T
   {
     id: 40,
     name: "M Village Living Hoang Van Thu",
-    main_image_url: "https://img.mvillage.vn/P94Iqur4_bFdj5wUDEhmxwiAcm_I6iVDYrQjSyHqVU0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_HVT_R2_38_165a5c2a01.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/P94Iqur4_bFdj5wUDEhmxwiAcm_I6iVDYrQjSyHqVU0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_HVT_R2_38_165a5c2a01.jpg",
     images: [
       "https://img.mvillage.vn/1wYbPaYL0bgAasTIdVtflL4tc4jTfnlEstwOamDJamU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2487485166_79a9fd8e44.jpg",
       "https://img.mvillage.vn/suwCIPM8i-A2YtWzFBRcnVYZHuByrCnfT2wkpLiOTf0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_452278010_6debac19ed.jpg",
@@ -1664,7 +1676,8 @@ Super convenient location with only 20 minutes to the airport and central distri
   {
     id: 41,
     name: "Express by M Village Nguyen Binh Khiem",
-    main_image_url: "https://img.mvillage.vn/KmcJLPpESNErenIvYqKe4v9N3K8TOp2CKtoBEEgQqR4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_Nguyen_Binh_Khiem_01_1_f8cc6a9a9c.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/KmcJLPpESNErenIvYqKe4v9N3K8TOp2CKtoBEEgQqR4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_Nguyen_Binh_Khiem_01_1_f8cc6a9a9c.jpg",
     images: [
       "https://img.mvillage.vn/2kkIp_KN_1yxu8i0_R_dLZdLNb4yWsPELUHeohhJAS8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_Nguyen_Binh_Khiem_502_10_b43759e6d7.jpg",
       "https://img.mvillage.vn/2DJ_2NGoI6kcY_OSRCk5DmwjgDeLAJtJUXYusgzYwms/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_Nguyen_Binh_Khiem_other_05_fd0fb9b9c9.jpg",
@@ -1725,7 +1738,8 @@ Choose Express Nguyễn Bỉnh Khiêm for your 'dual-standard' business trip. Lo
   {
     id: 42,
     name: "M Village Living Ky Dong",
-    main_image_url: "https://img.mvillage.vn/mEKlMHMU5hy0zA2XDMt3G0sUwzGFHEcYoNODeJYDk8Y/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3270080136_acf43873c9.jpg?w=1080&q=80",
+    main_image_url:
+      "https://img.mvillage.vn/mEKlMHMU5hy0zA2XDMt3G0sUwzGFHEcYoNODeJYDk8Y/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3270080136_acf43873c9.jpg?w=1080&q=80",
     images: [
       "https://img.mvillage.vn/epJgfOO4wMwN-Q7rfGhAaB78zB5gjRAs45LDpkbEreA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2573626056_1648056de3.jpg",
       "https://img.mvillage.vn/W95cyCIxeBD3TXadbz8nA2If-a-TxXJGSZ3egppJUj0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_609326725_ed50796b0a.jpg",
@@ -1735,7 +1749,7 @@ Choose Express Nguyễn Bỉnh Khiêm for your 'dual-standard' business trip. Lo
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Ky Dong
 A great room to rest after a leisure trip or business trip. The room is spacious and fully equipped with a living room combined with a comfortable open kitchen and a breezy balcony.
 
@@ -1780,7 +1794,8 @@ A great room to rest after a leisure trip or business trip. The room is spacious
   {
     id: 43,
     name: "M Village Hotel Nguyen Kiem",
-    main_image_url: "https://img.mvillage.vn/s49J2z9LjVWFiQooi2NzkXUMNWFET6EEMHycnXGyjvo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_Nguyen_Kiem_40_1adfa562ca.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/s49J2z9LjVWFiQooi2NzkXUMNWFET6EEMHycnXGyjvo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_Nguyen_Kiem_40_1adfa562ca.jpg",
     images: [
       "https://img.mvillage.vn/WcdCqhXPWLOQLcUdFAM44a8VFZQ_PG7xbHzxUaLeOHo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_803714736_0aed80f850.jpg",
       "https://img.mvillage.vn/-mcpEWsxzD6yWf0Ts1I0xQV0ZwrbVnBjo_AfntsV1lE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_980634393_767e28cd62.jpg",
@@ -1791,7 +1806,7 @@ A great room to rest after a leisure trip or business trip. The room is spacious
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "From 1,050,000 VND/night",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Nguyen Kiem
 The building boasts a convenient location, just 5 minutes from the airport and close to the center. Each room is equipped with its own TV in a luxuriously designed space, offering a variety of facilities for you to enjoy your short vacation in comfort and style.
 
@@ -1849,7 +1864,8 @@ The building boasts a convenient location, just 5 minutes from the airport and c
   {
     id: 44,
     name: "Express by M Village Nguyen Van Thu",
-    main_image_url: "https://img.mvillage.vn/9xYRxHNSukiYPvbs8t3HAz8JpHaBtSpFJx7O4NTpuzo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_NVT_20537_b48d614a7e.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/9xYRxHNSukiYPvbs8t3HAz8JpHaBtSpFJx7O4NTpuzo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_NVT_20537_b48d614a7e.JPG",
     images: [
       "https://img.mvillage.vn/rDkKJb21AeUssTxM2EC6_PG45SMRRCDWNNm0-NW7zrc/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3161269201_422cb5e8ad.jpg",
       "https://img.mvillage.vn/qysfavZRHrl0T_65d5TCltwIzwU-ahj7jdjzG4QYnaU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3542500247_f93f49391e.jpg",
@@ -1930,7 +1946,8 @@ Inspired by the Brutalism style through cement details, the building gives you a
   {
     id: 45,
     name: "Express by M Village Nguyen Du",
-    main_image_url: "https://img.mvillage.vn/j2o0hKeEwWlO8OYoUn55ttBbrqptK-hJGgFfmkgieBo/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3119440676_6211d3eb5d.jpg?w=1080&q=80",
+    main_image_url:
+      "https://img.mvillage.vn/j2o0hKeEwWlO8OYoUn55ttBbrqptK-hJGgFfmkgieBo/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3119440676_6211d3eb5d.jpg?w=1080&q=80",
     images: [
       "https://img.mvillage.vn/hC9dV4hlSeyiM-7hftuey9pWFktOxEtUOUKQtYvyjUE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_ND_2_0546_db0c59507a.jpg",
       "https://img.mvillage.vn/aobJs7V2R4X-HmNYlz6yS7VAHljcnEgmGIbykypjEFM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_ND_2_2977_e8acf11c1a.jpg",
@@ -1940,7 +1957,7 @@ Inspired by the Brutalism style through cement details, the building gives you a
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Express by M Village Nguyen Du
 Express by M Village Nguyen Du offers modern and comfortable accommodation in the heart of District 1, Ho Chi Minh City. Located in Ben Thanh Ward, this venue provides convenient access to the city's most famous attractions and business districts.
 
@@ -1994,7 +2011,8 @@ Express by M Village Nguyen Du offers modern and comfortable accommodation in th
   {
     id: 46,
     name: "Signature by M Village Beachfront Hotel",
-    main_image_url: "https://img.mvillage.vn/lUJyPAXkpMyI8Od4cgVCzZR-EGDKz7V-MCJFP_mgLvQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FHO_BOI_RAW_ae575d5e61.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/lUJyPAXkpMyI8Od4cgVCzZR-EGDKz7V-MCJFP_mgLvQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FHO_BOI_RAW_ae575d5e61.jpg",
     images: [
       "https://img.mvillage.vn/hlWqxqvvkBWr_RWAv97pyxszkPHdVtfs4xnqprVGeRE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLOBBY_RAW_2_db65775d15.jpg",
       "https://img.mvillage.vn/wJjKLbur5oNE2lwqapRybfr1M28HQXO0mmLcWlRwVbo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FGAMEZONE_RAW_bf0bbc14e8.jpg",
@@ -2085,7 +2103,8 @@ Nestled between Son Tra gentle coastline and Danang's vibrant rhythm, Signature 
   {
     id: 47,
     name: "Express by M Village Pham Ngu Lao",
-    main_image_url: "https://img.mvillage.vn/D6RAPDIZIVO0CXoyb-CrOHni85EnKXJEHZ0lkao20Bw/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Ffacade_1_bc3ea93af8.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/D6RAPDIZIVO0CXoyb-CrOHni85EnKXJEHZ0lkao20Bw/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Ffacade_1_bc3ea93af8.JPG",
     images: [
       "https://img.mvillage.vn/NrdtAoBMmii0VkF9ZmTxRE4I4ZPo1K4bJ1_xhoVLqag/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_674325006_8b155d721b.jpg",
       "https://img.mvillage.vn/t2t7irFmhfjQpw8vZ3OnHoQ61fZsdJCln-DguD6aCO4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3225580446_94da619cc6.jpg",
@@ -2172,7 +2191,8 @@ Located in the famous Western Quarter in the heart of Saigon, the building is a 
   {
     id: 48,
     name: "Express by M Village Dien Bien Phu Q3",
-    main_image_url: "https://img.mvillage.vn/DwAWpvDr7V07Gu8bMh_DbHqaCDaT_OhBEP_1xbmt4SQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_DBP_2048px_38_f4b6b3ccf5.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/DwAWpvDr7V07Gu8bMh_DbHqaCDaT_OhBEP_1xbmt4SQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_DBP_2048px_38_f4b6b3ccf5.jpg",
     images: [
       "https://img.mvillage.vn/GIBWwtUHSmw2ow35qIOYtNUS4ICqw6W9uMO3oRoVib8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_4206171321_7e68e51434.jpg",
       "https://img.mvillage.vn/qsHVWFN4GXpq8cHtTkN__VNtW1eu1jwkl3QiSF8B3fQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_4045036066_ff6fe77294.jpg",
@@ -2181,7 +2201,7 @@ Located in the famous Western Quarter in the heart of Saigon, the building is a 
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Express by M Village Dien Bien Phu Q3
 Express by M Village Dien Bien Phu Q3 offers modern and comfortable accommodation in District 3, Ho Chi Minh City. Located in Vo Thi Sau Ward, this venue provides convenient access to the city's attractions and business districts with contemporary amenities and express service.
 
@@ -2240,7 +2260,8 @@ Express by M Village Dien Bien Phu Q3 offers modern and comfortable accommodatio
   {
     id: 49,
     name: "M Village Hotel Ly Tu Trong",
-    main_image_url: "https://img.mvillage.vn/Txp_YLjpXAVT8EBVC2XoIGBrfm07E_oPsb5ulZ_LnWA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_08371_45d56d72f0.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/Txp_YLjpXAVT8EBVC2XoIGBrfm07E_oPsb5ulZ_LnWA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_08371_45d56d72f0.JPG",
     images: [
       "https://img.mvillage.vn/zMYBY9HxYMjdiVmhzLZpO-5qYgP0asM3U3rMBhiM1N4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_4246253386_d927804d21.jpg",
       "https://img.mvillage.vn/ZMdQZO6yckD7KnEhSnZjFWogOCtRUYRZV7BAdP8q32c/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3517965105_09570198a8.jpg",
@@ -2250,7 +2271,7 @@ Express by M Village Dien Bien Phu Q3 offers modern and comfortable accommodatio
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Ly Tu Trong
 M Village Hotel Ly Tu Trong offers modern and comfortable accommodation in the heart of District 1, Ho Chi Minh City. Located in Ben Thanh Ward, this venue provides convenient access to the city's most famous attractions, shopping districts, and business centers with contemporary amenities and professional service.
 
@@ -2309,7 +2330,8 @@ M Village Hotel Ly Tu Trong offers modern and comfortable accommodation in the h
   {
     id: 50,
     name: "M Village Living Le Van Sy",
-    main_image_url: "https://img.mvillage.vn/zj7T7MNFrp_LqgM4QhcCLlmiBW8jS9cpx0JfDFicRoU/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2671320608_afa47cfa10.jpg?w=1080&q=80",
+    main_image_url:
+      "https://img.mvillage.vn/zj7T7MNFrp_LqgM4QhcCLlmiBW8jS9cpx0JfDFicRoU/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2671320608_afa47cfa10.jpg?w=1080&q=80",
     images: [
       "https://img.mvillage.vn/a-1oOvXJacLynXs0vBic7voY6eZfPq2qXbeOVpJRgk0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LVS_0273_928998805f.jpg",
       "https://img.mvillage.vn/AJE9EtbJlzdxWV4h5RArJ-l5On_NtYmehszWkoky9fo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_434747039_6382b745da.jpg",
@@ -2392,7 +2414,8 @@ In an alley on a bustling street in District 3, the building has a striking appe
   {
     id: 51,
     name: "M Village Living Nam Ky Khoi Nghia",
-    main_image_url: "https://img.mvillage.vn/dUvlc2GfYcUE-6K__NS_gjWzW7KEMi2kHMECO344qac/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_4_5907_710816d6ca.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/dUvlc2GfYcUE-6K__NS_gjWzW7KEMi2kHMECO344qac/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_4_5907_710816d6ca.JPG",
     images: [
       "https://img.mvillage.vn/5P9tdADgx5JrOv2CkKLXFV7d9ZeLBVVtxY74ccqH62o/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1542742663_5c87a91a8d.jpg",
       "https://img.mvillage.vn/-hYARKE0xsZpuhoT9-tA2pDnrZy-GSYeJSE6s-FeKEo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3522727290_6ff4744200.jpg",
@@ -2473,7 +2496,8 @@ The building is located right near the main road from the airport to the city ce
   {
     id: 52,
     name: "Express by M Village Dong Du",
-    main_image_url: "https://img.mvillage.vn/0VWYh-x4YEYsmUvwDNGMQmfPbFjhCmHwRX8Z9E2vHAg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDong_du_facade_c014f5d7e0.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/0VWYh-x4YEYsmUvwDNGMQmfPbFjhCmHwRX8Z9E2vHAg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDong_du_facade_c014f5d7e0.jpg",
     images: [
       "https://img.mvillage.vn/vb1shNIgEtaM_WtSISXqORl-oi8G6dkP6DCTjYMwhSc/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1465861160_1a478548ce.jpg",
       "https://img.mvillage.vn/U9Po1nQGG7wWKc7KaiLQyxZgkeUrMSixRutwdxQgMtk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2657151617_54f684c96f.jpg",
@@ -2561,7 +2585,8 @@ A place that allows you to enjoy a modern life in the heart of the bustling city
   {
     id: 53,
     name: "M Village Living Dien Bien Phu (The Tropic)",
-    main_image_url: "https://img.mvillage.vn/gKEj5DiCW1xvsULFxbOQ2rnYSRtD6OCDS4gjwinvJBI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FCopy_of_M_village_2_2143_7edfa51a65.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/gKEj5DiCW1xvsULFxbOQ2rnYSRtD6OCDS4gjwinvJBI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FCopy_of_M_village_2_2143_7edfa51a65.JPG",
     images: [
       "https://img.mvillage.vn/gG6DM7lC0AVMYGFbPbXtHiY3kFLM6KD4v736jP94uYs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1435355889_f359edcfd3.jpg",
       "https://img.mvillage.vn/N_8Tyotdl0-3cDzVm7SlNWqVWPuk-lDYAH9xjiJcT_0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1161715369_9235a37fe1.jpg",
@@ -2572,7 +2597,7 @@ A place that allows you to enjoy a modern life in the heart of the bustling city
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "From 1,050,000 VND/night",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Dien Bien Phu (The Tropic)
 A villa with an orange tone outside the building is hidden in an alley. The green garden space with a small lake would make it a perfect place for residents to enjoy community activities together.
 
@@ -2648,7 +2673,8 @@ A villa with an orange tone outside the building is hidden in an alley. The gree
   {
     id: 54,
     name: "M Village Living Ly Chinh Thang",
-    main_image_url: "https://img.mvillage.vn/-Qlo4gaW-AIT6hPIrniSZ91OV1eJkWU2ne00_XCgrsg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_01504_97daff6817.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/-Qlo4gaW-AIT6hPIrniSZ91OV1eJkWU2ne00_XCgrsg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_01504_97daff6817.jpg",
     images: [
       "https://img.mvillage.vn/2XMA7zmCH2s-lNRtZ-yhuLF3gJ5bxRe8dEB6pD7Q7Ek/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2208676505_3581f71693.jpg",
       "https://img.mvillage.vn/zpLT8cIA4oDNRz3hA36CNK3BYgM0R1XjiaG_y1UyuPY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_399961013_afa5bd47f2.jpg",
@@ -2657,7 +2683,7 @@ A villa with an orange tone outside the building is hidden in an alley. The gree
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Ly Chinh Thang
 You will experience a comfortable and airy space in the Deluxe room of M Village. The room is fully furnished with a desk by the window and a sofa.
 
@@ -2723,7 +2749,8 @@ You will experience a comfortable and airy space in the Deluxe room of M Village
   {
     id: 55,
     name: "M Village Living Cuu Long",
-    main_image_url: "https://img.mvillage.vn/-c5jD0h0-Phte11Kbn_P6MxA9y3IXDiIpOZhPhh3iOM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FC_Lfacade2_9c6a961640.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/-c5jD0h0-Phte11Kbn_P6MxA9y3IXDiIpOZhPhh3iOM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FC_Lfacade2_9c6a961640.jpg",
     images: [
       "https://img.mvillage.vn/LIb9xQnqhDrZRC-1oj6flmdZNZ3AOIFDQgRdNrzNPII/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3027283670_b300a230c4.jpg",
       "https://img.mvillage.vn/VUH5T0xpLNHukW_kLE5JFROBfHj6olDSSyCiT8RadHE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1130175282_4c2030a523.jpg",
@@ -2807,7 +2834,8 @@ Located in a small alley, this place is extremely quiet so it is suitable for yo
   {
     id: 56,
     name: "M Village Living Ho Bieu Chanh",
-    main_image_url: "https://img.mvillage.vn/1A3NYFKOiDcmPgXVKdyUPvJwUxAMxpYvt_zsn1eQlrM/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3427244850_414d0dc267.jpg?w=1080&q=80",
+    main_image_url:
+      "https://img.mvillage.vn/1A3NYFKOiDcmPgXVKdyUPvJwUxAMxpYvt_zsn1eQlrM/rs:fit:1000:1000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3427244850_414d0dc267.jpg?w=1080&q=80",
     images: [
       "https://img.mvillage.vn/eg_ukysVNb9yUyTOOENpfYqUqk3Otc7I3qdwbn0AAX0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1030808639_36a0be1d27.jpg",
       "https://img.mvillage.vn/OCgVx9TqbNwXa65L8voXV6LAqFePtlNwFLlpW9EIzkU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_115176105_5ac098eaaf.jpg",
@@ -2887,7 +2915,8 @@ Inside the villa in the alley is a very distinct architecture with flamingo pink
   {
     id: 57,
     name: "M Village Hotel Hai Ba Trung",
-    main_image_url: "https://img.mvillage.vn/1TSY8C_6OJ-NwaqkHa-7m9GFKwi5Ks6COS2N11LlRFU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_HBT_retouch2_46_b31eabb4e1.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/1TSY8C_6OJ-NwaqkHa-7m9GFKwi5Ks6COS2N11LlRFU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_HBT_retouch2_46_b31eabb4e1.jpg",
     images: [
       "https://img.mvillage.vn/0QOlA7LTEDjfoNpvdRpqYOlsyhxCIvMpKdbNO1qWWms/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2008356745_9d2f9a56cb.jpg",
       "https://img.mvillage.vn/lXt5jyeF29w0_a65Re1-T52rg3Wse39eDa6Cx8ML-u8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2401680738_cb44890ac9.jpg",
@@ -2898,7 +2927,7 @@ Inside the villa in the alley is a very distinct architecture with flamingo pink
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Hai Ba Trung
 Located in the heart of District 1, M Village Hotel Hai Ba Trung offers modern accommodation with convenient access to major attractions and business districts. The hotel features contemporary design and comfortable amenities for both business and leisure travelers.
 
@@ -2968,7 +2997,8 @@ Located in the heart of District 1, M Village Hotel Hai Ba Trung offers modern a
   {
     id: 58,
     name: "M Village Hotel Nguyen Du",
-    main_image_url: "https://img.mvillage.vn/HBO8gepycxoHqhffBwddKm_dxPOLzYeSEpWkHnCUysA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRoom_4311_Opt1_3b82c1425c.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/HBO8gepycxoHqhffBwddKm_dxPOLzYeSEpWkHnCUysA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRoom_4311_Opt1_3b82c1425c.jpg",
     images: [
       "https://img.mvillage.vn/vmOElTHT0fI5KFAD99ovcYdcwUYGwePb3cXL6_bJ-80/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FGym_3211_Opt1_9c470fbb5f.jpg",
       "https://img.mvillage.vn/kwzj1Vxug63cnfQOtl1DHvFXzO20cT78jjPJOLdri9A/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLobby_0464_Opt2_b0fe02c4d9.jpg",
@@ -2979,7 +3009,7 @@ Located in the heart of District 1, M Village Hotel Hai Ba Trung offers modern a
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Nguyen Du
 Located in the heart of District 1, M Village Hotel Nguyen Du offers modern accommodation with convenient access to major attractions and business districts. The hotel features contemporary design, fitness facilities, and comfortable amenities for both business and leisure travelers.
 
@@ -3054,14 +3084,16 @@ Located in the heart of District 1, M Village Hotel Nguyen Du offers modern acco
   {
     id: 59,
     name: "Express by M Village Global City",
-    main_image_url: "https://img.mvillage.vn/Uf-XqeML4zX8uxd9ssz-Jyw24w769LZzsCpsDQWzlz4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FCWS_0072_b0356d6fe4.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/Uf-XqeML4zX8uxd9ssz-Jyw24w769LZzsCpsDQWzlz4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FCWS_0072_b0356d6fe4.jpg",
     images: [
       "https://img.mvillage.vn/D0fXS9zHzCQA5GG_fWw0_I-3Uq5ButHD2kCflIH1KUI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FSTUDIO_W_BALCONY_7483_1696cf107e.jpg",
       "https://img.mvillage.vn/ERfWbqrQjpMXqk82uymdZK9UuE2VMNicy7pIywjHiIk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLAUNDRY_0067_936fbe0835.jpg",
       "https://img.mvillage.vn/8VT1XXmh4LRzvlik84UQwO9hSKOoKKDjUTmJBo7JqDk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLOBBY_0097_ecbc037ac4.jpg",
       "https://img.mvillage.vn/VFraQssxQjhcO5qyrtXkaJIhlEj1q7dCmA0rwqn7438/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FKITCHEN_3280_4cda59d8d6.jpg",
     ],
-    address: "WiYO Complex (4th Floor), N3C street – The Global City, Do Xuan Hop Street, An Phu Ward, Thu Duc City, Ho Chi Minh City",
+    address:
+      "WiYO Complex (4th Floor), N3C street – The Global City, Do Xuan Hop Street, An Phu Ward, Thu Duc City, Ho Chi Minh City",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
@@ -3134,18 +3166,20 @@ A complex living space designed for young residents right in The Global City –
   {
     id: 60,
     name: "M Village Hotel Long Bien",
-    main_image_url: "https://img.mvillage.vn/W7RWVe0kpaiM90hiuODTGG0mytiAUXpsyqA9fQ8is5w/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LB_2_0061_df51316cfb.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/W7RWVe0kpaiM90hiuODTGG0mytiAUXpsyqA9fQ8is5w/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LB_2_0061_df51316cfb.jpg",
     images: [
       "https://img.mvillage.vn/lA8IFVUK0H6DVmjbUjOntoDd-YNXwSVNGIjpSP9nNMU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LB_2_0814_efb00bf197.jpg",
       "https://img.mvillage.vn/1bmA6LFdSflqxYFmm5Io4ZarfUpscKA7dJvc36tEI9E/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_LB_2_0012_2_455bd181a1.jpg",
       "https://img.mvillage.vn/KCIz0uPPgMsm6w0XKiHHmDPQCkX6IYq44CHVOKPS1I8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F087fda3b84bf38e161ae_4164a4cf7f.jpg",
       "https://img.mvillage.vn/8EDotfrjXgTZ64w26Q5QccpcV7CROFGEafupZmWd0KU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F1_166345d9fe.jpg",
     ],
-    address: "17-21 Nguyen Van Cu Street, Ngoc Lam Ward, Long Bien District, Hanoi City",
+    address:
+      "17-21 Nguyen Van Cu Street, Ngoc Lam Ward, Long Bien District, Hanoi City",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "From 1,050,000 VND/night",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Long Bien
 A peaceful retreat in Long Bien, where you can enjoy a lush green garden, unleash your creativity in a fully equipped shared kitchen, and work productively in an inspiring co-working space. This modern accommodation is perfect for short getaways, conveniently located just 3km from the city center, offering the perfect balance between relaxation and productivity.
 
@@ -3228,7 +3262,8 @@ A peaceful retreat in Long Bien, where you can enjoy a lush green garden, unleas
   {
     id: 61,
     name: "M Village Hotel Kim Ma",
-    main_image_url: "https://img.mvillage.vn/j4l4OdT7Z5znzKj9P4k75auQcTz7u1o4jvU2NveQ7kU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRes_0430_197cc90859.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/j4l4OdT7Z5znzKj9P4k75auQcTz7u1o4jvU2NveQ7kU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRes_0430_197cc90859.jpg",
     images: [
       "https://img.mvillage.vn/9l10daX5znVhWDO7pY2zjpH65GxVH_N3Vkhd289FwMM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLobby_0993_aa2ceddc7d.jpg",
       "https://img.mvillage.vn/u0DYgteXhR5PMwOsbhq79fOF1ulUkoXyrzaeBxOJ7Ao/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRooftop_0107_1_a89d05e0d4.jpg",
@@ -3239,7 +3274,7 @@ A peaceful retreat in Long Bien, where you can enjoy a lush green garden, unleas
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Kim Ma
 Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers modern accommodation with convenient access to major government buildings, embassies, and cultural attractions. The hotel features contemporary design, rooftop facilities, and comfortable amenities for both business and leisure travelers.
 
@@ -3315,7 +3350,8 @@ Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers moder
   {
     id: 62,
     name: "M Village Hotel Da Nang Centre",
-    main_image_url: "https://img.mvillage.vn/aG21yKf5N19qqKaXkr_MCHeQ3d26JODEdPf-5onCK8A/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FBOOKING_COM_THUMBNAIL_1_b4f24359a9.png",
+    main_image_url:
+      "https://img.mvillage.vn/aG21yKf5N19qqKaXkr_MCHeQ3d26JODEdPf-5onCK8A/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FBOOKING_COM_THUMBNAIL_1_b4f24359a9.png",
     images: [
       "https://img.mvillage.vn/hjM2RffFAeIsh8L1N9dBVIxGdc-7pfBYzU_im-0o32M/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F04_3bfc21c179.jpg",
       "https://img.mvillage.vn/vIB9Ff5QV4r1qd4NLugWVa8DIcaFkuoRfD1wf6q8UNE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F03_119e3de044.jpg",
@@ -3326,7 +3362,7 @@ Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers moder
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Da Nang Centre
 Located in the heart of Da Nang City Centre, M Village Hotel Da Nang Centre offers modern accommodation with convenient access to major attractions, beaches, and business districts. The hotel features contemporary design, comfortable amenities, and excellent service for both business and leisure travelers.
 
@@ -3400,18 +3436,20 @@ Located in the heart of Da Nang City Centre, M Village Hotel Da Nang Centre offe
   {
     id: 63,
     name: "M Village Hotel Tho Nhuom",
-    main_image_url: "https://img.mvillage.vn/ZBR6jg83z86qnN5Pg8D9KHibDUMbSSKV6dlamlMumDs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_5233_e11da3c4bc.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/ZBR6jg83z86qnN5Pg8D9KHibDUMbSSKV6dlamlMumDs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_5233_e11da3c4bc.jpg",
     images: [
       "https://img.mvillage.vn/FkkNAf7zYMranfMMLjmYCGJx_ndS58fCa3B13aN0Vz4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_TN_0614_7935368c07.jpg",
       "https://img.mvillage.vn/xMHxnHWBmaDoi8YMZOFEo_duox5WyffUMVw5pDIzCno/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_54_TN_781180fe42.png",
       "https://img.mvillage.vn/oxTO1RzsDP2qs2H9-XOpaGEmKJ7qfZ-187YUmtCy8Zs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F5_4414a8d052.jpg",
       "https://img.mvillage.vn/7VU0fo36qYilNg9Z_TwabB_x1o1ieAwsbg_LuWRmkbY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMV_0310_eaa17ff542.jpg",
     ],
-    address: "54 Tho Nhuom Street, Tran Hung Dao Ward, Hoan Kiem District, Hanoi",
+    address:
+      "54 Tho Nhuom Street, Tran Hung Dao Ward, Hoan Kiem District, Hanoi",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Tho Nhuom
 M Village Hotel Tho Nhuom - The first Lifestyle hotel in Hanoi, featuring youthful design and the modern essence of the Pho Co. Located between Quan Su and Tho Nhuom streets, it offers a spacious, comfortable, and ideal setting for a getaway in the heart of Hanoi.
 
@@ -3491,14 +3529,16 @@ M Village Hotel Tho Nhuom - The first Lifestyle hotel in Hanoi, featuring youthf
   {
     id: 64,
     name: "Express by M Village Nguyen The Loc",
-    main_image_url: "https://img.mvillage.vn/6ATZ6hOS8j16XinkaP4ZGuF1miO65hbgUXgdEZXlbok/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FThumbnail_72422b183b.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/6ATZ6hOS8j16XinkaP4ZGuF1miO65hbgUXgdEZXlbok/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FThumbnail_72422b183b.JPG",
     images: [
       "https://img.mvillage.vn/rR7Fl0QKEvQLpIbaXCAqBMfgEW3la9Y_h7Lubq7NfgU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLobby_raw_2_83faf2f0ba.JPG",
       "https://img.mvillage.vn/By2f0QdKv3hiX44BwxMuuox0eL3Pq792plb61KazDPo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FCo_working_raw_e1cb8de88a.JPG",
       "https://img.mvillage.vn/5kYE4KP8-x-hXIQNsOqjGtDnce_TqY9bWVLw6LZkd1s/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLaundry_Raw_ee85e7b417.JPG",
       "https://img.mvillage.vn/VYGZtRwhd03LePYszVB4ZttEFJv6E8WCz9FabNmpkbM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fkitchen_raw_347cdbdadc.JPG",
     ],
-    address: "10 - 12 Nguyen The Loc, Bay Hien Ward, Ho Chi Minh City, Viet Nam",
+    address:
+      "10 - 12 Nguyen The Loc, Bay Hien Ward, Ho Chi Minh City, Viet Nam",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
@@ -3573,17 +3613,19 @@ Just minutes from Tan Son Nhat Airport's Terminal 3, Express by M Village Nguyen
   {
     id: 65,
     name: "M Village Living Nguyen Van Huong",
-    main_image_url: "https://img.mvillage.vn/qqcOJruYEh8eaj1sbINacwOGx7L3nU92wprSHGvME6E/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_01773_4593e0aa10.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/qqcOJruYEh8eaj1sbINacwOGx7L3nU92wprSHGvME6E/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_01773_4593e0aa10.jpg",
     images: [
       "https://img.mvillage.vn/E-FpNDiqoF6RXf9rPr-u2N22aNcNej96VhaWXOAnA1o/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1994138577_a37a418f24.jpg",
       "https://img.mvillage.vn/jVxaCKaOEfXgNRUWGDsyF7yPSK9lV4DVx2r_3l-xZQo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_36863899_dd296b0cf5.jpg",
       "https://img.mvillage.vn/mSUnJdSzx182vECZgVZUtynfP_6pVQtx_GOAVDJir1g/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1579701842_cac2b1f872.jpg",
     ],
-    address: "120/10-12-14 Nguyen Van Huong, The 5th Street, Thao Dien Ward, Thu Duc City, HCMC",
+    address:
+      "120/10-12-14 Nguyen Van Huong, The 5th Street, Thao Dien Ward, Thu Duc City, HCMC",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Nguyen Van Huong
 Location next to the Saigon River enables you to go for a walk after tiring working hours. In addition, you can immerse yourself in the extremely attractive culinary neighborhoods or relax in a cozy, comfortable room after a long day of experiences.
 
@@ -3659,7 +3701,8 @@ Location next to the Saigon River enables you to go for a walk after tiring work
   {
     id: 66,
     name: "M Village Living 47 Thao Dien",
-    main_image_url: "https://img.mvillage.vn/p5MjCyp6-gSFgol7mmYzNFmZLYsUhSbE8t1wTehU6v0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F5_152fcfb286.jpeg",
+    main_image_url:
+      "https://img.mvillage.vn/p5MjCyp6-gSFgol7mmYzNFmZLYsUhSbE8t1wTehU6v0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F5_152fcfb286.jpeg",
     images: [
       "https://img.mvillage.vn/-JO3kxb5EQaBEapy6Im7SBrV9JJOkM38FttfOsM_eV4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1776644487_62c51e4099.jpg",
       "https://img.mvillage.vn/079IHWaPnvi3g7-QWa-_gNt9qzg4-_CVy3JvsIoZFuE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_316901807_7c571b4625.jpg",
@@ -3668,7 +3711,7 @@ Location next to the Saigon River enables you to go for a walk after tiring work
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living 47 Thao Dien
 Located in a quiet street with a spacious old villa campus. The rooms are designed in the minimalist style typical of M Village. Each room has its own kitchen and comfort amenities giving you an inspiring and relaxing living space.
 
@@ -3742,7 +3785,8 @@ Located in a quiet street with a spacious old villa campus. The rooms are design
   {
     id: 67,
     name: "M Village Hotel Ton That Dam",
-    main_image_url: "https://img.mvillage.vn/Kn_LMU_P5cSZy9ExX3q2_1SnVqSLmrqsXtdEBYl-3t8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_TTD_2_1593_a0aafb9831.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/Kn_LMU_P5cSZy9ExX3q2_1SnVqSLmrqsXtdEBYl-3t8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_TTD_2_1593_a0aafb9831.JPG",
     images: [
       "https://img.mvillage.vn/3EtdYTuOPSRZFfwOLzXiWylZZz601VnxbXeLCOu7L9w/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3810214969_1d0fe09bce.jpg",
       "https://img.mvillage.vn/uOYS9P_vki51Eeq1v92SODWF-_qt3oKiB8IWUqfV-0s/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_105357889_306b9ac7ce.jpg",
@@ -3753,7 +3797,7 @@ Located in a quiet street with a spacious old villa campus. The rooms are design
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Ton That Dam
 Located in the heart of District 1, M Village Hotel Ton That Dam offers modern accommodation with convenient access to major attractions, business districts, and cultural sites. The hotel features contemporary design, comfortable amenities, and excellent service for both business and leisure travelers.
 
@@ -3827,18 +3871,20 @@ Located in the heart of District 1, M Village Hotel Ton That Dam offers modern a
   {
     id: 68,
     name: "M Village Hotel Ho Guom",
-    main_image_url: "https://img.mvillage.vn/HwmHcH34izOTwSVWFVwhjEa4axbYq7Y8xfIhPwaYEYk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F1_e899cfbcd1.png",
+    main_image_url:
+      "https://img.mvillage.vn/HwmHcH34izOTwSVWFVwhjEa4axbYq7Y8xfIhPwaYEYk/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F1_e899cfbcd1.png",
     images: [
       "https://img.mvillage.vn/ism6nbTCuxMsQslZ6BVC7rcNWF45SABGlZWszeZjBvM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_383569287_4298f9ea49.jpg",
       "https://img.mvillage.vn/OBOKCGV2OmBM4hsvpPvLqF4jTsOe9dTr_N5lqGwEtH4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1504064092_36b58a4112.jpg",
       "https://img.mvillage.vn/rvvyH8xDzLW9xa6FuGwWHokeexP9UAQ7o9hC6ws9tHQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_696437721_baf63e487b.jpg",
       "https://img.mvillage.vn/PhFP_bgE0PcAUnQTe6TlUqYUDenwByvMvPaTDd31abA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1810898815_23973bbf54.jpg",
     ],
-    address: "No. 38 Hai Ba Trung Street, Trang Tien Ward, Hoan Kiem District, Hanoi, Vietnam",
+    address:
+      "No. 38 Hai Ba Trung Street, Trang Tien Ward, Hoan Kiem District, Hanoi, Vietnam",
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Ho Guom
 A contemporary European & Hanoi-inspired hotel located on Hai Ba Trung Street, easily access to the Old Quarter & other city-centre areas within 5 mins. It is suitable for business trips, leisure, or staycation, offering many spaces such as a co-working space, a shared kitchen, a 24/7 laundry room, and a convenience store.
 
@@ -3916,7 +3962,8 @@ A contemporary European & Hanoi-inspired hotel located on Hai Ba Trung Street, e
   {
     id: 69,
     name: "M Village Hotel Kim Ma",
-    main_image_url: "https://img.mvillage.vn/j4l4OdT7Z5znzKj9P4k75auQcTz7u1o4jvU2NveQ7kU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRes_0430_197cc90859.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/j4l4OdT7Z5znzKj9P4k75auQcTz7u1o4jvU2NveQ7kU/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRes_0430_197cc90859.jpg",
     images: [
       "https://img.mvillage.vn/9l10daX5znVhWDO7pY2zjpH65GxVH_N3Vkhd289FwMM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLobby_0993_aa2ceddc7d.jpg",
       "https://img.mvillage.vn/u0DYgteXhR5PMwOsbhq79fOF1ulUkoXyrzaeBxOJ7Ao/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FRooftop_0107_1_a89d05e0d4.jpg",
@@ -3927,7 +3974,7 @@ A contemporary European & Hanoi-inspired hotel located on Hai Ba Trung Street, e
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Hotel Kim Ma
 Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers modern accommodation with convenient access to government buildings, embassies, and cultural sites. The hotel features contemporary design, comfortable amenities, and excellent service for both business and leisure travelers.
 
@@ -4003,7 +4050,8 @@ Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers moder
   {
     id: 70,
     name: "M Village Living Tu Xuong",
-    main_image_url: "https://img.mvillage.vn/URytqn9wBVPySzgWTkV9IbS68BfdZFExRkjEDyliZFo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_TX_29251_b2941f3086.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/URytqn9wBVPySzgWTkV9IbS68BfdZFExRkjEDyliZFo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM_Village_TX_29251_b2941f3086.jpg",
     images: [
       "https://img.mvillage.vn/xPKgovADhTF0rfzMhyhV8FQmhfONVQUuQ38cAzy7SVQ/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2248637305_5c974a7626.jpg",
       "https://img.mvillage.vn/x6y2BBTatdU24bw3Qg65ug82Xfz0PL9QMg5hYDgZBD8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_968397588_6015a40a2c.jpg",
@@ -4012,7 +4060,7 @@ Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers moder
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Tu Xuong
 This is a poetic inspiration in the bustling streets thanks to its minimalist design and main pastel colors. The apartment is located in District 3, allowing you to freely explore Saigon or simply drink a cup of coffee at Every Half cafe next door.
 
@@ -4085,7 +4133,8 @@ This is a poetic inspiration in the bustling streets thanks to its minimalist de
   {
     id: 71,
     name: "M Village Living Tran Quoc Thao",
-    main_image_url: "https://img.mvillage.vn/hcQ4hfrC37_zwymj3v_vzWAxbpT9hJoSP3KkagMsKm8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_2_0262_045c2ddbbf.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/hcQ4hfrC37_zwymj3v_vzWAxbpT9hJoSP3KkagMsKm8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FMvillage_2_0262_045c2ddbbf.jpg",
     images: [
       "https://img.mvillage.vn/MYaTOJUukLOVNzmBtnQ98-I5pWR1M-f9zPLyN94hclY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1087716409_3d63f0bf7b.jpg",
       "https://img.mvillage.vn/qvbuoQiUX2aIDm7NhfNga-mXHAAWs2DAQRlKloOGpGo/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1721872963_88aa9c763a.jpg",
@@ -4163,7 +4212,8 @@ The apartment is located in a peaceful alley with peaceful beauty, with rows of 
   {
     id: 72,
     name: "M Village Living Tran Nao",
-    main_image_url: "https://img.mvillage.vn/7cpPeIrL3pv6pOUA3oFxFD3Omh5yJ22Yrsunkj-h05U/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM1_5505_f43b8ed09d.JPG",
+    main_image_url:
+      "https://img.mvillage.vn/7cpPeIrL3pv6pOUA3oFxFD3Omh5yJ22Yrsunkj-h05U/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FM1_5505_f43b8ed09d.JPG",
     images: [
       "https://img.mvillage.vn/piiDr_9P6REH_y3DGeKztkL7YSTjC1iDoPsBGbB6TV4/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1366510600_654f3b1cb4.jpg",
       "https://img.mvillage.vn/qkwW2hv9embTpfNr5c_tay_jxK_gsuGpKKTEkHKn0Rg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3299559679_e4050601a5.jpg",
@@ -4173,7 +4223,7 @@ The apartment is located in a peaceful alley with peaceful beauty, with rows of 
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Tran Nao
 A perfect place in a compound area with adjacent villas, and rows of green Japanese eagle trees. You can enjoy peaceful moments by the Saigon River overlooking the Landmark.
 
@@ -4240,7 +4290,8 @@ A perfect place in a compound area with adjacent villas, and rows of green Japan
   {
     id: 73,
     name: "M Village Living 59 Thao Dien",
-    main_image_url: "https://img.mvillage.vn/FrDuE0lz9flQkT8qrabXEbK6oePW2CUfwpvD9f1HzEM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_Thao_Dien_R2_13_accdcd7add.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/FrDuE0lz9flQkT8qrabXEbK6oePW2CUfwpvD9f1HzEM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_Thao_Dien_R2_13_accdcd7add.jpg",
     images: [
       "https://img.mvillage.vn/-23oZkQ4jA8zkR-rR-xUhabU17kLaa2aRZ_itVrjAWI/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_4070525970_f3982dcafd.jpg",
       "https://img.mvillage.vn/iEpG9Jt8LhXNh0Zl4E9H-mRrUSbLSQj7L7Iqn3dgiTA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_4078574283_36b3736696.jpg",
@@ -4326,7 +4377,8 @@ Nestled in a tranquil Thao Dien alley, our spot in District 2 offers quick 20-mi
   {
     id: 74,
     name: "M Village Living Cach Mang Thang 8",
-    main_image_url: "https://img.mvillage.vn/rru7U24nkoc-XTvV-Voxkv-iqcYt1gr4ssYiU9Z7J7I/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_08427_31085e8f9a.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/rru7U24nkoc-XTvV-Voxkv-iqcYt1gr4ssYiU9Z7J7I/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FDSC_08427_31085e8f9a.jpg",
     images: [
       "https://img.mvillage.vn/8kPXW1XiySXmkVHcp0xqHphmWgBlioY68OeDiYcZHIY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_893772224_13298202bf.jpg",
       "https://img.mvillage.vn/CWReqV8w9xo5d59trIaqnn34p6SCdIlc-7IxbYNGyoY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2389070449_fcb1080bb9.jpg",
@@ -4335,7 +4387,7 @@ Nestled in a tranquil Thao Dien alley, our spot in District 2 offers quick 20-mi
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About M Village Living Cach Mang Thang 8
 A miniature Da Lat stands out on the main road in District 3 of the city. The exquisite space is created by a unique combination of classic architecture through domed windows, romantic balconies, and a modern, youthful style.
 
@@ -4412,7 +4464,8 @@ A miniature Da Lat stands out on the main road in District 3 of the city. The ex
   {
     id: 75,
     name: "M Village Living Cao Thang",
-    main_image_url: "https://img.mvillage.vn/0jLQOyFq_kncpws-oi3GTbnYt7WXMjvQOjK09xOCytY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F10_MB_M_Village_CT_1589_b5e7b90892.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/0jLQOyFq_kncpws-oi3GTbnYt7WXMjvQOjK09xOCytY/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F10_MB_M_Village_CT_1589_b5e7b90892.jpg",
     images: [
       "https://img.mvillage.vn/A3VcArP-tGahKHqzT5AWkV2AdWA6d6nHivJNSS7nuDg/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_273384189_8c3ad2a25d.jpg",
       "https://img.mvillage.vn/DaXxtmXEtfTayE7O7PqCe_WMridPfmDyl7oiq1_LQU0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_537704550_afbef09ee3.jpg",
@@ -4484,7 +4537,8 @@ In the idyllic setting of a Saigon alley, the building stands out with Western-s
   {
     id: 76,
     name: "Express by M Village Dinh Cong Trang",
-    main_image_url: "https://img.mvillage.vn/u9DriXfHZ_A8w8Gvf2CC5JuiKTVIwI5DNvrBQi75iSM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Ffacade_DCT_961da6ecf0.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/u9DriXfHZ_A8w8Gvf2CC5JuiKTVIwI5DNvrBQi75iSM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Ffacade_DCT_961da6ecf0.jpg",
     images: [
       "https://img.mvillage.vn/I9o52yZwjl49sy25GM7qh5_UiG-eVesCyjAJZe09uIs/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1637929765_045e50493d.jpg",
       "https://img.mvillage.vn/ZVMzruUNHYQO6UDwYsi6ehY4s8vaUfhcrhZ04R3up2E/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_4284061287_fe99aa40f7.jpg",
@@ -4493,7 +4547,7 @@ In the idyllic setting of a Saigon alley, the building stands out with Western-s
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Express by M Village Dinh Cong Trang
 Located in a prime location in the center of District 1, it takes you only a few minutes to go to Tan Dinh market or to Turtle Lake. The building will impress you with the contrast between its youthful appearance and the elegant interior design of the rooms.
 
@@ -4570,7 +4624,8 @@ Located in a prime location in the center of District 1, it takes you only a few
   {
     id: 77,
     name: "Express by M Village Thach Thi Thanh",
-    main_image_url: "https://img.mvillage.vn/gVYIZ_IXuul_9D4lfU90DRciV2ga6e9HaJsbILJD6dc/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_TTT_R3_27_cd9d1c17c7.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/gVYIZ_IXuul_9D4lfU90DRciV2ga6e9HaJsbILJD6dc/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2FLesonphoto_com_M_Village_TTT_R3_27_cd9d1c17c7.jpg",
     images: [
       "https://img.mvillage.vn/nNBQhrpgK37fwrEGQbf97dIn06LjcNlmtehwf6AiSmA/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2612463159_af423e54c9.jpg",
       "https://img.mvillage.vn/EZqgDsPanDomvb6h9PwcYTEJBzZ1XTtIM9AeMNDExM8/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2112597386_ecb2394130.jpg",
@@ -4579,7 +4634,7 @@ Located in a prime location in the center of District 1, it takes you only a few
     country: "Vietnam",
     phone: "1900 3311",
     category: "Hotel",
-    price: "Contact for pricing",
+    price: "From 800,000 VND/night",
     description: `## About Express by M Village Thach Thi Thanh
 The location of the building is convenient for traveling between central districts. A youthful green space right in the middle of the bustling city. The design with many windows and comfortable furniture creates an ideal living space.
 
@@ -4658,7 +4713,8 @@ The location of the building is convenient for traveling between central distric
   {
     id: 78,
     name: "Express by M Village Vo Van Kiet",
-    main_image_url: "https://img.mvillage.vn/WPjbHrRNawiXZiFmU_gibA-znOOm1yPvChunSblmUfM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F240926_M_Village_Vo_Van_Kiet_Stock_573_ccedaa1f6c.jpg",
+    main_image_url:
+      "https://img.mvillage.vn/WPjbHrRNawiXZiFmU_gibA-znOOm1yPvChunSblmUfM/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2F240926_M_Village_Vo_Van_Kiet_Stock_573_ccedaa1f6c.jpg",
     images: [
       "https://img.mvillage.vn/FBHO5kFHzE-BgdR9pt0QOw1Ck-F9LNEfkT9B67s1fL0/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1273149574_3c3a512c1c.jpg",
       "https://img.mvillage.vn/mLu0l_mazzEg9n9zPbFV1RWmSEbpSkq9C9SKl9QZxzE/rs:fit:2000:2000/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_3085853389_d799c26e64.jpg",
