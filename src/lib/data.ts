@@ -13,7 +13,7 @@ export const ktvData = [
     country: "Singapore",
     phone: "+65 87501825",
     category: "KTV",
-    price: "$248",
+    price: "800-900k",
     description: `## About Iconic KTV
 Iconic is **newly opened** with over 30 girls. The premises are at the New K2 location, however, it is a huge change from yesteryears and girls are hot, playable and lots to choose from!
 
