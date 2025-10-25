@@ -197,7 +197,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                       <div className="flex flex-col">
                         <span className="font-medium">Telegram</span>
                         <span className="text-xs text-muted-foreground">
-                          @supremektv
+                          @asianightlifesg
                         </span>
                       </div>
                     </a>

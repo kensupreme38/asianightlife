@@ -95,7 +95,7 @@ export const Footer = () => {
                 />
                 <div>
                   <p className="font-semibold">Telegram</p>
-                  <p className="text-sm text-muted-foreground">@supremektv</p>
+                  <p className="text-sm text-muted-foreground">@asianightlifesg</p>
                 </div>
               </Link>
             </div>
