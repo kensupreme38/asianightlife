@@ -81,7 +81,7 @@ export const Footer = () => {
 
               {/* Telegram */}
               <Link
-                href="https://t.me/supremektv"
+                href="https://t.me/asianightlifesg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group"

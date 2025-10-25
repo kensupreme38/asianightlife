@@ -35,7 +35,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
   const handleTelegramBooking = () => {
     const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
     window.open(
-      `https://t.me/supremektv?text=${encodeURIComponent(message)}`,
+      `https://t.me/asianightlifesg?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };

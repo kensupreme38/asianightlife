@@ -10,14 +10,21 @@ const QuickCallButton = () => {
     setHasMounted(true);
   }, []);
 
-  const phoneNumber = '6582808072'; // WhatsApp number
+  // const phoneNumber = '6582808072'; // WhatsApp number
 
-  const handleWhatsApp = () => {
-    const message = 'Hello! I would like to get more information about your services.';
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+  // const handleWhatsApp = () => {
+  //   const message = 'Hello! I would like to get more information about your services.';
+  //   window.open(
+  //     `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+  //     "_blank"
+  //   );
+  // };
+
+
+  const phoneNumber = '+6582808072'; // số điện thoại
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   if (!hasMounted) {
@@ -29,7 +36,7 @@ const QuickCallButton = () => {
       <Button
         variant="neon"
         size="icon"
-        onClick={handleWhatsApp}
+        onClick={handleCall}
         className='relative h-12 w-12 rounded-full shadow-lg transition-opacity animate-ripple'
         style={{
           animationDuration: '1s',

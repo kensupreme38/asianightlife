@@ -181,7 +181,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
                     {/* Telegram */}
                     <a
-                      href="https://t.me/supremektv"
+                      href="https://t.me/asianightlifesg"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary"

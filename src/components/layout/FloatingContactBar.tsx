@@ -15,7 +15,7 @@ const contactLinks = [
   {
     name: 'Telegram',
     icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon3_imec.png?v=156" alt="Telegram" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://t.me/supremektv',
+    href: 'https://t.me/asianightlifesg',
     isImage: true,
   },
   {
