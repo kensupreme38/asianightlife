@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, MessageCircle, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { BookingForm } from "@/components/venue/BookingForm";
+import { useState } from "react";
 
 interface VenueInfoProps {
   venue: {
@@ -22,14 +24,11 @@ interface VenueInfoProps {
 }
 
 export const VenueInfo = ({ venue }: VenueInfoProps) => {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const isOpen = venue.status === "open";
 
   const handleWhatsAppBooking = () => {
-    const message = `Hello! I would like to book a spot at ${venue.name} - ${venue.address}. Please let me know about prices and availability.`;
-    window.open(
-      `https://wa.me/6582808072?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+    setIsBookingOpen(true);
   };
 
   const handleTelegramBooking = () => {
@@ -89,7 +88,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               disabled={!isOpen}
             >
               <MessageCircle className="h-5 w-5 mr-2" />
-              {isOpen ? "Book via WhatsApp" : "Temporarily Closed"}
+              {isOpen ? "Make A Booking" : "Temporarily Closed"}
             </Button>
 
             {/* Second Row - Telegram */}
@@ -182,6 +181,14 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           </div>
         </div>
       </div>
+
+      {/* Booking Form Dialog */}
+      <BookingForm
+        open={isBookingOpen}
+        onOpenChange={setIsBookingOpen}
+        venueName={venue.name}
+        venueAddress={venue.address}
+      />
     </div>
   );
 };
