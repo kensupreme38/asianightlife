@@ -76,9 +76,8 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
           </div>
         </div>
 
-        {/* Action Buttons - Hidden for Hotels */}
-        {venue.category !== "Hotel" && (
-          <div className="flex flex-col gap-3">
+        {/* Action Buttons */}
+        <div className="flex flex-col gap-3">
             {/* First Row - WhatsApp */}
             <Button
               onClick={handleWhatsAppBooking}
@@ -102,8 +101,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               <Send className="h-5 w-5 mr-2" />
               {isOpen ? "Book via Telegram" : "Temporarily Closed"}
             </Button>
-          </div>
-        )}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
