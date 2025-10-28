@@ -133,7 +133,7 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
               <Clock className="h-4 w-4" />
               Booking Date & Time *
             </Label>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-[2fr,1fr] gap-2">
               {/* Date Picker */}
               <Popover>
                 <PopoverTrigger asChild>
