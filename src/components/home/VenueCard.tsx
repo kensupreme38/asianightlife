@@ -47,7 +47,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           />
 
           {/* Status Badge */}
-          <div className="absolute top-3 left-3">
+          <div className="absolute top-3 left-3 hidden md:block">
             <Badge
               variant={isOpen ? "default" : "destructive"}
               className={`${
