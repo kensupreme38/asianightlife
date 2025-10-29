@@ -103,11 +103,11 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Full Name */}
           <div className="space-y-2">
-            <Label htmlFor="fullName">Full Name *</Label>
+            <Label htmlFor="fullName">Name *</Label>
             <Input
               id="fullName"
               type="text"
-              placeholder="Enter your full name"
+              placeholder="Enter your name"
               value={formData.fullName}
               onChange={(e) => handleChange("fullName", e.target.value)}
               required
@@ -205,7 +205,7 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
           <div className="space-y-2">
             <Label htmlFor="location" className="flex items-center gap-2">
               <CalendarIcon className="h-4 w-4" />
-              Location / Shop Branch
+              Location / Shop Branch / Enquiry
             </Label>
             <Input
               id="location"
