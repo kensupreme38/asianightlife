@@ -30,6 +30,668 @@ Iconic is **newly opened** with over 30 girls. The premises are at the New K2 lo
     hours: "4PM - 3AM",
   },
   {
+    id: 79,
+    name: "Karaoke BOSS KTV - 27 - 29 - 31 Duong 9A",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/17493099_701400900031526_1930770586008704054_o_2222acf1202e4357b011fe1b3d3db5da_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/18622656_727159627455653_6374169223633265990_n_a0e657971a8a42a3958dd368d62a7b72_master.jpg",
+      "https://product.hstatic.net/1000268128/product/17758374_701401906698092_8449378800789512063_o_a3b117c6a49443ae9043aa1255eeee10_master.jpg",
+      "https://product.hstatic.net/1000268128/product/17814200_701402003364749_770188405790733250_o_f31e48d5ae7e458b941f5e94d8457b00_master.jpg",
+      "https://product.hstatic.net/1000268128/product/17814417_701401766698106_2695150908265301232_o_01061d6407874504b0eceb51d4b73167_master.jpg",
+    ],
+    address:
+      "27 29 31 Đường 9A, Xã Bình Hưng, Huyện Bình Chánh, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Karaoke BOSS KTV (9A Street)
+Located in Binh Chanh District of Ho Chi Minh City, Karaoke BOSS KTV is a modern entertainment venue offering stylish rooms and a premium karaoke experience.
+
+## Highlights
+- Contemporary room design with premium ambience
+- Suitable for groups, parties and family gatherings
+- Extra amenities listed: Wifi, car parking, and card payment
+
+## Operating Hours
+- Daily: 12:00 PM – 02:00 AM
+
+## Address
+27 29 31 Duong 9A, Binh Hung Commune, Binh Chanh District, Ho Chi Minh City, Vietnam
+`,
+    hours: "12:00 PM - 02:00 AM (Daily)",
+  },
+  {
+    id: 80,
+    name: "Matrix Karaoke KTV - Trung Son",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787062-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787063-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787063-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787064-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787065-6.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787065-7.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787066-8.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/1-1751787066-9.jpg",
+    ],
+    address:
+      "124 - 130 Đường 9A, KDC Trung Sơn, Bình Hưng, Bình Chánh, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Combos from 3,300,000₫",
+    description: `## About Matrix Karaoke KTV (Trung Son)
+Matrix Karaoke KTV is a stylish karaoke destination in Ho Chi Minh City, featuring modern rooms with diverse concepts, quality lighting and sound, and a curated team of friendly, energetic KTVs.
+
+## Highlights
+- Modern, theme-based private rooms
+- Professional sound and lighting system
+- Friendly, energetic, well-selected KTV team
+- Convenient car parking
+- Privacy-focused service
+
+## Offers
+- Available combo packages starting from 3,300,000₫ and 3,500,000₫
+
+## Address
+124–130 Duong 9A, Trung Son Residential Area, Binh Hung, Binh Chanh, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 81,
+    name: "Monaco Karaoke KTV - Trung Son",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740898-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740899-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740899-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740899-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740900-5.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740900-6.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740901-7.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/2-1751740901-8.jpg",
+    ],
+    address:
+      "130 Đường 9A, KDC Trung Sơn, Bình Chánh, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Combos from 3,000,000₫",
+    description: `## About Monaco Karaoke KTV (Trung Son)
+Monaco Karaoke KTV is a luxurious karaoke destination in Ho Chi Minh City, part of the Dragon Palace entertainment group. It features premium rooms in diverse styles, professional sound and lighting, and a well-selected team of energetic KTVs.
+
+## Highlights
+- Large-scale, modern karaoke system
+- Professional sound and lighting
+- Curated, friendly KTV team
+- Multiple room types with distinct styles
+- Convenient car parking
+
+## Offers
+- Combo packages available from 3,000,000₫ and 3,200,000₫
+
+## Address
+130 Duong 9A, Trung Son Residential Area, Binh Chanh, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 82,
+    name: "Karaoke Atlantis KTV - De Tham, District 1",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/7-1751828995-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/7-1751828995-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/7-1751828995-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/7-1751828995-4.jpg",
+    ],
+    address:
+      "31 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Atlantis KTV (De Tham)
+Modern, centrally located venue in District 1 with private rooms across different styles. Noted for a friendly, multilingual KTV team and upgraded sound and lighting for a stage-like singing experience.
+
+## Highlights
+- Modern rooms with luxury-to-chill concepts
+- Advanced sound and lighting system
+- Multilingual, friendly KTV team (EN/ZH)
+- Central District 1 location with convenient parking
+
+## Address
+31 De Tham, Cau Ong Lanh Ward, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 83,
+    name: "KTV TULIP - 57 Pham Viet Chanh",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2025/09/ktv-tulip-57-pham-viet-chinh.jpg",
+    images: [
+      "https://9club.vn/wp-content/uploads/2025/09/ktv-tulip-2.jpg",
+      "https://9club.vn/wp-content/uploads/2025/09/ktv-tulip-3.jpg",
+      "https://9club.vn/wp-content/uploads/2025/09/ktv-tulip-4.jpg",
+      "https://9club.vn/wp-content/uploads/2025/09/ktv-tulip-5.jpg",
+      "https://9club.vn/wp-content/uploads/2025/09/ktv-tulip-6.jpg",
+    ],
+    address:
+      "57 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About KTV TULIP (Pham Viet Chanh)
+Modern, upscale karaoke venue in District 1 with stylish rooms, premium sound and lighting, and professional service. Suitable for friend gatherings, family events, and private parties.
+
+## Highlights
+- Modern, elegant room design
+- High-quality sound and lighting system
+- Free Wi‑Fi, card payment, car parking
+- Event decoration available
+
+## Hours
+- 6:00 PM – 4:00 AM
+
+## Address
+57 Pham Viet Chanh, Nguyen Cu Trinh Ward, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "6:00 PM - 4:00 AM",
+  },
+  {
+    id: 84,
+    name: "Night Star KTV - 78 Nam Ky Khoi Nghia",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/63-1752308838-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/63-1752308838-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/63-1752308838-3.jpg",
+    ],
+    address:
+      "78 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Night Star KTV (Q1)
+Energetic, modern karaoke venue in central Saigon featuring sound and lighting tuned for a lively, stage‑like experience. Comfortable private rooms and attentive in‑room service make it ideal for friends, couples, and families.
+
+## Highlights
+- Quality sound isolation and wireless microphones
+- LED lighting synchronized to music
+- In‑room ordering service
+- Premium sofas and modern decor
+
+## Address
+78 Nam Ky Khoi Nghia, Nguyen Thai Binh Ward, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 85,
+    name: "Karaoke RED - 155 Nguyen Van Cu",
+    main_image_url:
+      "https://cdn.hstatic.net/products/1000268128/anh_1_5ca5bb43132d47ea89936d4fa17f8616_master.jpg",
+    images: [
+      "https://cdn.hstatic.net/products/1000268128/anh_2_5848688b7f8a45c0960feb7d5676b9a9_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/anh_3_dbb8a01d08264958822a11b2e5d9b04f_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/anh_4_fd0353cc63954b208e60caf30b65218a_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/anh_5_eef5c9f91aa6485da1635ba815a0e7c9_master.jpg",
+    ],
+    address:
+      "155 Nguyễn Văn Cừ, Phường 2, Quận 5, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Karaoke RED (Nguyen Van Cu)
+Modern karaoke venue in District 5 with stylish rooms, upgraded sound and lighting, and convenient central location. Amenities include Wi‑Fi, car parking, card payment, and event decoration on request.
+
+## Hours
+- Daily: 12:00 PM – 04:00 AM
+
+## Address
+155 Nguyen Van Cu, Ward 2, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 86,
+    name: "Karaoke 1127 KTV - 1127 Tran Hung Dao",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/459889280_122178445610217735_9214037569105548509_n_7494bd3a0b4747418a82eeaaa38d419b_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/459608836_122178445598217735_8089144972171862314_n_63e80373f7d443eb82a88cdd737baaf6_master.jpg",
+      "https://product.hstatic.net/1000268128/product/459715078_122178445712217735_2136362138530034602_n_7a5a04bc2925441db1ac6ec1b92a50fd_master.jpg",
+      "https://product.hstatic.net/1000268128/product/459907922_122178445772217735_9222777348061917774_n_64c8bfc5df364166a62027fc9d48b7cd_master.jpg",
+      "https://product.hstatic.net/1000268128/product/459994933_122178445604217735_8999848712967526214_n_7e3c69df216a46c4b71044f9fb370391_master.jpg",
+    ],
+    address:
+      "1127 Trần Hưng Đạo, Phường 5, Quận 5, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About 1127 KTV (Tran Hung Dao)
+Contemporary karaoke venue in District 5 offering stylish private rooms, upgraded sound and lighting, and convenient central access.
+
+## Hours
+- Daily: 12:00 PM – 04:00 AM
+
+## Address
+1127 Tran Hung Dao, Ward 5, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 87,
+    name: "Karaoke Golden Bell - 750 Nguyen Van Qua",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/272117068_304644661722755_7355988347034458832_n_e1d63a372dde46dd9bd506c8628f65c3_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/272124580_304644628389425_8078165761686589645_n_47e5ac8716b14f9db8c00070d38bf2e9_master.jpg",
+      "https://product.hstatic.net/1000268128/product/272193212_304644688389419_6544585345941187504_n_62f7fe49aeea4109bbcbc67b80201097_master.jpg",
+      "https://product.hstatic.net/1000268128/product/272252536_304644051722816_6630190706177167628_n_b6f670e37f09447a8a25683ae47b3285_master.jpg",
+      "https://product.hstatic.net/1000268128/product/270546984_293743212812900_5039721358883470561_n_399e5aae9177473a96715a37a477957b_master.jpg",
+    ],
+    address:
+      "750 Nguyễn Văn Quá, Quận 12, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Golden Bell KTV (Nguyen Van Qua)
+Family‑friendly karaoke venue with modern rooms, lively lighting, and convenient location in District 12. Amenities include Wi‑Fi, parking and card payment.
+
+## Hours
+- Daily: 09:00 AM – 02:00 AM
+
+## Address
+750 Nguyen Van Qua, District 12, Ho Chi Minh City, Vietnam
+
+## Other Branches
+- 525 Le Van Quoi, Binh Tan District, Ho Chi Minh City
+- 322 Le Van Tho, Go Vap District, Ho Chi Minh City`,
+    hours: "09:00 AM - 02:00 AM (Daily)",
+  },
+  {
+    id: 88,
+    name: "C3 Saigon KTV - 82-84 Calmette",
+    main_image_url:
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7097660320017_e07e02e5b08402e6750c569b183cf575-1536x1152.jpg",
+    images: [
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7097660325426_f9879f26bd8c2b97dd5e3ba51ade6477.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7097660330366_97be45f1a25be90fa13d312a21540b2c-1536x1152.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7097660334739_276e86207a5693158899ca9706c62538.jpg",
+    ],
+    address:
+      "82-84 Calmette, Phường Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About C3 Saigon KTV (Calmette)
+Premium luxury KTV in central Saigon featuring modern private rooms, professional service, and clear pricing for room rates and services.
+
+## Address
+82–84 Calmette, Nguyen Thai Binh Ward, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "6:00 PM - 3:00 AM",
+  },
+  {
+    id: 89,
+    name: "Karaoke Safari - 202 Nguyen Trai",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/37-1752146159-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/37-1752146159-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/37-1752146159-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/37-1752146160-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/37-1752146160-5.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/37-1752146160-6.jpg",
+    ],
+    address:
+      "202 Nguyễn Trãi, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Safari KTV (Nguyen Trai)
+Elegant, modern karaoke venue with private rooms, refined lighting, and well‑tuned sound. Ideal for group gatherings, celebrations, and after‑work relaxation in central District 1.
+
+## Highlights
+- Luxurious interior and distinctive themes
+- Quality BMB sound with responsive microphones
+- Thoughtful, professional service
+- Convenient central location and parking
+
+## Address
+202 Nguyen Trai, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 90,
+    name: "Karaoke L.V Bistro K - 214 Le Hong Phong",
+    main_image_url:
+      "https://cdn.hstatic.net/products/1000268128/unnamed_e5ae1932e09142678fdca1efb808ea2a_master.jpg",
+    images: [
+      "https://cdn.hstatic.net/products/1000268128/unnamed__1__44244c1377124defa1abcb1f578c6ad5_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/unnamed__2__5d0fc112a5964186a9be7ea40b9ab7a0_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/unnamed__1__2_06096fbfd3394c799c13cd02ff386b9a_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/unnamed__3__3faeafd8f9b747e5bdc826fe93458d42_master.jpg",
+    ],
+    address:
+      "214 Lê Hồng Phong, Phường 4, Quận 5, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About L.V Bistro K (Le Hong Phong)
+Modern karaoke lounge with stylish rooms, strong sound and lighting, and professional service. Amenities include Wi‑Fi, car parking, card payment, event decoration, and VAT invoices.
+
+## Hours
+- Daily: 12:00 PM – 04:00 AM
+
+## Address
+214 Le Hong Phong, Ward 4, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 91,
+    name: "Karaoke Hao Man Party K - 470 Ngo Gia Tu",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/9-1751827343-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/9-1751827343-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/9-1751827343-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/9-1751827343-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/9-1751827343-5.jpg",
+    ],
+    address:
+      "470 Ngô Gia Tự, Phường 4, Quận 10, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Hao Man Party K (Ngo Gia Tu)
+Colorful, modern karaoke venue in District 10 with dynamic lighting and stage‑like sound. Friendly, multilingual KTV team and central location make it ideal for young groups and visitors.
+
+## Highlights
+- Vibrant themed rooms and private layouts
+- Lively sound and lighting system
+- EN/ZH speaking KTV team
+- Easy access in central District 10
+
+## Address
+470 Ngo Gia Tu, Ward 4, District 10, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 92,
+    name: "Luxury 99 KTV - 99 Bui Thi Xuan",
+    main_image_url:
+      "https://images.unsplash.com/photo-1570872626485-d8ffea69f463?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address:
+      "99 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 9777 2575",
+    category: "KTV",
+    price: "From 1,000,000 VND",
+    description: `## About Luxury 99 KTV (Bui Thi Xuan)
+Central District 1 venue offering premium KTV rooms and attentive service. Booking available via the portal.
+
+## Address
+99 Bui Thi Xuan, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 93,
+    name: "Lucky KTV 2000 - 171 Cho Lon",
+    main_image_url:
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7094541877721_2a6352f97d2023cbe88d26c167607b4d.jpg",
+    images: [
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7094541887263_a4e52732437cd87977ae856070606115.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7094541901280_7615d20109e7152bbf42a6f3abad6a7e.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7094541865088_aee4a1f466b41218276093ee40aea2cc.jpg",
+    ],
+    address:
+      "171 Chợ Lớn, Quận 6, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Rooms from 650,000 VND/hour",
+    description: `## About Lucky KTV 2000 (Cho Lon)
+Modern KTV in District 6 offering multiple room sizes and clear pricing. Suitable for groups seeking a lively private karaoke experience.
+
+## Room Rates (per hour)
+- Small: 650,000 VND
+- Medium: 750,000 VND
+- Large: 850,000 VND
+- VIP Extra‑Large: 1,100,000 VND
+
+## Service Tips
+- Waiter: 500,000 – 700,000 VND
+- Mummy: 1,500,000 VND
+- Hostess: 1,000,000 VND (first 3 hours), +500,000 VND/hour thereafter
+
+## Address
+171 Cho Lon, District 6, Ho Chi Minh City, Vietnam`,
+    hours: "6:00 PM - 3:00 AM",
+  },
+  {
+    id: 94,
+    name: "JULIA 66 KTV - 66 Tan Da",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/21-1752217852-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/21-1752217852-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/21-1752217852-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/21-1752217852-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/21-1752217852-5.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/21-1752217853-6.jpg",
+    ],
+    address:
+      "66 Tản Đà, Phường 11, Quận 5, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About JULIA 66 KTV (Tan Da)
+Stylish, comfortable karaoke venue in District 5 with high‑quality sound and lighting, good soundproofed rooms, and a varied drink and snack menu. Suitable for friends’ nights and private events.
+
+## Highlights
+- Premium sound and lighting
+- Multi‑style, well‑insulated rooms with soft sofas
+- Diverse food and beverage menu
+- Easy parking, friendly staff
+
+## Address
+66 Tan Da, Ward 11, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 95,
+    name: "Karaoke 356 - 356 Nguyen Dinh Chieu",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/284-1754131130-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/284-1754131131-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/284-1754131131-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/284-1754131131-2.jpg",
+    ],
+    address:
+      "356 Nguyễn Đình Chiểu, Phường 4, Quận 3, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Karaoke 356 (Nguyen Dinh Chieu)
+Central District 3 karaoke with modern design, professional sound and lighting, and well‑insulated private rooms. Easy parking and friendly staff.
+
+## Highlights
+- Pro audio and lighting setup
+- Private, modern rooms
+- Large song catalog
+- Central, easy‑to‑find location with parking
+
+## Address
+356 Nguyen Dinh Chieu, Ward 4, District 3, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 96,
+    name: "Karaoke Dragon-K - 466 Tran Hung Dao",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/34-1752142883-1.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/34-1752142883-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/34-1752142884-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/34-1752142884-4.jpg",
+    ],
+    address:
+      "466 Trần Hưng Đạo, Phường 14, Quận 5, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Dragon-K (Tran Hung Dao)
+Urban, modern karaoke hub in District 5 with advanced sound and lighting, fully insulated private rooms, and convenient central access with parking.
+
+## Highlights
+- Central location, easy to find
+- Modern interiors with pro audio/lighting
+- Multiple room types with strong soundproofing
+- Professional, friendly service
+
+## Address
+466 Tran Hung Dao, Ward 14, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 97,
+    name: "Karaoke Pearl 93 - An Duong Vuong",
+    main_image_url:
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXceYVutxU6VkxdmdRk99ggiQOHbe2FumiSDUwOSd4r947h9cUN0XH-leR8hlKGDN7V6ODiE0KzSrjaqP5Jaxp9xqI9UEHwo935NbMU0HG5NEHqp3tHkcry-6YIcU0xTE4hlye2sjw?key=0kGM1L2LrS69k0KGfyx96Q",
+    images: [
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcbGGHKD82Q4W0E27XslTj98mKVQSwu2jdjI-v8RFwZWQMSJNziP866AxBrrjkzAXIjfvGnwk74pivohvOtytYNVT7kqec2DsS5DPMcdpG8_T_IxqSktSZ3SE6Z4HzUhdy2PyeIJg?key=0kGM1L2LrS69k0KGfyx96Q",
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_VE6mtCjs5yz-6dGcUAalYxSqBbFXBAMcDLaSWA_dnvCgIbA1t4duuR0qDctDYij2TltCc65M3JFwVKXcAbNcTQC7tYdaK8-ln0FvV1ZlMck1MWc_YMlBX2lN81DyWuD2Crcf?key=0kGM1L2LrS69k0KGfyx96Q",
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXdGE-PqnPqqO_fQFdchmSsNvGrdoa43Lo-u3N22Ei591WeYhnIRYNQrJIrW3oTd_gQA_co7Tzw7JPMjreVGNBS_dG0nNEgO3kqLANm0JtTujFy1WrDglOqTFYibitsby5__CfVdWQ?key=0kGM1L2LrS69k0KGfyx96Q",
+    ],
+    address:
+      "93 An Dương Vương, Quận 5, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Pearl 93 KTV (An Duong Vuong)
+Elegant, event‑friendly karaoke venue with modern rooms, solid sound and lighting, and VAT invoicing on request. Suitable for parties and private gatherings.
+
+## Hours
+- Daily: 12:00 PM – 04:00 AM
+
+## Address
+93 An Duong Vuong, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 98,
+    name: "Karaoke Eden Paradise - 165/76 Nguyen Thai Binh",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/447670764_937931851463350_2685805811134284649_n-min_d87dfd3ccb9548b39e1a0001ac2772e5_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/447673923_937931924796676_1373472642640467038_n-min_4789e330575a47afa75f8646fb372138_master.jpg",
+      "https://product.hstatic.net/1000268128/product/447674867_937931958130006_8083855730103004139_n-min_7ab0be5626ed4c399fed3450d332fa41_master.jpg",
+      "https://product.hstatic.net/1000268128/product/447685329_937931901463345_6747503906918227206_n-min_a952073002044f0aa997658bac67ca89_master.jpg",
+      "https://product.hstatic.net/1000268128/product/447843375_937931978130004_8321320111058852147_n-min_dea0e182ff6648ef830b0f74fcc72cd7_master.jpg",
+    ],
+    address:
+      "165/76 Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Eden Paradise (Nguyen Thai Binh)
+Modern karaoke venue with stage‑style rooms, YouTube connectivity, and VAT invoicing on request. Amenities include Wi‑Fi, car parking, card payment, and event decoration.
+
+## Hours
+- Daily: 12:00 PM – 04:00 AM
+
+## Address
+165/76 Nguyen Thai Binh, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 99,
+    name: "TheOne KTV - 184-186 Nguyen Bieu",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/screenshot_5_0338e212c8aa4068bece8c931e2bce7b_master.png",
+    images: [
+      "https://product.hstatic.net/1000268128/product/screenshot_1_e7d42890053b4c87974ee903a310b772_master.png",
+      "https://product.hstatic.net/1000268128/product/screenshot_2_d87088ec6ec5423fac8f856d07c762a5_master.png",
+      "https://product.hstatic.net/1000268128/product/screenshot_3_20a5d378a5b84d07bbb050ee22ada31f_master.png",
+      "https://product.hstatic.net/1000268128/product/screenshot_4_caefbff9acc449c1a4e1a0d6a59fe34a_master.png",
+    ],
+    address:
+      "184-186 Nguyễn Biểu, Phường 2, Quận 5, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About TheOne KTV (Nguyen Bieu)
+Contemporary karaoke venue featuring stage‑style rooms, YouTube connectivity, VAT invoices on request, and full amenities including Wi‑Fi, card payment and parking.
+
+## Hours
+- Daily: 11:00 PM – 02:00 AM
+
+## Address
+184–186 Nguyen Bieu, Ward 2, District 5, Ho Chi Minh City, Vietnam`,
+    hours: "11:00 PM - 02:00 AM (Daily)",
+  },
+  {
+    id: 100,
+    name: "155 Gold Boy KTV (Dao Nam Gold)",
+    main_image_url:
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269599805_abe9b234ddc3d280b120d55969e1128a-1536x2048.jpg",
+    images: [
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269553219_5d4d2f111e00114d669154b67a493b7d-1536x1152.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269530247_771ad999ba4c402e58ab9863875137ef-1536x1152.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269614434_14ccc4a790e08f601a37198830fc3059-1536x1152.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269561160_590a7754c943b08bfe6347d78fc9a655-1536x1152.jpg",
+    ],
+    address:
+      "155 Đào Nam, (Gold 155), TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About 155 Gold Boy KTV (Dao Nam Gold)
+Vibrant, modern KTV with stylish rooms and lively sound/lighting. Ideal for energetic group nights in Saigon.
+
+## Address
+155 Dao Nam (Gold 155), Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
+    id: 101,
+    name: "Play Boy KTV - 411 Tran Hung Dao",
+    main_image_url:
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfwQFIgyeD0DBjBN8nacLe2NAD73CEOXKd1045QdfxDhReOxuI4n1P2o5b0al-oj7lwVQ5eiUkEEqVabZtrRINb9EtWABOpl6-i8mTuzDywnm3tn-FmkfZLMd5Br2gdE9RWRL7-?key=Jz2U9eVR4IQ1dsqbN0Wr2Wv4",
+    images: [
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXe-uZZvmEjyJm5Sisjio3VHHjsNmsgKASoSrP9sIhcPRTU5d5KJRP7GsqmyCiTBrIOQmIWbgbU97nGRoAXoG5wSROmAV4jHooD8fDUys30Tkaikuy_43kkqkS8R6AfIebVvNM52BQ?key=Jz2U9eVR4IQ1dsqbN0Wr2Wv4",
+      "https://lh7-rt.googleusercontent.com/docsz/AD_4nXdW1jdYZC7RsgSTGIAuT4eDYNtfQKReAYjpg_RDOxPjRllEYrmJzq2O-xhe_qEUOXOXnD-Y--3cJx7WJjBbvbxvGU6bz_55MPnY8CuEmq4X_U3Y5IwnwvvXfIeOHgh-4PB6ZvDi?key=Jz2U9eVR4IQ1dsqbN0Wr2Wv4",
+    ],
+    address:
+      "411 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Play Boy KTV (Tran Hung Dao)
+Premium karaoke venue in District 1 with upscale rooms, strong sound and lighting, and central location near major nightlife streets.
+
+## Address
+411 Tran Hung Dao, District 1, Ho Chi Minh City, Vietnam`,
+    hours: "Check with venue",
+  },
+  {
     id: 2,
     name: "Supreme KTV",
     main_image_url:
