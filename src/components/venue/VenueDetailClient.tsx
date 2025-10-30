@@ -10,6 +10,8 @@ import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
 import { VenueImageMasonry } from "@/components/venue/VenueImageMasonry";
+import { VisitUsMap } from "@/components/venue/VisitUsMap";
+import { BookingForm } from "@/components/venue/BookingForm";
 import { ktvData } from "@/lib/data";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -94,6 +96,8 @@ const VenueDetailClient = ({ id }: { id: string }) => {
     }
   }, [venue]);
 
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   if (!hasMounted || !venue) {
     return null;
   }
@@ -145,9 +149,28 @@ const VenueDetailClient = ({ id }: { id: string }) => {
           category={venue.category}
           country={venue.country}
         />
+
+        {/* Visit Us - Google Maps */}
+        <div className="mt-10">
+          <VisitUsMap
+            address={venue.address}
+            venueName={venue.name}
+            country={venue.country}
+            phone={venue.phone}
+            onOpenBooking={() => setBookingOpen(true)}
+          />
+        </div>
       </main>
 
       <Footer />
+
+      {/* Shared Booking Form for this detail page */}
+      <BookingForm
+        open={bookingOpen}
+        onOpenChange={setBookingOpen}
+        venueName={venue.name}
+        venueAddress={venue.address}
+      />
     </div>
   );
 };

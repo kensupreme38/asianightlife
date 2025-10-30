@@ -71,7 +71,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
         </div>
 
         {/* Content */}
-        <div className="md:p-4 px-2.5 space-y-3">
+        <div className="md:p-4 px-2.5 space-y-3 py-1">
           <div>
             <div className="flex items-start justify-between mb-1">
               <h3 className="font-bold text-sm md:text-lg line-clamp-1 group-hover:text-primary transition-colors font-headline">
@@ -89,7 +89,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
 
       {/* Booking Button - Hidden for Hotels */}
       {venue.category !== "Hotel" && (
-        <div className="md:px-4 p-2.5 pt-0">
+        <div className="md:px-4 p-2.5 pt-0 mt-2 md:mt-0">
           <Button
             onClick={handleBooking}
             className="w-full"
