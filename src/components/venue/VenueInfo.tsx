@@ -99,7 +99,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               disabled={!isOpen}
             >
               <Send className="h-5 w-5 mr-2" />
-              {isOpen ? "Book via Telegram" : "Temporarily Closed"}
+              {isOpen ? "Follow Us On Telegram" : "Temporarily Closed"}
             </Button>
         </div>
       </div>

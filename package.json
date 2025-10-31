@@ -46,6 +46,7 @@
     "date-fns": "^3.6.0",
     "dotenv": "latest",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^11.18.2",
     "genkit": "latest",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.545.0",

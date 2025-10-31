@@ -43,7 +43,7 @@ export function VisitUsMap({ address, venueName, country, phone, onOpenBooking }
 
           {/* Address */}
           <div className="flex gap-4 items-start mb-6">
-            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-pink-500 to-amber-500 text-white shadow-md flex-shrink-0">
+            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-neon-blue to-neon-pink text-white shadow-md flex-shrink-0">
               <MapPin className="h-6 w-6" />
             </div>
             <div>
@@ -61,7 +61,7 @@ export function VisitUsMap({ address, venueName, country, phone, onOpenBooking }
 
           {/* Contact */}
           <div className="flex gap-4 items-start mb-6">
-            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-pink-500 to-amber-500 text-white shadow-md">
+            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-neon-blue to-neon-pink text-white shadow-md">
               <Phone className="h-6 w-6" />
             </div>
             <div>
@@ -81,7 +81,7 @@ export function VisitUsMap({ address, venueName, country, phone, onOpenBooking }
 
           {/* CTA */}
           <div className="pt-2 border-t border-border/40">
-            <Button className="w-full mt-4" onClick={onOpenBooking}>Make a Booking</Button>
+            <Button variant="neon" size="lg" className="w-full mt-4" onClick={onOpenBooking}>Make a Booking</Button>
           </div>
         </div>
 
