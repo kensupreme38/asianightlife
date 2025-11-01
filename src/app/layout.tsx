@@ -15,12 +15,16 @@ const heroBannerImage = getImage("hero-banner");
 const imagePreviewUrl = `${heroBannerImage?.imageUrl}&v=1`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://asianightlife.sg"),
   title: "Asia Night Life - Premier Entertainment Venue Booking",
   description:
     "The leading booking platform for KTVs, Clubs, and Live Houses in Singapore, Vietnam, Thailand, Malaysia. Discover and book now!",
   authors: [{ name: "Asia Night Life Platform" }],
   keywords:
     "ktv, club, live house, booking, karaoke, nightlife, singapore, vietnam, thailand, malaysia",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -29,6 +33,8 @@ export const metadata: Metadata = {
     description:
       "The leading booking platform for KTVs, Clubs, and Live Houses in Southeast Asia",
     type: "website",
+    url: "/",
+    locale: "en_SG",
     images: [imagePreviewUrl],
   },
   twitter: {
@@ -53,6 +59,21 @@ export default function RootLayout({
             <ClientLayout>{children}</ClientLayout>
           </TooltipProvider>
         </Providers>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Asia Night Life",
+              url: "https://asianightlife.sg",
+              logo: "https://asianightlife.sg/favicon.ico",
+              sameAs: [
+                "https://t.me/asianightlifesg",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

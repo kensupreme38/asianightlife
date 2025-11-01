@@ -63,6 +63,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
             ? foundVenue.hours
             : "Check with venue",
         description: foundVenue.description || "No description available",
+        mapEmbedUrl: (foundVenue as any).mapEmbedUrl,
       };
     }
     return null;
@@ -157,6 +158,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
             venueName={venue.name}
             country={venue.country}
             phone={venue.phone}
+            mapEmbedUrl={venue.mapEmbedUrl}
             onOpenBooking={() => setBookingOpen(true)}
           />
         </div>

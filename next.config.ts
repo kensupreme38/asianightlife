@@ -219,6 +219,48 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "img.uaktravel.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent.fvca1-1.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent.fvca1-2.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent.fvca1-3.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent.fvca1-4.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "pasgo.vn",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "dynamic-media-cdn.tripadvisor.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
     // Image optimization settings
     formats: ["image/webp", "image/avif"],

@@ -8,14 +8,15 @@ interface VisitUsMapProps {
   venueName?: string;
   country?: string;
   phone?: string | undefined;
+  mapEmbedUrl?: string;
   onOpenBooking?: () => void;
 }
 
-export function VisitUsMap({ address, venueName, country, phone, onOpenBooking }: VisitUsMapProps) {
+export function VisitUsMap({ address, venueName, country, phone, mapEmbedUrl, onOpenBooking }: VisitUsMapProps) {
   if (!address) return null;
 
   const encoded = encodeURIComponent(address);
-  const mapSrc = `https://www.google.com/maps?q=${encoded}&output=embed`;
+  const mapSrc = mapEmbedUrl || `https://www.google.com/maps?q=${encoded}&output=embed`;
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
   const defaultPhone = "+65 8280 8072";
   const phoneToUse = phone && phone !== "N/A" ? phone : defaultPhone;

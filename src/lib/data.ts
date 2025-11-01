@@ -5459,4 +5459,302 @@ Located in a prime location in District 1, Express by M Village Vo Van Kiet offe
 - Professional visitors`,
     hours: "24/7",
   },
+  {
+    id: 102,
+    name: "Alexis Club",
+    main_image_url: "https://img.uaktravel.com/d32/2506/1704717396427845.webp",
+    images: [
+      "https://img.uaktravel.com/d32/2506/1704717396427845.webp",
+      "https://img.uaktravel.com/d32/2506/1704717931027847.webp",
+    ],
+    address: "85, Jln Loke Yew, Taman Miharja, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    country: "Malaysia",
+    phone: "017-576 0584",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Alexis Club
+Welcome to the heart of Kuala Lumpur's vibrant entertainment scene, where culinary delights meet captivating live performances. For those in Wilayah Persekutuan Kuala Lumpur seeking a refined yet welcoming space to unwind, dine, and enjoy exceptional music, Alexis Club stands out as a true local gem. More than just a bar, Alexis Club offers a comprehensive experience, blending gastronomic excellence with an atmospheric setting that promises memorable evenings.
+
+## Highlights
+- **Acclaimed Jazz Programme**: The club's celebrated live jazz programme features renowned local legends and international musicians, making it a prime spot for jazz enthusiasts
+- **Fusion Culinary Excellence**: The menu offers a fascinating fusion of Western and Asian cuisines, with inventive dishes that cater to diverse palates
+- **Signature Desserts**: Famous for homemade cakes, especially the Pavlova and Tiramisu, consistently lauded by patrons
+- **Award-Winning Interiors**: Stylish, warm, and often award-winning interior designs offering a classy, cozy, and sophisticated ambiance
+- **Quality Customer Service**: Exceptionally attentive, polite, and friendly staff that enhances the dining and entertainment experience
+
+## Services Offered
+- Contemporary dining experience with fusion cuisine
+- Full bar service with extensive wine list, spirits, beers, and creative cocktails
+- Live music performances (especially jazz on Friday and Saturday nights)
+- Dessert specials with homemade cakes and desserts
+- Event hosting options for private dining or gatherings
+
+## Perfect For
+- Jazz music enthusiasts
+- Food lovers seeking fusion cuisine
+- Special occasions and romantic dinners
+- Night out with friends
+- Cultural and entertainment seekers
+- Dessert connoisseurs`,
+    hours: {
+      "Monday": "4:00 PM - 2:00 AM",
+      "Tuesday": "4:00 PM - 2:00 AM",
+      "Wednesday": "4:00 PM - 2:00 AM",
+      "Thursday": "4:00 PM - 2:00 AM",
+      "Friday": "4:00 PM - 2:00 AM",
+      "Saturday": "4:00 PM - 2:00 AM",
+      "Sunday": "Closed",
+    },
+  },
+  {
+    id: 103,
+    name: "Hermez Club 爱马仕",
+    main_image_url: "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/499716034_122110613342870614_3037038380735819538_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=50ad20&_nc_ohc=54x3ISqMld4Q7kNvwFmGorD&_nc_oc=Adk447o2gG-Qalik8QKRXDvmLP7NTO7IlDnFS9P4r8bGqtP0xPBsAJvIJdSDPHvrL-1JQmT3dqPzcWaVgWulznrV&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afd-DBvIknHppBxGTKvMj80JnzgdmqllvbofNE6h2fBq2A&oe=690B3B30",
+    images: [
+      "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/499716034_122110613342870614_3037038380735819538_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=50ad20&_nc_ohc=54x3ISqMld4Q7kNvwFmGorD&_nc_oc=Adk447o2gG-Qalik8QKRXDvmLP7NTO7IlDnFS9P4r8bGqtP0xPBsAJvIJdSDPHvrL-1JQmT3dqPzcWaVgWulznrV&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afd-DBvIknHppBxGTKvMj80JnzgdmqllvbofNE6h2fBq2A&oe=690B3B30",
+      "https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/500367821_122110613360870614_4436408844632195574_n.jpg?stp=c0.147.1155.1155a_dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_ohc=M4s2deglJgcQ7kNvwFw9mfx&_nc_oc=AdnKzDMIDWQHGOpfZNl1NtyppPnwf4CWSi6kUAwwrRxAhoRZwcmhmlFhoqUEGrOReKvjniW2XzFaRdc3lnUfDo5J&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_AfegQvyKHcWOaoq9MNpBtif27HDwZ1ISKjTy8CcB-o2_tA&oe=690B4078",
+      "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/497669740_122102875046870614_9012894410574755643_n.jpg?stp=c135.0.810.810a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_ohc=7aN2Us5d8qAQ7kNvwGCHz2L&_nc_oc=Adm6800RTtm6GKc5qQyl7R_XlTPxyaqa6KalIlihIXZJ9l8MRkI5hcAjWaJH9n01LK5ZQGSMKMNHrBiLBBndEvll&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afe3U_1uxp1bK9cTa8yByvTzT010W8OBsjQn1YK6rLRXpA&oe=690B3790",
+      "https://scontent.fvca1-3.fna.fbcdn.net/v/t39.30808-6/499792457_122110613396870614_6601420517857837349_n.jpg?stp=c0.147.1155.1155a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_ohc=R8jYR-ZRSdcQ7kNvwGVzAuH&_nc_oc=Adkb0HdtQphMUBgKmPUIrW_ruPiHfWb2t4Mo2lc9Bvm6y9Al-OYuOAO2G74km2m3yPxddOAaZa8DUlGRU48ywrXT&_nc_zt=23&_nc_ht=scontent.fvca1-3.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Affn6b42bHhn5MYQWzH8DebOXMgFl_iFyW1VmGEvrC124A&oe=690B54E0",
+    ],
+    address: "17, Jalan Selangor, Seksyen 6, 46000 Petaling Jaya, Selangor, Malaysia",
+    country: "Malaysia",
+    phone: "N/A",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Hermez Club 爱马仕
+Hermez Club 爱马仕 is a premium entertainment venue located in Petaling Jaya, Selangor. Offering a sophisticated atmosphere for music, entertainment, and social gatherings, this establishment provides a high-end experience for guests seeking quality nightlife entertainment.
+
+## Highlights
+- **Premium Location**: Situated in Petaling Jaya, a vibrant district in Selangor
+- **Modern Venue**: Contemporary design with sophisticated ambiance
+- **Entertainment Focus**: Dedicated to providing quality music and entertainment experiences
+- **Social Hub**: Perfect destination for groups and social gatherings
+- **High-Quality Service**: Committed to delivering excellent hospitality
+
+## Perfect For
+- Nightlife enthusiasts
+- Social gatherings
+- Music lovers
+- Quality entertainment seekers
+- Groups and parties`,
+    hours: "Check with venue",
+  },
+  {
+    id: 104,
+    name: "AVA 2 Executive Club",
+    main_image_url: "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-1/366047957_114414285078987_6018062919778262837_n.jpg?stp=c205.0.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=mg7nOd_acVYQ7kNvwHZRq3u&_nc_oc=AdmfFOTtJ-ZDJ0MHnSE_1YAwYMADQy0x68z1HW1LdeKOQ7w9tLc5hDhNvCSlGaOhGxs7YcgGX-q0teZBm6s55O14&_nc_zt=24&_nc_ht=scontent.fvca1-4.fna&_nc_gid=YUnt0geatZq0j9qp0LB0bQ&oh=00_AfeBGnWvZerNOS8HzVEXRl_berYSZY7eHqBIsVpXzw3a_w&oe=690B59BF",
+    images: [
+      "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-1/366047957_114414285078987_6018062919778262837_n.jpg?stp=c205.0.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=mg7nOd_acVYQ7kNvwHZRq3u&_nc_oc=AdmfFOTtJ-ZDJ0MHnSE_1YAwYMADQy0x68z1HW1LdeKOQ7w9tLc5hDhNvCSlGaOhGxs7YcgGX-q0teZBm6s55O14&_nc_zt=24&_nc_ht=scontent.fvca1-4.fna&_nc_gid=YUnt0geatZq0j9qp0LB0bQ&oh=00_AfeBGnWvZerNOS8HzVEXRl_berYSZY7eHqBIsVpXzw3a_w&oe=690B59BF",
+      "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/468899662_529839586869786_681663415178971287_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wwp4rHk0PL8Q7kNvwGWVI8j&_nc_oc=Adnh6Mxyt9_0aDcjpAwaQ4Q9sOrcm_GTNFoIiMRJR3AxUY3tN-xuRXpbNaHVvFHuMs3AhYKva15sqT-_8UDfFDeO&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=RPupexoJc5dcm3N1WFIefQ&oh=00_AfdaLRs0ztteQuIxwXW02HEAd_QMprzsCeHKu2Rn_UCKaQ&oe=690B5947",
+      "https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/469324344_529839810203097_2252031588004090393_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zTtG8cpZAgYQ7kNvwEIFkB-&_nc_oc=AdlTNdUvTSONPr4gNRvZPd-KaHAYLtlJJtwYB7Z2OV1mvnEUiGfj5lfZySl82EnDPcJHKxFcRi1OZwRGqIBxk3o7&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=pR5srzkZkeS9Nt1C8iX_fQ&oh=00_AfcfCboVxuZgQZx8NTzT9kTfXnBr52LI37TzI1CFjLUx6g&oe=690B3CA8",
+      "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-6/469267498_529818893538522_1859121433102593734_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_4E3EfUYr1gQ7kNvwHypUIl&_nc_oc=AdlskOiXRe7RZWEPaxD-LcEAgHilsrEym5tFb6g-Z2GIgU61F5B7IE8ieddPlm6e4hyuyKkfr6iZtUxBzVXQY--N&_nc_zt=23&_nc_ht=scontent.fvca1-4.fna&_nc_gid=T8amZ0ZwoqXAYbCGwPH49A&oh=00_AffbYpAbayJUcIOsvTnP5pEKkSU3MHx650BBAao32IgCug&oe=690B3BF0",
+      "https://scontent.fvca1-3.fna.fbcdn.net/v/t39.30808-6/468789899_527159763804435_6302988153808126069_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=eIm_gEvZnPAQ7kNvwGS2EEE&_nc_oc=AdkCy6n9GGJs4TWOeFpr8VXMOzv4nZfPdm6ww6dUP05gLFqPmvr27IHXEszfPUMS3P6GwlATSM-shfcpTzo5puR0&_nc_zt=23&_nc_ht=scontent.fvca1-3.fna&_nc_gid=6LtpUadWIMkDB-49kwIn5w&oh=00_Afedn2ZrrqvqSagJ4C7IzW3vKiCSRiT4oP2_9q_9XF3CQQ&oe=690B3836",
+    ],
+    address: "2-239, Kompleks Metro Pudu 1, Jalan Metro Pudu, 55100 Kuala Lumpur, Malaysia",
+    country: "Malaysia",
+    phone: "N/A",
+    category: "KTV",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.201753080217!2d101.71333845696788!3d3.1290981571927112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc379c449fa3e1%3A0x59b35d3470735152!2sAVA%202%20Executive%20Club!5e1!3m2!1svi!2s!4v1761967686833!5m2!1svi!2s",
+    price: "Contact for pricing",
+    description: `## About AVA 2 Executive Club
+AVA 2 Executive Club is a premium entertainment venue offering sophisticated nightlife experiences. The club provides a high-end atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment.
+
+## Highlights
+- **Premium Venue**: Sophisticated and upscale entertainment establishment
+- **Executive Experience**: High-quality service and premium amenities
+- **Entertainment Focus**: Dedicated to providing exceptional music and entertainment
+- **Social Hub**: Perfect destination for groups and social gatherings
+- **Modern Facilities**: Contemporary design with premium ambiance
+
+## Perfect For
+- Executive entertainment seekers
+- Premium nightlife enthusiasts
+- Social gatherings and events
+- Quality entertainment seekers
+- Groups and business gatherings`,
+    hours: "Check with venue",
+  },
+  {
+    id: 105,
+    name: "Banker Place",
+    main_image_url: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566737236500-c8ac43014b67?w=800&h=600&fit=crop",
+    ],
+    address: "10, Jalan Radin Bagus 3, Bandar Baru Sri Petaling, 57000 Kuala Lumpur, Malaysia",
+    country: "Malaysia",
+    phone: "017-343 2210",
+    category: "Pub",
+    price: "Contact for pricing",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1693.6244706187829!2d101.70519620156516!3d3.153097818118854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4900765fb5b9%3A0x6742a0a2db253269!2sBanker%20Place!5e1!3m2!1svi!2s!4v1761967874962!5m2!1svi!2s",
+    description: `## About Banker Place
+Banker Place is a welcoming bar located in Bandar Baru Sri Petaling, Kuala Lumpur. Offering a relaxed atmosphere for drinks, socializing, and entertainment, this establishment provides a comfortable setting for friends to gather and unwind.
+
+## Highlights
+- **Convenient Location**: Situated in Bandar Baru Sri Petaling, easily accessible
+- **Relaxed Atmosphere**: Comfortable and welcoming environment
+- **Social Hub**: Perfect for gatherings with friends
+- **Bar Services**: Full bar with drinks and beverages
+- **Friendly Service**: Welcoming staff and service
+
+## Operating Hours
+- Daily: 3:00 PM - 12:00 AM
+
+## Perfect For
+- Casual drinks and socializing
+- Friends gatherings
+- Evening relaxation
+- Weekend outings
+- Local nightlife enthusiasts`,
+    hours: {
+      "Monday": "3:00 PM - 12:00 AM",
+      "Tuesday": "3:00 PM - 12:00 AM",
+      "Wednesday": "3:00 PM - 12:00 AM",
+      "Thursday": "3:00 PM - 12:00 AM",
+      "Friday": "3:00 PM - 12:00 AM",
+      "Saturday": "3:00 PM - 12:00 AM",
+      "Sunday": "3:00 PM - 12:00 AM",
+    },
+  },
+  {
+    id: 106,
+    name: "Club 3",
+    main_image_url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
+    images: [
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
+      "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3",
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34",
+    ],
+    address: "3, Lorong Utara C, Pjs 52, 46200 Petaling Jaya, Selangor, Malaysia",
+    country: "Malaysia",
+    phone: "N/A",
+    category: "Nightclub",
+    price: "Contact for pricing",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6774.812316898381!2d101.6399709!3d3.1044478999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bdd1355b93f%3A0x30a3d36e4bd6c62a!2sPJ%20Club!5e1!3m2!1svi!2s!4v1761968200759!5m2!1svi!2s",
+    description: `## About Club 3
+Club 3 is a vibrant nightlife venue located in the Petaling Jaya area. Offering an energetic atmosphere for music, dancing, and entertainment, this club provides an exciting destination for nightlife enthusiasts seeking a lively night out.
+
+## Highlights
+- **Energetic Atmosphere**: Vibrant and lively club environment
+- **Music & Entertainment**: Live DJ sets and entertainment
+- **Nightlife Destination**: Perfect for dancing and socializing
+- **Modern Venue**: Contemporary club setting
+- **Social Hub**: Great for groups and nightlife enthusiasts
+
+## Perfect For
+- Nightlife enthusiasts
+- Dancing and music lovers
+- Weekend nightlife
+- Social gatherings
+- Party-goers`,
+    hours: "Check with venue",
+  },
+  {
+    id: 107,
+    name: "Cheer House Restaurant - Lê Ngô Cát",
+    main_image_url: "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-1-300-124933912544.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-1-300-124933912544.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-3-300-124934112546.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-5-300-124934312548.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-4-300-124934212547.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-8-300-124934612551.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-9-300-124934712552.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-12-300-124935012555.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-11-300-124934912554.webp",
+    ],
+    address: "6B Lê Ngô Cát, Phường 7, Quận 3, Ho Chi Minh City, Vietnam",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "600,000 - 900,000 VND/person",
+    description: `## About Cheer House Restaurant - Lê Ngô Cát
+Cheer House Restaurant - Lê Ngô Cát is an elegant dining establishment specializing in Asian and European cuisine with a focus on wine. The restaurant features a sophisticated wine cellar atmosphere, offering a luxurious and modern dining experience in Ho Chi Minh City.
+
+## Highlights
+- **Wine Cellar Ambiance**: Sophisticated wine cellar style, elegant and modern
+- **Specialty Wine Selection**: Extensive collection of renowned wines from Western countries
+- **Fusion Cuisine**: Asian and European dishes
+- **VIP Rooms**: 11 private rooms available (8-30 guests per room)
+- **Capacity**: Can accommodate up to 200 guests
+- **Premium Dining**: Fine dining experience with attention to detail
+
+## Signature Dishes
+- Grilled cheese prawns
+- Blood cockle and conch salad
+- Hong Kong style steamed grouper
+- Stone-grilled Fuji beef
+- Shark fin and abalone soup
+
+## Features & Amenities
+- Private rooms available
+- Smoking area
+- Free WiFi
+- Air conditioning
+- Visa/MasterCard accepted
+- VAT invoice available
+- Event decoration services
+- Outdoor seating
+- Children's chairs available
+- Children's play area
+- Live music
+- PasGo delivery service
+- Set lunch menu
+- Karaoke
+- Projector available
+
+## Perfect For
+- Business meetings and receptions
+- Family gatherings
+- Birthday celebrations
+- Romantic dates
+- Special occasions
+- Wine enthusiasts
+- Fine dining experiences`,
+    hours: {
+      "Monday": "10:00 AM - 10:00 PM",
+      "Tuesday": "10:00 AM - 10:00 PM",
+      "Wednesday": "10:00 AM - 10:00 PM",
+      "Thursday": "10:00 AM - 10:00 PM",
+      "Friday": "10:00 AM - 10:00 PM",
+      "Saturday": "10:00 AM - 10:00 PM",
+      "Sunday": "10:00 AM - 10:00 PM",
+    },
+  },
+  {
+    id: 108,
+    name: "Mama's Style Vietnamese Restaurant",
+    main_image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a9/52/6b/caption.jpg?w=900&h=500&s=1",
+    images: [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a9/52/6b/caption.jpg?w=900&h=500&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/cc/18/16/menu.jpg?w=300&h=200&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/cc/17/cb/menu.jpg?w=300&h=200&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a9/52/69/caption.jpg?w=300&h=200&s=1",
+    ],
+    address: "Contact for address",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "Night market",
+    price: "Contact for pricing",
+    description: `## About Mama's Style Vietnamese Restaurant
+Mama's Style Vietnamese Restaurant is an authentic Vietnamese dining establishment in Ho Chi Minh City. The restaurant offers traditional Vietnamese cuisine with a focus on homestyle cooking, providing guests with an authentic taste of Vietnamese food culture.
+
+## Highlights
+- **Authentic Vietnamese Cuisine**: Traditional Vietnamese dishes with homestyle flavors
+- **Family-Style Dining**: Warm and welcoming atmosphere reminiscent of home cooking
+- **Traditional Recipes**: Authentic Vietnamese recipes passed down through generations
+- **Local Favorites**: Popular Vietnamese dishes prepared with traditional methods
+- **Comfortable Setting**: Cozy and welcoming environment for family and friends
+
+## Perfect For
+- Family dining
+- Traditional Vietnamese food lovers
+- Cultural dining experiences
+- Local food enthusiasts
+- Casual dining
+- Tourists seeking authentic Vietnamese cuisine`,
+    hours: "Check with venue",
+  },
 ];
