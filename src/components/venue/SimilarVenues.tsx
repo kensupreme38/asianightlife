@@ -32,6 +32,7 @@ export const SimilarVenues = ({
         rating: 4.5,
         status: "open" as const,
         imageHint: "ktv lounge",
+        country: v.country || country,
       })
     );
 

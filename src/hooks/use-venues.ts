@@ -102,6 +102,7 @@ export const useVenues = ({
         rating: 4.5,
         status: "open" as const,
         imageHint: "ktv lounge",
+        country: ktv.country || "Unknown",
       }));
 
     // Apply limit if specified

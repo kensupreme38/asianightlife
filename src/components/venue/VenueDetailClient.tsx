@@ -63,6 +63,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
             : "Check with venue",
         description: foundVenue.description || "No description available",
         mapEmbedUrl: (foundVenue as any).mapEmbedUrl,
+        country: foundVenue.country || "Unknown",
       };
     }
     return null;
