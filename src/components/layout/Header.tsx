@@ -47,6 +47,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const { theme, setTheme } = useTheme();
   const inputRef = useRef<HTMLInputElement>(null);
   const debouncedInput = useDebounce(inputValue, 200);
@@ -117,14 +118,14 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     return suggestions.slice(0, 10);
   }, [debouncedInput]);
 
-  // Update dropdown open state when suggestions change
+  // Update dropdown open state only when input is focused
   useEffect(() => {
-    if (suggestions.length > 0) {
+    if (isInputFocused && suggestions.length > 0) {
       setIsDropdownOpen(true);
-    } else if (inputValue.length === 0) {
+    } else if (!isInputFocused) {
       setIsDropdownOpen(false);
     }
-  }, [suggestions.length, inputValue.length]);
+  }, [suggestions.length, isInputFocused]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -143,6 +144,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         !dropdownElement.contains(target)
       ) {
         setIsDropdownOpen(false);
+        setIsInputFocused(false);
       }
 
       if (
@@ -152,6 +154,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         !mobileDropdownElement.contains(target)
       ) {
         setIsDropdownOpen(false);
+        setIsInputFocused(false);
       }
     };
 
@@ -164,7 +167,8 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setInputValue(value);
-    if (value.length > 0) {
+    // Only open dropdown if input is focused and there are suggestions
+    if (isInputFocused && value.length > 0 && suggestions.length > 0) {
       setIsDropdownOpen(true);
     }
   };
@@ -186,6 +190,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     }
     setIsDropdownOpen(false);
     setIsSearchOpen(false);
+    setIsInputFocused(false);
   };
 
   const getSuggestionIcon = (type: Suggestion['type']) => {
@@ -255,11 +260,21 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
                 onFocus={() => {
-                  setIsDropdownOpen(suggestions.length > 0);
+                  setIsInputFocused(true);
+                  if (suggestions.length > 0) {
+                    setIsDropdownOpen(true);
+                  }
                 }}
                 onBlur={() => {
-                  // Let click outside handler close the dropdown
-                  // Don't close immediately to allow clicking on suggestions
+                  // Delay setting focused to false to allow clicking on suggestions
+                  setTimeout(() => {
+                    const activeElement = document.activeElement;
+                    const dropdownElement = document.querySelector('[data-suggestion-dropdown]');
+                    if (!dropdownElement?.contains(activeElement as Node)) {
+                      setIsInputFocused(false);
+                      setIsDropdownOpen(false);
+                    }
+                  }, 150);
                 }}
                 className="pl-10 h-10 w-full bg-background/60 backdrop-blur-sm border-border/40 focus:border-primary"
               />
@@ -501,11 +516,21 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
               onFocus={() => {
-                setIsDropdownOpen(suggestions.length > 0);
+                setIsInputFocused(true);
+                if (suggestions.length > 0) {
+                  setIsDropdownOpen(true);
+                }
               }}
               onBlur={() => {
-                // Let click outside handler close the dropdown
-                // Don't close immediately to allow clicking on suggestions
+                // Delay setting focused to false to allow clicking on suggestions
+                setTimeout(() => {
+                  const activeElement = document.activeElement;
+                  const dropdownElement = document.querySelector('[data-suggestion-dropdown-mobile]');
+                  if (!dropdownElement?.contains(activeElement as Node)) {
+                    setIsInputFocused(false);
+                    setIsDropdownOpen(false);
+                  }
+                }, 150);
               }}
               className="pl-10 h-10 w-full"
               autoFocus

@@ -29,6 +29,7 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
   const [sortBy, setSortBy] = useState("recommended");
   const [inputValue, setInputValue] = useState(searchQuery);
   const [isOpen, setIsOpen] = useState(false);
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const debouncedInput = useDebounce(inputValue, 200);
 
@@ -102,23 +103,20 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setInputValue(value);
-    // Open dropdown immediately when user types
-    if (value.length > 0) {
+    // Open dropdown when user types if input is focused
+    if (isInputFocused && value.length > 0 && suggestions.length > 0) {
       setIsOpen(true);
     }
   };
   
-  // Update dropdown open state when suggestions change
+  // Update dropdown open state only when input is focused
   useEffect(() => {
-    // Open dropdown if there are suggestions
-    if (suggestions.length > 0) {
+    if (isInputFocused && suggestions.length > 0) {
       setIsOpen(true);
-    } else if (inputValue.length === 0) {
-      // Close if no input and no suggestions
+    } else if (!isInputFocused) {
       setIsOpen(false);
     }
-    // If input has value but no suggestions, keep open (waiting for debounce)
-  }, [suggestions.length, inputValue.length]);
+  }, [suggestions.length, isInputFocused]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -136,6 +134,7 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
         !dropdownElement.contains(target)
       ) {
         setIsOpen(false);
+        setIsInputFocused(false);
       }
     };
 
@@ -158,6 +157,7 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
     setInputValue(suggestion.text);
     onSearchChange(suggestion.text);
     setIsOpen(false);
+    setIsInputFocused(false);
     inputRef.current?.blur();
   };
 
@@ -199,12 +199,21 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
                   onChange={handleInputChange}
                   onKeyDown={handleKeyDown}
                   onFocus={() => {
-                    // Always show suggestions when focused if available
-                    setIsOpen(suggestions.length > 0);
+                    setIsInputFocused(true);
+                    if (suggestions.length > 0) {
+                      setIsOpen(true);
+                    }
                   }}
                   onBlur={() => {
-                    // Let click outside handler close the dropdown
-                    // Don't close immediately to allow clicking on suggestions
+                    // Delay setting focused to false to allow clicking on suggestions
+                    setTimeout(() => {
+                      const activeElement = document.activeElement;
+                      const dropdownElement = document.querySelector('[data-suggestion-dropdown]');
+                      if (!dropdownElement?.contains(activeElement as Node)) {
+                        setIsInputFocused(false);
+                        setIsOpen(false);
+                      }
+                    }, 150);
                   }}
                   className="pl-10 h-12 bg-background/60 backdrop-blur-sm border-border/40 focus:border-primary cursor-text"
                 />
