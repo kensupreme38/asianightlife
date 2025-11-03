@@ -1624,7 +1624,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     country: "Vietnam",
     phone: "+84 877 218 317",
     category: "KTV / Karaoke & Restaurant",
-    price: "Small: 560,000 VND/hr; Medium: 770,000 VND/hr; Big: 930,000 VND/hr",
+    price: "560,000VND/hr",
     description: `## About Atlantis Karaoke & Restaurant
 **Atlantis Karaoke & Restaurant** is located in District 1, operating from 5:00 PM to 3:00 AM with premium facilities and extensive selection.
 
@@ -5757,4 +5757,459 @@ Mama's Style Vietnamese Restaurant is an authentic Vietnamese dining establishme
 - Tourists seeking authentic Vietnamese cuisine`,
     hours: "Check with venue",
   },
+  {
+    id: 109,
+    name: "Empire Club",
+    main_image_url: "https://9club.vn/wp-content/uploads/2024/11/empire-club-1-768x568.jpg",
+    images: [
+      "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_15-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_14-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_16-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_13-768x512.jpg"
+    ],
+    address: "8 Nguyễn Văn Tráng, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Empire Club 
+Empire Club is a premier entertainment destination in Saigon, located at 8 Nguyen Van Trang. The club stands out with its sophisticated sound and lighting systems and modern space design, offering top-tier musical experiences from professional DJs, flexible LED lighting systems, standing tables, DJ-side tables, and multiple areas with beautiful views.
+
+Through the Empire Music event series, the club organizes vibrant events, delivering unique and creative entertainment experiences for all music enthusiasts. Come to Empire Club to enjoy the perfect music party!
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+`,
+    hours: "20:00 PM – 03:00 AM",
+  },
+  {
+    id: 110,
+    name: "CANALIS BAR & LOUNGE",
+    main_image_url: "https://chillvietnam.com/wp-content/uploads/elementor/thumbs/canalis-bar-quan-3-1667851893-q0n0gtg7yrfrlrjuqsyxv7h7ue3q1uepo3bsyjh2g8.jpg",
+    images: [
+      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851910-1024x682.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851909-1024x682.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851896-1-1024x682.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851899.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851887-3.jpg"
+    ],
+    address: "264 Đ. Nam Kỳ Khởi Nghĩa, Phường 14, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "59,000 - 12,990,000",
+    description: `## About CANALIS BAR & LOUNGE
+As one of the long-standing bars in the heart of Saigon, Canalis Bar has increasingly solidified its strong position in the nightlife market. If you're a genuine nightlife enthusiast, you're certainly no stranger to Canalis nightclub.
+
+Operating for over half a decade, Canalis has always been the top choice for music lovers. The quality and service at Canalis Bar are highly rated by the community. The bar continuously updates the latest entertainment trends to best serve today's patrons.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+`,
+    hours: "21:00 PM – 03:00 AM"
+  },
+  {
+    id: 111,
+    name: "CINÉ Saigon",
+    main_image_url: "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-4-768x512.jpg",
+    images: [
+      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-5-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-1-768x614.jpg",
+      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-2-768x614.jpg",
+      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-3-768x512.jpg"
+    ],
+    address: "148 Đ. Cống Quỳnh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About CINÉ Saigon
+Located at 148 Cong Quynh, CINÉ Saigon is the ideal destination for those seeking a sophisticated entertainment space in the heart of Saigon. With its modern design, unique cocktail menu, and vibrant events such as Ladies Night, Weekend Fiesta, and DJ Show, CINÉ Saigon not only offers an exceptional entertainment experience but also serves as a place to create unforgettable memories. Book today to explore the colorful world at CINÉ Saigon – 148 Cong Quynh, the perfect choice for any date, gathering, or relaxing evening.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    `,
+    hours: "19:00 PM – 03.00 AM"
+  },
+  {
+    id: 112,
+    name: "Weeknd SGN",
+    main_image_url: "https://product.hstatic.net/1000268128/product/472313029_122111756444674130_4753240360177019471_n_9ef2dbb275ea4e08936ad5f36f8fa885_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/471794173_122111345426674130_6690422360764581263_n_d6cce10cab0b4e94ac21c8296ee8e99b_master.jpg",
+      "https://product.hstatic.net/1000268128/product/471949404_122111345450674130_8140386225998707633_n_63e2ef7ad5aa4a92a0e94b660c11859b_master.jpg",
+      "https://product.hstatic.net/1000268128/product/472309524_122111756264674130_3666368287625967102_n_095cd119ec2a4315bb17a23f75fa1878_master.jpg",
+       "https://product.hstatic.net/1000268128/product/471838836_122111345900674130_4652910755793145083_n_5881f965d4fa49cb9a9a44bc4484d60d_master.jpg"
+    ],
+    address: "66 Huỳnh Thúc Kháng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Weeknd SGN
+Weeknd SGN - 66 Huynh Thuc Khang - The Never-Ending Party
+
+Located at 66 Huynh Thuc Khang, Weeknd SGN is the ideal destination for those seeking to elevate every moment of their nightlife experience. With its impressive design and modern style, Weeknd SGN welcomes you to a world of endless parties, where music, lights, and emotions merge into one.
+
+Weeknd SGN takes pride in its premium sound system and top-tier DJ lineup, delivering dazzling and mesmerizing music nights. From relaxing deep house tracks to explosive hip-hop, every night at Weeknd SGN is a vibrant artistic performance, helping you forget all your worries and fully immerse yourself in the boundless party atmosphere.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "Check with venue"
+  },
+  {
+    id: 113,
+    name: "Bodega Saigon - 2 Thi Sách",
+    main_image_url: "https://product.hstatic.net/1000268128/product/2024-10-19_b1feb959bcec4e7ca782676d0630c5c9_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/464004981_122113124660548861_7335972789146845066_n_d8b3f35512cc4a48a018304284c3520d_master.jpg",
+      "https://product.hstatic.net/1000268128/product/464036388_122113124570548861_7977975017819783190_n_6ae56423d9104a05ba943e7487d30967_master.jpg",
+      "https://product.hstatic.net/1000268128/product/464066128_122113124576548861_1692144364765567996_n_0d71b4f2f30f420e99424a2868b4eac5_master.jpg",
+      "https://product.hstatic.net/1000268128/product/464174693_122113124582548861_2506192734693032777_n_eede773ecf6b4eaabd8bae65ee7447a8_master.jpg"
+    ],
+    address: "2 Thi Sách, Phường, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Bodega Saigon
+Bodega Saigon - 2 Thi Sach - A Premium Entertainment Destination in the City Center
+
+Located right at 2 Thi Sach, Bodega Saigon is the ideal destination for those seeking a sophisticated and vibrant entertainment space in the heart of Saigon. With its refined design and unique style, Bodega offers a cozy yet energetic atmosphere, perfect for lively parties with friends.
+
+Bodega Saigon stands out with its diverse drink menu, ranging from creative cocktails to premium imported spirits, all crafted by a team of professional bartenders. Each cocktail is not just a beverage but a work of art, delivering a unique and exquisite flavor experience.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "Check with venue"
+  },
+  {
+    id: 114,
+    name: "Bam Bam",
+    main_image_url: "https://product.hstatic.net/1000268128/product/428627046_813388820832732_4511757834995237653_n_8e004e8cc37746b1bd501e4cd2cad4ac_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/358670199_672195304952085_444711235071712138_n_5ebb5793859e4b908dff109f3d67a5a4_master.jpg",
+      "https://product.hstatic.net/1000268128/product/368017876_693677552803860_7444099152597981090_n_e1a0f3cc37b4447d9af50c5351a7dddf_master.jpg",
+      "https://product.hstatic.net/1000268128/product/387732530_18100977229345883_8998390239732236345_n_f51436d4ae4f416997972f3392a9da7d_master.jpg",
+      "https://product.hstatic.net/1000268128/product/387807864_18100977241345883_5974538377757174818_n_d84285cf79864fbeb36463df35290300_master.jpg"
+    ],
+    address: "41 43 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Bam Bam
+Bam Bam - 41-43 Nam Ky Khoi Nghia, Nguyen Thai Binh Ward, District 1, Ho Chi Minh City - Explode with Music to the Fullest
+
+Located in the bustling center of District 1, Bam Bam is a Saigon bar with a vibrant and youthful style, perfect for young people who 'live life to the fullest'. Come to Bam Bam, let loose and immerse yourself in explosive beats during the most unforgettable moments with friends.
+
+Here, you'll enjoy a premium entertainment space thanks to incredibly cool DJs, a dynamic sound system, and mesmerizing lighting effects. Bam Bam easily wins over even the most discerning customers with its trendy music taste, impressive musical vision, and a unique style: energetic, electrifying, and extremely captivating.
+
+At Bam Bam, customers can savor exquisite drink flavors crafted by talented professional bartenders. With its large capacity, the venue is ideal for friend gatherings or celebratory parties that promise non-stop excitement with family, loved ones, and more.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "19:00PM - 02:00AM"
+  },
+  {
+    id: 115,
+    name: "QUI Bar/Lounge",
+    main_image_url: "https://img.quilounge.com/upload/image/30855/2B7A2602638544930882846385638809185712843129.jpg",
+    images: [
+      "https://img.quilounge.com/upload/image/30855/faefbf34fdc22def6462f73eb6fd3a74908ffc98638820620899891321.jpg",
+      "https://img.quilounge.com/upload/image/30847/bar-area638544931234049050.jpg",
+      "https://img.quilounge.com/upload/image/30847/BUN_4081638544931631895640.jpg",
+      "https://img.quilounge.com/upload/image/30847/dj-booth-1638544931758298288.jpg"
+    ],
+    address: "422 Lê Thánh Tôn, Bến Nghé, Quận 1, Tp.HCM",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About QUI Bar/Lounge
+Nestled on the bustling Le Thanh Ton street in District 1, QUI boasts an elegant and sophisticated space designed by the world-renowned LW Design Group. Featuring warm wood-toned interiors, the venue radiates modernity and refinement.
+
+The menu at QUI focuses on Asian-European fusion small plates, perfect for sharing—whether as a light pre-evening snack or a full meal with friends.
+
+In addition to its unique culinary offerings, QUI presents an array of creative cocktails, premium wines, and Japanese sake and whisky. Guests can enjoy a diverse selection of drinks at the long bar while socializing in a dynamic and stylish atmosphere. With nightly DJ performances, this space is an ideal destination for culinary and mixology experiences. Meticulous attention to detail ensures QUI will satisfy even the most discerning guests.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "5:30PM - 2:00AM"
+  },
+  {
+    id: 116,
+    name: "LOLLA",
+    main_image_url: "https://product.hstatic.net/1000268128/product/434269123_122146985762139716_3172120622135933652_n_aa7eb7ae06854f4e95bb4287c0aa51f9_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/434283049_122146985684139716_5777308467123938946_n_e1d1dd26fed54fe89ec43a2cc4a6b93a_master.jpg",
+      "https://product.hstatic.net/1000268128/product/434852079_122148369014139716_8171025457878595294_n_a9fbfb1a58ac4e14a0eedca4c075fc3e_master.jpg",
+      "https://product.hstatic.net/1000268128/product/414481508_122111468696158483_3248698200475862896_n_5c34a67f1a2d436cade8c787e6edbfcc_master.jpg",
+      "https://product.hstatic.net/1000268128/product/414481508_122111468696158483_3248698200475862896_n_f1190756fd5b4a4f9d4800e90fa5b35c_master.jpg"
+    ],
+    address: "213 Calmette, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About LOLLA
+LOLLA - 213 Calmette - The Nighttime Destination for Vibrant Music Enthusiasts
+
+If you're looking to escape the busy, hectic daily life, LOLLA is the perfect choice for you. Located on a bustling main road in District 1, LOLLA stands out with its modern yet sophisticated style. As one of Saigon's most beloved bar destinations, it is also known as one of the city's most luxurious entertainment spots.
+
+With the goal of creating a perfect destination—from the ambiance to the music—LOLLA regularly features renowned DJs and top famous Vietnamese singers. The sound and lighting systems are frequently upgraded, promising to deliver the most energetic and exhilarating beats.
+
+If you're searching for a place to gather with friends, celebrate with colleagues, or hold a class reunion, LOLLA is undoubtedly an excellent suggestion. When you come here, you'll enjoy delicious, palate-pleasing drinks in an uplifting musical atmosphere. Many attractive discounted combos are waiting for you at the venue.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "2:00PM - 2:00AM"
+  },
+  {
+    id: 117,
+    name: "Zion Sky Lounge & Dining",
+    main_image_url: "https://product.hstatic.net/1000268128/product/2023-07-07_dd2a21eb88294e408ce178d8bbb226ce_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/2020-12-14_fe95336e27ec4b64a4d02dd569d1f4a9_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2022-08-26_24fe58b26a754c759fd0b0f9f5ad2f23_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2024-09-05_d486ee1c9e88428ebd9512a100f18060_master.jpg",
+      "https://product.hstatic.net/1000268128/product/img_6595_6d7829cf998a46de9fa2faeefed46be6_master.jpg"
+    ],
+    address: "87A Hàm Nghi, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Zion Sky Lounge & Dining
+Zion Sky Lounge & Dining - 87A Ham Nghi - The Ultimate Luxury Nighttime Party in Saigon
+
+Boasting a prime location in the heart of District 1, Zion Sky Lounge & Dining is a renowned Saigon sky bar, lounge, and dining destination famous for its "million-dollar" rooftop view, capturing the entire city at a glance. Upon arrival, you will be mesmerized by the splendid space featuring a stylish neoclassical architectural design.
+
+Although newly opened for a short time, Zion Sky Lounge & Dining has quickly established its position in the nightlife scene. Here, guests can enjoy premium performances by top Vietnamese DJs and artists, along with the latest trending music, updated regularly. The high-end sound and lighting systems are also carefully invested in to ensure the most dynamic audio quality.
+
+Additionally, Zion Sky Lounge & Dining stands out with its diverse drink menu. Immersing yourself in captivating music and the delightful flavors of expertly crafted cocktails or fine wines will undoubtedly create unforgettable experiences for you.
+
+With a capacity of up to 300 people, Zion Sky Lounge & Dining is an ideal destination for weekend fun with friends, class reunions, or gatherings with colleagues.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "5:00PM - 2:00AM"
+  },
+  {
+    id: 118,
+    name: "LOCO Complex",
+    main_image_url: "https://product.hstatic.net/1000268128/product/448643039_384742417914594_3525524312485478001_n_4ea3904448074dcdb3160e3853d9ec2e_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/378137275_217779064610931_8553371407773799775_n_1fa83c56035b4b819846fe02b4079a80_master.jpg",
+      "https://product.hstatic.net/1000268128/product/39f3a9082df8fda6a4e9_e2ecb67fac9e4a4fbffaf4f1885f4ea1_master.jpg",
+      "https://product.hstatic.net/1000268128/product/431625540_322621324126704_4139863271706901556_n_1e029a86591f40e6bb7370de2af0fbd4_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2d7e6fbbeb4b3b15625a_02de226faa304a5498c17dbf2c5ecc89_master.jpg"
+    ],
+    address: "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About LOCO Complex
+LOCO Complex - 11 Nam Quoc Cang, Pham Ngu Lao Ward, District 1, Ho Chi Minh City - A Renowned Luxury and Modern Entertainment Destination in Saigon.
+
+Located in the heart of District 1, LOCO Complex attracts numerous visitors with its perfect combination of a spacious layout and unique, innovative design. Situated in a prime location within one of the city's top entertainment complexes, this Saigon bar promises to deliver exceptional experiences to its guests.
+
+One of the standout features of LOCO Complex is its high-quality sound and lighting system, which meets international standards. When you visit, you'll immerse yourself in a vibrant musical atmosphere with performances by professional DJs and famous singers from across Vietnam. The venue also offers an outdoor space for guests who wish to enjoy the night view.
+
+At LOCO Complex, guests also have the opportunity to enjoy delicious drinks, expertly crafted by the skilled hands of talented bartenders. With a capacity of up to 300 people, LOCO Complex is an ideal choice for travel groups, colleague gatherings, or meetings with friends.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "6:00PM - Hết khách"
+  },
+  {
+    id: 119,
+    name: "Neighborhood SGN",
+    main_image_url: "https://product.hstatic.net/1000268128/product/images__1__9d96182568a94346b816cd747d1ab372_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/6f640c417acd11d1190559685f3d451c_cb9f531c87f54f9b925cd9a806925e97_master.jpg",
+      "https://product.hstatic.net/1000268128/product/club-la-gi-3_df20fdf61dbb47e98509f83e0be299af_master.jpg",
+      "https://product.hstatic.net/1000268128/product/images_8d25202cfd574d06b60fbe72c87f1cb6_master.jpg",
+      "https://product.hstatic.net/1000268128/product/club-la-gi-5_c06f5fa67a2a49669fc45d855e55c15c_master.jpg"
+    ],
+    address: "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Neighborhood SGN
+Neighborhood SGN - 11 Nam Quoc Cang - Where Emotions Connect, and Joy Unfolds.
+
+Nestled on a vibrant city street, Neighborhood SGN is an unmissable destination for enthusiasts of dynamic nightlife and unforgettable moments. Here, modernity meets distinctive style, crafting a unique atmosphere that awakens all the senses.
+
+Neighborhood SGN is equipped with an advanced sound and lighting system, delivering captivating artistic performances by renowned DJs. Feel the stirring rhythms of house, techno, and EDM as they place you at the heart of an electrifying party. Every night at Neighborhood SGN is an opportunity to connect and elevate your emotions.
+
+Beyond the music, Neighborhood SGN offers a diverse and creative drink menu. From flavorful cocktails to premium spirits, the talented bartending team ensures a complete and memorable experience. Let Neighborhood SGN connect your emotions and create unforgettable memories.
+
+## Highlights
+- **Free WiFi**
+- **Credit Card Payments Accepted**
+- **Car Parking Available**
+- **Event Decoration Services**   
+
+## Perfect For
+- **Nightlife enthusiasts**
+- **Music lovers**
+- **Social gatherings**
+- **Special events and celebrations**
+- **Long-standing bar experiences**
+- **Tourists seeking authentic Saigon nightlife**
+    
+    `,
+    hours: "4:00PM - 4:00AM"
+  },
+  {
+    id: 120,
+    name: "A Good Bar",
+    main_image_url: "https://9club.vn/wp-content/uploads/2025/08/537757364_122113337912962568_874988424014254852_n-768x768.jpg",
+    images: [
+     "https://9club.vn/wp-content/uploads/2025/08/539849837_122113916768962568_7071916227415466379_n-768x960.jpg",
+     "https://9club.vn/wp-content/uploads/2025/08/AAR00289-768x712.jpeg",
+     "https://9club.vn/wp-content/uploads/2025/08/AAR00054-768x1151.jpeg",
+     "https://9club.vn/wp-content/uploads/2025/08/538770312_122113337870962568_7368731004611674844_n-768x1156.jpg"
+    ],
+    address: "39 Lý Tự Trọng, Bến Nghé , Quận 1 , Thành phố Hồ Chí Minh",
+    phone: "N/A",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About A Good Bar
+A modern social club in District 1 offering a balanced space—relaxed yet vibrant—perfect for unwinding with friends or colleagues after work.
+
+## Highlights:
+
+- **Sophisticated lounge atmosphere with stylish interiors and cozy seating**
+- **Curated music selection (jazz, R&B, deep house) and occasional weekend DJ sets**
+- **Creative signature cocktails, premium spirits, and professional service**
+
+## Perfect For:
+- **Casual gatherings and relaxed nightlife**
+- **Intimate dates or small celebrations**
+- **Those seeking a chic but comfortable social vibe**
+    
+    `,
+    hours: "5:30PM – 1:00AM"
+  }
 ];

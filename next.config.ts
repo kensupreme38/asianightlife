@@ -261,6 +261,18 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "chillvietnam.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "img.quilounge.com",
+        port: "",
+        pathname: "/**",
+      }
     ],
     // Image optimization settings
     formats: ["image/webp", "image/avif"],

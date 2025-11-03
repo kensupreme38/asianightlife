@@ -59,14 +59,17 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
             </Badge>
           </div>
 
+          <div className="absolute top-3 right-3 hidden md:block">
+            <div className="hidden md:block text-white font-bold text-xs bg-black/60 px-4 py-1 rounded-xl">
+                {venue.price}
+            </div>
+          </div>
+
           {/* Category & Price */}
           <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end">
-            <Badge variant="secondary" className="bg-black/60 text-white max-w-[60%] truncate">
+            <Badge variant="secondary" className="bg-black/60 text-white truncate text-xs">
               {venue.category}
             </Badge>
-            <div className="hidden md:block text-white font-bold text-lg">
-              {venue.price}
-            </div>
           </div>
         </div>
 

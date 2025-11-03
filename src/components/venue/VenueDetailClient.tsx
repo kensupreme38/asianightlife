@@ -13,7 +13,6 @@ import { VenueImageMasonry } from "@/components/venue/VenueImageMasonry";
 import { VisitUsMap } from "@/components/venue/VisitUsMap";
 import { BookingForm } from "@/components/venue/BookingForm";
 import { ktvData } from "@/lib/data";
-import { Skeleton } from "@/components/ui/skeleton";
 
 const VenueDetailClient = ({ id }: { id: string }) => {
   const [hasMounted, setHasMounted] = useState(false);
