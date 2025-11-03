@@ -11,7 +11,7 @@ export const ktvData = [
     ],
     address: "35 Selegie Rd, #03-07, Parklane Shopping Mall",
     country: "Singapore",
-    phone: "+65 87501825",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "800-900k",
     description: `## About Iconic KTV
@@ -43,7 +43,7 @@ Iconic is **newly opened** with over 30 girls. The premises are at the New K2 lo
     address:
       "27 29 31 Đường 9A, Xã Bình Hưng, Huyện Bình Chánh, Thành phố Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Karaoke BOSS KTV (9A Street)
@@ -79,7 +79,7 @@ Located in Binh Chanh District of Ho Chi Minh City, Karaoke BOSS KTV is a modern
     address:
       "124 - 130 Đường 9A, KDC Trung Sơn, Bình Hưng, Bình Chánh, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Combos from 3,300,000₫",
     description: `## About Matrix Karaoke KTV (Trung Son)
@@ -116,7 +116,7 @@ Matrix Karaoke KTV is a stylish karaoke destination in Ho Chi Minh City, featuri
     address:
       "130 Đường 9A, KDC Trung Sơn, Bình Chánh, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Combos from 3,000,000₫",
     description: `## About Monaco Karaoke KTV (Trung Son)
@@ -149,7 +149,7 @@ Monaco Karaoke KTV is a luxurious karaoke destination in Ho Chi Minh City, part 
     address:
       "31 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Atlantis KTV (De Tham)
@@ -180,7 +180,7 @@ Modern, centrally located venue in District 1 with private rooms across differen
     address:
       "57 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About KTV TULIP (Pham Viet Chanh)
@@ -211,7 +211,7 @@ Modern, upscale karaoke venue in District 1 with stylish rooms, premium sound an
     address:
       "78 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Night Star KTV (Q1)
@@ -241,7 +241,7 @@ Energetic, modern karaoke venue in central Saigon featuring sound and lighting t
     address:
       "155 Nguyễn Văn Cừ, Phường 2, Quận 5, Thành phố Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Karaoke RED (Nguyen Van Cu)
@@ -268,7 +268,7 @@ Modern karaoke venue in District 5 with stylish rooms, upgraded sound and lighti
     address:
       "1127 Trần Hưng Đạo, Phường 5, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About 1127 KTV (Tran Hung Dao)
@@ -295,7 +295,7 @@ Contemporary karaoke venue in District 5 offering stylish private rooms, upgrade
     address:
       "750 Nguyễn Văn Quá, Quận 12, Thành phố Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Golden Bell KTV (Nguyen Van Qua)
@@ -325,7 +325,7 @@ Family‑friendly karaoke venue with modern rooms, lively lighting, and convenie
     address:
       "82-84 Calmette, Phường Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About C3 Saigon KTV (Calmette)
@@ -350,7 +350,7 @@ Premium luxury KTV in central Saigon featuring modern private rooms, professiona
     address:
       "202 Nguyễn Trãi, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Safari KTV (Nguyen Trai)
@@ -380,7 +380,7 @@ Elegant, modern karaoke venue with private rooms, refined lighting, and well‑t
     address:
       "214 Lê Hồng Phong, Phường 4, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About L.V Bistro K (Le Hong Phong)
@@ -407,7 +407,7 @@ Modern karaoke lounge with stylish rooms, strong sound and lighting, and profess
     address:
       "470 Ngô Gia Tự, Phường 4, Quận 10, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Hao Man Party K (Ngo Gia Tu)
@@ -432,7 +432,7 @@ Colorful, modern karaoke venue in District 10 with dynamic lighting and stage‑
     address:
       "99 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "From 1,000,000 VND",
     description: `## About Luxury 99 KTV (Bui Thi Xuan)
@@ -455,7 +455,7 @@ Central District 1 venue offering premium KTV rooms and attentive service. Booki
     address:
       "171 Chợ Lớn, Quận 6, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Rooms from 650,000 VND/hour",
     description: `## About Lucky KTV 2000 (Cho Lon)
@@ -491,7 +491,7 @@ Modern KTV in District 6 offering multiple room sizes and clear pricing. Suitabl
     address:
       "66 Tản Đà, Phường 11, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About JULIA 66 KTV (Tan Da)
@@ -520,7 +520,7 @@ Stylish, comfortable karaoke venue in District 5 with high‑quality sound and l
     address:
       "356 Nguyễn Đình Chiểu, Phường 4, Quận 3, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Karaoke 356 (Nguyen Dinh Chieu)
@@ -549,7 +549,7 @@ Central District 3 karaoke with modern design, professional sound and lighting, 
     address:
       "466 Trần Hưng Đạo, Phường 14, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Dragon-K (Tran Hung Dao)
@@ -578,7 +578,7 @@ Urban, modern karaoke hub in District 5 with advanced sound and lighting, fully 
     address:
       "93 An Dương Vương, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Pearl 93 KTV (An Duong Vuong)
@@ -605,7 +605,7 @@ Elegant, event‑friendly karaoke venue with modern rooms, solid sound and light
     address:
       "165/76 Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Eden Paradise (Nguyen Thai Binh)
@@ -632,7 +632,7 @@ Modern karaoke venue with stage‑style rooms, YouTube connectivity, and VAT inv
     address:
       "184-186 Nguyễn Biểu, Phường 2, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About TheOne KTV (Nguyen Bieu)
@@ -659,7 +659,7 @@ Contemporary karaoke venue featuring stage‑style rooms, YouTube connectivity, 
     address:
       "155 Đào Nam, (Gold 155), TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About 155 Gold Boy KTV (Dao Nam Gold)
@@ -681,7 +681,7 @@ Vibrant, modern KTV with stylish rooms and lively sound/lighting. Ideal for ener
     address:
       "411 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Play Boy KTV (Tran Hung Dao)
@@ -704,7 +704,7 @@ Premium karaoke venue in District 1 with upscale rooms, strong sound and lightin
     ],
     address: "545 Orchard Road, #B1-22, Far East Shopping Centre",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$324",
     description: `## Opening Hours & Tips
@@ -744,7 +744,7 @@ Premium karaoke venue in District 1 with upscale rooms, strong sound and lightin
     ],
     address: "10 Jalan Besar, #05-02, Sim Lim Tower",
     country: "Singapore",
-    phone: "+6511112224",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "S$78",
     description: `## About Club Galaxy
@@ -774,7 +774,7 @@ Galaxy is **recently opened** and has surprised us at Nightlifeasia with a prett
     ],
     address: "B1-00 TPI Building, 62 Cecil Street",
     country: "Singapore",
-    phone: "+65 9238 1098",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "S$78",
     description: `## About MEILI KTV
@@ -804,7 +804,7 @@ Meili is **launching** with more competitive HH beer packages, new girls and a r
     ],
     address: "35 Selegie Road, #05-26, Parklane Shopping Mall",
     country: "Singapore",
-    phone: "+65 92381098",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "S$128",
     description: `## About Avatar KTV
@@ -835,7 +835,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     ],
     address: "1127 Trần Hưng Đạo, Phường 5",
     country: "Vietnam",
-    phone: "+84 769 484 462",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "3000K",
     description: `## About 1127 KTV
@@ -869,7 +869,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     ],
     address: "Textile Centre level 7 (via lifts 7 or 8), Singapore 199018",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$287",
     description: `## About Catwalk KTV
@@ -905,7 +905,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     ],
     address: "New World Centre #02‑16, 1 Jalan Besar, Singapore 209037",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$230",
     description: `## About Elite KTV
@@ -944,7 +944,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     ],
     address: "Cuppage Plaza B2-01, Singapore 228796",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$254",
     description: `## About District1 KTV
@@ -981,7 +981,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     ],
     address: "Hotel Royal 02‑02, Singapore 307964",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$224",
     description: `## About UMe KTV
@@ -1020,7 +1020,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "114 Middle Road, Level 7, 9, Singapore 188971",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$264",
     description: `## About Level9 / Space7 KTV
@@ -1057,7 +1057,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "Orchard Plaza #05-20, 150 Orchard Road, Singapore 238841",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$341",
     description: `## About Empire KTV
@@ -1094,7 +1094,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "217A Lavender Street, Singapore 338772",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$239",
     description: `## About Gala KTV
@@ -1127,7 +1127,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "Golden Mile Tower B1-35, Singapore 199589",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$260",
     description: `## About Fyou KTV
@@ -1160,7 +1160,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "2 Foch Road, Singapore 209252",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$238",
     description: `## About New Lisbo KTV
@@ -1200,7 +1200,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "277 Geylang Road, Level 2, Singapore 389327",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$229",
     description: `## About 277 KTV
@@ -1241,7 +1241,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "Havelock 2 B1-19, Singapore 059763",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$296",
     description: `## About B12 KTV
@@ -1286,7 +1286,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "Peninsula Plaza B1-07, Singapore 179098",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$490",
     description: `## About Deluxe KTV (Singapore Girls)
@@ -1325,7 +1325,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "212A Syed Alwi Road Level 3, Singapore 207745",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$591",
     description: `## About Malay KTV
@@ -1375,7 +1375,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "48A Foch Road, Singapore 209272",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$238",
     description: `## About Ace Club KTV (Singapore Girls) - CLOSED
@@ -1418,7 +1418,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address:
       "Super Bowl Jurong Complex, 1 Yuan Ching Road #01-07, Singapore 618640",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$233",
     description: `## About Phoenix KTV (West Side)
@@ -1447,7 +1447,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "212A Syed Alwi Road level 2, Singapore 207745",
     country: "Singapore",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "$241",
     description: `## About Club MG KTV
@@ -1486,7 +1486,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "124 Đường số 9A, Khu dân cư Trung Sơn, Bình Chánh, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "+84 941 252 119",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Starting from S room 800,000 VND/hr",
     description: `## About Matrix KTV Ho Chi Minh
@@ -1532,7 +1532,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "57 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "+84 877 218 317",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Small Room: 799k VND/hr; Big Room: 999k VND/hr",
     description: `## About 57 Tulip KTV
@@ -1572,7 +1572,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "171 Cho Lon, Ward 11, District 6, Ho Chi Minh",
     country: "Vietnam",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Starting from 700k (normal), 1.5m (sexy)",
     description: `## About Lucky KTV (Ho Chi Minh)
@@ -1622,7 +1622,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "31 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "+84 877 218 317",
+    phone: "+65 8280 8072",
     category: "KTV / Karaoke & Restaurant",
     price: "560,000VND/hr",
     description: `## About Atlantis Karaoke & Restaurant
@@ -1660,7 +1660,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "1127 Trần Hưng Đạo, Ward 5, District 5, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "0388221127",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Starting from S room 500,000 VND/hr",
     description: `## About 1127 KTV (Ho Chi Minh)
@@ -1698,7 +1698,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     images: [],
     address: "93 An Duong Vuong, Ward 7, District 5, Ho Chi Minh",
     country: "Vietnam",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "1m VND (Starting from)",
     description: `## About Pearl KTV (Ho Chi Minh)
@@ -1730,7 +1730,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     images: [],
     address: "21 Bui Thi Xuan, Ward Pham Ngu Lao, District 1, Ho Chi Minh",
     country: "Vietnam",
-    phone: "+65 9777 2575",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "1m VND (Starting from)",
     description: `## About Luxury 21 KTV (Ho Chi Minh)
@@ -1768,7 +1768,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     ],
     address: "84 Tho Nhuom, Tran Hung Dao Ward, Hoan Kiem District, Ha Noi",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Signature by M Village Tho Nhuom
@@ -1816,7 +1816,7 @@ Signature by M Village Thợ Nhuộm is designed with inspiration from the herit
     ],
     address: "Võ Thị Sáu, District 1, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Vo Thi Sau
@@ -1861,7 +1861,7 @@ M Village Living Vo Thi Sau is located near the center of District 1 with many s
     ],
     address: "Hoang Sa Street, District 1, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village Hoang Sa
@@ -1910,7 +1910,7 @@ Located in the heart of District 1 yet offering rare sense of tranquility, Expre
     ],
     address: "24 Le Thanh Ton, Ben Nghe Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Signature by M Village Le Thanh Ton
@@ -1956,7 +1956,7 @@ Signature by M Village Le Thanh Ton is a premium hotel located in the heart of D
     ],
     address: "Tao Dan Park Area, District 1, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Tao Dan Park
@@ -2010,7 +2010,7 @@ A trendy hotel in District 1 gateway, perfect for young travelers seeking a vibr
     ],
     address: "177 Tran Phu, Hai Chau I Ward, Hai Chau District, Da Nang City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Signature by M Village Da Nang Heritage
@@ -2065,7 +2065,7 @@ Touching the century-old story of the city from a historic villa in Thạch Than
     ],
     address: "Tu Xuong Street, District 3, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About President Maison Signature by M Village
@@ -2121,7 +2121,7 @@ Nestled quietly on Tú Xương Street in the heart of District 3, President Mais
     ],
     address: "Thi Sach Street, District 1, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Premier Hotel Thi Sach
@@ -2177,7 +2177,7 @@ Right in the heart of District 1, M Village Premier Hotel Thi Sách blends East-
     ],
     address: "74 Hai Ba Trung, Ben Nghe Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Signature by M Village Hai Ba Trung
@@ -2236,7 +2236,7 @@ The art of Indochina wonders. A meticulous hospitality experience inside the con
     address:
       "46 Thao Dien Street, Thao Dien Ward, District 2, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village 46 Thao Dien
@@ -2292,7 +2292,7 @@ Located in the heart of Thảo Điền's creative and energetic scene, Express T
     ],
     address: "197/8 Hoang Van Thu, Ward 08, Phu Nhuan District, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,100,000 VND/night",
     description: `## About M Village Living Hoang Van Thu
@@ -2347,7 +2347,7 @@ Super convenient location with only 20 minutes to the airport and central distri
     ],
     address: "25/14 Nguyen Binh Khiem, Ben Nghe ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,400,000 VND/night",
     description: `## About Express by M Village Nguyen Binh Khiem
@@ -2409,7 +2409,7 @@ Choose Express Nguyễn Bỉnh Khiêm for your 'dual-standard' business trip. Lo
     ],
     address: "Ky Dong Street, District 3, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Ky Dong
@@ -2466,7 +2466,7 @@ A great room to rest after a leisure trip or business trip. The room is spacious
     ],
     address: "659 Nguyen Kiem, Ward 9, Phu Nhuan District, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Nguyen Kiem
@@ -2534,7 +2534,7 @@ The building boasts a convenient location, just 5 minutes from the airport and c
     ],
     address: "217 Nguyen Van Thu, Da Kao Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,450,000 VND/night",
     description: `## About Express by M Village Nguyen Van Thu
@@ -2617,7 +2617,7 @@ Inspired by the Brutalism style through cement details, the building gives you a
     ],
     address: "157 Nguyen Du, Ben Thanh Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village Nguyen Du
@@ -2683,7 +2683,7 @@ Express by M Village Nguyen Du offers modern and comfortable accommodation in th
     ],
     address: "88 Vo Nguyen Giap, Man Thai Ward, Son Tra District, Da Nang City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,600,000 VND/night",
     description: `## About Signature by M Village Beachfront Hotel
@@ -2775,7 +2775,7 @@ Nestled between Son Tra gentle coastline and Danang's vibrant rhythm, Signature 
     ],
     address: "325 - 327 Pham Ngu Lao, Pham Ngu Lao Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 2,000,000 VND/night",
     description: `## About Express by M Village Pham Ngu Lao
@@ -2861,7 +2861,7 @@ Located in the famous Western Quarter in the heart of Saigon, the building is a 
     ],
     address: "197 Dien Bien Phu, Vo Thi Sau Ward, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village Dien Bien Phu Q3
@@ -2931,7 +2931,7 @@ Express by M Village Dien Bien Phu Q3 offers modern and comfortable accommodatio
     ],
     address: "200 Ly Tu Trong, Ben Thanh Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Ly Tu Trong
@@ -3000,7 +3000,7 @@ M Village Hotel Ly Tu Trong offers modern and comfortable accommodation in the h
     ],
     address: "359/1 Le Van Sy, Ward 13, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,300,000 VND/night",
     description: `## About M Village Living Le Van Sy
@@ -3084,7 +3084,7 @@ In an alley on a bustling street in District 3, the building has a striking appe
     ],
     address: "214 Nam Ky Khoi Nghia, Ward 6, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,250,000 VND/night",
     description: `## About M Village Living Nam Ky Khoi Nghia
@@ -3168,7 +3168,7 @@ The building is located right near the main road from the airport to the city ce
     ],
     address: "24/22 Dong Du, Ben Nghe Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,800,000 VND/night",
     description: `## About Express by M Village Dong Du
@@ -3257,7 +3257,7 @@ A place that allows you to enjoy a modern life in the heart of the bustling city
     ],
     address: "298/107/2 Dien Bien Phu, Ward 17, Binh Thanh District, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Dien Bien Phu (The Tropic)
@@ -3343,7 +3343,7 @@ A villa with an orange tone outside the building is hidden in an alley. The gree
     ],
     address: "127 Ly Chinh Thang, Vo Thi Sau Ward, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Ly Chinh Thang
@@ -3420,7 +3420,7 @@ You will experience a comfortable and airy space in the Deluxe room of M Village
     ],
     address: "44A Cuu Long, Ward 2, Tan Binh District, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 950,000 VND/night",
     description: `## About M Village Living Cuu Long
@@ -3504,7 +3504,7 @@ Located in a small alley, this place is extremely quiet so it is suitable for yo
     ],
     address: "7/1 Ho Bieu Chanh, Ward 12, Phu Nhuan District, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,250,000 VND/night",
     description: `## About M Village Living Ho Bieu Chanh
@@ -3587,7 +3587,7 @@ Inside the villa in the alley is a very distinct architecture with flamingo pink
     ],
     address: "74 Hai Ba Trung, Ben Nghe Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Hai Ba Trung
@@ -3669,7 +3669,7 @@ Located in the heart of District 1, M Village Hotel Hai Ba Trung offers modern a
     ],
     address: "157 Nguyen Du, Ben Thanh Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Nguyen Du
@@ -3757,7 +3757,7 @@ Located in the heart of District 1, M Village Hotel Nguyen Du offers modern acco
     address:
       "WiYO Complex (4th Floor), N3C street – The Global City, Do Xuan Hop Street, An Phu Ward, Thu Duc City, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village Global City
@@ -3839,7 +3839,7 @@ A complex living space designed for young residents right in The Global City –
     address:
       "17-21 Nguyen Van Cu Street, Ngoc Lam Ward, Long Bien District, Hanoi City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Long Bien
@@ -3934,7 +3934,7 @@ A peaceful retreat in Long Bien, where you can enjoy a lush green garden, unleas
     ],
     address: "Kim Ma Street, Ba Dinh District, Hanoi City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Kim Ma
@@ -4022,7 +4022,7 @@ Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers moder
     ],
     address: "Da Nang City Centre, Da Nang City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Da Nang Centre
@@ -4109,7 +4109,7 @@ Located in the heart of Da Nang City Centre, M Village Hotel Da Nang Centre offe
     address:
       "54 Tho Nhuom Street, Tran Hung Dao Ward, Hoan Kiem District, Hanoi",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Tho Nhuom
@@ -4202,7 +4202,7 @@ M Village Hotel Tho Nhuom - The first Lifestyle hotel in Hanoi, featuring youthf
     address:
       "10 - 12 Nguyen The Loc, Bay Hien Ward, Ho Chi Minh City, Viet Nam",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 850,000 VND/night",
     description: `## About Express by M Village Nguyen The Loc
@@ -4285,7 +4285,7 @@ Just minutes from Tan Son Nhat Airport's Terminal 3, Express by M Village Nguyen
     address:
       "120/10-12-14 Nguyen Van Huong, The 5th Street, Thao Dien Ward, Thu Duc City, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Nguyen Van Huong
@@ -4371,7 +4371,7 @@ Location next to the Saigon River enables you to go for a walk after tiring work
     ],
     address: "No. 46, 47 Street, Thao Dien Ward, Thu Duc City, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living 47 Thao Dien
@@ -4457,7 +4457,7 @@ Located in a quiet street with a spacious old villa campus. The rooms are design
     ],
     address: "Ton That Dam Street, District 1, Ho Chi Minh City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Ton That Dam
@@ -4544,7 +4544,7 @@ Located in the heart of District 1, M Village Hotel Ton That Dam offers modern a
     address:
       "No. 38 Hai Ba Trung Street, Trang Tien Ward, Hoan Kiem District, Hanoi, Vietnam",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Ho Guom
@@ -4634,7 +4634,7 @@ A contemporary European & Hanoi-inspired hotel located on Hai Ba Trung Street, e
     ],
     address: "Kim Ma Street, Ba Dinh District, Hanoi City",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Hotel Kim Ma
@@ -4720,7 +4720,7 @@ Located in the prestigious Ba Dinh District, M Village Hotel Kim Ma offers moder
     ],
     address: "6E Tu Xuong, Vo Thi Sau Ward, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Tu Xuong
@@ -4803,7 +4803,7 @@ This is a poetic inspiration in the bustling streets thanks to its minimalist de
     ],
     address: "115/3 Tran Quoc Thao Street, Vo Thi Sau Ward, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,150,000 VND/night",
     description: `## About M Village Living Tran Quoc Thao
@@ -4883,7 +4883,7 @@ The apartment is located in a peaceful alley with peaceful beauty, with rows of 
     ],
     address: "44 No. 30 street, Binh An Ward, Thu Duc City, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Tran Nao
@@ -4960,7 +4960,7 @@ A perfect place in a compound area with adjacent villas, and rows of green Japan
     ],
     address: "No. 45C, 59 Street, Thao Dien Ward, Thu Duc City, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 900,000 VND/night",
     description: `## About M Village Living 59 Thao Dien
@@ -5047,7 +5047,7 @@ Nestled in a tranquil Thao Dien alley, our spot in District 2 offers quick 20-mi
     ],
     address: "656 Cach Mang Thang 8, Ward 11, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About M Village Living Cach Mang Thang 8
@@ -5134,7 +5134,7 @@ A miniature Da Lat stands out on the main road in District 3 of the city. The ex
     ],
     address: "124/1 Cao Thang, Ward 4, District 3, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,100,000 VND/night",
     description: `## About M Village Living Cao Thang
@@ -5207,7 +5207,7 @@ In the idyllic setting of a Saigon alley, the building stands out with Western-s
     ],
     address: "22-24 Dinh Cong Trang, Tan Dinh Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village Dinh Cong Trang
@@ -5294,7 +5294,7 @@ Located in a prime location in the center of District 1, it takes you only a few
     ],
     address: "17 Thach Thi Thanh, Tan Dinh Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 800,000 VND/night",
     description: `## About Express by M Village Thach Thi Thanh
@@ -5385,7 +5385,7 @@ The location of the building is convenient for traveling between central distric
     ],
     address: "449 Vo Van Kiet, Co Giang Ward, District 1, HCMC",
     country: "Vietnam",
-    phone: "1900 3311",
+    phone: "+65 8280 8072",
     category: "Hotel",
     price: "From 1,150,000 VND/night",
     description: `## About Express by M Village Vo Van Kiet
@@ -5469,7 +5469,7 @@ Located in a prime location in District 1, Express by M Village Vo Van Kiet offe
     ],
     address: "85, Jln Loke Yew, Taman Miharja, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
     country: "Malaysia",
-    phone: "017-576 0584",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Alexis Club
@@ -5518,7 +5518,7 @@ Welcome to the heart of Kuala Lumpur's vibrant entertainment scene, where culina
     ],
     address: "17, Jalan Selangor, Seksyen 6, 46000 Petaling Jaya, Selangor, Malaysia",
     country: "Malaysia",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     price: "Contact for pricing",
     description: `## About Hermez Club 爱马仕
@@ -5552,7 +5552,7 @@ Hermez Club 爱马仕 is a premium entertainment venue located in Petaling Jaya,
     ],
     address: "2-239, Kompleks Metro Pudu 1, Jalan Metro Pudu, 55100 Kuala Lumpur, Malaysia",
     country: "Malaysia",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "KTV",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.201753080217!2d101.71333845696788!3d3.1290981571927112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc379c449fa3e1%3A0x59b35d3470735152!2sAVA%202%20Executive%20Club!5e1!3m2!1svi!2s!4v1761967686833!5m2!1svi!2s",
     price: "Contact for pricing",
@@ -5585,7 +5585,7 @@ AVA 2 Executive Club is a premium entertainment venue offering sophisticated nig
     ],
     address: "10, Jalan Radin Bagus 3, Bandar Baru Sri Petaling, 57000 Kuala Lumpur, Malaysia",
     country: "Malaysia",
-    phone: "017-343 2210",
+    phone: "+65 8280 8072",
     category: "Pub",
     price: "Contact for pricing",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1693.6244706187829!2d101.70519620156516!3d3.153097818118854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4900765fb5b9%3A0x6742a0a2db253269!2sBanker%20Place!5e1!3m2!1svi!2s!4v1761967874962!5m2!1svi!2s",
@@ -5629,7 +5629,7 @@ Banker Place is a welcoming bar located in Bandar Baru Sri Petaling, Kuala Lumpu
     ],
     address: "3, Lorong Utara C, Pjs 52, 46200 Petaling Jaya, Selangor, Malaysia",
     country: "Malaysia",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Nightclub",
     price: "Contact for pricing",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6774.812316898381!2d101.6399709!3d3.1044478999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bdd1355b93f%3A0x30a3d36e4bd6c62a!2sPJ%20Club!5e1!3m2!1svi!2s!4v1761968200759!5m2!1svi!2s",
@@ -5667,7 +5667,7 @@ Club 3 is a vibrant nightlife venue located in the Petaling Jaya area. Offering 
     ],
     address: "6B Lê Ngô Cát, Phường 7, Quận 3, Ho Chi Minh City, Vietnam",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "600,000 - 900,000 VND/person",
     description: `## About Cheer House Restaurant - Lê Ngô Cát
@@ -5735,7 +5735,7 @@ Cheer House Restaurant - Lê Ngô Cát is an elegant dining establishment specia
     ],
     address: "Contact for address",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Night market",
     price: "Contact for pricing",
     description: `## About Mama's Style Vietnamese Restaurant
@@ -5769,7 +5769,7 @@ Mama's Style Vietnamese Restaurant is an authentic Vietnamese dining establishme
     ],
     address: "8 Nguyễn Văn Tráng, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Empire Club 
@@ -5806,7 +5806,7 @@ Through the Empire Music event series, the club organizes vibrant events, delive
     ],
     address: "264 Đ. Nam Kỳ Khởi Nghĩa, Phường 14, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "59,000 - 12,990,000",
     description: `## About CANALIS BAR & LOUNGE
@@ -5842,7 +5842,7 @@ Operating for over half a decade, Canalis has always been the top choice for mus
     ],
     address: "148 Đ. Cống Quỳnh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About CINÉ Saigon
@@ -5876,7 +5876,7 @@ Located at 148 Cong Quynh, CINÉ Saigon is the ideal destination for those seeki
     ],
     address: "66 Huỳnh Thúc Kháng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Weeknd SGN
@@ -5914,7 +5914,7 @@ Weeknd SGN takes pride in its premium sound system and top-tier DJ lineup, deliv
       "https://product.hstatic.net/1000268128/product/464174693_122113124582548861_2506192734693032777_n_eede773ecf6b4eaabd8bae65ee7447a8_master.jpg"
     ],
     address: "2 Thi Sách, Phường, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Bodega Saigon
@@ -5952,7 +5952,7 @@ Bodega Saigon stands out with its diverse drink menu, ranging from creative cock
       "https://product.hstatic.net/1000268128/product/387807864_18100977241345883_5974538377757174818_n_d84285cf79864fbeb36463df35290300_master.jpg"
     ],
     address: "41 43 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Bam Bam
@@ -5992,7 +5992,7 @@ At Bam Bam, customers can savor exquisite drink flavors crafted by talented prof
       "https://img.quilounge.com/upload/image/30847/dj-booth-1638544931758298288.jpg"
     ],
     address: "422 Lê Thánh Tôn, Bến Nghé, Quận 1, Tp.HCM",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About QUI Bar/Lounge
@@ -6030,7 +6030,7 @@ In addition to its unique culinary offerings, QUI presents an array of creative 
       "https://product.hstatic.net/1000268128/product/414481508_122111468696158483_3248698200475862896_n_f1190756fd5b4a4f9d4800e90fa5b35c_master.jpg"
     ],
     address: "213 Calmette, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About LOLLA
@@ -6070,7 +6070,7 @@ If you're searching for a place to gather with friends, celebrate with colleague
       "https://product.hstatic.net/1000268128/product/img_6595_6d7829cf998a46de9fa2faeefed46be6_master.jpg"
     ],
     address: "87A Hàm Nghi, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Zion Sky Lounge & Dining
@@ -6112,7 +6112,7 @@ With a capacity of up to 300 people, Zion Sky Lounge & Dining is an ideal destin
       "https://product.hstatic.net/1000268128/product/2d7e6fbbeb4b3b15625a_02de226faa304a5498c17dbf2c5ecc89_master.jpg"
     ],
     address: "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About LOCO Complex
@@ -6152,7 +6152,7 @@ At LOCO Complex, guests also have the opportunity to enjoy delicious drinks, exp
       "https://product.hstatic.net/1000268128/product/club-la-gi-5_c06f5fa67a2a49669fc45d855e55c15c_master.jpg"
     ],
     address: "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About Neighborhood SGN
@@ -6192,7 +6192,7 @@ Beyond the music, Neighborhood SGN offers a diverse and creative drink menu. Fro
      "https://9club.vn/wp-content/uploads/2025/08/538770312_122113337870962568_7368731004611674844_n-768x1156.jpg"
     ],
     address: "39 Lý Tự Trọng, Bến Nghé , Quận 1 , Thành phố Hồ Chí Minh",
-    phone: "N/A",
+    phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
     description: `## About A Good Bar
@@ -6211,5 +6211,855 @@ A modern social club in District 1 offering a balanced space—relaxed yet vibra
     
     `,
     hours: "5:30PM – 1:00AM"
+  },
+  {
+    id: 121,
+    name: "District K",
+    main_image_url: "https://bizweb.dktcdn.net/100/493/789/products/district-k-30-thu-khoa-huan-quan-1-tphcm.jpg?v=1759249752877",
+    images: [
+      "https://bizweb.dktcdn.net/100/493/789/products/district-k-30-thu-khoa-huan-quan-1-tphcm.jpg?v=1759249752877"
+    ],
+    address: "30 Thủ Khoa Huân, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About District K
+District K – located at 30 Thủ Khoa Huân, District 1, Ho Chi Minh City – is one of the most luxurious and modern entertainment venues in Saigon. With spacious layout and unique design, District K offers customers premium entertainment experiences.
+
+## Highlights
+- **Luxurious Design**: Modern and premium space
+- **Prime Location**: Center of District 1, Ho Chi Minh City
+- **Professional Sound & Lighting**: International standard sound and lighting system
+- **Premium Service**: Professional and dedicated staff team
+
+## Perfect For
+- **Business professionals and VIP customers**
+- **Friends and colleagues groups**
+- **Parties and special events**
+- **Tourists seeking premium entertainment experiences**
+
+`,
+    hours: "Contact for hours"
+  },
+  {
+    id: 122,
+    name: "THE WANN - 51 BÙI THỊ XUÂN",
+    main_image_url: "https://chillvietnam.com/wp-content/uploads/2023/04/342180709_923682875414636_831424722231152558_n-1024x683.jpg",
+    images: [
+      "https://chillvietnam.com/wp-content/uploads/2023/04/342180709_923682875414636_831424722231152558_n-1024x683.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2023/04/340768678_1695284867571985_5694031446270305140_n-1024x682.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2023/04/340856742_944326333366683_8454920356980783589_n-1024x682.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2023/04/341005486_747418110125380_3315608659102467094_n-1024x683.jpg"
+    ],
+    address: "51 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Beer Garden",
+    price: "150,000 - 5,000,000₫",
+    description: `## About THE WANN
+The Wann beer club is located in the center of District 1, an ideal destination for those who love modern spaces and stylish vibes. With elegant interior design, spacious layout and plenty of natural light, The Wann creates a comfortable and relaxing space for customers.
+
+In addition, the venue features a professional sound system and carefully selected chill music, creating a unique and ultimate chill musical atmosphere. Customers can enjoy a diverse selection of beers, from local specialties to imported beers, all served by professional and enthusiastic staff.
+
+With reasonable prices and a comfortable atmosphere, The Wann beer club is the ideal destination for those who want to relax and enjoy truly comfortable moments after a stressful day of work.
+
+## Highlights
+- **Modern Space**: Elegant interior design with natural lighting
+- **Professional Sound**: Quality sound system with chill music
+- **Diverse Beer Selection**: From local specialties to imported beers
+- **Professional Service**: Enthusiastic and professional service team
+- **Reasonable Prices**: Prices suitable for all customers
+
+## Perfect For
+- **Local & international guests**
+- **Post-work relaxation**
+- **Friends and colleagues groups**
+- **Those who love chill and comfortable spaces**
+
+`,
+    hours: "6:00PM - 2:00AM"
+  },
+  {
+    id: 123,
+    name: "BAIA Saigon - 74 - 76 Nam Kỳ Khởi Nghĩa",
+    main_image_url: "https://cdn.hstatic.net/products/1000268128/2025-06-18__2__89f552c5346f4460be5715b18f9d8271_master.jpg",
+    images: [
+      "https://cdn.hstatic.net/products/1000268128/2025-06-18__2__89f552c5346f4460be5715b18f9d8271_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/2025-07-02__1__c6b15fdb466f4c289b4d689f72616784_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/2025-06-18__1__9105c88f18774d728419875b1fdf66e8_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/2025-06-18_a9bb82f58ef245199abbdaa57ff1a028_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/2025-07-02_5e76468d00d9454eab25354a84fb38c4_master.jpg"
+    ],
+    address: "74-76 Nam Kỳ Khởi Nghĩa, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Beer Garden",
+    price: "Contact for pricing",
+    description: `## About BAIA Saigon
+BAIA Saigon is a modern beer garden & music venue located in the heart of District 1, Ho Chi Minh City. With spacious layout and elegant design, BAIA Saigon delivers a premium entertainment experience with quality music and professional service.
+
+## Highlights
+- **Free WiFi**: High-speed internet connection
+- **Car Parking**: Convenient parking for customers
+- **Card Payment**: Credit card payments accepted
+- **Event Decoration**: Professional event organization and decoration services
+- **Spacious Layout**: Suitable for large groups
+
+## Operating Hours
+- **Monday - Sunday**: 5:00 PM - 3:00 AM
+
+## Perfect For
+- **Friends and colleagues gatherings**
+- **Parties and special events**
+- **Beer garden and music enthusiasts**
+- **Tourists seeking entertainment experiences in Saigon**
+
+`,
+    hours: "5:00PM - 3:00AM (Daily)"
+  },
+  {
+    id: 124,
+    name: "Yoyo Central Garden - Hồ Con Rùa",
+    main_image_url: "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua.webp",
+    images: [
+      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua.webp",
+      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-1.webp",
+      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-3.webp",
+      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-5.webp"
+    ],
+    address: "1 Công Trường Quốc Tế, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Beer Garden",
+    price: "Contact for pricing",
+    description: `## About Yoyo Central Garden
+Yoyo Central Garden Hồ Con Rùa is not just an ordinary beer restaurant, but also a vibrant entertainment destination where you can immerse yourself in an energetic atmosphere, enjoy refreshing beers and experience distinctive street food cuisine.
+
+The highlight of Yoyo Central Garden is its central bar counter, where talented bartenders showcase their skills in mixing fresh beers, from familiar brands to unique craft beer lines.
+
+## Highlights
+- **Prime Location**: Located at 1 Công Trường Quốc Tế, directly opposite Turtle Lake (Hồ Con Rùa), District 3
+- **Central Bar**: Talented bartenders serving fresh beers and craft selections
+- **Street Food**: Distinctive street food cuisine
+- **Vibrant Atmosphere**: Energetic entertainment space with DJ and dancers
+- **Spacious Outdoor Space**: Open-air area with refreshing green space
+
+## Services
+- **Birthday Parties**: Professional event organization with up to 10% discount
+- **Gala Dinners**: Elegant space for corporate events
+- **Conferences**: Suitable for business meetings and conferences
+- **Car Parking**: Convenient parking available
+- **Reservation Service**: Easy online booking
+
+## Operating Hours
+- **Monday - Sunday**: 4:00 PM - 11:45 PM
+
+## Perfect For
+- **Friends and colleagues gatherings**
+- **Birthday parties and celebrations**
+- **Corporate events and conferences**
+- **Tourists seeking authentic Saigon beer garden experience**
+
+`,
+    hours: "4:00PM - 11:45PM (Daily)"
+  },
+  {
+    id: 125,
+    name: "Han Sky Garden",
+    main_image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4e/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
+    images: [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4e/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4d/why-choose-han-sky-garden.jpg?w=900&h=500&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4c/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4f/2-lively-atmosphere-immerse.jpg?w=900&h=500&s=1"
+    ],
+    address: "222 Điện Biên Phủ, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Rooftop / Sky Garden",
+    price: "Contact for pricing",
+    description: `## About Han Sky Garden
+Han Sky Garden is a vibrant rooftop venue in Ho Chi Minh City, offering a lively atmosphere where guests can immerse themselves in an elevated dining and entertainment experience. With stunning city views and a dynamic ambiance, Han Sky Garden provides the perfect setting for memorable gatherings.
+
+## Highlights
+- **Sky Garden Location**: Elevated rooftop setting with panoramic city views
+- **Lively Atmosphere**: Dynamic and energetic entertainment space
+- **Immersive Experience**: Unique ambiance perfect for social gatherings
+- **Modern Design**: Contemporary venue with stylish decor
+- **Prime Location**: Situated in the heart of Ho Chi Minh City
+
+## Perfect For
+- **Friends and colleagues gatherings**
+- **Special occasions and celebrations**
+- **Tourists seeking rooftop experiences in Saigon**
+- **Those looking for a lively atmosphere with city views**
+
+`,
+    hours: "Contact for hours"
+  },
+  {
+    id: 126,
+    name: "B40 – 12-14 Trần Hưng Đạo",
+    main_image_url: "https://9club.vn/wp-content/uploads/2024/11/B40-Done-hcm_18_11zon-768x512.jpg",
+    images: [
+      "https://9club.vn/wp-content/uploads/2024/11/B40-Done-hcm_18_11zon-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/B40-Done-tran-hung-dao_19_11zon-768x512.jpg",
+      "https://product.hstatic.net/1000268128/product/438276027_407847355468569_6005109658751670852_n-min_c31087b5f054409997bbc89e7f2dff36_master.jpg",
+      "https://product.hstatic.net/1000268128/product/431753150_372006582385980_3660472347136910976_n-min_607ab6bd83cc4953a3394b26533c32c5_master.jpg"
+    ],
+    address: "12-14 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About B40
+B40 – 12-14 Trần Hưng Đạo is an ideal entertainment destination in the heart of Saigon, offering a modern space that blends classic and contemporary design, with dynamic sound and lighting. Experience vibrant Hiphop and Techno beats in a sophisticated atmosphere with dedicated service.
+
+With a capacity of 250 guests, B40 is the perfect choice for parties, events, and gatherings with friends and colleagues.
+
+## Highlights
+- **Modern-Classic Design**: Sophisticated space blending modern and classic elements
+- **Dynamic Sound & Lighting**: Professional sound system and lighting
+- **Vibrant Music**: Hiphop and Techno music entertainment
+- **Spacious Capacity**: Accommodates up to 250 guests
+- **Free WiFi**: High-speed internet connection
+- **Card Payment**: Credit card payments accepted
+- **Car Parking**: Convenient parking available
+- **Event Decoration**: Professional event decoration services available
+
+## Operating Hours
+- **Monday - Sunday**: 9:00 PM - 4:00 AM
+
+## Perfect For
+- **Parties and celebrations**
+- **Corporate events**
+- **Friends and colleagues gatherings**
+- **Music enthusiasts seeking vibrant atmosphere**
+- **Young professionals looking for modern entertainment space**
+
+`,
+    hours: "9:00PM - 4:00AM (Daily)"
+  },
+  {
+    id: 127,
+    name: "Cậu Ốc Seafood & Beer - 84 - 86 Trần Hưng Đạo",
+    main_image_url: "https://product.hstatic.net/1000268128/product/433665921_880965054059133_239501639375218009_n_c6bb6db93bba47d4ad1a81a275d28dda_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/433665921_880965054059133_239501639375218009_n_c6bb6db93bba47d4ad1a81a275d28dda_master.jpg",
+      "https://product.hstatic.net/1000268128/product/409220738_798242958998010_8133822375085682575_n_535b471deae94f678adee39d979bf523_master.jpg",
+      "https://product.hstatic.net/1000268128/product/407777141_797416479080658_4854692306517210197_n_5371cb10adc943f896e6f6d1ebcc8c01_master.jpg",
+      "https://product.hstatic.net/1000268128/product/412139258_804736215015351_3977874236341014515_n_c7eb61cb641946739cf6819b0e6fb42e_master.jpg",
+      "https://product.hstatic.net/1000268128/product/417892757_820200773468895_6803518734998228543_n_0362def6ccfb4aefbc6e4b520c13e9c1_master.jpg"
+    ],
+    address: "84-86 Trần Hưng Đạo, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Beer Garden",
+    price: "Contact for pricing",
+    description: `## About Cậu Ốc Seafood & Beer
+Cậu Ốc Seafood & Beer is a popular seafood restaurant and beer venue located in District 1, Ho Chi Minh City. Known for its fresh seafood selection and vibrant atmosphere, this venue offers a perfect combination of delicious Vietnamese seafood dishes and a lively beer garden experience.
+
+## Highlights
+- **Fresh Seafood**: Wide selection of fresh seafood dishes
+- **Beer Garden Atmosphere**: Vibrant and lively beer garden setting
+- **Vietnamese Cuisine**: Authentic Vietnamese seafood specialties
+- **Free WiFi**: High-speed internet connection
+- **Car Parking**: Convenient parking available
+- **Card Payment**: Credit card payments accepted
+
+## Operating Hours
+- **Monday - Sunday**: 4:00 PM - 3:00 AM
+
+## Perfect For
+- **Seafood lovers**
+- **Friends and colleagues gatherings**
+- **Casual dining and drinking**
+- **Groups looking for Vietnamese seafood experience**
+- **Tourists seeking local food and beer culture**
+
+`,
+    hours: "4:00PM - 3:00AM (Daily)"
+  },
+  {
+    id: 128,
+    name: "Bếp Mẹ Ỉn Farm",
+    main_image_url: "https://static.riviu.co/640/image/2020/06/27/057a4c7ad800b4099489d00b15a443eb_output.jpeg",
+    images: [
+      "https://static.riviu.co/640/image/2020/06/27/057a4c7ad800b4099489d00b15a443eb_output.jpeg",
+      "https://static.riviu.co/320/image/2020/06/27/16aee2fa0d43454fbd20c406c5d395fa_output.jpeg",
+      "https://static.riviu.co/320/image/2020/06/27/41a247b13d52d5c13d7a11f81c97d429_output.jpeg",
+      "https://static.riviu.co/320/image/2020/06/27/84fd8e9548869f6fba474fc6c5ecd2e7_output.jpeg",
+      "https://static.riviu.co/320/image/2020/06/27/5ebf23fc77db547eb0cef41e8c85e292_output.jpeg"
+    ],
+    address: "165/50 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Beer Garden",
+    price: "Contact for pricing",
+    description: `## About Bếp Mẹ Ỉn Farm
+Bếp Mẹ Ỉn Farm is a traditional Vietnamese restaurant and beer venue located in District 1, Ho Chi Minh City. Known for authentic Northern Vietnamese cuisine and Hanoi-style fresh beer, this venue offers a cozy atmosphere perfect for gathering with friends and family.
+
+The restaurant specializes in traditional Vietnamese dishes served on traditional trays (mẹt), featuring classic recipes from North to South Vietnam. With its home-style cooking approach and emphasis on clean, healthy ingredients, Bếp Mẹ Ỉn Farm brings the authentic taste of Vietnamese home cooking to Saigon.
+
+## Highlights
+- **Authentic Vietnamese Cuisine**: Traditional dishes from North to South Vietnam
+- **Hanoi-Style Fresh Beer**: Fresh beer (bia hơi) with various brands including Hanoi, Ken, Saigon, and Bac
+- **Traditional Serving Style**: Dishes served on traditional trays (mẹt)
+- **Home-Style Cooking**: Clean ingredients, no MSG, no seasoning powder
+- **Comfortable Atmosphere**: Cozy space perfect for gatherings
+- **Set Meals**: Lunch sets and dinner sets available
+
+## Popular Dishes
+- **Mẹt Heo**: Pork platter with various traditional dishes
+- **Lunch Sets**: Traditional Vietnamese lunch sets
+- **Northern Vietnamese Specialties**: Authentic Hanoi-style dishes
+- **Fresh Beer**: Hanoi fresh beer and other local brands
+
+## Operating Hours
+- **Monday - Sunday**: 9:00 AM - 10:00 PM
+
+## Perfect For
+- **Vietnamese food enthusiasts**
+- **Friends and family gatherings**
+- **Traditional Vietnamese dining experience**
+- **Beer lovers seeking fresh beer**
+- **Those looking for authentic home-style Vietnamese cuisine**
+
+`,
+    hours: "9:00AM - 10:00PM (Daily)"
+  },
+  {
+    id: 129,
+    name: "LAM XUA Restaurant",
+    main_image_url: "https://dulichgiaitri.com/upload/album/LAM7.jpg",
+    images: [
+      "https://dulichgiaitri.com/upload/album/LAM7.jpg",
+      "https://dulichgiaitri.com/upload/album/LAM6.jpg",
+      "https://dulichgiaitri.com/upload/album/LAM3.jpg"
+    ],
+    address: "211b Điện Biên Phủ, Phường Xuân Hòa, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "Contact for pricing",
+    description: `## About LAM XUA Restaurant
+LAM XUA (Lam Xưa) Restaurant offers a unique dining experience that combines familiar and nostalgic Vietnamese cuisine with a traditional atmosphere. The restaurant specializes in classic Vietnamese dishes prepared in the old-fashioned way, bringing back memories of traditional home cooking.
+
+With its authentic recipes and traditional cooking methods, LAM XUA Restaurant provides guests with a taste of Vietnam's culinary heritage, featuring dishes that are both familiar and special.
+
+## Highlights
+- **Traditional Vietnamese Cuisine**: Authentic recipes prepared in the old-fashioned way
+- **Familiar Flavors**: Classic dishes that evoke nostalgia
+- **Traditional Atmosphere**: Space designed to reflect Vietnamese heritage
+- **Heritage Cooking**: Traditional cooking methods and techniques
+- **Comfortable Dining**: Warm and inviting atmosphere for family gatherings
+
+## Perfect For
+- **Vietnamese food enthusiasts**
+- **Family gatherings and celebrations**
+- **Those seeking traditional Vietnamese dining experience**
+- **Tourists wanting to explore authentic Vietnamese cuisine**
+- **Anyone looking for nostalgic and familiar flavors**
+
+`,
+    hours: "Contact for hours"
+  },
+  {
+    id: 130,
+    name: "Hải Sản Hoàng Gia - 180 Trần Hưng Đạo",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-16.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg"
+    ],
+    address: "180 Trần Hưng Đạo, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Trần Hưng Đạo)
+Hải Sản Hoàng Gia is a premium seafood restaurant chain in Ho Chi Minh City, known for serving the freshest seafood from around the world. This branch is located in the heart of District 1, offering an elegant dining experience with luxurious ocean-themed interiors.
+
+## Highlights
+- **Premium Seafood**: Fresh seafood imported from around the world and local specialties
+- **Luxurious Interiors**: Elegant ocean-themed design with VIP private rooms
+- **VIP Rooms**: Private rooms accommodating 5-100 people for family gatherings and business meetings
+- **Free Parking**: Convenient parking for cars and motorcycles
+- **Prime Location**: Situated at the intersection of Trần Hưng Đạo and Cống Quỳnh, District 1
+
+## Signature Dishes
+- **Grilled Lobster with Cheese**: Premium lobster grilled to perfection
+- **King Crab with Salted Egg Hong Kong Style**: Authentic Hong Kong-style preparation
+- **Steamed Grouper Hong Kong Style**: Fresh grouper steamed with traditional flavors
+- **Grilled Abalone with Pepper Sauce**: Premium abalone dish
+- **Abalone Sashimi**: Fresh abalone prepared as sashimi
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood enthusiasts**
+- **Family gatherings and celebrations**
+- **Business meetings and corporate events**
+- **Tourists seeking premium seafood experience**
+- **Special occasions and VIP dining**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 131,
+    name: "Hải Sản Hoàng Gia - 37 Lý Tự Trọng",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg"
+    ],
+    address: "37 Lý Tự Trọng, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Lý Tự Trọng)
+Hải Sản Hoàng Gia - Lý Tự Trọng is one of the premium seafood restaurant branches in District 1, Ho Chi Minh City. Offering fresh seafood from around the world with elegant dining atmosphere and professional service.
+
+## Highlights
+- **Premium Seafood Selection**: Fresh imported and local seafood
+- **VIP Private Rooms**: Accommodating 5-100 people
+- **Luxurious Atmosphere**: Elegant ocean-themed design
+- **Free Parking**: Available for cars and motorcycles
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood lovers**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 132,
+    name: "Hải Sản Hoàng Gia - 192A Lý Tự Trọng",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-16.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg"
+    ],
+    address: "192A Lý Tự Trọng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (192A Lý Tự Trọng)
+Hải Sản Hoàng Gia - 192A Lý Tự Trọng is located in the heart of Ben Thanh Ward, District 1, offering premium seafood dining experience with elegant atmosphere and VIP private rooms.
+
+## Highlights
+- **Premium Seafood**: Fresh seafood from around the world
+- **VIP Rooms**: Private rooms for gatherings and events
+- **Prime Location**: Ben Thanh Ward, District 1
+- **Luxurious Dining**: Elegant ocean-themed atmosphere
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood enthusiasts**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 133,
+    name: "Hải Sản Hoàng Gia - 16 Quốc Hương",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg"
+    ],
+    address: "16 Quốc Hương, Phường Thảo Điền, Quận 2, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Quốc Hương)
+Hải Sản Hoàng Gia - Quốc Hương branch is located in Thao Dien Ward, District 2, offering premium seafood dining experience in a prime location with elegant atmosphere and professional service.
+
+## Highlights
+- **Premium Seafood**: Fresh imported and local seafood selections
+- **VIP Private Rooms**: Perfect for family gatherings and business events
+- **Prime Location**: Thao Dien Ward, District 2
+- **Luxurious Atmosphere**: Elegant ocean-themed design
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood lovers**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 134,
+    name: "Hải Sản Hoàng Gia - 954 Nguyễn Văn Linh",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg"
+    ],
+    address: "954 Nguyễn Văn Linh, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Nguyễn Văn Linh)
+Hải Sản Hoàng Gia - 954 Nguyễn Văn Linh branch is located in Tan Phong Ward, District 7, offering premium seafood dining with luxurious atmosphere and VIP private rooms for gatherings.
+
+## Highlights
+- **Premium Seafood**: Fresh seafood from around the world
+- **VIP Rooms**: Private rooms accommodating 5-100 people
+- **Prime Location**: Tan Phong Ward, District 7
+- **Free Parking**: Available for cars and motorcycles
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood enthusiasts**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 135,
+    name: "Hải Sản Hoàng Gia - 46-48 Phạm Văn Nghị",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-16.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg"
+    ],
+    address: "46-48 Phạm Văn Nghị, Hưng Gia 4, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Phạm Văn Nghị)
+Hải Sản Hoàng Gia - 46-48 Phạm Văn Nghị branch is located in Hung Gia 4, Tan Phong Ward, District 7, offering premium seafood dining experience with elegant atmosphere and professional service.
+
+## Highlights
+- **Premium Seafood**: Fresh imported and local seafood
+- **VIP Private Rooms**: Perfect for family and business gatherings
+- **Prime Location**: Hung Gia 4, Tan Phong Ward, District 7
+- **Luxurious Dining**: Elegant ocean-themed atmosphere
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood lovers**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 136,
+    name: "Hải Sản Hoàng Gia - 608 Đường 3/2",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg"
+    ],
+    address: "608 Đường 3/2, Phường 14, Quận 10, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Đường 3/2)
+Hải Sản Hoàng Gia - 608 Đường 3/2 branch is located in Ward 14, District 10, offering premium seafood dining experience with elegant atmosphere and VIP private rooms.
+
+## Highlights
+- **Premium Seafood**: Fresh seafood from around the world
+- **VIP Rooms**: Private rooms for gatherings and events
+- **Prime Location**: Ward 14, District 10
+- **Free Parking**: Available for convenience
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood enthusiasts**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 137,
+    name: "Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương",
+    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    images: [
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg"
+    ],
+    address: "235 Nguyễn Tri Phương, Quận 10, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "800,000 - 1,000,000₫ per person",
+    description: `## About Hải Sản Hoàng Gia (Nguyễn Tri Phương)
+Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương branch is located in District 10, offering premium seafood dining experience with elegant atmosphere and professional service.
+
+## Highlights
+- **Premium Seafood**: Fresh imported and local seafood selections
+- **VIP Private Rooms**: Perfect for family and business gatherings
+- **Prime Location**: District 10
+- **Luxurious Dining**: Elegant ocean-themed atmosphere
+
+## Operating Hours
+- **Daily**: 10:00 AM - 12:00 AM
+
+## Perfect For
+- **Seafood lovers**
+- **Family gatherings**
+- **Business meetings**
+- **Special occasions**
+
+`,
+    hours: "10:00AM - 12:00AM (Daily)"
+  },
+  {
+    id: 138,
+    name: "Hoshiyo Sky Lounge",
+    main_image_url: "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img1.png?v=179",
+    images: [
+      "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img1.png?v=179",
+      "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img2.png?v=179",
+      "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img3.png?v=179",
+      "https://theme.hstatic.net/200000836865/1001198190/14/home_timeline_banner.png?v=179",
+      "https://file.hstatic.net/200000836865/article/untitled-1-recovered_9885d80b6afe45198cedeb807cdc8c75_large.jpg",
+      "https://file.hstatic.net/200000836865/article/untitled-1-recovered_d5baee6f4d01406681768112270cbaa7_large.jpg",
+      "https://theme.hstatic.net/200000836865/1001198190/14/home_contact_banner_left.png?v=179"
+    ],
+    address: "22 Đường 29, Phường An Khánh, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Rooftop / Sky Garden",
+    price: "Contact for pricing",
+    description: `## About Hoshiyo Sky Lounge
+Hoshiyo Sky Lounge is a hidden gem in the heart of the city, offering an enchanting atmosphere where Japanese elegance meets sophisticated modern design. With stunning views overlooking Landmark 81, this dining lounge combines traditional Japanese flavors with contemporary cocktail culture.
+
+The venue operates in two distinct modes: Dining (5pm - 10pm) featuring traditional Japanese cuisine crafted as works of art, and Lounge (10pm - 1am) where guests can immerse themselves in smooth dance moves and captivating EDM rhythms from talented DJs.
+
+## Highlights
+- **Japanese-Inspired Design**: Elegant space with harmonious colors and sparkling lights
+- **Panoramic Views**: Stunning views overlooking Landmark 81
+- **Dual Experience**: Fine dining and vibrant lounge atmosphere
+- **Signature Cocktails**: Unique Japanese-inspired cocktails with complex flavors
+- **Live Music & DJ**: Exceptional music experience with talented DJs
+- **Intimate Atmosphere**: Perfect for special moments and celebrations
+
+## Signature Cocktails
+- **Sukura Sweet Vibe**: Sakuragao Honjozo Sake | Haku Vodka | Sakura Yogurt Cordial (280,000₫)
+- **Yuzu Hiball**: Haku Vodka | Yuzu Cordial | Homemade Coconut Cordial | Soda (280,000₫)
+- **Katuto Onigiri**: Hakuto Gin | Basil Cordial | Dried Apricot | Fermented Rice (280,000₫)
+- **Natsu Bellini**: Hakuto | Lime Juice | Lemon Juice | Peach Syrup | Vanilla Syrup | Coconut Milk | Sparkling Wine (280,000₫)
+
+## Operating Hours
+- **Monday - Sunday**: 5:00 PM - 1:00 AM
+- **Dining**: 5:00 PM - 10:00 PM
+- **Lounge**: 10:00 PM - 1:00 AM
+
+## Perfect For
+- **Special occasions and romantic dates**
+- **Business meetings and corporate events**
+- **Cocktail enthusiasts seeking unique flavors**
+- **Music lovers and nightlife seekers**
+- **Tourists wanting panoramic city views**
+- **Those seeking Japanese-inspired dining and lounge experience**
+
+`,
+    hours: "5:00PM - 1:00AM (Daily)"
+  },
+  {
+    id: 139,
+    name: "The Arth Saigon",
+    main_image_url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi66WnnYbQ8x6LzG11QdlkvBfyNino8PCFJ5I7UUoxWHLLpPh-u00RP9vLCG7oCG6fDR2ErH2sRV6PN_bThGah9rwoyVeJ4nhyjGNG_4VVk_NDyJV8j76DW9dTBIK84v0OuELXiD7I4Nzx5pXUdfP2FduPrGzjnJI-uFITv1fCgnvNgpSoy2j-SCXVFk7k/w516-h640/review-the-arth-saigon.jpg",
+    images: [
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi66WnnYbQ8x6LzG11QdlkvBfyNino8PCFJ5I7UUoxWHLLpPh-u00RP9vLCG7oCG6fDR2ErH2sRV6PN_bThGah9rwoyVeJ4nhyjGNG_4VVk_NDyJV8j76DW9dTBIK84v0OuELXiD7I4Nzx5pXUdfP2FduPrGzjnJI-uFITv1fCgnvNgpSoy2j-SCXVFk7k/w516-h640/review-the-arth-saigon.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjB0XlJ475DzBOgrNnj5afumMtxuFfc_1yf2dglIt--Gg6KVPSNxTgnMPK9-Wn4JReqwGoPrdEy_WKYCrmDtUacSbug539HF9yfPMh1FlKQm22rkXSp_pWNCK9zC1k8WlrJsEoyCp-KBZPet-XniAzSH9I1wPwxVc84TtbknLS6uz3BOoaHU3iFOdIBoEo/w480-h640/the-arth-saigon-review.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHIq_eskvBHEkOl9Z3xMKfjhljD0vxpqvaxEQf0mcZjZkabgF85O5kjYkpTv3DKgzD-_kmUmLFrgRYqqIG4CVNteL-bqX4w-pqCTJ8ktI2p_0OZbSLmukYd6IYMQc-A4cYLAgSP5uj_lGWQ8zDzaC_YfJx_UUnV-mXbrluGcZsqGnjT3jd0DWnZR1QN3Q/w640-h426/bar-hidden-quan-1.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHxCRJnacAm6m5GnWM1BvQPHRRUIgf8SCcBm1rU6QF1uKWErmk_wfH-3wCrm7qebe-hR1SH-hUq_XG2fMg_N5k4g6PVxT0DOmimYoLEhAAL1qg-_I-ZFczYySkXpXIMd-ftub3fLRc6LkKHGv9pPtL-AF3cllGaxmIEAfaSatjj1OMlxDyKzL1Gsxf-I/w640-h426/bar-dep-quan-1.jpg"
+    ],
+    address: "222 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Lounge / Speakeasy bar",
+    price: "From 260,000₫",
+    description: `## About The Arth Saigon
+The Arth Saigon is a hidden speakeasy bar and dining lounge located on the first floor of an old apartment building in District 1. Inspired by British train station architecture from the previous century, this venue features neoclassical decor with wood tones as the main theme and leather chairs, creating a sophisticated and mysterious atmosphere.
+
+The venue consists of two floors (ground floor and upper floor) with dim lighting that brings a classic and deep feeling to the space. The Arth Saigon offers a private pool room for exclusive events and intimate sofa areas for small groups.
+
+## Highlights
+- **Hidden Speakeasy**: Discreet entrance with mysterious speakeasy atmosphere
+- **British Train Station Architecture**: Unique design inspired by English train stations from the previous century
+- **Neoclassical Decor**: Elegant wood tones and leather furniture
+- **Two-Level Space**: Ground floor and upper floor with sophisticated lighting
+- **Private Pool Room**: Exclusive space for private events
+- **Quality Cocktails**: Classic and bespoke cocktails crafted to perfection
+- **Live Music**: DJ sets and occasional live music events (saxophone performances)
+
+## Menu & Drinks
+- **Classic Cocktails**: Traditional cocktails prepared with expertise
+- **Bespoke Cocktails**: Custom cocktails tailored to guests' mood and preferences
+- **Premium Spirits**: Wide selection of high-quality spirits and wines
+- **Well-Balanced Flavors**: Expertly mixed drinks that are neither too heavy nor too light
+
+## Operating Hours
+- **Monday - Sunday**: 5:00 PM - 2:00 AM
+
+## Perfect For
+- **Hidden bar enthusiasts**
+- **Speakeasy lovers seeking unique atmosphere**
+- **Business meetings and intimate gatherings**
+- **Cocktail connoisseurs**
+- **Those seeking sophisticated and mysterious ambiance**
+- **Photography enthusiasts (flash photography restricted in some areas)**
+
+`,
+    hours: "5:00PM - 2:00AM (Daily)"
+  },
+  {
+    id: 140,
+    name: "Biển Dương 6 - Cách Mạng Tháng 8",
+    main_image_url: "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp"
+    ],
+    address: "205 Cách Mạng Tháng Tám, Phường 4, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "120,000 - 400,000₫ per person",
+    description: `## About Biển Dương 6
+Biển Dương 6 is a renowned Vietnamese-Chinese seafood restaurant located in District 3, Ho Chi Minh City. With a spacious capacity of 440 guests across 1,200 square meters, this restaurant offers an ideal venue for both large and small gatherings, featuring 7 VIP rooms accommodating 10-40 people each.
+
+The restaurant specializes in fresh seafood dishes prepared in both Vietnamese and Chinese styles, offering a diverse menu that satisfies various tastes and preferences.
+
+## Highlights
+- **Spacious Venue**: 1,200m² space accommodating up to 440 guests
+- **7 VIP Rooms**: Private rooms for 10-40 people each
+- **Fresh Seafood**: Premium seafood selection prepared in Vietnamese and Chinese styles
+- **Convenient Location**: Located in the center of District 3
+- **Professional Service**: Dedicated and professional staff team
+- **Event Facilities**: Suitable for parties and celebrations
+- **Free Parking**: Available parking space
+- **Projector & Sound System**: Equipped with audio-visual facilities
+
+## Facilities
+- **VIP Private Rooms**: 7 rooms for private gatherings
+- **Outdoor Seating**: Outdoor dining area available
+- **Karaoke Rooms**: Karaoke facilities available
+- **Event Decoration**: Professional event decoration services
+- **Free WiFi**: High-speed internet connection
+- **VAT Invoice**: Available upon request
+
+## Parking
+- **Car Parking**: 30,000₫ per visit per car
+- **Motorcycle Parking**: 5,000₫ per visit per motorcycle
+
+## Operating Hours
+- **Daily**: 10:00 AM - 11:59 PM
+
+## Perfect For
+- **Seafood enthusiasts**
+- **Family gatherings and celebrations**
+- **Large parties and events**
+- **Business meetings and corporate events**
+- **Those seeking Vietnamese-Chinese cuisine**
+- **Groups looking for spacious dining space**
+
+`,
+    hours: "10:00AM - 11:59PM (Daily)"
+  },
+  {
+    id: 141,
+    name: "Trạm Hầm - Cách Mạng Tháng 8",
+    main_image_url: "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+    images: [
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/a1ed6234-d3ce-4b3d-a352-6da460a5c41a_rs1g3eb.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/de6bb32c-48e9-4236-96e3-478897a4fc57r7utv3zw.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/1520daaa-4f53-4186-a5ec-5c04c3298a2b_7hk_sxd.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/ef4fa0a7-a055-4f89-a7f9-4dca5a632176f3ujnnji.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg"
+    ],
+    address: "540/19 Cách Mạng Tháng 8, Phường 11, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurant",
+    price: "Contact for pricing",
+    description: `## About Trạm Hầm
+Trạm Hầm is a sophisticated and warm restaurant located in District 3, Ho Chi Minh City. With its elegant and cozy atmosphere, Trạm Hầm is an ideal destination for those seeking a comfortable dining experience in a welcoming environment.
+
+The restaurant offers a perfect blend of modern amenities and traditional Vietnamese hospitality, making it suitable for various occasions from family gatherings to friendly meetups.
+
+## Highlights
+- **Elegant & Cozy Atmosphere**: Sophisticated and warm space design
+- **Outdoor Seating**: Outdoor dining area available
+- **Live Music**: Background music to enhance dining experience
+- **Air Conditioning**: Comfortable climate-controlled environment
+- **Family-Friendly**: Suitable for family gatherings
+- **Group-Friendly**: Perfect for friends and colleagues
+- **Free WiFi**: High-speed internet connection
+- **Takeaway Available**: Food available for takeout
+- **Reservations Accepted**: Advance booking available
+
+## Operating Hours
+- **Monday - Sunday**: 5:00 PM - 11:30 PM
+
+## Perfect For
+- **Family gatherings**
+- **Friends and colleagues meetups**
+- **Casual dining experiences**
+- **Special occasions**
+- **Those seeking elegant yet cozy atmosphere**
+
+`,
+    hours: "5:00PM - 11:30PM (Daily)"
   }
 ];

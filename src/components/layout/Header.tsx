@@ -1,12 +1,21 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Instagram, Facebook, Search, Youtube, Menu, X } from "lucide-react";
+import { Instagram, Facebook, Search, Youtube, Menu, X, Building2, SlidersHorizontal, MapPin as MapPinIcon } from "lucide-react";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import Image from "next/image";
 import { Input } from "../ui/input";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useTheme } from "next-themes";
+import { useDebounce } from "@/hooks/use-debounce";
+import { ktvData } from "@/lib/data";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
 import {
   Sheet,
   SheetContent,
@@ -27,24 +36,169 @@ interface SocialLink {
   className?: string;
 }
 
+interface Suggestion {
+  type: 'venue' | 'category' | 'city' | 'country';
+  text: string;
+  count?: number;
+}
+
 export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const [inputValue, setInputValue] = useState(searchQuery ?? "");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const debouncedInput = useDebounce(inputValue, 200);
 
   useEffect(() => {
     setInputValue(searchQuery ?? "");
   }, [searchQuery]);
 
+  // Generate suggestions based on input
+  const suggestions = useMemo(() => {
+    if (!debouncedInput || debouncedInput.length < 1) {
+      // Return popular suggestions when empty
+      const categories = Array.from(new Set(ktvData.map(v => v.category).filter(cat => cat != null))).filter(cat => cat && typeof cat === 'string');
+      const countries = Array.from(new Set(ktvData.map(v => v.country).filter(country => country != null))).filter(country => country && typeof country === 'string');
+      
+      return [
+        ...categories.slice(0, 3).map(cat => ({ type: 'category' as const, text: cat })),
+        ...countries.slice(0, 2).map(country => ({ type: 'country' as const, text: country })),
+      ];
+    }
+
+    const query = debouncedInput.toLowerCase();
+    const suggestions: Suggestion[] = [];
+    const seen = new Set<string>();
+
+    // Search venues by name
+    ktvData.forEach(venue => {
+      if (venue.name && typeof venue.name === 'string' && venue.name.toLowerCase().includes(query) && !seen.has(venue.name)) {
+        suggestions.push({ type: 'venue', text: venue.name });
+        seen.add(venue.name);
+      }
+    });
+
+    // Search by category
+    const categories = Array.from(new Set(ktvData.map(v => v.category).filter(cat => cat != null)));
+    categories.forEach(cat => {
+      if (cat && typeof cat === 'string' && cat.toLowerCase().includes(query) && !seen.has(`category:${cat}`)) {
+        const count = ktvData.filter(v => v.category === cat).length;
+        suggestions.push({ type: 'category', text: cat, count });
+        seen.add(`category:${cat}`);
+      }
+    });
+
+    // Search by city/area from address
+    ktvData.forEach(venue => {
+      if (venue.address && typeof venue.address === 'string') {
+        const address = venue.address.toLowerCase();
+        const parts = address.split(/[,\s]+/);
+        parts.forEach(part => {
+          if (part.length > 2 && part.includes(query) && !seen.has(`city:${part}`)) {
+            suggestions.push({ type: 'city', text: part });
+            seen.add(`city:${part}`);
+          }
+        });
+      }
+    });
+
+    // Search by country
+    const countries = Array.from(new Set(ktvData.map(v => v.country).filter(country => country != null)));
+    countries.forEach(country => {
+      if (country && typeof country === 'string' && country.toLowerCase().includes(query) && !seen.has(`country:${country}`)) {
+        const count = ktvData.filter(v => v.country === country).length;
+        suggestions.push({ type: 'country', text: country, count });
+        seen.add(`country:${country}`);
+      }
+    });
+
+    return suggestions.slice(0, 10);
+  }, [debouncedInput]);
+
+  // Update dropdown open state when suggestions change
+  useEffect(() => {
+    if (suggestions.length > 0) {
+      setIsDropdownOpen(true);
+    } else if (inputValue.length === 0) {
+      setIsDropdownOpen(false);
+    }
+  }, [suggestions.length, inputValue.length]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!isDropdownOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      const inputElement = inputRef.current;
+      const dropdownElement = document.querySelector('[data-suggestion-dropdown]');
+      const mobileDropdownElement = document.querySelector('[data-suggestion-dropdown-mobile]');
+
+      if (
+        inputElement &&
+        dropdownElement &&
+        !inputElement.contains(target) &&
+        !dropdownElement.contains(target)
+      ) {
+        setIsDropdownOpen(false);
+      }
+
+      if (
+        inputElement &&
+        mobileDropdownElement &&
+        !inputElement.contains(target) &&
+        !mobileDropdownElement.contains(target)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
+    const value = e.target.value;
+    setInputValue(value);
+    if (value.length > 0) {
+      setIsDropdownOpen(true);
+    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && onSearchChange) {
       onSearchChange(inputValue || "");
-      setIsSearchOpen(false); // Close search on enter
+      setIsSearchOpen(false);
+      setIsDropdownOpen(false);
+    } else if (e.key === "Escape") {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  const handleSelectSuggestion = (suggestion: Suggestion) => {
+    setInputValue(suggestion.text);
+    if (onSearchChange) {
+      onSearchChange(suggestion.text);
+    }
+    setIsDropdownOpen(false);
+    setIsSearchOpen(false);
+  };
+
+  const getSuggestionIcon = (type: Suggestion['type']) => {
+    switch (type) {
+      case 'venue':
+        return <Building2 className="h-4 w-4" />;
+      case 'category':
+        return <SlidersHorizontal className="h-4 w-4" />;
+      case 'city':
+      case 'country':
+        return <MapPinIcon className="h-4 w-4" />;
+      default:
+        return <Search className="h-4 w-4" />;
     }
   };
 
@@ -93,14 +247,71 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         <div className="hidden md:flex flex-1 max-w-lg mx-4">
           {onSearchChange && (
             <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground z-10 pointer-events-none" />
               <Input
+                ref={inputRef}
                 placeholder="Search for venues, areas..."
                 value={inputValue}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
+                onFocus={() => {
+                  setIsDropdownOpen(suggestions.length > 0);
+                }}
+                onBlur={() => {
+                  // Let click outside handler close the dropdown
+                  // Don't close immediately to allow clicking on suggestions
+                }}
                 className="pl-10 h-10 w-full bg-background/60 backdrop-blur-sm border-border/40 focus:border-primary"
               />
+              
+              {/* Suggestions Dropdown */}
+              {isDropdownOpen && suggestions.length > 0 && (
+                <div 
+                  data-suggestion-dropdown
+                  className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md"
+                  onMouseDown={(e) => {
+                    // Prevent input from losing focus when clicking on dropdown
+                    e.preventDefault();
+                  }}
+                  onClick={(e) => {
+                    // Close dropdown when clicking outside suggestions
+                    if (e.target === e.currentTarget) {
+                      setIsDropdownOpen(false);
+                    }
+                  }}
+                >
+                  <Command shouldFilter={false}>
+                    <CommandList className="max-h-[300px]">
+                      <CommandGroup heading={debouncedInput && debouncedInput.length > 0 ? "Suggestions" : "Popular Searches"}>
+                        {suggestions.map((suggestion, index) => (
+                          <CommandItem
+                            key={`${suggestion.type}-${suggestion.text}-${index}`}
+                            value={suggestion.text}
+                            onSelect={() => handleSelectSuggestion(suggestion)}
+                            className="cursor-pointer"
+                            onMouseDown={(e) => {
+                              e.preventDefault();
+                              handleSelectSuggestion(suggestion);
+                            }}
+                          >
+                            <div className="flex items-center gap-2 flex-1 min-w-0">
+                              <span className="text-muted-foreground flex-shrink-0">
+                                {getSuggestionIcon(suggestion.type)}
+                              </span>
+                              <span className="flex-1 truncate">{suggestion.text}</span>
+                              {suggestion.count !== undefined && (
+                                <span className="text-xs text-muted-foreground flex-shrink-0">
+                                  ({suggestion.count})
+                                </span>
+                              )}
+                            </div>
+                          </CommandItem>
+                        ))}
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -283,12 +494,19 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
       {isSearchOpen && (
         <div className="md:hidden p-2 border-t border-border/40">
           <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground z-10 pointer-events-none" />
             <Input
               placeholder="Search for venues..."
               value={inputValue}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
+              onFocus={() => {
+                setIsDropdownOpen(suggestions.length > 0);
+              }}
+              onBlur={() => {
+                // Let click outside handler close the dropdown
+                // Don't close immediately to allow clicking on suggestions
+              }}
               className="pl-10 h-10 w-full"
               autoFocus
             />
@@ -296,10 +514,62 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               variant="ghost"
               size="icon"
               className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8"
-              onClick={() => setIsSearchOpen(false)}
+              onClick={() => {
+                setIsSearchOpen(false);
+                setIsDropdownOpen(false);
+              }}
             >
               <X className="h-5 w-5" />
             </Button>
+            
+            {/* Mobile Suggestions Dropdown */}
+            {isDropdownOpen && suggestions.length > 0 && (
+              <div 
+                data-suggestion-dropdown-mobile
+                className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md"
+                onMouseDown={(e) => {
+                  // Prevent input from losing focus when clicking on dropdown
+                  e.preventDefault();
+                }}
+                onClick={(e) => {
+                  // Close dropdown when clicking outside suggestions
+                  if (e.target === e.currentTarget) {
+                    setIsDropdownOpen(false);
+                  }
+                }}
+              >
+                <Command shouldFilter={false}>
+                  <CommandList className="max-h-[300px]">
+                    <CommandGroup heading={debouncedInput && debouncedInput.length > 0 ? "Suggestions" : "Popular Searches"}>
+                      {suggestions.map((suggestion, index) => (
+                        <CommandItem
+                          key={`mobile-${suggestion.type}-${suggestion.text}-${index}`}
+                          value={suggestion.text}
+                          onSelect={() => handleSelectSuggestion(suggestion)}
+                          className="cursor-pointer"
+                          onMouseDown={(e) => {
+                            e.preventDefault();
+                            handleSelectSuggestion(suggestion);
+                          }}
+                        >
+                          <div className="flex items-center gap-2 flex-1 min-w-0">
+                            <span className="text-muted-foreground flex-shrink-0">
+                              {getSuggestionIcon(suggestion.type)}
+                            </span>
+                            <span className="flex-1 truncate">{suggestion.text}</span>
+                            {suggestion.count !== undefined && (
+                              <span className="text-xs text-muted-foreground flex-shrink-0">
+                                ({suggestion.count})
+                              </span>
+                            )}
+                          </div>
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </div>
+            )}
           </div>
         </div>
       )}

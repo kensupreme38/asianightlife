@@ -23,6 +23,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
+import { ktvData } from "@/lib/data";
+import { useMemo } from "react";
 
 interface CountrySelectorProps {
   selectedCountry: string;
@@ -52,15 +54,18 @@ const categories = [
   { id: "all", name: "All", icon: Music },
   { id: "Night market", name: "Night market", icon: Utensils },
   { id: "KTV", name: "KTV", icon: Mic },
+  { id: "KTV / Karaoke & Restaurant", name: "KTV / Karaoke & Restaurant", icon: Mic },
   { id: "Nightclub", name: "Nightclub", icon: Radio },
   { id: "Live house / Beer club", name: "Live house / Beer club", icon: Beer },
   { id: "Pub", name: "Pub", icon: Beer },
+  { id: "Beer Garden", name: "Beer Garden", icon: Beer },
   {
     id: "Lounge / Speakeasy bar",
     name: "Lounge / Speakeasy bar",
     icon: Martini,
   },
   { id: "Sky Bar", name: "Sky Bar", icon: Building },
+  { id: "Rooftop / Sky Garden", name: "Rooftop / Sky Garden", icon: Building },
   { id: "Spa / Osen", name: "Spa / Osen", icon: Bath },
   { id: "Massage", name: "Massage", icon: HeartHandshake },
   { id: "Hotel", name: "Hotel", icon: Hotel },
@@ -70,6 +75,7 @@ const categories = [
     name: "Supper (after 12 midnight)",
     icon: Soup,
   },
+  { id: "Restaurant", name: "Restaurant", icon: Utensils },
 ];
 
 const citiesByCountry: Record<string, { id: string; name: string }[]> = {
@@ -111,6 +117,21 @@ export const CountrySelector = ({
 }: CountrySelectorProps) => {
   const availableCities = citiesByCountry[selectedCountry] || [];
   const isCitySelectorEnabled = availableCities.length > 0;
+
+  // Calculate venue counts for each category
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    categories.forEach((category) => {
+      if (category.id === "all") {
+        counts[category.id] = ktvData.length;
+      } else {
+        counts[category.id] = ktvData.filter(
+          (venue) => venue.category === category.id
+        ).length;
+      }
+    });
+    return counts;
+  }, []);
 
   return (
     <section className="py-8 border-b border-border/40">
@@ -190,11 +211,19 @@ export const CountrySelector = ({
               <SelectContent position="item-aligned">
                 {categories.map((category) => {
                   const Icon = category.icon;
+                  const count = categoryCounts[category.id] || 0;
                   return (
                     <SelectItem key={category.id} value={category.id}>
-                      <div className="flex items-center gap-2">
-                        <Icon className="h-4 w-4" />
-                        <span>{category.name}</span>
+                      <div className="flex items-center justify-between w-full gap-2">
+                        <div className="flex items-center gap-2">
+                          <Icon className="h-4 w-4" />
+                          <span>{category.name}</span>
+                        </div>
+                        {count > 0 && (
+                          <span className="text-muted-foreground text-sm">
+                            ({count})
+                          </span>
+                        )}
                       </div>
                     </SelectItem>
                   );

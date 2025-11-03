@@ -149,6 +149,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "file.hstatic.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "product.hstatic.net",
         port: "",
         pathname: "/**",
@@ -270,6 +276,48 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "img.quilounge.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "bizweb.dktcdn.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "viethouzz.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "static.riviu.co",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "dulichgiaitri.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "topgo.vn",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "blogger.googleusercontent.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "attachment.momocdn.net",
         port: "",
         pathname: "/**",
       }
