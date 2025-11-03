@@ -104,7 +104,7 @@ const HomeClient = () => {
           setShowSplash(false);
           setHasMounted(true);
         }}
-        duration={2500}
+        duration={1500}
       />
     );
   }
