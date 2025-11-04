@@ -107,7 +107,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
           </Button>
         </div>
       ) : (
-        <div className="md:px-4 p-2.5 pt-0 mt-2 md:mt-0 flex-shrink-0 h-[42px]"></div>
+        <div className="md:px-4 p-2.5 pt-0 mt-2 md:mt-0 flex-shrink-0"></div>
       )}
 
       {/* Booking Form Dialog */}
