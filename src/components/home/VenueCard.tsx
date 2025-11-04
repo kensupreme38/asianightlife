@@ -32,13 +32,13 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
   };
 
   return (
-    <div className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300">
+    <div className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 h-full flex flex-col">
       <Link
         href={`/venue/${venue.id}`}
-        className="block"
+        className="block flex-1 flex flex-col"
       >
         {/* Image */}
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
           <SimpleImage
             src={venue.main_image_url}
             alt={venue.name}
@@ -74,8 +74,8 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
         </div>
 
         {/* Content */}
-        <div className="md:p-4 px-2.5 space-y-3 py-1">
-          <div>
+        <div className="md:p-4 px-2.5 space-y-3 py-1 flex-1 flex flex-col">
+          <div className="flex-1">
             <div className="flex items-start justify-between mb-1">
               <h3 className="font-bold text-sm md:text-lg line-clamp-1 group-hover:text-primary transition-colors font-headline">
                 {venue.name}
@@ -91,8 +91,8 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
       </Link>
 
       {/* Booking Button - Hidden for Hotels */}
-      {venue.category !== "Hotel" && (
-        <div className="md:px-4 p-2.5 pt-0 mt-2 md:mt-0">
+      {venue.category !== "Hotel" ? (
+        <div className="md:px-4 p-2.5 pt-0 mt-2 md:mt-0 flex-shrink-0">
           <Button
             onClick={handleBooking}
             className="w-full"
@@ -106,6 +106,8 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
             </span>
           </Button>
         </div>
+      ) : (
+        <div className="md:px-4 p-2.5 pt-0 mt-2 md:mt-0 flex-shrink-0 h-[42px]"></div>
       )}
 
       {/* Booking Form Dialog */}

@@ -7,6 +7,7 @@ import { CountrySelector } from "@/components/home/CountrySelector";
 import { VenueGrid } from "@/components/home/VenueGrid";
 import { BookingGuide } from '@/components/home/BookingGuide';
 import { LazyBookingGuide } from '@/components/lazy/BookingGuide';
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 type HomeComponentProps = {
   selectedCountry: string;
@@ -34,21 +35,25 @@ const HomeComponent = memo(({
       <Header searchQuery={searchQuery} onSearchChange={onSearchChange} />
       <main>
         <HeroBanner />
-        <CountrySelector 
-          selectedCountry={selectedCountry}
-          onCountryChange={onCountryChange}
-          selectedCity={selectedCity}
-          onCityChange={onCityChange}
-          selectedCategory={selectedCategory}
-          onCategoryChange={onCategoryChange}
-        />
+        <ScrollReveal animation="fade-up" delay={100} threshold={0.2}>
+          <CountrySelector 
+            selectedCountry={selectedCountry}
+            onCountryChange={onCountryChange}
+            selectedCity={selectedCity}
+            onCityChange={onCityChange}
+            selectedCategory={selectedCategory}
+            onCategoryChange={onCategoryChange}
+          />
+        </ScrollReveal>
         <VenueGrid 
           selectedCountry={selectedCountry}
           selectedCity={selectedCity}
           selectedCategory={selectedCategory}
           searchQuery={searchQuery} 
         />
-        <LazyBookingGuide />
+        <ScrollReveal animation="fade-up" delay={100} threshold={0.2}>
+          <LazyBookingGuide />
+        </ScrollReveal>
       </main>
       <Footer />
     </div>
