@@ -29,13 +29,48 @@ export const VenueGrid = ({
     setDisplayLimit(INITIAL_LIMIT);
   }, [selectedCountry, selectedCity, selectedCategory, searchQuery]);
 
-  const { venues, totalCount } = useVenues({
+  // Query more venues than displayed to preload the next batch
+  // This creates a sequential loop: query displayLimit + LOAD_MORE_INCREMENT
+  const preloadLimit = displayLimit + LOAD_MORE_INCREMENT;
+  const { venues: allVenues, totalCount } = useVenues({
     selectedCountry,
     selectedCity,
     selectedCategory,
     searchQuery,
-    limit: displayLimit,
+    limit: preloadLimit,
   });
+
+  // Only display venues up to displayLimit
+  const displayedVenues = allVenues.slice(0, displayLimit);
+  // Venues to preload (next batch - venues after displayLimit)
+  const preloadVenues = allVenues.slice(displayLimit, preloadLimit);
+
+  // Preload images for next batch using link rel="preload"
+  // This runs sequentially each time displayLimit changes
+  useEffect(() => {
+    if (preloadVenues.length === 0) return;
+
+    const links: HTMLLinkElement[] = [];
+    
+    preloadVenues.forEach((venue) => {
+      // Check if link already exists to avoid duplicate preloads
+      const existingLink = document.querySelector(`link[rel="preload"][as="image"][href="${venue.main_image_url}"]`);
+      if (existingLink) return;
+
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = venue.main_image_url;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+      links.push(link);
+    });
+
+    // Note: We don't cleanup preload links when displayLimit changes 
+    // because we want to keep preloaded images in browser cache
+    // Links will persist in browser cache even if we don't remove them from DOM
+    // The browser will handle cache management automatically
+  }, [displayLimit]); // Re-run when displayLimit changes to preload next batch
 
   const hasMore = totalCount > displayLimit;
 
@@ -54,19 +89,19 @@ export const VenueGrid = ({
               </h2>
               <p className="text-muted-foreground">
                 {totalCount} venues found
-                {venues.length < totalCount && (
+                {displayedVenues.length < totalCount && (
                   <span className="ml-2 text-sm">
-                    (Showing {venues.length} of {totalCount})
+                    (Showing {displayedVenues.length} of {totalCount})
                   </span>
                 )}
               </p>
             </div>
           </div>
         </ScrollReveal>
-        {venues.length > 0 ? (
+        {displayedVenues.length > 0 ? (
           <>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {venues.map((venue, index) => {
+              {displayedVenues.map((venue, index) => {
                 // Calculate delay based on position in row (0, 1, 2) for better staggered effect
                 // For mobile (2 cols): delay by 0, 10
                 // For desktop (3 cols): delay by 0, 10, 20
@@ -87,6 +122,7 @@ export const VenueGrid = ({
                 );
               })}
             </div>
+
             {hasMore && (
               <ScrollReveal animation="fade-up" delay={200} threshold={0.3}>
                 <div className="flex justify-center mt-8">

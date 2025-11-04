@@ -8,6 +8,8 @@ interface SimpleImageProps {
   fill?: boolean;
   width?: number;
   height?: number;
+  loading?: "lazy" | "eager";
+  priority?: boolean;
 }
 
 export const SimpleImage = ({
@@ -17,6 +19,8 @@ export const SimpleImage = ({
   fill,
   width,
   height,
+  loading = "lazy",
+  priority = false,
 }: SimpleImageProps) => {
   // Fallback for invalid src
   if (!src || src.trim() === "") {
@@ -38,6 +42,8 @@ export const SimpleImage = ({
         width={fill ? undefined : width}
         height={fill ? undefined : height}
         className={className}
+        loading={priority ? undefined : loading}
+        priority={priority}
         onError={(e) => {
           console.error("Image failed to load:", src, e);
         }}
