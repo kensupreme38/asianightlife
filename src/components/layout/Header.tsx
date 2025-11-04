@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Search, Youtube, Menu, X, Building2, SlidersHorizontal, MapPin as MapPinIcon } from "lucide-react";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import Image from "next/image";
+import { LogoImage } from "@/components/logo-image";
 import { Input } from "../ui/input";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useTheme } from "next-themes";
@@ -238,12 +239,11 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         <div className="hidden md:flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
             <div className="h-16 w-16 rounded bg-gradient-primary flex items-center justify-center">
-              <Image
-                src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                alt="Asia Night Life Logo"
+              <LogoImage
                 width={64}
                 height={64}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
           </Link>
@@ -485,12 +485,11 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
           <Link href="/" className="flex items-center space-x-2">
             <div className="h-14 w-14 rounded bg-gradient-primary flex items-center justify-center">
-              <Image
-                src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                alt="Asia Night Life Logo"
+              <LogoImage
                 width={56}
                 height={56}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
           </Link>

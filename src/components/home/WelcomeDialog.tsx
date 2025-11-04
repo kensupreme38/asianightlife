@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { PartyPopper } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
+import { LogoImage } from "@/components/logo-image";
 
 interface WelcomeDialogProps {
   open: boolean;
@@ -38,12 +39,11 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
           <div className="absolute bottom-4 left-6">
             <div className="flex items-center space-x-2 mb-2">
               <div className="h-10 w-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Image
-                  src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                  alt="Asia Night Life Logo"
+                <LogoImage
                   width={40}
                   height={40}
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
               <span className="font-bold text-2xl gradient-text">

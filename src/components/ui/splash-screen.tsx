@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
+import { LogoImage } from "@/components/logo-image";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -59,13 +60,11 @@ export const SplashScreen = ({
         <div className="mb-8">
           <div className="flex flex-col items-center mb-6">
             <div className="h-24 w-24 md:h-32 md:w-32 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 shadow-2xl">
-              <Image
-                src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                alt="Asia Night Life Logo"
+              <LogoImage
                 width={120}
                 height={120}
                 className="object-cover"
-                priority
+                loading="eager"
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-2">

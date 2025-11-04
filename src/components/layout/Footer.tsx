@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LogoImage } from "@/components/logo-image";
 
 export const Footer = () => {
   const socialLinks = [
@@ -34,12 +35,11 @@ export const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="h-8 w-8 rounded bg-gradient-primary flex items-center justify-center">
-                <Image
-                  src="https://drive.google.com/uc?export=view&id=1C55Ml5hc3-BvzEo2S5zwkgMyuTViR2Tt"
-                  alt="Asia Night Life Logo"
+                <LogoImage
                   width={32}
                   height={32}
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
               <span className="font-bold text-xl gradient-text">
