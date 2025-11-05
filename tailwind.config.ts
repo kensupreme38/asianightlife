@@ -51,13 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Nightlife theme colors
-        neon: {
-          pink: "hsl(var(--neon-pink))",
-          blue: "hsl(var(--neon-blue))",
-          purple: "hsl(var(--electric-purple))",
+        // Red gradient theme colors
+        red: {
+          bright: "hsl(var(--red-bright))",
+          deep: "hsl(var(--red-deep))",
+          orange: "hsl(var(--red-orange))",
+          pink: "hsl(var(--red-pink))",
         },
-        gold: "hsl(var(--gold-accent))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

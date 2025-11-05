@@ -44,7 +44,7 @@ export function VisitUsMap({ address, venueName, country, phone, mapEmbedUrl, on
 
           {/* Address */}
           <div className="flex gap-4 items-start mb-6">
-            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-neon-blue to-neon-pink text-white shadow-md flex-shrink-0">
+            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-red-deep to-red-orange text-white shadow-md flex-shrink-0">
               <MapPin className="h-6 w-6" />
             </div>
             <div>
@@ -62,7 +62,7 @@ export function VisitUsMap({ address, venueName, country, phone, mapEmbedUrl, on
 
           {/* Contact */}
           <div className="flex gap-4 items-start mb-6">
-            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-neon-blue to-neon-pink text-white shadow-md">
+            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-gradient-to-br from-red-deep to-red-orange text-white shadow-md">
               <Phone className="h-6 w-6" />
             </div>
             <div>

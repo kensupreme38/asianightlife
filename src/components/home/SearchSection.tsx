@@ -278,7 +278,7 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
 
             {/* Location */}
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4 text-neon-pink" />
+              <MapPin className="h-4 w-4 text-red-bright" />
               <span>Current Area</span>
             </div>
 

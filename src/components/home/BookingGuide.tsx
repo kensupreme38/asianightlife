@@ -69,7 +69,7 @@ const steps: Step[] = [
 const StepIcon = ({ icon: Icon }: { icon: React.ElementType }) => (
   <div className="relative mb-4">
     <div
-      className={`mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-neon-blue to-neon-pink shadow-lg neon-glow animate-float`}
+      className={`mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-red-deep to-red-orange shadow-lg neon-glow animate-float`}
     >
       <Icon className="h-10 w-10 text-white" />
     </div>

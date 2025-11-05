@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
-import { LogoImage } from "@/components/logo-image";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -59,16 +58,16 @@ export const SplashScreen = ({
         {/* Logo/Title */}
         <div className="mb-8">
           <div className="flex flex-col items-center mb-6">
-            <div className="h-24 w-24 md:h-32 md:w-32 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 shadow-2xl">
-              <LogoImage
-                width={120}
-                height={120}
-                className="object-cover"
-                loading="eager"
-              />
-            </div>
+            <Image
+              src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/574491904_122108565945057117_3271938103654623430_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=D4MDGERogY4Q7kNvwHuNQPH&_nc_oc=Adni68EYaPMamQJEYgTcmwiT38WHQkblCz6eKl6UKZqDvp_RnNYI-kP-bx_9cVchrUk&_nc_zt=23&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=yAC_kuve8_m8h4mBch5p4g&oh=00_AfjULSMXzbbcJEsvKLJNiCQXs9tyW-cDUaBi_q30YhDsqA&oe=69109393"
+              alt="Asia Night Life Logo"
+              width={150}
+              height={150}
+              className="object-cover mb-4"
+              priority
+            />
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-2">
-              <span className="bg-gradient-to-r from-neon-pink via-purple-500 to-neon-cyan bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-deep via-red-bright to-red-orange bg-clip-text text-transparent">
                 Asia Night Life
               </span>
             </h1>
@@ -80,9 +79,9 @@ export const SplashScreen = ({
 
         {/* Loading Animation */}
         <div className="flex justify-center items-center space-x-2">
-          <div className="w-3 h-3 bg-neon-pink rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-          <div className="w-3 h-3 bg-purple-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-          <div className="w-3 h-3 bg-neon-cyan rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-red-deep rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+          <div className="w-3 h-3 bg-red-bright rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+          <div className="w-3 h-3 bg-red-orange rounded-full animate-bounce"></div>
         </div>
 
         {/* Subtitle */}
@@ -92,7 +91,7 @@ export const SplashScreen = ({
       </div>
 
       {/* Animated border */}
-      <div className="absolute inset-4 border-2 border-neon-pink/30 rounded-lg animate-pulse" />
+      <div className="absolute inset-4 border-2 border-red-bright/30 rounded-lg animate-pulse" />
     </div>
   );
 };

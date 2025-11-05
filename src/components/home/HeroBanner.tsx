@@ -71,8 +71,8 @@ export const HeroBanner = () => {
               <div className="container">
                 <div className="max-w-2xl animate-fade-in">
                   <div className="flex items-center space-x-2 mb-4">
-                    <Star className="h-5 w-5 text-gold fill-current" />
-                    <span className="text-sm font-medium text-gold uppercase tracking-wide">
+                    <Star className="h-5 w-5 text-red-orange fill-current" />
+                    <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
                       Premium Venues
                     </span>
                   </div>
@@ -82,7 +82,7 @@ export const HeroBanner = () => {
                   </h1>
                   
                   <div className="flex items-center space-x-2 mb-4">
-                    <MapPin className="h-4 w-4 text-neon-pink" />
+                    <MapPin className="h-4 w-4 text-red-bright" />
                     <p className="text-lg text-muted-foreground font-medium">
                       {banner.subtitle}
                     </p>
@@ -107,7 +107,7 @@ export const HeroBanner = () => {
             key={index}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? "bg-neon-pink scale-125" 
+                ? "bg-red-bright scale-125" 
                 : "bg-white/40 hover:bg-white/60"
             }`}
             onClick={() => setCurrentSlide(index)}

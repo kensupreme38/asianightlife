@@ -36,7 +36,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 269 100% 69%;
+    --primary: 0 100% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 4.8% 95.9%;
@@ -45,7 +45,7 @@ All colors MUST be HSL.
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 326 100% 74%;
+    --accent: 15 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -53,25 +53,25 @@ All colors MUST be HSL.
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 269 100% 69%;
+    --ring: 0 100% 60%;
 
     --radius: 0.75rem;
     
-    /* Custom tokens for nightlife theme */
-    --neon-pink: 326 100% 74%;
-    --neon-blue: 214 100% 69%;
-    --electric-purple: 269 100% 69%;
-    --gold-accent: 45 100% 72%;
+    /* Custom tokens for red gradient theme */
+    --red-bright: 0 100% 60%;
+    --red-deep: 0 100% 45%;
+    --red-orange: 15 100% 65%;
+    --red-pink: 350 100% 70%;
     
     /* Gradients - Light mode friendly */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-purple)), hsl(var(--neon-pink)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--electric-purple)));
+    --gradient-primary: linear-gradient(135deg, hsl(0 100% 45%), hsl(15 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 100% 60%), hsl(350 100% 70%));
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(240 4.8% 95.9%) 100%);
     
     /* Shadows - Light mode */
-    --shadow-neon: 0 0 30px hsl(var(--electric-purple) / 0.2);
+    --shadow-neon: 0 0 30px hsl(0 100% 60% / 0.2);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 20px hsl(var(--neon-pink) / 0.2);
+    --shadow-glow: 0 0 20px hsl(15 100% 65% / 0.2);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -94,7 +94,7 @@ All colors MUST be HSL.
     --popover: 240 25% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 269 100% 69%;
+    --primary: 0 100% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 15% 15%;
@@ -103,7 +103,7 @@ All colors MUST be HSL.
     --muted: 240 15% 15%;
     --muted-foreground: 240 5% 64%;
 
-    --accent: 326 100% 74%;
+    --accent: 15 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -111,32 +111,32 @@ All colors MUST be HSL.
 
     --border: 240 15% 18%;
     --input: 240 15% 15%;
-    --ring: 269 100% 69%;
+    --ring: 0 100% 60%;
 
-    /* Custom tokens for nightlife theme */
-    --neon-pink: 326 100% 74%;
-    --neon-blue: 214 100% 69%;
-    --electric-purple: 269 100% 69%;
-    --gold-accent: 45 100% 72%;
+    /* Custom tokens for red gradient theme */
+    --red-bright: 0 100% 60%;
+    --red-deep: 0 100% 45%;
+    --red-orange: 15 100% 65%;
+    --red-pink: 350 100% 70%;
     
     /* Gradients - Dark mode */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-purple)), hsl(var(--neon-pink)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--electric-purple)));
+    --gradient-primary: linear-gradient(135deg, hsl(0 100% 45%), hsl(15 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 100% 60%), hsl(350 100% 70%));
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(240 15% 13%) 100%);
     
     /* Shadows - Dark mode */
-    --shadow-neon: 0 0 30px hsl(var(--electric-purple) / 0.3);
+    --shadow-neon: 0 0 30px hsl(0 100% 60% / 0.3);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 20px hsl(var(--neon-pink) / 0.4);
+    --shadow-glow: 0 0 20px hsl(15 100% 65% / 0.4);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 0 100% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 100% 60%;
   }
 }
 
@@ -148,14 +148,14 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-body;
     background-image: 
-      radial-gradient(circle at 20% 80%, hsl(var(--electric-purple) / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--neon-pink) / 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, hsl(0 100% 45% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(15 100% 65% / 0.05) 0%, transparent 50%);
   }
 
   .dark body {
     background-image: 
-      radial-gradient(circle at 20% 80%, hsl(var(--electric-purple) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--neon-pink) / 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, hsl(0 100% 45% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(15 100% 65% / 0.1) 0%, transparent 50%);
   }
 
   /* Scrollbar styling */
@@ -168,7 +168,7 @@ All colors MUST be HSL.
   }
   
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, hsl(var(--electric-purple)), hsl(var(--neon-pink)));
+    background: linear-gradient(45deg, hsl(0 100% 45%), hsl(15 100% 65%));
     border-radius: 4px;
   }
   
