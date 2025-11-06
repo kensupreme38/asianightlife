@@ -13,11 +13,24 @@ import {
   FieldGroup,
 } from "@/components/ui/field"
 import Image from "next/image"
+import { createClient } from "@/utils/supabase/client"
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+
+  const supabase = createClient()
+  
+  const handleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`, // URL sau khi login xong
+      },
+    })
+    if (error) console.error('Error logging in:', error.message)
+  }
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -32,7 +45,7 @@ export function LoginForm({
           <form>
             <FieldGroup>
               <Field>
-                <Button variant="outline" type="button">
+                <Button variant="outline" type="button" onClick={handleLogin}>
                   <Image alt="GoogleIcon" src={'https://img.icons8.com/?size=96&id=V5cGWnc9R4xj&format=png'} width={20} height={20}></Image>
                   Login with Google
                 </Button>
