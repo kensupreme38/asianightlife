@@ -23,6 +23,10 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
 
   const supabase = createClient()
+
+  console.log({
+    origin: window.location.origin
+  })
   
   const handleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
@@ -30,6 +34,9 @@ export function LoginForm({
       options: {
         redirectTo: `${window.location.origin}/auth/callback`, // URL sau khi login xong
       },
+    })
+    console.log({
+      origin: window.location.origin
     })
     if (error) console.error('Error logging in:', error.message)
   }
