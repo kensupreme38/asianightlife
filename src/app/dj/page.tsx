@@ -1,3 +1,7 @@
+import DJClient from "@/components/DJClient";
+
 export default function Page() {
-    return <div>DJ</div>
+    return <div>
+        <DJClient></DJClient>
+    </div>
 }

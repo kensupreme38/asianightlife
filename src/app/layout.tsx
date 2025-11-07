@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Providers from "@/components/app/providers";
 import { getImage } from "@/lib/placeholder-images";
 import ClientLayout from "@/components/layout/ClientLayout";
+import { AuthProvider } from "@/contexts/auth-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,11 +54,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <Providers>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <ClientLayout>{children}</ClientLayout>
-          </TooltipProvider>
+          <AuthProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <ClientLayout>{children}</ClientLayout>
+            </TooltipProvider>
+          </AuthProvider>
         </Providers>
         <script
           type="application/ld+json"

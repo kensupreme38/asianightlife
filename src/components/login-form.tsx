@@ -26,10 +26,12 @@ export function LoginForm({
   
   const handleLogin = async () => {
 
+    const origin = 'https://asianightlife.sg'
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`, // URL sau khi login xong
+        redirectTo: `${origin}/auth/callback`, // URL sau khi login xong
       },
     })
     if (error) console.error('Error logging in:', error.message)
