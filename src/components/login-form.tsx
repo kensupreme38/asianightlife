@@ -27,12 +27,14 @@ export function LoginForm({
   console.log({
     origin: window.location.origin
   })
+
   
   const handleLogin = async () => {
+    const origin = "https://asianightlife.sg"
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`, // URL sau khi login xong
+        redirectTo: `${origin}/auth/callback`, // URL sau khi login xong
       },
     })
     console.log({
