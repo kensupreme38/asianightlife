@@ -1,30 +1,34 @@
+import { NextResponse } from 'next/server'
+// The client you created from the Server-Side Auth instructions
 import { createClient } from '@/utils/supabase/server'
-import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(request: NextRequest) {
-  const requestUrl = new URL(request.url)
-  const code = requestUrl.searchParams.get('code')
-  const origin = process.env.NODE_ENV === 'development' ? requestUrl.origin : process.env.NEXT_PUBLIC_REDIRECT_URL
+export async function GET(request: Request) {
+  const { searchParams, origin } = new URL(request.url)
+  const code = searchParams.get('code')
+  // if "next" is in param, use it as the redirect URL
+  let next = searchParams.get('next') ?? '/'
+  if (!next.startsWith('/')) {
+    // if "next" is not a relative URL, use the default
+    next = '/'
+  }
 
   if (code) {
     const supabase = await createClient()
-    
-    try {
-      const { error } = await supabase.auth.exchangeCodeForSession(code)
-      
-      if (error) {
-        console.error('Error exchanging code for session:', error)
-        return NextResponse.redirect(`${origin}/signin?error=auth_callback_error`)
+    const { error } = await supabase.auth.exchangeCodeForSession(code)
+    if (!error) {
+      const forwardedHost = request.headers.get('x-forwarded-host') // original origin before load balancer
+      const isLocalEnv = process.env.NODE_ENV === 'development'
+      if (isLocalEnv) {
+        // we can be sure that there is no load balancer in between, so no need to watch for X-Forwarded-Host
+        return NextResponse.redirect(`${origin}${next}`)
+      } else if (forwardedHost) {
+        return NextResponse.redirect(`https://${forwardedHost}${next}`)
+      } else {
+        return NextResponse.redirect(`${origin}${next}`)
       }
-      
-      // Authentication successful, redirect to dashboard
-      return NextResponse.redirect(`${origin}/dj`)
-    } catch (error) {
-      console.error('Unexpected error during auth callback:', error)
-      return NextResponse.redirect(`${origin}/signin?error=unexpected_error`)
     }
   }
 
-  // No code present, redirect to signin with error
-  return NextResponse.redirect(`${origin}/signin?error=no_code`)
+  // return the user to an error page with instructions
+  return NextResponse.redirect(`${origin}/auth/auth-code-error`)
 }
