@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url)
   const code = requestUrl.searchParams.get('code')
-  const origin = requestUrl.origin
+  const origin = process.env.NODE_ENV === 'development' ? requestUrl.origin : process.env.NEXT_PUBLIC_REDIRECT_URL
 
   if (code) {
     const supabase = await createClient()
@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
       }
       
       // Authentication successful, redirect to dashboard
-      return NextResponse.redirect(`${origin}/`)
+      return NextResponse.redirect(`${origin}/dj`)
     } catch (error) {
       console.error('Unexpected error during auth callback:', error)
       return NextResponse.redirect(`${origin}/signin?error=unexpected_error`)
