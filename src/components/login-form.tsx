@@ -23,22 +23,16 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
 
   const supabase = createClient()
-
-  console.log({
-    origin: window.location.origin
-  })
-
   
   const handleLogin = async () => {
-    const origin = "https://asianightlife.sg"
+    const origin = process.env.NODE_ENV === 'development' ? window.location.origin : process.env.NEXT_PUBLIC_REDIRECT_URL
+
+    console.log({origin})
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo: `${origin}/auth/callback`, // URL sau khi login xong
       },
-    })
-    console.log({
-      origin: window.location.origin
     })
     if (error) console.error('Error logging in:', error.message)
   }
@@ -66,10 +60,10 @@ export function LoginForm({
           </form>
         </CardContent>
       </Card>
-      <FieldDescription className="px-6 text-center">
+      {/* <FieldDescription className="px-6 text-center">
         By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
         and <a href="#">Privacy Policy</a>.
-      </FieldDescription>
+      </FieldDescription> */}
     </div>
   )
 }
