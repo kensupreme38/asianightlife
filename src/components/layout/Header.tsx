@@ -4,9 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Search, Youtube, Menu, X, Building2, SlidersHorizontal, MapPin as MapPinIcon } from "lucide-react";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import Image from "next/image";
-import { LogoImage } from "@/components/logo-image";
 import { Input } from "../ui/input";
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, memo } from "react";
 import { useTheme } from "next-themes";
 import { useDebounce } from "@/hooks/use-debounce";
 import { ktvData } from "@/lib/data";
@@ -24,6 +23,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   searchQuery?: string;
@@ -43,6 +43,27 @@ interface Suggestion {
   count?: number;
 }
 
+// Logo path - using local image file
+const LOGO_PATH = "/logo.jpg";
+
+// Logo component - optimized to prevent flicker
+// Using memo and local image to prevent re-renders and network requests
+const Logo = memo(({ width = 64, height = 64, className = "object-cover" }: { width?: number; height?: number; className?: string }) => {
+  // Use local image path directly, no state to avoid flicker
+  return (
+    <Image
+      src={LOGO_PATH}
+      alt="Asia Night Life Logo"
+      width={width}
+      height={height}
+      className={className}
+      priority
+      style={{ maxWidth: '100%', height: 'auto' }}
+    />
+  );
+});
+Logo.displayName = "Logo";
+
 export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const [inputValue, setInputValue] = useState(searchQuery ?? "");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -52,6 +73,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const { theme, setTheme } = useTheme();
   const inputRef = useRef<HTMLInputElement>(null);
   const debouncedInput = useDebounce(inputValue, 200);
+  const pathname = usePathname();
+
+  const primaryLinks = [
+    { href: "/", label: "Home" },
+    { href: "/dj", label: "DJ Voting" },
+  ];
 
   useEffect(() => {
     setInputValue(searchQuery ?? "");
@@ -232,22 +259,49 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     },
   ];
 
+  // Preload logo on mount to prevent flicker when switching tabs
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = LOGO_PATH;
+    document.head.appendChild(link);
+    
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* --- Desktop View --- */}
         <div className="hidden md:flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-16 w-16 rounded bg-gradient-primary flex items-center justify-center">
-              <LogoImage
-                width={64}
-                height={64}
-                className="object-cover"
-                loading="lazy"
-              />
+            <div className="h-16 w-16 bg-gradient-primary flex items-center justify-center overflow-hidden">
+              <Logo width={64} height={64} className="object-cover" />
             </div>
           </Link>
         </div>
+
+        <nav className="hidden md:flex items-center gap-6 ml-6">
+          {primaryLinks.map((link) => {
+            const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive ? "text-foreground" : "text-muted-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
 
         <div className="hidden md:flex flex-1 max-w-lg mx-4">
           {onSearchChange && (
@@ -462,6 +516,30 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   </div>
                 </div>
 
+                {/* Explore */}
+                <div>
+                  <h2 className="text-lg font-semibold mb-4 font-headline">
+                    Explore
+                  </h2>
+                  <div className="flex flex-col space-y-2">
+                    {primaryLinks.map((link) => {
+                      const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                      return (
+                        <Link
+                          key={`mobile-${link.href}`}
+                          href={link.href}
+                          className={`flex items-center gap-3 p-2 rounded-md transition-colors hover:bg-secondary ${
+                            isActive ? "text-foreground" : "text-muted-foreground"
+                          }`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <span className="text-sm font-medium">{link.label}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+
                 {/* Theme Switcher */}
                 <div>
                   <h2 className="text-lg font-semibold mb-4 font-headline">
@@ -484,13 +562,8 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           </Sheet>
 
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-14 w-14 rounded bg-gradient-primary flex items-center justify-center">
-              <LogoImage
-                width={56}
-                height={56}
-                className="object-cover"
-                loading="lazy"
-              />
+            <div className="h-14 w-14 bg-gradient-primary flex items-center justify-center overflow-hidden">
+              <Logo width={56} height={56} className="object-cover" />
             </div>
           </Link>
 

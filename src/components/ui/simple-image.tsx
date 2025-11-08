@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 
 interface SimpleImageProps {
   src: string;
@@ -10,7 +11,11 @@ interface SimpleImageProps {
   height?: number;
   loading?: "lazy" | "eager";
   priority?: boolean;
+  fallback?: string;
 }
+
+// Default placeholder image from Unsplash
+const DEFAULT_PLACEHOLDER = "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=800&fit=crop&q=80";
 
 export const SimpleImage = ({
   src,
@@ -21,22 +26,83 @@ export const SimpleImage = ({
   height,
   loading = "lazy",
   priority = false,
+  fallback,
 }: SimpleImageProps) => {
+  const [imgSrc, setImgSrc] = useState(src || fallback || DEFAULT_PLACEHOLDER);
+  const [hasError, setHasError] = useState(false);
+
   // Fallback for invalid src
-  if (!src || src.trim() === "") {
+  if (!src || src.trim() === "" || src === "/placeholder-dj.jpg") {
     return (
       <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        className={`bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center ${className}`}
+        style={fill ? {} : { width, height }}
       >
-        <span className="text-gray-500 text-sm">No image</span>
+        <div className="text-center p-4">
+          <svg
+            className="w-12 h-12 mx-auto text-muted-foreground/50"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <span className="text-xs text-muted-foreground mt-2 block">No image</span>
+        </div>
       </div>
     );
   }
 
-  try {
+  const handleError = () => {
+    if (!hasError) {
+      setHasError(true);
+      // Try fallback, otherwise use default placeholder
+      if (fallback && imgSrc !== fallback) {
+        setImgSrc(fallback);
+      } else if (imgSrc !== DEFAULT_PLACEHOLDER) {
+        setImgSrc(DEFAULT_PLACEHOLDER);
+      }
+    }
+  };
+
+  if (hasError && imgSrc === DEFAULT_PLACEHOLDER) {
+    return (
+      <div
+        className={`bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center ${className}`}
+        style={fill ? {} : { width, height }}
+      >
+        <div className="text-center p-4">
+          <svg
+            className="w-12 h-12 mx-auto text-muted-foreground/50"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <span className="text-xs text-muted-foreground mt-2 block">Failed to load</span>
+        </div>
+      </div>
+    );
+  }
+
+  // Determine if we should use unoptimized based on the image source
+  const isExternal = imgSrc.startsWith("http");
+  const isSupabase = imgSrc.includes("supabase.co");
+  
     return (
       <Image
-        src={src}
+      src={imgSrc}
         alt={alt}
         fill={fill}
         width={fill ? undefined : width}
@@ -44,22 +110,8 @@ export const SimpleImage = ({
         className={className}
         loading={priority ? undefined : loading}
         priority={priority}
-        onError={(e) => {
-          console.error("Image failed to load:", src, e);
-        }}
-        onLoad={() => {
-          console.log("Image loaded successfully:", src);
-        }}
+      onError={handleError}
+      unoptimized={isExternal && !isSupabase}
       />
     );
-  } catch (error) {
-    console.error("Error rendering image:", src, error);
-    return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-      >
-        <span className="text-gray-500 text-sm">Error loading image</span>
-      </div>
-    );
-  }
 };

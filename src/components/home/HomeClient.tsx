@@ -1,11 +1,12 @@
 "use client";
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, Suspense } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import HomeComponent from "@/components/home/HomeComponent";
 import { WelcomeDialog } from "@/components/home/WelcomeDialog";
 import { SplashScreen } from "@/components/ui/splash-screen";
 
-const HomeClient = () => {
+// Component riêng để sử dụng useSearchParams
+const HomeClientContent = () => {
   const [isWelcomeDialogOpen, setWelcomeDialogOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
@@ -131,6 +132,15 @@ const HomeClient = () => {
         onOpenChange={setWelcomeDialogOpen}
       />
     </>
+  );
+};
+
+// Wrapper component với Suspense
+const HomeClient = () => {
+  return (
+    <Suspense fallback={null}>
+      <HomeClientContent />
+    </Suspense>
   );
 };
 

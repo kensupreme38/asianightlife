@@ -45,15 +45,20 @@ export async function updateSession(request: NextRequest) {
   // Regex cho route động: /venue/[id]
   const isVenuePage = pathname.startsWith('/venue/')
 
-  // Nếu route là public hoặc /venue/[id] thì cho qua
-  if (publicRoutes.includes(pathname) || isVenuePage) {
+  // DJ routes - cho phép xem công khai, chỉ yêu cầu login cho profile management
+  const isDJProfilePage = pathname.startsWith('/dj/profile/')
+  const isDJViewPage = pathname === '/dj' || (pathname.startsWith('/dj/') && !isDJProfilePage)
+
+  // Nếu route là public, /venue/[id], hoặc DJ view pages thì cho qua
+  if (publicRoutes.includes(pathname) || isVenuePage || isDJViewPage) {
     return NextResponse.next()
   }
 
-  // Nếu route bắt đầu bằng /dj => cần login
-  if (pathname.startsWith('/dj') && !user) {
+  // Nếu route là DJ profile management (create/edit) => cần login
+  if (isDJProfilePage && !user) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
+    url.searchParams.set('redirect', pathname)
     return NextResponse.redirect(url)
   }
 

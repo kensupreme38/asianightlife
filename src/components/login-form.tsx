@@ -16,20 +16,26 @@ import {
 } from "@/components/ui/field"
 import Image from "next/image"
 import { createClient } from "@/utils/supabase/client"
+import { useSearchParams } from "next/navigation"
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-
+  const searchParams = useSearchParams()
+  const redirect = searchParams?.get("redirect") || "/"
   const supabase = createClient()
   
   const handleLogin = async () => {
+    // Store redirect URL in sessionStorage to retrieve after auth callback
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("auth_redirect", redirect)
+    }
 
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`, // URL sau khi login xong
+        redirectTo: `${window.location.origin}/auth/callback`,
       },
     })
     if (error) console.error('Error logging in:', error.message)

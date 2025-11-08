@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { LazyVenueCard } from "@/components/home/LazyVenueCard";
 import { useVenues } from "@/hooks/use-venues";
 import { SearchX, ChevronDown } from "lucide-react";
@@ -15,6 +15,24 @@ interface VenueGridProps {
 
 const INITIAL_LIMIT = 12;
 const LOAD_MORE_INCREMENT = 12;
+const DISPLAY_LIMIT_KEY = 'venueDisplayLimit';
+const REFERRER_KEY = 'scrollRestoreReferrer'; // Cùng key với ScrollRestoration
+
+// Tạo key duy nhất cho mỗi bộ filters
+const getFiltersKey = (country: string, city: string, category: string, query: string) => {
+  return `venue_${country}_${city}_${category}_${query}`;
+};
+
+// Kiểm tra xem có nên restore displayLimit không (chỉ khi referrer là từ venue detail)
+const shouldRestoreDisplayLimit = () => {
+  try {
+    const referrer = sessionStorage.getItem(REFERRER_KEY);
+    // Chỉ restore nếu referrer là từ trang venue detail (/venue/[id])
+    return referrer && referrer.startsWith('/venue/') && referrer !== '/venue';
+  } catch (error) {
+    return false;
+  }
+};
 
 export const VenueGrid = ({
   selectedCountry,
@@ -23,11 +41,67 @@ export const VenueGrid = ({
   searchQuery,
 }: VenueGridProps) => {
   const [displayLimit, setDisplayLimit] = useState(INITIAL_LIMIT);
+  const previousFiltersRef = useRef<string>('');
+  const isRestoringRef = useRef(false);
 
-  // Reset limit when filters change
+  // Tạo key cho filters hiện tại
+  const currentFiltersKey = getFiltersKey(selectedCountry, selectedCity, selectedCategory, searchQuery);
+
+  // Khôi phục displayLimit từ sessionStorage khi mount hoặc khi filters key giống
+  // CHỈ khôi phục nếu referrer là từ venue detail
   useEffect(() => {
-    setDisplayLimit(INITIAL_LIMIT);
-  }, [selectedCountry, selectedCity, selectedCategory, searchQuery]);
+    const prevKey = previousFiltersRef.current;
+    const isFirstMount = !prevKey;
+    const filtersChanged = prevKey && prevKey !== currentFiltersKey;
+    
+    // Nếu filters thay đổi, reset về INITIAL_LIMIT
+    if (filtersChanged) {
+      setDisplayLimit(INITIAL_LIMIT);
+      previousFiltersRef.current = currentFiltersKey;
+      return;
+    }
+    
+    // Nếu là lần đầu mount hoặc filters giống, thử khôi phục
+    // NHƯNG chỉ khi referrer là từ venue detail
+    if ((isFirstMount || prevKey === currentFiltersKey) && shouldRestoreDisplayLimit()) {
+      try {
+        const saved = sessionStorage.getItem(DISPLAY_LIMIT_KEY);
+        if (saved) {
+          const limits: Record<string, number> = JSON.parse(saved);
+          const savedLimit = limits[currentFiltersKey];
+          
+          // Nếu có saved limit cho filters này, khôi phục
+          if (savedLimit && savedLimit > INITIAL_LIMIT) {
+            isRestoringRef.current = true;
+            setDisplayLimit(savedLimit);
+            
+            // Reset flag sau khi đã set
+            setTimeout(() => {
+              isRestoringRef.current = false;
+            }, 100);
+          }
+        }
+      } catch (error) {
+        console.warn('Failed to restore display limit:', error);
+      }
+    }
+    
+    previousFiltersRef.current = currentFiltersKey;
+  }, [currentFiltersKey]);
+
+  // Lưu displayLimit vào sessionStorage khi thay đổi (trừ khi đang restore)
+  useEffect(() => {
+    if (isRestoringRef.current) return; // Không lưu khi đang restore
+    
+    try {
+      const saved = sessionStorage.getItem(DISPLAY_LIMIT_KEY);
+      const limits: Record<string, number> = saved ? JSON.parse(saved) : {};
+      limits[currentFiltersKey] = displayLimit;
+      sessionStorage.setItem(DISPLAY_LIMIT_KEY, JSON.stringify(limits));
+    } catch (error) {
+      console.warn('Failed to save display limit:', error);
+    }
+  }, [displayLimit, currentFiltersKey]);
 
   // Query more venues than displayed to preload the next batch
   // This creates a sequential loop: query displayLimit + LOAD_MORE_INCREMENT
@@ -39,6 +113,93 @@ export const VenueGrid = ({
     searchQuery,
     limit: preloadLimit,
   });
+
+  // Khôi phục scroll position sau khi displayLimit đã được restore và content đã render
+  // CHỈ restore nếu referrer là từ venue detail
+  useEffect(() => {
+    // Chỉ restore scroll nếu displayLimit > INITIAL_LIMIT và referrer là từ venue detail
+    if (displayLimit <= INITIAL_LIMIT || allVenues.length === 0 || !shouldRestoreDisplayLimit()) return;
+    
+    // Kiểm tra xem content đã render đủ chưa bằng cách check DOM height
+    const checkAndRestore = (attempt: number = 0) => {
+      const maxAttempts = 10; // Tối đa 10 lần thử
+      if (attempt >= maxAttempts) return;
+      
+      try {
+        const SCROLL_KEY = 'scrollPositions';
+        const saved = sessionStorage.getItem(SCROLL_KEY);
+        if (!saved) return;
+        
+        const positions: Record<string, number> = JSON.parse(saved);
+        const pageKey = window.location.pathname + window.location.search;
+        const savedPosition = positions[pageKey];
+        
+        if (!savedPosition || savedPosition <= 0) return;
+        
+        // Kiểm tra xem content đã render đủ chưa
+        const documentHeight = document.documentElement.scrollHeight;
+        const viewportHeight = window.innerHeight;
+        
+        // Nếu saved position lớn hơn document height hiện tại, content chưa render đủ
+        if (savedPosition > documentHeight - 100) {
+          // Đợi thêm và thử lại
+          setTimeout(() => checkAndRestore(attempt + 1), 100);
+          return;
+        }
+        
+        // Content đã render đủ, restore scroll
+        const doScroll = () => {
+          window.scrollTo({
+            top: savedPosition,
+            behavior: 'auto',
+          });
+          
+          // Verify sau một chút
+          setTimeout(() => {
+            const currentScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            if (Math.abs(currentScroll - savedPosition) > 50) {
+              // Nếu vẫn chưa đúng, thử lại
+              window.scrollTo({
+                top: savedPosition,
+                behavior: 'auto',
+              });
+              
+              // Thử lại một lần nữa sau khi content có thể đã render thêm
+              setTimeout(() => {
+                const finalScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+                if (Math.abs(finalScroll - savedPosition) > 50) {
+                  // Nếu vẫn chưa đúng, có thể content chưa render đủ, thử lại
+                  if (attempt < maxAttempts - 1) {
+                    checkAndRestore(attempt + 1);
+                  }
+                }
+              }, 200);
+            }
+          }, 100);
+        };
+        
+        // Thử scroll ngay
+        doScroll();
+        
+        // Thử lại sau requestAnimationFrame
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            doScroll();
+          });
+        });
+        
+      } catch (error) {
+        console.warn('Failed to restore scroll after display limit restore:', error);
+      }
+    };
+    
+    // Bắt đầu restore sau một chút để đảm bảo DOM đã update
+    const timer = setTimeout(() => {
+      checkAndRestore();
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, [displayLimit, allVenues.length]); // Chạy khi displayLimit hoặc số venues thay đổi
 
   // Only display venues up to displayLimit
   const displayedVenues = allVenues.slice(0, displayLimit);
@@ -75,7 +236,19 @@ export const VenueGrid = ({
   const hasMore = totalCount > displayLimit;
 
   const handleShowMore = () => {
-    setDisplayLimit((prev) => prev + LOAD_MORE_INCREMENT);
+    setDisplayLimit((prev) => {
+      const newLimit = prev + LOAD_MORE_INCREMENT;
+      // Lưu ngay khi click
+      try {
+        const saved = sessionStorage.getItem(DISPLAY_LIMIT_KEY);
+        const limits: Record<string, number> = saved ? JSON.parse(saved) : {};
+        limits[currentFiltersKey] = newLimit;
+        sessionStorage.setItem(DISPLAY_LIMIT_KEY, JSON.stringify(limits));
+      } catch (error) {
+        console.warn('Failed to save display limit:', error);
+      }
+      return newLimit;
+    });
   };
 
   return (

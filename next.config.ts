@@ -328,6 +328,24 @@ const nextConfig: NextConfig = {
         hostname: "attachment.momocdn.net",
         port: "",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "mpkaqnmgytneercsqqyu.storage.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/**",
+      },
+      {
+        protocol: "https",
+        hostname: "mpkaqnmgytneercsqqyu.storage.supabase.co",
+        port: "",
+        pathname: "/storage/v1/s3/**",
+      },
+      {
+        protocol: "https",
+        hostname: "**.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/**",
       }
     ],
   },

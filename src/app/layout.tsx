@@ -77,6 +77,119 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const SCROLL_KEY = 'scrollPositions';
+                let isRestoring = false;
+                
+                // Lưu scroll position trước khi navigate (chỉ lưu cho trang chủ và trang DJ)
+                function saveScroll() {
+                  if (isRestoring || typeof sessionStorage === 'undefined') return;
+                  // Chỉ lưu scroll position cho trang chủ và trang DJ
+                  if (window.location.pathname !== '/' && window.location.pathname !== '/dj') return;
+                  try {
+                    const key = window.location.pathname + window.location.search;
+                    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollY > 0) {
+                      const saved = sessionStorage.getItem(SCROLL_KEY);
+                      const positions = saved ? JSON.parse(saved) : {};
+                      positions[key] = scrollY;
+                      sessionStorage.setItem(SCROLL_KEY, JSON.stringify(positions));
+                    }
+                  } catch(e) {}
+                }
+                
+                // Khôi phục scroll position (chỉ cho trang chủ/DJ và chỉ khi referrer phù hợp)
+                function restoreScroll() {
+                  if (typeof sessionStorage === 'undefined') return;
+                  // Chỉ restore cho trang chủ hoặc trang DJ
+                  if (window.location.pathname !== '/' && window.location.pathname !== '/dj') return;
+                  try {
+                    const key = window.location.pathname + window.location.search;
+                    const saved = sessionStorage.getItem(SCROLL_KEY);
+                    const positions = saved ? JSON.parse(saved) : {};
+                    const savedPos = positions[key];
+                    
+                    if (savedPos && savedPos > 0) {
+                      isRestoring = true;
+                      window.scrollTo(0, savedPos);
+                      
+                      // Thử lại sau khi DOM ready
+                      if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', function() {
+                          setTimeout(function() {
+                            window.scrollTo(0, savedPos);
+                            isRestoring = false;
+                          }, 50);
+                        });
+                      } else {
+                        setTimeout(function() {
+                          window.scrollTo(0, savedPos);
+                          isRestoring = false;
+                        }, 50);
+                      }
+                    }
+                  } catch(e) {
+                    isRestoring = false;
+                  }
+                }
+                
+                // Lưu khi scroll
+                let scrollTimer;
+                window.addEventListener('scroll', function() {
+                  if (!isRestoring) {
+                    clearTimeout(scrollTimer);
+                    scrollTimer = setTimeout(saveScroll, 100);
+                  }
+                }, { passive: true });
+                
+                // Lưu trước khi unload
+                window.addEventListener('beforeunload', saveScroll);
+                
+                // Kiểm tra xem có nên restore không (chỉ khi referrer là từ venue detail hoặc DJ detail)
+                function shouldRestore() {
+                  try {
+                    const referrer = sessionStorage.getItem('scrollRestoreReferrer');
+                    const pathname = window.location.pathname;
+                    // Nếu ở trang chủ, chỉ restore nếu referrer là từ venue detail
+                    if (pathname === '/') {
+                      return referrer && referrer.startsWith('/venue/') && referrer !== '/venue';
+                    }
+                    // Nếu ở trang DJ, chỉ restore nếu referrer là từ DJ detail
+                    if (pathname === '/dj') {
+                      return referrer && referrer.startsWith('/dj/') && referrer !== '/dj';
+                    }
+                    return false;
+                  } catch(e) {
+                    return false;
+                  }
+                }
+                
+                // Khôi phục khi popstate (back/forward) - CHỈ khi referrer là từ venue detail
+                window.addEventListener('popstate', function() {
+                  if (shouldRestore()) {
+                    setTimeout(restoreScroll, 0);
+                  }
+                }, true);
+                
+                // Khôi phục khi trang load - CHỈ khi referrer là từ venue detail
+                if (shouldRestore()) {
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', restoreScroll);
+                  } else {
+                    restoreScroll();
+                  }
+                  
+                  // Khôi phục sau khi Next.js có thể đã scroll
+                  setTimeout(restoreScroll, 100);
+                  setTimeout(restoreScroll, 300);
+                }
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );

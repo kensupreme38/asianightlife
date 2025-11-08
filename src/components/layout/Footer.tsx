@@ -3,7 +3,12 @@ import Image from "next/image";
 import { LogoImage } from "@/components/logo-image";
 
 export const Footer = () => {
-  const socialLinks = [
+  const socialLinks: Array<{
+    name: string;
+    icon: string;
+    href: string;
+    className?: string;
+  }> = [
     {
       name: "YouTube",
       icon: "https://cdn-icons-png.flaticon.com/128/3670/3670147.png",
@@ -16,13 +21,12 @@ export const Footer = () => {
     },
     {
       name: "TikTok",
-      icon: "https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png",
+      icon: "https://cdn-icons-png.flaticon.com/128/4782/4782345.png",
       href: "https://www.tiktok.com/@asianightlife.sg?_t=ZS-90Sk98gy6Se&_r=1",
-      className: "dark:invert",
     },
     {
       name: "Facebook",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg",
+      icon: "https://cdn-icons-png.flaticon.com/128/5968/5968764.png",
       href: "https://www.facebook.com/profile.php?id=61581713529692&mibextid=ZbWKwL",
     },
   ];
