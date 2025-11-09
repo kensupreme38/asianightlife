@@ -5466,6 +5466,14 @@ Located in a prime location in District 1, Express by M Village Vo Van Kiet offe
     images: [
       "https://img.uaktravel.com/d32/2506/1704717396427845.webp",
       "https://img.uaktravel.com/d32/2506/1704717931027847.webp",
+      "https://drive.google.com/thumbnail?id=10v4SXa16TwipFPYx8It8w_De5H888MJz&sz=w2000",
+      "https://drive.google.com/thumbnail?id=13k6gA6cOi-yp8h1vZwyOv6QumUJEwimN&sz=w2000",
+      "https://drive.google.com/thumbnail?id=16YQdTBqFAZFo7wgX2R_nomqRwRO6vbNQ&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1WEBjFNbnxd8wT9Q69T7RSsomb0lqra9m&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1XlMMpHDIe55WvClm2ZOVmaZir7OJelXT&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1kTpZ8cMBWcLuUCOj27NQbd3CKuxR7yJD&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1r3fSdsEUx0XnbPAihtxDwwna-scgghL7&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1ukFhtApa7D1OrS7Kil7mgo49yUOTE2o9&sz=w2000",
     ],
     address: "85, Jln Loke Yew, Taman Miharja, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
     country: "Malaysia",
@@ -5542,13 +5550,12 @@ Hermez Club 爱马仕 is a premium entertainment venue located in Petaling Jaya,
   {
     id: 104,
     name: "AVA 2 Executive Club",
-    main_image_url: "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-1/366047957_114414285078987_6018062919778262837_n.jpg?stp=c205.0.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=mg7nOd_acVYQ7kNvwHZRq3u&_nc_oc=AdmfFOTtJ-ZDJ0MHnSE_1YAwYMADQy0x68z1HW1LdeKOQ7w9tLc5hDhNvCSlGaOhGxs7YcgGX-q0teZBm6s55O14&_nc_zt=24&_nc_ht=scontent.fvca1-4.fna&_nc_gid=YUnt0geatZq0j9qp0LB0bQ&oh=00_AfeBGnWvZerNOS8HzVEXRl_berYSZY7eHqBIsVpXzw3a_w&oe=690B59BF",
+    main_image_url: "https://drive.google.com/thumbnail?id=1yZTX9rmm-IjunKti1ESwmvT7wNYxZt_R&sz=w2000",
     images: [
-      "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-1/366047957_114414285078987_6018062919778262837_n.jpg?stp=c205.0.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=mg7nOd_acVYQ7kNvwHZRq3u&_nc_oc=AdmfFOTtJ-ZDJ0MHnSE_1YAwYMADQy0x68z1HW1LdeKOQ7w9tLc5hDhNvCSlGaOhGxs7YcgGX-q0teZBm6s55O14&_nc_zt=24&_nc_ht=scontent.fvca1-4.fna&_nc_gid=YUnt0geatZq0j9qp0LB0bQ&oh=00_AfeBGnWvZerNOS8HzVEXRl_berYSZY7eHqBIsVpXzw3a_w&oe=690B59BF",
-      "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/468899662_529839586869786_681663415178971287_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wwp4rHk0PL8Q7kNvwGWVI8j&_nc_oc=Adnh6Mxyt9_0aDcjpAwaQ4Q9sOrcm_GTNFoIiMRJR3AxUY3tN-xuRXpbNaHVvFHuMs3AhYKva15sqT-_8UDfFDeO&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=RPupexoJc5dcm3N1WFIefQ&oh=00_AfdaLRs0ztteQuIxwXW02HEAd_QMprzsCeHKu2Rn_UCKaQ&oe=690B5947",
-      "https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/469324344_529839810203097_2252031588004090393_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zTtG8cpZAgYQ7kNvwEIFkB-&_nc_oc=AdlTNdUvTSONPr4gNRvZPd-KaHAYLtlJJtwYB7Z2OV1mvnEUiGfj5lfZySl82EnDPcJHKxFcRi1OZwRGqIBxk3o7&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=pR5srzkZkeS9Nt1C8iX_fQ&oh=00_AfcfCboVxuZgQZx8NTzT9kTfXnBr52LI37TzI1CFjLUx6g&oe=690B3CA8",
-      "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-6/469267498_529818893538522_1859121433102593734_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_4E3EfUYr1gQ7kNvwHypUIl&_nc_oc=AdlskOiXRe7RZWEPaxD-LcEAgHilsrEym5tFb6g-Z2GIgU61F5B7IE8ieddPlm6e4hyuyKkfr6iZtUxBzVXQY--N&_nc_zt=23&_nc_ht=scontent.fvca1-4.fna&_nc_gid=T8amZ0ZwoqXAYbCGwPH49A&oh=00_AffbYpAbayJUcIOsvTnP5pEKkSU3MHx650BBAao32IgCug&oe=690B3BF0",
-      "https://scontent.fvca1-3.fna.fbcdn.net/v/t39.30808-6/468789899_527159763804435_6302988153808126069_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=eIm_gEvZnPAQ7kNvwGS2EEE&_nc_oc=AdkCy6n9GGJs4TWOeFpr8VXMOzv4nZfPdm6ww6dUP05gLFqPmvr27IHXEszfPUMS3P6GwlATSM-shfcpTzo5puR0&_nc_zt=23&_nc_ht=scontent.fvca1-3.fna&_nc_gid=6LtpUadWIMkDB-49kwIn5w&oh=00_Afedn2ZrrqvqSagJ4C7IzW3vKiCSRiT4oP2_9q_9XF3CQQ&oe=690B3836",
+      "https://drive.google.com/thumbnail?id=1yZTX9rmm-IjunKti1ESwmvT7wNYxZt_R&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1kpnyyN80qmHLpUyIT_UH3FXvSAoR2QMf&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1uFjKkADrtoqJ0XpFvAZ5gLB_OXAycgP3&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1p2gX78TgAYPEmOcofqEGYXSerwzXLkTj&sz=w2000",
     ],
     address: "2-239, Kompleks Metro Pudu 1, Jalan Metro Pudu, 55100 Kuala Lumpur, Malaysia",
     country: "Malaysia",
@@ -5577,11 +5584,12 @@ AVA 2 Executive Club is a premium entertainment venue offering sophisticated nig
   {
     id: 105,
     name: "Banker Place",
-    main_image_url: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop",
+    main_image_url: "https://drive.google.com/thumbnail?id=1hogtYjrO3SG18Pz-moVmeRP6FsCFlM73&sz=w2000",
     images: [
-      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1566737236500-c8ac43014b67?w=800&h=600&fit=crop",
+      "https://drive.google.com/thumbnail?id=1hogtYjrO3SG18Pz-moVmeRP6FsCFlM73&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1fzpzDg8Og08r9-mJjwgoBkJ3mbdITRKZ&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1C6oHFAt6aK0iElV35sMGhgbsT4niGwVU&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1kR1JQnN9BDXmQw9D0elmk-pup8RAvM99&sz=w2000",
     ],
     address: "10, Jalan Radin Bagus 3, Bandar Baru Sri Petaling, 57000 Kuala Lumpur, Malaysia",
     country: "Malaysia",
@@ -7061,5 +7069,118 @@ The restaurant offers a perfect blend of modern amenities and traditional Vietna
 
 `,
     hours: "5:00PM - 11:30PM (Daily)"
+  },
+  {
+    id: 142,
+    name: "Deluxe Lido Palace",
+    main_image_url: "https://drive.google.com/thumbnail?id=1VQ4xkucmntB5KXY-n0b-8xFNtWqR7AMU&sz=w2000",
+    images: [
+      "https://drive.google.com/thumbnail?id=1VQ4xkucmntB5KXY-n0b-8xFNtWqR7AMU&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1C6B-SsVj6Sy0xneHkOE1JMTcAn9nt3T0&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1ZnIeRBGIuxmPxrCjZ-_jw0UF39mGL9vc&sz=w2000",
+    ],
+    address: "317 Outram Rd #05-01, Concorde Shopping Centre, Singapore 169075",
+    country: "Singapore",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Deluxe Lido Palace
+Deluxe Lido Palace is a premium KTV entertainment venue located in the heart of Singapore at Concorde Shopping Centre. The venue offers an upscale karaoke experience with premium facilities and services.
+
+## Highlights
+- **Premium Location**: Located in Concorde Shopping Centre, Tiong Bahru
+- **Theatre Performance Area**: Watch girls perform songs in a dedicated theatre space
+- **Premium Suites**: Exclusive premium suites available for private gatherings
+- **Aquarium Feature**: Unique aquarium feature for ambiance
+- **Wreath Services**: Special wreath services for the ladies
+
+## Perfect For
+- Private celebrations
+- Corporate entertainment
+- Group gatherings
+- Premium karaoke experience seekers`,
+    hours: "Check with venue for operating hours",
+  },
+  {
+    id: 143,
+    name: "Paragon Club",
+    main_image_url: "https://drive.google.com/thumbnail?id=1jLBoBboKo7_5jSp5fImYHaxipzYz31SF&sz=w2000",
+    images: [
+      "https://drive.google.com/thumbnail?id=1U_Oh9e-BKiX7TAmeM7HoK2xPh25DE0OZ&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1D5NpH7vKWw4Nu8MLJZjhXNyS6o2GxxBk&sz=w2000",
+      "https://drive.google.com/thumbnail?id=13vliJ8P0MoKjgIGYJXBsQyMTrhDC92Kj&sz=w2000",
+      "https://drive.google.com/thumbnail?id=14TNDznFmGDOy_zq6bY8Bg-3KzA364xv-&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1jLBoBboKo7_5jSp5fImYHaxipzYz31SF&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1TSrVWFD9sYmU2ZYoF1lQPu0kZAE3m0Z4&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1fVg7TDMpEYYtyie0oAnK87gI-edTVkhQ&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1LCOw1mUVYD-JZaeG2C6e1A_pDtUpQ3dT&sz=w2000",
+    ],
+    address: "Menara Pgrm, Jalan Pudu Ulu, Taman Pertama, 55300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    country: "Malaysia",
+    category: "KTV",
+    price: "Contact for pricing",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.854123456789!2d101.729524!3d3.1221597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3766063a9bd1%3A0xf75ff392474f16fe!2sPARAGON%20CLUB!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
+    description: `## About Paragon Club
+Paragon Club is a premium KTV entertainment venue located in Menara PGRM, Kuala Lumpur. The club offers an upscale karaoke and entertainment experience with modern facilities and premium services.
+
+## Highlights
+- **Premium Location**: Located in Menara PGRM, Jalan Pudu Ulu
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Late Night Entertainment**: Open until 4 AM for nightlife enthusiasts
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Operating Hours
+- **Daily**: 7:00 PM - 4:00 AM
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Late-night entertainment seekers
+- Premium KTV experience seekers
+- Social gatherings and events`,
+    hours: "7:00PM - 4:00AM (Daily)",
+  },
+  {
+    id: 144,
+    name: "SHANGHAI CLUB Đà Nẵng",
+    main_image_url: "https://drive.google.com/thumbnail?id=1WdpY0douV4zAtqw7xy0WxKrfOcBWpS--&sz=w2000",
+    images: [
+      "https://drive.google.com/thumbnail?id=15lzyl0zY9tQ9oy1EcN2_NYVVpIxIadS8&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1TZxMf2JGfxLZWz9yeZ6C3Pmt__O20dMX&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1Rq8RDdTeQhqmmXRzL1OM8R4DVlvwsQEd&sz=w2000",
+      "https://drive.google.com/thumbnail?id=11w6uPvbFAJWiOpy1HeSrK_W84VUTQAmR&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1UTl-B3wp7TyAkqqSSSj5vGgQvROCyO9s&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1hAf9XdeEQGELyRjZkNuFjTOqS1pPOGnW&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1UUkHryyAtO-1DkqCKeV6Lm2qvbz7eavm&sz=w2000",
+      "https://drive.google.com/thumbnail?id=15WTLfGG6hCZH0LUlIekvgayqSlnbSvAK&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1Q7LblMIbCUXUYBZd0HQkG5y3xyqr0eoI&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1fRo55Bj2kA-tU0lYbx8-Iqi3FvIhoBHK&sz=w2000",
+      "https://drive.google.com/thumbnail?id=14Qxmx9nVzNNLtQrYJfAkdAubNS8lJau5&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1vAjugPu7WgW6rpY8CCamkpEJXINVWi1t&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1f0PWLviKY_euKh5hnS6HBOszrPs6RFqd&sz=w2000",
+    ],
+    address: "Đà Nẵng, Vietnam",
+    country: "Vietnam",
+    category: "KTV",
+    price: "Contact for pricing",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.123456789!2d108.2234077!3d16.0450213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421986ec99146d%3A0x90e80f1191ffac4f!2sSHANGHAI%20CLUB%20%C4%90%C3%A0%20N%E1%BA%B5ng!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
+    description: `## About SHANGHAI CLUB Đà Nẵng
+SHANGHAI CLUB Đà Nẵng is a premium entertainment venue located in Đà Nẵng, Vietnam. The club offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the coastal city.
+
+## Highlights
+- **Premium Location**: Located in Đà Nẵng, one of Vietnam's most vibrant coastal cities
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Đà Nẵng visitors`,
+    hours: "Check with venue",
   }
 ];

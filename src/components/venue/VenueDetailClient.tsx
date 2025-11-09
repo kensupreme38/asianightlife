@@ -48,6 +48,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
       return {
         ...foundVenue,
         id: foundVenue.id.toString(),
+        phone: foundVenue.phone || "",
         rating: 4.8,
         status: "open" as const,
         amenities: [
