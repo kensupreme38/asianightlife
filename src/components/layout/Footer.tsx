@@ -1,8 +1,11 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { LogoImage } from "@/components/logo-image";
+import { useState } from "react";
 
 export const Footer = () => {
+  const [logoError, setLogoError] = useState(false);
+
   const socialLinks: Array<{
     name: string;
     icon: string;
@@ -38,14 +41,21 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded bg-gradient-primary flex items-center justify-center">
-                <LogoImage
+              {logoError ? (
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs object-cover rounded" style={{ width: 32, height: 32 }}>
+                  ANL
+                </div>
+              ) : (
+                <Image
+                  src="/logo.jpg"
+                  alt="Asia Night Life Logo"
                   width={32}
                   height={32}
-                  className="object-cover"
+                  className="object-cover rounded"
+                  onError={() => setLogoError(true)}
                   loading="lazy"
                 />
-              </div>
+              )}
               <span className="font-bold text-xl gradient-text">
                 Asia Night Life
               </span>
