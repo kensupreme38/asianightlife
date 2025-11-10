@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Dialog,
   DialogContent,
@@ -35,6 +36,7 @@ interface BookingFormProps {
 export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: BookingFormProps) => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedTime, setSelectedTime] = useState("19:00:00");
+  const [logoError, setLogoError] = useState(false);
   
   const [formData, setFormData] = useState({
     fullName: "",
@@ -94,7 +96,25 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">Make a Booking</DialogTitle>
+          <div className="flex items-center gap-3 mb-2">
+            {logoError ? (
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs object-cover rounded" style={{ width: 40, height: 40 }}>
+                ANL
+              </div>
+            ) : (
+              <Image
+                src="/logo.jpg"
+                alt="Asia Night Life Logo"
+                width={40}
+                height={40}
+                className="object-cover rounded"
+                onError={() => setLogoError(true)}
+                loading="lazy"
+                unoptimized
+              />
+            )}
+            <DialogTitle className="text-2xl font-bold">Make a Booking</DialogTitle>
+          </div>
           <DialogDescription>
             Fill in your details to make a reservation at {venueName}
           </DialogDescription>

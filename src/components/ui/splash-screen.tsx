@@ -14,6 +14,7 @@ export const SplashScreen = ({
 }: SplashScreenProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const heroBannerImage = getImage("hero-banner");
 
@@ -58,14 +59,22 @@ export const SplashScreen = ({
         {/* Logo/Title */}
         <div className="mb-8">
           <div className="flex flex-col items-center mb-6">
-            <Image
-              src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/574491904_122108565945057117_3271938103654623430_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=D4MDGERogY4Q7kNvwHuNQPH&_nc_oc=Adni68EYaPMamQJEYgTcmwiT38WHQkblCz6eKl6UKZqDvp_RnNYI-kP-bx_9cVchrUk&_nc_zt=23&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=yAC_kuve8_m8h4mBch5p4g&oh=00_AfjULSMXzbbcJEsvKLJNiCQXs9tyW-cDUaBi_q30YhDsqA&oe=69109393"
-              alt="Asia Night Life Logo"
-              width={150}
-              height={150}
-              className="object-cover mb-4"
-              priority
-            />
+            {logoError ? (
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg object-cover rounded-lg mb-4" style={{ width: 150, height: 150 }}>
+                ANL
+              </div>
+            ) : (
+              <Image
+                src="/logo.jpg"
+                alt="Asia Night Life Logo"
+                width={150}
+                height={150}
+                className="object-cover mb-4 rounded-lg"
+                onError={() => setLogoError(true)}
+                priority
+                unoptimized
+              />
+            )}
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-2">
               <span className="bg-gradient-to-r from-red-deep via-red-bright to-red-orange bg-clip-text text-transparent">
                 Asia Night Life

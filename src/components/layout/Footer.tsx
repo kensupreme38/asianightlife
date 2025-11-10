@@ -54,6 +54,7 @@ export const Footer = () => {
                   className="object-cover rounded"
                   onError={() => setLogoError(true)}
                   loading="lazy"
+                  unoptimized
                 />
               )}
               <span className="font-bold text-xl gradient-text">

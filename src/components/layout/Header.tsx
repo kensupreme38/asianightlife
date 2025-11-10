@@ -58,6 +58,7 @@ const Logo = memo(({ width = 64, height = 64, className = "object-cover" }: { wi
       height={height}
       className={className}
       priority
+      unoptimized
       style={{ maxWidth: '100%', height: 'auto' }}
     />
   );
@@ -429,13 +430,13 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               <SheetHeader>
                 <SheetTitle className="sr-only">Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col h-full space-y-6">
+              <div className="flex flex-col h-full space-y-1.5">
                 {/* Contact Booking */}
                 <div>
-                  <h2 className="text-lg font-semibold mb-4 font-headline">
+                  <h2 className="text-lg font-semibold mb-1 font-headline">
                     Contact Booking
                   </h2>
-                  <div className="flex flex-col space-y-2">
+                  <div className="flex flex-col space-y-1">
                     {/* WhatsApp */}
                     <a
                       href="https://wa.me/6582808072"
@@ -486,10 +487,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
                 {/* Connect With Us */}
                 <div>
-                  <h2 className="text-lg font-semibold mb-4 font-headline">
+                  <h2 className="text-lg font-semibold mb-1 font-headline">
                     Connect With Us
                   </h2>
-                  <div className="flex flex-col space-y-2">
+                  <div className="flex flex-col space-y-1">
                     {socialLinks.map((social) => (
                       <a
                         key={social.label}
@@ -518,10 +519,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
                 {/* Explore */}
                 <div>
-                  <h2 className="text-lg font-semibold mb-4 font-headline">
+                  <h2 className="text-lg font-semibold mb-1 font-headline">
                     Explore
                   </h2>
-                  <div className="flex flex-col space-y-2">
+                  <div className="flex flex-col space-y-1">
                     {primaryLinks.map((link) => {
                       const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
                       return (
@@ -542,7 +543,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
                 {/* Theme Switcher */}
                 <div>
-                  <h2 className="text-lg font-semibold mb-4 font-headline">
+                  <h2 className="text-lg font-semibold mb-1 font-headline">
                     Theme
                   </h2>
                   <div

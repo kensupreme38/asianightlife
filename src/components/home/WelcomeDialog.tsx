@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { PartyPopper } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
-import { LogoImage } from "@/components/logo-image";
+import { useState } from "react";
 
 interface WelcomeDialogProps {
   open: boolean;
@@ -21,6 +21,7 @@ interface WelcomeDialogProps {
 
 export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
   const welcomeImage = getImage("hero-banner");
+  const [logoError, setLogoError] = useState(false);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -38,14 +39,22 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/50 to-transparent" />
           <div className="absolute bottom-4 left-6">
             <div className="flex items-center space-x-2 mb-2">
-              <div className="h-10 w-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <LogoImage
+              {logoError ? (
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs object-cover rounded-lg" style={{ width: 40, height: 40 }}>
+                  ANL
+                </div>
+              ) : (
+                <Image
+                  src="/logo.jpg"
+                  alt="Asia Night Life Logo"
                   width={40}
                   height={40}
-                  className="object-cover"
+                  className="object-cover rounded-lg"
+                  onError={() => setLogoError(true)}
                   loading="lazy"
+                  unoptimized
                 />
-              </div>
+              )}
               <span className="font-bold text-2xl gradient-text">
                 Asia Night Life
               </span>
