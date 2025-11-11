@@ -12,7 +12,7 @@ export const ktvData = [
     address: "35 Selegie Rd, #03-07, Parklane Shopping Mall",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "800-900k",
     description: `## About Iconic KTV
 Iconic is **newly opened** with over 30 girls. The premises are at the New K2 location, however, it is a huge change from yesteryears and girls are hot, playable and lots to choose from!
@@ -44,7 +44,7 @@ Iconic is **newly opened** with over 30 girls. The premises are at the New K2 lo
       "27 29 31 Đường 9A, Xã Bình Hưng, Huyện Bình Chánh, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Karaoke BOSS KTV (9A Street)
 Located in Binh Chanh District of Ho Chi Minh City, Karaoke BOSS KTV is a modern entertainment venue offering stylish rooms and a premium karaoke experience.
@@ -80,7 +80,7 @@ Located in Binh Chanh District of Ho Chi Minh City, Karaoke BOSS KTV is a modern
       "124 - 130 Đường 9A, KDC Trung Sơn, Bình Hưng, Bình Chánh, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Combos from 3,300,000₫",
     description: `## About Matrix Karaoke KTV (Trung Son)
 Matrix Karaoke KTV is a stylish karaoke destination in Ho Chi Minh City, featuring modern rooms with diverse concepts, quality lighting and sound, and a curated team of friendly, energetic KTVs.
@@ -117,7 +117,7 @@ Matrix Karaoke KTV is a stylish karaoke destination in Ho Chi Minh City, featuri
       "130 Đường 9A, KDC Trung Sơn, Bình Chánh, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Combos from 3,000,000₫",
     description: `## About Monaco Karaoke KTV (Trung Son)
 Monaco Karaoke KTV is a luxurious karaoke destination in Ho Chi Minh City, part of the Dragon Palace entertainment group. It features premium rooms in diverse styles, professional sound and lighting, and a well-selected team of energetic KTVs.
@@ -150,7 +150,7 @@ Monaco Karaoke KTV is a luxurious karaoke destination in Ho Chi Minh City, part 
       "31 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Atlantis KTV (De Tham)
 Modern, centrally located venue in District 1 with private rooms across different styles. Noted for a friendly, multilingual KTV team and upgraded sound and lighting for a stage-like singing experience.
@@ -181,7 +181,7 @@ Modern, centrally located venue in District 1 with private rooms across differen
       "57 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About KTV TULIP (Pham Viet Chanh)
 Modern, upscale karaoke venue in District 1 with stylish rooms, premium sound and lighting, and professional service. Suitable for friend gatherings, family events, and private parties.
@@ -212,7 +212,7 @@ Modern, upscale karaoke venue in District 1 with stylish rooms, premium sound an
       "78 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Night Star KTV (Q1)
 Energetic, modern karaoke venue in central Saigon featuring sound and lighting tuned for a lively, stage‑like experience. Comfortable private rooms and attentive in‑room service make it ideal for friends, couples, and families.
@@ -242,7 +242,7 @@ Energetic, modern karaoke venue in central Saigon featuring sound and lighting t
       "155 Nguyễn Văn Cừ, Phường 2, Quận 5, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Karaoke RED (Nguyen Van Cu)
 Modern karaoke venue in District 5 with stylish rooms, upgraded sound and lighting, and convenient central location. Amenities include Wi‑Fi, car parking, card payment, and event decoration on request.
@@ -269,7 +269,7 @@ Modern karaoke venue in District 5 with stylish rooms, upgraded sound and lighti
       "1127 Trần Hưng Đạo, Phường 5, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About 1127 KTV (Tran Hung Dao)
 Contemporary karaoke venue in District 5 offering stylish private rooms, upgraded sound and lighting, and convenient central access.
@@ -296,7 +296,7 @@ Contemporary karaoke venue in District 5 offering stylish private rooms, upgrade
       "750 Nguyễn Văn Quá, Quận 12, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Golden Bell KTV (Nguyen Van Qua)
 Family‑friendly karaoke venue with modern rooms, lively lighting, and convenient location in District 12. Amenities include Wi‑Fi, parking and card payment.
@@ -326,7 +326,7 @@ Family‑friendly karaoke venue with modern rooms, lively lighting, and convenie
       "82-84 Calmette, Phường Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About C3 Saigon KTV (Calmette)
 Premium luxury KTV in central Saigon featuring modern private rooms, professional service, and clear pricing for room rates and services.
@@ -351,7 +351,7 @@ Premium luxury KTV in central Saigon featuring modern private rooms, professiona
       "202 Nguyễn Trãi, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Safari KTV (Nguyen Trai)
 Elegant, modern karaoke venue with private rooms, refined lighting, and well‑tuned sound. Ideal for group gatherings, celebrations, and after‑work relaxation in central District 1.
@@ -381,7 +381,7 @@ Elegant, modern karaoke venue with private rooms, refined lighting, and well‑t
       "214 Lê Hồng Phong, Phường 4, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About L.V Bistro K (Le Hong Phong)
 Modern karaoke lounge with stylish rooms, strong sound and lighting, and professional service. Amenities include Wi‑Fi, car parking, card payment, event decoration, and VAT invoices.
@@ -408,7 +408,7 @@ Modern karaoke lounge with stylish rooms, strong sound and lighting, and profess
       "470 Ngô Gia Tự, Phường 4, Quận 10, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Hao Man Party K (Ngo Gia Tu)
 Colorful, modern karaoke venue in District 10 with dynamic lighting and stage‑like sound. Friendly, multilingual KTV team and central location make it ideal for young groups and visitors.
@@ -433,7 +433,7 @@ Colorful, modern karaoke venue in District 10 with dynamic lighting and stage‑
       "99 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "From 1,000,000 VND",
     description: `## About Luxury 99 KTV (Bui Thi Xuan)
 Central District 1 venue offering premium KTV rooms and attentive service. Booking available via the portal.
@@ -456,7 +456,7 @@ Central District 1 venue offering premium KTV rooms and attentive service. Booki
       "171 Chợ Lớn, Quận 6, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Rooms from 650,000 VND/hour",
     description: `## About Lucky KTV 2000 (Cho Lon)
 Modern KTV in District 6 offering multiple room sizes and clear pricing. Suitable for groups seeking a lively private karaoke experience.
@@ -492,7 +492,7 @@ Modern KTV in District 6 offering multiple room sizes and clear pricing. Suitabl
       "66 Tản Đà, Phường 11, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About JULIA 66 KTV (Tan Da)
 Stylish, comfortable karaoke venue in District 5 with high‑quality sound and lighting, good soundproofed rooms, and a varied drink and snack menu. Suitable for friends’ nights and private events.
@@ -521,7 +521,7 @@ Stylish, comfortable karaoke venue in District 5 with high‑quality sound and l
       "356 Nguyễn Đình Chiểu, Phường 4, Quận 3, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Karaoke 356 (Nguyen Dinh Chieu)
 Central District 3 karaoke with modern design, professional sound and lighting, and well‑insulated private rooms. Easy parking and friendly staff.
@@ -550,7 +550,7 @@ Central District 3 karaoke with modern design, professional sound and lighting, 
       "466 Trần Hưng Đạo, Phường 14, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Dragon-K (Tran Hung Dao)
 Urban, modern karaoke hub in District 5 with advanced sound and lighting, fully insulated private rooms, and convenient central access with parking.
@@ -579,7 +579,7 @@ Urban, modern karaoke hub in District 5 with advanced sound and lighting, fully 
       "93 An Dương Vương, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Pearl 93 KTV (An Duong Vuong)
 Elegant, event‑friendly karaoke venue with modern rooms, solid sound and lighting, and VAT invoicing on request. Suitable for parties and private gatherings.
@@ -606,7 +606,7 @@ Elegant, event‑friendly karaoke venue with modern rooms, solid sound and light
       "165/76 Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Eden Paradise (Nguyen Thai Binh)
 Modern karaoke venue with stage‑style rooms, YouTube connectivity, and VAT invoicing on request. Amenities include Wi‑Fi, car parking, card payment, and event decoration.
@@ -633,7 +633,7 @@ Modern karaoke venue with stage‑style rooms, YouTube connectivity, and VAT inv
       "184-186 Nguyễn Biểu, Phường 2, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About TheOne KTV (Nguyen Bieu)
 Contemporary karaoke venue featuring stage‑style rooms, YouTube connectivity, VAT invoices on request, and full amenities including Wi‑Fi, card payment and parking.
@@ -660,7 +660,7 @@ Contemporary karaoke venue featuring stage‑style rooms, YouTube connectivity, 
       "155 Đào Nam, (Gold 155), TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About 155 Gold Boy KTV (Dao Nam Gold)
 Vibrant, modern KTV with stylish rooms and lively sound/lighting. Ideal for energetic group nights in Saigon.
@@ -682,7 +682,7 @@ Vibrant, modern KTV with stylish rooms and lively sound/lighting. Ideal for ener
       "411 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Play Boy KTV (Tran Hung Dao)
 Premium karaoke venue in District 1 with upscale rooms, strong sound and lighting, and central location near major nightlife streets.
@@ -705,7 +705,7 @@ Premium karaoke venue in District 1 with upscale rooms, strong sound and lightin
     address: "545 Orchard Road, #B1-22, Far East Shopping Centre",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$324",
     description: `## Opening Hours & Tips
 - **Mon-Sat 6-10**: $100
@@ -745,7 +745,7 @@ Premium karaoke venue in District 1 with upscale rooms, strong sound and lightin
     address: "10 Jalan Besar, #05-02, Sim Lim Tower",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "S$78",
     description: `## About Club Galaxy
 Galaxy is **recently opened** and has surprised us at Nightlifeasia with a pretty rotation of girls and very high playability - no questions asked they would just get on top of you.
@@ -775,7 +775,7 @@ Galaxy is **recently opened** and has surprised us at Nightlifeasia with a prett
     address: "B1-00 TPI Building, 62 Cecil Street",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "S$78",
     description: `## About MEILI KTV
 Meili is **launching** with more competitive HH beer packages, new girls and a refreshed brand! This place promises high playability, affordable alcohol and overall a good experience.
@@ -805,7 +805,7 @@ Meili is **launching** with more competitive HH beer packages, new girls and a r
     address: "35 Selegie Road, #05-26, Parklane Shopping Mall",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "S$128",
     description: `## About Avatar KTV
 Avatar is **recommended KTV** at Parklane with young girls, regular themed events and good playability. Karaoke system is great, with youtube options as well.
@@ -836,7 +836,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     address: "1127 Trần Hưng Đạo, Phường 5",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "3000K",
     description: `## About 1127 KTV
 1127 KTV is another **Chinese KTV** and is newly renovated. Located in Q5 due to proximity to Chinatown, this venue offers authentic Vietnamese KTV experience.
@@ -870,7 +870,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     address: "Textile Centre level 7 (via lifts 7 or 8), Singapore 199018",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$287",
     description: `## About Catwalk KTV
 **Largest KTV in Singapore** with 55 rooms. Recommended for pretty girls, VIP room has pool table.
@@ -906,7 +906,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     address: "New World Centre #02‑16, 1 Jalan Besar, Singapore 209037",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$230",
     description: `## About Elite KTV
 **Modern KTV** in Singapore with premium facilities and VIP rooms featuring attached restrooms.
@@ -945,7 +945,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     address: "Cuppage Plaza B2-01, Singapore 228796",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$254",
     description: `## About District1 KTV
 **Official District1 KTV** with premium facilities and excellent service. Recommended for pretty girls, wide variety, nice rooms, and happy hour.
@@ -982,7 +982,7 @@ Avatar is **recommended KTV** at Parklane with young girls, regular themed event
     address: "Hotel Royal 02‑02, Singapore 307964",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$224",
     description: `## About UMe KTV
 Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals, spacious rooms, and VVIP room with 100" LED screen.
@@ -1021,7 +1021,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "114 Middle Road, Level 7, 9, Singapore 188971",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$264",
     description: `## About Level9 / Space7 KTV
 **Level9 / Space7** is located at 114 Middle Road. They offer happy hour and night hour sessions with premium VIP facilities.
@@ -1058,7 +1058,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "Orchard Plaza #05-20, 150 Orchard Road, Singapore 238841",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$341",
     description: `## About Empire KTV
 **High-end KTV** at Orchard Plaza Singapore with premium rooms and excellent facilities.
@@ -1095,7 +1095,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "217A Lavender Street, Singapore 338772",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$239",
     description: `## About Gala KTV
 **Gala KTV** (formerly BVL KTV) in Singapore offers various time slots with comprehensive service options.
@@ -1128,7 +1128,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "Golden Mile Tower B1-35, Singapore 199589",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$260",
     description: `## About Fyou KTV
 **Fyou KTV** (formerly Myth KTV) offers a fresh experience with competitive pricing and flexible time slots.
@@ -1161,7 +1161,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "2 Foch Road, Singapore 209252",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$238",
     description: `## About New Lisbo KTV
 **One of the most popular spots** located at Foch Road. Known for its vibrant atmosphere and friendly hostesses.
@@ -1201,7 +1201,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "277 Geylang Road, Level 2, Singapore 389327",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$229",
     description: `## About 277 KTV
 **277 KTV** at Geylang Road offers budget-friendly sessions with competitive pricing and good playability.
@@ -1242,7 +1242,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "Havelock 2 B1-19, Singapore 059763",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$296",
     description: `## About B12 KTV
 **B12 KTV** located at Havelock 2 B1-19 offers competitive pricing with special promotions and deals.
@@ -1287,7 +1287,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "Peninsula Plaza B1-07, Singapore 179098",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$490",
     description: `## About Deluxe KTV (Singapore Girls)
 **Deluxe KTV** (Singapore Girls) located at Peninsula Plaza B1-07 offers premium service with local Singaporean hostesses.
@@ -1326,7 +1326,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "212A Syed Alwi Road Level 3, Singapore 207745",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$591",
     description: `## About Malay KTV
 **Malay KTV** located at Syed Alwi Road offers unique cultural experience with special booking options.
@@ -1376,7 +1376,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "48A Foch Road, Singapore 209272",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$238",
     description: `## About Ace Club KTV (Singapore Girls) - CLOSED
 **Ace Club KTV** is currently **closed**. Prior to closure, they operated sessions with Singapore girls and various promotions.
@@ -1419,7 +1419,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
       "Super Bowl Jurong Complex, 1 Yuan Ching Road #01-07, Singapore 618640",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$233",
     description: `## About Phoenix KTV (West Side)
 **Phoenix KTV** (West Side) located at Super Bowl Jurong Complex, offering competitive pricing and convenient west side location.
@@ -1448,7 +1448,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "212A Syed Alwi Road level 2, Singapore 207745",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "$241",
     description: `## About Club MG KTV
 **Club MG KTV** located at 212A Syed Alwi Road level 2 offers competitive session rates and flexible timing options.
@@ -1487,7 +1487,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "124 Đường số 9A, Khu dân cư Trung Sơn, Bình Chánh, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Starting from S room 800,000 VND/hr",
     description: `## About Matrix KTV Ho Chi Minh
 **Matrix KTV** offers luxury karaoke rooms with different room sizes and premium service in Ho Chi Minh City.
@@ -1533,7 +1533,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "57 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Small Room: 799k VND/hr; Big Room: 999k VND/hr",
     description: `## About 57 Tulip KTV
 **57 Tulip KTV** is a premier karaoke club in Ho Chi Minh City, known for its modern rooms and vibrant entertainment.
@@ -1573,7 +1573,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "171 Cho Lon, Ward 11, District 6, Ho Chi Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Starting from 700k (normal), 1.5m (sexy)",
     description: `## About Lucky KTV (Ho Chi Minh)
 **Lucky KTV** is located at 171 Cho Lon, District 6, HCMC, offering two pricing tiers and various room options.
@@ -1623,7 +1623,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "31 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV / Karaoke & Restaurant",
+    category: "Karaoke",
     price: "560,000VND/hr",
     description: `## About Atlantis Karaoke & Restaurant
 **Atlantis Karaoke & Restaurant** is located in District 1, operating from 5:00 PM to 3:00 AM with premium facilities and extensive selection.
@@ -1661,7 +1661,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "1127 Trần Hưng Đạo, Ward 5, District 5, Ho Chi Minh City",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Starting from S room 500,000 VND/hr",
     description: `## About 1127 KTV (Ho Chi Minh)
 **1127 KTV** is located at 1127 Trần Hưng Đạo, District 5, popular for its large rooms and extensive entertainment offerings.
@@ -1699,7 +1699,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "93 An Duong Vuong, Ward 7, District 5, Ho Chi Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "1m VND (Starting from)",
     description: `## About Pearl KTV (Ho Chi Minh)
 **Pearl KTV** (Ho Chi Minh) located at 93 An Duong Vuong offers premium karaoke experience with competitive pricing.
@@ -1731,7 +1731,7 @@ Located at **Hotel Royal Singapore**, UMe KTV is known for good happy hour deals
     address: "21 Bui Thi Xuan, Ward Pham Ngu Lao, District 1, Ho Chi Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "1m VND (Starting from)",
     description: `## About Luxury 21 KTV (Ho Chi Minh)
 **Luxury 21 KTV** (Ho Chi Minh) offers premium karaoke experience with playful girls and competitive pricing.
@@ -5527,7 +5527,7 @@ Welcome to the heart of Kuala Lumpur's vibrant entertainment scene, where culina
     address: "17, Jalan Selangor, Seksyen 6, 46000 Petaling Jaya, Selangor, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Hermez Club 爱马仕
 Hermez Club 爱马仕 is a premium entertainment venue located in Petaling Jaya, Selangor. Offering a sophisticated atmosphere for music, entertainment, and social gatherings, this establishment provides a high-end experience for guests seeking quality nightlife entertainment.
@@ -5560,7 +5560,7 @@ Hermez Club 爱马仕 is a premium entertainment venue located in Petaling Jaya,
     address: "2-239, Kompleks Metro Pudu 1, Jalan Metro Pudu, 55100 Kuala Lumpur, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.201753080217!2d101.71333845696788!3d3.1290981571927112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc379c449fa3e1%3A0x59b35d3470735152!2sAVA%202%20Executive%20Club!5e1!3m2!1svi!2s!4v1761967686833!5m2!1svi!2s",
     price: "Contact for pricing",
     description: `## About AVA 2 Executive Club
@@ -5638,7 +5638,7 @@ Banker Place is a welcoming bar located in Bandar Baru Sri Petaling, Kuala Lumpu
     address: "3, Lorong Utara C, Pjs 52, 46200 Petaling Jaya, Selangor, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
-    category: "Nightclub",
+    category: "Nightclub / clubbing",
     price: "Contact for pricing",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6774.812316898381!2d101.6399709!3d3.1044478999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bdd1355b93f%3A0x30a3d36e4bd6c62a!2sPJ%20Club!5e1!3m2!1svi!2s!4v1761968200759!5m2!1svi!2s",
     description: `## About Club 3
@@ -5744,7 +5744,7 @@ Cheer House Restaurant - Lê Ngô Cát is an elegant dining establishment specia
     address: "Contact for address",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Night market",
+    category: "Restaurants",
     price: "Contact for pricing",
     description: `## About Mama's Style Vietnamese Restaurant
 Mama's Style Vietnamese Restaurant is an authentic Vietnamese dining establishment in Ho Chi Minh City. The restaurant offers traditional Vietnamese cuisine with a focus on homestyle cooking, providing guests with an authentic taste of Vietnamese food culture.
@@ -6230,7 +6230,7 @@ A modern social club in District 1 offering a balanced space—relaxed yet vibra
     address: "30 Thủ Khoa Huân, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About District K
 District K – located at 30 Thủ Khoa Huân, District 1, Ho Chi Minh City – is one of the most luxurious and modern entertainment venues in Saigon. With spacious layout and unique design, District K offers customers premium entertainment experiences.
@@ -6263,7 +6263,7 @@ District K – located at 30 Thủ Khoa Huân, District 1, Ho Chi Minh City – 
     address: "51 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Beer Garden",
+    category: "Live house / Beer club",
     price: "150,000 - 5,000,000₫",
     description: `## About THE WANN
 The Wann beer club is located in the center of District 1, an ideal destination for those who love modern spaces and stylish vibes. With elegant interior design, spacious layout and plenty of natural light, The Wann creates a comfortable and relaxing space for customers.
@@ -6302,7 +6302,7 @@ With reasonable prices and a comfortable atmosphere, The Wann beer club is the i
     address: "74-76 Nam Kỳ Khởi Nghĩa, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Beer Garden",
+    category: "Live house / Beer club",
     price: "Contact for pricing",
     description: `## About BAIA Saigon
 BAIA Saigon is a modern beer garden & music venue located in the heart of District 1, Ho Chi Minh City. With spacious layout and elegant design, BAIA Saigon delivers a premium entertainment experience with quality music and professional service.
@@ -6339,7 +6339,7 @@ BAIA Saigon is a modern beer garden & music venue located in the heart of Distri
     address: "1 Công Trường Quốc Tế, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Beer Garden",
+    category: "Live house / Beer club",
     price: "Contact for pricing",
     description: `## About Yoyo Central Garden
 Yoyo Central Garden Hồ Con Rùa is not just an ordinary beer restaurant, but also a vibrant entertainment destination where you can immerse yourself in an energetic atmosphere, enjoy refreshing beers and experience distinctive street food cuisine.
@@ -6385,7 +6385,7 @@ The highlight of Yoyo Central Garden is its central bar counter, where talented 
     address: "222 Điện Biên Phủ, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Rooftop / Sky Garden",
+    category: "Sky Bar",
     price: "Contact for pricing",
     description: `## About Han Sky Garden
 Han Sky Garden is a vibrant rooftop venue in Ho Chi Minh City, offering a lively atmosphere where guests can immerse themselves in an elevated dining and entertainment experience. With stunning city views and a dynamic ambiance, Han Sky Garden provides the perfect setting for memorable gatherings.
@@ -6463,7 +6463,7 @@ With a capacity of 250 guests, B40 is the perfect choice for parties, events, an
     address: "84-86 Trần Hưng Đạo, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Beer Garden",
+    category: "Live house / Beer club",
     price: "Contact for pricing",
     description: `## About Cậu Ốc Seafood & Beer
 Cậu Ốc Seafood & Beer is a popular seafood restaurant and beer venue located in District 1, Ho Chi Minh City. Known for its fresh seafood selection and vibrant atmosphere, this venue offers a perfect combination of delicious Vietnamese seafood dishes and a lively beer garden experience.
@@ -6503,7 +6503,7 @@ Cậu Ốc Seafood & Beer is a popular seafood restaurant and beer venue located
     address: "165/50 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Beer Garden",
+    category: "Live house / Beer club",
     price: "Contact for pricing",
     description: `## About Bếp Mẹ Ỉn Farm
 Bếp Mẹ Ỉn Farm is a traditional Vietnamese restaurant and beer venue located in District 1, Ho Chi Minh City. Known for authentic Northern Vietnamese cuisine and Hanoi-style fresh beer, this venue offers a cozy atmosphere perfect for gathering with friends and family.
@@ -6549,7 +6549,7 @@ The restaurant specializes in traditional Vietnamese dishes served on traditiona
     address: "211b Điện Biên Phủ, Phường Xuân Hòa, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "Contact for pricing",
     description: `## About LAM XUA Restaurant
 LAM XUA (Lam Xưa) Restaurant offers a unique dining experience that combines familiar and nostalgic Vietnamese cuisine with a traditional atmosphere. The restaurant specializes in classic Vietnamese dishes prepared in the old-fashioned way, bringing back memories of traditional home cooking.
@@ -6586,7 +6586,7 @@ With its authentic recipes and traditional cooking methods, LAM XUA Restaurant p
     address: "180 Trần Hưng Đạo, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Trần Hưng Đạo)
 Hải Sản Hoàng Gia is a premium seafood restaurant chain in Ho Chi Minh City, known for serving the freshest seafood from around the world. This branch is located in the heart of District 1, offering an elegant dining experience with luxurious ocean-themed interiors.
@@ -6630,7 +6630,7 @@ Hải Sản Hoàng Gia is a premium seafood restaurant chain in Ho Chi Minh City
     address: "37 Lý Tự Trọng, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Lý Tự Trọng)
 Hải Sản Hoàng Gia - Lý Tự Trọng is one of the premium seafood restaurant branches in District 1, Ho Chi Minh City. Offering fresh seafood from around the world with elegant dining atmosphere and professional service.
@@ -6665,7 +6665,7 @@ Hải Sản Hoàng Gia - Lý Tự Trọng is one of the premium seafood restaura
     address: "192A Lý Tự Trọng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (192A Lý Tự Trọng)
 Hải Sản Hoàng Gia - 192A Lý Tự Trọng is located in the heart of Ben Thanh Ward, District 1, offering premium seafood dining experience with elegant atmosphere and VIP private rooms.
@@ -6700,7 +6700,7 @@ Hải Sản Hoàng Gia - 192A Lý Tự Trọng is located in the heart of Ben Th
     address: "16 Quốc Hương, Phường Thảo Điền, Quận 2, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Quốc Hương)
 Hải Sản Hoàng Gia - Quốc Hương branch is located in Thao Dien Ward, District 2, offering premium seafood dining experience in a prime location with elegant atmosphere and professional service.
@@ -6735,7 +6735,7 @@ Hải Sản Hoàng Gia - Quốc Hương branch is located in Thao Dien Ward, Dis
     address: "954 Nguyễn Văn Linh, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Nguyễn Văn Linh)
 Hải Sản Hoàng Gia - 954 Nguyễn Văn Linh branch is located in Tan Phong Ward, District 7, offering premium seafood dining with luxurious atmosphere and VIP private rooms for gatherings.
@@ -6770,7 +6770,7 @@ Hải Sản Hoàng Gia - 954 Nguyễn Văn Linh branch is located in Tan Phong W
     address: "46-48 Phạm Văn Nghị, Hưng Gia 4, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Phạm Văn Nghị)
 Hải Sản Hoàng Gia - 46-48 Phạm Văn Nghị branch is located in Hung Gia 4, Tan Phong Ward, District 7, offering premium seafood dining experience with elegant atmosphere and professional service.
@@ -6805,7 +6805,7 @@ Hải Sản Hoàng Gia - 46-48 Phạm Văn Nghị branch is located in Hung Gia 
     address: "608 Đường 3/2, Phường 14, Quận 10, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Đường 3/2)
 Hải Sản Hoàng Gia - 608 Đường 3/2 branch is located in Ward 14, District 10, offering premium seafood dining experience with elegant atmosphere and VIP private rooms.
@@ -6840,7 +6840,7 @@ Hải Sản Hoàng Gia - 608 Đường 3/2 branch is located in Ward 14, Distric
     address: "235 Nguyễn Tri Phương, Quận 10, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "800,000 - 1,000,000₫ per person",
     description: `## About Hải Sản Hoàng Gia (Nguyễn Tri Phương)
 Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương branch is located in District 10, offering premium seafood dining experience with elegant atmosphere and professional service.
@@ -6879,7 +6879,7 @@ Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương branch is located in District
     address: "22 Đường 29, Phường An Khánh, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Rooftop / Sky Garden",
+    category: "Sky Bar",
     price: "Contact for pricing",
     description: `## About Hoshiyo Sky Lounge
 Hoshiyo Sky Lounge is a hidden gem in the heart of the city, offering an enchanting atmosphere where Japanese elegance meets sophisticated modern design. With stunning views overlooking Landmark 81, this dining lounge combines traditional Japanese flavors with contemporary cocktail culture.
@@ -6981,7 +6981,7 @@ The venue consists of two floors (ground floor and upper floor) with dim lightin
     address: "205 Cách Mạng Tháng Tám, Phường 4, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "120,000 - 400,000₫ per person",
     description: `## About Biển Dương 6
 Biển Dương 6 is a renowned Vietnamese-Chinese seafood restaurant located in District 3, Ho Chi Minh City. With a spacious capacity of 440 guests across 1,200 square meters, this restaurant offers an ideal venue for both large and small gatherings, featuring 7 VIP rooms accommodating 10-40 people each.
@@ -7039,7 +7039,7 @@ The restaurant specializes in fresh seafood dishes prepared in both Vietnamese a
     address: "540/19 Cách Mạng Tháng 8, Phường 11, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
-    category: "Restaurant",
+    category: "Restaurants",
     price: "Contact for pricing",
     description: `## About Trạm Hầm
 Trạm Hầm is a sophisticated and warm restaurant located in District 3, Ho Chi Minh City. With its elegant and cozy atmosphere, Trạm Hầm is an ideal destination for those seeking a comfortable dining experience in a welcoming environment.
@@ -7082,7 +7082,7 @@ The restaurant offers a perfect blend of modern amenities and traditional Vietna
     address: "317 Outram Rd #05-01, Concorde Shopping Centre, Singapore 169075",
     country: "Singapore",
     phone: "+65 8280 8072",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     description: `## About Deluxe Lido Palace
 Deluxe Lido Palace is a premium KTV entertainment venue located in the heart of Singapore at Concorde Shopping Centre. The venue offers an upscale karaoke experience with premium facilities and services.
@@ -7117,7 +7117,7 @@ Deluxe Lido Palace is a premium KTV entertainment venue located in the heart of 
     ],
     address: "Menara Pgrm, Jalan Pudu Ulu, Taman Pertama, 55300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
     country: "Malaysia",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.854123456789!2d101.729524!3d3.1221597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3766063a9bd1%3A0xf75ff392474f16fe!2sPARAGON%20CLUB!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
     description: `## About Paragon Club
@@ -7162,7 +7162,7 @@ Paragon Club is a premium KTV entertainment venue located in Menara PGRM, Kuala 
     ],
     address: "Đà Nẵng, Vietnam",
     country: "Vietnam",
-    category: "KTV",
+    category: "Karaoke",
     price: "Contact for pricing",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.123456789!2d108.2234077!3d16.0450213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421986ec99146d%3A0x90e80f1191ffac4f!2sSHANGHAI%20CLUB%20%C4%90%C3%A0%20N%E1%BA%B5ng!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
     description: `## About SHANGHAI CLUB Đà Nẵng

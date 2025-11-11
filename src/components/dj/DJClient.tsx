@@ -18,6 +18,7 @@ export default function DJClient() {
   const [djs, setDJs] = useState<DJ[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState<string>("votes");
+  const [countryFilter, setCountryFilter] = useState<string>("all");
   const [userProfile, setUserProfile] = useState<{ id: string } | null>(null);
   const [isCheckingProfile, setIsCheckingProfile] = useState(false);
   const router = useRouter();
@@ -87,10 +88,11 @@ export default function DJClient() {
     }
   };
 
-  const hasActiveFilters = sortBy !== "votes";
+  const hasActiveFilters = sortBy !== "votes" || countryFilter !== "all";
 
   const clearFilters = () => {
     setSortBy("votes");
+    setCountryFilter("all");
   };
 
   const fetchUserVotes = async () => {
@@ -169,6 +171,8 @@ export default function DJClient() {
           searchQuery=""
           onSearchChange={() => {}}
           sortBy={sortBy}
+          countryFilter={countryFilter}
+          onCountryFilterChange={setCountryFilter}
           isAuthenticated={!!currentUser}
           onCreateProfileClick={() => {
             if (!currentUser) {

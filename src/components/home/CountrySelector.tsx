@@ -52,30 +52,31 @@ const countries = [
 
 const categories = [
   { id: "all", name: "All", icon: Music },
+  // Nightlife
   { id: "Night market", name: "Night market", icon: Utensils },
-  { id: "KTV", name: "KTV", icon: Mic },
-  { id: "KTV / Karaoke & Restaurant", name: "KTV / Karaoke & Restaurant", icon: Mic },
-  { id: "Nightclub", name: "Nightclub", icon: Radio },
+  { id: "Karaoke", name: "Karaoke", icon: Mic },
+  { id: "Nightclub / clubbing", name: "Nightclub / clubbing", icon: Radio },
   { id: "Live house / Beer club", name: "Live house / Beer club", icon: Beer },
   { id: "Pub", name: "Pub", icon: Beer },
-  { id: "Beer Garden", name: "Beer Garden", icon: Beer },
   {
     id: "Lounge / Speakeasy bar",
     name: "Lounge / Speakeasy bar",
     icon: Martini,
   },
   { id: "Sky Bar", name: "Sky Bar", icon: Building },
-  { id: "Rooftop / Sky Garden", name: "Rooftop / Sky Garden", icon: Building },
+  // Relax
   { id: "Spa / Osen", name: "Spa / Osen", icon: Bath },
   { id: "Massage", name: "Massage", icon: HeartHandshake },
+  // Hotel
   { id: "Hotel", name: "Hotel", icon: Hotel },
+  // Food
+  { id: "Restaurants", name: "Restaurants", icon: Utensils },
   { id: "Breakfast", name: "Breakfast", icon: Coffee },
   {
     id: "Supper (after 12 midnight)",
     name: "Supper (after 12 midnight)",
     icon: Soup,
   },
-  { id: "Restaurant", name: "Restaurant", icon: Utensils },
 ];
 
 const citiesByCountry: Record<string, { id: string; name: string }[]> = {

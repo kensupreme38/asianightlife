@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { DJCard, DJ } from "./DJCard";
-import { SearchX, ChevronDown, Loader2, Plus, User, X } from "lucide-react";
+import { SearchX, ChevronDown, Loader2, Plus, User, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { useAuth } from "@/contexts/auth-context";
@@ -16,6 +16,8 @@ interface DJGridProps {
   searchQuery?: string;
   onSearchChange?: (query: string) => void;
   sortBy?: string;
+  countryFilter?: string;
+  onCountryFilterChange?: (country: string) => void;
   isAuthenticated?: boolean;
   onCreateProfileClick?: () => void;
   userProfile?: { id: string } | null;
@@ -32,8 +34,8 @@ const DISPLAY_LIMIT_KEY = 'djDisplayLimit';
 const REFERRER_KEY = 'scrollRestoreReferrer'; // Cùng key với ScrollRestoration
 
 // Tạo key duy nhất cho mỗi bộ filters
-const getFiltersKey = (searchQuery: string, sortBy: string) => {
-  return `dj_${searchQuery || 'all'}_${sortBy || 'votes'}`;
+const getFiltersKey = (searchQuery: string, sortBy: string, countryFilter: string) => {
+  return `dj_${searchQuery || 'all'}_${sortBy || 'votes'}_${countryFilter || 'all'}`;
 };
 
 // Kiểm tra xem có nên restore displayLimit không (chỉ khi referrer là từ DJ detail)
@@ -54,6 +56,8 @@ export const DJGrid = ({
   searchQuery = "",
   onSearchChange,
   sortBy = "votes",
+  countryFilter = "all",
+  onCountryFilterChange,
   isAuthenticated = false,
   onCreateProfileClick,
   userProfile,
@@ -71,7 +75,7 @@ export const DJGrid = ({
   const isRestoringRef = useRef(false);
 
   // Tạo key cho filters hiện tại
-  const currentFiltersKey = getFiltersKey(searchQuery || '', sortBy || 'votes');
+  const currentFiltersKey = getFiltersKey(searchQuery || '', sortBy || 'votes', countryFilter || 'all');
 
   // Fetch user votes when component mounts or user changes
   useEffect(() => {
@@ -163,11 +167,29 @@ export const DJGrid = ({
     }
     
     previousFiltersRef.current = currentFiltersKey;
-  }, [searchQuery, sortBy, currentFiltersKey]);
+  }, [searchQuery, sortBy, countryFilter, currentFiltersKey]);
 
-  // Filter DJs based on search query - memoized for performance
+  // Extract unique countries from DJs - memoized for performance
+  const availableCountries = useMemo(() => {
+    const countries = new Set<string>();
+    djs.forEach((dj) => {
+      if (dj.country && dj.country.trim()) {
+        countries.add(dj.country.trim());
+      }
+    });
+    return Array.from(countries).sort();
+  }, [djs]);
+
+  // Filter DJs based on search query and country filter - memoized for performance
   const filteredDJs = useMemo(() => {
     return djs.filter((dj) => {
+      // Country filter
+      if (countryFilter && countryFilter !== "all") {
+        if (!dj.country || dj.country.trim() !== countryFilter) {
+          return false;
+        }
+      }
+
       // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
@@ -181,7 +203,7 @@ export const DJGrid = ({
 
       return true;
     });
-  }, [djs, searchQuery]);
+  }, [djs, searchQuery, countryFilter]);
 
   // Calculate actual rank based on votes (before sorting) - optimized O(n log n) instead of O(n²)
   // Rank should always be based on votes, not on current sort order
@@ -494,6 +516,23 @@ export const DJGrid = ({
                 </Button>
               )}
 
+              {/* Country Filter */}
+              {onCountryFilterChange && (
+                <Select value={countryFilter || "all"} onValueChange={onCountryFilterChange}>
+                  <SelectTrigger className="w-[180px] h-10 bg-background/60 backdrop-blur-sm">
+                    <SelectValue placeholder="Filter by Country" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Countries</SelectItem>
+                    {availableCountries.map((country) => (
+                      <SelectItem key={country} value={country}>
+                        {country}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+
               {/* Sort By */}
               {onSortChange && (
                 <>
@@ -527,20 +566,35 @@ export const DJGrid = ({
           </div>
 
           {/* Active Filters Badges */}
-          {hasActiveFilters && sortBy !== "votes" && (
+          {hasActiveFilters && (
             <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
               <span className="text-xs text-muted-foreground">Active filters:</span>
-              <Badge variant="secondary" className="gap-1.5">
-                Sort: {sortBy === "name" ? "Name (A-Z)" : sortBy === "newest" ? "Newest First" : "Oldest First"}
-                {onSortChange && (
-                  <button
-                    onClick={() => onSortChange("votes")}
-                    className="ml-1 hover:bg-secondary/80 rounded-full p-0.5"
-                  >
-                    <X className="h-3 w-3" />
-                  </button>
-                )}
-              </Badge>
+              {countryFilter && countryFilter !== "all" && (
+                <Badge variant="secondary" className="gap-1.5">
+                  Country: {countryFilter}
+                  {onCountryFilterChange && (
+                    <button
+                      onClick={() => onCountryFilterChange("all")}
+                      className="ml-1 hover:bg-secondary/80 rounded-full p-0.5"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  )}
+                </Badge>
+              )}
+              {sortBy !== "votes" && (
+                <Badge variant="secondary" className="gap-1.5">
+                  Sort: {sortBy === "name" ? "Name (A-Z)" : sortBy === "newest" ? "Newest First" : "Oldest First"}
+                  {onSortChange && (
+                    <button
+                      onClick={() => onSortChange("votes")}
+                      className="ml-1 hover:bg-secondary/80 rounded-full p-0.5"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  )}
+                </Badge>
+              )}
             </div>
           )}
         </ScrollReveal>
@@ -596,8 +650,8 @@ export const DJGrid = ({
                 No DJs found
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                {searchQuery
-                  ? "Try adjusting your search to find what you're looking for."
+                {searchQuery || (countryFilter && countryFilter !== "all")
+                  ? "Try adjusting your filters to find what you're looking for."
                   : "No DJs available at the moment."}
               </p>
             </div>

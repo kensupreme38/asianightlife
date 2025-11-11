@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "@/contexts/auth-context";
 import { Button } from "@/components/ui/button";
@@ -8,16 +8,36 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
-import { ArrowLeft, Loader2, Upload, Music2, X } from "lucide-react";
+import { ArrowLeft, Loader2, Upload, Music2, X, ChevronDown } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { createClient } from "@/utils/supabase/client";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
-import { useMemo, useCallback } from "react";
+import { cn } from "@/lib/utils";
 
 const DJ_IMAGE_BUCKET = process.env.NEXT_PUBLIC_SUPABASE_DJ_BUCKET || "dj-images";
 const DJ_IMAGE_FOLDER = (process.env.NEXT_PUBLIC_SUPABASE_DJ_FOLDER || "dj-profiles").replace(/^\/+|\/+$/g, "");
+
+// Country list for autocomplete
+const COUNTRIES = [
+  "Singapore",
+  "Vietnam",
+  "Thailand",
+  "Malaysia",
+  "Cambodia",
+  "Indonesia",
+  "Japan",
+  "Macao",
+  "Philippines",
+  "South Korea",
+  "Taiwan",
+  "China",
+  "Hong Kong",
+  "Myanmar",
+  "Laos",
+  "Brunei",
+];
 
 interface DJProfileFormProps {
   isEdit?: boolean;
@@ -39,6 +59,10 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
     country: "",
   });
   const [existingImageUrl, setExistingImageUrl] = useState<string>("");
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+  const [isCountryInputFocused, setIsCountryInputFocused] = useState(false);
+  const countryInputRef = useRef<HTMLInputElement>(null);
+  const countryDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!authLoading && !currentUser) {
@@ -289,6 +313,69 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
     router.push(`/?${newParams.toString()}`);
   }, [router, searchParams]);
 
+  // Filter countries based on input
+  const filteredCountries = useMemo(() => {
+    if (!formData.country) {
+      return COUNTRIES;
+    }
+    const query = formData.country.toLowerCase();
+    return COUNTRIES.filter((country) =>
+      country.toLowerCase().includes(query)
+    );
+  }, [formData.country]);
+
+  // Handle country input change
+  const handleCountryInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setFormData({ ...formData, country: value });
+    // Open dropdown if input is focused and there are suggestions
+    if (isCountryInputFocused && filteredCountries.length > 0) {
+      setIsCountryDropdownOpen(true);
+    }
+  };
+
+  // Handle country selection
+  const handleCountrySelect = (country: string) => {
+    setFormData({ ...formData, country });
+    setIsCountryDropdownOpen(false);
+    setIsCountryInputFocused(false);
+    countryInputRef.current?.blur();
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!isCountryDropdownOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      if (
+        countryInputRef.current &&
+        countryDropdownRef.current &&
+        !countryInputRef.current.contains(target) &&
+        !countryDropdownRef.current.contains(target)
+      ) {
+        setIsCountryDropdownOpen(false);
+        setIsCountryInputFocused(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isCountryDropdownOpen]);
+
+  // Handle keyboard navigation
+  const handleCountryKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Escape") {
+      setIsCountryDropdownOpen(false);
+      setIsCountryInputFocused(false);
+    } else if (e.key === "Enter" && filteredCountries.length > 0 && isCountryDropdownOpen) {
+      e.preventDefault();
+      handleCountrySelect(filteredCountries[0]);
+    }
+  };
+
   if (authLoading || isLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -467,14 +554,78 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
               {/* Country */}
               <div className="space-y-2">
                 <Label htmlFor="country">Country</Label>
-                <Input
-                  id="country"
-                  value={formData.country}
-                  onChange={(e) =>
-                    setFormData({ ...formData, country: e.target.value })
-                  }
-                  placeholder="Singapore, Vietnam, Thailand..."
-                />
+                <div className="relative">
+                  <Input
+                    ref={countryInputRef}
+                    id="country"
+                    value={formData.country}
+                    onChange={handleCountryInputChange}
+                    onFocus={() => {
+                      setIsCountryInputFocused(true);
+                      if (filteredCountries.length > 0) {
+                        setIsCountryDropdownOpen(true);
+                      }
+                    }}
+                    onBlur={() => {
+                      // Delay to allow click on dropdown item
+                      setTimeout(() => {
+                        if (!countryDropdownRef.current?.contains(document.activeElement)) {
+                          setIsCountryInputFocused(false);
+                        }
+                      }, 200);
+                    }}
+                    onKeyDown={handleCountryKeyDown}
+                    placeholder="Singapore, Vietnam, Thailand..."
+                    className="pr-10"
+                  />
+                  <button
+                    type="button"
+                    onMouseDown={(e) => {
+                      e.preventDefault(); // Prevent input blur
+                    }}
+                    onClick={() => {
+                      if (filteredCountries.length > 0) {
+                        setIsCountryDropdownOpen(!isCountryDropdownOpen);
+                        setIsCountryInputFocused(true);
+                        if (!isCountryDropdownOpen) {
+                          countryInputRef.current?.focus();
+                        }
+                      }
+                    }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    tabIndex={-1}
+                  >
+                    <ChevronDown
+                      className={cn(
+                        "h-4 w-4 transition-transform",
+                        isCountryDropdownOpen && "rotate-180"
+                      )}
+                    />
+                  </button>
+                  {isCountryDropdownOpen && filteredCountries.length > 0 && (
+                    <div
+                      ref={countryDropdownRef}
+                      className="absolute z-50 w-full mt-1 bg-popover border border-border rounded-md shadow-lg max-h-60 overflow-auto"
+                    >
+                      {filteredCountries.map((country) => (
+                        <button
+                          key={country}
+                          type="button"
+                          onClick={() => handleCountrySelect(country)}
+                          className="w-full text-left px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer first:rounded-t-md last:rounded-b-md"
+                          onMouseDown={(e) => {
+                            e.preventDefault(); // Prevent input blur
+                          }}
+                        >
+                          {country}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Start typing to see suggestions or select from the list
+                </p>
               </div>
 
                     {/* Submit Button */}
