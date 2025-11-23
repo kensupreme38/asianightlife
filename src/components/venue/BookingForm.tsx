@@ -31,6 +31,7 @@ import { CalendarIcon, Clock, Users, Gift } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { createClient } from "@/utils/supabase/client";
+import { useTranslations } from 'next-intl';
 
 interface BookingFormProps {
   open: boolean;
@@ -45,6 +46,7 @@ export const BookingForm = ({
   venueName,
   venueAddress,
 }: BookingFormProps) => {
+  const t = useTranslations();
   const searchParams = useSearchParams();
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedTime, setSelectedTime] = useState("19:00:00");
@@ -74,7 +76,7 @@ export const BookingForm = ({
 
     // Validate date and time
     if (!selectedDate || !selectedTime) {
-      alert("Please select both date and time for your booking");
+      alert(t('bookingForm.pleaseSelectDateTime'));
       return;
     }
 
@@ -96,9 +98,9 @@ export const BookingForm = ({
           .maybeSingle();
 
         if (!error && employee) {
-          employeeInfo = `\nReferral Employee: ${employee.full_name}`;
+          employeeInfo = `\n${t('bookingForm.referralEmployee')}: ${employee.full_name}`;
           if (employee.phone) {
-            employeeInfo += `\nEmployee Phone: ${employee.phone}`;
+            employeeInfo += `\n${t('bookingForm.employeePhone')}: ${employee.phone}`;
           }
         }
       } catch (error) {
@@ -108,16 +110,16 @@ export const BookingForm = ({
 
     // Prepare booking message
     const message =
-      `New Booking Request\n\n` +
-      `Venue: ${venueName}\n` +
-      `Address: ${venueAddress}\n\n` +
-      `Full Name: ${formData.fullName}\n` +
-      `Phone: ${formData.phoneNumber}\n` +
-      `Booking Date & Time: ${bookingDateTime}\n` +
-      `Number of People: ${formData.pax}\n` +
-      `Location/Branch: ${formData.location || "N/A"}\n\n` +
+      `${t('bookingForm.newBookingRequest')}\n\n` +
+      `${t('bookingForm.venue')}: ${venueName}\n` +
+      `${t('bookingForm.address')}: ${venueAddress}\n\n` +
+      `${t('bookingForm.fullName')}: ${formData.fullName}\n` +
+      `${t('bookingForm.phone')}: ${formData.phoneNumber}\n` +
+      `${t('bookingForm.bookingDateTimeLabel')}: ${bookingDateTime}\n` +
+      `${t('bookingForm.numberOfPeopleLabel')}: ${formData.pax}\n` +
+      `${t('bookingForm.locationBranchLabel')}: ${formData.location || "N/A"}\n\n` +
       (formData.referralCode
-        ? `Referral Code: ${formData.referralCode}${employeeInfo}`
+        ? `${t('bookingForm.referralCodeLabel')}: ${formData.referralCode}${employeeInfo}`
         : "");
 
     // Open WhatsApp with booking details
@@ -171,22 +173,22 @@ export const BookingForm = ({
               />
             )}
             <DialogTitle className="text-2xl font-bold">
-              Make a Booking
+              {t('bookingForm.makeBooking')}
             </DialogTitle>
           </div>
           <DialogDescription>
-            Fill in your details to make a reservation at {venueName}
+            {t('bookingForm.fillDetails', { venueName })}
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Full Name */}
           <div className="space-y-2">
-            <Label htmlFor="fullName">Name *</Label>
+            <Label htmlFor="fullName">{t('bookingForm.name')} *</Label>
             <Input
               id="fullName"
               type="text"
-              placeholder="Enter your name"
+              placeholder={t('bookingForm.namePlaceholder')}
               value={formData.fullName}
               onChange={(e) => handleChange("fullName", e.target.value)}
               required
@@ -195,11 +197,11 @@ export const BookingForm = ({
 
           {/* Phone Number */}
           <div className="space-y-2">
-            <Label htmlFor="phoneNumber">Phone Number *</Label>
+            <Label htmlFor="phoneNumber">{t('bookingForm.phoneNumber')} *</Label>
             <Input
               id="phoneNumber"
               type="tel"
-              placeholder="Enter your phone number"
+              placeholder={t('bookingForm.phonePlaceholder')}
               value={formData.phoneNumber}
               onChange={(e) => handleChange("phoneNumber", e.target.value)}
               required
@@ -210,7 +212,7 @@ export const BookingForm = ({
           <div className="space-y-2">
             <Label className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Booking Date & Time *
+              {t('bookingForm.bookingDateTime')} *
             </Label>
             <div className="grid grid-cols-[2fr,1fr] gap-2">
               {/* Date Picker */}
@@ -225,7 +227,7 @@ export const BookingForm = ({
                     )}
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
-                    {selectedDate ? format(selectedDate, "PPP") : "Pick a date"}
+                    {selectedDate ? format(selectedDate, "PPP") : t('bookingForm.pickDate')}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
@@ -257,7 +259,7 @@ export const BookingForm = ({
           <div className="space-y-2">
             <Label htmlFor="pax" className="flex items-center gap-2">
               <Users className="h-4 w-4" />
-              Number of People *
+              {t('bookingForm.numberOfPeople')} *
             </Label>
             <Select
               value={formData.pax}
@@ -265,19 +267,19 @@ export const BookingForm = ({
               required
             >
               <SelectTrigger id="pax">
-                <SelectValue placeholder="Select number of people" />
+                <SelectValue placeholder={t('bookingForm.selectPeople')} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1">1 Person</SelectItem>
-                <SelectItem value="2">2 People</SelectItem>
-                <SelectItem value="3">3 People</SelectItem>
-                <SelectItem value="4">4 People</SelectItem>
-                <SelectItem value="5">5 People</SelectItem>
-                <SelectItem value="6">6 People</SelectItem>
-                <SelectItem value="7">7 People</SelectItem>
-                <SelectItem value="8">8 People</SelectItem>
-                <SelectItem value="9">9 People</SelectItem>
-                <SelectItem value="10">10+ People</SelectItem>
+                <SelectItem value="1">1 {t('bookingForm.person')}</SelectItem>
+                <SelectItem value="2">2 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="3">3 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="4">4 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="5">5 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="6">6 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="7">7 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="8">8 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="9">9 {t('bookingForm.people')}</SelectItem>
+                <SelectItem value="10">10+ {t('bookingForm.people')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -286,12 +288,12 @@ export const BookingForm = ({
           <div className="space-y-2">
             <Label htmlFor="location" className="flex items-center gap-2">
               <CalendarIcon className="h-4 w-4" />
-              Location / Shop Branch / Enquiry
+              {t('bookingForm.locationBranch')}
             </Label>
             <Input
               id="location"
               type="text"
-              placeholder="Enter location or branch (optional)"
+              placeholder={t('bookingForm.locationPlaceholder')}
               value={formData.location}
               onChange={(e) => handleChange("location", e.target.value)}
             />
@@ -301,12 +303,12 @@ export const BookingForm = ({
           <div className="space-y-2">
             <Label htmlFor="referralCode" className="flex items-center gap-2">
               <Gift className="h-4 w-4" />
-              Referral Code ( Optional )
+              {t('bookingForm.referralCode')}
             </Label>
             <Input
               id="referralCode"
               type="text"
-              placeholder="Enter referral code"
+              placeholder={t('bookingForm.referralPlaceholder')}
               value={formData.referralCode}
               onChange={(e) =>
                 handleChange("referralCode", e.target.value.toUpperCase())
@@ -321,7 +323,7 @@ export const BookingForm = ({
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Cancel
+              {t('common.cancel')}
             </Button>
             <Button
               type="submit"
@@ -329,7 +331,7 @@ export const BookingForm = ({
               className="min-w-[120px]"
               disabled={!selectedDate || !selectedTime}
             >
-              Submit Booking
+              {t('bookingForm.submitBooking')}
             </Button>
           </DialogFooter>
         </form>

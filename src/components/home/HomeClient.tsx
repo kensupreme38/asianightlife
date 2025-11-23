@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo, useCallback, Suspense } from "react";
-import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/routing";
 import HomeComponent from "@/components/home/HomeComponent";
 import { WelcomeDialog } from "@/components/home/WelcomeDialog";
 import { SplashScreen } from "@/components/ui/splash-screen";

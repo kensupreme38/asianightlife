@@ -5,6 +5,7 @@ import { useVenues } from "@/hooks/use-venues";
 import { SearchX, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { useTranslations } from 'next-intl';
 
 interface VenueGridProps {
   selectedCountry: string;
@@ -40,6 +41,7 @@ export const VenueGrid = ({
   selectedCategory,
   searchQuery,
 }: VenueGridProps) => {
+  const t = useTranslations();
   const [displayLimit, setDisplayLimit] = useState(INITIAL_LIMIT);
   const previousFiltersRef = useRef<string>('');
   const isRestoringRef = useRef(false);
@@ -258,13 +260,15 @@ export const VenueGrid = ({
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold mb-2 font-headline">
-                <span className="gradient-text">Featured Venues</span>
+                <span className="gradient-text">{t('venue.featuredVenues')}</span>
               </h2>
               <p className="text-muted-foreground">
-                {totalCount} venues found
+                {totalCount === 1 
+                  ? t('home.venuesFound', { count: totalCount })
+                  : t('home.venuesFoundPlural', { count: totalCount })}
                 {displayedVenues.length < totalCount && (
                   <span className="ml-2 text-sm">
-                    (Showing {displayedVenues.length} of {totalCount})
+                    ({t('home.showing', { showing: displayedVenues.length, total: totalCount })})
                   </span>
                 )}
               </p>
@@ -305,7 +309,7 @@ export const VenueGrid = ({
                     size="lg"
                     className="gap-2"
                   >
-                    Show More
+                    {t('home.showMore')}
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </div>
@@ -317,11 +321,10 @@ export const VenueGrid = ({
             <div className="text-center py-16 card-elevated rounded-xl">
             <SearchX className="mx-auto h-12 w-12 text-muted-foreground" />
             <h3 className="mt-4 text-lg font-semibold font-headline">
-              No results found
+              {t('home.noVenuesFound')}
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Try adjusting your search or filters to find what you're looking
-              for.
+              {t('home.tryAdjustingFilters')}
             </p>
             </div>
           </ScrollReveal>

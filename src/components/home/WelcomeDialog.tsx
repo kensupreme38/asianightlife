@@ -13,6 +13,7 @@ import { PartyPopper } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 interface WelcomeDialogProps {
   open: boolean;
@@ -20,6 +21,7 @@ interface WelcomeDialogProps {
 }
 
 export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
+  const t = useTranslations();
   const welcomeImage = getImage("hero-banner");
   const [logoError, setLogoError] = useState(false);
 
@@ -64,11 +66,10 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
         <DialogHeader className="px-6 pt-4 pb-2">
           <DialogTitle className="text-2xl font-bold flex items-center gap-2">
             <PartyPopper className="h-6 w-6 text-accent" />
-            Welcome!
+            {t('welcome.title')}
           </DialogTitle>
           <DialogDescription className="text-muted-foreground pt-2">
-            Discover and book the most vibrant entertainment venues in Southeast
-            Asia. Special offers await you!
+            {t('welcome.description')}
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="p-6 bg-secondary/30">
@@ -78,7 +79,7 @@ export const WelcomeDialog = ({ open, onOpenChange }: WelcomeDialogProps) => {
             className="w-full"
             onClick={() => onOpenChange(false)}
           >
-            Discover Now
+            {t('welcome.discoverNow')}
           </Button>
         </DialogFooter>
       </DialogContent>

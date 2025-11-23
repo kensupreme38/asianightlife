@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useCallback, useMemo, useState, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
+import { useTranslations } from 'next-intl';
 import { ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
@@ -15,6 +17,7 @@ import { BookingForm } from "@/components/venue/BookingForm";
 import { ktvData } from "@/lib/data";
 
 const VenueDetailClient = ({ id }: { id: string }) => {
+  const t = useTranslations();
   const [hasMounted, setHasMounted] = useState(false);
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -75,7 +78,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
 
     const shareData = {
       title: venue.name,
-      text: `Discover ${venue.name} - ${venue.address}`,
+      text: t('venue.discover', { venueName: venue.name, address: venue.address }),
       url: window.location.href,
     };
 
@@ -84,16 +87,16 @@ const VenueDetailClient = ({ id }: { id: string }) => {
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(window.location.href);
-        alert("Link copied to clipboard!");
+        alert(t('bookingForm.linkCopied'));
       }
     } catch (error) {
       console.error("Share failed:", error);
       try {
         await navigator.clipboard.writeText(window.location.href);
-        alert("Sharing failed, link copied to clipboard!");
+        alert(t('bookingForm.shareFailed'));
       } catch (copyError) {
         console.error("Copying to clipboard failed:", copyError);
-        alert("Could not share or copy link.");
+        alert(t('bookingForm.couldNotShare'));
       }
     }
   }, [venue]);
@@ -116,7 +119,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
           <Link href="/">
             <Button variant="ghost" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
-              Back to list
+              {t('venue.backToHome')}
             </Button>
           </Link>
 

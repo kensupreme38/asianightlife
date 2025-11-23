@@ -2,17 +2,21 @@
 import { Music2, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
+import { useTranslations } from 'next-intl';
+import { useMemo } from 'react';
 
 export const DJHeroBanner = () => {
+  const t = useTranslations();
   const heroBannerImage = getImage('dj-hero-banner');
-  const banner = {
+  
+  const banner = useMemo(() => ({
     id: 1,
     image: heroBannerImage?.imageUrl || "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
     imageHint: "DJ performing on stage with crowd and lights",
-    title: "DJ Voting",
-    subtitle: "Vote for Your Favorite DJs",
-    description: "Discover talented DJs, vote for your favorites, and see who's trending in the nightlife scene.",
-  };
+    title: t('dj.heroTitle'),
+    subtitle: t('dj.heroSubtitle'),
+    description: t('dj.heroDescription'),
+  }), [t, heroBannerImage]);
 
   return (
     <section className="relative w-full aspect-video overflow-hidden">
@@ -38,7 +42,7 @@ export const DJHeroBanner = () => {
                 <div className="flex items-center space-x-2 mb-4">
                   <Music2 className="h-5 w-5 text-red-orange fill-current" />
                   <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
-                    Top DJs
+                    {t('dj.topDJs')}
                   </span>
                 </div>
                 

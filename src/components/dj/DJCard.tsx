@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, TrendingUp, User } from "lucide-react";
 import { SimpleImage } from "@/components/ui/simple-image";
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 export interface DJ {
   id: string;
@@ -26,6 +27,7 @@ interface DJCardProps {
 }
 
 export const DJCard = ({ dj, onVote, hasVoted = false, isAuthenticated = false }: DJCardProps) => {
+  const t = useTranslations();
   const [isVoting, setIsVoting] = useState(false);
 
   const handleVote = async (e: React.MouseEvent) => {
@@ -107,7 +109,7 @@ export const DJCard = ({ dj, onVote, hasVoted = false, isAuthenticated = false }
 
             <div className="flex items-center text-muted-foreground text-xs md:text-sm">
               <User className="h-3 w-3 md:w-4 md:h-4 mr-1 shrink-0" />
-              <span className="line-clamp-1">{dj.country || "Unknown"}</span>
+              <span className="line-clamp-1">{dj.country || t('dj.unknown')}</span>
             </div>
           </div>
         </div>
@@ -124,7 +126,7 @@ export const DJCard = ({ dj, onVote, hasVoted = false, isAuthenticated = false }
         >
           <Heart className={`h-4 w-4 md:mr-2 ${hasVoted ? "fill-red-500 text-red-500" : ""}`} />
           <span className="hidden md:inline">
-            {hasVoted ? "Voted" : isVoting ? "Voting..." : "Vote"}
+            {hasVoted ? t('dj.voted') : isVoting ? t('dj.voting') : t('dj.vote')}
           </span>
         </Button>
       </div>

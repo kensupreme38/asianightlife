@@ -8,6 +8,7 @@ import { useAuth } from "@/contexts/auth-context";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useTranslations } from 'next-intl';
 
 interface DJGridProps {
   djs: DJ[];
@@ -67,6 +68,7 @@ export const DJGrid = ({
   hasActiveFilters = false,
   onClearFilters,
 }: DJGridProps) => {
+  const t = useTranslations();
   const [displayLimit, setDisplayLimit] = useState(INITIAL_LIMIT);
   const [votedDJs, setVotedDJs] = useState<Set<string>>(new Set());
   const { currentUser: authUser } = useAuth();
@@ -478,13 +480,15 @@ export const DJGrid = ({
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-2 font-headline">
-                <span className="gradient-text">Featured DJs</span>
+                <span className="gradient-text">{t('dj.featuredDJs')}</span>
               </h2>
               <p className="text-muted-foreground">
-                {rankedDJs.length} DJ{rankedDJs.length !== 1 ? "s" : ""} found
+                {rankedDJs.length === 1 
+                  ? t('dj.djsFound', { count: rankedDJs.length })
+                  : t('dj.djsFoundPlural', { count: rankedDJs.length })}
                 {displayedDJs.length < rankedDJs.length && (
                   <span className="ml-2 text-sm">
-                    (Showing {displayedDJs.length} of {rankedDJs.length})
+                    ({t('dj.showing', { showing: displayedDJs.length, total: rankedDJs.length })})
                   </span>
                 )}
               </p>
@@ -509,10 +513,10 @@ export const DJGrid = ({
                     <Plus className="h-5 w-5" />
                   )}
                   {isCheckingProfile 
-                    ? "Checking..." 
+                    ? t('dj.checking')
                     : effectiveCurrentUser 
-                      ? (userProfile ? "View My Profile" : "Create DJ Profile")
-                      : "Login to Create"}
+                      ? (userProfile ? t('dj.viewMyProfile') : t('dj.createDJProfile'))
+                      : t('dj.loginToCreate')}
                 </Button>
               )}
 
@@ -520,10 +524,10 @@ export const DJGrid = ({
               {onCountryFilterChange && (
                 <Select value={countryFilter || "all"} onValueChange={onCountryFilterChange}>
                   <SelectTrigger className="w-[180px] h-10 bg-background/60 backdrop-blur-sm">
-                    <SelectValue placeholder="Filter by Country" />
+                    <SelectValue placeholder={t('dj.filterByCountry')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Countries</SelectItem>
+                    <SelectItem value="all">{t('dj.allCountries')}</SelectItem>
                     {availableCountries.map((country) => (
                       <SelectItem key={country} value={country}>
                         {country}
@@ -537,14 +541,14 @@ export const DJGrid = ({
               {onSortChange && (
                 <>
                   <Select value={sortBy} onValueChange={onSortChange}>
-                    <SelectTrigger className="w-[180px] h-10 bg-background/60 backdrop-blur-sm">
-                      <SelectValue placeholder="Sort by" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="votes">Most Votes</SelectItem>
-                      <SelectItem value="name">Name (A-Z)</SelectItem>
-                      <SelectItem value="newest">Newest First</SelectItem>
-                      <SelectItem value="oldest">Oldest First</SelectItem>
+                  <SelectTrigger className="w-[180px] h-10 bg-background/60 backdrop-blur-sm">
+                    <SelectValue placeholder={t('dj.sortBy')} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="votes">{t('dj.sortByVotes')}</SelectItem>
+                    <SelectItem value="name">{t('dj.sortByNameAZ')}</SelectItem>
+                    <SelectItem value="newest">{t('dj.newestFirst')}</SelectItem>
+                    <SelectItem value="oldest">{t('dj.oldestFirst')}</SelectItem>
                     </SelectContent>
                   </Select>
 
@@ -557,7 +561,7 @@ export const DJGrid = ({
                       className="h-10 gap-2 text-muted-foreground hover:text-foreground"
                     >
                       <X className="h-4 w-4" />
-                      Clear Filters
+                      {t('dj.clearFilters')}
                     </Button>
                   )}
                 </>
@@ -568,10 +572,10 @@ export const DJGrid = ({
           {/* Active Filters Badges */}
           {hasActiveFilters && (
             <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-              <span className="text-xs text-muted-foreground">Active filters:</span>
+              <span className="text-xs text-muted-foreground">{t('dj.activeFilters')}</span>
               {countryFilter && countryFilter !== "all" && (
                 <Badge variant="secondary" className="gap-1.5">
-                  Country: {countryFilter}
+                  {t('dj.country')}: {countryFilter}
                   {onCountryFilterChange && (
                     <button
                       onClick={() => onCountryFilterChange("all")}
@@ -584,7 +588,7 @@ export const DJGrid = ({
               )}
               {sortBy !== "votes" && (
                 <Badge variant="secondary" className="gap-1.5">
-                  Sort: {sortBy === "name" ? "Name (A-Z)" : sortBy === "newest" ? "Newest First" : "Oldest First"}
+                  {t('dj.sort')}: {sortBy === "name" ? t('dj.sortByNameAZ') : sortBy === "newest" ? t('dj.newestFirst') : t('dj.oldestFirst')}
                   {onSortChange && (
                     <button
                       onClick={() => onSortChange("votes")}
@@ -635,7 +639,7 @@ export const DJGrid = ({
                     size="lg"
                     className="gap-2"
                   >
-                    Show More
+                    {t('dj.showMore')}
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </div>
@@ -647,12 +651,12 @@ export const DJGrid = ({
             <div className="text-center py-16 card-elevated rounded-xl">
               <SearchX className="mx-auto h-12 w-12 text-muted-foreground" />
               <h3 className="mt-4 text-lg font-semibold font-headline">
-                No DJs found
+                {t('dj.noDJsFound')}
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 {searchQuery || (countryFilter && countryFilter !== "all")
-                  ? "Try adjusting your filters to find what you're looking for."
-                  : "No DJs available at the moment."}
+                  ? t('dj.tryAdjustingFilters')
+                  : t('dj.noDJsAvailable')}
               </p>
             </div>
           </ScrollReveal>

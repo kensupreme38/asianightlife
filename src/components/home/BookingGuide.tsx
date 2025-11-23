@@ -9,7 +9,8 @@ import {
   LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useMemo } from "react";
+import { useTranslations } from 'next-intl';
 
 // Define types for the steps
 type SingleStep = {
@@ -32,39 +33,6 @@ type DoubleStep = {
 };
 
 type Step = SingleStep | DoubleStep;
-
-const steps: Step[] = [
-  {
-    icon: MapPin,
-    title: "CHOOSE A VENUE",
-    description: "Thousands of discounted venues",
-  },
-  {
-    isDouble: true,
-    options: [
-      {
-        icon: Phone,
-        title: "BOOK BY PHONE",
-        description: "+65 8280 8072",
-      },
-      {
-        icon: Headset,
-        title: "BOOK ONLINE",
-        description: "Visit Website",
-      },
-    ],
-  },
-  {
-    icon: Check,
-    title: "CONFIRMATION",
-    description: "Confirmation from Asia Night Life.SG operator",
-  },
-  {
-    icon: Sparkles,
-    title: "EXPERIENCE",
-    description: "Experience the service",
-  },
-];
 
 const StepIcon = ({ icon: Icon }: { icon: React.ElementType }) => (
   <div className="relative mb-4">
@@ -103,48 +71,88 @@ const DoubleStepComponent = ({
 }: {
   number: number;
   options: [DoubleStepOption, DoubleStepOption];
-}) => (
-  <div className="relative flex flex-col items-center text-center">
-    <div className="flex items-start justify-center gap-8">
-      <div>
-        <StepIcon icon={options[0].icon} />
-        <h3 className="text-lg font-bold text-primary font-headline">
-          {options[0].title}
-        </h3>
-        <p className="text-muted-foreground mt-1 text-sm">
-          {options[0].description}
-        </p>
-      </div>
-      <span className="text-muted-foreground font-bold mt-10">Or</span>
-      <div>
-        <StepIcon icon={options[1].icon} />
-        <h3 className="text-lg font-bold text-primary font-headline">
-          {options[1].title}
-        </h3>
-        {options[1].link ? (
-          <Link
-            href={options[1].link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p className="text-muted-foreground mt-1 hover:text-primary transition-colors text-sm">
+}) => {
+  const t = useTranslations();
+  
+  return (
+    <div className="relative flex flex-col items-center text-center">
+      <div className="flex items-start justify-center gap-8">
+        <div>
+          <StepIcon icon={options[0].icon} />
+          <h3 className="text-lg font-bold text-primary font-headline">
+            {options[0].title}
+          </h3>
+          <p className="text-muted-foreground mt-1 text-sm">
+            {options[0].description}
+          </p>
+        </div>
+        <span className="text-muted-foreground font-bold mt-10">{t('common.or')}</span>
+        <div>
+          <StepIcon icon={options[1].icon} />
+          <h3 className="text-lg font-bold text-primary font-headline">
+            {options[1].title}
+          </h3>
+          {options[1].link ? (
+            <Link
+              href={options[1].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="text-muted-foreground mt-1 hover:text-primary transition-colors text-sm">
+                {options[1].description}
+              </p>
+            </Link>
+          ) : (
+            <p className="text-muted-foreground mt-1 text-sm">
               {options[1].description}
             </p>
-          </Link>
-        ) : (
-          <p className="text-muted-foreground mt-1 text-sm">
-            {options[1].description}
-          </p>
-        )}
+          )}
+        </div>
+      </div>
+      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-border bg-background font-bold text-primary">
+        {number}
       </div>
     </div>
-    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-border bg-background font-bold text-primary">
-      {number}
-    </div>
-  </div>
-);
+  );
+};
 
 export const BookingGuide = () => {
+  const t = useTranslations();
+  
+  // Use useMemo to recreate steps when translations change
+  const steps: Step[] = useMemo(() => [
+    {
+      icon: MapPin,
+      title: t('bookingGuide.chooseVenue'),
+      description: t('bookingGuide.chooseVenueDesc'),
+    },
+    {
+      isDouble: true,
+      options: [
+        {
+          icon: Phone,
+          title: t('bookingGuide.bookByPhone'),
+          description: "+65 8280 8072",
+        },
+        {
+          icon: Headset,
+          title: t('bookingGuide.bookOnline'),
+          description: t('bookingGuide.visitWebsite'),
+        },
+      ],
+    },
+    {
+      icon: Check,
+      title: t('bookingGuide.confirmation'),
+      description: t('bookingGuide.confirmationDesc'),
+    },
+    {
+      icon: Sparkles,
+      title: t('bookingGuide.experience'),
+      description: t('bookingGuide.experienceDesc'),
+    },
+  ], [t]);
+  
   const renderStep = (step: Step, index: number) => {
     if (step.isDouble) {
       return (
@@ -171,12 +179,12 @@ export const BookingGuide = () => {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-2 font-headline">
-            Booking Guide
+            {t('bookingGuide.title')}
           </h2>
           <p className="text-muted-foreground">
-            See detailed guide{" "}
+            {t('bookingGuide.seeDetailedGuide')}{" "}
             <Link href="#" className="text-primary hover:underline">
-              here
+              {t('common.here')}
             </Link>
           </p>
         </div>

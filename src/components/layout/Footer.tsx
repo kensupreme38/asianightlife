@@ -2,8 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 export const Footer = () => {
+  const t = useTranslations();
   const [logoError, setLogoError] = useState(false);
 
   const socialLinks: Array<{
@@ -62,16 +64,15 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground mb-4">
-              The leading booking platform for entertainment venues in Southeast
-              Asia.
+              {t('footer.brandDescription')}
             </p>
           </div>
 
           {/* Contact Booking */}
           <div>
-            <h3 className="font-semibold mb-4">CONTACT BOOKING</h3>
+            <h3 className="font-semibold mb-4">{t('common.contactBooking').toUpperCase()}</h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Contact us now! We are always ready to support you 24/7
+              {t('footer.contactUsNow')}
             </p>
             <div className="flex flex-col gap-3">
               {/* WhatsApp */}
@@ -118,9 +119,9 @@ export const Footer = () => {
 
           {/* Connect with us */}
           <div>
-            <h3 className="font-semibold mb-4">CONNECT WITH US</h3>
+            <h3 className="font-semibold mb-4">{t('common.connectWithUs').toUpperCase()}</h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Follow us on social media
+              {t('footer.followUs')}
             </p>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((link) => (

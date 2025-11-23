@@ -25,6 +25,7 @@ import {
 import { cn } from "@/lib/utils";
 import { ktvData } from "@/lib/data";
 import { useMemo } from "react";
+import { useTranslations } from 'next-intl';
 
 interface CountrySelectorProps {
   selectedCountry: string;
@@ -35,8 +36,8 @@ interface CountrySelectorProps {
   onCategoryChange: (category: string) => void;
 }
 
-const countries = [
-  { id: "all", name: "All Countries", flag: "🌏" },
+const getCountries = (t: any) => [
+  { id: "all", name: t('home.allCountries'), flag: "🌏" },
   { id: "Singapore", name: "Singapore", flag: "🇸🇬" },
   { id: "Vietnam", name: "Vietnam", flag: "🇻🇳" },
   { id: "Thailand", name: "Thailand", flag: "🇹🇭" },
@@ -50,8 +51,8 @@ const countries = [
   { id: "Taiwan", name: "Taiwan", flag: "🇹🇼" },
 ];
 
-const categories = [
-  { id: "all", name: "All", icon: Music },
+const getCategories = (t: any) => [
+  { id: "all", name: t('home.all'), icon: Music },
   // Nightlife
   { id: "Night market", name: "Night market", icon: Utensils },
   { id: "Karaoke", name: "Karaoke", icon: Mic },
@@ -79,9 +80,9 @@ const categories = [
   },
 ];
 
-const citiesByCountry: Record<string, { id: string; name: string }[]> = {
+const getCitiesByCountry = (t: any): Record<string, { id: string; name: string }[]> => ({
   Vietnam: [
-    { id: "all", name: "All cities" },
+    { id: "all", name: t('home.allCities') },
     { id: "Hanoi", name: "Hanoi" },
     { id: "Ha Long Bay", name: "Ha Long Bay" },
     { id: "Danang", name: "Danang" },
@@ -92,7 +93,7 @@ const citiesByCountry: Record<string, { id: string; name: string }[]> = {
     { id: "Phu Quoc", name: "Phu Quoc" },
   ],
   Thailand: [
-    { id: "all", name: "All cities" },
+    { id: "all", name: t('home.allCities') },
     { id: "Bangkok", name: "Bangkok" },
     { id: "Chiang Mai", name: "Chiang Mai" },
     { id: "Pattaya", name: "Pattaya" },
@@ -100,13 +101,13 @@ const citiesByCountry: Record<string, { id: string; name: string }[]> = {
     { id: "Hat Yai", name: "Hat Yai" },
   ],
   Malaysia: [
-    { id: "all", name: "All cities" },
+    { id: "all", name: t('home.allCities') },
     { id: "Penang", name: "Penang" },
     { id: "Kuala Lumpur", name: "Kuala Lumpur" },
     { id: "Johor Bahru", name: "Johor Bahru" },
     { id: "Kota Kinabalu", name: "Kota Kinabalu" },
   ],
-};
+});
 
 export const CountrySelector = ({
   selectedCountry,
@@ -116,9 +117,14 @@ export const CountrySelector = ({
   selectedCategory,
   onCategoryChange,
 }: CountrySelectorProps) => {
+  const t = useTranslations();
+  const countries = useMemo(() => getCountries(t), [t]);
+  const citiesByCountry = useMemo(() => getCitiesByCountry(t), [t]);
   const availableCities = citiesByCountry[selectedCountry] || [];
   const isCitySelectorEnabled = availableCities.length > 0;
 
+  const categories = useMemo(() => getCategories(t), [t]);
+  
   // Calculate venue counts for each category
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -143,12 +149,12 @@ export const CountrySelector = ({
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <h2 className="text-xl md:text-2xl font-bold font-headline">
-                Select Country
+                {t('home.selectCountry')}
               </h2>
             </div>
             <Select value={selectedCountry} onValueChange={onCountryChange}>
               <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder="Select a country" />
+                <SelectValue placeholder={t('home.selectCountryPlaceholder')} />
               </SelectTrigger>
               <SelectContent position="item-aligned">
                 {countries.map((country) => (
@@ -170,7 +176,7 @@ export const CountrySelector = ({
             <div className="flex items-center gap-2">
               <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <h2 className="text-xl md:text-2xl font-bold font-headline">
-                Select City
+                {t('home.selectCity')}
               </h2>
             </div>
             <Select
@@ -182,8 +188,8 @@ export const CountrySelector = ({
                 <SelectValue
                   placeholder={
                     isCitySelectorEnabled
-                      ? "Select a city"
-                      : "Select a country first"
+                      ? t('home.selectCityPlaceholder')
+                      : t('home.selectCityFirst')
                   }
                 />
               </SelectTrigger>
@@ -202,12 +208,12 @@ export const CountrySelector = ({
             <div className="flex items-center gap-2">
               <Music className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <h2 className="text-xl md:text-2xl font-bold font-headline">
-                Entertainment Type
+                {t('home.entertainmentType')}
               </h2>
             </div>
             <Select value={selectedCategory} onValueChange={onCategoryChange}>
               <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder="Select a type" />
+                <SelectValue placeholder={t('home.selectType')} />
               </SelectTrigger>
               <SelectContent position="item-aligned">
                 {categories.map((category) => {

@@ -4,7 +4,7 @@ import { DJGrid } from "./DJGrid";
 import { DJ } from "./DJCard";
 import { Button } from "@/components/ui/button";
 import { Plus, User, X } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { useAuth } from "@/contexts/auth-context";
 import { toast } from "@/hooks/use-toast";
 import { Header } from "@/components/layout/Header";
@@ -13,8 +13,10 @@ import { DJHeroBanner } from "./DJHeroBanner";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
+import { useTranslations } from 'next-intl';
 
 export default function DJClient() {
+  const t = useTranslations();
   const [djs, setDJs] = useState<DJ[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState<string>("votes");
@@ -71,8 +73,8 @@ export default function DJClient() {
         setDJs(data.djs || []);
       } else {
         toast({
-          title: "Error",
-          description: "Failed to load DJs",
+          title: t('common.error'),
+          description: t('dj.failedToLoad'),
           variant: "destructive",
         });
       }
@@ -136,14 +138,14 @@ export default function DJClient() {
           )
         );
         toast({
-          title: "Success",
-          description: "Vote submitted successfully!",
+          title: t('common.success'),
+          description: t('dj.voteSubmitted'),
         });
       } else {
         const error = await response.json();
         toast({
-          title: "Error",
-          description: error.error || "Failed to submit vote",
+          title: t('common.error'),
+          description: error.error || t('dj.failedToSubmit'),
           variant: "destructive",
         });
       }

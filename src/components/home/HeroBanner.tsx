@@ -1,32 +1,35 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {Star, MapPin } from "lucide-react";
 import Image from "next/image";
 import { getImage } from "@/lib/placeholder-images";
+import { useTranslations } from 'next-intl';
 
 export const HeroBanner = () => {
+  const t = useTranslations();
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroBannerImage = getImage('hero-banner');
   const heroBannerImage2 = getImage('hero-banner-2');
   
-  const banners = [
+  // Use useMemo to recreate banners when translations change
+  const banners = useMemo(() => [
     {
       id: 1,
       image: heroBannerImage?.imageUrl || "https://picsum.photos/seed/hero/1200/600",
       imageHint: heroBannerImage?.imageHint,
-      title: "Discover the Hottest Venues",
-      subtitle: "Singapore • Vietnam • Thailand • Malaysia",
-      description: "Book now at the top clubs, KTVs, and live houses in Southeast Asia.",
+      title: t('hero.discoverHottestVenues'),
+      subtitle: t('hero.locations'),
+      description: t('hero.description'),
     },
     {
       id: 2,
       image: heroBannerImage2?.imageUrl || "https://picsum.photos/seed/hero2/1200/600",
       imageHint: heroBannerImage2?.imageHint,
-      title: "Special Weekend Offer",
-      subtitle: "30% off for bookings before 6 PM",
-      description: "Don't miss the chance to experience amazing entertainment venues.",
+      title: t('hero.specialWeekendOffer'),
+      subtitle: t('hero.weekendSubtitle'),
+      description: t('hero.weekendDescription'),
     }
-  ];
+  ], [t, heroBannerImage, heroBannerImage2]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -73,7 +76,7 @@ export const HeroBanner = () => {
                   <div className="flex items-center space-x-2 mb-4">
                     <Star className="h-5 w-5 text-red-orange fill-current" />
                     <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
-                      Premium Venues
+                      {t('hero.premiumVenues')}
                     </span>
                   </div>
                   

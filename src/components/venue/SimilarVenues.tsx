@@ -1,6 +1,7 @@
 "use client";
 import { VenueCard } from "@/components/home/VenueCard";
 import { ktvData } from "@/lib/data";
+import { useTranslations } from 'next-intl';
 import {
   Carousel,
   CarouselContent,
@@ -19,6 +20,7 @@ export const SimilarVenues = ({
   category,
   country,
 }: SimilarVenuesProps) => {
+  const t = useTranslations();
   const similarVenues = ktvData
     .filter(
       (venue) =>
@@ -41,7 +43,7 @@ export const SimilarVenues = ({
       <div className="py-8">
         <div className="container mb-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 font-headline">
-            <span className="gradient-text">Similar Venues</span>
+            <span className="gradient-text">{t('venue.similarVenues')}</span>
           </h2>
           <p className="text-muted-foreground">
             Discover more {category.toLowerCase()}s in {country}

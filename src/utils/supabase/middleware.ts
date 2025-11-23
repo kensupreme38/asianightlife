@@ -40,37 +40,44 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const pathname = request.nextUrl.pathname;
+  
+  // Remove locale prefix for route checking (e.g., /en/login -> /login)
+  const pathWithoutLocale = pathname.replace(/^\/(en|vi)/, '') || '/';
 
   // Các route public (không yêu cầu đăng nhập)
   const publicRoutes = ["/", "/login", "/auth", "/error"];
 
-  // Regex cho route động: /venue/[id]
-  const isVenuePage = pathname.startsWith("/venue/");
+  // Regex cho route động: /venue/[id] (with or without locale)
+  const isVenuePage = pathWithoutLocale.startsWith("/venue/");
 
   // DJ routes - cho phép xem công khai, chỉ yêu cầu login cho profile management
-  const isDJProfilePage = pathname.startsWith("/dj/profile/");
+  const isDJProfilePage = pathWithoutLocale.startsWith("/dj/profile/");
   const isDJViewPage =
-    pathname === "/dj" || (pathname.startsWith("/dj/") && !isDJProfilePage);
+    pathWithoutLocale === "/dj" || (pathWithoutLocale.startsWith("/dj/") && !isDJProfilePage);
 
   // Nếu route là public, /venue/[id], hoặc DJ view pages thì cho qua
-  if (publicRoutes.includes(pathname) || isVenuePage || isDJViewPage) {
-    return NextResponse.next();
+  if (publicRoutes.includes(pathWithoutLocale) || isVenuePage || isDJViewPage) {
+    return supabaseResponse;
   }
 
   // Nếu route là DJ profile management (create/edit) => cần login
   if (isDJProfilePage && !user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/login";
+    // Preserve locale in redirect
+    const locale = pathname.split('/')[1] || 'en';
+    url.pathname = `/${locale}/login`;
     url.searchParams.set("redirect", pathname);
     return NextResponse.redirect(url);
   }
 
   // Employee routes - yêu cầu đăng nhập
   const isEmployeeRoute =
-    pathname === "/employee" || pathname.startsWith("/employee/");
+    pathWithoutLocale === "/employee" || pathWithoutLocale.startsWith("/employee/");
   if (isEmployeeRoute && !user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/login";
+    // Preserve locale in redirect
+    const locale = pathname.split('/')[1] || 'en';
+    url.pathname = `/${locale}/login`;
     url.searchParams.set("redirect", pathname);
     return NextResponse.redirect(url);
   }

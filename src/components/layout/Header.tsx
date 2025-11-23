@@ -34,9 +34,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/routing";
 import { useAuth } from "@/contexts/auth-context";
-import { useRouter } from "next/navigation";
+import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface HeaderProps {
   searchQuery?: string;
@@ -89,6 +90,7 @@ const Logo = memo(
 Logo.displayName = "Logo";
 
 export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
+  const t = useTranslations();
   const [inputValue, setInputValue] = useState(searchQuery ?? "");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -110,14 +112,15 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     }
   };
 
-  const primaryLinks = [
-    { href: "/", label: "Home" },
-    { href: "/dj", label: "DJ Voting" },
+  // Use useMemo to recreate links when translations change
+  const primaryLinks = useMemo(() => [
+    { href: "/", label: t('common.home') },
+    { href: "/dj", label: t('common.djVoting') },
     {
       href: "/employee",
-      label: "Employee",
+      label: t('common.employee'),
     },
-  ];
+  ], [t]);
 
   useEffect(() => {
     setInputValue(searchQuery ?? "");
@@ -390,7 +393,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground z-10 pointer-events-none" />
               <Input
                 ref={inputRef}
-                placeholder="Search for venues, areas..."
+                placeholder={t('common.searchPlaceholder')}
                 value={inputValue}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
@@ -437,8 +440,8 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                       <CommandGroup
                         heading={
                           debouncedInput && debouncedInput.length > 0
-                            ? "Suggestions"
-                            : "Popular Searches"
+                            ? t('common.suggestions')
+                            : t('common.popularSearches')
                         }
                       >
                         {suggestions.map((suggestion, index) => (
@@ -477,6 +480,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         </div>
 
         <div className="hidden md:flex items-center space-x-1">
+          <LanguageSwitcher />
           <ThemeSwitcher />
           {socialLinks.map((social) => (
             <Button
@@ -512,8 +516,8 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               size="sm"
               className="h-9 w-9 p-0"
               onClick={handleSignOut}
-              title="Sign out"
-              aria-label="Sign out"
+              title={t('common.signOut')}
+              aria-label={t('common.signOut')}
             >
               <LogOut className="h-4 w-4" />
             </Button>
@@ -536,7 +540,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 {/* Contact Booking */}
                 <div>
                   <h2 className="text-lg font-semibold mb-1 font-headline">
-                    Contact Booking
+                    {t('header.contactBooking')}
                   </h2>
                   <div className="flex flex-col space-y-1">
                     {/* WhatsApp */}
@@ -555,7 +559,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                         className="rounded-full"
                       />
                       <div className="flex flex-col">
-                        <span className="font-medium">WhatsApp</span>
+                        <span className="font-medium">{t('header.whatsapp')}</span>
                         <span className="text-xs text-muted-foreground">
                           +65 8280 8072
                         </span>
@@ -578,7 +582,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                         className="rounded-full"
                       />
                       <div className="flex flex-col">
-                        <span className="font-medium">Telegram</span>
+                        <span className="font-medium">{t('header.telegram')}</span>
                         <span className="text-xs text-muted-foreground">
                           @asianightlifesg
                         </span>
@@ -590,7 +594,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 {/* Connect With Us */}
                 <div>
                   <h2 className="text-lg font-semibold mb-1 font-headline">
-                    Connect With Us
+                    {t('common.connectWithUs')}
                   </h2>
                   <div className="flex flex-col space-y-1">
                     {socialLinks.map((social) => (
@@ -622,7 +626,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 {/* Explore */}
                 <div>
                   <h2 className="text-lg font-semibold mb-1 font-headline">
-                    Explore
+                    {t('common.explore')}
                   </h2>
                   <div className="flex flex-col space-y-1">
                     {primaryLinks.map((link) => {
@@ -653,7 +657,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 {/* Theme Switcher */}
                 <div>
                   <h2 className="text-lg font-semibold mb-1 font-headline">
-                    Theme
+                    {t('common.theme')}
                   </h2>
                   <div
                     className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
@@ -663,8 +667,18 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   >
                     <ThemeSwitcher />
                     <span className="text-sm text-muted-foreground">
-                      Toggle theme
+                      {t('common.toggleTheme')}
                     </span>
+                  </div>
+                </div>
+
+                {/* Language Switcher */}
+                <div>
+                  <h2 className="text-lg font-semibold mb-1 font-headline">
+                    Language
+                  </h2>
+                  <div className="p-2">
+                    <LanguageSwitcher />
                   </div>
                 </div>
 
@@ -672,7 +686,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 {currentUser && (
                   <div>
                     <h2 className="text-lg font-semibold mb-1 font-headline">
-                      Account
+                      {t('common.account')}
                     </h2>
                     <div
                       className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
@@ -680,7 +694,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                     >
                       <LogOut className="h-5 w-5" />
                       <span className="text-sm text-muted-foreground">
-                        Sign out
+                        {t('common.signOut')}
                       </span>
                     </div>
                   </div>
@@ -711,7 +725,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           <div className="relative w-full">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground z-10 pointer-events-none" />
             <Input
-              placeholder="Search for venues..."
+              placeholder={t('common.searchVenues')}
               value={inputValue}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
@@ -770,8 +784,8 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                     <CommandGroup
                       heading={
                         debouncedInput && debouncedInput.length > 0
-                          ? "Suggestions"
-                          : "Popular Searches"
+                          ? t('common.suggestions')
+                          : t('common.popularSearches')
                       }
                     >
                       {suggestions.map((suggestion, index) => (

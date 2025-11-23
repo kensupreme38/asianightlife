@@ -12,7 +12,6 @@ import { AuthProvider } from "@/contexts/auth-context";
 const inter = Inter({ subsets: ["latin"] });
 
 const heroBannerImage = getImage("hero-banner");
-// By adding a unique version query parameter, we can force social media platforms to refetch the image.
 const imagePreviewUrl = `${heroBannerImage?.imageUrl}&v=1`;
 
 export const metadata: Metadata = {
@@ -47,9 +46,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
@@ -58,7 +57,7 @@ export default function RootLayout({
             <TooltipProvider>
               <Toaster />
               <Sonner />
-              <ClientLayout>{children}</ClientLayout>
+              {children}
             </TooltipProvider>
           </AuthProvider>
         </Providers>
@@ -88,9 +87,12 @@ export default function RootLayout({
                 function saveScroll() {
                   if (isRestoring || typeof sessionStorage === 'undefined') return;
                   // Chỉ lưu scroll position cho trang chủ và trang DJ
-                  if (window.location.pathname !== '/' && window.location.pathname !== '/dj') return;
+                  const pathname = window.location.pathname;
+                  const isHomePage = pathname === '/' || pathname.match(/^\/(en|vi)\/?$/);
+                  const isDJPage = pathname.match(/^\/(en|vi)\/dj\/?$/);
+                  if (!isHomePage && !isDJPage) return;
                   try {
-                    const key = window.location.pathname + window.location.search;
+                    const key = pathname + window.location.search;
                     const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
                     if (scrollY > 0) {
                       const saved = sessionStorage.getItem(SCROLL_KEY);
@@ -104,10 +106,12 @@ export default function RootLayout({
                 // Khôi phục scroll position (chỉ cho trang chủ/DJ và chỉ khi referrer phù hợp)
                 function restoreScroll() {
                   if (typeof sessionStorage === 'undefined') return;
-                  // Chỉ restore cho trang chủ hoặc trang DJ
-                  if (window.location.pathname !== '/' && window.location.pathname !== '/dj') return;
+                  const pathname = window.location.pathname;
+                  const isHomePage = pathname === '/' || pathname.match(/^\/(en|vi)\/?$/);
+                  const isDJPage = pathname.match(/^\/(en|vi)\/dj\/?$/);
+                  if (!isHomePage && !isDJPage) return;
                   try {
-                    const key = window.location.pathname + window.location.search;
+                    const key = pathname + window.location.search;
                     const saved = sessionStorage.getItem(SCROLL_KEY);
                     const positions = saved ? JSON.parse(saved) : {};
                     const savedPos = positions[key];
@@ -154,12 +158,14 @@ export default function RootLayout({
                     const referrer = sessionStorage.getItem('scrollRestoreReferrer');
                     const pathname = window.location.pathname;
                     // Nếu ở trang chủ, chỉ restore nếu referrer là từ venue detail
-                    if (pathname === '/') {
-                      return referrer && referrer.startsWith('/venue/') && referrer !== '/venue';
+                    const isHomePage = pathname === '/' || pathname.match(/^\/(en|vi)\/?$/);
+                    if (isHomePage) {
+                      return referrer && referrer.match(/^\/(en|vi)\/venue\/[^/]+/);
                     }
                     // Nếu ở trang DJ, chỉ restore nếu referrer là từ DJ detail
-                    if (pathname === '/dj') {
-                      return referrer && referrer.startsWith('/dj/') && referrer !== '/dj';
+                    const isDJPage = pathname.match(/^\/(en|vi)\/dj\/?$/);
+                    if (isDJPage) {
+                      return referrer && referrer.match(/^\/(en|vi)\/dj\/[^/]+/);
                     }
                     return false;
                   } catch(e) {
