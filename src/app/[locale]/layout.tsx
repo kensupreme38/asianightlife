@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   return (
-    <NextIntlClientProvider key={locale} messages={messages} locale={locale}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
       <ClientLayout>{children}</ClientLayout>
     </NextIntlClientProvider>
   );
