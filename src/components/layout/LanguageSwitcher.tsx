@@ -23,6 +23,17 @@ export function LanguageSwitcher() {
   const fullPathname = usePathname(); // Full pathname with locale (e.g., /vi or /en/dj)
 
   const handleLanguageChange = (newLocale: string) => {
+    // Save locale preference to cookie (next-intl uses NEXT_LOCALE cookie)
+    if (typeof document !== 'undefined') {
+      // Set cookie that expires in 1 year
+      const expires = new Date();
+      expires.setFullYear(expires.getFullYear() + 1);
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
+      
+      // Also save to localStorage as backup
+      localStorage.setItem('locale', newLocale);
+    }
+    
     // Remove current locale prefix from pathname
     let pathWithoutLocale = fullPathname;
     

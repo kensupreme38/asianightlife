@@ -8,7 +8,7 @@ import {
   Sparkles,
   LucideIcon,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import React, { useMemo } from "react";
 import { useTranslations } from 'next-intl';
 

@@ -9,7 +9,7 @@ import { Heart, TrendingUp, User, ArrowLeft, Edit, Loader2, Share2, Music2, Cale
 import { useAuth } from "@/contexts/auth-context";
 import { toast } from "@/hooks/use-toast";
 import { DJ } from "./DJCard";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
