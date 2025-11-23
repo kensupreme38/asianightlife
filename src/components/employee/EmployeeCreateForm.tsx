@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -25,63 +24,141 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { CalendarIcon, ArrowLeft, Loader2, X } from "lucide-react";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { ArrowLeft, Loader2, X } from "lucide-react";
 import { format } from "date-fns";
-import { cn } from "@/lib/utils";
+import { useAuth } from "@/contexts/auth-context";
+import { createClient } from "@/utils/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { generateReferralCode } from "@/lib/utils";
+
+const EMPLOYEE_IMAGE_BUCKET =
+  process.env.NEXT_PUBLIC_SUPABASE_DJ_BUCKET || "djpro5";
+const EMPLOYEE_IMAGE_FOLDER =
+  process.env.NEXT_PUBLIC_SUPABASE_EMPLOYEE || "employee";
 
 const employeeFormSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   full_name: z.string().min(2, "Full name must be at least 2 characters"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
+  phone: z.string().optional().or(z.literal("")),
   date_of_birth: z.date({
     required_error: "Date of birth is required",
   }),
-  gender: z.enum(["Male", "Female", "Other"], {
+  gender: z.enum(["male", "female"], {
     required_error: "Please select a gender",
   }),
-  address: z.string().min(5, "Address must be at least 5 characters"),
+  address: z.string().optional().or(z.literal("")),
 });
 
 type EmployeeFormValues = z.infer<typeof employeeFormSchema>;
 
-export default function EmployeeCreateForm() {
+interface EmployeeProfile {
+  id: string;
+  user_id: string;
+  email: string;
+  full_name: string;
+  phone: string | null;
+  date_of_birth: string | null;
+  gender: string | null;
+  address: string | null;
+  avatar: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+interface EmployeeCreateFormProps {
+  employeeData?: EmployeeProfile | null;
+}
+
+export default function EmployeeCreateForm({
+  employeeData,
+}: EmployeeCreateFormProps) {
   const router = useRouter();
+  const { currentUser } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false);
+  const [existingImageUrl, setExistingImageUrl] = useState<string | null>(null);
+  const isEdit = !!employeeData;
 
   const form = useForm<EmployeeFormValues>({
     resolver: zodResolver(employeeFormSchema),
     defaultValues: {
-      email: "",
+      email: currentUser?.email || "",
       full_name: "",
       phone: "",
       date_of_birth: undefined,
-      gender: undefined,
+      gender: "male",
       address: "",
     },
   });
+
+  // Update form when currentUser is loaded or employeeData is provided
+  useEffect(() => {
+    if (currentUser?.email && !employeeData) {
+      form.setValue("email", currentUser.email);
+    }
+  }, [currentUser, form, employeeData]);
+
+  // Load employee data when in edit mode
+  useEffect(() => {
+    if (employeeData) {
+      form.reset({
+        email: employeeData.email || currentUser?.email || "",
+        full_name: employeeData.full_name || "",
+        phone: employeeData.phone || "",
+        date_of_birth: employeeData.date_of_birth
+          ? new Date(employeeData.date_of_birth)
+          : undefined,
+        gender: (employeeData.gender as "male" | "female") || "male",
+        address: employeeData.address || "",
+      });
+
+      if (employeeData.avatar) {
+        setExistingImageUrl(employeeData.avatar);
+        setImagePreview(employeeData.avatar);
+      }
+    }
+  }, [employeeData, form, currentUser]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       // Validate file size (5MB max)
       if (file.size > 5 * 1024 * 1024) {
-        alert("Image must be less than 5MB");
+        toast({
+          title: "Error",
+          description: "Image must be less than 5MB",
+          variant: "destructive",
+        });
         return;
       }
-      
+
       // Validate file type
       if (!file.type.startsWith("image/")) {
-        alert("Please upload an image file (JPEG, PNG, WebP, or GIF)");
+        toast({
+          title: "Error",
+          description: "Please upload an image file (JPEG, PNG, WebP, or GIF)",
+          variant: "destructive",
+        });
         return;
       }
-      
+
       setImageFile(file);
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -91,20 +168,194 @@ export default function EmployeeCreateForm() {
     }
   };
 
+  const uploadImage = async (file: File): Promise<string> => {
+    const supabase = createClient();
+
+    // Check if bucket exists, if not, provide helpful error
+    let bucketExists = true;
+    const { data: buckets, error: bucketError } =
+      await supabase.storage.listBuckets();
+
+    if (bucketError) {
+      const message = bucketError.message?.toLowerCase() ?? "";
+      if (
+        !(message.includes("permission") || message.includes("not allowed"))
+      ) {
+        console.warn("Supabase listBuckets failed", bucketError);
+      }
+    } else {
+      bucketExists =
+        buckets?.some((bucket) => bucket.name === EMPLOYEE_IMAGE_BUCKET) ??
+        false;
+      if (!bucketExists) {
+        console.warn(
+          `Bucket '${EMPLOYEE_IMAGE_BUCKET}' not found when listing. Proceeding to attempt upload.`
+        );
+      }
+    }
+
+    const fileExt = file.name.split(".").pop();
+    const fileName = `${Date.now()}-${Math.random()
+      .toString(36)
+      .substring(7)}.${fileExt}`;
+    const filePath = EMPLOYEE_IMAGE_FOLDER
+      ? `${EMPLOYEE_IMAGE_FOLDER}/${fileName}`
+      : fileName;
+
+    const { error: uploadError } = await supabase.storage
+      .from(EMPLOYEE_IMAGE_BUCKET)
+      .upload(filePath, file, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+
+    if (uploadError) {
+      // Provide more specific error messages
+      if (
+        uploadError.message.includes("Bucket") ||
+        uploadError.message.includes("not found")
+      ) {
+        throw new Error(
+          `Storage bucket not found. Please create '${EMPLOYEE_IMAGE_BUCKET}' bucket in Supabase Storage or update the NEXT_PUBLIC_SUPABASE_EMPLOYEE environment variable.`
+        );
+      }
+      if (uploadError.message.includes("file size")) {
+        throw new Error("File is too large. Maximum size is 5MB.");
+      }
+      if (uploadError.message.toLowerCase().includes("row-level security")) {
+        throw new Error(
+          "Upload blocked by storage policy. Ensure Supabase storage RLS policies allow authenticated INSERT on the bucket."
+        );
+      }
+      throw new Error(`Upload failed: ${uploadError.message}`);
+    }
+
+    const { data } = supabase.storage
+      .from(EMPLOYEE_IMAGE_BUCKET)
+      .getPublicUrl(filePath);
+
+    return data.publicUrl;
+  };
+
   const onSubmit = async (data: EmployeeFormValues) => {
+    if (!currentUser) {
+      toast({
+        title: "Error",
+        description: "You must be logged in to create an employee profile",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
-    
-    // TODO: Add API call here
-    console.log("Form data:", data);
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    alert("Employee created successfully! (This is a demo - no API call made)");
-    
-    // Reset form
-    form.reset();
-    setIsSubmitting(false);
+
+    try {
+      const supabase = createClient();
+      let imageUrl: string | null = existingImageUrl || null;
+
+      // Upload image if selected
+      if (imageFile) {
+        try {
+          imageUrl = await uploadImage(imageFile);
+          toast({
+            title: "Success",
+            description: "Image uploaded successfully",
+          });
+        } catch (uploadError) {
+          // If upload fails, show error and stop submission
+          console.error("Image upload failed:", uploadError);
+          const errorMessage =
+            uploadError instanceof Error
+              ? uploadError.message
+              : "Failed to upload image. Please try again.";
+          toast({
+            title: "Upload Error",
+            description: errorMessage,
+            variant: "destructive",
+          });
+          setIsSubmitting(false);
+          return; // Stop form submission
+        }
+      }
+
+      // Format date_of_birth as YYYY-MM-DD string
+      const dateOfBirthString = format(data.date_of_birth, "yyyy-MM-dd");
+
+      // Prepare employee data according to schema
+      const employeePayload: Record<string, unknown> = {
+        email: data.email,
+        full_name: data.full_name,
+        phone: data.phone || null,
+        date_of_birth: dateOfBirthString,
+        gender: data.gender,
+        address: data.address || null,
+        avatar: imageUrl,
+      };
+
+      if (isEdit && employeeData) {
+        // Update existing employee profile
+        const { error } = await supabase
+          .from("employee_profiles")
+          .update(employeePayload)
+          .eq("id", employeeData.id);
+
+        if (error) {
+          const message =
+            error.message ||
+            error.details ||
+            error.hint ||
+            "Unknown error updating employee profile";
+          throw new Error(message);
+        }
+
+        toast({
+          title: "Success",
+          description: "Employee profile updated successfully!",
+        });
+      } else {
+        // Generate unique referral code based on user_id + timestamp
+        // This ensures uniqueness without needing to check database
+        const referralCode = generateReferralCode(currentUser.id);
+
+        // Insert new employee profile
+        const { error } = await supabase.from("employee_profiles").insert({
+          ...employeePayload,
+          user_id: currentUser.id,
+          referral_code: referralCode,
+        });
+
+        if (error) {
+          const message =
+            error.message ||
+            error.details ||
+            error.hint ||
+            "Unknown error creating employee profile";
+          throw new Error(message);
+        }
+
+        toast({
+          title: "Success",
+          description: `Employee profile created successfully! Referral code: ${referralCode}`,
+        });
+      }
+
+      // Reload page to show employee detail view
+      router.refresh();
+      window.location.href = "/employee";
+    } catch (error) {
+      console.error("Error creating employee profile:", error);
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Failed to create employee profile";
+      toast({
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -112,16 +363,16 @@ export default function EmployeeCreateForm() {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="text-2xl font-headline">Employee Details</CardTitle>
+            <CardTitle className="text-2xl font-headline">
+              {isEdit ? "Edit Employee Profile" : "Employee Details"}
+            </CardTitle>
             <CardDescription className="mt-2">
-              Fill in the information below to create a new employee profile
+              {isEdit
+                ? "Update your employee profile information below"
+                : "Fill in the information below to create a new employee profile"}
             </CardDescription>
           </div>
-          <Button
-            onClick={() => router.back()}
-            variant="ghost"
-            size="icon"
-          >
+          <Button onClick={() => router.back()} variant="ghost" size="icon">
             <ArrowLeft className="h-5 w-5" />
           </Button>
         </div>
@@ -141,12 +392,16 @@ export default function EmployeeCreateForm() {
                     className="cursor-pointer"
                   />
                   <p className="text-xs text-muted-foreground mt-1">
-                    Upload an image from your device (JPEG, PNG, WebP, or GIF - Max 5MB)
+                    Upload an image from your device (JPEG, PNG, WebP, or GIF -
+                    Max 5MB)
                   </p>
                 </div>
                 {imagePreview && (
                   <div className="space-y-2">
-                    <Dialog open={isImageDialogOpen} onOpenChange={setIsImageDialogOpen}>
+                    <Dialog
+                      open={isImageDialogOpen}
+                      onOpenChange={setIsImageDialogOpen}
+                    >
                       <DialogTrigger asChild>
                         <div className="relative w-40 h-40 rounded-lg overflow-hidden border shadow-md cursor-pointer hover:opacity-90 transition-opacity group">
                           <img
@@ -165,7 +420,9 @@ export default function EmployeeCreateForm() {
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-4xl w-full p-0">
-                        <DialogTitle className="sr-only">Image Preview</DialogTitle>
+                        <DialogTitle className="sr-only">
+                          Image Preview
+                        </DialogTitle>
                         <div className="relative">
                           <Button
                             variant="ghost"
@@ -194,150 +451,145 @@ export default function EmployeeCreateForm() {
                 )}
               </div>
             </div>
-        {/* Email */}
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email *</FormLabel>
-              <FormControl>
-                <Input
-                  type="email"
-                  placeholder="employee@example.com"
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription>
-                Employee's email address for communication
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            {/* Email */}
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email *</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="email"
+                      placeholder="employee@example.com"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Employee&apos;s email address for communication
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        {/* Full Name */}
-        <FormField
-          control={form.control}
-          name="full_name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name *</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="John Doe"
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription>
-                Employee's full legal name
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            {/* Full Name */}
+            <FormField
+              control={form.control}
+              name="full_name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Full Name *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="John Doe" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    Employee&apos;s full legal name
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        {/* Phone */}
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number *</FormLabel>
-              <FormControl>
-                <Input
-                  type="tel"
-                  placeholder="+65 1234 5678"
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription>
-                Contact phone number
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            {/* Phone */}
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input type="tel" placeholder="+65 1234 5678" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    Contact phone number (optional)
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        {/* Date of Birth */}
-        <FormField
-          control={form.control}
-          name="date_of_birth"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Date of Birth *</FormLabel>
-              <FormControl>
-                <Input
-                  type="date"
-                  value={field.value ? format(field.value, "yyyy-MM-dd") : ""}
-                  onChange={(e) => {
-                    const date = e.target.value ? new Date(e.target.value) : undefined;
-                    field.onChange(date);
-                  }}
-                  max={format(new Date(), "yyyy-MM-dd")}
-                  min="1900-01-01"
-                  className="w-full"
-                />
-              </FormControl>
-              <FormDescription>
-                Employee's date of birth (you can easily select year and month)
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            {/* Date of Birth */}
+            <FormField
+              control={form.control}
+              name="date_of_birth"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Date of Birth *</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="date"
+                      value={
+                        field.value ? format(field.value, "yyyy-MM-dd") : ""
+                      }
+                      onChange={(e) => {
+                        const date = e.target.value
+                          ? new Date(e.target.value)
+                          : undefined;
+                        field.onChange(date);
+                      }}
+                      max={format(new Date(), "yyyy-MM-dd")}
+                      min="1900-01-01"
+                      className="w-full"
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Employee&apos;s date of birth (you can easily select year
+                    and month)
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        {/* Gender */}
-        <FormField
-          control={form.control}
-          name="gender"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Gender *</FormLabel>
-              <Select onValueChange={field.onChange} value={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select gender" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="Male">Male</SelectItem>
-                  <SelectItem value="Female">Female</SelectItem>
-                  <SelectItem value="Other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormDescription>
-                Employee's gender
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            {/* Gender */}
+            <FormField
+              control={form.control}
+              name="gender"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Gender *</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select gender" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="male">Male</SelectItem>
+                      <SelectItem value="female">Female</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormDescription>Employee&apos;s gender</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        {/* Address */}
-        <FormField
-          control={form.control}
-          name="address"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Address *</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="123 Main Street, City, Country"
-                  className="min-h-[100px]"
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription>
-                Employee's residential address
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            {/* Address */}
+            <FormField
+              control={form.control}
+              name="address"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Address</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="123 Main Street, City, Country"
+                      className="min-h-[100px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Employee&apos;s residential address (optional)
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             {/* Submit Button */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t justify-end">
               <Button
                 type="button"
                 variant="outline"
@@ -356,8 +608,10 @@ export default function EmployeeCreateForm() {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-                    Creating...
+                    {isEdit ? "Updating..." : "Creating..."}
                   </>
+                ) : isEdit ? (
+                  "Update Employee"
                 ) : (
                   "Create Employee"
                 )}
@@ -369,4 +623,3 @@ export default function EmployeeCreateForm() {
     </Card>
   );
 }
-

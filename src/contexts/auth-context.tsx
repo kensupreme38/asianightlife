@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
 import { createClient } from "@/utils/supabase/client";
 import type { User } from "@supabase/supabase-js";
 
@@ -10,6 +16,7 @@ interface AuthContextType {
   currentUser: User | null;
   isLoading: boolean;
   isInitialized: boolean;
+  signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -21,39 +28,40 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Set up auth state change listener (outside initializeAuth for better performance)
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        console.log("Auth state changed:", event);
-        
-        // Handle all auth events with unified logic
-        if (session?.user) {
-          // User exists - update user state
-          console.log(`${event} for user:`, session.user.id);
-          setCurrentUser(session.user);
-        } else {
-          // No user - clear user state (session expired, user signed out, etc.)
-          console.log(`${event} - clearing user state`);
-          setCurrentUser(null);
-        }
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      console.log("Auth state changed:", event);
+
+      // Handle all auth events with unified logic
+      if (session?.user) {
+        // User exists - update user state
+        console.log(`${event} for user:`, session.user.id);
+        setCurrentUser(session.user);
+      } else {
+        // No user - clear user state (session expired, user signed out, etc.)
+        console.log(`${event} - clearing user state`);
+        setCurrentUser(null);
       }
-    );
+    });
 
     // Initialize auth state
     const initializeAuth = async () => {
       try {
         // Check initial user without triggering errors
         try {
-          const { data: { user } } = await supabase.auth.getUser();
+          const {
+            data: { user },
+          } = await supabase.auth.getUser();
           if (user) {
             console.log("Initial user found:", user.id);
             setCurrentUser(user);
           }
-          
-        } catch (error) {
+        } catch {
           // Silently ignore auth errors during initialization
           console.log("No valid session found during initialization");
         }
-        
+
         setIsInitialized(true);
         setIsLoading(false);
       } catch (error) {
@@ -69,19 +77,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => subscription.unsubscribe();
   }, []);
 
-
+  const signOut = async () => {
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        console.error("Error signing out:", error);
+        throw error;
+      }
+      // User state will be updated automatically via onAuthStateChange
+    } catch (error) {
+      console.error("Failed to sign out:", error);
+      throw error;
+    }
+  };
 
   const value = {
     currentUser,
     isLoading,
     isInitialized,
+    signOut,
   };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {

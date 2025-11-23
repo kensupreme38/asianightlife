@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -21,10 +22,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { CalendarIcon, Clock, Users } from "lucide-react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { CalendarIcon, Clock, Users, Gift } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import { createClient } from "@/utils/supabase/client";
 
 interface BookingFormProps {
   open: boolean;
@@ -33,40 +39,86 @@ interface BookingFormProps {
   venueAddress: string;
 }
 
-export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: BookingFormProps) => {
+export const BookingForm = ({
+  open,
+  onOpenChange,
+  venueName,
+  venueAddress,
+}: BookingFormProps) => {
+  const searchParams = useSearchParams();
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedTime, setSelectedTime] = useState("19:00:00");
   const [logoError, setLogoError] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
     pax: "",
     location: "",
+    referralCode: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Load referral code from URL query params
+  useEffect(() => {
+    const referralCodeFromUrl = searchParams?.get("referral_code");
+    if (referralCodeFromUrl) {
+      setFormData((prev) => ({
+        ...prev,
+        referralCode: referralCodeFromUrl,
+      }));
+    }
+  }, [searchParams]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate date and time
     if (!selectedDate || !selectedTime) {
       alert("Please select both date and time for your booking");
       return;
     }
-    
+
     // Combine date and time for booking message
-    const bookingDateTime = `${format(selectedDate, "yyyy-MM-dd")} ${selectedTime}`;
-    
+    const bookingDateTime = `${format(
+      selectedDate,
+      "yyyy-MM-dd"
+    )} ${selectedTime}`;
+
+    // Fetch employee info if referral code is provided
+    let employeeInfo = "";
+    if (formData.referralCode) {
+      try {
+        const supabase = createClient();
+        const { data: employee, error } = await supabase
+          .from("employee_profiles")
+          .select("full_name, phone")
+          .eq("referral_code", formData.referralCode.toUpperCase())
+          .maybeSingle();
+
+        if (!error && employee) {
+          employeeInfo = `\nReferral Employee: ${employee.full_name}`;
+          if (employee.phone) {
+            employeeInfo += `\nEmployee Phone: ${employee.phone}`;
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching employee info:", error);
+      }
+    }
+
     // Prepare booking message
-    const message = 
-  `New Booking Request\n\n` +
-  `Venue: ${venueName}\n` +
-  `Address: ${venueAddress}\n\n` +
-  `Full Name: ${formData.fullName}\n` +
-  `Phone: ${formData.phoneNumber}\n` +
-  `Booking Date & Time: ${bookingDateTime}\n` +
-  `Number of People: ${formData.pax}\n` +
-  `Location/Branch: ${formData.location || 'N/A'}`;
+    const message =
+      `New Booking Request\n\n` +
+      `Venue: ${venueName}\n` +
+      `Address: ${venueAddress}\n\n` +
+      `Full Name: ${formData.fullName}\n` +
+      `Phone: ${formData.phoneNumber}\n` +
+      `Booking Date & Time: ${bookingDateTime}\n` +
+      `Number of People: ${formData.pax}\n` +
+      `Location/Branch: ${formData.location || "N/A"}\n\n` +
+      (formData.referralCode
+        ? `Referral Code: ${formData.referralCode}${employeeInfo}`
+        : "");
 
     // Open WhatsApp with booking details
     window.open(
@@ -77,11 +129,13 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
     // Reset form
     setSelectedDate(new Date());
     setSelectedTime("19:00:00");
+    const referralCodeFromUrl = searchParams?.get("referral_code") || "";
     setFormData({
       fullName: "",
       phoneNumber: "",
       pax: "",
       location: "",
+      referralCode: referralCodeFromUrl,
     });
 
     // Close dialog
@@ -98,7 +152,10 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
         <DialogHeader>
           <div className="flex items-center gap-3 mb-2">
             {logoError ? (
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs object-cover rounded" style={{ width: 40, height: 40 }}>
+              <div
+                className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs object-cover rounded"
+                style={{ width: 40, height: 40 }}
+              >
                 ANL
               </div>
             ) : (
@@ -113,7 +170,9 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
                 unoptimized
               />
             )}
-            <DialogTitle className="text-2xl font-bold">Make a Booking</DialogTitle>
+            <DialogTitle className="text-2xl font-bold">
+              Make a Booking
+            </DialogTitle>
           </div>
           <DialogDescription>
             Fill in your details to make a reservation at {venueName}
@@ -175,7 +234,9 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
                     selected={selectedDate}
                     onSelect={(date) => date && setSelectedDate(date)}
                     initialFocus
-                    disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
+                    disabled={(date) =>
+                      date < new Date(new Date().setHours(0, 0, 0, 0))
+                    }
                   />
                 </PopoverContent>
               </Popover>
@@ -236,6 +297,24 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
             />
           </div>
 
+          {/* Referral Code */}
+          <div className="space-y-2">
+            <Label htmlFor="referralCode" className="flex items-center gap-2">
+              <Gift className="h-4 w-4" />
+              Referral Code ( Optional )
+            </Label>
+            <Input
+              id="referralCode"
+              type="text"
+              placeholder="Enter referral code"
+              value={formData.referralCode}
+              onChange={(e) =>
+                handleChange("referralCode", e.target.value.toUpperCase())
+              }
+              className="font-mono"
+            />
+          </div>
+
           <DialogFooter className="gap-2 sm:gap-0">
             <Button
               type="button"
@@ -244,9 +323,9 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
             >
               Cancel
             </Button>
-            <Button 
-              type="submit" 
-              variant="neon" 
+            <Button
+              type="submit"
+              variant="neon"
               className="min-w-[120px]"
               disabled={!selectedDate || !selectedTime}
             >
@@ -258,4 +337,3 @@ export const BookingForm = ({ open, onOpenChange, venueName, venueAddress }: Boo
     </Dialog>
   );
 };
-

@@ -1,7 +1,18 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Instagram, Facebook, Search, Youtube, Menu, X, Building2, SlidersHorizontal, MapPin as MapPinIcon } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Search,
+  Youtube,
+  Menu,
+  X,
+  Building2,
+  SlidersHorizontal,
+  MapPin as MapPinIcon,
+  LogOut,
+} from "lucide-react";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import Image from "next/image";
 import { Input } from "../ui/input";
@@ -24,6 +35,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
+import { useAuth } from "@/contexts/auth-context";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
   searchQuery?: string;
@@ -38,7 +51,7 @@ interface SocialLink {
 }
 
 interface Suggestion {
-  type: 'venue' | 'category' | 'city' | 'country';
+  type: "venue" | "category" | "city" | "country";
   text: string;
   count?: number;
 }
@@ -48,21 +61,31 @@ const LOGO_PATH = "/logo.jpg";
 
 // Logo component - optimized to prevent flicker
 // Using memo and local image to prevent re-renders and network requests
-const Logo = memo(({ width = 64, height = 64, className = "object-cover" }: { width?: number; height?: number; className?: string }) => {
-  // Use local image path directly, no state to avoid flicker
-  return (
-    <Image
-      src={LOGO_PATH}
-      alt="Asia Night Life Logo"
-      width={width}
-      height={height}
-      className={className}
-      priority
-      unoptimized
-      style={{ maxWidth: '100%', height: 'auto' }}
-    />
-  );
-});
+const Logo = memo(
+  ({
+    width = 64,
+    height = 64,
+    className = "object-cover",
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) => {
+    // Use local image path directly, no state to avoid flicker
+    return (
+      <Image
+        src={LOGO_PATH}
+        alt="Asia Night Life Logo"
+        width={width}
+        height={height}
+        className={className}
+        priority
+        unoptimized
+        style={{ maxWidth: "100%", height: "auto" }}
+      />
+    );
+  }
+);
 Logo.displayName = "Logo";
 
 export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
@@ -75,10 +98,25 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const debouncedInput = useDebounce(inputValue, 200);
   const pathname = usePathname();
+  const { currentUser, signOut } = useAuth();
+  const router = useRouter();
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      router.push("/");
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
 
   const primaryLinks = [
     { href: "/", label: "Home" },
     { href: "/dj", label: "DJ Voting" },
+    {
+      href: "/employee",
+      label: "Employee",
+    },
   ];
 
   useEffect(() => {
@@ -89,12 +127,22 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const suggestions = useMemo(() => {
     if (!debouncedInput || debouncedInput.length < 1) {
       // Return popular suggestions when empty
-      const categories = Array.from(new Set(ktvData.map(v => v.category).filter(cat => cat != null))).filter(cat => cat && typeof cat === 'string');
-      const countries = Array.from(new Set(ktvData.map(v => v.country).filter(country => country != null))).filter(country => country && typeof country === 'string');
-      
+      const categories = Array.from(
+        new Set(ktvData.map((v) => v.category).filter((cat) => cat != null))
+      ).filter((cat) => cat && typeof cat === "string");
+      const countries = Array.from(
+        new Set(
+          ktvData.map((v) => v.country).filter((country) => country != null)
+        )
+      ).filter((country) => country && typeof country === "string");
+
       return [
-        ...categories.slice(0, 3).map(cat => ({ type: 'category' as const, text: cat })),
-        ...countries.slice(0, 2).map(country => ({ type: 'country' as const, text: country })),
+        ...categories
+          .slice(0, 3)
+          .map((cat) => ({ type: "category" as const, text: cat })),
+        ...countries
+          .slice(0, 2)
+          .map((country) => ({ type: "country" as const, text: country })),
       ];
     }
 
@@ -103,31 +151,47 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     const seen = new Set<string>();
 
     // Search venues by name
-    ktvData.forEach(venue => {
-      if (venue.name && typeof venue.name === 'string' && venue.name.toLowerCase().includes(query) && !seen.has(venue.name)) {
-        suggestions.push({ type: 'venue', text: venue.name });
+    ktvData.forEach((venue) => {
+      if (
+        venue.name &&
+        typeof venue.name === "string" &&
+        venue.name.toLowerCase().includes(query) &&
+        !seen.has(venue.name)
+      ) {
+        suggestions.push({ type: "venue", text: venue.name });
         seen.add(venue.name);
       }
     });
 
     // Search by category
-    const categories = Array.from(new Set(ktvData.map(v => v.category).filter(cat => cat != null)));
-    categories.forEach(cat => {
-      if (cat && typeof cat === 'string' && cat.toLowerCase().includes(query) && !seen.has(`category:${cat}`)) {
-        const count = ktvData.filter(v => v.category === cat).length;
-        suggestions.push({ type: 'category', text: cat, count });
+    const categories = Array.from(
+      new Set(ktvData.map((v) => v.category).filter((cat) => cat != null))
+    );
+    categories.forEach((cat) => {
+      if (
+        cat &&
+        typeof cat === "string" &&
+        cat.toLowerCase().includes(query) &&
+        !seen.has(`category:${cat}`)
+      ) {
+        const count = ktvData.filter((v) => v.category === cat).length;
+        suggestions.push({ type: "category", text: cat, count });
         seen.add(`category:${cat}`);
       }
     });
 
     // Search by city/area from address
-    ktvData.forEach(venue => {
-      if (venue.address && typeof venue.address === 'string') {
+    ktvData.forEach((venue) => {
+      if (venue.address && typeof venue.address === "string") {
         const address = venue.address.toLowerCase();
         const parts = address.split(/[,\s]+/);
-        parts.forEach(part => {
-          if (part.length > 2 && part.includes(query) && !seen.has(`city:${part}`)) {
-            suggestions.push({ type: 'city', text: part });
+        parts.forEach((part) => {
+          if (
+            part.length > 2 &&
+            part.includes(query) &&
+            !seen.has(`city:${part}`)
+          ) {
+            suggestions.push({ type: "city", text: part });
             seen.add(`city:${part}`);
           }
         });
@@ -135,11 +199,20 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     });
 
     // Search by country
-    const countries = Array.from(new Set(ktvData.map(v => v.country).filter(country => country != null)));
-    countries.forEach(country => {
-      if (country && typeof country === 'string' && country.toLowerCase().includes(query) && !seen.has(`country:${country}`)) {
-        const count = ktvData.filter(v => v.country === country).length;
-        suggestions.push({ type: 'country', text: country, count });
+    const countries = Array.from(
+      new Set(
+        ktvData.map((v) => v.country).filter((country) => country != null)
+      )
+    );
+    countries.forEach((country) => {
+      if (
+        country &&
+        typeof country === "string" &&
+        country.toLowerCase().includes(query) &&
+        !seen.has(`country:${country}`)
+      ) {
+        const count = ktvData.filter((v) => v.country === country).length;
+        suggestions.push({ type: "country", text: country, count });
         seen.add(`country:${country}`);
       }
     });
@@ -163,8 +236,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
       const inputElement = inputRef.current;
-      const dropdownElement = document.querySelector('[data-suggestion-dropdown]');
-      const mobileDropdownElement = document.querySelector('[data-suggestion-dropdown-mobile]');
+      const dropdownElement = document.querySelector(
+        "[data-suggestion-dropdown]"
+      );
+      const mobileDropdownElement = document.querySelector(
+        "[data-suggestion-dropdown-mobile]"
+      );
 
       if (
         inputElement &&
@@ -187,9 +264,9 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isDropdownOpen]);
 
@@ -222,14 +299,14 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     setIsInputFocused(false);
   };
 
-  const getSuggestionIcon = (type: Suggestion['type']) => {
+  const getSuggestionIcon = (type: Suggestion["type"]) => {
     switch (type) {
-      case 'venue':
+      case "venue":
         return <Building2 className="h-4 w-4" />;
-      case 'category':
+      case "category":
         return <SlidersHorizontal className="h-4 w-4" />;
-      case 'city':
-      case 'country':
+      case "city":
+      case "country":
         return <MapPinIcon className="h-4 w-4" />;
       default:
         return <Search className="h-4 w-4" />;
@@ -262,12 +339,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
   // Preload logo on mount to prevent flicker when switching tabs
   useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
     link.href = LOGO_PATH;
     document.head.appendChild(link);
-    
+
     return () => {
       if (document.head.contains(link)) {
         document.head.removeChild(link);
@@ -289,7 +366,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
         <nav className="hidden md:flex items-center gap-6 ml-6">
           {primaryLinks.map((link) => {
-            const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
             return (
               <Link
                 key={link.href}
@@ -324,7 +404,9 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   // Delay setting focused to false to allow clicking on suggestions
                   setTimeout(() => {
                     const activeElement = document.activeElement;
-                    const dropdownElement = document.querySelector('[data-suggestion-dropdown]');
+                    const dropdownElement = document.querySelector(
+                      "[data-suggestion-dropdown]"
+                    );
                     if (!dropdownElement?.contains(activeElement as Node)) {
                       setIsInputFocused(false);
                       setIsDropdownOpen(false);
@@ -333,10 +415,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 }}
                 className="pl-10 h-10 w-full bg-background/60 backdrop-blur-sm border-border/40 focus:border-primary"
               />
-              
+
               {/* Suggestions Dropdown */}
               {isDropdownOpen && suggestions.length > 0 && (
-                <div 
+                <div
                   data-suggestion-dropdown
                   className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md"
                   onMouseDown={(e) => {
@@ -352,7 +434,13 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 >
                   <Command shouldFilter={false}>
                     <CommandList className="max-h-[300px]">
-                      <CommandGroup heading={debouncedInput && debouncedInput.length > 0 ? "Suggestions" : "Popular Searches"}>
+                      <CommandGroup
+                        heading={
+                          debouncedInput && debouncedInput.length > 0
+                            ? "Suggestions"
+                            : "Popular Searches"
+                        }
+                      >
                         {suggestions.map((suggestion, index) => (
                           <CommandItem
                             key={`${suggestion.type}-${suggestion.text}-${index}`}
@@ -368,7 +456,9 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                               <span className="text-muted-foreground flex-shrink-0">
                                 {getSuggestionIcon(suggestion.type)}
                               </span>
-                              <span className="flex-1 truncate">{suggestion.text}</span>
+                              <span className="flex-1 truncate">
+                                {suggestion.text}
+                              </span>
                               {suggestion.count !== undefined && (
                                 <span className="text-xs text-muted-foreground flex-shrink-0">
                                   ({suggestion.count})
@@ -393,7 +483,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               key={social.label}
               variant="ghost"
               size="sm"
-              className="h-9 w-9 p-0 hover:bg-secondary hover-glow"
+              className="h-9 w-9 p-0"
               asChild
             >
               <a
@@ -416,6 +506,18 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               </a>
             </Button>
           ))}
+          {currentUser && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-9 w-9 p-0"
+              onClick={handleSignOut}
+              title="Sign out"
+              aria-label="Sign out"
+            >
+              <LogOut className="h-4 w-4" />
+            </Button>
+          )}
         </div>
 
         {/* --- Mobile View --- */}
@@ -524,17 +626,24 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   </h2>
                   <div className="flex flex-col space-y-1">
                     {primaryLinks.map((link) => {
-                      const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                      const isActive =
+                        link.href === "/"
+                          ? pathname === "/"
+                          : pathname.startsWith(link.href);
                       return (
                         <Link
                           key={`mobile-${link.href}`}
                           href={link.href}
                           className={`flex items-center gap-3 p-2 rounded-md transition-colors hover:bg-secondary ${
-                            isActive ? "text-foreground" : "text-muted-foreground"
+                            isActive
+                              ? "text-foreground"
+                              : "text-muted-foreground"
                           }`}
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
-                          <span className="text-sm font-medium">{link.label}</span>
+                          <span className="text-sm font-medium">
+                            {link.label}
+                          </span>
                         </Link>
                       );
                     })}
@@ -558,6 +667,24 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                     </span>
                   </div>
                 </div>
+
+                {/* Sign Out */}
+                {currentUser && (
+                  <div>
+                    <h2 className="text-lg font-semibold mb-1 font-headline">
+                      Account
+                    </h2>
+                    <div
+                      className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
+                      onClick={handleSignOut}
+                    >
+                      <LogOut className="h-5 w-5" />
+                      <span className="text-sm text-muted-foreground">
+                        Sign out
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             </SheetContent>
           </Sheet>
@@ -598,7 +725,9 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 // Delay setting focused to false to allow clicking on suggestions
                 setTimeout(() => {
                   const activeElement = document.activeElement;
-                  const dropdownElement = document.querySelector('[data-suggestion-dropdown-mobile]');
+                  const dropdownElement = document.querySelector(
+                    "[data-suggestion-dropdown-mobile]"
+                  );
                   if (!dropdownElement?.contains(activeElement as Node)) {
                     setIsInputFocused(false);
                     setIsDropdownOpen(false);
@@ -619,10 +748,10 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
             >
               <X className="h-5 w-5" />
             </Button>
-            
+
             {/* Mobile Suggestions Dropdown */}
             {isDropdownOpen && suggestions.length > 0 && (
-              <div 
+              <div
                 data-suggestion-dropdown-mobile
                 className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md"
                 onMouseDown={(e) => {
@@ -638,7 +767,13 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               >
                 <Command shouldFilter={false}>
                   <CommandList className="max-h-[300px]">
-                    <CommandGroup heading={debouncedInput && debouncedInput.length > 0 ? "Suggestions" : "Popular Searches"}>
+                    <CommandGroup
+                      heading={
+                        debouncedInput && debouncedInput.length > 0
+                          ? "Suggestions"
+                          : "Popular Searches"
+                      }
+                    >
                       {suggestions.map((suggestion, index) => (
                         <CommandItem
                           key={`mobile-${suggestion.type}-${suggestion.text}-${index}`}
@@ -654,7 +789,9 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                             <span className="text-muted-foreground flex-shrink-0">
                               {getSuggestionIcon(suggestion.type)}
                             </span>
-                            <span className="flex-1 truncate">{suggestion.text}</span>
+                            <span className="flex-1 truncate">
+                              {suggestion.text}
+                            </span>
                             {suggestion.count !== undefined && (
                               <span className="text-xs text-muted-foreground flex-shrink-0">
                                 ({suggestion.count})
