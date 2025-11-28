@@ -113,8 +113,7 @@ Matrix Karaoke KTV is a stylish karaoke destination in Ho Chi Minh City, featuri
       "https://matrixkaraoke.com/data/pic_coso/2-1751740901-7.jpg",
       "https://matrixkaraoke.com/data/pic_coso/2-1751740901-8.jpg",
     ],
-    address:
-      "130 Đường 9A, KDC Trung Sơn, Bình Chánh, TP. Hồ Chí Minh",
+    address: "130 Đường 9A, KDC Trung Sơn, Bình Chánh, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -146,8 +145,7 @@ Monaco Karaoke KTV is a luxurious karaoke destination in Ho Chi Minh City, part 
       "https://matrixkaraoke.com/data/pic_coso/7-1751828995-3.jpg",
       "https://matrixkaraoke.com/data/pic_coso/7-1751828995-4.jpg",
     ],
-    address:
-      "31 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, Hồ Chí Minh",
+    address: "31 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -238,8 +236,7 @@ Energetic, modern karaoke venue in central Saigon featuring sound and lighting t
       "https://cdn.hstatic.net/products/1000268128/anh_4_fd0353cc63954b208e60caf30b65218a_master.jpg",
       "https://cdn.hstatic.net/products/1000268128/anh_5_eef5c9f91aa6485da1635ba815a0e7c9_master.jpg",
     ],
-    address:
-      "155 Nguyễn Văn Cừ, Phường 2, Quận 5, Thành phố Hồ Chí Minh",
+    address: "155 Nguyễn Văn Cừ, Phường 2, Quận 5, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -265,8 +262,7 @@ Modern karaoke venue in District 5 with stylish rooms, upgraded sound and lighti
       "https://product.hstatic.net/1000268128/product/459907922_122178445772217735_9222777348061917774_n_64c8bfc5df364166a62027fc9d48b7cd_master.jpg",
       "https://product.hstatic.net/1000268128/product/459994933_122178445604217735_8999848712967526214_n_7e3c69df216a46c4b71044f9fb370391_master.jpg",
     ],
-    address:
-      "1127 Trần Hưng Đạo, Phường 5, Quận 5, TP. Hồ Chí Minh",
+    address: "1127 Trần Hưng Đạo, Phường 5, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -292,8 +288,7 @@ Contemporary karaoke venue in District 5 offering stylish private rooms, upgrade
       "https://product.hstatic.net/1000268128/product/272252536_304644051722816_6630190706177167628_n_b6f670e37f09447a8a25683ae47b3285_master.jpg",
       "https://product.hstatic.net/1000268128/product/270546984_293743212812900_5039721358883470561_n_399e5aae9177473a96715a37a477957b_master.jpg",
     ],
-    address:
-      "750 Nguyễn Văn Quá, Quận 12, Thành phố Hồ Chí Minh",
+    address: "750 Nguyễn Văn Quá, Quận 12, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -322,8 +317,7 @@ Family‑friendly karaoke venue with modern rooms, lively lighting, and convenie
       "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7097660330366_97be45f1a25be90fa13d312a21540b2c-1536x1152.jpg",
       "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7097660334739_276e86207a5693158899ca9706c62538.jpg",
     ],
-    address:
-      "82-84 Calmette, Phường Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
+    address: "82-84 Calmette, Phường Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -347,8 +341,7 @@ Premium luxury KTV in central Saigon featuring modern private rooms, professiona
       "https://matrixkaraoke.com/data/pic_coso/37-1752146160-5.jpg",
       "https://matrixkaraoke.com/data/pic_coso/37-1752146160-6.jpg",
     ],
-    address:
-      "202 Nguyễn Trãi, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
+    address: "202 Nguyễn Trãi, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -377,8 +370,7 @@ Elegant, modern karaoke venue with private rooms, refined lighting, and well‑t
       "https://cdn.hstatic.net/products/1000268128/unnamed__1__2_06096fbfd3394c799c13cd02ff386b9a_master.jpg",
       "https://cdn.hstatic.net/products/1000268128/unnamed__3__3faeafd8f9b747e5bdc826fe93458d42_master.jpg",
     ],
-    address:
-      "214 Lê Hồng Phong, Phường 4, Quận 5, TP. Hồ Chí Minh",
+    address: "214 Lê Hồng Phong, Phường 4, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -404,8 +396,7 @@ Modern karaoke lounge with stylish rooms, strong sound and lighting, and profess
       "https://matrixkaraoke.com/data/pic_coso/9-1751827343-4.jpg",
       "https://matrixkaraoke.com/data/pic_coso/9-1751827343-5.jpg",
     ],
-    address:
-      "470 Ngô Gia Tự, Phường 4, Quận 10, TP. Hồ Chí Minh",
+    address: "470 Ngô Gia Tự, Phường 4, Quận 10, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -429,8 +420,7 @@ Colorful, modern karaoke venue in District 10 with dynamic lighting and stage‑
     main_image_url:
       "https://images.unsplash.com/photo-1570872626485-d8ffea69f463?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     images: [],
-    address:
-      "99 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
+    address: "99 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -452,8 +442,7 @@ Central District 1 venue offering premium KTV rooms and attentive service. Booki
       "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7094541901280_7615d20109e7152bbf42a6f3abad6a7e.jpg",
       "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7094541865088_aee4a1f466b41218276093ee40aea2cc.jpg",
     ],
-    address:
-      "171 Chợ Lớn, Quận 6, TP. Hồ Chí Minh",
+    address: "171 Chợ Lớn, Quận 6, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -488,8 +477,7 @@ Modern KTV in District 6 offering multiple room sizes and clear pricing. Suitabl
       "https://matrixkaraoke.com/data/pic_coso/21-1752217852-5.jpg",
       "https://matrixkaraoke.com/data/pic_coso/21-1752217853-6.jpg",
     ],
-    address:
-      "66 Tản Đà, Phường 11, Quận 5, TP. Hồ Chí Minh",
+    address: "66 Tản Đà, Phường 11, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -517,8 +505,7 @@ Stylish, comfortable karaoke venue in District 5 with high‑quality sound and l
       "https://matrixkaraoke.com/data/pic_coso/284-1754131131-3.jpg",
       "https://matrixkaraoke.com/data/pic_coso/284-1754131131-2.jpg",
     ],
-    address:
-      "356 Nguyễn Đình Chiểu, Phường 4, Quận 3, TP. Hồ Chí Minh",
+    address: "356 Nguyễn Đình Chiểu, Phường 4, Quận 3, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -546,8 +533,7 @@ Central District 3 karaoke with modern design, professional sound and lighting, 
       "https://matrixkaraoke.com/data/pic_coso/34-1752142884-3.jpg",
       "https://matrixkaraoke.com/data/pic_coso/34-1752142884-4.jpg",
     ],
-    address:
-      "466 Trần Hưng Đạo, Phường 14, Quận 5, TP. Hồ Chí Minh",
+    address: "466 Trần Hưng Đạo, Phường 14, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -575,8 +561,7 @@ Urban, modern karaoke hub in District 5 with advanced sound and lighting, fully 
       "https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_VE6mtCjs5yz-6dGcUAalYxSqBbFXBAMcDLaSWA_dnvCgIbA1t4duuR0qDctDYij2TltCc65M3JFwVKXcAbNcTQC7tYdaK8-ln0FvV1ZlMck1MWc_YMlBX2lN81DyWuD2Crcf?key=0kGM1L2LrS69k0KGfyx96Q",
       "https://lh7-rt.googleusercontent.com/docsz/AD_4nXdGE-PqnPqqO_fQFdchmSsNvGrdoa43Lo-u3N22Ei591WeYhnIRYNQrJIrW3oTd_gQA_co7Tzw7JPMjreVGNBS_dG0nNEgO3kqLANm0JtTujFy1WrDglOqTFYibitsby5__CfVdWQ?key=0kGM1L2LrS69k0KGfyx96Q",
     ],
-    address:
-      "93 An Dương Vương, Quận 5, TP. Hồ Chí Minh",
+    address: "93 An Dương Vương, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -602,8 +587,7 @@ Elegant, event‑friendly karaoke venue with modern rooms, solid sound and light
       "https://product.hstatic.net/1000268128/product/447685329_937931901463345_6747503906918227206_n-min_a952073002044f0aa997658bac67ca89_master.jpg",
       "https://product.hstatic.net/1000268128/product/447843375_937931978130004_8321320111058852147_n-min_dea0e182ff6648ef830b0f74fcc72cd7_master.jpg",
     ],
-    address:
-      "165/76 Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
+    address: "165/76 Nguyễn Thái Bình, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -629,8 +613,7 @@ Modern karaoke venue with stage‑style rooms, YouTube connectivity, and VAT inv
       "https://product.hstatic.net/1000268128/product/screenshot_3_20a5d378a5b84d07bbb050ee22ada31f_master.png",
       "https://product.hstatic.net/1000268128/product/screenshot_4_caefbff9acc449c1a4e1a0d6a59fe34a_master.png",
     ],
-    address:
-      "184-186 Nguyễn Biểu, Phường 2, Quận 5, TP. Hồ Chí Minh",
+    address: "184-186 Nguyễn Biểu, Phường 2, Quận 5, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -656,8 +639,7 @@ Contemporary karaoke venue featuring stage‑style rooms, YouTube connectivity, 
       "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269614434_14ccc4a790e08f601a37198830fc3059-1536x1152.jpg",
       "https://hcmc-ktv.com/wp-content/uploads/2025/10/z7098269561160_590a7754c943b08bfe6347d78fc9a655-1536x1152.jpg",
     ],
-    address:
-      "155 Đào Nam, (Gold 155), TP. Hồ Chí Minh",
+    address: "155 Đào Nam, (Gold 155), TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -678,8 +660,7 @@ Vibrant, modern KTV with stylish rooms and lively sound/lighting. Ideal for ener
       "https://lh7-rt.googleusercontent.com/docsz/AD_4nXe-uZZvmEjyJm5Sisjio3VHHjsNmsgKASoSrP9sIhcPRTU5d5KJRP7GsqmyCiTBrIOQmIWbgbU97nGRoAXoG5wSROmAV4jHooD8fDUys30Tkaikuy_43kkqkS8R6AfIebVvNM52BQ?key=Jz2U9eVR4IQ1dsqbN0Wr2Wv4",
       "https://lh7-rt.googleusercontent.com/docsz/AD_4nXdW1jdYZC7RsgSTGIAuT4eDYNtfQKReAYjpg_RDOxPjRllEYrmJzq2O-xhe_qEUOXOXnD-Y--3cJx7WJjBbvbxvGU6bz_55MPnY8CuEmq4X_U3Y5IwnwvvXfIeOHgh-4PB6ZvDi?key=Jz2U9eVR4IQ1dsqbN0Wr2Wv4",
     ],
-    address:
-      "411 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh",
+    address: "411 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -5475,7 +5456,8 @@ Located in a prime location in District 1, Express by M Village Vo Van Kiet offe
       "https://drive.google.com/thumbnail?id=1r3fSdsEUx0XnbPAihtxDwwna-scgghL7&sz=w2000",
       "https://drive.google.com/thumbnail?id=1ukFhtApa7D1OrS7Kil7mgo49yUOTE2o9&sz=w2000",
     ],
-    address: "85, Jln Loke Yew, Taman Miharja, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    address:
+      "85, Jln Loke Yew, Taman Miharja, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
@@ -5505,26 +5487,28 @@ Welcome to the heart of Kuala Lumpur's vibrant entertainment scene, where culina
 - Cultural and entertainment seekers
 - Dessert connoisseurs`,
     hours: {
-      "Monday": "4:00 PM - 2:00 AM",
-      "Tuesday": "4:00 PM - 2:00 AM",
-      "Wednesday": "4:00 PM - 2:00 AM",
-      "Thursday": "4:00 PM - 2:00 AM",
-      "Friday": "4:00 PM - 2:00 AM",
-      "Saturday": "4:00 PM - 2:00 AM",
-      "Sunday": "Closed",
+      Monday: "4:00 PM - 2:00 AM",
+      Tuesday: "4:00 PM - 2:00 AM",
+      Wednesday: "4:00 PM - 2:00 AM",
+      Thursday: "4:00 PM - 2:00 AM",
+      Friday: "4:00 PM - 2:00 AM",
+      Saturday: "4:00 PM - 2:00 AM",
+      Sunday: "Closed",
     },
   },
   {
     id: 103,
     name: "Hermez Club 爱马仕",
-    main_image_url: "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/499716034_122110613342870614_3037038380735819538_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=50ad20&_nc_ohc=54x3ISqMld4Q7kNvwFmGorD&_nc_oc=Adk447o2gG-Qalik8QKRXDvmLP7NTO7IlDnFS9P4r8bGqtP0xPBsAJvIJdSDPHvrL-1JQmT3dqPzcWaVgWulznrV&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afd-DBvIknHppBxGTKvMj80JnzgdmqllvbofNE6h2fBq2A&oe=690B3B30",
+    main_image_url:
+      "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/499716034_122110613342870614_3037038380735819538_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=50ad20&_nc_ohc=54x3ISqMld4Q7kNvwFmGorD&_nc_oc=Adk447o2gG-Qalik8QKRXDvmLP7NTO7IlDnFS9P4r8bGqtP0xPBsAJvIJdSDPHvrL-1JQmT3dqPzcWaVgWulznrV&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afd-DBvIknHppBxGTKvMj80JnzgdmqllvbofNE6h2fBq2A&oe=690B3B30",
     images: [
       "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/499716034_122110613342870614_3037038380735819538_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=50ad20&_nc_ohc=54x3ISqMld4Q7kNvwFmGorD&_nc_oc=Adk447o2gG-Qalik8QKRXDvmLP7NTO7IlDnFS9P4r8bGqtP0xPBsAJvIJdSDPHvrL-1JQmT3dqPzcWaVgWulznrV&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afd-DBvIknHppBxGTKvMj80JnzgdmqllvbofNE6h2fBq2A&oe=690B3B30",
       "https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/500367821_122110613360870614_4436408844632195574_n.jpg?stp=c0.147.1155.1155a_dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_ohc=M4s2deglJgcQ7kNvwFw9mfx&_nc_oc=AdnKzDMIDWQHGOpfZNl1NtyppPnwf4CWSi6kUAwwrRxAhoRZwcmhmlFhoqUEGrOReKvjniW2XzFaRdc3lnUfDo5J&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_AfegQvyKHcWOaoq9MNpBtif27HDwZ1ISKjTy8CcB-o2_tA&oe=690B4078",
       "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/497669740_122102875046870614_9012894410574755643_n.jpg?stp=c135.0.810.810a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_ohc=7aN2Us5d8qAQ7kNvwGCHz2L&_nc_oc=Adm6800RTtm6GKc5qQyl7R_XlTPxyaqa6KalIlihIXZJ9l8MRkI5hcAjWaJH9n01LK5ZQGSMKMNHrBiLBBndEvll&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Afe3U_1uxp1bK9cTa8yByvTzT010W8OBsjQn1YK6rLRXpA&oe=690B3790",
       "https://scontent.fvca1-3.fna.fbcdn.net/v/t39.30808-6/499792457_122110613396870614_6601420517857837349_n.jpg?stp=c0.147.1155.1155a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_ohc=R8jYR-ZRSdcQ7kNvwGVzAuH&_nc_oc=Adkb0HdtQphMUBgKmPUIrW_ruPiHfWb2t4Mo2lc9Bvm6y9Al-OYuOAO2G74km2m3yPxddOAaZa8DUlGRU48ywrXT&_nc_zt=23&_nc_ht=scontent.fvca1-3.fna&_nc_gid=i6JRHmCiNpxDxMo8zQ1xqA&oh=00_Affn6b42bHhn5MYQWzH8DebOXMgFl_iFyW1VmGEvrC124A&oe=690B54E0",
     ],
-    address: "17, Jalan Selangor, Seksyen 6, 46000 Petaling Jaya, Selangor, Malaysia",
+    address:
+      "17, Jalan Selangor, Seksyen 6, 46000 Petaling Jaya, Selangor, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
     category: "Karaoke",
@@ -5550,18 +5534,21 @@ Hermez Club 爱马仕 is a premium entertainment venue located in Petaling Jaya,
   {
     id: 104,
     name: "AVA 2 Executive Club",
-    main_image_url: "https://drive.google.com/thumbnail?id=1yZTX9rmm-IjunKti1ESwmvT7wNYxZt_R&sz=w2000",
+    main_image_url:
+      "https://drive.google.com/thumbnail?id=1yZTX9rmm-IjunKti1ESwmvT7wNYxZt_R&sz=w2000",
     images: [
       "https://drive.google.com/thumbnail?id=1yZTX9rmm-IjunKti1ESwmvT7wNYxZt_R&sz=w2000",
       "https://drive.google.com/thumbnail?id=1kpnyyN80qmHLpUyIT_UH3FXvSAoR2QMf&sz=w2000",
       "https://drive.google.com/thumbnail?id=1uFjKkADrtoqJ0XpFvAZ5gLB_OXAycgP3&sz=w2000",
       "https://drive.google.com/thumbnail?id=1p2gX78TgAYPEmOcofqEGYXSerwzXLkTj&sz=w2000",
     ],
-    address: "2-239, Kompleks Metro Pudu 1, Jalan Metro Pudu, 55100 Kuala Lumpur, Malaysia",
+    address:
+      "2-239, Kompleks Metro Pudu 1, Jalan Metro Pudu, 55100 Kuala Lumpur, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
     category: "Karaoke",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.201753080217!2d101.71333845696788!3d3.1290981571927112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc379c449fa3e1%3A0x59b35d3470735152!2sAVA%202%20Executive%20Club!5e1!3m2!1svi!2s!4v1761967686833!5m2!1svi!2s",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.201753080217!2d101.71333845696788!3d3.1290981571927112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc379c449fa3e1%3A0x59b35d3470735152!2sAVA%202%20Executive%20Club!5e1!3m2!1svi!2s!4v1761967686833!5m2!1svi!2s",
     price: "Contact for pricing",
     description: `## About AVA 2 Executive Club
 AVA 2 Executive Club is a premium entertainment venue offering sophisticated nightlife experiences. The club provides a high-end atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment.
@@ -5584,19 +5571,22 @@ AVA 2 Executive Club is a premium entertainment venue offering sophisticated nig
   {
     id: 105,
     name: "Banker Place",
-    main_image_url: "https://drive.google.com/thumbnail?id=1hogtYjrO3SG18Pz-moVmeRP6FsCFlM73&sz=w2000",
+    main_image_url:
+      "https://drive.google.com/thumbnail?id=1hogtYjrO3SG18Pz-moVmeRP6FsCFlM73&sz=w2000",
     images: [
       "https://drive.google.com/thumbnail?id=1hogtYjrO3SG18Pz-moVmeRP6FsCFlM73&sz=w2000",
       "https://drive.google.com/thumbnail?id=1fzpzDg8Og08r9-mJjwgoBkJ3mbdITRKZ&sz=w2000",
       "https://drive.google.com/thumbnail?id=1C6oHFAt6aK0iElV35sMGhgbsT4niGwVU&sz=w2000",
       "https://drive.google.com/thumbnail?id=1kR1JQnN9BDXmQw9D0elmk-pup8RAvM99&sz=w2000",
     ],
-    address: "10, Jalan Radin Bagus 3, Bandar Baru Sri Petaling, 57000 Kuala Lumpur, Malaysia",
+    address:
+      "10, Jalan Radin Bagus 3, Bandar Baru Sri Petaling, 57000 Kuala Lumpur, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
     category: "Pub",
     price: "Contact for pricing",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1693.6244706187829!2d101.70519620156516!3d3.153097818118854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4900765fb5b9%3A0x6742a0a2db253269!2sBanker%20Place!5e1!3m2!1svi!2s!4v1761967874962!5m2!1svi!2s",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1693.6244706187829!2d101.70519620156516!3d3.153097818118854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4900765fb5b9%3A0x6742a0a2db253269!2sBanker%20Place!5e1!3m2!1svi!2s!4v1761967874962!5m2!1svi!2s",
     description: `## About Banker Place
 Banker Place is a welcoming bar located in Bandar Baru Sri Petaling, Kuala Lumpur. Offering a relaxed atmosphere for drinks, socializing, and entertainment, this establishment provides a comfortable setting for friends to gather and unwind.
 
@@ -5617,30 +5607,33 @@ Banker Place is a welcoming bar located in Bandar Baru Sri Petaling, Kuala Lumpu
 - Weekend outings
 - Local nightlife enthusiasts`,
     hours: {
-      "Monday": "3:00 PM - 12:00 AM",
-      "Tuesday": "3:00 PM - 12:00 AM",
-      "Wednesday": "3:00 PM - 12:00 AM",
-      "Thursday": "3:00 PM - 12:00 AM",
-      "Friday": "3:00 PM - 12:00 AM",
-      "Saturday": "3:00 PM - 12:00 AM",
-      "Sunday": "3:00 PM - 12:00 AM",
+      Monday: "3:00 PM - 12:00 AM",
+      Tuesday: "3:00 PM - 12:00 AM",
+      Wednesday: "3:00 PM - 12:00 AM",
+      Thursday: "3:00 PM - 12:00 AM",
+      Friday: "3:00 PM - 12:00 AM",
+      Saturday: "3:00 PM - 12:00 AM",
+      Sunday: "3:00 PM - 12:00 AM",
     },
   },
   {
     id: 106,
     name: "Club 3",
-    main_image_url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
     images: [
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
       "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3",
       "https://images.unsplash.com/photo-1572116469696-31de0f17cc34",
     ],
-    address: "3, Lorong Utara C, Pjs 52, 46200 Petaling Jaya, Selangor, Malaysia",
+    address:
+      "3, Lorong Utara C, Pjs 52, 46200 Petaling Jaya, Selangor, Malaysia",
     country: "Malaysia",
     phone: "+65 8280 8072",
     category: "Nightclub / clubbing",
     price: "Contact for pricing",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6774.812316898381!2d101.6399709!3d3.1044478999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bdd1355b93f%3A0x30a3d36e4bd6c62a!2sPJ%20Club!5e1!3m2!1svi!2s!4v1761968200759!5m2!1svi!2s",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6774.812316898381!2d101.6399709!3d3.1044478999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bdd1355b93f%3A0x30a3d36e4bd6c62a!2sPJ%20Club!5e1!3m2!1svi!2s!4v1761968200759!5m2!1svi!2s",
     description: `## About Club 3
 Club 3 is a vibrant nightlife venue located in the Petaling Jaya area. Offering an energetic atmosphere for music, dancing, and entertainment, this club provides an exciting destination for nightlife enthusiasts seeking a lively night out.
 
@@ -5662,7 +5655,8 @@ Club 3 is a vibrant nightlife venue located in the Petaling Jaya area. Offering 
   {
     id: 107,
     name: "Cheer House Restaurant - Lê Ngô Cát",
-    main_image_url: "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-1-300-124933912544.webp",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-1-300-124933912544.webp",
     images: [
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-1-300-124933912544.webp",
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-cheer-house-le-ngo-cat-slide-3-300-124934112546.webp",
@@ -5722,19 +5716,20 @@ Cheer House Restaurant - Lê Ngô Cát is an elegant dining establishment specia
 - Wine enthusiasts
 - Fine dining experiences`,
     hours: {
-      "Monday": "10:00 AM - 10:00 PM",
-      "Tuesday": "10:00 AM - 10:00 PM",
-      "Wednesday": "10:00 AM - 10:00 PM",
-      "Thursday": "10:00 AM - 10:00 PM",
-      "Friday": "10:00 AM - 10:00 PM",
-      "Saturday": "10:00 AM - 10:00 PM",
-      "Sunday": "10:00 AM - 10:00 PM",
+      Monday: "10:00 AM - 10:00 PM",
+      Tuesday: "10:00 AM - 10:00 PM",
+      Wednesday: "10:00 AM - 10:00 PM",
+      Thursday: "10:00 AM - 10:00 PM",
+      Friday: "10:00 AM - 10:00 PM",
+      Saturday: "10:00 AM - 10:00 PM",
+      Sunday: "10:00 AM - 10:00 PM",
     },
   },
   {
     id: 108,
     name: "Mama's Style Vietnamese Restaurant",
-    main_image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a9/52/6b/caption.jpg?w=900&h=500&s=1",
+    main_image_url:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a9/52/6b/caption.jpg?w=900&h=500&s=1",
     images: [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a9/52/6b/caption.jpg?w=900&h=500&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/cc/18/16/menu.jpg?w=300&h=200&s=1",
@@ -5768,12 +5763,13 @@ Mama's Style Vietnamese Restaurant is an authentic Vietnamese dining establishme
   {
     id: 109,
     name: "Empire Club",
-    main_image_url: "https://9club.vn/wp-content/uploads/2024/11/empire-club-1-768x568.jpg",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2024/11/empire-club-1-768x568.jpg",
     images: [
       "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_15-768x512.jpg",
       "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_14-768x512.jpg",
       "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_16-768x512.jpg",
-      "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_13-768x512.jpg"
+      "https://9club.vn/wp-content/uploads/2024/11/Empire-Club-8-Nguyen-Van-Trang_13-768x512.jpg",
     ],
     address: "8 Nguyễn Văn Tráng, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",
     country: "Vietnam",
@@ -5804,15 +5800,17 @@ Through the Empire Music event series, the club organizes vibrant events, delive
   {
     id: 110,
     name: "CANALIS BAR & LOUNGE",
-    main_image_url: "https://chillvietnam.com/wp-content/uploads/elementor/thumbs/canalis-bar-quan-3-1667851893-q0n0gtg7yrfrlrjuqsyxv7h7ue3q1uepo3bsyjh2g8.jpg",
+    main_image_url:
+      "https://chillvietnam.com/wp-content/uploads/elementor/thumbs/canalis-bar-quan-3-1667851893-q0n0gtg7yrfrlrjuqsyxv7h7ue3q1uepo3bsyjh2g8.jpg",
     images: [
       "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851910-1024x682.jpg",
       "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851909-1024x682.jpg",
       "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851896-1-1024x682.jpg",
       "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851899.jpg",
-      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851887-3.jpg"
+      "https://chillvietnam.com/wp-content/uploads/2022/11/canalis-bar-quan-3-1667851887-3.jpg",
     ],
-    address: "264 Đ. Nam Kỳ Khởi Nghĩa, Phường 14, Quận 3, Thành phố Hồ Chí Minh",
+    address:
+      "264 Đ. Nam Kỳ Khởi Nghĩa, Phường 14, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
@@ -5836,19 +5834,21 @@ Operating for over half a decade, Canalis has always been the top choice for mus
 - **Long-standing bar experiences**
 - **Tourists seeking authentic Saigon nightlife**
 `,
-    hours: "21:00 PM – 03:00 AM"
+    hours: "21:00 PM – 03:00 AM",
   },
   {
     id: 111,
     name: "CINÉ Saigon",
-    main_image_url: "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-4-768x512.jpg",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-4-768x512.jpg",
     images: [
       "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-5-768x512.jpg",
       "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-1-768x614.jpg",
       "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-2-768x614.jpg",
-      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-3-768x512.jpg"
+      "https://9club.vn/wp-content/uploads/2024/12/cine-sai-gon-3-768x512.jpg",
     ],
-    address: "148 Đ. Cống Quỳnh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "148 Đ. Cống Quỳnh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
@@ -5870,19 +5870,21 @@ Located at 148 Cong Quynh, CINÉ Saigon is the ideal destination for those seeki
 - **Long-standing bar experiences**
 - **Tourists seeking authentic Saigon nightlife**
     `,
-    hours: "19:00 PM – 03.00 AM"
+    hours: "19:00 PM – 03.00 AM",
   },
   {
     id: 112,
     name: "Weeknd SGN",
-    main_image_url: "https://product.hstatic.net/1000268128/product/472313029_122111756444674130_4753240360177019471_n_9ef2dbb275ea4e08936ad5f36f8fa885_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/472313029_122111756444674130_4753240360177019471_n_9ef2dbb275ea4e08936ad5f36f8fa885_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/471794173_122111345426674130_6690422360764581263_n_d6cce10cab0b4e94ac21c8296ee8e99b_master.jpg",
       "https://product.hstatic.net/1000268128/product/471949404_122111345450674130_8140386225998707633_n_63e2ef7ad5aa4a92a0e94b660c11859b_master.jpg",
       "https://product.hstatic.net/1000268128/product/472309524_122111756264674130_3666368287625967102_n_095cd119ec2a4315bb17a23f75fa1878_master.jpg",
-       "https://product.hstatic.net/1000268128/product/471838836_122111345900674130_4652910755793145083_n_5881f965d4fa49cb9a9a44bc4484d60d_master.jpg"
+      "https://product.hstatic.net/1000268128/product/471838836_122111345900674130_4652910755793145083_n_5881f965d4fa49cb9a9a44bc4484d60d_master.jpg",
     ],
-    address: "66 Huỳnh Thúc Kháng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "66 Huỳnh Thúc Kháng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
@@ -5909,17 +5911,18 @@ Weeknd SGN takes pride in its premium sound system and top-tier DJ lineup, deliv
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "Check with venue"
+    hours: "Check with venue",
   },
   {
     id: 113,
     name: "Bodega Saigon - 2 Thi Sách",
-    main_image_url: "https://product.hstatic.net/1000268128/product/2024-10-19_b1feb959bcec4e7ca782676d0630c5c9_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/2024-10-19_b1feb959bcec4e7ca782676d0630c5c9_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/464004981_122113124660548861_7335972789146845066_n_d8b3f35512cc4a48a018304284c3520d_master.jpg",
       "https://product.hstatic.net/1000268128/product/464036388_122113124570548861_7977975017819783190_n_6ae56423d9104a05ba943e7487d30967_master.jpg",
       "https://product.hstatic.net/1000268128/product/464066128_122113124576548861_1692144364765567996_n_0d71b4f2f30f420e99424a2868b4eac5_master.jpg",
-      "https://product.hstatic.net/1000268128/product/464174693_122113124582548861_2506192734693032777_n_eede773ecf6b4eaabd8bae65ee7447a8_master.jpg"
+      "https://product.hstatic.net/1000268128/product/464174693_122113124582548861_2506192734693032777_n_eede773ecf6b4eaabd8bae65ee7447a8_master.jpg",
     ],
     address: "2 Thi Sách, Phường, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
@@ -5947,19 +5950,21 @@ Bodega Saigon stands out with its diverse drink menu, ranging from creative cock
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "Check with venue"
+    hours: "Check with venue",
   },
   {
     id: 114,
     name: "Bam Bam",
-    main_image_url: "https://product.hstatic.net/1000268128/product/428627046_813388820832732_4511757834995237653_n_8e004e8cc37746b1bd501e4cd2cad4ac_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/428627046_813388820832732_4511757834995237653_n_8e004e8cc37746b1bd501e4cd2cad4ac_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/358670199_672195304952085_444711235071712138_n_5ebb5793859e4b908dff109f3d67a5a4_master.jpg",
       "https://product.hstatic.net/1000268128/product/368017876_693677552803860_7444099152597981090_n_e1a0f3cc37b4447d9af50c5351a7dddf_master.jpg",
       "https://product.hstatic.net/1000268128/product/387732530_18100977229345883_8998390239732236345_n_f51436d4ae4f416997972f3392a9da7d_master.jpg",
-      "https://product.hstatic.net/1000268128/product/387807864_18100977241345883_5974538377757174818_n_d84285cf79864fbeb36463df35290300_master.jpg"
+      "https://product.hstatic.net/1000268128/product/387807864_18100977241345883_5974538377757174818_n_d84285cf79864fbeb36463df35290300_master.jpg",
     ],
-    address: "41 43 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "41 43 Nam Kỳ Khởi Nghĩa, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
@@ -5987,17 +5992,18 @@ At Bam Bam, customers can savor exquisite drink flavors crafted by talented prof
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "19:00PM - 02:00AM"
+    hours: "19:00PM - 02:00AM",
   },
   {
     id: 115,
     name: "QUI Bar/Lounge",
-    main_image_url: "https://img.quilounge.com/upload/image/30855/2B7A2602638544930882846385638809185712843129.jpg",
+    main_image_url:
+      "https://img.quilounge.com/upload/image/30855/2B7A2602638544930882846385638809185712843129.jpg",
     images: [
       "https://img.quilounge.com/upload/image/30855/faefbf34fdc22def6462f73eb6fd3a74908ffc98638820620899891321.jpg",
       "https://img.quilounge.com/upload/image/30847/bar-area638544931234049050.jpg",
       "https://img.quilounge.com/upload/image/30847/BUN_4081638544931631895640.jpg",
-      "https://img.quilounge.com/upload/image/30847/dj-booth-1638544931758298288.jpg"
+      "https://img.quilounge.com/upload/image/30847/dj-booth-1638544931758298288.jpg",
     ],
     address: "422 Lê Thánh Tôn, Bến Nghé, Quận 1, Tp.HCM",
     phone: "+65 8280 8072",
@@ -6025,19 +6031,21 @@ In addition to its unique culinary offerings, QUI presents an array of creative 
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "5:30PM - 2:00AM"
+    hours: "5:30PM - 2:00AM",
   },
   {
     id: 116,
     name: "LOLLA",
-    main_image_url: "https://product.hstatic.net/1000268128/product/434269123_122146985762139716_3172120622135933652_n_aa7eb7ae06854f4e95bb4287c0aa51f9_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/434269123_122146985762139716_3172120622135933652_n_aa7eb7ae06854f4e95bb4287c0aa51f9_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/434283049_122146985684139716_5777308467123938946_n_e1d1dd26fed54fe89ec43a2cc4a6b93a_master.jpg",
       "https://product.hstatic.net/1000268128/product/434852079_122148369014139716_8171025457878595294_n_a9fbfb1a58ac4e14a0eedca4c075fc3e_master.jpg",
       "https://product.hstatic.net/1000268128/product/414481508_122111468696158483_3248698200475862896_n_5c34a67f1a2d436cade8c787e6edbfcc_master.jpg",
-      "https://product.hstatic.net/1000268128/product/414481508_122111468696158483_3248698200475862896_n_f1190756fd5b4a4f9d4800e90fa5b35c_master.jpg"
+      "https://product.hstatic.net/1000268128/product/414481508_122111468696158483_3248698200475862896_n_f1190756fd5b4a4f9d4800e90fa5b35c_master.jpg",
     ],
-    address: "213 Calmette, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "213 Calmette, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
@@ -6065,19 +6073,21 @@ If you're searching for a place to gather with friends, celebrate with colleague
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "2:00PM - 2:00AM"
+    hours: "2:00PM - 2:00AM",
   },
   {
     id: 117,
     name: "Zion Sky Lounge & Dining",
-    main_image_url: "https://product.hstatic.net/1000268128/product/2023-07-07_dd2a21eb88294e408ce178d8bbb226ce_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/2023-07-07_dd2a21eb88294e408ce178d8bbb226ce_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/2020-12-14_fe95336e27ec4b64a4d02dd569d1f4a9_master.jpg",
       "https://product.hstatic.net/1000268128/product/2022-08-26_24fe58b26a754c759fd0b0f9f5ad2f23_master.jpg",
       "https://product.hstatic.net/1000268128/product/2024-09-05_d486ee1c9e88428ebd9512a100f18060_master.jpg",
-      "https://product.hstatic.net/1000268128/product/img_6595_6d7829cf998a46de9fa2faeefed46be6_master.jpg"
+      "https://product.hstatic.net/1000268128/product/img_6595_6d7829cf998a46de9fa2faeefed46be6_master.jpg",
     ],
-    address: "87A Hàm Nghi, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "87A Hàm Nghi, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
@@ -6107,19 +6117,21 @@ With a capacity of up to 300 people, Zion Sky Lounge & Dining is an ideal destin
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "5:00PM - 2:00AM"
+    hours: "5:00PM - 2:00AM",
   },
   {
     id: 118,
     name: "LOCO Complex",
-    main_image_url: "https://product.hstatic.net/1000268128/product/448643039_384742417914594_3525524312485478001_n_4ea3904448074dcdb3160e3853d9ec2e_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/448643039_384742417914594_3525524312485478001_n_4ea3904448074dcdb3160e3853d9ec2e_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/378137275_217779064610931_8553371407773799775_n_1fa83c56035b4b819846fe02b4079a80_master.jpg",
       "https://product.hstatic.net/1000268128/product/39f3a9082df8fda6a4e9_e2ecb67fac9e4a4fbffaf4f1885f4ea1_master.jpg",
       "https://product.hstatic.net/1000268128/product/431625540_322621324126704_4139863271706901556_n_1e029a86591f40e6bb7370de2af0fbd4_master.jpg",
-      "https://product.hstatic.net/1000268128/product/2d7e6fbbeb4b3b15625a_02de226faa304a5498c17dbf2c5ecc89_master.jpg"
+      "https://product.hstatic.net/1000268128/product/2d7e6fbbeb4b3b15625a_02de226faa304a5498c17dbf2c5ecc89_master.jpg",
     ],
-    address: "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
@@ -6147,19 +6159,21 @@ At LOCO Complex, guests also have the opportunity to enjoy delicious drinks, exp
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "6:00PM - Hết khách"
+    hours: "6:00PM - Hết khách",
   },
   {
     id: 119,
     name: "Neighborhood SGN",
-    main_image_url: "https://product.hstatic.net/1000268128/product/images__1__9d96182568a94346b816cd747d1ab372_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/images__1__9d96182568a94346b816cd747d1ab372_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/6f640c417acd11d1190559685f3d451c_cb9f531c87f54f9b925cd9a806925e97_master.jpg",
       "https://product.hstatic.net/1000268128/product/club-la-gi-3_df20fdf61dbb47e98509f83e0be299af_master.jpg",
       "https://product.hstatic.net/1000268128/product/images_8d25202cfd574d06b60fbe72c87f1cb6_master.jpg",
-      "https://product.hstatic.net/1000268128/product/club-la-gi-5_c06f5fa67a2a49669fc45d855e55c15c_master.jpg"
+      "https://product.hstatic.net/1000268128/product/club-la-gi-5_c06f5fa67a2a49669fc45d855e55c15c_master.jpg",
     ],
-    address: "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "11 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
     price: "Contact for pricing",
@@ -6187,17 +6201,18 @@ Beyond the music, Neighborhood SGN offers a diverse and creative drink menu. Fro
 - **Tourists seeking authentic Saigon nightlife**
     
     `,
-    hours: "4:00PM - 4:00AM"
+    hours: "4:00PM - 4:00AM",
   },
   {
     id: 120,
     name: "A Good Bar",
-    main_image_url: "https://9club.vn/wp-content/uploads/2025/08/537757364_122113337912962568_874988424014254852_n-768x768.jpg",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2025/08/537757364_122113337912962568_874988424014254852_n-768x768.jpg",
     images: [
-     "https://9club.vn/wp-content/uploads/2025/08/539849837_122113916768962568_7071916227415466379_n-768x960.jpg",
-     "https://9club.vn/wp-content/uploads/2025/08/AAR00289-768x712.jpeg",
-     "https://9club.vn/wp-content/uploads/2025/08/AAR00054-768x1151.jpeg",
-     "https://9club.vn/wp-content/uploads/2025/08/538770312_122113337870962568_7368731004611674844_n-768x1156.jpg"
+      "https://9club.vn/wp-content/uploads/2025/08/539849837_122113916768962568_7071916227415466379_n-768x960.jpg",
+      "https://9club.vn/wp-content/uploads/2025/08/AAR00289-768x712.jpeg",
+      "https://9club.vn/wp-content/uploads/2025/08/AAR00054-768x1151.jpeg",
+      "https://9club.vn/wp-content/uploads/2025/08/538770312_122113337870962568_7368731004611674844_n-768x1156.jpg",
     ],
     address: "39 Lý Tự Trọng, Bến Nghé , Quận 1 , Thành phố Hồ Chí Minh",
     phone: "+65 8280 8072",
@@ -6218,14 +6233,15 @@ A modern social club in District 1 offering a balanced space—relaxed yet vibra
 - **Those seeking a chic but comfortable social vibe**
     
     `,
-    hours: "5:30PM – 1:00AM"
+    hours: "5:30PM – 1:00AM",
   },
   {
     id: 121,
     name: "District K",
-    main_image_url: "https://bizweb.dktcdn.net/100/493/789/products/district-k-30-thu-khoa-huan-quan-1-tphcm.jpg?v=1759249752877",
+    main_image_url:
+      "https://bizweb.dktcdn.net/100/493/789/products/district-k-30-thu-khoa-huan-quan-1-tphcm.jpg?v=1759249752877",
     images: [
-      "https://bizweb.dktcdn.net/100/493/789/products/district-k-30-thu-khoa-huan-quan-1-tphcm.jpg?v=1759249752877"
+      "https://bizweb.dktcdn.net/100/493/789/products/district-k-30-thu-khoa-huan-quan-1-tphcm.jpg?v=1759249752877",
     ],
     address: "30 Thủ Khoa Huân, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6248,19 +6264,21 @@ District K – located at 30 Thủ Khoa Huân, District 1, Ho Chi Minh City – 
 - **Tourists seeking premium entertainment experiences**
 
 `,
-    hours: "Contact for hours"
+    hours: "Contact for hours",
   },
   {
     id: 122,
     name: "THE WANN - 51 BÙI THỊ XUÂN",
-    main_image_url: "https://chillvietnam.com/wp-content/uploads/2023/04/342180709_923682875414636_831424722231152558_n-1024x683.jpg",
+    main_image_url:
+      "https://chillvietnam.com/wp-content/uploads/2023/04/342180709_923682875414636_831424722231152558_n-1024x683.jpg",
     images: [
       "https://chillvietnam.com/wp-content/uploads/2023/04/342180709_923682875414636_831424722231152558_n-1024x683.jpg",
       "https://chillvietnam.com/wp-content/uploads/2023/04/340768678_1695284867571985_5694031446270305140_n-1024x682.jpg",
       "https://chillvietnam.com/wp-content/uploads/2023/04/340856742_944326333366683_8454920356980783589_n-1024x682.jpg",
-      "https://chillvietnam.com/wp-content/uploads/2023/04/341005486_747418110125380_3315608659102467094_n-1024x683.jpg"
+      "https://chillvietnam.com/wp-content/uploads/2023/04/341005486_747418110125380_3315608659102467094_n-1024x683.jpg",
     ],
-    address: "51 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "51 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Live house / Beer club",
@@ -6286,18 +6304,19 @@ With reasonable prices and a comfortable atmosphere, The Wann beer club is the i
 - **Those who love chill and comfortable spaces**
 
 `,
-    hours: "6:00PM - 2:00AM"
+    hours: "6:00PM - 2:00AM",
   },
   {
     id: 123,
     name: "BAIA Saigon - 74 - 76 Nam Kỳ Khởi Nghĩa",
-    main_image_url: "https://cdn.hstatic.net/products/1000268128/2025-06-18__2__89f552c5346f4460be5715b18f9d8271_master.jpg",
+    main_image_url:
+      "https://cdn.hstatic.net/products/1000268128/2025-06-18__2__89f552c5346f4460be5715b18f9d8271_master.jpg",
     images: [
       "https://cdn.hstatic.net/products/1000268128/2025-06-18__2__89f552c5346f4460be5715b18f9d8271_master.jpg",
       "https://cdn.hstatic.net/products/1000268128/2025-07-02__1__c6b15fdb466f4c289b4d689f72616784_master.jpg",
       "https://cdn.hstatic.net/products/1000268128/2025-06-18__1__9105c88f18774d728419875b1fdf66e8_master.jpg",
       "https://cdn.hstatic.net/products/1000268128/2025-06-18_a9bb82f58ef245199abbdaa57ff1a028_master.jpg",
-      "https://cdn.hstatic.net/products/1000268128/2025-07-02_5e76468d00d9454eab25354a84fb38c4_master.jpg"
+      "https://cdn.hstatic.net/products/1000268128/2025-07-02_5e76468d00d9454eab25354a84fb38c4_master.jpg",
     ],
     address: "74-76 Nam Kỳ Khởi Nghĩa, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6324,19 +6343,21 @@ BAIA Saigon is a modern beer garden & music venue located in the heart of Distri
 - **Tourists seeking entertainment experiences in Saigon**
 
 `,
-    hours: "5:00PM - 3:00AM (Daily)"
+    hours: "5:00PM - 3:00AM (Daily)",
   },
   {
     id: 124,
     name: "Yoyo Central Garden - Hồ Con Rùa",
-    main_image_url: "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua.webp",
+    main_image_url:
+      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua.webp",
     images: [
       "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua.webp",
       "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-1.webp",
       "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-3.webp",
-      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-5.webp"
+      "https://viethouzz.com/wp-content/uploads/2024/10/yoyo-ho-con-rua-5.webp",
     ],
-    address: "1 Công Trường Quốc Tế, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
+    address:
+      "1 Công Trường Quốc Tế, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Live house / Beer club",
@@ -6370,19 +6391,21 @@ The highlight of Yoyo Central Garden is its central bar counter, where talented 
 - **Tourists seeking authentic Saigon beer garden experience**
 
 `,
-    hours: "4:00PM - 11:45PM (Daily)"
+    hours: "4:00PM - 11:45PM (Daily)",
   },
   {
     id: 125,
     name: "Han Sky Garden",
-    main_image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4e/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
+    main_image_url:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4e/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
     images: [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4e/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4d/why-choose-han-sky-garden.jpg?w=900&h=500&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4c/welcome-to-han-sky-garden.jpg?w=900&h=500&s=1",
-      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4f/2-lively-atmosphere-immerse.jpg?w=900&h=500&s=1"
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d2/46/4f/2-lively-atmosphere-immerse.jpg?w=900&h=500&s=1",
     ],
-    address: "222 Điện Biên Phủ, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
+    address:
+      "222 Điện Biên Phủ, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Sky Bar",
@@ -6404,19 +6427,21 @@ Han Sky Garden is a vibrant rooftop venue in Ho Chi Minh City, offering a lively
 - **Those looking for a lively atmosphere with city views**
 
 `,
-    hours: "Contact for hours"
+    hours: "Contact for hours",
   },
   {
     id: 126,
     name: "B40 – 12-14 Trần Hưng Đạo",
-    main_image_url: "https://9club.vn/wp-content/uploads/2024/11/B40-Done-hcm_18_11zon-768x512.jpg",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2024/11/B40-Done-hcm_18_11zon-768x512.jpg",
     images: [
       "https://9club.vn/wp-content/uploads/2024/11/B40-Done-hcm_18_11zon-768x512.jpg",
       "https://9club.vn/wp-content/uploads/2024/11/B40-Done-tran-hung-dao_19_11zon-768x512.jpg",
       "https://product.hstatic.net/1000268128/product/438276027_407847355468569_6005109658751670852_n-min_c31087b5f054409997bbc89e7f2dff36_master.jpg",
-      "https://product.hstatic.net/1000268128/product/431753150_372006582385980_3660472347136910976_n-min_607ab6bd83cc4953a3394b26533c32c5_master.jpg"
+      "https://product.hstatic.net/1000268128/product/431753150_372006582385980_3660472347136910976_n-min_607ab6bd83cc4953a3394b26533c32c5_master.jpg",
     ],
-    address: "12-14 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "12-14 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
@@ -6447,18 +6472,19 @@ With a capacity of 250 guests, B40 is the perfect choice for parties, events, an
 - **Young professionals looking for modern entertainment space**
 
 `,
-    hours: "9:00PM - 4:00AM (Daily)"
+    hours: "9:00PM - 4:00AM (Daily)",
   },
   {
     id: 127,
     name: "Cậu Ốc Seafood & Beer - 84 - 86 Trần Hưng Đạo",
-    main_image_url: "https://product.hstatic.net/1000268128/product/433665921_880965054059133_239501639375218009_n_c6bb6db93bba47d4ad1a81a275d28dda_master.jpg",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/433665921_880965054059133_239501639375218009_n_c6bb6db93bba47d4ad1a81a275d28dda_master.jpg",
     images: [
       "https://product.hstatic.net/1000268128/product/433665921_880965054059133_239501639375218009_n_c6bb6db93bba47d4ad1a81a275d28dda_master.jpg",
       "https://product.hstatic.net/1000268128/product/409220738_798242958998010_8133822375085682575_n_535b471deae94f678adee39d979bf523_master.jpg",
       "https://product.hstatic.net/1000268128/product/407777141_797416479080658_4854692306517210197_n_5371cb10adc943f896e6f6d1ebcc8c01_master.jpg",
       "https://product.hstatic.net/1000268128/product/412139258_804736215015351_3977874236341014515_n_c7eb61cb641946739cf6819b0e6fb42e_master.jpg",
-      "https://product.hstatic.net/1000268128/product/417892757_820200773468895_6803518734998228543_n_0362def6ccfb4aefbc6e4b520c13e9c1_master.jpg"
+      "https://product.hstatic.net/1000268128/product/417892757_820200773468895_6803518734998228543_n_0362def6ccfb4aefbc6e4b520c13e9c1_master.jpg",
     ],
     address: "84-86 Trần Hưng Đạo, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6487,20 +6513,22 @@ Cậu Ốc Seafood & Beer is a popular seafood restaurant and beer venue located
 - **Tourists seeking local food and beer culture**
 
 `,
-    hours: "4:00PM - 3:00AM (Daily)"
+    hours: "4:00PM - 3:00AM (Daily)",
   },
   {
     id: 128,
     name: "Bếp Mẹ Ỉn Farm",
-    main_image_url: "https://static.riviu.co/640/image/2020/06/27/057a4c7ad800b4099489d00b15a443eb_output.jpeg",
+    main_image_url:
+      "https://static.riviu.co/640/image/2020/06/27/057a4c7ad800b4099489d00b15a443eb_output.jpeg",
     images: [
       "https://static.riviu.co/640/image/2020/06/27/057a4c7ad800b4099489d00b15a443eb_output.jpeg",
       "https://static.riviu.co/320/image/2020/06/27/16aee2fa0d43454fbd20c406c5d395fa_output.jpeg",
       "https://static.riviu.co/320/image/2020/06/27/41a247b13d52d5c13d7a11f81c97d429_output.jpeg",
       "https://static.riviu.co/320/image/2020/06/27/84fd8e9548869f6fba474fc6c5ecd2e7_output.jpeg",
-      "https://static.riviu.co/320/image/2020/06/27/5ebf23fc77db547eb0cef41e8c85e292_output.jpeg"
+      "https://static.riviu.co/320/image/2020/06/27/5ebf23fc77db547eb0cef41e8c85e292_output.jpeg",
     ],
-    address: "165/50 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "165/50 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Live house / Beer club",
@@ -6535,7 +6563,7 @@ The restaurant specializes in traditional Vietnamese dishes served on traditiona
 - **Those looking for authentic home-style Vietnamese cuisine**
 
 `,
-    hours: "9:00AM - 10:00PM (Daily)"
+    hours: "9:00AM - 10:00PM (Daily)",
   },
   {
     id: 129,
@@ -6544,7 +6572,7 @@ The restaurant specializes in traditional Vietnamese dishes served on traditiona
     images: [
       "https://dulichgiaitri.com/upload/album/LAM7.jpg",
       "https://dulichgiaitri.com/upload/album/LAM6.jpg",
-      "https://dulichgiaitri.com/upload/album/LAM3.jpg"
+      "https://dulichgiaitri.com/upload/album/LAM3.jpg",
     ],
     address: "211b Điện Biên Phủ, Phường Xuân Hòa, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6571,19 +6599,21 @@ With its authentic recipes and traditional cooking methods, LAM XUA Restaurant p
 - **Anyone looking for nostalgic and familiar flavors**
 
 `,
-    hours: "Contact for hours"
+    hours: "Contact for hours",
   },
   {
     id: 130,
     name: "Hải Sản Hoàng Gia - 180 Trần Hưng Đạo",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-16.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg",
     ],
-    address: "180 Trần Hưng Đạo, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "180 Trần Hưng Đạo, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Restaurants",
@@ -6616,16 +6646,17 @@ Hải Sản Hoàng Gia is a premium seafood restaurant chain in Ho Chi Minh City
 - **Special occasions and VIP dining**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 131,
     name: "Hải Sản Hoàng Gia - 37 Lý Tự Trọng",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg",
     ],
     address: "37 Lý Tự Trọng, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6651,18 +6682,20 @@ Hải Sản Hoàng Gia - Lý Tự Trọng is one of the premium seafood restaura
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 132,
     name: "Hải Sản Hoàng Gia - 192A Lý Tự Trọng",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-16.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
     ],
-    address: "192A Lý Tự Trọng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "192A Lý Tự Trọng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Restaurants",
@@ -6686,16 +6719,17 @@ Hải Sản Hoàng Gia - 192A Lý Tự Trọng is located in the heart of Ben Th
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 133,
     name: "Hải Sản Hoàng Gia - 16 Quốc Hương",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg",
     ],
     address: "16 Quốc Hương, Phường Thảo Điền, Quận 2, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6721,18 +6755,20 @@ Hải Sản Hoàng Gia - Quốc Hương branch is located in Thao Dien Ward, Dis
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 134,
     name: "Hải Sản Hoàng Gia - 954 Nguyễn Văn Linh",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg",
     ],
-    address: "954 Nguyễn Văn Linh, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
+    address:
+      "954 Nguyễn Văn Linh, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Restaurants",
@@ -6756,18 +6792,20 @@ Hải Sản Hoàng Gia - 954 Nguyễn Văn Linh branch is located in Tan Phong W
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 135,
     name: "Hải Sản Hoàng Gia - 46-48 Phạm Văn Nghị",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-16.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg",
     ],
-    address: "46-48 Phạm Văn Nghị, Hưng Gia 4, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
+    address:
+      "46-48 Phạm Văn Nghị, Hưng Gia 4, Phường Tân Phong, Quận 7, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Restaurants",
@@ -6791,16 +6829,17 @@ Hải Sản Hoàng Gia - 46-48 Phạm Văn Nghị branch is located in Hung Gia 
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 136,
     name: "Hải Sản Hoàng Gia - 608 Đường 3/2",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-6.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-4.jpg",
     ],
     address: "608 Đường 3/2, Phường 14, Quận 10, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6826,16 +6865,17 @@ Hải Sản Hoàng Gia - 608 Đường 3/2 branch is located in Ward 14, Distric
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 137,
     name: "Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương",
-    main_image_url: "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
+    main_image_url:
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
     images: [
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-10.jpg",
       "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-13.jpg",
-      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg"
+      "https://topgo.vn/ho-chi-minh/wp-content/uploads/sites/2/2025/03/He-thong-Hai-San-Hoang-Gia-11.jpg",
     ],
     address: "235 Nguyễn Tri Phương, Quận 10, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -6861,12 +6901,13 @@ Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương branch is located in District
 - **Special occasions**
 
 `,
-    hours: "10:00AM - 12:00AM (Daily)"
+    hours: "10:00AM - 12:00AM (Daily)",
   },
   {
     id: 138,
     name: "Hoshiyo Sky Lounge",
-    main_image_url: "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img1.png?v=179",
+    main_image_url:
+      "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img1.png?v=179",
     images: [
       "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img1.png?v=179",
       "https://theme.hstatic.net/200000836865/1001198190/14/hbanner_img2.png?v=179",
@@ -6874,9 +6915,10 @@ Hải Sản Hoàng Gia - 235 Nguyễn Tri Phương branch is located in District
       "https://theme.hstatic.net/200000836865/1001198190/14/home_timeline_banner.png?v=179",
       "https://file.hstatic.net/200000836865/article/untitled-1-recovered_9885d80b6afe45198cedeb807cdc8c75_large.jpg",
       "https://file.hstatic.net/200000836865/article/untitled-1-recovered_d5baee6f4d01406681768112270cbaa7_large.jpg",
-      "https://theme.hstatic.net/200000836865/1001198190/14/home_contact_banner_left.png?v=179"
+      "https://theme.hstatic.net/200000836865/1001198190/14/home_contact_banner_left.png?v=179",
     ],
-    address: "22 Đường 29, Phường An Khánh, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+    address:
+      "22 Đường 29, Phường An Khánh, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Sky Bar",
@@ -6914,19 +6956,21 @@ The venue operates in two distinct modes: Dining (5pm - 10pm) featuring traditio
 - **Those seeking Japanese-inspired dining and lounge experience**
 
 `,
-    hours: "5:00PM - 1:00AM (Daily)"
+    hours: "5:00PM - 1:00AM (Daily)",
   },
   {
     id: 139,
     name: "The Arth Saigon",
-    main_image_url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi66WnnYbQ8x6LzG11QdlkvBfyNino8PCFJ5I7UUoxWHLLpPh-u00RP9vLCG7oCG6fDR2ErH2sRV6PN_bThGah9rwoyVeJ4nhyjGNG_4VVk_NDyJV8j76DW9dTBIK84v0OuELXiD7I4Nzx5pXUdfP2FduPrGzjnJI-uFITv1fCgnvNgpSoy2j-SCXVFk7k/w516-h640/review-the-arth-saigon.jpg",
+    main_image_url:
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi66WnnYbQ8x6LzG11QdlkvBfyNino8PCFJ5I7UUoxWHLLpPh-u00RP9vLCG7oCG6fDR2ErH2sRV6PN_bThGah9rwoyVeJ4nhyjGNG_4VVk_NDyJV8j76DW9dTBIK84v0OuELXiD7I4Nzx5pXUdfP2FduPrGzjnJI-uFITv1fCgnvNgpSoy2j-SCXVFk7k/w516-h640/review-the-arth-saigon.jpg",
     images: [
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi66WnnYbQ8x6LzG11QdlkvBfyNino8PCFJ5I7UUoxWHLLpPh-u00RP9vLCG7oCG6fDR2ErH2sRV6PN_bThGah9rwoyVeJ4nhyjGNG_4VVk_NDyJV8j76DW9dTBIK84v0OuELXiD7I4Nzx5pXUdfP2FduPrGzjnJI-uFITv1fCgnvNgpSoy2j-SCXVFk7k/w516-h640/review-the-arth-saigon.jpg",
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjB0XlJ475DzBOgrNnj5afumMtxuFfc_1yf2dglIt--Gg6KVPSNxTgnMPK9-Wn4JReqwGoPrdEy_WKYCrmDtUacSbug539HF9yfPMh1FlKQm22rkXSp_pWNCK9zC1k8WlrJsEoyCp-KBZPet-XniAzSH9I1wPwxVc84TtbknLS6uz3BOoaHU3iFOdIBoEo/w480-h640/the-arth-saigon-review.jpg",
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHIq_eskvBHEkOl9Z3xMKfjhljD0vxpqvaxEQf0mcZjZkabgF85O5kjYkpTv3DKgzD-_kmUmLFrgRYqqIG4CVNteL-bqX4w-pqCTJ8ktI2p_0OZbSLmukYd6IYMQc-A4cYLAgSP5uj_lGWQ8zDzaC_YfJx_UUnV-mXbrluGcZsqGnjT3jd0DWnZR1QN3Q/w640-h426/bar-hidden-quan-1.jpg",
-      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHxCRJnacAm6m5GnWM1BvQPHRRUIgf8SCcBm1rU6QF1uKWErmk_wfH-3wCrm7qebe-hR1SH-hUq_XG2fMg_N5k4g6PVxT0DOmimYoLEhAAL1qg-_I-ZFczYySkXpXIMd-ftub3fLRc6LkKHGv9pPtL-AF3cllGaxmIEAfaSatjj1OMlxDyKzL1Gsxf-I/w640-h426/bar-dep-quan-1.jpg"
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHxCRJnacAm6m5GnWM1BvQPHRRUIgf8SCcBm1rU6QF1uKWErmk_wfH-3wCrm7qebe-hR1SH-hUq_XG2fMg_N5k4g6PVxT0DOmimYoLEhAAL1qg-_I-ZFczYySkXpXIMd-ftub3fLRc6LkKHGv9pPtL-AF3cllGaxmIEAfaSatjj1OMlxDyKzL1Gsxf-I/w640-h426/bar-dep-quan-1.jpg",
     ],
-    address: "222 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    address:
+      "222 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Lounge / Speakeasy bar",
@@ -6963,12 +7007,13 @@ The venue consists of two floors (ground floor and upper floor) with dim lightin
 - **Photography enthusiasts (flash photography restricted in some areas)**
 
 `,
-    hours: "5:00PM - 2:00AM (Daily)"
+    hours: "5:00PM - 2:00AM (Daily)",
   },
   {
     id: 140,
     name: "Biển Dương 6 - Cách Mạng Tháng 8",
-    main_image_url: "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
     images: [
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
@@ -6976,7 +7021,7 @@ The venue consists of two floors (ground floor and upper floor) with dim lightin
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
       "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
-      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp"
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
     ],
     address: "205 Cách Mạng Tháng Tám, Phường 4, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
@@ -7022,21 +7067,23 @@ The restaurant specializes in fresh seafood dishes prepared in both Vietnamese a
 - **Groups looking for spacious dining space**
 
 `,
-    hours: "10:00AM - 11:59PM (Daily)"
+    hours: "10:00AM - 11:59PM (Daily)",
   },
   {
     id: 141,
     name: "Trạm Hầm - Cách Mạng Tháng 8",
-    main_image_url: "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+    main_image_url:
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
     images: [
       "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
       "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/a1ed6234-d3ce-4b3d-a352-6da460a5c41a_rs1g3eb.jpeg",
       "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/de6bb32c-48e9-4236-96e3-478897a4fc57r7utv3zw.jpeg",
       "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/1520daaa-4f53-4186-a5ec-5c04c3298a2b_7hk_sxd.jpeg",
       "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/ef4fa0a7-a055-4f89-a7f9-4dca5a632176f3ujnnji.jpeg",
-      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg"
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg",
     ],
-    address: "540/19 Cách Mạng Tháng 8, Phường 11, Quận 3, Thành phố Hồ Chí Minh",
+    address:
+      "540/19 Cách Mạng Tháng 8, Phường 11, Quận 3, Thành phố Hồ Chí Minh",
     country: "Vietnam",
     phone: "+65 8280 8072",
     category: "Restaurants",
@@ -7068,12 +7115,13 @@ The restaurant offers a perfect blend of modern amenities and traditional Vietna
 - **Those seeking elegant yet cozy atmosphere**
 
 `,
-    hours: "5:00PM - 11:30PM (Daily)"
+    hours: "5:00PM - 11:30PM (Daily)",
   },
   {
     id: 142,
     name: "Deluxe Lido Palace",
-    main_image_url: "https://drive.google.com/thumbnail?id=1VQ4xkucmntB5KXY-n0b-8xFNtWqR7AMU&sz=w2000",
+    main_image_url:
+      "https://drive.google.com/thumbnail?id=1VQ4xkucmntB5KXY-n0b-8xFNtWqR7AMU&sz=w2000",
     images: [
       "https://drive.google.com/thumbnail?id=1VQ4xkucmntB5KXY-n0b-8xFNtWqR7AMU&sz=w2000",
       "https://drive.google.com/thumbnail?id=1C6B-SsVj6Sy0xneHkOE1JMTcAn9nt3T0&sz=w2000",
@@ -7104,7 +7152,8 @@ Deluxe Lido Palace is a premium KTV entertainment venue located in the heart of 
   {
     id: 143,
     name: "Paragon Club",
-    main_image_url: "https://drive.google.com/thumbnail?id=1jLBoBboKo7_5jSp5fImYHaxipzYz31SF&sz=w2000",
+    main_image_url:
+      "https://drive.google.com/thumbnail?id=1jLBoBboKo7_5jSp5fImYHaxipzYz31SF&sz=w2000",
     images: [
       "https://drive.google.com/thumbnail?id=1U_Oh9e-BKiX7TAmeM7HoK2xPh25DE0OZ&sz=w2000",
       "https://drive.google.com/thumbnail?id=1D5NpH7vKWw4Nu8MLJZjhXNyS6o2GxxBk&sz=w2000",
@@ -7115,11 +7164,13 @@ Deluxe Lido Palace is a premium KTV entertainment venue located in the heart of 
       "https://drive.google.com/thumbnail?id=1fVg7TDMpEYYtyie0oAnK87gI-edTVkhQ&sz=w2000",
       "https://drive.google.com/thumbnail?id=1LCOw1mUVYD-JZaeG2C6e1A_pDtUpQ3dT&sz=w2000",
     ],
-    address: "Menara Pgrm, Jalan Pudu Ulu, Taman Pertama, 55300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    address:
+      "Menara Pgrm, Jalan Pudu Ulu, Taman Pertama, 55300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
     country: "Malaysia",
     category: "Karaoke",
     price: "Contact for pricing",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.854123456789!2d101.729524!3d3.1221597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3766063a9bd1%3A0xf75ff392474f16fe!2sPARAGON%20CLUB!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.854123456789!2d101.729524!3d3.1221597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3766063a9bd1%3A0xf75ff392474f16fe!2sPARAGON%20CLUB!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
     description: `## About Paragon Club
 Paragon Club is a premium KTV entertainment venue located in Menara PGRM, Kuala Lumpur. The club offers an upscale karaoke and entertainment experience with modern facilities and premium services.
 
@@ -7144,7 +7195,8 @@ Paragon Club is a premium KTV entertainment venue located in Menara PGRM, Kuala 
   {
     id: 144,
     name: "SHANGHAI CLUB Đà Nẵng",
-    main_image_url: "https://drive.google.com/thumbnail?id=1WdpY0douV4zAtqw7xy0WxKrfOcBWpS--&sz=w2000",
+    main_image_url:
+      "https://drive.google.com/thumbnail?id=1WdpY0douV4zAtqw7xy0WxKrfOcBWpS--&sz=w2000",
     images: [
       "https://drive.google.com/thumbnail?id=15lzyl0zY9tQ9oy1EcN2_NYVVpIxIadS8&sz=w2000",
       "https://drive.google.com/thumbnail?id=1TZxMf2JGfxLZWz9yeZ6C3Pmt__O20dMX&sz=w2000",
@@ -7164,7 +7216,8 @@ Paragon Club is a premium KTV entertainment venue located in Menara PGRM, Kuala 
     country: "Vietnam",
     category: "Karaoke",
     price: "Contact for pricing",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.123456789!2d108.2234077!3d16.0450213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421986ec99146d%3A0x90e80f1191ffac4f!2sSHANGHAI%20CLUB%20%C4%90%C3%A0%20N%E1%BA%B5ng!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.123456789!2d108.2234077!3d16.0450213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421986ec99146d%3A0x90e80f1191ffac4f!2sSHANGHAI%20CLUB%20%C4%90%C3%A0%20N%E1%BA%B5ng!5e1!3m2!1svi!2s!4v1739095200000!5m2!1svi!2s",
     description: `## About SHANGHAI CLUB Đà Nẵng
 SHANGHAI CLUB Đà Nẵng is a premium entertainment venue located in Đà Nẵng, Vietnam. The club offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the coastal city.
 
@@ -7182,5 +7235,571 @@ SHANGHAI CLUB Đà Nẵng is a premium entertainment venue located in Đà Nẵn
 - Social gatherings and events
 - Đà Nẵng visitors`,
     hours: "Check with venue",
-  }
+  },
+  {
+    id: 145,
+    name: "Karaoke Kingdom - 67 Phạm Viết Chánh",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/406587119_732680632223549_2150396042176109649_n-min_616b9ae0f59a4e0792438e2ec3b43f54_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/429483125_782894547202157_7582539060123571150_n-min_06fafe6864d8494da05c100275036e44_master.jpg",
+      "https://product.hstatic.net/1000268128/product/355437841_639737208184559_7160139624752384861_n-min_b8e259586c68483aa385d3f65a81bf31_master.jpg",
+      "https://product.hstatic.net/1000268128/product/445363934_839568401534771_4204099253547676760_n-min_5fd8900c03d74d1883ac7a8b6942218e_master.jpg",
+      "https://product.hstatic.net/1000268128/product/445459362_839568538201424_3475526311378836253_n-min_ea243a2c79fa4326a01172c64af9120c_master.jpg",
+    ],
+    address:
+      "67 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5941415812526!2d106.68029871402392!3d10.765729562336727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f18d5ce7449%3A0xac6ea9f5b46ccfdd!2zNjcgUGjhuqFtIFZp4bq_dCBDaMOhbmgsIFBoxrDhu51uZyBOZ3V54buFbiBDxrAgVHJpbmgsIFF14bqtbiAxLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1661568998991!5m2!1svi!2s",
+    description: `## About Karaoke Kingdom (Pham Viet Chanh)
+Karaoke Kingdom is a premium karaoke venue located in District 1, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 1, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 146,
+    name: "Karaoke Icool - 129A Đường Cách Mạng Tháng 8",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/tom3043-hdr-1024x692_0052307a08fc48fa9c49356bd5b10167_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/vn-11134259-7r98o-lwe7h257e389c6_38bded1ef4034d59b93c6a205a7ee7e9_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tk6_e9b20527a63f4f5a8a447a8057f5728c_master.png",
+      "https://product.hstatic.net/1000268128/product/69256093_2309937182457640_8723551153427578880_n_acb277281f4a43ca890d63a0ea9a9051_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0936-scaled_b492d82ae9ee4f37b4144330264f4480_master.jpg",
+    ],
+    address:
+      "129A Đường Cách Mạng Tháng 8, Phường 5, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.490003306359!2d106.68618857490624!3d10.773732659243674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b57405b23%3A0xc1c3c6c82e00d8e1!2zMTI5QSDEkC4gQ8OhY2ggTeG6oW5nIFRow6FuZyA4LCBQaMaw4budbmcgNSwgUXXhuq1uIDMsIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1729568999620!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Cach Mang Thang 8)
+Karaoke Icool is a premium karaoke venue located in District 3, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 3, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 147,
+    name: "Karaoke Icool - 177 Trần Bình Trọng",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/bp3-3_23f8145f95934094b0f81e8c8c194caf_master.png",
+    images: [
+      "https://product.hstatic.net/1000268128/product/phong-vip-icool-quan-6-re-1024x682_0662a37f8d1d4d0bb7801eb88f94e0f2_master.jpg",
+      "https://product.hstatic.net/1000268128/product/img_1219-1024x683_713bfdef8edb4e5f83188644aa9ac077_master.jpg",
+      "https://product.hstatic.net/1000268128/product/img_7977_aa57fc2564064315a80a395ebbcc598b_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tom2993-hdr-scaled_77b05ad8eba44cc38324656592a6bac4_master.jpg",
+    ],
+    address: "177 Trần Bình Trọng, Phường 3, Quận 5, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6881440161856!2d106.67788117490606!3d10.758500359524367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1cc6a1986d%3A0x71265a87081d66f6!2zMTc3IMSQLiBUcuG6p24gQsOsbmggVHLhu41uZywgUGjGsOG7nW5nIDMsIFF14bqtbiA1LCBI4buTIENow60gTWluaCA3MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1729567195280!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Tran Binh Trong)
+Karaoke Icool is a premium karaoke venue located in District 5, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 5, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 148,
+    name: "Karaoke Icool - 876 - 878 Nguyễn Trãi",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/phong-vip-icool-quan-6-re-1024x682_f32e90aaa51a4c218e6ee30b410d6ca8_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/atn0936-scaled_8c105b13bad346fa8944515077a170a9_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2__2__1f77f986747f49f2a55a7715283849ba_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tk6_502add70503442918026b40919072569_master.png",
+      "https://product.hstatic.net/1000268128/product/vn-11134259-7r98o-lwe7h257e389c6_2f17cebf5c6b48c5938e5b3e48a8f90a_master.jpg",
+    ],
+    address: "876 878 Nguyễn Trãi, Phường 14, Quận 5, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7589569561515!2d106.653830574906!3d10.753051359624733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef470a7ab63%3A0xc40cc27bb2f2580!2zODc2Kzg3OCDEkC4gTmd1eeG7hW4gVHLDo2ksIFBoxrDhu51uZyAxNCwgUXXhuq1uIDUsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1729567786233!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Nguyen Trai)
+Karaoke Icool is a premium karaoke venue located in District 5, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 5, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 149,
+    name: "Karaoke Icool - 31 Bình Phú",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/tom2993-hdr-scaled_4dea4443da7d44d7a106e82067c89b81_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/tom3043-hdr-1024x692_e3fc2092ddd34422af4dd5a15e59293d_master.jpg",
+      "https://product.hstatic.net/1000268128/product/phong-vip-icool-quan-6-re-1024x682_2fea68d029f4415686d2f1160ff96854_master.jpg",
+      "https://product.hstatic.net/1000268128/product/img_1219-1024x683_ac76c39641764387832cf4e150cdb013_master.jpg",
+      "https://product.hstatic.net/1000268128/product/img_7977_66216006f9704522bb4351c13dcd98f0_master.jpg",
+    ],
+    address: "31 Bình Phú, Phường 10, Quận 6, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.921424319542!2d106.6291284!3d10.7405393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc814ff6913%3A0xf1cc9985ef26d9f1!2zMzEgQsOsbmggUGjDuiwgUGjGsOG7nW5nIDEwLCBRdeG6rW4gNiwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1729566896962!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Binh Phu)
+Karaoke Icool is a premium karaoke venue located in District 6, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 6, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 150,
+    name: "Karaoke Icool - 260 Quốc Lộ 50",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn0947-scaled_5538f63b8eb24f28b24bb66fcdacf2b1_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_ecf3ad5e055b4fc784469e7bc9f6f834_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_687fd41c2f5b4a71a0d20cb182478fdf_master.jpg",
+      "https://product.hstatic.net/1000268128/product/bp3-3_c58085624d4d45349df34d6fdc474f77_master.png",
+      "https://product.hstatic.net/1000268128/product/phong-vip-icool-quan-6-re-1024x682_05796bfcb3bf40a585166db426574c4c_master.jpg",
+    ],
+    address: "260 Quốc Lộ 50, Phường 6, Quận 8, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9965127917376!2d106.65339247490579!3d10.734751659961306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e4304002ee9%3A0x756d122bc2409bb3!2zMjYwIFFMNTAsIFBoxrDhu51uZyA2LCBRdeG6rW4gOCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1729565787119!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Quoc Lo 50)
+Karaoke Icool is a premium karaoke venue located in District 8, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 8, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 151,
+    name: "Karaoke Icool - 147 Dạ Nam",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn0973-scaled_04f85f754d00462aaba520a6da2d3714_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/icool-phan-chu-trinh-room-201-4-scaled_8116ec3297f94ce0b03460003310f28f_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0947-scaled_ad5054e3d7254ef3a0051c94313e26cf_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_3044427ed4454265a7dfffcdbae51a65_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_170d951333c04f09b21da5f0c2165a36_master.jpg",
+    ],
+    address: "147 Dạ Nam, Phường 3, Quận 8, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.823622658905!2d106.68413199999999!3d10.748073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0713be5d9d%3A0xf834af8fab947008!2zMTQ3IMSQLiBE4bqhIE5hbSwgUGjGsOG7nW5nIDMsIFF14bqtbiA4LCBI4buTIENow60gTWluaA!5e0!3m2!1sen!2s!4v1729583972689!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Da Nam)
+Karaoke Icool is a premium karaoke venue located in District 8, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 8, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 152,
+    name: "Karaoke Icool - 456C1 Dương Bá Trạc",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/tom3040-hdr-1024x701_8353c2839ac4423dac14c39028989d8c_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/tom2993-hdr-scaled_5a53c7cb807d48a2aac05bc177d07d67_master.jpg",
+      "https://product.hstatic.net/1000268128/product/69256093_2309937182457640_8723551153427578880_n_17fa69a0730d4811b50daa0bfcb8a973_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tom3043-hdr-1024x692_506de4c103df4da996e57f2df582a2a6_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2__1__27de5e2b19904665ab3fe4dd0562c83b_master.jpg",
+    ],
+    address: "456C1 Dương Bá Trạc, Phường 1, Quận 8, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.904554520724!2d106.68589697490589!3d10.741839159831002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fa61953f6db%3A0x49afd0d984bf5dac!2zNDU2YzEgRC4gQsOhIFRy4bqhYywgUGjGsOG7nW5nIDEsIFF14bqtbiA4LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1729566096108!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Duong Ba Trac)
+Karaoke Icool is a premium karaoke venue located in District 8, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 8, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 153,
+    name: "Karaoke Icool - 120 Thành Thái",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/vn-11134259-7r98o-lwe7h257e389c6_0b240dc692a54da4ad15cd288d2dc153_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/69256093_2309937182457640_8723551153427578880_n_b50ecaf43577403b90abcd562fbf01d2_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tk6_0675290d378b4249b588daa71be66c1b_master.png",
+      "https://product.hstatic.net/1000268128/product/2__2__7a745d37bf274dc9b199296429d45238_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0936-scaled_1951e6b3d73a4b838035c1d35d0ff4f7_master.jpg",
+    ],
+    address: "120 Thành Thái, Phường 12, Quận 10, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.479852267582!2d106.66196027490624!3d10.77451245922927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edcab4871f3%3A0x567460e5616bd9a7!2zMTIwIMSQLiBUaMOgbmggVGjDoWksIFBoxrDhu51uZyAxMiwgUXXhuq1uIDEwLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1729570660568!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Thanh Thai)
+Karaoke Icool is a premium karaoke venue located in District 10, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 10, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 154,
+    name: "Karaoke Icool - 465 Nguyễn Tri Phương",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/icool-quan-6_d79b8ef6ddac49b9b3fdebccea38976d_master.png",
+    images: [
+      "https://product.hstatic.net/1000268128/product/atn0936-scaled_b6ae3bed285a4715b09bbacfb226d421_master.jpg",
+      "https://product.hstatic.net/1000268128/product/gaua2364_8cf067d43e924ba5ada1fb5803f24a05_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2__2__a7a454ec96a44029bacaf4fa6e8615c6_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tk6_8185ca4dbb4e4152a6f8d213e49c16ab_master.png",
+    ],
+    address: "465 Nguyễn Tri Phương, Phường 8, Quận 10, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6036341526205!2d106.6651348749061!3d10.764999759404672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee68b3e5879%3A0xe50a25306ffa38f1!2zNDY1IMSQLiBOZ3V54buFbiBUcmkgUGjGsMahbmcsIFBoxrDhu51uZyA4LCBRdeG6rW4gMTAsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1729569961946!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Nguyen Tri Phuong)
+Karaoke Icool is a premium karaoke venue located in District 10, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 10, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 155,
+    name: "Karaoke Icool - B74 Bis Tô Ký",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/tom3040-hdr-1024x701_77da326268124b528c29b68dc2cb4863_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/vn-11134259-7r98o-lwe7h257e389c6_e8a79a4c61ee4c2985916d232baa4517_master.jpg",
+      "https://product.hstatic.net/1000268128/product/gaua2364_ab577267678b417b9936874a34c5432f_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2__1__da743bb1989b4483b0352f2eeabf9b8f_master.jpg",
+    ],
+    address:
+      "B74 Bis Tô Ký, Phường Đông Hưng Thuận, Quận 12, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d566.5006583547507!2d106.63330596289357!3d10.848320591203475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752988be174629%3A0x89cfc765ec2863de!2zxJAuIFTDtCBLw70vSOG6u20gMTMzIFThu5UgMTEsIMSQLiBUw7QgS8O9L0jhurttIDEzMyBU4buVIDExLCBLaHUgUGjhu5EgM0EsIFF14bqtbiAxMiwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1729569332411!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Bis To Ky)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 12, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 156,
+    name: "Karaoke Icool - 39 - 41 Phan Chu Trinh",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/icool-phan-chu-trinh-room-201-4-scaled_56e421db92904a229f3a1bbf69f4f568_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/atn0973-scaled_6195d377724f447ea6380702c5629172_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0947-scaled_0e6a97772e03435e8432d38ef3996d0f_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_941f392526cc4adbba3d56f776eaea24_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_a9201e6c5cd64de2963cb9107e905351_master.jpg",
+    ],
+    address:
+      "39 - 41 Phan Chu Trinh, Phường 14, Quận Bình Thạnh, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0730268640227!2d106.703873!3d10.805718899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528becec7ead3%3A0xc533c6bd64fa295b!2zNDEgUGhhbiBDaHUgVHJpbmgsIFBoxrDhu51uZyAyNCwgQsOsbmggVGjhuqFuaCwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1sen!2s!4v1729586495756!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Phan Chu Trinh)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 12, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 157,
+    name: "Karaoke Icool - 693 Xô Viết Nghệ Tĩnh",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_267ff6918a734a2dbed41dc12677a55c_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/atn0947-scaled_25ba3bc34bf547fa9a59d4e19e3236f2_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_d451a2465bf145ea9734aa4941453c2e_master.jpg",
+      "https://product.hstatic.net/1000268128/product/bp3-3_fc8c4c8b9d3c434e814aa7a5b8d50067_master.png",
+      "https://product.hstatic.net/1000268128/product/phong-vip-icool-quan-6-re-1024x682_56675f56a0794c2dbe84900d5bdafd87_master.jpg",
+    ],
+    address:
+      "693 Xô Viết Nghệ Tĩnh, Phường 26, Quận Bình Thạnh, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9843217924445!2d106.7151152!3d10.8125114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529abea0469ef%3A0xcc0b164c93d2d47f!2zNjkzIFjDtCBWaeG6v3QgTmdo4buHIFTEqW5oLCBQaMaw4budbmcgMjYsIELDrG5oIFRo4bqhbmgsIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1sen!2s!4v1729584453834!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Xo Viet Nge Tinh)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 12, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 158,
+    name: "Karaoke Icool - 122 Ung Văn Khiêm",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_f2d7e56235274335acba1ea2422bcb93_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/atn0973-scaled_b6bfc6d52e5d483f97d108285ffb4c7d_master.jpg",
+      "https://product.hstatic.net/1000268128/product/icool-phan-chu-trinh-room-201-4-scaled_b14c0cffed6e4d3098afffa38069b8c4_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0947-scaled_d96ce70cbf9b415cbbaf7680dc2375ec_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_474bf65fb3f04d0884fca8df68a17d54_master.jpg",
+    ],
+    address:
+      "122 Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.056548929391!2d106.7183601!3d10.806981000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a2bcf123d5%3A0x9ac10a0205a74ebd!2zMTIyIFVuZyBWxINuIEtoacOqbSwgUGjGsOG7nW5nIDI1LCBCw6xuaCBUaOG6oW5oLCBI4buTIENow60gTWluaCA3MDAwMDA!5e0!3m2!1sen!2s!4v1729584958461!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Ung Van Khiem)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 25, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 159,
+    name: "Karaoke Icool - 266 - 268 - 270 Phan Xích Long",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/img_1219-1024x683_adb24eed73824f59a5d777320fb6b39b_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/tom2993-hdr-scaled_fcf06a9cc2b24df5871c464aa75485e2_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0973-scaled_68b7e9037f01400598026fbe5da8f603_master.jpg",
+      "https://product.hstatic.net/1000268128/product/icool-phan-chu-trinh-room-201-4-scaled_0d6b12c64fd54a70b1734eeaa8400300_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0947-scaled_d8b9ae157f7b4df896ddef9c9ea17c06_master.jpg",
+    ],
+    address:
+      "266 268 270 Phan Xích Long, Phường 7, Quận Phú Nhuận, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1713000739446!2d106.6892011!3d10.7981888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528cef803fc13%3A0x335c86c0d9490304!2zMjY4IFBoYW4gWMOtY2ggTG9uZywgUGjGsOG7nW5nIDcsIFBow7ogTmh14bqtbiwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1sen!2s!4v1729580957028!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Phan Xich Long)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 7, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 160,
+    name: "Karaoke Icool - 124A Đồng Đen",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn0985-scaled_9e559401d2a54cd796f085d9a2533e02_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/img_7977_a19e12dcd1ba429ba16678363d004a88_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tom2993-hdr-scaled_c1499c632f77449c8a831ec61fbe4826_master.jpg",
+      "https://product.hstatic.net/1000268128/product/phong-vip-icool-quan-6-re-1024x682_b9c65b801de44773b5851323a082a957_master.jpg",
+      "https://product.hstatic.net/1000268128/product/img_1219-1024x683_25eb0ad4f1a44779880156968aeab30e_master.jpg",
+    ],
+    address: "124A Đồng Đen, Phường 14, Quận Tân Bình, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.251380074815!2d106.6439911!3d10.7920489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eb32a50f777%3A0xd39bfde728561f27!2zMTI0YSDEkOG7k25nIMSQZW4sIFBoxrDhu51uZyAxNCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmggNzAwMDAw!5e0!3m2!1sen!2s!4v1729504950842!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Dong Den)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District 14, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
 ];
