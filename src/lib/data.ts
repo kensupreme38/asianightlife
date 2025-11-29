@@ -7874,4 +7874,522 @@ Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh Cit
 - Ho Chi Minh City visitors`,
     hours: "Check with venue",
   },
+  {
+    id: 163,
+    name: "Karaoke iCool - 140 Lê Văn Việt",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/23-1-scaled_419efac66e75400b8b8d4e3a764f2ef5_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/16-scaled_fc2c888894e94514832df5b637844676_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_e63dfb3a8e6047948dd1edfe36748878_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0882-1024x683_f11d3e8a9e7347b380a60499ef91d727_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_766ca55cae0a4a8f8130071cde0d6b9f_master.jpg",
+    ],
+    address:
+      "140 Lê Văn Việt, Phường Hiệp Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.558809772547!2d106.78021930000001!3d10.8450361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175270dd0981bb5%3A0x993d5c75e449ffd5!2zMTQwIEzDqiBWxINuIFZp4buHdCwgVMSDbmcgTmjGoW4gUGjDuiBBLCBRdeG6rW4gOSwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1sen!2s!4v1729502865965!5m2!1sen!2s",
+    description: `## About Karaoke iCool (140 Lê Văn Việt)
+Karaoke iCool at 140 Lê Văn Việt is the 20th branch of the iCool karaoke system, officially opened on October 16, 2023. This premium venue features a unique Ancient Egyptian theme design, creating a mysterious and distinctive atmosphere for guests.
+
+## Highlights
+- **Unique Egyptian Theme**: Decorated with Pharaoh images, pyramids, and Nile River motifs
+- **Professional Sound System**: High-quality JBL speakers and sensitive microphones
+- **Extensive Music Library**: Over 50,000 songs continuously updated
+- **Modern Facilities**: Touch screen displays and premium amenities
+- **Diverse Menu**: Wide selection of snacks, appetizers, and beverages
+
+## Operating Hours
+- Daily: 09:00 AM - 23:59 AM
+
+## Perfect For
+- Group celebrations and parties
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 140 Lê Văn Việt, Phường Hiệp Phú, Thành phố Thủ Đức, TP.HCM`,
+    hours: "09:00 AM - 23:59 AM (Daily)",
+  },
+  {
+    id: 164,
+    name: "Karaoke iCool - 66G Hoàng Diệu 2",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/16-scaled_dc87d851848944beb67ad1e73b788c31_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/16-scaled_fc2c888894e94514832df5b637844676_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_e63dfb3a8e6047948dd1edfe36748878_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0882-1024x683_f11d3e8a9e7347b380a60499ef91d727_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_766ca55cae0a4a8f8130071cde0d6b9f_master.jpg",
+    ],
+    address:
+      "66G Hoàng Diệu 2, Phường Linh Chiểu, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.3698825921806!2d106.762188!3d10.859446199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175279ae218e1f5%3A0xcbec86c4b548b6f1!2zNDYgxJAuIEhvw6BuZyBEaeG7h3UgMiwgUGjGsOG7nW5nIExpbmggVHJ1bmcsIFRo4bunIMSQ4bupYywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1sen!2s!4v1729585426819!5m2!1sen!2s",
+    description: `## About Karaoke iCool (66G Hoàng Diệu 2)
+Karaoke iCool at 66G Hoàng Diệu 2 is the 21st branch of the iCool karaoke system, officially opened on February 5, 2024. This modern venue features a unique subway-inspired interior design, creating a fresh and contemporary entertainment experience for guests.
+
+## Highlights
+- **Subway-Inspired Design**: Modern interior design inspired by famous subway lines
+- **Professional Sound & Lighting**: High-quality audio-visual system with studio-standard sound
+- **Extensive Music Library**: Diverse song collection continuously updated
+- **Modern Touch Screen Technology**: Advanced interactive room control systems
+- **Spacious Parking**: Convenient parking area right in front of the venue
+- **Diverse Menu**: Wide selection of food and beverages
+- **Professional Service**: Friendly and efficient staff team
+- **Room Variety**: Quality rooms from standard to VIP
+
+## Operating Hours
+- Daily: 09:00 AM - 23:59 AM
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 66G Hoàng Diệu 2, Phường Linh Chiểu, Thành phố Thủ Đức, TP.HCM`,
+    hours: "09:00 AM - 23:59 AM (Daily)",
+  },
+  {
+    id: 165,
+    name: "Karaoke iCool - 130 Hoàng Hoa Thám",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn0895-1-scaled_d3d20e1590ff4d20a21f8f4482f2ef49_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/16-scaled_fc2c888894e94514832df5b637844676_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_e63dfb3a8e6047948dd1edfe36748878_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0882-1024x683_f11d3e8a9e7347b380a60499ef91d727_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_766ca55cae0a4a8f8130071cde0d6b9f_master.jpg",
+    ],
+    address:
+      "130 Hoàng Hoa Thám, Phường 2, Thành phố Vũng Tàu, Bà Rịa – Vũng Tàu",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0630965783853!2d107.08573179999999!3d10.3368358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756ff6f9e605ef%3A0xe811841784088eea!2zMTMwIMSQLiBIb8OgbmcgSG9hIFRow6FtLCBQaMaw4budbmcgMiwgVsWpbmcgVMOgdSwgQsOgIFLhu4thIC0gVsWpbmcgVMOgdQ!5e0!3m2!1sen!2s!4v1729502201959!5m2!1sen!2s",
+    description: `## About Karaoke iCool (130 Hoàng Hoa Thám)
+Karaoke iCool at 130 Hoàng Hoa Thám in Vũng Tàu is the 19th branch of the iCool karaoke system, opened in late 2020. This unique venue features a distinctive Western circus-style design, creating a vibrant and entertaining atmosphere for guests.
+
+## Highlights
+- **Western Circus Theme**: Unique circus-style interior design
+- **Modern Sound System**: Dynamic sound system with international-standard soundproofing
+- **Luxurious Rooms**: Elegant and sophisticated room design
+- **Extensive Music Library**: Diverse song collection suitable for all ages
+- **Diverse Menu**: Wide selection of food and beverages
+- **Professional Service**: High-quality service and amenities
+
+## Operating Hours
+- Daily: 09:00 AM - 23:59 AM
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Weekend relaxation
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Vũng Tàu visitors
+
+## Contact
+- Address: 130 Hoàng Hoa Thám, Phường 2, Thành phố Vũng Tàu, Bà Rịa – Vũng Tàu`,
+    hours: "09:00 AM - 23:59 AM (Daily)",
+  },
+  {
+    id: 166,
+    name: "Karaoke Nnice - 121 Võ Thị Sáu",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/461316811_3385158468457283_7179275493375319608_n_bbaeefb6efed4d8ead39c20b361ade9a_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/461259860_3385158478457282_8598945511115371635_n_6cba4324c7b6452a9c448f8a4c096ea5_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461318570_3385158581790605_4170163914360525014_n_3c3bc2f9eeec42dfb8f49ac70be6c4ae_master.jpg",
+      "https://product.hstatic.net/1000268128/product/160923761_886247908617221_3880076647247584769_n_b62f5985477d41c5b6cec7342ca02220_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461255985_3385158578457272_7299079232139770109_n_763cda10722840dc99ae06c16940e99d_master.jpg",
+    ],
+    address: "121 Võ Thị Sáu, Phường 6, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3316730933475!2d106.6903688!3d10.7858892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3248b9127b%3A0xf744489825468c35!2zMTIxIMSQLiBWw7UgVGjhu4sgU8OhdSwgUGjGsOG7nW5nIDYsIFF14bqtbiAzLCBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1732525919409!5m2!1svi!2s",
+    description: `## About Karaoke Nnice (121 Võ Thị Sáu)
+Karaoke Nnice at 121 Võ Thị Sáu is one of the leading entertainment venues in District 3, Ho Chi Minh City. Located in the heart of the district, this modern venue features elegant design, high-quality sound systems, and professional service, making it an ideal destination for gatherings, birthdays, and corporate events.
+
+## Highlights
+- **Modern Design**: Contemporary and elegant interior design
+- **High-Quality Sound System**: Professional audio equipment for the best karaoke experience
+- **Diverse Menu**: Wide selection of food and beverages
+- **Professional Service**: Well-trained and friendly staff
+- **Central Location**: Conveniently located in District 3, Ho Chi Minh City
+- **Special Promotions**: Regular promotional programs and special offers
+
+## Operating Hours
+- Daily: 09:00 AM - 2:00 AM
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 121 Võ Thị Sáu, Phường 6, Quận 3, Thành phố Hồ Chí Minh`,
+    hours: "09:00 AM - 2:00 AM (Daily)",
+  },
+  {
+    id: 167,
+    name: "Karaoke Nnice - 16 Cộng Hòa",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/160923761_886247908617221_3880076647247584769_n_2abf1565980f4166ab3bbab74ed46346_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/461259860_3385158478457282_8598945511115371635_n_6cba4324c7b6452a9c448f8a4c096ea5_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461318570_3385158581790605_4170163914360525014_n_3c3bc2f9eeec42dfb8f49ac70be6c4ae_master.jpg",
+      "https://product.hstatic.net/1000268128/product/160923761_886247908617221_3880076647247584769_n_b62f5985477d41c5b6cec7342ca02220_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461255985_3385158578457272_7299079232139770109_n_763cda10722840dc99ae06c16940e99d_master.jpg",
+    ],
+    address: "16 Cộng Hòa, Phường 4, Quận Tân Bình, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.134134369533!2d106.6608851!3d10.8010372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529308d8c7081%3A0x2ce645b78482b448!2zMTYgxJAuIEPhu5luZyBIw7JhLCBQaMaw4budbmcgNCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmggNzAwMDAw!5e0!3m2!1svi!2s!4v1732526702645!5m2!1svi!2s",
+    description: `## About Karaoke Nnice (16 Cộng Hòa)
+Karaoke Nnice at 16 Cộng Hòa is one of the leading entertainment venues in Tân Bình District, Ho Chi Minh City. Located on the bustling Cộng Hòa Street, this modern venue features contemporary architecture, spacious rooms, and high-quality sound systems, providing guests with an exceptional karaoke experience.
+
+## Highlights
+- **Modern Architecture**: Contemporary design with spacious and elegant rooms
+- **High-Quality Sound System**: Professional audio equipment with multi-color lighting
+- **Modern Touch Screen**: Advanced interactive room control systems
+- **Diverse Menu**: Wide selection of snacks, appetizers, and beverages
+- **Professional Service**: Friendly and attentive staff
+- **Convenient Amenities**: Free WiFi, car parking, and card payment accepted
+- **Event Decoration**: Custom event decoration services available
+
+## Operating Hours
+- Daily: 09:00 AM - 02:00 AM
+
+## Amenities
+- Free WiFi
+- Car parking available
+- Card payment accepted
+- Event decoration services
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 16 Cộng Hòa, Phường 4, Quận Tân Bình, Thành phố Hồ Chí Minh`,
+    hours: "09:00 AM - 02:00 AM (Daily)",
+  },
+  {
+    id: 168,
+    name: "Karaoke Nnice - 524 Phan Văn Trị",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/461318570_3385158581790605_4170163914360525014_n_f8eacf5217794f448253c6d076cc34bc_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/461259860_3385158478457282_8598945511115371635_n_6cba4324c7b6452a9c448f8a4c096ea5_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461255985_3385158578457272_7299079232139770109_n_3e61a4df1aa9429e9a924bad2f160b86_master.jpg",
+      "https://product.hstatic.net/1000268128/product/160923761_886247908617221_3880076647247584769_n_b62f5985477d41c5b6cec7342ca02220_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461255985_3385158578457272_7299079232139770109_n_763cda10722840dc99ae06c16940e99d_master.jpg",
+    ],
+    address: "524 Phan Văn Trị, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.3316040261752!2d106.6877939!3d10.7858945!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f0a9ecc40d%3A0x2f27846d92d5557!2zNTI0IMSQLiBQaGFuIFbEg24gVHLhu4ssIFBoxrDhu51uZyA1LCBHw7IgVuG6pXAsIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1732527772143!5m2!1svi!2s",
+    description: `## About Karaoke Nnice (524 Phan Văn Trị)
+Karaoke Nnice at 524 Phan Văn Trị in Gò Vấp District, Ho Chi Minh City, features a vibrant and youthful atmosphere with a multi-color LED lighting system, creating an energetic ambiance for guests. The venue is equipped with professional sound systems that enhance vocal performance, and a continuously updated music library ensuring you can find all your favorite songs.
+
+## Highlights
+- **Youthful Atmosphere**: Modern and vibrant space design
+- **Multi-Color LED Lighting**: Dynamic lighting system creating an energetic ambiance
+- **Professional Sound System**: High-quality audio equipment that enhances vocal performance
+- **Extensive Music Library**: Continuously updated song collection with all your favorite tracks
+- **Modern Facilities**: Contemporary design with premium amenities
+- **Convenient Amenities**: Free WiFi, car parking, and card payment accepted
+
+## Operating Hours
+- Daily: 09:00 AM - 02:00 AM
+
+## Amenities
+- Free WiFi
+- Car parking available
+- Card payment accepted
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Family gatherings
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 524 Phan Văn Trị, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh`,
+    hours: "09:00 AM - 02:00 AM (Daily)",
+  },
+  {
+    id: 169,
+    name: "Karaoke Nnice - 230 Phan Xích Long",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/72463418_2776810765683980_1118744968068857856_n__1__b3c35d64ab9a42d997e0908e4fc81a62_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/461259860_3385158478457282_8598945511115371635_n_6cba4324c7b6452a9c448f8a4c096ea5_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461255985_3385158578457272_7299079232139770109_n_3e61a4df1aa9429e9a924bad2f160b86_master.jpg",
+      "https://product.hstatic.net/1000268128/product/160923761_886247908617221_3880076647247584769_n_b62f5985477d41c5b6cec7342ca02220_master.jpg",
+      "https://product.hstatic.net/1000268128/product/461255985_3385158578457272_7299079232139770109_n_763cda10722840dc99ae06c16940e99d_master.jpg",
+    ],
+    address:
+      "230 Phan Xích Long, Phường 7, Quận Phú Nhuận, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1839895701983!2d106.6901638!3d10.7972161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ce5aaf3ac9%3A0xd6228c98d0f83ccd!2zMjMwIFBoYW4gWMOtY2ggTG9uZywgUGjGsOG7nW5nIDcsIFBow7ogTmh14bqtbiwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1732674321620!5m2!1svi!2s",
+    description: `## About Karaoke Nnice (230 Phan Xích Long)
+Karaoke Nnice at 230 Phan Xích Long in Phú Nhuận District, Ho Chi Minh City, is one of the prominent branches of the Nnice karaoke system. This modern venue features spacious rooms, advanced sound systems, sharp LED screens, and multi-color lighting, providing guests with a high-quality karaoke experience.
+
+## Highlights
+- **Modern Design**: Contemporary and elegant room design with spacious interiors
+- **Advanced Sound System**: High-quality audio equipment for excellent vocal performance
+- **Sharp LED Screens**: Clear and vibrant display screens
+- **Multi-Color Lighting**: Dynamic lighting system creating an energetic ambiance
+- **Extensive Music Library**: Continuously updated song collection including Vietnamese and international music
+- **Diverse Menu**: Wide selection of snacks, appetizers, and beverages
+- **Professional Service**: Friendly and professional staff team
+- **Loyalty Program**: Membership program with attractive discounts up to 15%
+
+## Operating Hours
+- Daily: 09:00 AM - 02:00 AM
+
+## Amenities
+- Free WiFi
+- Car parking available
+- Card payment accepted
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Family gatherings
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 230 Phan Xích Long, Phường 7, Quận Phú Nhuận, Thành phố Hồ Chí Minh`,
+    hours: "09:00 AM - 02:00 AM (Daily)",
+  },
+  {
+    id: 170,
+    name: "Karaoke Nnice - 340 Nguyễn Thị Minh Khai",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/z6073138302978_e5e856dc03954a9ce81aeddcdfe5e115_42b25722d42b46d0bb5e532026bf66f6_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/957790bb1f60bd3ee471_042d66641a5143688f21d670623848d5_master_8cf7f0b664e5461ea8fa79d7a5eaacf5_master.jpg",
+      "https://product.hstatic.net/1000268128/product/445568979_122147662508203586_7732681223009980987_n_f9267d6d367b4b1da85045f6084f338d_master.jpg",
+      "https://product.hstatic.net/1000268128/product/karaoke-london-28-thanh-thai-thumnail-karaokehanoicom-2_1d7761d257c947089de7744361461a3f_master.jpg",
+      "https://product.hstatic.net/1000268128/product/z6073138265525_9d1dc1ed42e777ad3aca48b4d0949160_d286eaf3f7a04858966a56c933c9cb7d_master.jpg",
+    ],
+    address:
+      "340 Nguyễn Thị Minh Khai, Phường 5, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.504966358671!2d106.6880982!3d10.7725831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f234cc662cd%3A0x6b2bafae7438bb31!2zMzQwIMSQLiBOZ3V54buFbiBUaOG7iyBNaW5oIEtoYWksIFBoxrDhu51uZyA1LCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1732857882313!5m2!1svi!2s",
+    description: `## About Karaoke Nnice (340 Nguyễn Thị Minh Khai)
+Karaoke Nnice at 340 Nguyễn Thị Minh Khai in District 3, Ho Chi Minh City, is a prominent branch of the Nnice karaoke system. This modern venue features contemporary design, high-quality sound systems, and professional service, making it an ideal destination for gatherings with friends and family.
+
+## Highlights
+- **Modern Space**: Contemporary and elegant design with spacious rooms
+- **High-Quality Sound System**: Professional audio equipment for excellent vocal performance
+- **Professional Service**: Well-trained and friendly staff team
+- **Convenient Location**: Located in the heart of District 3, Ho Chi Minh City
+- **Diverse Menu**: Wide selection of food and beverages
+- **Loyalty Program**: Membership program with attractive discounts
+
+## Operating Hours
+- Daily: 09:00 AM - 02:00 AM
+
+## Amenities
+- Free WiFi
+- Car parking available
+- Card payment accepted
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Family gatherings
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 340 Nguyễn Thị Minh Khai, Phường 5, Quận 3, Thành phố Hồ Chí Minh`,
+    hours: "09:00 AM - 02:00 AM (Daily)",
+  },
+  {
+    id: 171,
+    name: "Karaoke Avatar - 63 - 65 Phạm Viết Chánh",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/456720165_941645521334420_9151034438601518150_n-min_ea376d8261114f138df5ce8b4cee8917_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/456793781_942470671251905_2541669012091111623_n-min_44c16fdf2629470b968eb8bc375577bf_master.jpg",
+      "https://product.hstatic.net/1000268128/product/456850095_942470681251904_9177580374849494665_n-min_7a2e62b2cb2c4819b7a594fca0dd3d44_master.jpg",
+      "https://product.hstatic.net/1000268128/product/457021170_942470664585239_6714956517140031193_n-min_0c1451989957431d93d83b3b3777939a_master.jpg",
+      "https://product.hstatic.net/1000268128/product/457051081_942470704585235_2441753672820603052_n-min_80386f09efc8423681f92e9d00c9c2ff_master.jpg",
+    ],
+    address:
+      "63 - 65 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5933130030494!2d106.68037031425634!3d10.765793262335045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f18d6801a17%3A0xe78c7f90778bfd32!2zNjUgUGjhuqFtIFZp4bq_dCBDaMOhbmgsIFBoxrDhu51uZyBOZ3V54buFbiBDxrAgVHJpbmgsIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1583827250231!5m2!1sen!2s",
+    description: `## About Karaoke Avatar (63 - 65 Phạm Viết Chánh)
+Karaoke Avatar at 63-65 Phạm Viết Chánh in District 1, Ho Chi Minh City, is an ideal destination for gatherings with friends, family, or parties. The venue is carefully invested in service quality, featuring modern sound systems and elegant spaces with eye-catching color schemes.
+
+## Highlights
+- **Elegant Design**: Sophisticated and luxurious space with eye-catching color schemes
+- **Modern Sound System**: Advanced audio equipment for excellent karaoke experience
+- **Quality Service**: Carefully invested in service quality and customer satisfaction
+- **Spacious Rooms**: Comfortable and well-designed rooms for various group sizes
+- **Premium Experience**: High-end karaoke experience in the heart of District 1
+- **Diverse Menu**: Wide selection of food and beverages
+- **Professional Staff**: Well-trained and attentive service team
+
+## Operating Hours
+- Daily: 10:00 AM - 05:00 AM
+
+## Amenities
+- Free WiFi
+- Car parking available
+- Card payment accepted
+
+## Perfect For
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events and meetings
+- Entertainment seekers
+- Music enthusiasts
+- Social gatherings and events
+- Family gatherings
+- Ho Chi Minh City visitors
+
+## Contact
+- Address: 63 - 65 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh`,
+    hours: "10:00 AM - 05:00 AM (Daily)",
+  },
+  {
+    id: 172,
+    name: "TOP.U Beer Lounge - 8 Ô Chợ Dừa",
+    main_image_url:
+      "https://giaitriktv.com/wp-content/uploads/2024/05/409192050_889620799211136_5934503407216885925_n_4030cbb9c52543c2aa8e8a60d1642d97_master-600x400.webp",
+    images: [
+      "https://kingsmanvn.com/data/coso/123-1744537553.jpg",
+      "https://giaitriktv.com/wp-content/uploads/2024/05/52bbe4b9-7945-470c-96bc-efa7db78f5ca_e949c511ad8246a2b3d9a3e1f67b1437_master-600x400.webp",
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-2.jpg",
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-3.jpg",
+    ],
+    address: "8 Ô Chợ Dừa, Phường Chợ Dừa, Quận Đống Đa, Hà Nội",
+    country: "Vietnam",
+    category: "Bar",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3367848633716!2d105.82668417700869!3d21.01920628062771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab00640bdb87%3A0x927dddb0a82ac8a!2sTOP.U%20Beer%20Lounge!5e0!3m2!1sen!2s!4v1764394152796!5m2!1sen!2s",
+    description: `## About TOP.U Beer Lounge (8 Ô Chợ Dừa)
+TOP.U Beer Lounge at 8 Ô Chợ Dừa in Đống Đa District, Hanoi, is a modern entertainment complex featuring contemporary design, sophisticated lighting, and dynamic sound systems, creating an energetic nightlife atmosphere. Opened in 2024, this 500m² venue has quickly become a favorite destination for office workers, young groups, and international visitors who love Hanoi's vibrant nightlife.
+
+## Highlights
+- **Modern Industrial Design**: Contemporary interior with red brick walls, color-changing LED lights, and a sparkling central bar
+- **Spacious 500m² Space**: Divided into multiple areas from dynamic stage areas to cozy VIP tables
+- **International Sound & Lighting**: High-end speaker system delivering sharp sound from energetic EDM to gentle acoustic, with laser lights synchronized to music
+- **Professional DJs & Dancers**: Top DJs and dancers perform nightly from Tuesday to Sunday with themes like EDM Night, Retro Party, and Lady Night
+- **Diverse Drink Menu**: Rich selection of creative cocktails and beverages
+- **Personalized Service**: Friendly, well-trained staff ready to suggest food, drinks, or assist with event organization
+- **High Ratings**: 4.3/5 rating from over 200 reviews on Facebook and Google Maps
+
+## Perfect For
+- Nightlife enthusiasts
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events
+- Music lovers
+- Social gatherings
+- International visitors
+- Young professionals
+
+## Contact
+- Address: 8 Ô Chợ Dừa, Phường Chợ Dừa, Quận Đống Đa, Hà Nội`,
+    hours: "Check with venue",
+  },
+  {
+    id: 173,
+    name: "Say Vui Cùng Can - 229 Tây Sơn, Đống Đa ",
+    main_image_url:
+      "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-1/577096694_122184451112547756_8992929808018927494_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=tCPBQlTtm1oQ7kNvwG-3BLQ&_nc_oc=Adl5HOFAMfPNb3It6JJQAddvFQNyOLXmIpMb9OTFO51kcEUui2lLxA-usxvHsfNut6kMIV4_1meDEiRsNyN7IKAC&_nc_zt=24&_nc_ht=scontent.fvca1-4.fna&_nc_gid=5rstNZnBzTKxJbeUuy-xGA&oh=00_AfhIHA--y_dnM_1E7UtcqYapcH4OkJaMMFMPRhq4aKOinQ&oe=69303F07",
+    images: [
+      "https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/590922863_122107470927115878_3931825845515238179_n.jpg?stp=c342.0.1364.1364a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=50ad20&_nc_ohc=qoxHogp2PiAQ7kNvwGRfQvd&_nc_oc=AdlSNpe7JUYhZPuoQLIA_ie6f9bgGPv8mp4vqY_slO3Idy6emtqye8rSm3knN7B7cYPwyb7M-zy5yWAsvF3LPrZj&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=auowoLm4QAvrzSxjviuR0A&oh=00_AfhlGk9VlDFg4lMHWSa0NM-lNRdvqTnn9TVhVAb331LvfA&oe=69306417",
+      "https://scontent.fvca1-3.fna.fbcdn.net/v/t39.30808-6/588027206_122107470999115878_8386790653524522171_n.jpg?stp=c0.225.1366.1366a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=50ad20&_nc_ohc=Wtxji9x6LGwQ7kNvwHHrphh&_nc_oc=AdkGpkU3hXfUsYfCU1l7kVUbCa6z4Kk0jtSGq3vKCxyQRp5ZesjKXC2mwWODE8tIF0XCExOBTCkWBFHNfXNfKDmG&_nc_zt=23&_nc_ht=scontent.fvca1-3.fna&_nc_gid=auowoLm4QAvrzSxjviuR0A&oh=00_AfjNpKHAeZ_oW2detIudN2FuqFRJ_od06qiFWpW62IaE8A&oe=6930641D",
+      "https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/586840538_122106693489115878_5726967940972009534_n.jpg?stp=c0.226.1364.1364a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_ohc=m9QZh3KDDPQQ7kNvwH1_1KI&_nc_oc=AdnzDo0zPUbT7gKCEpzNRZ0-GzHg3461U4dwilpbZVydkCdT0g5x8r29VollqSk0zs_DYnnH3owy8C8S6kjMCPhM&_nc_zt=23&_nc_ht=scontent.fvca1-2.fna&_nc_gid=D_FWCG1Dd1DYuvBFM0CY1A&oh=00_AfhBnwW5NR5oFGi91CaE3gjH-giGbvnYyonw3cqPzJXOyQ&oe=69306C17",
+      "https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-6/586550664_122106695409115878_7038455286854150309_n.jpg?stp=c341.0.1366.1366a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=50ad20&_nc_ohc=osy--5InJ04Q7kNvwENnIIr&_nc_oc=AdkmCBYBmbCj2KMJABpTQFGAndV19LfFTNFJaltwHNX2Ji_bZsHbkSAbA9ePzVnv3QXtAX93emd-vsYpO4pLhgqH&_nc_zt=23&_nc_ht=scontent.fvca1-4.fna&_nc_gid=yM6c8xxDcBRSws53pLfioQ&oh=00_AfgJsyJV5Lz6U1BY-abe8BpeRSUL90P5Pm5bw6vk0IbKyQ&oe=693064F3",
+    ],
+    address: "229 Tây Sơn, Đống Đa, Hà Nội",
+    country: "Vietnam",
+    category: "Beer club",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6826561764833!2d105.82140947700854!3d21.005354280638254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad006a552b79%3A0x71672641bb3e5cf3!2sSay%20Vui%20C%C3%B9ng%20Can!5e0!3m2!1sen!2s!4v1764394358493!5m2!1sen!2s",
+    description: `## About Say Vui Cùng Can (229 Tây Sơn, Đống Đa)
+Say Vui Cùng Can at 229 Tây Sơn in Đống Đa District, Hanoi, is a modern entertainment complex featuring contemporary design, sophisticated lighting, and dynamic sound systems, creating an energetic nightlife atmosphere. Opened in 2024, this 500m² venue has quickly become a favorite destination for office workers, young groups, and international visitors who love Hanoi's vibrant nightlife.
+## Highlights
+- **Modern Design**: Contemporary interior with sophisticated lighting and sound systems
+- **Spacious 500m² Space**: Divided into multiple areas from dynamic stage areas to cozy VIP tables
+- **International Sound & Lighting**: High-end speaker system delivering sharp sound from energetic EDM to gentle acoustic, with laser lights synchronized to music
+- **Professional DJs & Dancers**: Top DJs and dancers perform nightly from Tuesday to Sunday with themes like EDM Night, Retro Party, and Lady Night
+- **Diverse Drink Menu**: Rich selection of creative cocktails and beverages
+- **Personalized Service**: Friendly, well-trained staff ready to suggest food, drinks, or assist with event organization
+## Perfect For
+- Nightlife enthusiasts
+- Group gatherings and parties
+- Birthday celebrations
+- Corporate events
+- Music lovers
+- Social gatherings
+- International visitors
+- Young professionals
+## Contact
+- Address: 229 Tây Sơn, Đống Đa, Hà Nội`,
+    hours: "Check with venue",
+  },
 ];
