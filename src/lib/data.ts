@@ -7802,4 +7802,76 @@ Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh Cit
 - Ho Chi Minh City visitors`,
     hours: "Check with venue",
   },
+  {
+    id: 161,
+    name: "Karaoke Icool - 38 Nguyễn Sơn",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/atn0936-scaled_f3c1de7b8b9a445aaacfa42d14cf651c_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/gaua2364_5ea89c94b1af4237b2c35b57016777bd_master.jpg",
+      "https://product.hstatic.net/1000268128/product/2__2__c819dd9c6181429eac55e8a4853538a6_master.jpg",
+      "https://product.hstatic.net/1000268128/product/tk6_9faef41497ff460ab896a8fee110365c_master.png",
+      "https://product.hstatic.net/1000268128/product/2__1__b6194f5ebad543d59a5338b62c3337d2_master.jpg",
+    ],
+    address:
+      "38 Nguyễn Sơn, Phường Phú Thọ Hòa, Quận Tân Phú, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3671658058906!2d106.62570707490634!3d10.783165259069712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c02bb6b9af7%3A0x225339cd09461784!2zMTg2LzM4IE5ndXnhu4VuIFPGoW4sIFBow7ogVGjhu40gSG_DoCwgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1729246986983!5m2!1svi!2s",
+    description: `## About Karaoke Icool (Nguyen Son)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District Tân Phú, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
+  {
+    id: 162,
+    name: "Karaoke Icool - 18/9 Trần Não",
+    main_image_url:
+      "https://product.hstatic.net/1000268128/product/23-1-scaled_419efac66e75400b8b8d4e3a764f2ef5_master.jpg",
+    images: [
+      "https://product.hstatic.net/1000268128/product/16-scaled_fc2c888894e94514832df5b637844676_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0945-scaled_e63dfb3a8e6047948dd1edfe36748878_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn0882-1024x683_f11d3e8a9e7347b380a60499ef91d727_master.jpg",
+      "https://product.hstatic.net/1000268128/product/atn2051-1024x683_766ca55cae0a4a8f8130071cde0d6b9f_master.jpg",
+    ],
+    address:
+      "18/9 Trần Não, Phường Bình An, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.3204420698876!2d106.72994!3d10.786751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317525fde523ce19%3A0xf5e0a2e91d70a4b5!2zMTgvOSDEkC4gVHLhuqduIE7Do28sIFAuIELDrG5oIEFuLCBRdeG6rW4gMiwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1sen!2s!4v1729501268094!5m2!1sen!2s",
+    description: `## About Karaoke Icool (Tran No)
+Karaoke Icool is a premium karaoke venue located in District 12, Ho Chi Minh City. The venue offers a sophisticated atmosphere for music, entertainment, and social gatherings, making it a distinguished destination for quality nightlife entertainment in the city.
+
+## Highlights
+- **Premium Location**: Located in District Thủ Đức, Ho Chi Minh City
+- **Modern Facilities**: Contemporary design with premium ambiance
+- **Entertainment Venue**: High-quality music and entertainment experience
+- **Group-Friendly**: Perfect for gatherings and celebrations
+- **Professional Service**: High-quality service and amenities
+
+## Perfect For
+- Nightlife enthusiasts
+- Group celebrations
+- Entertainment seekers
+- Social gatherings and events
+- Ho Chi Minh City visitors`,
+    hours: "Check with venue",
+  },
 ];
