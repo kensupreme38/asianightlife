@@ -15,6 +15,12 @@ import { usePathname } from 'next/navigation';
 const languages = [
   { value: 'en', label: 'English' },
   { value: 'vi', label: 'Tiếng Việt' },
+  { value: 'zh', label: '中文' },
+  { value: 'id', label: 'Bahasa Indonesia' },
+  { value: 'ja', label: '日本語' },
+  { value: 'ko', label: '한국어' },
+  { value: 'ru', label: 'Русский' },
+  { value: 'th', label: 'ไทย' },
 ];
 
 export function LanguageSwitcher() {
@@ -38,7 +44,7 @@ export function LanguageSwitcher() {
     let pathWithoutLocale = fullPathname;
     
     // Remove locale prefix if it exists
-    for (const loc of ['en', 'vi']) {
+    for (const loc of ['en', 'vi', 'zh', 'id', 'ja', 'ko', 'ru', 'th']) {
       if (pathWithoutLocale.startsWith(`/${loc}/`)) {
         pathWithoutLocale = pathWithoutLocale.slice(`/${loc}`.length);
         break;
