@@ -52,7 +52,7 @@
     "genkit": "latest",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.545.0",
-    "next": "15.5.4",
+    "next": "^15.5.7",
     "next-intl": "^4.5.5",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
