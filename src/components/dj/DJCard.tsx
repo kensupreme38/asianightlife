@@ -6,6 +6,7 @@ import { Heart, TrendingUp, User } from "lucide-react";
 import { SimpleImage } from "@/components/ui/simple-image";
 import { useState } from "react";
 import { useTranslations } from 'next-intl';
+import { MotionHover } from "@/components/animations";
 
 export interface DJ {
   id: string;
@@ -52,6 +53,7 @@ export const DJCard = ({ dj, onVote, hasVoted = false, isAuthenticated = false }
   };
 
   return (
+    <MotionHover scale={1.02} y={-4} className="h-full">
     <div className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 h-full flex flex-col">
       <Link
         href={`/dj/${dj.id}`}
@@ -131,6 +133,7 @@ export const DJCard = ({ dj, onVote, hasVoted = false, isAuthenticated = false }
         </Button>
       </div>
     </div>
+    </MotionHover>
   );
 };
 

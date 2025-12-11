@@ -46,3 +46,30 @@ Deploy link sẽ được cập nhật sau khi deploy lên Vercel.
 ## 📝 License
 
 Private project - All rights reserved.
+Đã thêm animations:
+1. VenueCard
+Thêm MotionHover với scale và lift effect khi hover
+Cards sẽ nâng nhẹ và phóng to khi hover
+2. VenueGrid
+Thay ScrollReveal cũ bằng MotionScrollReveal (Framer Motion)
+Thêm MotionStagger để cards xuất hiện tuần tự
+Header và pagination có scroll animations
+3. DJCard
+Thêm MotionHover tương tự VenueCard
+Hover effect mượt hơn
+4. DJGrid
+Thay ScrollReveal bằng MotionScrollReveal
+Thêm MotionStagger cho danh sách DJs
+Tất cả animations được tối ưu với Framer Motion
+5. HeroBanner
+Thêm slide transitions với AnimatePresence
+Content fade in với stagger animations
+Dots indicator có hover và tap animations
+Transitions mượt hơn giữa các slides
+Kết quả:
+Smooth scroll animations với Lenis
+Framer Motion animations trên toàn dự án
+Hover effects trên cards
+Stagger animations cho grids
+Page transitions mượt mà
+Hero banner với slide animations

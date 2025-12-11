@@ -184,7 +184,9 @@
     "showMore": "显示更多",
     "venuesFound": "{count}个场所",
     "venuesFoundPlural": "{count}个场所",
-    "showing": "显示{showing}个，共{total}个"
+    "showing": "显示{showing}个，共{total}个",
+    "goToPage": "跳转到页面",
+    "go": "跳转"
   },
   "employee": {
     "employeeProfile": "员工资料",

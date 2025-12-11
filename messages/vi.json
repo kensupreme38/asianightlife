@@ -184,7 +184,9 @@
     "showMore": "Hiển thị thêm",
     "venuesFound": "{count} địa điểm",
     "venuesFoundPlural": "{count} địa điểm",
-    "showing": "Hiển thị {showing} trong {total}"
+    "showing": "Hiển thị {showing} trong {total}",
+    "goToPage": "Đi đến trang",
+    "go": "Đi"
   },
   "employee": {
     "employeeProfile": "Hồ sơ nhân viên",

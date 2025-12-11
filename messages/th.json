@@ -184,7 +184,9 @@
     "showMore": "แสดงเพิ่มเติม",
     "venuesFound": "{count} สถานที่",
     "venuesFoundPlural": "{count} สถานที่",
-    "showing": "แสดง {showing} จาก {total}"
+    "showing": "แสดง {showing} จาก {total}",
+    "goToPage": "ไปที่หน้า",
+    "go": "ไป"
   },
   "employee": {
     "employeeProfile": "โปรไฟล์พนักงาน",

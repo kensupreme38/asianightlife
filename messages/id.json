@@ -184,7 +184,9 @@
     "showMore": "Tampilkan Lebih Banyak",
     "venuesFound": "{count} tempat",
     "venuesFoundPlural": "{count} tempat",
-    "showing": "Menampilkan {showing} dari {total}"
+    "showing": "Menampilkan {showing} dari {total}",
+    "goToPage": "Ke halaman",
+    "go": "Pergi"
   },
   "employee": {
     "employeeProfile": "Profil Karyawan",

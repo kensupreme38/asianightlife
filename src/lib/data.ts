@@ -8310,49 +8310,7 @@ Karaoke Avatar at 63-65 Phạm Viết Chánh in District 1, Ho Chi Minh City, is
 - Address: 63 - 65 Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh`,
     hours: "10:00 AM - 05:00 AM (Daily)",
   },
-  {
-    id: 172,
-    name: "TOP.U Beer Lounge - 8 Ô Chợ Dừa",
-    main_image_url:
-      "https://giaitriktv.com/wp-content/uploads/2024/05/409192050_889620799211136_5934503407216885925_n_4030cbb9c52543c2aa8e8a60d1642d97_master-600x400.webp",
-    images: [
-      "https://kingsmanvn.com/data/coso/123-1744537553.jpg",
-      "https://giaitriktv.com/wp-content/uploads/2024/05/52bbe4b9-7945-470c-96bc-efa7db78f5ca_e949c511ad8246a2b3d9a3e1f67b1437_master-600x400.webp",
-      "https://kingsmanvn.com/data/pic_coso/123-1744537554-2.jpg",
-      "https://kingsmanvn.com/data/pic_coso/123-1744537554-3.jpg",
-    ],
-    address: "8 Ô Chợ Dừa, Phường Chợ Dừa, Quận Đống Đa, Hà Nội",
-    country: "Vietnam",
-    category: "Bar",
-    price: "Contact for pricing",
-    mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3367848633716!2d105.82668417700869!3d21.01920628062771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab00640bdb87%3A0x927dddb0a82ac8a!2sTOP.U%20Beer%20Lounge!5e0!3m2!1sen!2s!4v1764394152796!5m2!1sen!2s",
-    description: `## About TOP.U Beer Lounge (8 Ô Chợ Dừa)
-TOP.U Beer Lounge at 8 Ô Chợ Dừa in Đống Đa District, Hanoi, is a modern entertainment complex featuring contemporary design, sophisticated lighting, and dynamic sound systems, creating an energetic nightlife atmosphere. Opened in 2024, this 500m² venue has quickly become a favorite destination for office workers, young groups, and international visitors who love Hanoi's vibrant nightlife.
-
-## Highlights
-- **Modern Industrial Design**: Contemporary interior with red brick walls, color-changing LED lights, and a sparkling central bar
-- **Spacious 500m² Space**: Divided into multiple areas from dynamic stage areas to cozy VIP tables
-- **International Sound & Lighting**: High-end speaker system delivering sharp sound from energetic EDM to gentle acoustic, with laser lights synchronized to music
-- **Professional DJs & Dancers**: Top DJs and dancers perform nightly from Tuesday to Sunday with themes like EDM Night, Retro Party, and Lady Night
-- **Diverse Drink Menu**: Rich selection of creative cocktails and beverages
-- **Personalized Service**: Friendly, well-trained staff ready to suggest food, drinks, or assist with event organization
-- **High Ratings**: 4.3/5 rating from over 200 reviews on Facebook and Google Maps
-
-## Perfect For
-- Nightlife enthusiasts
-- Group gatherings and parties
-- Birthday celebrations
-- Corporate events
-- Music lovers
-- Social gatherings
-- International visitors
-- Young professionals
-
-## Contact
-- Address: 8 Ô Chợ Dừa, Phường Chợ Dừa, Quận Đống Đa, Hà Nội`,
-    hours: "Check with venue",
-  },
+  
   {
     id: 173,
     name: "Say Vui Cùng Can - 229 Tây Sơn, Đống Đa ",
@@ -8391,5 +8349,531 @@ Say Vui Cùng Can at 229 Tây Sơn in Đống Đa District, Hanoi, is a modern e
 ## Contact
 - Address: 229 Tây Sơn, Đống Đa, Hà Nội`,
     hours: "Check with venue",
+  },
+  {
+    id: 174,
+    name: "Sỉn Quán - 119 Hoàng Cầu",
+    main_image_url:
+      "https://topgo.vn/wp-content/uploads/2025/05/Sin-Quan-Hoang-Cau-4.jpg",
+    images: [
+      "https://topgo.vn/wp-content/uploads/2025/05/Sin-Quan-Hoang-Cau-4.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/05/Sin-Quan-Hoang-Cau-5.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/05/Sin-Quan-Hoang-Cau-14.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/05/Sin-Quan-Hoang-Cau-6.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/05/Sin-Quan-Hoang-Cau-10.jpg",
+    ],
+    address: "119 Hoàng Cầu, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "200,000 - 500,000 VND/person",
+    description: `## About Sỉn Quán - 119 Hoàng Cầu
+Sỉn Quán, located at 119 Hoàng Cầu in Đống Đa District, Hanoi, is one of four branches of the Sỉn Quán restaurant chain. The restaurant features a modern, sophisticated space with distinct East Asian style, perfect for gatherings with friends, celebrations, or family dinners.
+
+## Highlights
+- **Elegant Space**: Modern, sophisticated design with East Asian aesthetic
+- **Large Capacity**: Up to 130 guests
+- **Diverse Cuisine**: Combination of Vietnamese and Euro-Asian cuisine
+- **Full Amenities**: Free car and motorcycle parking, prime location
+- **Professional Services**: Table decoration, party organization, music performances
+
+## Signature Dishes
+- Empress Dowager Cixi Hotpot (Lẩu Từ Hy)
+- Pigeon with Cordyceps Mushroom Hotpot (Lẩu chim câu nấm đông trùng)
+- Flaming Mountain Ribs (Sườn hỏa diệm sơn)
+- Fresh Intestines (Lòng thật)
+- Prawn Gourd with Scallop Broth Hotpot (Lẩu tôm bầu nước sò điệp)
+- Black Pepper Grilled Beef (Bò nướng tiêu đen)
+- Fried Seaweed Prawn Rolls (Rong biển cuộn tôm chiên)
+- Seaweed Salad with Prawn Eggs (Salad rong biển trứng tôm)
+- Fuji Black Pepper Grilled Beef (Bò Fuji nướng tiêu đen)
+
+## Perfect For
+- Friends gatherings
+- Family celebrations
+- Romantic dinners
+- Party organization (30+ guests)
+- Euro-Asian cuisine lovers
+- Business groups and corporate events
+
+## Notes
+- Menu prices exclude VAT; restaurant charges 10% VAT
+- Outside food/beverage fee: 100,000 VND/liter, 200,000 VND/hard liquor bottle
+- Book tables 30 minutes in advance for best service
+- Reserved tables held for maximum 15 minutes
+- Private area available for groups of 30+ people
+
+## Contact
+- Address: 119 Hoàng Cầu, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội`,
+    hours: "10:00 AM - 04:00 AM (Next day)",
+  },
+  {
+    id: 175,
+    name: "Sỉn Quán - 47 Bát Đàn",
+    main_image_url:
+      "https://hotel84.com/hotel84-images/news/photo/am-thuc-sin-quan.jpg",
+    images: [
+      "https://hotel84.com/hotel84-images/news/photo/am-thuc-sin-quan.jpg",
+      "https://hotel84.com/hotel84-images/news/photo/bo-banh-bao-sin-quan.jpg",
+      "https://hotel84.com/hotel84-images/news/photo/bo-nuong-tang-sin-quan.jpg",
+      "https://hotel84.com/hotel84-images/news/photo/com-cuon-sin-quan.jpg",
+      "https://hotel84.com/hotel84-images/news/photo/do-xao-sin-quan.jpg",
+      "https://hotel84.com/hotel84-images/news/photo/hai-san-sin-quan.jpg",
+    ],
+    address: "47 Bát Đàn, P. Hàng Bồ, Q. Hoàn Kiếm, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "150,000 - 300,000 VND/person",
+    description: `## About Sỉn Quán - 47 Bát Đàn
+Sỉn Quán - 47 Bát Đàn is a renowned restaurant in Hanoi, specializing in Vietnamese cuisine from all three regions in a space with distinct East Asian style. Located at 47 Bát Đàn Street, Hàng Bồ Ward, Hoàn Kiếm District, this restaurant offers an authentic dining experience with traditional and modern Vietnamese dishes.
+
+## Highlights
+- **Indochine Style**: Elegant Indochine (French Colonial) design with East Asian influences
+- **Large Capacity**: Up to 200 guests with 2 private rooms (50 guests per room)
+- **Vietnamese Cuisine**: Specializing in dishes from all three regions of Vietnam
+- **Full Amenities**: Private rooms, outdoor seating, children's facilities, event decoration, projector, sound system
+- **Professional Service**: Free parking, WiFi, air conditioning, accepts Visa/MasterCard, VAT invoices available
+
+## Signature Dishes
+- Empress Dowager Cixi Hotpot (Lẩu Từ Hy)
+- Pigeon with Cordyceps Mushroom Hotpot (Lẩu Chim Câu Nấm Đông Trùng)
+- Flaming Mountain Ribs (Sườn Hỏa Diệm Sơn)
+- Salted Beef Tendon with Thai Tamarind Dressing (Gân Bò Muối Trộn Cóc Vị Thái)
+- Northern Spicy Sour Catfish Hotpot (Lẩu Cá Lăng Chua Cay Bắc Bộ)
+- Japanese Fuji Beef with Green Pepper Sauce (Bò Fuji Nhật Nướng Xốt Tiêu Xanh)
+- Thai Seafood Salad with Basil Sauce (Gỏi Hải Sản Thái Sốt Húng Quế)
+- Five-Color Vegetable Platter with Fermented Shrimp Paste (Củ Quả Ngũ Sắc Chấm Kho Quẹt)
+
+## Space & Facilities
+- **Indochine Design**: French Colonial architecture with Asian touches
+- **Private Rooms**: 2 private rooms, each accommodating 50 guests
+- **Outdoor Seating**: Available for al fresco dining
+- **Event Services**: Event decoration, projector, professional sound system
+- **Family-Friendly**: Children's chairs, children's play area
+- **Parking**: Free car and motorcycle parking (fees depend on parking management)
+
+## Perfect For
+- Friends gatherings
+- Family celebrations
+- Birthday parties
+- Corporate events and meetings
+- Private dining (private rooms available)
+- Traditional Vietnamese cuisine enthusiasts
+- Special occasions and celebrations
+
+## Special Offers
+- Up to 33% discount on selected dishes (lunch specials available)
+- Promotional offers available when booking through PasGo
+
+## Contact
+- Address: 47 Bát Đàn, P. Hàng Bồ, Q. Hoàn Kiếm, Hà Nội`,
+    hours: "10:30 AM - 11:59 PM",
+  },
+  {
+    id: 176,
+    name: "Sỉn Quán - 07 Dã Tượng",
+    main_image_url:
+      "https://topgo.vn/wp-content/uploads/2025/03/Sin-Quan-Da-Tuong-11.jpg",
+    images: [
+      "https://topgo.vn/wp-content/uploads/2025/03/Sin-Quan-Da-Tuong-11.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/03/Sin-Quan-Da-Tuong-10.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/03/Sin-Quan-Da-Tuong-12.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/03/Sin-Quan-Da-Tuong-8.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/03/Sin-Quan-Da-Tuong-9.jpg",
+    ],
+    address: "7 Dã Tượng, Trần Hưng Đạo, Hoàn Kiếm, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "300,000+ VND/person",
+    description: `## About Sỉn Quán - 07 Dã Tượng
+Sỉn Quán Dã Tượng is located at 7 Dã Tượng Street, Trần Hưng Đạo, Hoàn Kiếm District, Hanoi. The restaurant features a unique space combining Indochine and modern styles, offering a distinctive dining experience. With a capacity of up to 140 guests, this is an ideal venue for gatherings with friends, family events, or special occasions.
+
+## Highlights
+- **Indochine-Modern Fusion**: Unique combination of Indochine and contemporary design
+- **Large Capacity**: Up to 140 guests
+- **Central Location**: Located in the heart of Hoàn Kiếm District
+- **Diverse Menu**: Specializing in Vietnamese cuisine with signature dishes
+- **Full Amenities**: Free parking for motorcycles and cars, central location
+
+## Signature Dishes
+- Fresh Intestines (Lòng Thật)
+- Prawn Gourd with Scallop Broth Hotpot (Lẩu tôm bầu nước sò điệp)
+- Black Pepper Grilled Beef (Bò nướng tiêu đen)
+
+## Space & Design
+- **Modern & Elegant**: Sophisticated yet approachable design
+- **Indochine Elements**: French Colonial architectural touches
+- **Spacious Layout**: Comfortable seating for large groups
+- **Contemporary Ambiance**: Modern dining atmosphere
+
+## Perfect For
+- Friends gatherings
+- Family celebrations
+- Special events and parties
+- Business meetings
+- Traditional Vietnamese cuisine enthusiasts
+- Central location seekers
+
+## Contact
+- Address: 7 Dã Tượng, Trần Hưng Đạo, Hoàn Kiếm, Hà Nội`,
+    hours: "10:00 AM - 02:00 PM, 04:00 PM - 03:00 AM",
+  },
+  {
+    id: 177,
+    name: "Sỉn Beer Garden - 96 Chùa Hà",
+    main_image_url:
+      "https://topgo.vn/wp-content/uploads/2025/11/sin_quan5-2.jpg",
+    images: [
+      "https://topgo.vn/wp-content/uploads/2025/11/sin_quan5-2.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/11/sin_quan4-1.jpg",
+      "https://topgo.vn/wp-content/uploads/2025/11/sin_quan_.jpg",
+    ],
+    address: "96 Chùa Hà, Cầu Giấy, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "Contact for pricing",
+    description: `## About Sin Beer Garden - 96 Chùa Hà
+Sin Beer Garden - 96 Chùa Hà combines traditional Vietnamese cuisine with modern grilling, offering familiar yet refreshing flavors. Located in Cầu Giấy District, Hanoi, this restaurant features a diverse menu with signature hotpot dishes and grilled specialties, perfect for gatherings with family, friends, or corporate events.
+
+## Highlights
+- **Traditional & Modern Fusion**: Combining Vietnamese traditional cuisine with modern grilling
+- **Flexible Capacity**: Rooms for 10-120 guests
+- **Professional Service**: Enthusiastic and professional staff always ready to advise on dishes
+- **Full Amenities**: Free parking in front, convenient location
+- **Transparent Policies**: Clear policy on outside beverages
+
+## Signature Dishes
+- **Crab with Gourd and Scallop Broth Hotpot** (Lẩu cua bầu cốt sò điệp): Rich, savory broth combining fresh crab and scallops, creating an unforgettable sweet and fresh flavor
+- **Crab with Đông Tảo Chicken Feet Hotpot** (Lẩu cua chân gà Đông Tảo): Rich flavor with fresh, firm chicken feet, perfect for family gatherings or groups of friends
+- **Grilled & Snacks**: Traditional Vietnamese grilled dishes and snacks prepared with modern techniques, rich flavors and attractive presentation
+
+## Beverages
+- Fresh juices, soda, herbal teas, light wines to enhance the dining experience
+
+## Space & Facilities
+- **Elegant Space**: Sophisticated and cozy atmosphere
+- **Flexible Rooms**: Accommodating 10-120 guests
+- **Free Parking**: Parking available in front of the restaurant
+- **Convenient Location**: Easy access in Cầu Giấy District
+
+## Perfect For
+- Family gatherings
+- Friends' parties
+- Corporate events and company gatherings
+- Traditional Vietnamese cuisine lovers
+- Grilled food enthusiasts
+
+## Booking
+- Hotline: 0913 515 351
+- Advance booking recommended
+
+## Contact
+- Address: 96 Chùa Hà, Cầu Giấy, Hà Nội`,
+    hours: "Check with venue",
+  },
+  {
+    id: 178,
+    name: "Top U Beer Lounge - 8 Ô Chợ Dừa",
+    main_image_url:
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-1.jpg",
+    images: [
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-1.jpg",
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-2.jpg",
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-3.jpg",
+      "https://kingsmanvn.com/data/pic_coso/123-1744537554-4.jpg",
+    ],
+    address: "Tầng 3, tòa nhà OCD Plaza, 8 Ô Chợ Dừa, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Top U Beer Lounge - 8 Ô Chợ Dừa
+Top U Beer Lounge is located on the 3rd floor of OCD Plaza building at 8 Ô Chợ Dừa, Đống Đa District, Hanoi. This vibrant entertainment venue offers stunning city night views with modern design and international-standard sound and lighting systems. The lounge regularly features professional DJs and dancers, providing an energetic music experience for guests.
+
+## Highlights
+- **Modern Design**: Contemporary space with glass walls offering panoramic city night views
+- **International Standard Equipment**: JBL sound system meeting international standards
+- **Live Entertainment**: Professional DJs and dancers performing from 9:00 PM to 2:00 AM
+- **Diverse Menu**: Over 50 international beer varieties, creative cocktails, and Vietnamese-Euro-Asian fusion cuisine
+- **Prime Location**: 3rd floor location with beautiful city views
+
+## Entertainment & Music
+- **EDM Music**: High-energy EDM music with professional DJ performances
+- **Live Shows**: Professional dancers performing nightly
+- **International Sound System**: JBL sound system for premium audio experience
+- **Performance Hours**: DJ and dancers from 9:00 PM to 2:00 AM
+
+## Menu Highlights
+- **50+ International Beers**: From Heineken to unique craft beers
+- **Creative Cocktails**: Signature cocktails and mixed drinks
+- **Fusion Cuisine**: Vietnamese, European, and Asian dishes
+- **Happy Hour**: 5:00 PM - 7:00 PM with fresh beer at 40,000 VND/glass
+
+## Special Offers
+- **"Nhóm vui – Giá hời"**: 10-20% discount on bills for groups of 5+ people when booking before 7:00 PM, includes free cocktails
+- **Happy Hour**: 5:00 PM - 7:00 PM with discounted fresh beer
+- **Weekend Booking**: Advance booking recommended for weekends
+
+## Space & Facilities
+- **3rd Floor Location**: Prime location with city views
+- **Modern Design**: Glass walls and contemporary interior
+- **Professional Lighting**: International-standard lighting system
+- **Spacious Layout**: Suitable for groups and corporate events
+
+## Perfect For
+- Friends gatherings
+- Corporate events and celebrations
+- Nightlife enthusiasts
+- EDM and music lovers
+- After-work relaxation
+- Weekend parties
+
+## Contact
+- Address: Tầng 3, tòa nhà OCD Plaza, 8 Ô Chợ Dừa, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội
+- Website: topu.vn`,
+    hours: "6:00 PM - 2:00 AM",
+  },
+  {
+    id: 179,
+    name: "Lucky KTV - 10 Hoà Mã",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/58-1752242752-2.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/58-1752242752-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/58-1752242655-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/58-1752242655-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/58-1752242654-1.jpg",
+    ],
+    address: "10 Hòa Mã, Phường Phạm Đình Hổ, Quận Hai Bà Trưng, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    description: `## About Lucky KTV - 10 Hoà Mã
+Lucky KTV - 10 Hoà Mã is a premium entertainment venue located in the heart of Hanoi. The venue features modern design, elegant and cozy space, with carefully decorated singing rooms. Top-tier sound and lighting systems provide an immersive music experience. Professional staff offers attentive service, along with a diverse menu of snacks and beverages, ensuring customers have wonderful moments of relaxation.
+
+## Highlights
+- **Modern Design**: Contemporary design with elegant and cozy space
+- **Exquisitely Decorated Rooms**: Singing rooms with sophisticated decoration
+- **Premium Audio System**: Top-tier sound and lighting systems for immersive music experience
+- **Professional Service**: Well-trained, attentive staff
+- **Diverse Menu**: Wide selection of snacks and beverages
+- **Prime Location**: Located in the heart of Hai Bà Trưng District, Hanoi
+
+## Perfect For
+- Friends gatherings
+- Birthday celebrations
+- Corporate events
+- Karaoke enthusiasts
+- Music lovers
+- Weekend entertainment
+- Group parties
+
+## Contact
+- Address: 10 Hòa Mã, Phường Phạm Đình Hổ, Quận Hai Bà Trưng, Hà Nội`,
+    hours: "Check with venue",
+  },
+  {
+    id: 180,
+    name: "Nhất Thống KTV - 18 Thi Sách",
+    main_image_url:
+      "https://matrixkaraoke.com/data/pic_coso/228-1753430855-4.jpg",
+    images: [
+      "https://matrixkaraoke.com/data/pic_coso/228-1753430855-4.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/228-1753430855-3.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/228-1753430854-2.jpg",
+      "https://matrixkaraoke.com/data/pic_coso/228-1753430854-1.jpg",
+    ],
+    address: "18 Phố Thi Sách, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    description: `## About Nhất Thống KTV - 18 Thi Sách
+Nhất Thống KTV, located at 18 Thi Sách Street, Ngô Thì Nhậm Ward, Hai Bà Trưng District, Hanoi, is a renowned karaoke venue featuring elegant space and high-quality sound systems. The venue offers diverse singing rooms with modern design, perfect for parties, birthdays, and gatherings with friends.
+
+## Highlights
+- **Elegant Space**: Sophisticated and luxurious interior design
+- **High-Quality Sound System**: Premium audio equipment for excellent music experience
+- **Modern Rooms**: Diverse singing rooms with contemporary design
+- **24/7 Operation**: Open all day and night for convenience
+- **Professional Service**: Dedicated staff ready to assist and provide consultation
+
+## Space & Facilities
+- **Diverse Room Types**: Various singing rooms suitable for different group sizes
+- **Modern Design**: Contemporary interior with elegant decorations
+- **Premium Audio Equipment**: High-quality sound systems
+- **Convenient Location**: Easy access in Hai Bà Trưng District
+- **Prominent Signage**: Visible from the street front
+
+## Perfect For
+- Birthday parties
+- Friends gatherings
+- Corporate events
+- Karaoke enthusiasts
+- Group celebrations
+- Weekend entertainment
+
+## Location & Directions
+- **From Hoàn Kiếm Center**: Follow Trần Xuân Soạn Street, turn left into Thi Sách Street, about 5-7 minutes by car
+- **From Đống Đa**: Via Lê Duẩn Street, continue to Ngô Thì Nhậm, turn into Thi Sách, about 10-15 minutes
+- **From Cầu Giấy or Ba Đình**: Via Kim Mã or Giảng Võ Street, heading to Hai Bà Trưng, about 15-20 minutes depending on traffic
+
+## Booking
+- Advance booking recommended
+- Hotline available for quick room reservation and detailed consultation
+
+## Contact
+- Address: 18 Phố Thi Sách, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng, Hà Nội`,
+    hours: "24/7",
+  },
+  {
+    id: 181,
+    name: "Rome KTV - 454 Trần Khát Chân",
+    main_image_url:
+      "https://imagedelivery.net/XP6SKQ-NzRtLXs1fzgn4HA/cacd694e-fe12-4f99-cefe-bbe80ca40e00/public",
+    images: [
+      "https://imagedelivery.net/XP6SKQ-NzRtLXs1fzgn4HA/cacd694e-fe12-4f99-cefe-bbe80ca40e00/public",
+      "https://imagedelivery.net/XP6SKQ-NzRtLXs1fzgn4HA/69f6f737-cc50-44ac-a1c1-1e3309f1ea00/public",
+      "https://imagedelivery.net/XP6SKQ-NzRtLXs1fzgn4HA/35602eb7-5cb2-41b0-1c20-dd2276d56300/public",
+      "https://imagedelivery.net/XP6SKQ-NzRtLXs1fzgn4HA/00e8ae03-e5dc-4185-3a42-b207cbc1d600/public",
+    ],
+    address: "454 Trần Khát Chân, Phố Huế, Hai Bà Trưng, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Karaoke",
+    price: "250,000 - 2,000,000 VND",
+    description: `## About Rome KTV - 454 Trần Khát Chân
+Rome KTV is located at 454 Trần Khát Chân, Phố Huế, Hai Bà Trưng District, Hanoi. This renowned karaoke venue features a classic European architectural style with meticulously designed spaces including chandeliers, patterned wallpaper, and luxurious leather-upholstered furniture.
+
+## Highlights
+- **Classic European Style**: Architectural design with classic European influences
+- **Elegant Interior**: Carefully decorated with chandeliers, patterned wallpaper, and luxurious leather furniture
+- **Diverse Room Types**: Various rooms accommodating groups from 5-7 people to large gatherings of 20-30 people
+- **Unique Room Designs**: Each room has its own unique character and charm
+- **Premium Audio System**: High-quality sound system with sensitive microphones and crystal-clear speakers (no distortion or feedback)
+- **Professional Lighting**: Laser and flashing lights creating professional stage effects
+
+## Space & Facilities
+- **Diverse Capacity**: Rooms suitable for small groups (5-7 people) to large parties (20-30 people)
+- **Classic European Decor**: Chandeliers, patterned wallpaper, leather furniture
+- **Unique Room Themes**: Each room features distinctive design elements
+- **Premium Sound Equipment**: High-quality microphones and speakers
+- **Professional Lighting System**: Laser lights and stage effects
+
+## Pricing
+- Price range: 250,000 - 2,000,000 VND
+- Pricing depends on room type and additional services
+
+## Perfect For
+- Small friend gatherings (5-7 people)
+- Large group parties (20-30 people)
+- Birthday celebrations
+- Corporate events
+- Karaoke enthusiasts
+- Classic European style lovers
+- Weekend entertainment
+
+## Contact
+- Address: 454 Trần Khát Chân, Phố Huế, Hai Bà Trưng, Hà Nội`,
+    hours: "10:00 AM - 11:30 PM",
+  },
+  {
+    id: 182,
+    name: "X- Space - 52 Hàng Bè",
+    main_image_url:
+      "https://giaitriktv.com/wp-content/uploads/2025/08/giaitriktv-com-EdcpyRAgeL-600x600.webp",
+    images: [
+      "https://giaitriktv.com/wp-content/uploads/2025/08/giaitriktv-com-EdcpyRAgeL-600x600.webp",
+      "https://giaitriktv.com/wp-content/uploads/2025/08/giaitriktv-com-y4Irl44p8J-600x400.webp",
+      "https://giaitriktv.com/wp-content/uploads/2025/08/giaitriktv-com-EjsrZQKrg3-1024x1536.webp",
+      "https://giaitriktv.com/wp-content/uploads/2025/08/giaitriktv-com-cArsN65NVI-1536x864.webp",
+    ],
+    address: "52 Phố Hàng Bè, Hàng Bạc, Hoàn Kiếm, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Karaoke",
+    price: "Contact for pricing",
+    description: `## About X- Space - 52 Hàng Bè
+X-Space is an entertainment venue located at 52 Hàng Bè Street, Hàng Bạc Ward, Hoàn Kiếm District, Hanoi. This highly-rated venue has received excellent reviews with a perfect 5.0/5 rating from customers, known for its enthusiastic service and fun atmosphere.
+
+## Highlights
+- **Excellent Rating**: Perfect 5.0/5 rating from customer reviews
+- **Enthusiastic Service**: Friendly and attentive staff who interact warmly with guests
+- **Fun Atmosphere**: Energetic and entertaining environment
+- **Prime Location**: Located in the heart of Hoàn Kiếm District, Hanoi's Old Quarter
+- **Professional Service**: Dedicated customer care and consultation
+
+## Customer Reviews
+- "Lên trải nghiệm mà mãi k về nổi ... quán rất tuyệt" - Hoàng Nguyễn
+- "Phục vụ rất nhiệt tình chơi vui với khách" - Khánh Trần
+- "Vui hết nấc" - Nhật Nguyễn
+- "Rất vui, các bạn chăm sóc nhiệt tình" - Long Nguyen huy
+- "5 sao dịch vụ. Book quả bàn đi xem A Trìnhh với vk mà chưa đi ctay mất r. Quán hoàn cọc và tư vấn nhiệt tình luôn." - Thiên Đạt Nguỵ
+
+## Perfect For
+- Friends gatherings
+- Birthday celebrations
+- Weekend entertainment
+- Group parties
+- Nightlife enthusiasts
+- Those seeking fun and energetic atmosphere
+
+## Contact
+- Address: 52 Phố Hàng Bè, Hàng Bạc, Hoàn Kiếm, Hà Nội`,
+    hours: "Check with venue",
+  },
+  {
+    id: 183,
+    name: "Aplus - 78 Yên Phụ",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2024/11/a-plus-ha-noi-1-1-768x512.jpg",
+    images: [
+      "https://9club.vn/wp-content/uploads/2024/11/a-plus-ha-noi-1-1-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/a-plus-ha-noi-2-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/a-plus-ha-noi-3-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/a-plus-ha-noi-4-768x512.jpg",
+      "https://9club.vn/wp-content/uploads/2024/11/a-plus-ha-noi-1-768x1152.jpg",
+    ],
+    address: "78 Yên Phụ, Phường Nguyễn Trung Trực, Quận Ba Đình, Hà Nội",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Lounge / Speakeasy bar",
+    price: "Contact for pricing",
+    description: `## About Aplus - 78 Yên Phụ
+APlus Hanoi is a renowned bar and lounge located at 78 Yên Phụ Street, Nguyễn Trung Trực Ward, Ba Đình District, Hanoi. With modern space and high-quality sound and lighting systems, APlus Hanoi offers customers exceptional electronic music experiences. The venue regularly hosts events featuring famous DJs, attracting young EDM enthusiasts.
+
+## Highlights
+- **Modern Space**: Contemporary design with high-quality sound and lighting systems
+- **Electronic Music**: Premium electronic music experiences
+- **Famous DJ Events**: Regularly hosts events with renowned DJs
+- **EDM Focus**: Popular destination for young EDM lovers
+- **Professional Setup**: High-end sound and lighting equipment
+- **Vibrant Nightlife**: Energetic atmosphere perfect for music lovers
+
+## Entertainment & Events
+- **DJ Performances**: Regular events featuring famous DJs
+- **Electronic Music**: Focus on EDM and electronic music genres
+- **Special Events**: Frequently organized music events and promotions
+- **Nightlife Scene**: Popular among young people and EDM enthusiasts
+
+## Perfect For
+- EDM lovers
+- Music enthusiasts
+- Nightlife seekers
+- Young professionals
+- DJ event attendees
+- Weekend parties
+- Social gatherings
+
+## Social Media
+- Facebook: @aplushn.club
+
+## Contact
+- Address: 78 Yên Phụ, Phường Nguyễn Trung Trực, Quận Ba Đình, Hà Nội`,
+    hours: "9:00 PM - Late",
   },
 ];

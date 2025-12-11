@@ -184,7 +184,9 @@
     "showMore": "더 보기",
     "venuesFound": "{count}개 장소",
     "venuesFoundPlural": "{count}개 장소",
-    "showing": "{showing}개 중 {total}개 표시"
+    "showing": "{showing}개 중 {total}개 표시",
+    "goToPage": "페이지로 이동",
+    "go": "이동"
   },
   "employee": {
     "employeeProfile": "직원 프로필",

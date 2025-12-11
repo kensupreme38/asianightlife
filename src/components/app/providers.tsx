@@ -1,6 +1,7 @@
 'use client';
 
 import { ThemeProvider } from "next-themes";
+import FramerMotionProvider from "@/components/animations/FramerMotionProvider";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
 
@@ -11,7 +12,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <FramerMotionProvider>
+        {children}
+      </FramerMotionProvider>
     </ThemeProvider>
   )
 }

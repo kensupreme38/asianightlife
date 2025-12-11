@@ -184,7 +184,9 @@
     "showMore": "もっと表示",
     "venuesFound": "{count}件の会場",
     "venuesFoundPlural": "{count}件の会場",
-    "showing": "{showing}件中{total}件を表示"
+    "showing": "{showing}件中{total}件を表示",
+    "goToPage": "ページへ移動",
+    "go": "移動"
   },
   "employee": {
     "employeeProfile": "従業員プロフィール",

@@ -26,6 +26,9 @@ interface UseVenuesProps {
   selectedCategory?: string;
   searchQuery?: string;
   limit?: number;
+  offset?: number;
+  page?: number;
+  pageSize?: number;
 }
 
 // City patterns mapping - moved outside component for better performance
@@ -60,6 +63,9 @@ export const useVenues = ({
   selectedCategory = "all",
   searchQuery = "",
   limit,
+  offset,
+  page,
+  pageSize,
 }: UseVenuesProps = {}) => {
   // Debounce search query to avoid excessive filtering
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
@@ -105,13 +111,25 @@ export const useVenues = ({
         country: ktv.country || "Unknown",
       }));
 
-    // Apply limit if specified
-    if (limit && limit > 0) {
-      filteredVenues = filteredVenues.slice(0, limit);
+    // Calculate offset from page/pageSize if provided, otherwise use offset directly
+    let calculatedOffset = offset;
+    if (page !== undefined && pageSize !== undefined) {
+      calculatedOffset = (page - 1) * pageSize;
+    }
+
+    // Apply pagination: first slice by offset, then by limit
+    if (calculatedOffset !== undefined && calculatedOffset > 0) {
+      filteredVenues = filteredVenues.slice(calculatedOffset);
+    }
+
+    // Apply limit if specified (or use pageSize)
+    const effectiveLimit = limit || (pageSize !== undefined ? pageSize : undefined);
+    if (effectiveLimit && effectiveLimit > 0) {
+      filteredVenues = filteredVenues.slice(0, effectiveLimit);
     }
 
     return filteredVenues;
-  }, [filterByCountry, filterByCity, filterByCategory, filterBySearch, limit]);
+  }, [filterByCountry, filterByCity, filterByCategory, filterBySearch, limit, offset, page, pageSize]);
 
   const totalCount = useMemo(() => {
     return ktvData

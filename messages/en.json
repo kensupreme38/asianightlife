@@ -184,7 +184,9 @@
     "showMore": "Show More",
     "venuesFound": "{count} venue",
     "venuesFoundPlural": "{count} venues",
-    "showing": "Showing {showing} of {total}"
+    "showing": "Showing {showing} of {total}",
+    "goToPage": "Go to page",
+    "go": "Go"
   },
   "employee": {
     "employeeProfile": "Employee Profile",

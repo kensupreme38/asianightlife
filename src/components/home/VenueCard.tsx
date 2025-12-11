@@ -6,6 +6,7 @@ import { MapPin, Clock, MessageCircle } from "lucide-react";
 import { SimpleImage } from "@/components/ui/simple-image";
 import { BookingForm } from "@/components/venue/BookingForm";
 import { useState } from "react";
+import { MotionHover } from "@/components/animations";
 
 interface VenueCardProps {
   venue: {
@@ -32,6 +33,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
   };
 
   return (
+    <MotionHover scale={1.02} y={-4} className="h-full">
     <div className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 h-full flex flex-col">
       <Link
         href={`/venue/${venue.id}`}
@@ -118,5 +120,6 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
         venueAddress={venue.address}
       />
     </div>
+    </MotionHover>
   );
 };

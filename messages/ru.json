@@ -184,7 +184,9 @@
     "showMore": "Показать больше",
     "venuesFound": "{count} заведение",
     "venuesFoundPlural": "{count} заведений",
-    "showing": "Показано {showing} из {total}"
+    "showing": "Показано {showing} из {total}",
+    "goToPage": "Перейти на страницу",
+    "go": "Перейти"
   },
   "employee": {
     "employeeProfile": "Профиль сотрудника",

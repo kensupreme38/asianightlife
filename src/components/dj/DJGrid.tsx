@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { DJCard, DJ } from "./DJCard";
 import { SearchX, ChevronDown, Loader2, Plus, User, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { MotionScrollReveal, MotionStagger, MotionStaggerItem } from "@/components/animations";
 import { useAuth } from "@/contexts/auth-context";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
@@ -476,7 +476,7 @@ export const DJGrid = ({
   return (
     <section className="md:py-12 py-6">
       <div className="md:container px-3">
-        <ScrollReveal animation="fade-up" delay={0} threshold={0.2}>
+        <MotionScrollReveal delay={0} threshold={0.2}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-2 font-headline">
@@ -601,37 +601,27 @@ export const DJGrid = ({
               )}
             </div>
           )}
-        </ScrollReveal>
+        </MotionScrollReveal>
 
         {displayedDJs.length > 0 ? (
           <>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {displayedDJs.map((dj, index) => {
-                const rowIndex = index % 3;
-                const delay = rowIndex * 10;
-
-                return (
-                  <ScrollReveal
-                    key={dj.id}
-                    animation="fade-up"
-                    delay={delay}
-                    threshold={0.01}
-                    triggerOnce={true}
-                    className="h-full"
-                  >
+            <MotionStagger staggerDelay={0.1}>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {displayedDJs.map((dj) => (
+                  <MotionStaggerItem key={dj.id} className="h-full">
                     <DJCard
                       dj={dj}
                       onVote={handleVote}
                       hasVoted={votedDJs.has(dj.id)}
                       isAuthenticated={isAuthenticated}
                     />
-                  </ScrollReveal>
-                );
-              })}
-            </div>
+                  </MotionStaggerItem>
+                ))}
+              </div>
+            </MotionStagger>
 
             {hasMore && (
-              <ScrollReveal animation="fade-up" delay={200} threshold={0.3}>
+              <MotionScrollReveal delay={0.2} threshold={0.3}>
                 <div className="flex justify-center mt-8">
                   <Button
                     onClick={handleShowMore}
@@ -643,11 +633,11 @@ export const DJGrid = ({
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </div>
-              </ScrollReveal>
+              </MotionScrollReveal>
             )}
           </>
         ) : (
-          <ScrollReveal animation="fade-in" delay={100} threshold={0.2}>
+          <MotionScrollReveal delay={0.1} threshold={0.2}>
             <div className="text-center py-16 card-elevated rounded-xl">
               <SearchX className="mx-auto h-12 w-12 text-muted-foreground" />
               <h3 className="mt-4 text-lg font-semibold font-headline">
@@ -659,7 +649,7 @@ export const DJGrid = ({
                   : t('dj.noDJsAvailable')}
               </p>
             </div>
-          </ScrollReveal>
+          </MotionScrollReveal>
         )}
       </div>
     </section>
