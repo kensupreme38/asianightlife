@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { updateSession } from '@/utils/supabase/middleware';
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
@@ -6,6 +6,13 @@ import { routing } from './i18n/routing';
 const intlMiddleware = createMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  
+  // Skip middleware for sitemap.xml and robots.txt
+  if (pathname === '/sitemap.xml' || pathname === '/robots.txt') {
+    return NextResponse.next();
+  }
+  
   // First handle i18n routing - this handles locale detection and redirects
   const intlResponse = intlMiddleware(request);
   
@@ -29,8 +36,10 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - api (API routes)
+     * - sitemap.xml (sitemap file)
+     * - robots.txt (robots file)
      * Feel free to modify this pattern to include more paths.
      */
-    '/((?!_next/static|_next/image|favicon.ico|api|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|api|sitemap\\.xml|robots\\.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
