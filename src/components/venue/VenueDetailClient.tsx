@@ -1,5 +1,4 @@
 "use client";
-import { Link } from "@/i18n/routing";
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/routing";
@@ -116,12 +115,29 @@ const VenueDetailClient = ({ id }: { id: string }) => {
       <main className="container py-8 px-4 sm:px-8">
         {/* Breadcrumb & Actions */}
         <div className="flex items-center justify-between mb-8">
-          <Link href="/">
-            <Button variant="ghost" className="gap-2">
-              <ArrowLeft className="h-4 w-4" />
-              {t('venue.backToHome')}
-            </Button>
-          </Link>
+          <Button 
+            variant="ghost" 
+            className="gap-2"
+            onClick={() => {
+              // Navigate về trang chủ, VenueGrid sẽ tự động restore page từ sessionStorage
+              try {
+                const savedUrl = sessionStorage.getItem('scrollRestoreReferrer');
+                if (savedUrl) {
+                  // Navigate đến URL đã lưu (có thể có page parameter)
+                  router.push(savedUrl);
+                } else {
+                  // Nếu không có URL đã lưu, navigate về trang chủ
+                  router.push('/');
+                }
+              } catch (error) {
+                // Fallback về trang chủ nếu có lỗi
+                router.push('/');
+              }
+            }}
+          >
+            <ArrowLeft className="h-4 w-4" />
+            {t('venue.backToHome')}
+          </Button>
 
           <div className="flex gap-2">
             <Button variant="ghost" size="icon" onClick={handleShare}>

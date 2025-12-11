@@ -24,11 +24,17 @@ function ScrollRestorationContent() {
   const shouldRestore = useCallback(() => {
     try {
       const referrer = sessionStorage.getItem(REFERRER_KEY);
+      if (!referrer) return false;
+      
       // Chỉ restore nếu referrer là từ trang venue detail (/venue/[id]) hoặc DJ detail (/dj/[id])
-      return referrer && (
-        (referrer.startsWith('/venue/') && referrer !== '/venue') ||
-        (referrer.startsWith('/dj/') && referrer !== '/dj')
-      );
+      // Hoặc nếu referrer là trang chủ (được lưu từ onClick handler)
+      const isVenueDetail = referrer.startsWith('/venue/') && referrer !== '/venue';
+      const isDJDetail = referrer.startsWith('/dj/') && referrer !== '/dj';
+      const isHomePage = referrer === '/' || referrer.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/?$/);
+      
+      // Nếu referrer là trang chủ, có nghĩa là chúng ta đã click từ trang chủ sang venue detail
+      // Và bây giờ đang quay về trang chủ, nên cần restore
+      return isVenueDetail || isDJDetail || isHomePage;
     } catch (error) {
       return false;
     }
@@ -44,8 +50,10 @@ function ScrollRestorationContent() {
   const saveScrollPosition = useCallback(() => {
     if (typeof window === 'undefined' || isRestoringRef.current) return;
     
-    // Chỉ lưu scroll position cho trang chủ và trang DJ
-    if (pathname !== '/' && pathname !== '/dj') return;
+    // Chỉ lưu scroll position cho trang chủ và trang DJ (bao gồm cả locale prefix)
+    const isHomePage = pathname === '/' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/?$/);
+    const isDJPage = pathname === '/dj' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/dj\/?$/);
+    if (!isHomePage && !isDJPage) return;
 
     const pageKey = getPageKey();
     const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -63,12 +71,16 @@ function ScrollRestorationContent() {
     }
   }, [getPageKey, pathname]);
 
+  // Không cần restore URL nữa vì VenueDetailClient đã navigate trực tiếp đến URL đúng
+
   // Khôi phục vị trí cuộn với nhiều lần thử và kiểm tra content đã render đủ
   const restoreScrollPosition = useCallback(() => {
     if (typeof window === 'undefined') return;
     
     // Chỉ restore cho trang chủ hoặc trang DJ và chỉ khi referrer phù hợp
-    if ((pathname !== '/' && pathname !== '/dj') || !shouldRestore()) {
+    const isHomePage = pathname === '/' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/?$/);
+    const isDJPage = pathname === '/dj' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/dj\/?$/);
+    if ((!isHomePage && !isDJPage) || !shouldRestore()) {
       return;
     }
 
@@ -223,16 +235,19 @@ function ScrollRestorationContent() {
       clearTimeout(scrollTimeoutRef.current);
     }
 
-    // Khôi phục ngay lập tức
-    restoreScrollPosition();
-
-    // Thử lại sau một chút để đảm bảo DOM đã render
+    // Khôi phục scroll position sau một chút để đảm bảo component đã re-render
     const timer = setTimeout(() => {
       restoreScrollPosition();
-    }, 100);
+    }, 150);
+
+    // Thử lại sau khi DOM đã render đủ
+    const timer2 = setTimeout(() => {
+      restoreScrollPosition();
+    }, 300);
 
     return () => {
       clearTimeout(timer);
+      clearTimeout(timer2);
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }
@@ -247,35 +262,37 @@ function ScrollRestorationContent() {
         return;
       }
       
-      // Khôi phục ngay lập tức khi detect popstate
-      isRestoringRef.current = true;
-      
-      // Scroll ngay để ngăn Next.js scroll về đầu
-      const pageKey = getPageKey();
-      try {
-        const saved = sessionStorage.getItem(SCROLL_POSITIONS_KEY);
-        const positions: ScrollPositions = saved ? JSON.parse(saved) : {};
-        const savedPosition = positions[pageKey];
+      // Khôi phục scroll position sau một chút
+      setTimeout(() => {
+        isRestoringRef.current = true;
         
-        if (savedPosition !== undefined && savedPosition !== null && savedPosition > 0) {
-          // Scroll ngay lập tức
-          window.scrollTo(0, savedPosition);
+        // Scroll ngay để ngăn Next.js scroll về đầu
+        const pageKey = getPageKey();
+        try {
+          const saved = sessionStorage.getItem(SCROLL_POSITIONS_KEY);
+          const positions: ScrollPositions = saved ? JSON.parse(saved) : {};
+          const savedPosition = positions[pageKey];
           
-          // Thử lại sau khi DOM có thể đã update
-          requestAnimationFrame(() => {
+          if (savedPosition !== undefined && savedPosition !== null && savedPosition > 0) {
+            // Scroll ngay lập tức
+            window.scrollTo(0, savedPosition);
+            
+            // Thử lại sau khi DOM có thể đã update
             requestAnimationFrame(() => {
-              window.scrollTo(0, savedPosition);
-              setTimeout(() => {
-                isRestoringRef.current = false;
-              }, 100);
+              requestAnimationFrame(() => {
+                window.scrollTo(0, savedPosition);
+                setTimeout(() => {
+                  isRestoringRef.current = false;
+                }, 100);
+              });
             });
-          });
-        } else {
+          } else {
+            isRestoringRef.current = false;
+          }
+        } catch (error) {
           isRestoringRef.current = false;
         }
-      } catch (error) {
-        isRestoringRef.current = false;
-      }
+      }, 100);
     };
 
     // Sử dụng capture phase để chạy sớm hơn
@@ -288,11 +305,17 @@ function ScrollRestorationContent() {
 
   // Lưu referrer khi navigate từ trang chủ/DJ sang venue detail hoặc DJ detail
   useEffect(() => {
-    // Nếu đang ở trang venue detail, lưu referrer là trang chủ
+    // Nếu đang ở trang venue detail, đảm bảo referrer đã được lưu (có thể đã được lưu từ onClick handler)
     if (pathname.startsWith('/venue/') && pathname !== '/venue') {
       try {
-        // Lưu pathname hiện tại (venue detail) làm referrer cho trang chủ
-        sessionStorage.setItem(REFERRER_KEY, pathname);
+        // Kiểm tra xem referrer đã được lưu chưa (từ onClick handler)
+        const existingReferrer = sessionStorage.getItem(REFERRER_KEY);
+        // Nếu chưa có referrer, lưu trang hiện tại (venue detail) làm referrer
+        // Điều này đảm bảo rằng khi quay về, chúng ta biết đã đến từ venue detail
+        if (!existingReferrer) {
+          // Lưu pathname hiện tại (venue detail) làm referrer cho trang chủ
+          sessionStorage.setItem(REFERRER_KEY, pathname);
+        }
       } catch (error) {
         console.warn('Failed to save referrer:', error);
       }
@@ -300,13 +323,16 @@ function ScrollRestorationContent() {
     // Nếu đang ở trang DJ detail, lưu referrer là trang DJ
     else if (pathname.startsWith('/dj/') && pathname !== '/dj') {
       try {
-        // Lưu pathname hiện tại (DJ detail) làm referrer cho trang DJ
-        sessionStorage.setItem(REFERRER_KEY, pathname);
+        const existingReferrer = sessionStorage.getItem(REFERRER_KEY);
+        if (!existingReferrer) {
+          // Lưu pathname hiện tại (DJ detail) làm referrer cho trang DJ
+          sessionStorage.setItem(REFERRER_KEY, pathname);
+        }
       } catch (error) {
         console.warn('Failed to save referrer:', error);
       }
     } 
-    else if (pathname === '/' || pathname === '/dj') {
+    else if (pathname === '/' || pathname === '/dj' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/?$/) || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/dj\/?$/)) {
       // Khi ở trang chủ hoặc trang DJ, không cần làm gì (giữ referrer cũ)
       // Referrer sẽ được xóa sau khi restore xong
     } else {
@@ -321,7 +347,9 @@ function ScrollRestorationContent() {
 
   // Xóa referrer sau khi đã restore xong
   useEffect(() => {
-    if ((pathname === '/' || pathname === '/dj') && shouldRestore()) {
+    const isHomePage = pathname === '/' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/?$/);
+    const isDJPage = pathname === '/dj' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/dj\/?$/);
+    if ((isHomePage || isDJPage) && shouldRestore()) {
       // Sau khi restore xong, xóa referrer
       const timer = setTimeout(() => {
         try {

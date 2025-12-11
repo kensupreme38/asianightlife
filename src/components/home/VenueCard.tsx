@@ -7,6 +7,7 @@ import { SimpleImage } from "@/components/ui/simple-image";
 import { BookingForm } from "@/components/venue/BookingForm";
 import { useState } from "react";
 import { MotionHover } from "@/components/animations";
+import { usePathname } from "@/i18n/routing";
 
 interface VenueCardProps {
   venue: {
@@ -27,9 +28,32 @@ interface VenueCardProps {
 export const VenueCard = ({ venue }: VenueCardProps) => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const isOpen = venue.status === "open";
+  const pathname = usePathname();
 
   const handleBooking = () => {
     setIsBookingOpen(true);
+  };
+
+  // Lưu referrer và page number khi click vào venue card để nhớ scroll position khi quay về
+  const handleVenueClick = () => {
+    try {
+      // Lưu trang hiện tại (trang chủ) làm referrer
+      if (pathname === '/' || pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)\/?$/)) {
+        const currentUrl = window.location.pathname + window.location.search;
+        sessionStorage.setItem('scrollRestoreReferrer', currentUrl);
+        
+        // Lưu page number trực tiếp để dễ restore
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page');
+        if (page) {
+          sessionStorage.setItem('homePageNumber', page);
+        } else {
+          sessionStorage.setItem('homePageNumber', '1');
+        }
+      }
+    } catch (error) {
+      // Ignore errors
+    }
   };
 
   return (
@@ -38,6 +62,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
       <Link
         href={`/venue/${venue.id}`}
         className="block flex-1 flex flex-col"
+        onClick={handleVenueClick}
       >
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">

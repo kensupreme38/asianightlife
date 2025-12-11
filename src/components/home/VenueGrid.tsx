@@ -9,6 +9,8 @@ import { MotionScrollReveal, MotionStagger, MotionStaggerItem } from "@/componen
 import { useTranslations } from 'next-intl';
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/routing";
 
 interface VenueGridProps {
   selectedCountry: string;
@@ -32,21 +34,98 @@ export const VenueGrid = ({
 }: VenueGridProps) => {
   const t = useTranslations();
   const isMobile = useIsMobile();
-  const [currentPage, setCurrentPage] = useState(1);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const [jumpPage, setJumpPage] = useState<string>('');
   const previousFiltersRef = useRef<string>('');
 
+  // Đọc page từ URL query parameters hoặc sessionStorage
+  const pageFromUrl = searchParams?.get('page');
+  const pageFromStorage = typeof window !== 'undefined' ? sessionStorage.getItem('homePageNumber') : null;
+  
+  // Ưu tiên URL, nếu không có thì dùng sessionStorage, cuối cùng là 1
+  const getInitialPage = () => {
+    if (pageFromUrl) {
+      const pageNum = parseInt(pageFromUrl, 10);
+      if (!isNaN(pageNum) && pageNum >= 1) return pageNum;
+    }
+    if (pageFromStorage) {
+      const pageNum = parseInt(pageFromStorage, 10);
+      if (!isNaN(pageNum) && pageNum >= 1) return pageNum;
+    }
+    return 1;
+  };
+  
+  const [currentPage, setCurrentPage] = useState(() => getInitialPage());
+  const hasRestoredPageRef = useRef(false);
+
   // Tạo key cho filters hiện tại
   const currentFiltersKey = getFiltersKey(selectedCountry, selectedCity, selectedCategory, searchQuery);
+
+  // Restore page number từ sessionStorage khi quay về từ venue detail
+  useEffect(() => {
+    try {
+      const savedPage = sessionStorage.getItem('homePageNumber');
+      const referrer = sessionStorage.getItem('scrollRestoreReferrer');
+      
+      // Nếu có referrer (đã từ venue detail) và có saved page
+      // Và referrer là venue detail page (bắt đầu với /venue/)
+      if (referrer && referrer.startsWith('/venue/') && savedPage) {
+        const pageNum = parseInt(savedPage, 10);
+        if (!isNaN(pageNum) && pageNum >= 1) {
+          // Chỉ restore nếu page number khác với current page
+          if (pageNum !== currentPage) {
+            setCurrentPage(pageNum);
+            // Update URL để có page parameter
+            const params = new URLSearchParams(searchParams?.toString() || '');
+            if (pageNum > 1) {
+              params.set('page', pageNum.toString());
+            } else {
+              params.delete('page');
+            }
+            const newUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname;
+            router.replace(newUrl, { scroll: false });
+          }
+          // Xóa saved page sau khi restore (dù có set hay không)
+          sessionStorage.removeItem('homePageNumber');
+        }
+      }
+    } catch (error) {
+      // Ignore errors
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname, searchParams?.toString(), currentPage]); // Sử dụng searchParams?.toString() để đảm bảo dependency ổn định
+
+  // Sync currentPage với URL khi URL thay đổi (khi user click pagination)
+  useEffect(() => {
+    const pageFromUrl = searchParams?.get('page');
+    if (pageFromUrl) {
+      const pageNum = parseInt(pageFromUrl, 10);
+      if (!isNaN(pageNum) && pageNum >= 1 && pageNum !== currentPage) {
+        setCurrentPage(pageNum);
+      }
+    } else if (currentPage !== 1) {
+      // Nếu URL không có page parameter và currentPage không phải 1
+      // Có thể do user đang ở trang 1 nhưng URL không có page param
+      // Không cần làm gì vì có thể đang ở trang 1
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams?.toString(), currentPage]); // Sử dụng searchParams?.toString() để đảm bảo dependency ổn định
 
   // Reset về trang 1 khi filters thay đổi
   useEffect(() => {
     const prevKey = previousFiltersRef.current;
     if (prevKey && prevKey !== currentFiltersKey) {
       setCurrentPage(1);
+      // Cập nhật URL để xóa page parameter khi filters thay đổi
+      const params = new URLSearchParams(searchParams?.toString() || '');
+      params.delete('page');
+      const newUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname;
+      router.replace(newUrl, { scroll: false });
     }
     previousFiltersRef.current = currentFiltersKey;
-  }, [currentFiltersKey]);
+  }, [currentFiltersKey, searchParams, pathname, router]);
 
   // Lấy venues với pagination
   const { venues, totalCount } = useVenues({
@@ -116,6 +195,17 @@ export const VenueGrid = ({
       // Set flag to indicate pagination is happening
       (window as any).__isPaginationChange = true;
       setCurrentPage(page);
+      
+      // Cập nhật URL với page parameter
+      const params = new URLSearchParams(searchParams?.toString() || '');
+      if (page === 1) {
+        params.delete('page');
+      } else {
+        params.set('page', page.toString());
+      }
+      const newUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname;
+      router.replace(newUrl, { scroll: false });
+      
       // Clear flag after a delay
       setTimeout(() => {
         (window as any).__isPaginationChange = false;
