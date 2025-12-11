@@ -68,13 +68,56 @@ export const VenueGrid = ({
     }
   }, [totalPages, currentPage]);
 
+  // Scroll to CountrySelector when page changes (for pagination)
+  const previousPageRef = useRef(currentPage);
+  useEffect(() => {
+    // Only scroll if page actually changed (not on initial mount or filter change)
+    if (previousPageRef.current !== currentPage && previousPageRef.current > 0) {
+      const scrollToCountrySelector = (attempt = 0) => {
+        const countrySelector = document.getElementById('country-selector');
+        if (countrySelector) {
+          // Calculate offset: getBoundingClientRect gives position relative to viewport
+          // Add current scroll position to get absolute position
+          const rect = countrySelector.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const offsetTop = rect.top + scrollTop;
+          
+          // Use Lenis if available, otherwise fallback to window.scrollTo
+          const lenis = (window as any).lenis;
+          if (lenis) {
+            lenis.scrollTo(offsetTop, { immediate: false, duration: 0.6 });
+          } else {
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+          }
+        } else if (attempt < 5) {
+          // Retry with exponential backoff if element not found yet
+          setTimeout(() => {
+            scrollToCountrySelector(attempt + 1);
+          }, 50 * (attempt + 1));
+        }
+      };
+      
+      // Use multiple requestAnimationFrame to ensure DOM is fully ready
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToCountrySelector();
+        });
+      });
+    }
+    previousPageRef.current = currentPage;
+  }, [currentPage]);
+
   // Xử lý chuyển trang
   const handlePageChange = (page: number) => {
     // Đảm bảo page hợp lệ
     if (page >= 1 && page <= totalPages) {
+      // Set flag to indicate pagination is happening
+      (window as any).__isPaginationChange = true;
       setCurrentPage(page);
-      // Scroll to top of venue grid when page changes
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Clear flag after a delay
+      setTimeout(() => {
+        (window as any).__isPaginationChange = false;
+      }, 1000);
     }
   };
 

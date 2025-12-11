@@ -21,6 +21,9 @@ export default function SmoothScroll() {
       lerp: 0.1, // Lower lerp value for faster response (default is 0.1)
     });
 
+    // Store lenis instance globally so other components can use it
+    (window as any).lenis = lenis;
+
     // Optimized animation frame function for smooth scrolling
     function raf(time: number) {
       lenis.raf(time);
@@ -40,6 +43,7 @@ export default function SmoothScroll() {
     // Cleanup on unmount
     return () => {
       lenis.destroy();
+      delete (window as any).lenis;
     };
   }, [pathname]);
 

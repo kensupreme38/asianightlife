@@ -141,7 +141,7 @@ export const CountrySelector = ({
   }, []);
 
   return (
-    <section className="py-8 border-b border-border/40">
+    <section id="country-selector" className="py-8 border-b border-border/40">
       <div className="md:container px-3">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           {/* Countries */}
