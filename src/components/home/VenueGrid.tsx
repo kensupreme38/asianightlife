@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { MotionScrollReveal, MotionStagger, MotionStaggerItem } from "@/components/animations";
 import { useTranslations } from 'next-intl';
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface VenueGridProps {
   selectedCountry: string;
@@ -30,6 +31,7 @@ export const VenueGrid = ({
   searchQuery,
 }: VenueGridProps) => {
   const t = useTranslations();
+  const isMobile = useIsMobile();
   const [currentPage, setCurrentPage] = useState(1);
   const [jumpPage, setJumpPage] = useState<string>('');
   const previousFiltersRef = useRef<string>('');
@@ -140,7 +142,8 @@ export const VenueGrid = ({
   // Tạo danh sách số trang để hiển thị
   const getPageNumbers = () => {
     const pages: (number | string)[] = [];
-    const maxVisible = 5; // Số trang tối đa hiển thị
+    // Giảm số trang hiển thị trên mobile
+    const maxVisible = isMobile ? 3 : 5;
     
     if (totalPages <= maxVisible) {
       // Nếu tổng số trang <= maxVisible, hiển thị tất cả
@@ -148,30 +151,57 @@ export const VenueGrid = ({
         pages.push(i);
       }
     } else {
-      // Luôn hiển thị trang đầu
-      pages.push(1);
-      
-      if (currentPage <= 3) {
-        // Nếu đang ở đầu danh sách
-        for (let i = 2; i <= 4; i++) {
-          pages.push(i);
-        }
-        pages.push('ellipsis');
-        pages.push(totalPages);
-      } else if (currentPage >= totalPages - 2) {
-        // Nếu đang ở cuối danh sách
-        pages.push('ellipsis');
-        for (let i = totalPages - 3; i <= totalPages; i++) {
-          pages.push(i);
+      if (isMobile) {
+        // Trên mobile: chỉ hiển thị trang hiện tại và các trang xung quanh
+        if (currentPage === 1) {
+          pages.push(1, 2);
+          if (totalPages > 2) {
+            pages.push('ellipsis');
+            pages.push(totalPages);
+          }
+        } else if (currentPage === totalPages) {
+          pages.push(1);
+          if (totalPages > 2) {
+            pages.push('ellipsis');
+          }
+          pages.push(totalPages - 1, totalPages);
+        } else {
+          pages.push(1);
+          if (currentPage > 2) {
+            pages.push('ellipsis');
+          }
+          pages.push(currentPage - 1, currentPage, currentPage + 1);
+          if (currentPage < totalPages - 1) {
+            pages.push('ellipsis');
+          }
+          pages.push(totalPages);
         }
       } else {
-        // Ở giữa danh sách
-        pages.push('ellipsis');
-        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-          pages.push(i);
+        // Desktop: logic như cũ
+        pages.push(1);
+        
+        if (currentPage <= 3) {
+          // Nếu đang ở đầu danh sách
+          for (let i = 2; i <= 4; i++) {
+            pages.push(i);
+          }
+          pages.push('ellipsis');
+          pages.push(totalPages);
+        } else if (currentPage >= totalPages - 2) {
+          // Nếu đang ở cuối danh sách
+          pages.push('ellipsis');
+          for (let i = totalPages - 3; i <= totalPages; i++) {
+            pages.push(i);
+          }
+        } else {
+          // Ở giữa danh sách
+          pages.push('ellipsis');
+          for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+            pages.push(i);
+          }
+          pages.push('ellipsis');
+          pages.push(totalPages);
         }
-        pages.push('ellipsis');
-        pages.push(totalPages);
       }
     }
     
@@ -217,19 +247,23 @@ export const VenueGrid = ({
                 <nav
                   role="navigation"
                   aria-label="pagination"
-                  className="flex justify-center mt-8"
+                  className="flex flex-col items-center mt-8 gap-4"
                 >
-                  <ul className="flex flex-row items-center gap-1">
+                  {/* Main pagination controls */}
+                  <ul className="flex flex-row items-center gap-1 flex-wrap justify-center">
                     <li>
                       <Button
                         variant="outline"
-                        size="default"
+                        size={isMobile ? "icon" : "default"}
                         onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="gap-1 pl-2.5"
+                        className={cn(
+                          isMobile ? "h-9 w-9" : "gap-1 pl-2.5"
+                        )}
+                        aria-label="Previous page"
                       >
                         <ChevronLeft className="h-4 w-4" />
-                        <span>Previous</span>
+                        {!isMobile && <span>Previous</span>}
                       </Button>
                     </li>
                     
@@ -237,7 +271,7 @@ export const VenueGrid = ({
                       if (page === 'ellipsis') {
                         return (
                           <li key={`ellipsis-${index}`}>
-                            <span className="flex h-9 w-9 items-center justify-center">
+                            <span className="flex h-9 w-9 items-center justify-center text-muted-foreground">
                               <span className="sr-only">More pages</span>
                               <span>...</span>
                             </span>
@@ -254,7 +288,7 @@ export const VenueGrid = ({
                             onClick={() => handlePageChange(pageNum)}
                             aria-current={currentPage === pageNum ? "page" : undefined}
                             className={cn(
-                              "h-9 w-9",
+                              "h-9 w-9 text-sm",
                               currentPage === pageNum && "border-primary"
                             )}
                           >
@@ -267,22 +301,35 @@ export const VenueGrid = ({
                     <li>
                       <Button
                         variant="outline"
-                        size="default"
+                        size={isMobile ? "icon" : "default"}
                         onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="gap-1 pr-2.5"
+                        className={cn(
+                          isMobile ? "h-9 w-9" : "gap-1 pr-2.5"
+                        )}
+                        aria-label="Next page"
                       >
-                        <span>Next</span>
+                        {!isMobile && <span>Next</span>}
                         <ChevronRight className="h-4 w-4" />
                       </Button>
                     </li>
-                    
-                    {/* Jump to page */}
-                    {totalPages > 5 && (
-                      <li className="flex items-center gap-2 ml-4 pl-4 border-l">
-                        <span className="text-sm text-muted-foreground whitespace-nowrap">
-                          {t('home.goToPage', { defaultValue: 'Go to page' })}:
-                        </span>
+                  </ul>
+                  
+                  {/* Jump to page - separate row on mobile */}
+                  {totalPages > 5 && (
+                    <div className={cn(
+                      "flex items-center gap-2",
+                      isMobile 
+                        ? "flex-col w-full px-4 pt-2 border-t" 
+                        : "ml-4 pl-4 border-l"
+                    )}>
+                      <span className={cn(
+                        "text-sm text-muted-foreground",
+                        isMobile ? "text-center" : "whitespace-nowrap"
+                      )}>
+                        {t('home.goToPage', { defaultValue: 'Go to page' })}:
+                      </span>
+                      <div className="flex items-center gap-2">
                         <Input
                           type="number"
                           min="1"
@@ -291,7 +338,10 @@ export const VenueGrid = ({
                           onChange={(e) => setJumpPage(e.target.value)}
                           onKeyPress={handleJumpKeyPress}
                           placeholder={currentPage.toString()}
-                          className="w-20 h-9 text-center"
+                          className={cn(
+                            "h-9 text-center",
+                            isMobile ? "w-16" : "w-20"
+                          )}
                         />
                         <Button
                           variant="outline"
@@ -302,9 +352,9 @@ export const VenueGrid = ({
                         >
                           {t('home.go', { defaultValue: 'Go' })}
                         </Button>
-                      </li>
-                    )}
-                  </ul>
+                      </div>
+                    </div>
+                  )}
                 </nav>
               </MotionScrollReveal>
             )}
