@@ -16,7 +16,6 @@ export default function SmoothScroll() {
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 1.2, // Increased from 1 for more responsive scrolling
-      smoothTouch: true, // Enabled for better mobile experience
       touchMultiplier: 1.5, // Reduced from 2 for better control
       infinite: false,
       lerp: 0.1, // Lower lerp value for faster response (default is 0.1)
