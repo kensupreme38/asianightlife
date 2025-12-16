@@ -357,36 +357,44 @@ export const VenueGrid = ({
                       </Button>
                     </li>
                     
-                    {getPageNumbers().map((page, index) => {
-                      if (page === 'ellipsis') {
+                    {(() => {
+                      const pageNumbers = getPageNumbers();
+                      return pageNumbers.map((page, index) => {
+                        if (page === 'ellipsis') {
+                          // Create unique key for ellipsis using index and position context
+                          // Use the previous and next page numbers to make it unique
+                          const prevPage = index > 0 ? pageNumbers[index - 1] : 'start';
+                          const nextPage = index < pageNumbers.length - 1 ? pageNumbers[index + 1] : 'end';
+                          const uniqueKey = `ellipsis-${prevPage}-${nextPage}-${index}`;
+                          return (
+                            <li key={uniqueKey}>
+                              <span className="flex h-9 w-9 items-center justify-center text-muted-foreground">
+                                <span className="sr-only">More pages</span>
+                                <span>...</span>
+                              </span>
+                            </li>
+                          );
+                        }
+                        
+                        const pageNum = page as number;
                         return (
-                          <li key={`ellipsis-${index}`}>
-                            <span className="flex h-9 w-9 items-center justify-center text-muted-foreground">
-                              <span className="sr-only">More pages</span>
-                              <span>...</span>
-                            </span>
+                          <li key={`page-${pageNum}`}>
+                            <Button
+                              variant={currentPage === pageNum ? "outline" : "ghost"}
+                              size="icon"
+                              onClick={() => handlePageChange(pageNum)}
+                              aria-current={currentPage === pageNum ? "page" : undefined}
+                              className={cn(
+                                "h-9 w-9 text-sm",
+                                currentPage === pageNum && "border-primary"
+                              )}
+                            >
+                              {pageNum}
+                            </Button>
                           </li>
                         );
-                      }
-                      
-                      const pageNum = page as number;
-                      return (
-                        <li key={pageNum}>
-                          <Button
-                            variant={currentPage === pageNum ? "outline" : "ghost"}
-                            size="icon"
-                            onClick={() => handlePageChange(pageNum)}
-                            aria-current={currentPage === pageNum ? "page" : undefined}
-                            className={cn(
-                              "h-9 w-9 text-sm",
-                              currentPage === pageNum && "border-primary"
-                            )}
-                          >
-                            {pageNum}
-                          </Button>
-                        </li>
-                      );
-                    })}
+                      });
+                    })()}
                     
                     <li>
                       <Button

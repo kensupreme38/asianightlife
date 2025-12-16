@@ -532,34 +532,34 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-64 p-4">
+            <SheetContent side="left" className="w-64 p-2 flex flex-col">
               <SheetHeader>
                 <SheetTitle className="sr-only">Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col h-full space-y-1.5">
+              <div className="flex flex-col flex-1 overflow-y-auto pr-2 -mr-2">
                 {/* Contact Booking */}
-                <div>
-                  <h2 className="text-lg font-semibold mb-1 font-headline">
+                <div className="mb-1">
+                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
                     {t('header.contactBooking')}
                   </h2>
-                  <div className="flex flex-col space-y-1">
+                  <div className="flex flex-col">
                     {/* WhatsApp */}
                     <a
                       href="https://wa.me/6582808072"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary"
+                      className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <Image
                         src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                         alt="WhatsApp"
-                        width={20}
-                        height={20}
-                        className="rounded-full"
+                        width={18}
+                        height={18}
+                        className="rounded-full flex-shrink-0"
                       />
-                      <div className="flex flex-col">
-                        <span className="font-medium">{t('header.whatsapp')}</span>
+                      <div className="flex flex-col min-w-0">
+                        <span className="font-medium text-sm">{t('header.whatsapp')}</span>
                         <span className="text-xs text-muted-foreground">
                           +65 8280 8072
                         </span>
@@ -571,18 +571,18 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                       href="https://t.me/asianightlifesg"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary"
+                      className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <Image
                         src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
                         alt="Telegram"
-                        width={20}
-                        height={20}
-                        className="rounded-full"
+                        width={18}
+                        height={18}
+                        className="rounded-full flex-shrink-0"
                       />
-                      <div className="flex flex-col">
-                        <span className="font-medium">{t('header.telegram')}</span>
+                      <div className="flex flex-col min-w-0">
+                        <span className="font-medium text-sm">{t('header.telegram')}</span>
                         <span className="text-xs text-muted-foreground">
                           @asianightlifesg
                         </span>
@@ -592,43 +592,43 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 </div>
 
                 {/* Connect With Us */}
-                <div>
-                  <h2 className="text-lg font-semibold mb-1 font-headline">
+                <div className="mb-1">
+                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
                     {t('common.connectWithUs')}
                   </h2>
-                  <div className="flex flex-col space-y-1">
+                  <div className="flex flex-col">
                     {socialLinks.map((social) => (
                       <a
                         key={social.label}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary"
+                        className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {typeof social.icon === "string" ? (
                           <Image
                             src={social.icon}
                             alt={social.label}
-                            width={20}
-                            height={20}
+                            width={18}
+                            height={18}
                             className={social.className || ""}
                           />
                         ) : (
-                          <social.icon className="h-5 w-5" />
+                          <social.icon className="h-4 w-4 flex-shrink-0" />
                         )}
-                        <span>{social.label}</span>
+                        <span className="text-sm">{social.label}</span>
                       </a>
                     ))}
                   </div>
                 </div>
 
                 {/* Explore */}
-                <div>
-                  <h2 className="text-lg font-semibold mb-1 font-headline">
+                <div className="mb-1">
+                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
                     {t('common.explore')}
                   </h2>
-                  <div className="flex flex-col space-y-1">
+                  <div className="flex flex-col">
                     {primaryLinks.map((link) => {
                       const isActive =
                         link.href === "/"
@@ -638,7 +638,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                         <Link
                           key={`mobile-${link.href}`}
                           href={link.href}
-                          className={`flex items-center gap-3 p-2 rounded-md transition-colors hover:bg-secondary ${
+                          className={`flex items-center gap-2 py-1 px-2 rounded-md transition-colors hover:bg-secondary ${
                             isActive
                               ? "text-foreground"
                               : "text-muted-foreground"
@@ -655,12 +655,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 </div>
 
                 {/* Theme Switcher */}
-                <div>
-                  <h2 className="text-lg font-semibold mb-1 font-headline">
+                <div className="mb-1">
+                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
                     {t('common.theme')}
                   </h2>
                   <div
-                    className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
+                    className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
@@ -673,11 +673,11 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 </div>
 
                 {/* Language Switcher */}
-                <div>
-                  <h2 className="text-lg font-semibold mb-1 font-headline">
+                <div className="mb-1">
+                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
                     Language
                   </h2>
-                  <div className="p-2">
+                  <div className="py-1 px-2">
                     <LanguageSwitcher />
                   </div>
                 </div>
@@ -685,14 +685,14 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 {/* Sign Out */}
                 {currentUser && (
                   <div>
-                    <h2 className="text-lg font-semibold mb-1 font-headline">
+                    <h2 className="text-sm font-semibold mb-0.5 font-headline">
                       {t('common.account')}
                     </h2>
                     <div
-                      className="flex items-center gap-3 p-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
+                      className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary cursor-pointer transition-colors"
                       onClick={handleSignOut}
                     >
-                      <LogOut className="h-5 w-5" />
+                      <LogOut className="h-4 w-4 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
                         {t('common.signOut')}
                       </span>
