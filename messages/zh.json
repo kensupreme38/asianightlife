@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "首页",
-    "djVoting": "DJ投票",
-    "employee": "员工",
+    "djVoting": "DJs (排名)",
+    "employee": "ANL成员",
     "search": "搜索",
     "searchPlaceholder": "搜索场所、区域...",
     "searchVenues": "搜索场所...",
@@ -45,14 +45,14 @@
     "title": "预订指南",
     "seeDetailedGuide": "查看详细指南",
     "chooseVenue": "选择场所",
-    "chooseVenueDesc": "数千个折扣场所",
+    "chooseVenueDesc": "数千个场所",
     "bookByPhone": "电话预订",
     "bookOnline": "在线预订",
     "visitWebsite": "访问网站",
     "confirmation": "确认",
     "confirmationDesc": "来自Asia Night Life.SG运营商的确认",
     "experience": "体验",
-    "experienceDesc": "体验服务"
+    "experienceDesc": "享受您的体验"
   },
   "bookingForm": {
     "makeBooking": "进行预订",
@@ -68,8 +68,8 @@
     "person": "人",
     "people": "人",
     "locationBranch": "地点/分店/咨询",
-    "locationPlaceholder": "输入地点或分店（可选）",
-    "referralCode": "推荐码（可选）",
+    "locationPlaceholder": "输入地点或分店（首选）",
+    "referralCode": "推荐码（首选）",
     "referralPlaceholder": "输入推荐码",
     "submitBooking": "提交预订",
     "pleaseSelectDateTime": "请选择预订的日期和时间",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "人数",
     "locationBranchLabel": "地点/分店",
     "referralCodeLabel": "推荐码",
-    "referralEmployee": "推荐员工",
-    "employeePhone": "员工电话",
+    "referralEmployee": "推荐团队成员",
+    "employeePhone": "团队成员电话",
     "linkCopied": "链接已复制到剪贴板！",
     "shareFailed": "分享失败，链接已复制到剪贴板！",
     "couldNotShare": "无法分享或复制链接。"
@@ -189,12 +189,24 @@
     "go": "跳转"
   },
   "employee": {
-    "employeeProfile": "员工资料",
-    "createEmployee": "创建员工",
-    "editEmployeeProfile": "编辑员工资料",
-    "viewProfileInfo": "查看您的员工资料信息",
-    "updateProfileInfo": "更新您的员工资料信息",
-    "addNewEmployee": "向系统添加新员工，包含完整的资料信息"
+    "employeeProfile": "ANL团队成员资料",
+    "createEmployee": "加入成为ANL团队成员",
+    "editEmployeeProfile": "编辑团队成员资料",
+    "viewProfileInfo": "查看您的ANL团队成员资料信息",
+    "updateProfileInfo": "更新您的ANL团队成员资料信息",
+    "addNewEmployee": "加入成为ANL团队成员，包含完整的资料信息",
+    "emailDescription": "团队成员的电子邮件地址，用于联系",
+    "fullNameDescription": "团队成员的全名",
+    "dateOfBirthDescription": "团队成员的出生日期（您可以轻松选择年份和月份）",
+    "genderDescription": "团队成员的性别",
+    "addressDescription": "团队成员的居住地址（可选）",
+    "updateProfile": "更新资料",
+    "mustLogin": "您必须登录才能加入成为ANL团队成员",
+    "profileUpdated": "团队成员资料更新成功！",
+    "profileCreated": "团队成员资料创建成功！",
+    "profileUpdateFailed": "更新团队成员资料失败",
+    "profileCreateFailed": "创建团队成员资料失败",
+    "editProfile": "编辑资料"
   }
 }
 

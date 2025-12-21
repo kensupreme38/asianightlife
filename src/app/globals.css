@@ -158,29 +158,33 @@ All colors MUST be HSL.
       radial-gradient(circle at 80% 20%, hsl(15 100% 65% / 0.1) 0%, transparent 50%);
   }
 
-  /* Scrollbar styling */
-  ::-webkit-scrollbar {
+  /* Scrollbar styling - only for body/html, not for dropdowns */
+  body::-webkit-scrollbar,
+  html::-webkit-scrollbar {
     width: 8px;
   }
   
-  ::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-track {
     @apply bg-secondary;
   }
   
-  ::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, hsl(0 100% 45%), hsl(15 100% 65%));
     border-radius: 4px;
   }
   
-  /* Remove scrollbar */
-    ::-webkit-scrollbar {
-      display: none;
-    }
+  /* Remove scrollbar for body/html only */
+  body::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    display: none;
+  }
 
-    html {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
+  html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 @layer components {
@@ -233,5 +237,43 @@ All colors MUST be HSL.
 
   .masonry-grid_column > div {
     margin-bottom: 1rem; /* space between items */
+  }
+
+  /* Country dropdown scrollbar styling - Must override global scrollbar hiding */
+  .country-dropdown-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    /* Force scrollbar to be visible and functional */
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(156, 163, 175, 0.8) transparent !important;
+  }
+  
+  /* Override global scrollbar hiding for this specific class */
+  .country-dropdown-scroll::-webkit-scrollbar {
+    width: 8px !important;
+    display: block !important;
+    -webkit-appearance: none;
+  }
+  
+  .country-dropdown-scroll::-webkit-scrollbar-track {
+    background-color: hsl(var(--secondary)) !important;
+    border-radius: 4px;
+  }
+  
+  .country-dropdown-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, hsl(0 100% 45%), hsl(15 100% 65%)) !important;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+  
+  .country-dropdown-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, hsl(0 100% 50%), hsl(15 100% 70%)) !important;
+  }
+  
+  .country-dropdown-scroll::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(45deg, hsl(0 100% 55%), hsl(15 100% 75%)) !important;
   }
 }

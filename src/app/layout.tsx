@@ -71,7 +71,7 @@ export default function RootLayout({
               url: "https://asianightlife.sg",
               logo: "https://asianightlife.sg/favicon.ico",
               sameAs: [
-                "https://t.me/asianightlifesg",
+                "https://t.me/asianightlifeanl",
               ],
             }),
           }}

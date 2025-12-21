@@ -45,6 +45,7 @@ import { useAuth } from "@/contexts/auth-context";
 import { createClient } from "@/utils/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { generateReferralCode } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const EMPLOYEE_IMAGE_BUCKET =
   process.env.NEXT_PUBLIC_SUPABASE_DJ_BUCKET || "djpro5";
@@ -89,6 +90,7 @@ export default function EmployeeCreateForm({
 }: EmployeeCreateFormProps) {
   const router = useRouter();
   const { currentUser } = useAuth();
+  const t = useTranslations();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -240,8 +242,8 @@ export default function EmployeeCreateForm({
   const onSubmit = async (data: EmployeeFormValues) => {
     if (!currentUser) {
       toast({
-        title: "Error",
-        description: "You must be logged in to create an employee profile",
+        title: t('common.error'),
+        description: t('employee.mustLogin'),
         variant: "destructive",
       });
       return;
@@ -304,13 +306,13 @@ export default function EmployeeCreateForm({
             error.message ||
             error.details ||
             error.hint ||
-            "Unknown error updating employee profile";
+            t('employee.profileUpdateFailed');
           throw new Error(message);
         }
 
         toast({
-          title: "Success",
-          description: "Employee profile updated successfully!",
+          title: t('common.success'),
+          description: t('employee.profileUpdated'),
         });
       } else {
         // Generate unique referral code based on user_id + timestamp
@@ -329,13 +331,13 @@ export default function EmployeeCreateForm({
             error.message ||
             error.details ||
             error.hint ||
-            "Unknown error creating employee profile";
+            t('employee.profileCreateFailed');
           throw new Error(message);
         }
 
         toast({
-          title: "Success",
-          description: `Employee profile created successfully! Referral code: ${referralCode}`,
+          title: t('common.success'),
+          description: `${t('employee.profileCreated')} ${t('bookingForm.referralCodeLabel')}: ${referralCode}`,
         });
       }
 
@@ -347,7 +349,7 @@ export default function EmployeeCreateForm({
       const errorMessage =
         error instanceof Error
           ? error.message
-          : "Failed to create employee profile";
+          : t('employee.profileCreateFailed');
       toast({
         title: "Error",
         description: errorMessage,
@@ -364,12 +366,12 @@ export default function EmployeeCreateForm({
         <div className="flex items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-headline">
-              {isEdit ? "Edit Employee Profile" : "Employee Details"}
+              {isEdit ? t('employee.editEmployeeProfile') : t('employee.createEmployee')}
             </CardTitle>
             <CardDescription className="mt-2">
               {isEdit
-                ? "Update your employee profile information below"
-                : "Fill in the information below to create a new employee profile"}
+                ? t('employee.updateProfileInfo')
+                : t('employee.addNewEmployee')}
             </CardDescription>
           </div>
           <Button onClick={() => router.back()} variant="ghost" size="icon">
@@ -466,7 +468,7 @@ export default function EmployeeCreateForm({
                     />
                   </FormControl>
                   <FormDescription>
-                    Employee&apos;s email address for communication
+                    {t('employee.emailDescription')}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -484,7 +486,7 @@ export default function EmployeeCreateForm({
                     <Input placeholder="John Doe" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Employee&apos;s full legal name
+                    {t('employee.fullNameDescription')}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -534,8 +536,7 @@ export default function EmployeeCreateForm({
                     />
                   </FormControl>
                   <FormDescription>
-                    Employee&apos;s date of birth (you can easily select year
-                    and month)
+                    {t('employee.dateOfBirthDescription')}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -560,7 +561,7 @@ export default function EmployeeCreateForm({
                       <SelectItem value="female">Female</SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormDescription>Employee&apos;s gender</FormDescription>
+                  <FormDescription>{t('employee.genderDescription')}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -581,7 +582,7 @@ export default function EmployeeCreateForm({
                     />
                   </FormControl>
                   <FormDescription>
-                    Employee&apos;s residential address (optional)
+                    {t('employee.addressDescription')}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -611,9 +612,9 @@ export default function EmployeeCreateForm({
                     {isEdit ? "Updating..." : "Creating..."}
                   </>
                 ) : isEdit ? (
-                  "Update Employee"
+                  t('employee.updateProfile')
                 ) : (
-                  "Create Employee"
+                  t('employee.createEmployee')
                 )}
               </Button>
             </div>

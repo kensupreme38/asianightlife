@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "หน้าแรก",
-    "djVoting": "โหวต DJ",
-    "employee": "พนักงาน",
+    "djVoting": "DJs (อันดับ)",
+    "employee": "สมาชิก ANL",
     "search": "ค้นหา",
     "searchPlaceholder": "ค้นหาสถานที่ พื้นที่...",
     "searchVenues": "ค้นหาสถานที่...",
@@ -45,14 +45,14 @@
     "title": "คู่มือการจอง",
     "seeDetailedGuide": "ดูคู่มือรายละเอียด",
     "chooseVenue": "เลือกสถานที่",
-    "chooseVenueDesc": "สถานที่ลดราคาหลายพันแห่ง",
+    "chooseVenueDesc": "สถานที่หลายพันแห่ง",
     "bookByPhone": "จองทางโทรศัพท์",
     "bookOnline": "จองออนไลน์",
     "visitWebsite": "เยี่ยมชมเว็บไซต์",
     "confirmation": "การยืนยัน",
     "confirmationDesc": "การยืนยันจากผู้ให้บริการ Asia Night Life.SG",
     "experience": "ประสบการณ์",
-    "experienceDesc": "สัมผัสบริการ"
+    "experienceDesc": "เพลิดเพลินกับประสบการณ์ของคุณ"
   },
   "bookingForm": {
     "makeBooking": "ทำการจอง",
@@ -68,8 +68,8 @@
     "person": "คน",
     "people": "คน",
     "locationBranch": "สถานที่ / สาขา / สอบถาม",
-    "locationPlaceholder": "ใส่สถานที่หรือสาขา (ไม่บังคับ)",
-    "referralCode": "รหัสแนะนำ (ไม่บังคับ)",
+    "locationPlaceholder": "ใส่สถานที่หรือสาขา (แนะนำ)",
+    "referralCode": "รหัสแนะนำ (แนะนำ)",
     "referralPlaceholder": "ใส่รหัสแนะนำ",
     "submitBooking": "ส่งการจอง",
     "pleaseSelectDateTime": "กรุณาเลือกทั้งวันที่และเวลาสำหรับการจองของคุณ",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "จำนวนคน",
     "locationBranchLabel": "สถานที่/สาขา",
     "referralCodeLabel": "รหัสแนะนำ",
-    "referralEmployee": "พนักงานแนะนำ",
-    "employeePhone": "โทรศัพท์พนักงาน",
+    "referralEmployee": "สมาชิกทีมแนะนำ",
+    "employeePhone": "โทรศัพท์สมาชิกทีม",
     "linkCopied": "คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว!",
     "shareFailed": "แชร์ไม่สำเร็จ ลิงก์ถูกคัดลอกไปยังคลิปบอร์ดแล้ว!",
     "couldNotShare": "ไม่สามารถแชร์หรือคัดลอกลิงก์ได้"
@@ -189,12 +189,24 @@
     "go": "ไป"
   },
   "employee": {
-    "employeeProfile": "โปรไฟล์พนักงาน",
-    "createEmployee": "สร้างพนักงาน",
-    "editEmployeeProfile": "แก้ไขโปรไฟล์พนักงาน",
-    "viewProfileInfo": "ดูข้อมูลโปรไฟล์พนักงานของคุณ",
-    "updateProfileInfo": "อัปเดตข้อมูลโปรไฟล์พนักงานของคุณ",
-    "addNewEmployee": "เพิ่มพนักงานใหม่เข้าสู่ระบบพร้อมข้อมูลโปรไฟล์ครบถ้วน"
+    "employeeProfile": "โปรไฟล์สมาชิกทีม ANL",
+    "createEmployee": "เข้าร่วมเป็นสมาชิกทีม ANL",
+    "editEmployeeProfile": "แก้ไขโปรไฟล์สมาชิกทีม",
+    "viewProfileInfo": "ดูข้อมูลโปรไฟล์สมาชิกทีม ANL ของคุณ",
+    "updateProfileInfo": "อัปเดตข้อมูลโปรไฟล์สมาชิกทีม ANL ของคุณ",
+    "addNewEmployee": "เข้าร่วมเป็นสมาชิกทีม ANL พร้อมข้อมูลโปรไฟล์ครบถ้วน",
+    "emailDescription": "ที่อยู่อีเมลของสมาชิกทีมสำหรับการติดต่อ",
+    "fullNameDescription": "ชื่อเต็มตามกฎหมายของสมาชิกทีม",
+    "dateOfBirthDescription": "วันเกิดของสมาชิกทีม (คุณสามารถเลือกปีและเดือนได้อย่างง่ายดาย)",
+    "genderDescription": "เพศของสมาชิกทีม",
+    "addressDescription": "ที่อยู่ที่อยู่อาศัยของสมาชิกทีม (ไม่บังคับ)",
+    "updateProfile": "อัปเดตโปรไฟล์",
+    "mustLogin": "คุณต้องเข้าสู่ระบบเพื่อเข้าร่วมเป็นสมาชิกทีม ANL",
+    "profileUpdated": "อัปเดตโปรไฟล์สมาชิกทีมสำเร็จแล้ว!",
+    "profileCreated": "สร้างโปรไฟล์สมาชิกทีมสำเร็จแล้ว!",
+    "profileUpdateFailed": "อัปเดตโปรไฟล์สมาชิกทีมไม่สำเร็จ",
+    "profileCreateFailed": "สร้างโปรไฟล์สมาชิกทีมไม่สำเร็จ",
+    "editProfile": "แก้ไขโปรไฟล์"
   }
 }
 

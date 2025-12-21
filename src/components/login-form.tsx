@@ -17,6 +17,7 @@ import {
 import Image from "next/image"
 import { createClient } from "@/utils/supabase/client"
 import { useSearchParams } from "next/navigation"
+import { useLocale } from "next-intl"
 
 export function LoginForm({
   className,
@@ -24,12 +25,14 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   const searchParams = useSearchParams()
   const redirect = searchParams?.get("redirect") || "/"
+  const locale = useLocale()
   const supabase = createClient()
   
   const handleLogin = async () => {
-    // Store redirect URL in sessionStorage to retrieve after auth callback
+    // Store redirect URL and locale in sessionStorage to retrieve after auth callback
     if (typeof window !== "undefined") {
       sessionStorage.setItem("auth_redirect", redirect)
+      sessionStorage.setItem("auth_locale", locale)
     }
 
     const { error } = await supabase.auth.signInWithOAuth({

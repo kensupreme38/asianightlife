@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "Beranda",
-    "djVoting": "Pemungutan Suara DJ",
-    "employee": "Karyawan",
+    "djVoting": "DJs (peringkat)",
+    "employee": "Anggota ANL",
     "search": "Cari",
     "searchPlaceholder": "Cari tempat, area...",
     "searchVenues": "Cari tempat...",
@@ -45,14 +45,14 @@
     "title": "Panduan Pemesanan",
     "seeDetailedGuide": "Lihat panduan lengkap",
     "chooseVenue": "PILIH TEMPAT",
-    "chooseVenueDesc": "Ribuan tempat dengan diskon",
+    "chooseVenueDesc": "Ribuan tempat",
     "bookByPhone": "PESAN MELALUI TELEPON",
     "bookOnline": "PESAN ONLINE",
     "visitWebsite": "Kunjungi Website",
     "confirmation": "KONFIRMASI",
     "confirmationDesc": "Konfirmasi dari operator Asia Night Life.SG",
     "experience": "PENGALAMAN",
-    "experienceDesc": "Rasakan layanannya"
+    "experienceDesc": "Nikmati pengalaman Anda"
   },
   "bookingForm": {
     "makeBooking": "Buat Pemesanan",
@@ -68,8 +68,8 @@
     "person": "Orang",
     "people": "Orang",
     "locationBranch": "Lokasi / Cabang Toko / Pertanyaan",
-    "locationPlaceholder": "Masukkan lokasi atau cabang (opsional)",
-    "referralCode": "Kode Referral ( Opsional )",
+    "locationPlaceholder": "Masukkan lokasi atau cabang (disukai)",
+    "referralCode": "Kode Referral ( Disukai )",
     "referralPlaceholder": "Masukkan kode referral",
     "submitBooking": "Kirim Pemesanan",
     "pleaseSelectDateTime": "Silakan pilih tanggal dan waktu untuk pemesanan Anda",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "Jumlah Orang",
     "locationBranchLabel": "Lokasi/Cabang",
     "referralCodeLabel": "Kode Referral",
-    "referralEmployee": "Karyawan Referral",
-    "employeePhone": "Telepon Karyawan",
+    "referralEmployee": "Anggota Tim Referral",
+    "employeePhone": "Telepon Anggota Tim",
     "linkCopied": "Tautan disalin ke clipboard!",
     "shareFailed": "Berbagi gagal, tautan disalin ke clipboard!",
     "couldNotShare": "Tidak dapat berbagi atau menyalin tautan."
@@ -189,12 +189,24 @@
     "go": "Pergi"
   },
   "employee": {
-    "employeeProfile": "Profil Karyawan",
-    "createEmployee": "Buat Karyawan",
-    "editEmployeeProfile": "Edit Profil Karyawan",
-    "viewProfileInfo": "Lihat informasi profil karyawan Anda",
-    "updateProfileInfo": "Perbarui informasi profil karyawan Anda",
-    "addNewEmployee": "Tambahkan karyawan baru ke sistem dengan informasi profil lengkap"
+    "employeeProfile": "Profil Anggota Tim ANL",
+    "createEmployee": "Bergabung sebagai Anggota Tim ANL",
+    "editEmployeeProfile": "Edit Profil Anggota Tim",
+    "viewProfileInfo": "Lihat informasi profil anggota tim ANL Anda",
+    "updateProfileInfo": "Perbarui informasi profil anggota tim ANL Anda",
+    "addNewEmployee": "Bergabung sebagai anggota tim ANL dengan informasi profil lengkap",
+    "emailDescription": "Alamat email anggota tim untuk komunikasi",
+    "fullNameDescription": "Nama lengkap anggota tim",
+    "dateOfBirthDescription": "Tanggal lahir anggota tim (Anda dapat dengan mudah memilih tahun dan bulan)",
+    "genderDescription": "Jenis kelamin anggota tim",
+    "addressDescription": "Alamat tempat tinggal anggota tim (opsional)",
+    "updateProfile": "Perbarui Profil",
+    "mustLogin": "Anda harus masuk untuk bergabung sebagai anggota tim ANL",
+    "profileUpdated": "Profil anggota tim berhasil diperbarui!",
+    "profileCreated": "Profil anggota tim berhasil dibuat!",
+    "profileUpdateFailed": "Gagal memperbarui profil anggota tim",
+    "profileCreateFailed": "Gagal membuat profil anggota tim",
+    "editProfile": "Edit Profil"
   }
 }
 

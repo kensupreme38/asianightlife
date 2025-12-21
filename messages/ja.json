@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "ホーム",
-    "djVoting": "DJ投票",
-    "employee": "従業員",
+    "djVoting": "DJs (ランキング)",
+    "employee": "ANLメンバー",
     "search": "検索",
     "searchPlaceholder": "会場、エリアを検索...",
     "searchVenues": "会場を検索...",
@@ -45,14 +45,14 @@
     "title": "予約ガイド",
     "seeDetailedGuide": "詳細ガイドを見る",
     "chooseVenue": "会場を選択",
-    "chooseVenueDesc": "数千の割引会場",
+    "chooseVenueDesc": "数千の会場",
     "bookByPhone": "電話で予約",
     "bookOnline": "オンラインで予約",
     "visitWebsite": "ウェブサイトを訪問",
     "confirmation": "確認",
     "confirmationDesc": "Asia Night Life.SGオペレーターからの確認",
     "experience": "体験",
-    "experienceDesc": "サービスを体験"
+    "experienceDesc": "体験をお楽しみください"
   },
   "bookingForm": {
     "makeBooking": "予約する",
@@ -68,8 +68,8 @@
     "person": "人",
     "people": "人",
     "locationBranch": "場所 / 店舗 / お問い合わせ",
-    "locationPlaceholder": "場所または店舗を入力（オプション）",
-    "referralCode": "紹介コード（オプション）",
+    "locationPlaceholder": "場所または店舗を入力（推奨）",
+    "referralCode": "紹介コード（推奨）",
     "referralPlaceholder": "紹介コードを入力",
     "submitBooking": "予約を送信",
     "pleaseSelectDateTime": "予約の日付と時刻の両方を選択してください",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "人数",
     "locationBranchLabel": "場所/店舗",
     "referralCodeLabel": "紹介コード",
-    "referralEmployee": "紹介従業員",
-    "employeePhone": "従業員電話",
+    "referralEmployee": "紹介チームメンバー",
+    "employeePhone": "チームメンバー電話",
     "linkCopied": "リンクがクリップボードにコピーされました！",
     "shareFailed": "共有に失敗しました。リンクがクリップボードにコピーされました！",
     "couldNotShare": "リンクを共有またはコピーできませんでした。"
@@ -189,12 +189,24 @@
     "go": "移動"
   },
   "employee": {
-    "employeeProfile": "従業員プロフィール",
-    "createEmployee": "従業員を作成",
-    "editEmployeeProfile": "従業員プロフィールを編集",
-    "viewProfileInfo": "従業員プロフィール情報を表示",
-    "updateProfileInfo": "従業員プロフィール情報を更新",
-    "addNewEmployee": "完全なプロフィール情報を持つ新しい従業員をシステムに追加"
+    "employeeProfile": "ANLチームメンバープロフィール",
+    "createEmployee": "ANLチームメンバーとして参加",
+    "editEmployeeProfile": "チームメンバープロフィールを編集",
+    "viewProfileInfo": "ANLチームメンバーのプロフィール情報を表示",
+    "updateProfileInfo": "ANLチームメンバーのプロフィール情報を更新",
+    "addNewEmployee": "完全なプロフィール情報でANLチームメンバーとして参加",
+    "emailDescription": "連絡用のチームメンバーのメールアドレス",
+    "fullNameDescription": "チームメンバーの正式な氏名",
+    "dateOfBirthDescription": "チームメンバーの生年月日（年と月を簡単に選択できます）",
+    "genderDescription": "チームメンバーの性別",
+    "addressDescription": "チームメンバーの居住住所（オプション）",
+    "updateProfile": "プロフィールを更新",
+    "mustLogin": "ANLチームメンバーとして参加するにはログインする必要があります",
+    "profileUpdated": "チームメンバーのプロフィールが正常に更新されました！",
+    "profileCreated": "チームメンバーのプロフィールが正常に作成されました！",
+    "profileUpdateFailed": "チームメンバーのプロフィールの更新に失敗しました",
+    "profileCreateFailed": "チームメンバーのプロフィールの作成に失敗しました",
+    "editProfile": "プロフィールを編集"
   }
 }
 

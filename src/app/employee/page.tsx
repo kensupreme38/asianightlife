@@ -105,17 +105,16 @@ export default function EmployeePage() {
                 <div className="max-w-3xl mx-auto text-center">
                   <div className="flex items-center justify-center space-x-2 mb-4">
                     <User className="h-6 w-6 text-red-orange fill-current" />
-                    <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
-                      Employee Profile
-                    </span>
-                  </div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight font-headline">
-                    <span className="gradient-text">Employee Profile</span>
-                  </h1>
-                  <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                    No employee profile found. Please contact administrator to
-                    create your profile.
-                  </p>
+                  <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
+                    ANL Team Member Profile
+                  </span>
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight font-headline">
+                  <span className="gradient-text">ANL Team Member Profile</span>
+                </h1>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  No team member profile found. Please join as an ANL team member to create your profile.
+                </p>
                 </div>
               </ScrollReveal>
             </div>
@@ -138,14 +137,14 @@ export default function EmployeePage() {
                 <div className="flex items-center justify-center space-x-2 mb-4">
                   <User className="h-6 w-6 text-red-orange fill-current" />
                   <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
-                    Employee Profile
+                    ANL Team Member Profile
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight font-headline">
-                  <span className="gradient-text">Employee Profile</span>
+                  <span className="gradient-text">ANL Team Member Profile</span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  View your employee profile information
+                  View your ANL team member profile information
                 </p>
               </div>
             </ScrollReveal>

@@ -17,7 +17,7 @@ export const Footer = () => {
     {
       name: "YouTube",
       icon: "https://cdn-icons-png.flaticon.com/128/3670/3670147.png",
-      href: "https://www.youtube.com/@anlasianightlife",
+      href: "https://youtube.com/@asianightlifeanl",
     },
     {
       name: "Instagram",
@@ -97,7 +97,7 @@ export const Footer = () => {
 
               {/* Telegram */}
               <Link
-                href="https://t.me/asianightlifesg"
+                href="https://t.me/asianightlifeanl"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
@@ -111,7 +111,7 @@ export const Footer = () => {
                 />
                 <div>
                   <p className="font-semibold">Telegram</p>
-                  <p className="text-sm text-muted-foreground">@asianightlifesg</p>
+                  <p className="text-sm text-muted-foreground">@asianightlifeanl</p>
                 </div>
               </Link>
             </div>

@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "Trang chủ",
-    "djVoting": "Bình chọn DJ",
-    "employee": "Nhân viên",
+    "djVoting": "DJs (xếp hạng)",
+    "employee": "Thành viên ANL",
     "search": "Tìm kiếm",
     "searchPlaceholder": "Tìm kiếm địa điểm, khu vực...",
     "searchVenues": "Tìm kiếm địa điểm...",
@@ -45,14 +45,14 @@
     "title": "Hướng dẫn đặt chỗ",
     "seeDetailedGuide": "Xem hướng dẫn chi tiết",
     "chooseVenue": "CHỌN ĐỊA ĐIỂM",
-    "chooseVenueDesc": "Hàng nghìn địa điểm giảm giá",
+    "chooseVenueDesc": "Hàng nghìn địa điểm",
     "bookByPhone": "ĐẶT QUA ĐIỆN THOẠI",
     "bookOnline": "ĐẶT TRỰC TUYẾN",
     "visitWebsite": "Truy cập trang web",
     "confirmation": "XÁC NHẬN",
     "confirmationDesc": "Xác nhận từ nhà điều hành Asia Night Life.SG",
     "experience": "TRẢI NGHIỆM",
-    "experienceDesc": "Trải nghiệm dịch vụ"
+    "experienceDesc": "Tận hưởng trải nghiệm của bạn"
   },
   "bookingForm": {
     "makeBooking": "Đặt chỗ",
@@ -68,8 +68,8 @@
     "person": "Người",
     "people": "Người",
     "locationBranch": "Địa điểm / Chi nhánh / Yêu cầu",
-    "locationPlaceholder": "Nhập địa điểm hoặc chi nhánh (tùy chọn)",
-    "referralCode": "Mã giới thiệu (Tùy chọn)",
+    "locationPlaceholder": "Nhập địa điểm hoặc chi nhánh (ưu tiên)",
+    "referralCode": "Mã giới thiệu (Ưu tiên)",
     "referralPlaceholder": "Nhập mã giới thiệu",
     "submitBooking": "Gửi đặt chỗ",
     "pleaseSelectDateTime": "Vui lòng chọn cả ngày và giờ cho đặt chỗ của bạn",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "Số người",
     "locationBranchLabel": "Địa điểm/Chi nhánh",
     "referralCodeLabel": "Mã giới thiệu",
-    "referralEmployee": "Nhân viên giới thiệu",
-    "employeePhone": "Điện thoại nhân viên",
+    "referralEmployee": "Thành viên giới thiệu",
+    "employeePhone": "Điện thoại thành viên",
     "linkCopied": "Đã sao chép liên kết vào clipboard!",
     "shareFailed": "Chia sẻ thất bại, đã sao chép liên kết vào clipboard!",
     "couldNotShare": "Không thể chia sẻ hoặc sao chép liên kết."
@@ -189,11 +189,23 @@
     "go": "Đi"
   },
   "employee": {
-    "employeeProfile": "Hồ sơ nhân viên",
-    "createEmployee": "Tạo nhân viên",
-    "editEmployeeProfile": "Chỉnh sửa hồ sơ nhân viên",
-    "viewProfileInfo": "Xem thông tin hồ sơ nhân viên của bạn",
-    "updateProfileInfo": "Cập nhật thông tin hồ sơ nhân viên của bạn",
-    "addNewEmployee": "Thêm nhân viên mới vào hệ thống với đầy đủ thông tin hồ sơ"
+    "employeeProfile": "Hồ sơ thành viên ANL",
+    "createEmployee": "Tham gia làm thành viên ANL",
+    "editEmployeeProfile": "Chỉnh sửa hồ sơ thành viên",
+    "viewProfileInfo": "Xem thông tin hồ sơ thành viên ANL của bạn",
+    "updateProfileInfo": "Cập nhật thông tin hồ sơ thành viên ANL của bạn",
+    "addNewEmployee": "Tham gia làm thành viên ANL với đầy đủ thông tin hồ sơ",
+    "emailDescription": "Địa chỉ email của thành viên để liên lạc",
+    "fullNameDescription": "Họ và tên đầy đủ của thành viên",
+    "dateOfBirthDescription": "Ngày sinh của thành viên (bạn có thể dễ dàng chọn năm và tháng)",
+    "genderDescription": "Giới tính của thành viên",
+    "addressDescription": "Địa chỉ cư trú của thành viên (tùy chọn)",
+    "updateProfile": "Cập nhật hồ sơ",
+    "mustLogin": "Bạn phải đăng nhập để tham gia làm thành viên ANL",
+    "profileUpdated": "Hồ sơ thành viên đã được cập nhật thành công!",
+    "profileCreated": "Hồ sơ thành viên đã được tạo thành công!",
+    "profileUpdateFailed": "Cập nhật hồ sơ thành viên thất bại",
+    "profileCreateFailed": "Tạo hồ sơ thành viên thất bại",
+    "editProfile": "Chỉnh sửa hồ sơ"
   }
 }

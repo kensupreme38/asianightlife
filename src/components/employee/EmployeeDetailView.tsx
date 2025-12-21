@@ -18,6 +18,7 @@ import {
 import { format } from "date-fns";
 import { useRouter } from "next/navigation";
 import { toast } from "@/hooks/use-toast";
+import { useTranslations } from "next-intl";
 
 interface EmployeeProfile {
   id: string;
@@ -42,6 +43,7 @@ export default function EmployeeDetailView({
   employee,
 }: EmployeeDetailViewProps) {
   const router = useRouter();
+  const t = useTranslations();
   const [hasCopiedCode, setHasCopiedCode] = useState(false);
   const [hasCopiedUrl, setHasCopiedUrl] = useState(false);
 
@@ -119,14 +121,14 @@ export default function EmployeeDetailView({
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-2xl font-headline">
-            Employee Profile
+            {t('employee.employeeProfile')}
           </CardTitle>
           <Button
             variant="outline"
             onClick={() => router.push("/employee?edit=true")}
           >
             <Edit className="h-4 w-4 mr-2" />
-            Edit Profile
+            {t('employee.editProfile')}
           </Button>
         </div>
       </CardHeader>

@@ -17,13 +17,13 @@ const contactLinks = [
   {
     name: 'Telegram',
     icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon3_imec.png?v=156" alt="Telegram" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://t.me/asianightlifesg',
+    href: 'https://t.me/asianightlifeanl',
     isImage: true,
   },
   {
     name: 'YouTube',
     icon: <Image src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" alt="YouTube" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://www.youtube.com/@anlasianightlife',
+    href: 'https://youtube.com/@asianightlifeanl',
     isImage: true,
   },
 ];

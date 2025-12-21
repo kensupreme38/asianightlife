@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "홈",
-    "djVoting": "DJ 투표",
-    "employee": "직원",
+    "djVoting": "DJs (순위)",
+    "employee": "ANL 멤버",
     "search": "검색",
     "searchPlaceholder": "장소, 지역 검색...",
     "searchVenues": "장소 검색...",
@@ -45,14 +45,14 @@
     "title": "예약 가이드",
     "seeDetailedGuide": "상세 가이드 보기",
     "chooseVenue": "장소 선택",
-    "chooseVenueDesc": "수천 개의 할인 장소",
+    "chooseVenueDesc": "수천 개의 장소",
     "bookByPhone": "전화로 예약",
     "bookOnline": "온라인 예약",
     "visitWebsite": "웹사이트 방문",
     "confirmation": "확인",
     "confirmationDesc": "Asia Night Life.SG 운영자 확인",
     "experience": "경험",
-    "experienceDesc": "서비스 경험"
+    "experienceDesc": "경험을 즐기세요"
   },
   "bookingForm": {
     "makeBooking": "예약하기",
@@ -68,8 +68,8 @@
     "person": "명",
     "people": "명",
     "locationBranch": "위치 / 매장 / 문의",
-    "locationPlaceholder": "위치 또는 매장 입력 (선택사항)",
-    "referralCode": "추천 코드 (선택사항)",
+    "locationPlaceholder": "위치 또는 매장 입력 (선호)",
+    "referralCode": "추천 코드 (선호)",
     "referralPlaceholder": "추천 코드 입력",
     "submitBooking": "예약 제출",
     "pleaseSelectDateTime": "예약 날짜와 시간을 모두 선택하세요",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "인원 수",
     "locationBranchLabel": "위치/매장",
     "referralCodeLabel": "추천 코드",
-    "referralEmployee": "추천 직원",
-    "employeePhone": "직원 전화",
+    "referralEmployee": "추천 팀 멤버",
+    "employeePhone": "팀 멤버 전화",
     "linkCopied": "링크가 클립보드에 복사되었습니다!",
     "shareFailed": "공유 실패, 링크가 클립보드에 복사되었습니다!",
     "couldNotShare": "링크를 공유하거나 복사할 수 없습니다."
@@ -189,12 +189,24 @@
     "go": "이동"
   },
   "employee": {
-    "employeeProfile": "직원 프로필",
-    "createEmployee": "직원 만들기",
-    "editEmployeeProfile": "직원 프로필 편집",
-    "viewProfileInfo": "직원 프로필 정보 보기",
-    "updateProfileInfo": "직원 프로필 정보 업데이트",
-    "addNewEmployee": "완전한 프로필 정보로 시스템에 새 직원 추가"
+    "employeeProfile": "ANL 팀 멤버 프로필",
+    "createEmployee": "ANL 팀 멤버로 가입",
+    "editEmployeeProfile": "팀 멤버 프로필 편집",
+    "viewProfileInfo": "ANL 팀 멤버 프로필 정보 보기",
+    "updateProfileInfo": "ANL 팀 멤버 프로필 정보 업데이트",
+    "addNewEmployee": "완전한 프로필 정보로 ANL 팀 멤버로 가입",
+    "emailDescription": "연락을 위한 팀 멤버의 이메일 주소",
+    "fullNameDescription": "팀 멤버의 전체 법적 이름",
+    "dateOfBirthDescription": "팀 멤버의 생년월일 (연도와 월을 쉽게 선택할 수 있습니다)",
+    "genderDescription": "팀 멤버의 성별",
+    "addressDescription": "팀 멤버의 거주 주소 (선택사항)",
+    "updateProfile": "프로필 업데이트",
+    "mustLogin": "ANL 팀 멤버로 가입하려면 로그인해야 합니다",
+    "profileUpdated": "팀 멤버 프로필이 성공적으로 업데이트되었습니다!",
+    "profileCreated": "팀 멤버 프로필이 성공적으로 생성되었습니다!",
+    "profileUpdateFailed": "팀 멤버 프로필 업데이트 실패",
+    "profileCreateFailed": "팀 멤버 프로필 생성 실패",
+    "editProfile": "프로필 편집"
   }
 }
 

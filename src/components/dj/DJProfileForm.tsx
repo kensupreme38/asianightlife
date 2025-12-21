@@ -19,24 +19,229 @@ import { cn } from "@/lib/utils";
 const DJ_IMAGE_BUCKET = process.env.NEXT_PUBLIC_SUPABASE_DJ_BUCKET || "dj-images";
 const DJ_IMAGE_FOLDER = (process.env.NEXT_PUBLIC_SUPABASE_DJ_FOLDER || "dj-profiles").replace(/^\/+|\/+$/g, "");
 
-// Country list for autocomplete
+// Comprehensive country list for autocomplete (all countries worldwide)
 const COUNTRIES = [
-  "Singapore",
-  "Vietnam",
-  "Thailand",
-  "Malaysia",
-  "Cambodia",
-  "Indonesia",
-  "Japan",
-  "Macao",
-  "Philippines",
-  "South Korea",
-  "Taiwan",
-  "China",
-  "Hong Kong",
-  "Myanmar",
-  "Laos",
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
   "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kosovo",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Palestine",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+  // Special administrative regions and territories
+  "Hong Kong",
+  "Macao",
+  "Puerto Rico",
+  "Guam",
+  "American Samoa",
+  "Northern Mariana Islands",
+  "U.S. Virgin Islands",
+  "British Virgin Islands",
+  "Cayman Islands",
+  "Bermuda",
+  "Greenland",
+  "Faroe Islands",
+  "French Polynesia",
+  "New Caledonia",
+  "Aruba",
+  "Curacao",
+  "Sint Maarten",
+  "Anguilla",
+  "Montserrat",
+  "Turks and Caicos Islands",
+  "Gibraltar",
+  "Falkland Islands",
+  "Cook Islands",
+  "Niue",
+  "Tokelau",
 ];
 
 interface DJProfileFormProps {
@@ -348,6 +553,7 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
 
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
+      // Don't close if clicking on scrollbar or during scroll
       if (
         countryInputRef.current &&
         countryDropdownRef.current &&
@@ -359,9 +565,10 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    // Use click instead of mousedown to avoid interfering with scroll
+    document.addEventListener("click", handleClickOutside, true);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside, true);
     };
   }, [isCountryDropdownOpen]);
 
@@ -575,7 +782,7 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
                       }, 200);
                     }}
                     onKeyDown={handleCountryKeyDown}
-                    placeholder="Singapore, Vietnam, Thailand..."
+                    placeholder="Enter your country (e.g., United States, Germany, Japan...)"
                     className="pr-10"
                   />
                   <button
@@ -605,21 +812,61 @@ export default function DJProfileForm({ isEdit = false }: DJProfileFormProps) {
                   {isCountryDropdownOpen && filteredCountries.length > 0 && (
                     <div
                       ref={countryDropdownRef}
-                      className="absolute z-50 w-full mt-1 bg-popover border border-border rounded-md shadow-lg max-h-60 overflow-auto"
+                      className="country-dropdown-scroll absolute z-50 w-full mt-1 bg-popover border border-border rounded-md shadow-lg max-h-60 overflow-y-scroll overflow-x-hidden"
+                      style={{
+                        scrollbarWidth: 'thin',
+                        scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
+                        WebkitOverflowScrolling: 'touch',
+                        pointerEvents: 'auto'
+                      }}
+                      onWheel={(e) => {
+                        // Ensure wheel events work for scrolling
+                        e.stopPropagation();
+                        const element = countryDropdownRef.current;
+                        if (element) {
+                          const { scrollTop, scrollHeight, clientHeight } = element;
+                          const isAtTop = scrollTop === 0;
+                          const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+                          
+                          // Only prevent default if we're at boundaries
+                          if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+                            // At boundary, allow default to prevent page scroll
+                            return;
+                          }
+                          // Otherwise, scroll the dropdown
+                          element.scrollTop += e.deltaY;
+                          e.preventDefault();
+                        }
+                      }}
+                      onMouseDown={(e) => {
+                        // Only prevent closing on actual click, not during scroll
+                        const target = e.target as HTMLElement;
+                        if (target.tagName === 'BUTTON') {
+                          e.stopPropagation();
+                        }
+                      }}
+                      onClick={(e) => {
+                        // Prevent closing when clicking inside dropdown
+                        e.stopPropagation();
+                      }}
                     >
-                      {filteredCountries.map((country) => (
-                        <button
-                          key={country}
-                          type="button"
-                          onClick={() => handleCountrySelect(country)}
-                          className="w-full text-left px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer first:rounded-t-md last:rounded-b-md"
-                          onMouseDown={(e) => {
-                            e.preventDefault(); // Prevent input blur
-                          }}
-                        >
-                          {country}
-                        </button>
-                      ))}
+                      <div className="py-1">
+                        {filteredCountries.map((country) => (
+                          <button
+                            key={country}
+                            type="button"
+                            onClick={() => handleCountrySelect(country)}
+                            className="w-full text-left px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer focus:bg-accent focus:outline-none"
+                            onMouseDown={(e) => {
+                              // Prevent input blur only on actual click
+                              e.preventDefault();
+                              e.stopPropagation();
+                            }}
+                          >
+                            {country}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>

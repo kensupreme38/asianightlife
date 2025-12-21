@@ -319,7 +319,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const socialLinks: SocialLink[] = [
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@anlasianightlife",
+      href: "https://youtube.com/@asianightlifeanl",
       label: "YouTube",
     },
     {
@@ -568,7 +568,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
                     {/* Telegram */}
                     <a
-                      href="https://t.me/asianightlifesg"
+                      href="https://t.me/asianightlifeanl"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary"
@@ -584,7 +584,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                       <div className="flex flex-col min-w-0">
                         <span className="font-medium text-sm">{t('header.telegram')}</span>
                         <span className="text-xs text-muted-foreground">
-                          @asianightlifesg
+                          @asianightlifeanl
                         </span>
                       </div>
                     </a>
@@ -654,6 +654,16 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   </div>
                 </div>
 
+                {/* Language Switcher */}
+                <div className="mb-1">
+                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
+                    Language
+                  </h2>
+                  <div className="py-1 px-2">
+                    <LanguageSwitcher />
+                  </div>
+                </div>
+
                 {/* Theme Switcher */}
                 <div className="mb-1">
                   <h2 className="text-sm font-semibold mb-0.5 font-headline">
@@ -669,16 +679,6 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                     <span className="text-sm text-muted-foreground">
                       {t('common.toggleTheme')}
                     </span>
-                  </div>
-                </div>
-
-                {/* Language Switcher */}
-                <div className="mb-1">
-                  <h2 className="text-sm font-semibold mb-0.5 font-headline">
-                    Language
-                  </h2>
-                  <div className="py-1 px-2">
-                    <LanguageSwitcher />
                   </div>
                 </div>
 

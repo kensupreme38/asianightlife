@@ -13,6 +13,12 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
   
+  // Skip locale prefixing for /auth routes (OAuth callbacks don't need locale)
+  if (pathname.startsWith('/auth')) {
+    const supabaseResponse = await updateSession(request);
+    return supabaseResponse;
+  }
+  
   // First handle i18n routing - this handles locale detection and redirects
   const intlResponse = intlMiddleware(request);
   

@@ -1,8 +1,8 @@
 {
   "common": {
     "home": "Home",
-    "djVoting": "DJ Voting",
-    "employee": "Employee",
+    "djVoting": "DJs (ranking)",
+    "employee": "ANL members",
     "search": "Search",
     "searchPlaceholder": "Search for venues, areas...",
     "searchVenues": "Search for venues...",
@@ -45,14 +45,14 @@
     "title": "Booking Guide",
     "seeDetailedGuide": "See detailed guide",
     "chooseVenue": "CHOOSE A VENUE",
-    "chooseVenueDesc": "Thousands of discounted venues",
+    "chooseVenueDesc": "Thousands of venues",
     "bookByPhone": "BOOK BY PHONE",
     "bookOnline": "BOOK ONLINE",
     "visitWebsite": "Visit Website",
     "confirmation": "CONFIRMATION",
     "confirmationDesc": "Confirmation from Asia Night Life.SG operator",
     "experience": "EXPERIENCE",
-    "experienceDesc": "Experience the service"
+    "experienceDesc": "Enjoy your experience"
   },
   "bookingForm": {
     "makeBooking": "Make a Booking",
@@ -68,8 +68,8 @@
     "person": "Person",
     "people": "People",
     "locationBranch": "Location / Shop Branch / Enquiry",
-    "locationPlaceholder": "Enter location or branch (optional)",
-    "referralCode": "Referral Code ( Optional )",
+    "locationPlaceholder": "Enter location or branch (preferred)",
+    "referralCode": "Referral Code ( Preferred )",
     "referralPlaceholder": "Enter referral code",
     "submitBooking": "Submit Booking",
     "pleaseSelectDateTime": "Please select both date and time for your booking",
@@ -82,8 +82,8 @@
     "numberOfPeopleLabel": "Number of People",
     "locationBranchLabel": "Location/Branch",
     "referralCodeLabel": "Referral Code",
-    "referralEmployee": "Referral Employee",
-    "employeePhone": "Employee Phone",
+    "referralEmployee": "Referral Team Member",
+    "employeePhone": "Team Member Phone",
     "linkCopied": "Link copied to clipboard!",
     "shareFailed": "Sharing failed, link copied to clipboard!",
     "couldNotShare": "Could not share or copy link."
@@ -189,11 +189,23 @@
     "go": "Go"
   },
   "employee": {
-    "employeeProfile": "Employee Profile",
-    "createEmployee": "Create Employee",
-    "editEmployeeProfile": "Edit Employee Profile",
-    "viewProfileInfo": "View your employee profile information",
-    "updateProfileInfo": "Update your employee profile information",
-    "addNewEmployee": "Add a new employee to the system with complete profile information"
+    "employeeProfile": "ANL Team Member Profile",
+    "createEmployee": "Join as ANL Team Member",
+    "editEmployeeProfile": "Edit Team Member Profile",
+    "viewProfileInfo": "View your ANL team member profile information",
+    "updateProfileInfo": "Update your ANL team member profile information",
+    "addNewEmployee": "Join as an ANL team member with complete profile information",
+    "emailDescription": "Team member's email address for communication",
+    "fullNameDescription": "Team member's full legal name",
+    "dateOfBirthDescription": "Team member's date of birth (you can easily select year and month)",
+    "genderDescription": "Team member's gender",
+    "addressDescription": "Team member's residential address (optional)",
+    "updateProfile": "Update Profile",
+    "mustLogin": "You must be logged in to join as an ANL team member",
+    "profileUpdated": "Team member profile updated successfully!",
+    "profileCreated": "Team member profile created successfully!",
+    "profileUpdateFailed": "Failed to update team member profile",
+    "profileCreateFailed": "Failed to create team member profile",
+    "editProfile": "Edit Profile"
   }
 }
