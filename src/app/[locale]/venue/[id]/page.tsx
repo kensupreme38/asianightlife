@@ -1,9 +1,10 @@
 import VenueDetailClient from "@/components/venue/VenueDetailClient";
 import type { Metadata } from "next";
 import { ktvData } from "@/lib/data";
+import { generateHreflangAlternates } from "@/lib/seo";
 
 type VenueDetailPageProps = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string; locale: string }>;
 };
 
 export default async function VenueDetailPage({ params }: VenueDetailPageProps) {
@@ -19,27 +20,31 @@ export default async function VenueDetailPage({ params }: VenueDetailPageProps) 
 export async function generateMetadata(
   { params }: VenueDetailPageProps
 ): Promise<Metadata> {
-  const { id } = await params;
+  const { id, locale } = await params;
   const v = ktvData.find((x) => x.id.toString() === id);
 
   if (!v) {
-    return { title: "Venue not found" };
+    const path = `/${locale}/venue/${id}`;
+    return { 
+      title: "Venue not found",
+      alternates: generateHreflangAlternates(path),
+    };
   }
 
   const title = `${v.name} – ${v.category} in ${v.country}`;
   const description =
     v.description || `Book ${v.name} at ${v.address}. Discover pricing, hours, and amenities.`;
   const ogImage = v.main_image_url;
-  const url = `/venue/${id}`;
+  const path = `/${locale}/venue/${id}`;
 
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: generateHreflangAlternates(path),
     openGraph: {
       title,
       description,
-      url,
+      url: path,
       type: "article",
       images: ogImage ? [ogImage] : undefined,
     },

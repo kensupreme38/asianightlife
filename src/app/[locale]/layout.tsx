@@ -3,6 +3,22 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import ClientLayout from '@/components/layout/ClientLayout';
+import { generateHreflangAlternates } from '@/lib/seo';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const path = `/${locale}`;
+  
+  return {
+    metadataBase: new URL("https://asianightlife.sg"),
+    alternates: generateHreflangAlternates(path),
+  };
+}
 
 export default async function LocaleLayout({
   children,

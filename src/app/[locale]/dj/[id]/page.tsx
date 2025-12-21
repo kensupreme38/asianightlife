@@ -1,15 +1,17 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DJDetailClient from "@/components/dj/DJDetailClient";
+import { generateHreflangAlternates } from "@/lib/seo";
 
 interface DJDetailPageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string; locale: string }>;
 }
 
 export async function generateMetadata({
   params,
 }: DJDetailPageProps): Promise<Metadata> {
-  const { id } = await params;
+  const { id, locale } = await params;
+  const path = `/${locale}/dj/${id}`;
 
   try {
     const response = await fetch(
@@ -20,6 +22,7 @@ export async function generateMetadata({
     if (!response.ok) {
       return {
         title: "DJ Not Found - Asia Night Life",
+        alternates: generateHreflangAlternates(path),
       };
     }
 
@@ -28,15 +31,18 @@ export async function generateMetadata({
     return {
       title: `${dj.name} - DJ Profile | Asia Night Life`,
       description: dj.bio || `View ${dj.name}'s DJ profile and vote`,
+      alternates: generateHreflangAlternates(path),
       openGraph: {
         title: `${dj.name} - DJ Profile`,
         description: dj.bio || `View ${dj.name}'s DJ profile and vote`,
         images: dj.image_url ? [dj.image_url] : undefined,
+        type: "profile",
       },
     };
   } catch (error) {
     return {
       title: "DJ Profile - Asia Night Life",
+      alternates: generateHreflangAlternates(path),
     };
   }
 }
