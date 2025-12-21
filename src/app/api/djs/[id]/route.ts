@@ -153,3 +153,188 @@ export async function GET(
   }
 }
 
+export async function PUT(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const supabase = await createClient();
+
+    // Check if user is authenticated
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+
+    const { id } = await params;
+    const djId = parseInt(id, 10);
+
+    if (isNaN(djId)) {
+      return NextResponse.json(
+        { error: "Invalid DJ ID" },
+        { status: 400 }
+      );
+    }
+
+    // Check if DJ exists and belongs to user
+    const { data: dj, error: djError } = await supabase
+      .from("djs")
+      .select("id, user_id")
+      .eq("id", djId)
+      .single();
+
+    if (djError || !dj) {
+      return NextResponse.json(
+        { error: "DJ not found" },
+        { status: 404 }
+      );
+    }
+
+    if (dj.user_id !== user.id) {
+      return NextResponse.json(
+        { error: "Forbidden: You can only update your own DJ profile" },
+        { status: 403 }
+      );
+    }
+
+    const body = await request.json();
+    const { name, image_url, bio, genres, country, status, is_active } = body;
+
+    const updateData: any = {};
+
+    if (name !== undefined) {
+      if (name.trim().length === 0) {
+        return NextResponse.json(
+          { error: "Name cannot be empty" },
+          { status: 400 }
+        );
+      }
+      updateData.name = name.trim();
+    }
+
+    if (image_url !== undefined) updateData.image_url = image_url;
+    if (bio !== undefined) updateData.bio = bio;
+    if (genres !== undefined) updateData.genres = genres;
+    if (country !== undefined) updateData.country = country;
+    if (status !== undefined) {
+      if (!["active", "inactive", "pending"].includes(status)) {
+        return NextResponse.json(
+          { error: "Invalid status. Must be 'active', 'inactive', or 'pending'" },
+          { status: 400 }
+        );
+      }
+      updateData.status = status;
+    }
+    if (is_active !== undefined) updateData.is_active = is_active;
+
+    // Update DJ profile
+    const { data: updatedDJ, error: updateError } = await supabase
+      .from("djs")
+      .update(updateData)
+      .eq("id", djId)
+      .select()
+      .single();
+
+    if (updateError) {
+      console.error("Error updating DJ profile:", updateError);
+      return NextResponse.json(
+        { error: "Failed to update DJ profile" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      ...updatedDJ,
+      id: updatedDJ.id.toString(),
+    });
+  } catch (error) {
+    console.error("Error in PUT /api/djs/[id]:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const supabase = await createClient();
+
+    // Check if user is authenticated
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+
+    const { id } = await params;
+    const djId = parseInt(id, 10);
+
+    if (isNaN(djId)) {
+      return NextResponse.json(
+        { error: "Invalid DJ ID" },
+        { status: 400 }
+      );
+    }
+
+    // Check if DJ exists and belongs to user
+    const { data: dj, error: djError } = await supabase
+      .from("djs")
+      .select("id, user_id")
+      .eq("id", djId)
+      .single();
+
+    if (djError || !dj) {
+      return NextResponse.json(
+        { error: "DJ not found" },
+        { status: 404 }
+      );
+    }
+
+    if (dj.user_id !== user.id) {
+      return NextResponse.json(
+        { error: "Forbidden: You can only delete your own DJ profile" },
+        { status: 403 }
+      );
+    }
+
+    // Soft delete: set is_active to false and status to inactive
+    const { error: updateError } = await supabase
+      .from("djs")
+      .update({
+        is_active: false,
+        status: "inactive",
+      })
+      .eq("id", djId);
+
+    if (updateError) {
+      console.error("Error deleting DJ profile:", updateError);
+      return NextResponse.json(
+        { error: "Failed to delete DJ profile" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true, message: "DJ profile deleted" });
+  } catch (error) {
+    console.error("Error in DELETE /api/djs/[id]:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
