@@ -55,7 +55,7 @@ const getCategories = (t: any) => [
   { id: "all", name: t('home.all'), icon: Music },
   // Nightlife
   { id: "Night market", name: "Night market", icon: Utensils },
-  { id: "Karaoke", name: "Karaoke", icon: Mic },
+  { id: "KTV", name: "KTV", icon: Mic },
   { id: "Nightclub / clubbing", name: "Nightclub / clubbing", icon: Radio },
   { id: "Live house / Beer club", name: "Live house / Beer club", icon: Beer },
   { id: "Pub", name: "Pub", icon: Beer },
