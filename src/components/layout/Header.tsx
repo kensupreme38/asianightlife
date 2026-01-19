@@ -423,7 +423,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               {isDropdownOpen && suggestions.length > 0 && (
                 <div
                   data-suggestion-dropdown
-                  className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md"
+                  className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md max-h-[400px] overflow-hidden"
                   onMouseDown={(e) => {
                     // Prevent input from losing focus when clicking on dropdown
                     e.preventDefault();
@@ -434,9 +434,23 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                       setIsDropdownOpen(false);
                     }
                   }}
+                  onWheel={(e) => {
+                    // Prevent page scroll when scrolling inside dropdown
+                    const target = e.currentTarget;
+                    const scrollableElement = target.querySelector('[cmdk-list]') as HTMLElement;
+                    if (scrollableElement) {
+                      const { scrollTop, scrollHeight, clientHeight } = scrollableElement;
+                      const isAtTop = scrollTop === 0;
+                      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+                      
+                      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+                        e.preventDefault();
+                      }
+                    }
+                  }}
                 >
-                  <Command shouldFilter={false}>
-                    <CommandList className="max-h-[300px]">
+                  <Command shouldFilter={false} className="max-h-[400px] flex flex-col">
+                    <CommandList className="max-h-[300px] overflow-y-auto overflow-x-hidden">
                       <CommandGroup
                         heading={
                           debouncedInput && debouncedInput.length > 0
@@ -767,7 +781,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
             {isDropdownOpen && suggestions.length > 0 && (
               <div
                 data-suggestion-dropdown-mobile
-                className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md"
+                className="absolute top-full left-0 right-0 z-50 mt-1 rounded-md border bg-popover text-popover-foreground shadow-md max-h-[400px] overflow-hidden"
                 onMouseDown={(e) => {
                   // Prevent input from losing focus when clicking on dropdown
                   e.preventDefault();
@@ -778,9 +792,23 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                     setIsDropdownOpen(false);
                   }
                 }}
+                onWheel={(e) => {
+                  // Prevent page scroll when scrolling inside dropdown
+                  const target = e.currentTarget;
+                  const scrollableElement = target.querySelector('[cmdk-list]') as HTMLElement;
+                  if (scrollableElement) {
+                    const { scrollTop, scrollHeight, clientHeight } = scrollableElement;
+                    const isAtTop = scrollTop === 0;
+                    const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+                    
+                    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+                      e.preventDefault();
+                    }
+                  }
+                }}
               >
-                <Command shouldFilter={false}>
-                  <CommandList className="max-h-[300px]">
+                <Command shouldFilter={false} className="max-h-[400px] flex flex-col">
+                  <CommandList className="max-h-[300px] overflow-y-auto overflow-x-hidden">
                     <CommandGroup
                       heading={
                         debouncedInput && debouncedInput.length > 0

@@ -13,7 +13,7 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
+      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground [&_[cmdk-list]]:overflow-y-auto",
       className,
     )}
     {...props}
@@ -59,10 +59,29 @@ CommandInput.displayName = CommandPrimitive.Input.displayName;
 const CommandList = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>
->(({ className, ...props }, ref) => (
+>(({ className, onWheel, ...props }, ref) => (
   <CommandPrimitive.List
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
+    onWheel={(e) => {
+      // Prevent page scroll when scrolling inside CommandList
+      const target = e.currentTarget;
+      const { scrollTop, scrollHeight, clientHeight } = target;
+      const isAtTop = scrollTop === 0;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+      
+      // Only prevent default if we're at the boundary and trying to scroll further
+      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+        e.preventDefault();
+        e.stopPropagation();
+      } else {
+        // Stop propagation to prevent page scroll while scrolling inside
+        e.stopPropagation();
+      }
+      
+      // Call original onWheel if provided
+      onWheel?.(e);
+    }}
     {...props}
   />
 ));
