@@ -5,14 +5,14 @@ import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
 import QuickCallButton from '@/components/layout/QuickCallButton';
 import ScrollRestoration from '@/components/layout/ScrollRestoration';
 import SmoothScroll from '@/components/layout/SmoothScroll';
-import SnowEffect from '@/components/layout/SnowEffect';
+import RedEnvelopeEffect from '@/components/layout/RedEnvelopeEffect';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <SmoothScroll />
       <ScrollRestoration />
-      <SnowEffect />
+      <RedEnvelopeEffect />
       {children}
       <FloatingContactBar />
       <ScrollToTopButton />
