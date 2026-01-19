@@ -8970,5 +8970,145 @@ NagaWorld is Cambodia's premier integrated resort and entertainment complex loca
 - Phone: +65 8280 8072`,
     hours: "24/7",
   },
+  {
+    id: 186,
+    name: "Karaoke BOSS VILLA KTV - 132 Đường Số 9A",
+    main_image_url:
+      "https://cdn.hstatic.net/products/1000268128/karaoke-vung-tau-8_7c2b324673784c1dbd5453d1593b0cc0_master.jpg",
+    images: [
+      "https://cdn.hstatic.net/products/1000268128/karaoke-vung-tau-8_7c2b324673784c1dbd5453d1593b0cc0_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/image-27_2f2ffcbe90734c53a9167c0d4302e8bd_master.png",
+      "https://cdn.hstatic.net/products/1000268128/6168b1d5127ecf20966f_fc9be0bf32bf4d779ddb6f520deb076d_master_3cd18d17d1d14f8fb2e4ddbc6140d882_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/947c275d-karaoke-trung-hoa-1_66b428b7579d421f8a0067b603e4cd84_master.jpg",
+      "https://cdn.hstatic.net/products/1000268128/quan-karaoke-sai-gon-1_06e9c728e5624f3ca16bcc7ce1a896b7_master.jpg",
+    ],
+    address:
+      "132 Đường số 9A, KDC Trung Sơn, Xã Bình Hưng, Huyện Bình Chánh, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Karaoke BOSS VILLA KTV - 132 Đường Số 9A
+Karaoke BOSS VILLA KTV is a luxury entertainment venue located at 132 Đường số 9A in the prestigious Trung Son residential area of Binh Chanh District, Ho Chi Minh City. This premium karaoke destination stands as a symbol of luxury and elegance in the "rich neighborhood" of Trung Son, offering a royal villa-style architectural experience with world-class amenities.
+
+## Highlights
+- **Royal Villa Architecture**: Luxurious royal villa design with elegant and opulent interiors
+- **Premium Location**: Situated on the main bustling street of Trung Son residential area
+- **Spacious Private Rooms**: Extremely wide rooms designed as individual luxurious artistic spaces
+- **Digital Audio System**: Top-tier digital audio system with authentic, rich, and powerful sound
+- **Smart Lighting System**: Programmable intelligent lighting with LED matrix and laser scanning effects
+- **Bottle Service**: Premium bottle service with high-end spirits, champagne, and imported wines
+- **Fine Dining**: Rich food menu with artfully presented dishes and fresh fruits
+- **Professional Staff**: Well-trained, courteous, and attentive service team
+
+## Venue Features
+- **Grand Entrance**: Gold-plated carved wall reliefs, crystal chandeliers, and premium velvet sofas
+- **Private Rooms**: Each room is an artistic luxury space providing absolute privacy
+- **Perfect for**: Important partner meetings, luxurious birthday parties, and upscale family gatherings
+- **Premium Sound System**: Large-capacity digital audio with deep, solid bass and professional microphones
+- **Light Effects**: Continuously changing LED matrix and laser scanning lights synchronized with music
+- **Modern Amenities**: WiFi, car parking, and card payment accepted
+
+## Operating Hours
+- **Monday - Sunday**: 12:00 PM - 04:00 AM
+
+## Address
+132 Đường số 9A, KDC Trung Sơn, Xã Bình Hưng, Huyện Bình Chánh, Thành phố Hồ Chí Minh, Vietnam
+
+## Contact
+- Phone: +65 8280 8072
+- For reservations, call +65 8280 8072 for fast and convenient booking assistance`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 187,
+    name: "Karaoke Atlantis - 31-33 Đề Thám",
+    main_image_url:
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710087925267_72dfb7b1c1294cabab5f9f4023085e9a.jpg",
+    images: [
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710087925267_72dfb7b1c1294cabab5f9f4023085e9a.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710091147545_8b89b01f7b06feb4498c047ee97ae2ba.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710090954523_d68af9561d69f2f528967f46d9429501.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710090828040_a69d5c9822f82cf5eb50e837a7c5cf17.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710090652548_4d940d65bb0872023f7a35b0d0ac3b74.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710090366733_c94e3e6c5b86334924d9e6560aef905b.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710090251387_a07462f3ad92e6585b07da0fce0db664.jpg",
+      "https://hcmc-ktv.com/wp-content/uploads/2025/06/z6710088859927_c4be921fd59bcbe769e97db533d97196.jpg",
+    ],
+    address: "31-33 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Karaoke Atlantis - 31-33 Đề Thám
+Karaoke Atlantis is a luxurious and modern entertainment venue located in the heart of District 1, Ho Chi Minh City. With elegant design, professional sound system, and vibrant atmosphere, this venue promises unforgettable entertainment experiences.
+
+## Highlights
+- **Modern & Elegant Space**: Sophisticated design with rooms styled in various themes. Each room features harmonious lighting, creating a warm yet luxurious atmosphere
+- **Premium Sound System**: High-quality audio system that delivers clear and vibrant sound, allowing you to showcase your singing voice at its best
+- **Vibrant Atmosphere**: Energetic and exciting atmosphere perfect for all kinds of celebrations
+- **Soundproof Rooms**: Well-insulated karaoke rooms allow you to enjoy your favorite songs without disturbing others
+- **Spacious Design**: Large rooms suitable for organizing birthday parties, gatherings, or meeting friends
+
+## Perfect For
+- Birthday parties and celebrations
+- Group gatherings with friends
+- Relaxing after stressful work days
+- Corporate events
+
+## Operating Hours
+- **Daily**: 12:00 PM - 04:00 AM
+
+## Address
+31-33 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh, Vietnam`,
+    hours: "12:00 PM - 04:00 AM (Daily)",
+  },
+  {
+    id: 188,
+    name: "Karaoke Kim Tước - Golden Jazz KTV",
+    main_image_url:
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-1.jpg?v=1766569375423",
+    images: [
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-1.jpg?v=1766569375423",
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-2.jpg?v=1766569370727",
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-3.jpg?v=1766569370727",
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-4.jpg?v=1766569375423",
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-5.jpg?v=1766569351520",
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-6.jpg?v=1766569352687",
+      "https://bizweb.dktcdn.net/100/493/789/products/hinh-anh-karaoke-kim-tuoc-golden-jazz-ktv-90-hung-vuong-quan-5-7.jpg?v=1766569353723",
+    ],
+    address: "90 Hùng Vương, Quận 5, TP.HCM",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Karaoke Kim Tước - Golden Jazz KTV
+Karaoke Kim Tước – Golden Jazz KTV is a premium entertainment destination located in District 5, Ho Chi Minh City, at 90 Hùng Vương – a central location with easy access. With elegant style, high-quality sound system, and premium VIP room facilities, Kim Tước is an ideal choice for hosting guests, gathering with friends, birthdays, and private parties.
+
+## Highlights
+- **Luxurious & Private VIP Rooms**: Well-soundproofed VIP karaoke rooms with elegant, private spaces
+- **Premium Sound System**: Clear, powerful sound with sensitive microphones that don't feedback. Rich music library updated continuously
+- **Professional Service**: Well-trained staff providing quick, courteous service with room setup support
+- **Versatile Capacity**: Accommodates small to large groups
+- **Perfect for**: Hosting guests, meeting partners, organizing parties, birthday celebrations, and private entertainment
+
+## Why Book VIP Room in Advance?
+During evenings and weekends, Golden Jazz KTV Kim Tước is often fully booked. Booking in advance helps you:
+- Secure beautiful VIP rooms
+- Avoid waiting or room unavailability
+- Better control your time and experience
+- Better service for large groups or hosting guests
+
+## Operating Hours
+- **Daily**: Check with venue for operating hours
+
+## Address
+90 Hùng Vương, Quận 5, TP.HCM, Vietnam
+
+## Contact
+- **Hotline VIP Booking**: +65 8280 8072
+- Contact in advance to reserve beautiful rooms, especially during peak hours and weekends`,
+    hours: "Check with venue",
+  },
 ];
 
