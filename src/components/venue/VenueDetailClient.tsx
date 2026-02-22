@@ -10,7 +10,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
-import { SimilarVenues } from "@/components/venue/SimilarVenues";
 import { RelatedVenues } from "@/components/venue/RelatedVenues";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -201,22 +200,13 @@ const VenueDetailClient = ({ id }: { id: string }) => {
             <VenueImageMasonry images={galleryImages} />
           </section>
 
-          {/* Similar Venues Section */}
-          <section aria-label="Similar venues">
-            <SimilarVenues
-              currentVenueId={venue.id.toString()}
-              category={venue.category}
-              country={venue.country}
-            />
-          </section>
-
-          {/* Related Venues Section - Additional internal linking */}
+          {/* Related Venues Section - Better for SEO with internal linking */}
           <section aria-label="Related venues" className="mt-8">
             <RelatedVenues
               currentVenueId={venue.id.toString()}
               category={venue.category}
               country={venue.country}
-              limit={6}
+              initialLimit={6}
             />
           </section>
 

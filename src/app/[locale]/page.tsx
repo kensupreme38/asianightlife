@@ -60,6 +60,26 @@ export default function Page() {
     },
   } as const;
 
+  // Add ItemList schema for better SEO - helps Google understand the venue listings
+  const itemListLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Entertainment Venues in Asia",
+    description: "Discover top KTVs, Clubs, and Live Houses across Singapore, Vietnam, Thailand, and Malaysia",
+    numberOfItems: 100,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "NightClub",
+          name: "Premium Entertainment Venues",
+          description: "Browse our curated selection of nightlife venues",
+        }
+      }
+    ]
+  } as const;
+
   return (
     <>
       <Suspense fallback={<Loading />}>
@@ -68,6 +88,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
       />
     </>
   );

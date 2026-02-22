@@ -9110,5 +9110,164 @@ During evenings and weekends, Golden Jazz KTV Kim Tước is often fully booked.
 - Contact in advance to reserve beautiful rooms, especially during peak hours and weekends`,
     hours: "Check with venue",
   },
+  {
+    id: 189,
+    name: "ADM Club Da Nang",
+    main_image_url:
+      "https://chillvietnam.com/wp-content/uploads/2023/05/adm-club-da-nang-1685186113-1024x667.jpg",
+    images: [
+      "https://chillvietnam.com/wp-content/uploads/2023/05/adm-club-da-nang-1685186114-1024x683.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2023/05/adm-club-da-nang-1685356583.jpg",
+      "https://chillvietnam.com/wp-content/uploads/2023/05/adm-club-da-nang-1685186775-1024x683.jpg",
+    ],
+    address: "Lô 1-A9.4, Khu công viên Bắc Đại tướng niệm, Đà Nẵng, Vietnam",
+    country: "Vietnam",
+    phone: "Contact venue",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About ADM Club Da Nang
+ADM Club is one of the largest entertainment venues in Da Nang, Vietnam, offering an exceptional clubbing experience that goes beyond imagination. The venue opened in early 2024 and features world-class audio technology with a flagship CODA Audio system installed by Viet KTV Electronics Company.
+
+## Venue Features
+- **World-Class Sound System**: 20 AiRAY line array modules, 9 SCP dual 18-inch subwoofers, and 4 SC2-F dual 15-inch bass extensions
+- **Premium Audio Technology**: Powered by 6 LINUS14 amplifiers and 1 LINUS10C amplifier
+- **International DJ Sets**: Regular performances by international DJs
+- **Laser Shows**: Spectacular laser light shows
+- **Elegant Atmosphere**: Luxurious and classic interior design
+- **Diverse Drink Menu**: Rich cocktail selection with classic and unique creations
+
+## Highlights
+- One of the largest bars in Vietnam
+- State-of-the-art CODA Audio system for immersive sound experience
+- Healthy and safe entertainment environment
+- Professional staff and talented artists
+- Electrical atmosphere with excellent music taste
+- Located in Bắc Đại tướng memorial park area
+
+## Perfect For
+- Music enthusiasts seeking premium sound quality
+- International DJ performance lovers
+- Groups looking for upscale nightlife experience
+- Visitors exploring Da Nang's entertainment scene
+- Special celebrations and events
+
+## Operating Hours
+- **Daily**: 7:30 PM - 3:00 AM
+- **Alternative hours**: 8:00 PM - 12:00 AM (varies by day)
+
+## Address
+Lô 1-A9.4, Khu công viên Bắc Đại tướng niệm, Đà Nẵng, Vietnam
+
+## Reviews
+Guests praise the venue for its excellent music selection, impressive staff and artists, elegant background, diverse drink menu, and safe, comfortable atmosphere.`,
+    hours: "7:30 PM - 3:00 AM (Daily)",
+  },
+  {
+    id: 190,
+    name: "For You Club Da Nang",
+    main_image_url:
+      "https://vietnamnightlife.com/uploads/images/2025/04/1743950373-multi_product20-foryoucluboverview12.jpg.webp",
+    images: [
+      "https://vietnamnightlife.com/uploads/images/2025/04/1743950374-multi_product20-foryoucluboverview13.jpg.webp",
+      "https://vietnamnightlife.com/uploads/images/2025/04/1743950374-multi_product20-foryoucluboverview14.jpg.webp",
+      "https://vietnamnightlife.com/uploads/images/2025/04/1743950373-multi_product20-foryoucluboverview2.jpg.webp",
+      "https://vietnamnightlife.com/uploads/images/2025/04/1743950373-multi_product20-foryoucluboverview3.jpg.webp",
+      "https://vietnamnightlife.com/uploads/images/2025/04/1743950373-multi_product20-foryoucluboverview4.jpg.webp",
+    ],
+    address: "52-55 Trần Văn Trứ, Phước Ninh, Hải Châu, Đà Nẵng 550000",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About For You Club Da Nang
+For You Club is a fresh addition to Da Nang's vibrant nightlife scene, offering an energetic atmosphere with top-notch music and modern décor. Located in the heart of Hai Chau district, this club has quickly become a favorite among both locals and tourists seeking an unforgettable night out.
+
+## Venue Features
+- **Vibrant Lighting Setup**: State-of-the-art lighting system creates perfect party vibes
+- **Modern Décor**: Contemporary design with stylish interiors
+- **Energetic Atmosphere**: High-energy environment perfect for dancing
+- **Professional Sound System**: Quality audio equipment for immersive experience
+- **Enthusiastic Staff**: Friendly team that sometimes out-dances the guests
+
+## Highlights
+- Fresh and newly opened venue with modern facilities
+- Special programs and themed events regularly
+- Central location in Hai Chau district with easy access
+- Mix of EDM, house, and popular music genres
+- Spacious dance floor for party lovers
+- Professional DJ performances
+
+## Perfect For
+- Young crowds seeking energetic nightlife
+- Groups celebrating special occasions
+- Dance enthusiasts and party lovers
+- Visitors exploring Da Nang's club scene
+- Weekend night outs with friends
+
+## Operating Hours
+- **Daily**: 8:00 PM - 3:00 AM
+
+## Address
+52-55 Trần Văn Trứ, Phước Ninh, Hải Châu, Đà Nẵng 550000, Vietnam
+
+## Contact
+- **Hotline**: +65 8280 8072`,
+    hours: "8:00 PM - 3:00 AM (Daily)",
+  },
+  {
+    id: 191,
+    name: "Sugar Social Club Da Nang",
+    main_image_url:
+      "https://9club.vn/wp-content/uploads/2025/11/Sugar-Social-Club-1.jpg",
+    images: [
+      "https://9club.vn/wp-content/uploads/2025/11/Sugar-Social-Club-2.jpg",
+      "https://9club.vn/wp-content/uploads/2025/11/Sugar-Social-Club-3.jpg",
+      "https://9club.vn/wp-content/uploads/2025/11/Sugar-Social-Club-4.jpg",
+      "https://9club.vn/wp-content/uploads/2025/11/Sugar-Social-Club-5.jpg",
+      "https://9club.vn/wp-content/uploads/2025/11/Sugar-Social-Club-6.jpg",
+    ],
+    address: "100 Yên Bái, Phước Ninh, Hải Châu, Đà Nẵng 550000",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Sugar Social Club Da Nang
+Sugar Social Club is a premier nightlife destination in Da Nang, offering an electrifying atmosphere where vibrant energy meets sophisticated entertainment. Located in the heart of Hai Chau district, this club provides an unforgettable experience with world-class music, stunning visuals, and exceptional service.
+
+## Venue Features
+- **State-of-the-Art Sound System**: Premium audio equipment for immersive sound experience
+- **Dynamic Lighting**: Advanced LED and laser lighting systems
+- **Spacious Dance Floor**: Large area perfect for dancing and socializing
+- **VIP Areas**: Exclusive sections for premium guests
+- **Professional DJ Performances**: Regular sets by talented local and international DJs
+- **Modern Interior Design**: Stylish and contemporary décor
+
+## Highlights
+- Premier nightlife venue in Da Nang
+- High-energy atmosphere with top-tier entertainment
+- Professional and attentive staff
+- Central location in Hai Chau district
+- Mix of EDM, house, hip-hop, and popular music genres
+- Regular themed events and special programs
+- Sophisticated ambiance perfect for celebrations
+
+## Perfect For
+- Party enthusiasts seeking premium nightlife
+- Groups celebrating special occasions
+- Music lovers and dance enthusiasts
+- Visitors exploring Da Nang's club scene
+- Weekend night outs and social gatherings
+- VIP experiences and exclusive events
+
+## Operating Hours
+- **Daily**: 8:30 PM - 4:00 AM
+
+## Address
+100 Yên Bái, Phước Ninh, Hải Châu, Đà Nẵng 550000, Vietnam
+
+## Contact
+- **Hotline**: +65 8280 8072`,
+    hours: "8:30 PM - 4:00 AM (Daily)",
+  },
 ];
 

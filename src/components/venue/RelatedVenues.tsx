@@ -1,17 +1,19 @@
 'use client';
 
+import { useState } from "react";
 import { VenueCard } from "@/components/home/VenueCard";
 import { ktvData } from "@/lib/data";
 import { useTranslations } from 'next-intl';
 import { Link } from "@/i18n/routing";
 import { Venue } from "@/hooks/use-venues";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface RelatedVenuesProps {
   currentVenueId: string;
   category?: string;
   country?: string;
-  limit?: number;
+  initialLimit?: number;
 }
 
 /**
@@ -23,12 +25,13 @@ export const RelatedVenues = ({
   currentVenueId,
   category,
   country,
-  limit = 6,
+  initialLimit = 6,
 }: RelatedVenuesProps) => {
   const t = useTranslations();
+  const [showAll, setShowAll] = useState(false);
 
-  // Find related venues
-  const relatedVenues = ktvData
+  // Find all related venues
+  const allRelatedVenues = ktvData
     .filter((venue) => {
       if (venue.id.toString() === currentVenueId) return false;
       
@@ -47,7 +50,6 @@ export const RelatedVenues = ({
       // No filter, show random venues
       return true;
     })
-    .slice(0, limit)
     .map(
       (v): Venue => ({
         ...v,
@@ -59,9 +61,12 @@ export const RelatedVenues = ({
       })
     );
 
-  if (relatedVenues.length === 0) {
+  if (allRelatedVenues.length === 0) {
     return null;
   }
+
+  const displayedVenues = showAll ? allRelatedVenues : allRelatedVenues.slice(0, initialLimit);
+  const hasMore = allRelatedVenues.length > initialLimit;
 
   return (
     <section className="border-t border-border/40 py-8" aria-labelledby="related-venues-heading">
@@ -94,10 +99,23 @@ export const RelatedVenues = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {relatedVenues.map((venue) => (
+          {displayedVenues.map((venue) => (
             <VenueCard key={venue.id} venue={venue} />
           ))}
         </div>
+
+        {hasMore && !showAll && (
+          <div className="text-center mt-8">
+            <Button
+              onClick={() => setShowAll(true)}
+              variant="outline"
+              className="gap-2"
+            >
+              Show More ({allRelatedVenues.length - initialLimit} more venues)
+              <ChevronDown className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
 
         <div className="text-center mt-8">
           <Link
