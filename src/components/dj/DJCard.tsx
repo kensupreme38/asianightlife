@@ -58,12 +58,13 @@ export const DJCard = ({ dj, onVote, hasVoted = false, isAuthenticated = false }
       <Link
         href={`/dj/${dj.id}`}
         className="block flex-1 flex flex-col"
+        prefetch={true}
       >
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
           <SimpleImage
             src={dj.image_url || ""}
-            alt={dj.name}
+            alt={`${dj.name} - DJ profile${dj.country ? ` from ${dj.country}` : ''}${dj.genres && dj.genres.length > 0 ? ` specializing in ${dj.genres.join(', ')}` : ''}. Rank #${dj.rank || 'N/A'}, ${dj.votes_count || 0} votes.`}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             fallback="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=800&fit=crop&q=80"

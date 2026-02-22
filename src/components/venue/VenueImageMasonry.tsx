@@ -20,7 +20,7 @@ const MasonryImage = ({ src, index, openLightbox }: { src: string, index: number
             {isLoading && <Skeleton className="absolute inset-0 w-full h-full rounded-lg" />}
             <Image
                 src={src}
-                alt={`Venue gallery image ${index + 1}`}
+                alt={`Venue gallery image ${index + 1} - Interior view, amenities, or venue atmosphere`}
                 width={500}
                 height={500}
                 loading="lazy"
@@ -93,7 +93,7 @@ export const VenueImageMasonry = ({ images }: VenueImageMasonryProps) => {
             <div className="relative w-full h-full">
               <Image
                 src={uniqueImages[selectedImageIndex]}
-                alt={`Venue gallery image ${selectedImageIndex + 1}`}
+                alt={`Venue gallery image ${selectedImageIndex + 1} - Detailed view of venue interior, amenities, or atmosphere`}
                 fill
                 priority
                 className="object-contain"

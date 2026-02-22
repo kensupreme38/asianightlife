@@ -12,6 +12,7 @@ import { DJ } from "./DJCard";
 import { Link } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { useMemo, useCallback } from "react";
 import { Separator } from "@/components/ui/separator";
@@ -209,7 +210,7 @@ export default function DJDetailClient({ id }: DJDetailClientProps) {
           <div className="absolute inset-0">
             <SimpleImage
               src={dj.image_url || ""}
-              alt={dj.name}
+              alt={`${dj.name} - DJ hero banner${dj.country ? ` from ${dj.country}` : ''}`}
               fill
               className="object-cover scale-105 transition-transform duration-700"
               fallback="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=600&fit=crop&q=80"
@@ -221,6 +222,17 @@ export default function DJDetailClient({ id }: DJDetailClientProps) {
           </div>
           
           <div className="relative z-10 container px-3 py-8 md:py-12">
+            {/* Breadcrumb Navigation */}
+            <ScrollReveal animation="fade-up" delay={0} threshold={0.2}>
+              <Breadcrumbs 
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'DJs', href: '/dj' },
+                  { label: dj.name, href: `/dj/${id}` }
+                ]}
+              />
+            </ScrollReveal>
+            
             {/* Back Button */}
             <ScrollReveal animation="fade-up" delay={0} threshold={0.2}>
               <Button
@@ -243,7 +255,7 @@ export default function DJDetailClient({ id }: DJDetailClientProps) {
                       <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl neon-glow">
                         <SimpleImage
                           src={dj.image_url || ""}
-                          alt={dj.name}
+                          alt={`${dj.name} - Professional DJ${dj.country ? ` from ${dj.country}` : ''}${dj.genres && dj.genres.length > 0 ? ` specializing in ${dj.genres.join(', ')}` : ''}`}
                           fill
                           className="object-cover"
                           fallback="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=800&fit=crop&q=80"

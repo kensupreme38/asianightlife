@@ -40,6 +40,10 @@ next-env.d.ts
 .genkit/*
 .env*
 
+# Account handover document (contains sensitive credentials)
+# Uncomment the line below if you want to exclude it from version control
+# docs/ACCOUNT_HANDOVER.md
+
 # firebase
 firebase-debug.log
 firestore-debug.log

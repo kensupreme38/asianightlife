@@ -318,6 +318,12 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
 
   const socialLinks: SocialLink[] = [
     {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
+      href: "https://t.me/asianightlifeanl",
+      label: "Telegram",
+      className: "dark:invert",
+    },
+    {
       icon: Youtube,
       href: "https://youtube.com/@asianightlifeanl",
       label: "YouTube",
@@ -360,7 +366,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
       <div className="container flex h-16 items-center justify-between">
         {/* --- Desktop View --- */}
         <div className="hidden md:flex items-center space-x-2">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" prefetch={true} className="flex items-center space-x-2">
             <div className="h-16 w-16 bg-gradient-primary flex items-center justify-center overflow-hidden">
               <Logo width={64} height={64} className="object-cover" />
             </div>
@@ -377,6 +383,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={true}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
                   isActive ? "text-foreground" : "text-muted-foreground"
                 }`}
@@ -652,6 +659,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                         <Link
                           key={`mobile-${link.href}`}
                           href={link.href}
+                          prefetch={true}
                           className={`flex items-center gap-2 py-1 px-2 rounded-md transition-colors hover:bg-secondary ${
                             isActive
                               ? "text-foreground"

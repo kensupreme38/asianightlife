@@ -64,7 +64,7 @@ export const HeroBanner = () => {
               >
                 <Image 
                   src={banner.image} 
-                  alt={banner.title}
+                  alt={`${banner.title} - ${banner.subtitle}. Premium entertainment venues in Southeast Asia.`}
                   fill
                   className="object-cover"
                   priority={index === 0}

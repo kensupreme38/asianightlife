@@ -43,6 +43,19 @@ npm run lint
 
 Deploy link sẽ được cập nhật sau khi deploy lên Vercel.
 
+## 📚 Documentation
+
+Bộ tài liệu kỹ thuật chi tiết đã được tạo trong thư mục `/docs`:
+
+- **[Technical Documentation](./docs/TECHNICAL_DOCUMENTATION.md)** - Comprehensive technical documentation
+- **[API Documentation](./docs/API_DOCUMENTATION.md)** - Complete API reference
+- **[Quick Start Guide](./docs/QUICK_START_GUIDE.md)** - Quick guide to get started
+- **[Deployment Guide](./docs/DEPLOYMENT_GUIDE.md)** - Detailed deployment guide
+- **[Account Handover](./docs/ACCOUNT_HANDOVER.md)** - Account credentials handover (⚠️ Confidential)
+- **[Documentation Index](./docs/README.md)** - Documentation index
+
+Xem [docs/README.md](./docs/README.md) để biết thêm chi tiết.
+
 ## 📝 License
 
 Private project - All rights reserved.

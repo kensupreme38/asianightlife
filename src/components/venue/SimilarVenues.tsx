@@ -38,11 +38,15 @@ export const SimilarVenues = ({
       })
     );
 
+  if (similarVenues.length === 0) {
+    return null;
+  }
+
   return (
-    <section className="border-t border-border/40 w-full overflow-hidden">
+    <section className="border-t border-border/40 w-full overflow-hidden" aria-labelledby="similar-venues-heading">
       <div className="py-8">
         <div className="container mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 font-headline">
+          <h2 id="similar-venues-heading" className="text-2xl md:text-3xl font-bold mb-4 font-headline">
             <span className="gradient-text">{t('venue.similarVenues')}</span>
           </h2>
           <p className="text-muted-foreground">

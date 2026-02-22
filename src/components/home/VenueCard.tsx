@@ -63,12 +63,13 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
         href={`/venue/${venue.id}`}
         className="block flex-1 flex flex-col"
         onClick={handleVenueClick}
+        prefetch={true}
       >
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
           <SimpleImage
             src={venue.main_image_url}
-            alt={venue.name}
+            alt={`${venue.name} - ${venue.category} in ${venue.country}. ${venue.address}. ${isOpen ? 'Currently open' : 'Currently closed'}.`}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />

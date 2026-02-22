@@ -45,7 +45,7 @@ const nextConfig: NextConfig = {
       "@radix-ui/react-tooltip"
     ],
   },
-  // Headers for CORS and image loading
+  // Headers for CORS, security, and SEO
   async headers() {
     return [
       {
@@ -59,6 +59,33 @@ const nextConfig: NextConfig = {
             key: "Cross-Origin-Opener-Policy",
             value: "same-origin-allow-popups",
           },
+          // Security headers for SEO and security
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+      // Cache static assets
+      {
+        source: "/:path*\\.(ico|jpg|jpeg|png|gif|webp|svg|woff|woff2|ttf|eot)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
     ];
@@ -67,10 +94,17 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+  // Performance optimizations for Core Web Vitals
+  poweredByHeader: false,
+  reactStrictMode: true,
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle size
     if (!dev && !isServer) {
+      // Enable tree shaking
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
+      
       config.optimization.splitChunks = {
         chunks: "all",
         minSize: 20000,
@@ -93,6 +127,18 @@ const nextConfig: NextConfig = {
             name: "lucide",
             chunks: "all",
             priority: 20,
+          },
+          framerMotion: {
+            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+            name: "framer-motion",
+            chunks: "async", // Lazy load framer-motion
+            priority: 15,
+          },
+          recharts: {
+            test: /[\\/]node_modules[\\/]recharts[\\/]/,
+            name: "recharts",
+            chunks: "async", // Lazy load recharts
+            priority: 15,
           },
           common: {
             name: "common",

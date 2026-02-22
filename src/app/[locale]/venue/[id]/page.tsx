@@ -8,11 +8,11 @@ type VenueDetailPageProps = {
 };
 
 export default async function VenueDetailPage({ params }: VenueDetailPageProps) {
-  const { id } = await params;
+  const { id, locale } = await params;
   return (
     <>
       <VenueDetailClient id={id} />
-      <StructuredData id={id} />
+      <StructuredData id={id} locale={locale} />
     </>
   );
 }
@@ -31,9 +31,10 @@ export async function generateMetadata(
     };
   }
 
-  const title = `${v.name} – ${v.category} in ${v.country}`;
+  const title = `${v.name} – ${v.category} in ${v.country} | Asia Night Life`;
   const description =
-    v.description || `Book ${v.name} at ${v.address}. Discover pricing, hours, and amenities.`;
+    v.description || 
+    `Book ${v.name} - ${v.category} in ${v.country}. Located at ${v.address}. ${v.price ? `Price range: ${v.price}.` : ''} Discover pricing, hours, amenities, and book your entertainment venue now at Asia Night Life.`;
   const ogImage = v.main_image_url;
   const path = `/${locale}/venue/${id}`;
 
@@ -57,19 +58,26 @@ export async function generateMetadata(
   };
 }
 
-async function StructuredData({ id }: { id: string }) {
+async function StructuredData({ id, locale }: { id: string; locale: string }) {
   const v = ktvData.find((x) => x.id.toString() === id);
   if (!v) return null;
+
+  const baseUrl = "https://asianightlife.sg";
+  const venueUrl = `${baseUrl}/${locale}/venue/${id}`;
 
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: v.name,
     image: [v.main_image_url, ...(v.images || [])].filter(Boolean).slice(0, 5),
-    address: v.address,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: v.address,
+      addressCountry: v.country,
+    },
     telephone: v.phone || undefined,
     priceRange: v.price,
-    url: `https://asianightlife.sg/venue/${id}`,
+    url: venueUrl,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: 4.8,
@@ -85,19 +93,19 @@ async function StructuredData({ id }: { id: string }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://asianightlife.sg/",
+        item: `${baseUrl}/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Venues",
-        item: "https://asianightlife.sg/",
+        item: `${baseUrl}/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: v.name,
-        item: `https://asianightlife.sg/venue/${id}`,
+        item: venueUrl,
       },
     ],
   } as const;

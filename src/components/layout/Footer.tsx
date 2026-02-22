@@ -15,6 +15,11 @@ export const Footer = () => {
     className?: string;
   }> = [
     {
+      name: "Telegram",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
+      href: "https://t.me/asianightlifeanl",
+    },
+    {
       name: "YouTube",
       icon: "https://cdn-icons-png.flaticon.com/128/3670/3670147.png",
       href: "https://youtube.com/@asianightlifeanl",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -9,7 +9,17 @@ import { getImage } from "@/lib/placeholder-images";
 import ClientLayout from "@/components/layout/ClientLayout";
 import { AuthProvider } from "@/contexts/auth-context";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 const heroBannerImage = getImage("hero-banner");
 const imagePreviewUrl = `${heroBannerImage?.imageUrl}&v=1`;
@@ -27,6 +37,39 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+    apple: "/logo.jpg",
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Asia Night Life",
+  },
+  // Viewport and mobile optimization
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: "cover",
+  },
+  // Robots default
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  // Verification (add your actual verification codes)
+  verification: {
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+    // yahoo: "your-yahoo-verification-code",
   },
   openGraph: {
     title: "Asia Night Life - Premier Entertainment Venue Booking",
@@ -35,14 +78,34 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     locale: "en_SG",
+    siteName: "Asia Night Life",
     images: [imagePreviewUrl],
   },
   twitter: {
     card: "summary_large_image",
     site: "@lovable_dev",
+    creator: "@lovable_dev",
     images: [imagePreviewUrl],
   },
+  // Additional metadata
+  category: "entertainment",
+  classification: "Business Directory",
+  // Note: Preconnect and DNS-prefetch are handled automatically by Next.js
+  // for Google Fonts and can be added via next.config.ts for other domains
 };
+
+// Resource hints for performance optimization
+export function generateResourceHints() {
+  return (
+    <>
+      {/* Preconnect to external domains for faster loading */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://mpkaqnmgytneercsqqyu.storage.supabase.co" />
+      <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    </>
+  );
+}
 
 export default function RootLayout({
   children,
@@ -51,7 +114,48 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${inter.className}`} suppressHydrationWarning>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const pathname = window.location.pathname;
+                const localeMatch = pathname.match(/^\/(en|vi|zh|id|ja|ko|ru|th)/);
+                const locale = localeMatch ? localeMatch[1] : 'en';
+                const langMap = {
+                  en: 'en',
+                  vi: 'vi',
+                  zh: 'zh-Hans',
+                  id: 'id',
+                  ja: 'ja',
+                  ko: 'ko',
+                  ru: 'ru',
+                  th: 'th'
+                };
+                document.documentElement.lang = langMap[locale] || 'en';
+              })();
+            `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if ('serviceWorker' in navigator && typeof window !== 'undefined') {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js')
+                      .then(function(registration) {
+                        console.log('Service Worker registered:', registration.scope);
+                      })
+                      .catch(function(error) {
+                        console.log('Service Worker registration failed:', error);
+                      });
+                  });
+                }
+              })();
+            `,
+          }}
+        />
         <Providers>
           <AuthProvider>
             <TooltipProvider>
@@ -72,6 +176,10 @@ export default function RootLayout({
               logo: "https://asianightlife.sg/favicon.ico",
               sameAs: [
                 "https://t.me/asianightlifeanl",
+                "https://youtube.com/@asianightlifeanl",
+                "https://www.instagram.com/asianightlife.sg",
+                "https://www.tiktok.com/@asianightlife.sg",
+                "https://www.facebook.com/profile.php?id=61581713529692",
               ],
             }),
           }}

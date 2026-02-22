@@ -162,11 +162,14 @@ export default function DJClient() {
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery="" onSearchChange={() => {}} />
-      <main>
-        <DJHeroBanner />
+      <main id="main-content">
+        <section aria-label="DJ hero banner">
+          <DJHeroBanner />
+        </section>
         
         {/* DJ Grid */}
-        <DJGrid
+        <section aria-label="DJ listings">
+          <DJGrid
           djs={djs}
           onVote={handleVote}
           isLoading={isLoading}
@@ -197,6 +200,7 @@ export default function DJClient() {
           hasActiveFilters={hasActiveFilters}
           onClearFilters={clearFilters}
         />
+        </section>
       </main>
       <Footer />
     </div>

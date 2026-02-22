@@ -33,24 +33,30 @@ const HomeComponent = memo(
     return (
       <div className="min-h-screen bg-background">
         <Header searchQuery={searchQuery} onSearchChange={onSearchChange} />
-        <main>
-          <HeroBanner />
+        <main id="main-content">
+          <section aria-label="Hero banner">
+            <HeroBanner />
+          </section>
           <ScrollReveal animation="fade-up" delay={100} threshold={0.2}>
-            <CountrySelector
-              selectedCountry={selectedCountry}
-              onCountryChange={onCountryChange}
-              selectedCity={selectedCity}
-              onCityChange={onCityChange}
-              selectedCategory={selectedCategory}
-              onCategoryChange={onCategoryChange}
-            />
+            <section aria-label="Country and category selector">
+              <CountrySelector
+                selectedCountry={selectedCountry}
+                onCountryChange={onCountryChange}
+                selectedCity={selectedCity}
+                onCityChange={onCityChange}
+                selectedCategory={selectedCategory}
+                onCategoryChange={onCategoryChange}
+              />
+            </section>
           </ScrollReveal>
-          <VenueGrid
-            selectedCountry={selectedCountry}
-            selectedCity={selectedCity}
-            selectedCategory={selectedCategory}
-            searchQuery={searchQuery}
-          />
+          <section aria-label="Venue listings">
+            <VenueGrid
+              selectedCountry={selectedCountry}
+              selectedCity={selectedCity}
+              selectedCategory={selectedCategory}
+              searchQuery={searchQuery}
+            />
+          </section>
           <ScrollReveal animation="fade-up" delay={100} threshold={0.2}>
             <LazyBookingGuide />
           </ScrollReveal>

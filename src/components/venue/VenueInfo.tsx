@@ -42,7 +42,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
   return (
     <div className="space-y-8">
       {/* Header Info */}
-      <div>
+      <header>
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
@@ -52,12 +52,13 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
                 className={`${
                   isOpen ? "bg-green-500 hover:bg-green-600" : ""
                 } text-white`}
+                aria-label={`Venue is ${isOpen ? 'open' : 'closed'}`}
               >
-                <Clock className="h-3 w-3 mr-1" />
+                <Clock className="h-3 w-3 mr-1" aria-hidden="true" />
                 {isOpen ? "Open" : "Closed"}
               </Badge>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 font-headline">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 font-headline" itemProp="name">
               {venue.name}
             </h1>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
@@ -102,20 +103,20 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               {isOpen ? "Follow Us On Telegram" : "Temporarily Closed"}
             </Button>
         </div>
-      </div>
+      </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Description */}
-        <div className="card-elevated p-6 rounded-xl">
-          <h2 className="text-xl font-bold mb-4 font-headline">Description</h2>
-          <div className="text-muted-foreground leading-relaxed prose prose-sm max-w-none prose-headings:font-headline prose-headings:text-foreground prose-strong:text-foreground prose-strong:font-semibold">
+        <section className="card-elevated p-6 rounded-xl" aria-labelledby="description-heading">
+          <h2 id="description-heading" className="text-xl font-bold mb-4 font-headline">Description</h2>
+          <div className="text-muted-foreground leading-relaxed prose prose-sm max-w-none prose-headings:font-headline prose-headings:text-foreground prose-strong:text-foreground prose-strong:font-semibold" itemProp="description">
             <ReactMarkdown>{venue.description}</ReactMarkdown>
           </div>
-        </div>
+        </section>
 
         {/* Info */}
-        <div className="card-elevated p-6 rounded-xl">
-          <h3 className="text-lg font-bold mb-4 font-headline">Info</h3>
+        <section className="card-elevated p-6 rounded-xl" aria-labelledby="info-heading">
+          <h2 id="info-heading" className="text-lg font-bold mb-4 font-headline">Info</h2>
           <div className="space-y-4">
             <div className="space-y-2 text-muted-foreground">
               {typeof venue.hours === "string" ? (
@@ -177,7 +178,7 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               </>
             )}
           </div>
-        </div>
+        </section>
       </div>
 
       {/* Booking Form Dialog */}

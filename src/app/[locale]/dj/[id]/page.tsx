@@ -28,9 +28,13 @@ export async function generateMetadata({
 
     const dj = await response.json();
 
+    const title = `${dj.name} - DJ Profile${dj.country ? ` in ${dj.country}` : ''} | Asia Night Life`;
+    const description = dj.bio || 
+      `Discover ${dj.name}'s DJ profile${dj.country ? ` from ${dj.country}` : ''}${dj.genres && dj.genres.length > 0 ? ` specializing in ${dj.genres.join(', ')}` : ''}. View profile, vote, and see rankings on Asia Night Life's DJ voting platform.`;
+
     return {
-      title: `${dj.name} - DJ Profile | Asia Night Life`,
-      description: dj.bio || `View ${dj.name}'s DJ profile and vote`,
+      title,
+      description,
       alternates: generateHreflangAlternates(path),
       openGraph: {
         title: `${dj.name} - DJ Profile`,
@@ -47,9 +51,83 @@ export async function generateMetadata({
   }
 }
 
-export default async function DJDetailPage({ params }: DJDetailPageProps) {
-  const { id } = await params;
+async function DJStructuredData({ id, locale }: { id: string; locale: string }) {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/api/djs/${id}`,
+      { cache: "no-store" }
+    );
 
-  return <DJDetailClient id={id} />;
+    if (!response.ok) return null;
+
+    const dj = await response.json();
+    const baseUrl = "https://asianightlife.sg";
+    const djUrl = `${baseUrl}/${locale}/dj/${id}`;
+
+    const data = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: dj.name,
+      image: dj.image_url || undefined,
+      description: dj.bio || undefined,
+      url: djUrl,
+      jobTitle: "DJ",
+      worksFor: {
+        "@type": "Organization",
+        name: "Asia Night Life",
+      },
+    } as const;
+
+    const breadcrumbs = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${baseUrl}/${locale}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "DJs",
+          item: `${baseUrl}/${locale}/dj`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: dj.name,
+          item: djUrl,
+        },
+      ],
+    } as const;
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        />
+      </>
+    );
+  } catch (error) {
+    return null;
+  }
+}
+
+export default async function DJDetailPage({ params }: DJDetailPageProps) {
+  const { id, locale } = await params;
+
+  return (
+    <>
+      <DJDetailClient id={id} />
+      <DJStructuredData id={id} locale={locale} />
+    </>
+  );
 }
 

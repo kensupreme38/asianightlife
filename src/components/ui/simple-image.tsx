@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface SimpleImageProps {
   src: string;
@@ -30,6 +30,44 @@ export const SimpleImage = ({
 }: SimpleImageProps) => {
   const [imgSrc, setImgSrc] = useState(src || fallback || DEFAULT_PLACEHOLDER);
   const [hasError, setHasError] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(priority || loading === "eager");
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer for better lazy loading of external images
+  useEffect(() => {
+    if (shouldLoad || priority || loading === "eager") return;
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoad(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: "50px", // Start loading 50px before image enters viewport
+        threshold: 0.01,
+      }
+    );
+
+    const currentContainer = containerRef.current;
+    if (currentContainer) {
+      observer.observe(currentContainer);
+    }
+
+    return () => {
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
+      }
+      observer.disconnect();
+    };
+  }, [shouldLoad, priority, loading]);
 
   // Fallback for invalid src
   if (!src || src.trim() === "" || src === "/placeholder-dj.jpg") {
@@ -100,9 +138,25 @@ export const SimpleImage = ({
   const isExternal = imgSrc.startsWith("http");
   const isSupabase = imgSrc.includes("supabase.co");
   
+  // Don't render image until it should load (for lazy loading)
+  if (!shouldLoad && !priority && loading === "lazy") {
     return (
+      <div
+        ref={containerRef}
+        className={`bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center ${className}`}
+        style={fill ? { position: "absolute", inset: 0 } : { width, height }}
+      >
+        <div className="text-center p-4">
+          <div className="w-12 h-12 mx-auto bg-muted-foreground/20 rounded animate-pulse" />
+        </div>
+      </div>
+    );
+  }
+  
+  return (
+    <div ref={containerRef} className={fill ? "relative w-full h-full" : ""}>
       <Image
-      src={imgSrc}
+        src={imgSrc}
         alt={alt}
         fill={fill}
         width={fill ? undefined : width}
@@ -110,8 +164,9 @@ export const SimpleImage = ({
         className={className}
         loading={priority ? undefined : loading}
         priority={priority}
-      onError={handleError}
-      unoptimized={isExternal && !isSupabase}
+        onError={handleError}
+        unoptimized={isExternal && !isSupabase}
       />
-    );
+    </div>
+  );
 };

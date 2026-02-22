@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useMemo, useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
@@ -10,10 +11,33 @@ import { Footer } from "@/components/layout/Footer";
 import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { SimilarVenues } from "@/components/venue/SimilarVenues";
-import { VenueImageMasonry } from "@/components/venue/VenueImageMasonry";
-import { VisitUsMap } from "@/components/venue/VisitUsMap";
-import { BookingForm } from "@/components/venue/BookingForm";
+import { RelatedVenues } from "@/components/venue/RelatedVenues";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { Skeleton } from "@/components/ui/skeleton";
 import { ktvData } from "@/lib/data";
+
+// Dynamic imports for heavy components - only load when needed
+const VenueImageMasonry = dynamic(
+  () => import("@/components/venue/VenueImageMasonry").then((mod) => ({ default: mod.VenueImageMasonry })),
+  {
+    loading: () => <Skeleton className="h-64 w-full rounded-lg" />,
+    ssr: false, // Disable SSR for masonry layout
+  }
+);
+
+const VisitUsMap = dynamic(
+  () => import("@/components/venue/VisitUsMap").then((mod) => ({ default: mod.VisitUsMap })),
+  {
+    loading: () => <Skeleton className="h-96 w-full rounded-lg" />,
+  }
+);
+
+const BookingForm = dynamic(
+  () => import("@/components/venue/BookingForm").then((mod) => ({ default: mod.BookingForm })),
+  {
+    loading: () => null, // No loading state for modal
+  }
+);
 
 const VenueDetailClient = ({ id }: { id: string }) => {
   const t = useTranslations();
@@ -112,7 +136,18 @@ const VenueDetailClient = ({ id }: { id: string }) => {
     <div className="min-h-screen bg-background">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
-      <main className="container py-8 px-4 sm:px-8">
+      <main id="main-content" className="container py-8 px-4 sm:px-8">
+
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb">
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: venue.name, href: `/venue/${id}` }
+            ]}
+          />
+        </nav>
+        
         {/* Breadcrumb & Actions */}
         <div className="flex items-center justify-between mb-8">
           <Button 
@@ -140,48 +175,63 @@ const VenueDetailClient = ({ id }: { id: string }) => {
           </Button>
 
           <div className="flex gap-2">
-            <Button variant="ghost" size="icon" onClick={handleShare}>
+            <Button variant="ghost" size="icon" onClick={handleShare} aria-label="Share venue">
               <Share2 className="h-4 w-4" />
             </Button>
           </div>
         </div>
 
-        {/* Gallery */}
-        <div className="mb-8">
-          <VenueGallery images={galleryImages} venueName={venue.name} />
-        </div>
+        {/* Main Content */}
+        <article id="venue-content" itemScope itemType="https://schema.org/LocalBusiness">
+          {/* Gallery Section */}
+          <section className="mb-8" aria-label="Venue gallery">
+            <VenueGallery images={galleryImages} venueName={venue.name} />
+          </section>
 
-        {/* Venue Info */}
-        <div className="mb-12">
-          <VenueInfo venue={venue} />
-        </div>
+          {/* Venue Info Section */}
+          <section className="mb-12" aria-label="Venue information">
+            <VenueInfo venue={venue} />
+          </section>
 
-        {/* Masonry Gallery */}
-        <div className="card-elevated p-6 rounded-xl mb-12">
-          <h3 className="text-xl font-bold mb-4 font-headline">
-            Image Library
-          </h3>
-          <VenueImageMasonry images={galleryImages} />
-        </div>
+          {/* Image Library Section */}
+          <section className="card-elevated p-6 rounded-xl mb-12" aria-label="Image library">
+            <h2 className="text-xl font-bold mb-4 font-headline">
+              Image Library
+            </h2>
+            <VenueImageMasonry images={galleryImages} />
+          </section>
 
-        {/* Similar Venues */}
-        <SimilarVenues
-          currentVenueId={venue.id.toString()}
-          category={venue.category}
-          country={venue.country}
-        />
+          {/* Similar Venues Section */}
+          <section aria-label="Similar venues">
+            <SimilarVenues
+              currentVenueId={venue.id.toString()}
+              category={venue.category}
+              country={venue.country}
+            />
+          </section>
 
-        {/* Visit Us - Google Maps */}
-        <div className="mt-10">
-          <VisitUsMap
-            address={venue.address}
-            venueName={venue.name}
-            country={venue.country}
-            phone={venue.phone}
-            mapEmbedUrl={venue.mapEmbedUrl}
-            onOpenBooking={() => setBookingOpen(true)}
-          />
-        </div>
+          {/* Related Venues Section - Additional internal linking */}
+          <section aria-label="Related venues" className="mt-8">
+            <RelatedVenues
+              currentVenueId={venue.id.toString()}
+              category={venue.category}
+              country={venue.country}
+              limit={6}
+            />
+          </section>
+
+          {/* Contact & Location Section */}
+          <section className="mt-10" aria-label="Contact and location">
+            <VisitUsMap
+              address={venue.address}
+              venueName={venue.name}
+              country={venue.country}
+              phone={venue.phone}
+              mapEmbedUrl={venue.mapEmbedUrl}
+              onOpenBooking={() => setBookingOpen(true)}
+            />
+          </section>
+        </article>
       </main>
 
       <Footer />

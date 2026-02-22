@@ -92,41 +92,35 @@ export async function GET(
       );
     }
 
-    // Get votes count
+    // Get votes count for this DJ
     const { count: votesCount } = await supabase
       .from("votes")
       .select("*", { count: "exact", head: true })
       .eq("dj_id", djId);
 
-    // Calculate rank based on votes
-    // Get all active DJs with created_at
+    // Optimized: Get all votes in a single query and group by dj_id
+    // This avoids N+1 query problem
+    const { data: allVotes } = await supabase
+      .from("votes")
+      .select("dj_id");
+
+    // Get all active DJs
     const { data: allDJsWithData } = await supabase
       .from("djs")
       .select("id, created_at")
       .eq("is_active", true)
       .eq("status", "active");
 
-    // Get vote counts for all DJs
-    const allDJsWithVotes = await Promise.all(
-      (allDJsWithData || []).map(async (djItem: any) => {
-        const { count: djVotesCount } = await supabase
-          .from("votes")
-          .select("*", { count: "exact", head: true })
-          .eq("dj_id", djItem.id);
-        return {
-          id: djItem.id,
-          votes_count: djVotesCount || 0,
-          created_at: djItem.created_at,
-        };
-      })
-    );
+    // Count votes per DJ in JavaScript (single pass)
+    const votesByDj: Record<number, number> = {};
+    (allVotes || []).forEach((vote: any) => {
+      votesByDj[vote.dj_id] = (votesByDj[vote.dj_id] || 0) + 1;
+    });
 
     // Calculate rank: count how many DJs have more votes (not equal)
-    // DJs with equal votes share the same rank
     const currentVotes = votesCount || 0;
-    
-    const higherVotesCount = allDJsWithVotes.filter((djItem) => {
-      const itemVotes = djItem.votes_count || 0;
+    const higherVotesCount = (allDJsWithData || []).filter((djItem: any) => {
+      const itemVotes = votesByDj[djItem.id] || 0;
       // Only count DJs with strictly more votes
       return itemVotes > currentVotes;
     }).length;
