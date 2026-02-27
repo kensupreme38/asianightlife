@@ -9269,5 +9269,763 @@ Sugar Social Club is a premier nightlife destination in Da Nang, offering an ele
 - **Hotline**: +65 8280 8072`,
     hours: "8:30 PM - 4:00 AM (Daily)",
   },
+  // Bangkok KTVs
+  {
+    id: 192,
+    name: "Palazzo Athena KTV Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Palazzo Athena KTV Bangkok
+Palazzo Athena is a luxury KTV venue in Bangkok offering premium private rooms and professional service.
+
+## Highlights
+- Luxury KTV experience
+- Premium private rooms
+- Professional service
+- High-quality sound systems
+
+## Perfect For
+- Luxury karaoke experience
+- Private celebrations
+- VIP entertainment`,
+    hours: "6:00 PM - 3:00 AM",
+  },
+  {
+    id: 193,
+    name: "Ten10% (Tenpercent) KTV Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Ten10% (Tenpercent) KTV Bangkok
+Tenpercent is a luxury karaoke club in the heart of Bangkok, inspired by Korean KTV style. Features the largest rooms in Bangkok with services that meet every customer's needs.
+
+## Highlights
+- Korean KTV style design
+- Largest rooms in Bangkok
+- Luxury karaoke experience
+- Popular among Chinese and Koreans
+- Professional service
+- Modern facilities
+
+## Perfect For
+- Luxury karaoke seekers
+- Korean KTV experience
+- Large group celebrations
+- VIP entertainment`,
+    hours: "6:00 PM - 3:00 AM",
+  },
+  {
+    id: 194,
+    name: "Elite K25 KTV Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Thonglor 25, Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "VIP bookings from 10,000 THB",
+    description: `## About Elite K25 KTV Bangkok (Klub25)
+Klub25 offers the ultimate private party experience with exclusive KTV rooms featuring state-of-the-art karaoke systems from Korea, China, and Japan.
+
+## Highlights
+- State-of-the-art karaoke systems (Korea, China, Japan)
+- Diverse song selection
+- High-quality sound and visuals
+- Luxury private rooms
+- Professional service
+- Thonglor location
+
+## Perfect For
+- Private party celebrations
+- Luxury karaoke experience
+- Diverse music selection
+- VIP entertainment`,
+    hours: "6:00 PM - 3:00 AM",
+  },
+  {
+    id: 195,
+    name: "Sherbet Booze KTV Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "59 Soi Sukhumvit 63, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "First hour: 1,680-2,940 THB; Additional 30 min: 420 THB (non-members), 380 THB (members)",
+    description: `## About Sherbet Booze KTV Bangkok
+Sherbet is a stylish KTV club in Ekamai featuring vibrant decor, chic furnishings, and an upscale fashionable ambiance. Popular destination for nightlife enthusiasts.
+
+## Venue Features
+- Vibrant colors and stylish furnishings
+- Cutting-edge sound systems
+- Impressive lighting
+- Upscale and fashionable ambiance
+- Membership options available
+
+## Highlights
+- Ekamai location
+- Stylish and modern design
+- Quality sound and lighting
+- Membership benefits
+- Popular among locals and tourists
+
+## Perfect For
+- Stylish karaoke experience
+- Ekamai nightlife
+- Membership seekers
+- Upscale entertainment`,
+    hours: "6:00 PM - Late",
+  },
+  {
+    id: 196,
+    name: "The Pimp KTV Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "496 Rotchanamin Alley, Pracha Uthit Rd, Wang Thonglang, Bangkok 10310, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "VIP bookings from 10,000 THB",
+    description: `## About The Pimp KTV Bangkok
+The PIMP is Bangkok's ultimate nightlife experience, featuring luxury karaoke KTV rooms, live bands, beautiful Thai models, and unforgettable entertainment. One of the biggest clubs in Bangkok.
+
+## Venue Features
+- Luxury private KTV rooms
+- Thailand's best live bands
+- Beautiful Thai models
+- Pool party zone
+- Multiple room sizes
+- VIP services
+
+## Highlights
+- Ultimate Bangkok nightlife experience
+- Luxury karaoke rooms
+- Live entertainment and shows
+- Professional service
+- Perfect for bachelor parties
+- Private party venue
+
+## Perfect For
+- Ultimate nightlife experience
+- Bachelor parties
+- Private celebrations
+- VIP entertainment
+- Large group events
+
+## Operating Hours
+- Daily: 8:00 PM - Late (Closed on Buddhist holidays)`,
+    hours: "8:00 PM - Late (Daily)",
+  },
+  {
+    id: 197,
+    name: "Babylon KTV Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "KTV",
+    price: "Contact for pricing",
+    description: `## About Babylon KTV Bangkok
+Babylon is a premium KTV venue in Bangkok offering luxury private rooms and professional entertainment services.
+
+## Highlights
+- Premium KTV experience
+- Luxury private rooms
+- Professional service
+- Quality sound systems
+
+## Perfect For
+- Premium karaoke experience
+- Private celebrations
+- VIP entertainment`,
+    hours: "6:00 PM - 3:00 AM",
+  },
 ];
 
+// Bangkok Clubs
+export const clubData = [
+  {
+    id: 198,
+    name: "Tonic Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Tonic Bangkok
+Tonic is a vibrant nightclub in Bangkok offering an energetic atmosphere with top DJs and premium sound systems.
+
+## Highlights
+- Modern club atmosphere
+- Premium sound and lighting
+- Regular DJ performances
+- Vibrant nightlife experience
+
+## Perfect For
+- Party enthusiasts
+- Music lovers
+- Weekend celebrations`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 199,
+    name: "Terra Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Soi Thong Lo 6, 10110, Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Terra Bangkok
+Terra is a stylish nightclub located in the trendy Thonglor area, known for its sophisticated atmosphere and quality entertainment.
+
+## Highlights
+- Thonglor location
+- Sophisticated atmosphere
+- Quality music and entertainment
+- Trendy crowd
+
+## Perfect For
+- Thonglor nightlife explorers
+- Sophisticated party seekers
+- Weekend celebrations`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 200,
+    name: "EL'YSIUM Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About EL'YSIUM Bangkok
+EL'YSIUM is Bangkok's premier immersive nightclub featuring three distinct levels - underground, main stage, and rooftop sanctuary. Experience world-class DJs, state-of-the-art sound systems, and breathtaking panoramic views.
+
+## Three Levels of Paradise
+- **First Floor - The Underground**: Sophisticated energy, intimate lighting, curated beats
+- **Second Floor - The Main Stage**: Heart of the party with cutting-edge sound, mesmerizing LED displays
+- **Third Floor - The Rooftop**: Panoramic Bangkok skyline views, premium cocktails, elegant ambiance
+
+## Highlights
+- Three-level immersive experience
+- World-class DJ performances
+- State-of-the-art sound and lighting
+- Rooftop with skyline views
+- Premium bottle service
+- VIP treatment available
+
+## Perfect For
+- Immersive nightlife experiences
+- World-class entertainment seekers
+- Rooftop party lovers
+- VIP celebrations`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 201,
+    name: "Skylab (Topone) Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "278 Ratchadaphisek Rd, Huai Khwang, Bangkok 10310, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Skylab (Topone) Bangkok
+TopOne is one of Bangkok's largest and most popular nightclubs, featuring three floors with different vibes. Known for hosting Thailand's top DJs, models, dancers, and LED robot performances.
+
+## Venue Features
+- Three floors with different atmospheres
+- Capacity for large crowds
+- Professional sound and lighting systems
+- Regular themed rave parties
+- Space travel themed events
+
+## Highlights
+- One of Bangkok's biggest clubs
+- Thailand's top DJs and MCs
+- Model and dancer performances
+- LED robot shows
+- Young, hip crowd
+- Monthly massive rave parties
+
+## Perfect For
+- EDM enthusiasts
+- Large group celebrations
+- Rave party lovers
+- Young party crowd`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 202,
+    name: "Atlas Super Club Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "QH69+Q3C Huai Khwang, Bangkok 10310, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Atlas Super Club Bangkok
+Bangkok meets the world. The globally renowned superclub from Bali makes its debut in Bangkok, bringing together everything that defines an unforgettable night out.
+
+## Highlights
+- Elite DJ line-up featuring top international and Thai artists
+- ATLAS's iconic signature show created exclusively for Bangkok
+- World-class production custom-designed for ATLAS SUPER CLUB BANGKOK
+- Luxury VIP rooms with premium services
+- Privacy, exclusivity, and next-level nightlife experience
+
+## Perfect For
+- International club experience seekers
+- VIP luxury nightlife
+- World-class DJ performances
+- Exclusive celebrations`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 203,
+    name: "Muin Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "107 5th Fl., 503 Soi Sukhumvit 63, Watthana, Bangkok 10110, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "VIP bookings from 10,000 THB",
+    description: `## About Muin Bangkok
+MUIN, a famous Korean club, has landed in Thailand's lively Thonglor Ekamai area. Located on the 5th floor of Donki Mall, it features festival-like lights creating a vibrant atmosphere.
+
+## Venue Features
+- Korean-style club experience
+- 5th floor of Donki Mall location
+- Festival-like lighting and atmosphere
+- Cutting-edge sound systems
+- Impressive lighting design
+
+## Highlights
+- Famous Korean club concept
+- Thonglor Ekamai nightlife hotspot
+- Vibrant, electrifying atmosphere
+- Stylish and fashionable ambiance
+- Popular among locals and tourists
+- VIP booking options available
+
+## Perfect For
+- Korean club experience seekers
+- Thonglor nightlife enthusiasts
+- Upscale party atmosphere
+- VIP celebrations
+
+## Operating Hours
+- Monday-Sunday: 9:00 PM - 4:00 AM`,
+    hours: "9:00 PM - 4:00 AM (Daily)",
+  },
+  {
+    id: 204,
+    name: "Money Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Money Bangkok
+Money is a popular Bangkok nightclub known for staying open until morning, offering an extended party experience for night owls.
+
+## Highlights
+- Open until morning
+- Extended party hours
+- Energetic atmosphere
+- Popular late-night destination
+
+## Perfect For
+- Late-night party seekers
+- After-hours entertainment
+- Extended celebrations`,
+    hours: "9:00 PM - Morning",
+  },
+  {
+    id: 205,
+    name: "Void Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "ONE Complex, Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Void Bangkok
+VOID Club sits inside ONE Complex and delivers a night that feels closer to a music festival than a typical club experience. Combining cutting-edge visuals, world-class sound system, and unbeatable lineup of international DJs.
+
+## Highlights
+- Located in ONE Complex
+- Music festival-like experience
+- Cutting-edge visuals
+- World-class sound system
+- International DJ lineup
+- Custom-designed production
+- Elite entertainment experience
+
+## Perfect For
+- Music festival enthusiasts
+- International DJ performances
+- Premium club experience
+- Unforgettable nights`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 206,
+    name: "Onyx Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "RCA Alley, Bang Kapi, Huai Khwang, Bangkok 10310, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Onyx Bangkok
+ONYX Bangkok is one of the longest-running EDM clubs in the city, located in the RCA nightlife area. The venue operates as a large indoor club focused on electronic dance music.
+
+## Venue Features
+- Main stage area plays EDM (capacity 2,500 people)
+- 'The Odyssey' space at the back plays deep house, trance, and progressive music
+- Outdoor terrace with city views
+- Premium sound and lighting systems
+- Luxury party destination
+
+## Highlights
+- Longest-running EDM club in Bangkok
+- RCA nightlife area location
+- Multiple music zones
+- Large capacity venue
+- Outdoor terrace
+- Smart and elegant dress code
+
+## Perfect For
+- EDM enthusiasts
+- Large group celebrations
+- RCA nightlife explorers
+- Electronic music lovers
+
+## Operating Hours
+- Daily: 9:00 PM - 4:00 AM`,
+    hours: "9:00 PM - 4:00 AM (Daily)",
+  },
+  {
+    id: 207,
+    name: "577 Haus Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "396 Soi 63, Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About 577 Haus Bangkok
+Haus is a popular venue featuring a dark mood and sophisticated atmosphere. The venue serves Thai comfort dishes and offers sheesha on a large terrace.
+
+## Highlights
+- Dark, sophisticated ambiance
+- Large outdoor terrace
+- Sheesha service available
+- Thai comfort food menu
+- Signature cocktails
+- Popular with younger crowd
+
+## Perfect For
+- Relaxed nightlife atmosphere
+- Sheesha enthusiasts
+- Terrace dining and drinks
+- Social gatherings`,
+    hours: "Daily",
+  },
+  {
+    id: 208,
+    name: "What's Happened Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About What's Happened Bangkok
+What's Happened is a trendy Bangkok nightclub offering modern entertainment and vibrant atmosphere.
+
+## Highlights
+- Modern club atmosphere
+- Vibrant entertainment
+- Quality music and service
+
+## Perfect For
+- Trendy nightlife seekers
+- Modern club experience
+- Social celebrations`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 209,
+    name: "Upperhouse Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Upperhouse Bangkok
+Upperhouse is a sophisticated Bangkok nightclub offering upscale entertainment and premium service.
+
+## Highlights
+- Upscale atmosphere
+- Premium entertainment
+- Sophisticated crowd
+
+## Perfect For
+- Upscale nightlife
+- Premium celebrations
+- Sophisticated party seekers`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 210,
+    name: "Below Noah Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Below Noah Bangkok
+Below Noah is a unique underground-style club in Bangkok offering an intimate and energetic atmosphere.
+
+## Highlights
+- Underground atmosphere
+- Intimate setting
+- Energetic vibe
+
+## Perfect For
+- Underground club enthusiasts
+- Intimate party atmosphere
+- Alternative nightlife`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 211,
+    name: "Chupa BKK",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Chupa BKK
+Chupa BKK is a vibrant nightclub in Bangkok offering energetic entertainment and modern atmosphere.
+
+## Highlights
+- Vibrant atmosphere
+- Modern entertainment
+- Energetic crowd
+
+## Perfect For
+- Energetic nightlife
+- Modern club experience
+- Party enthusiasts`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 212,
+    name: "The Red Door Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About The Red Door Bangkok
+The Red Door is a stylish Bangkok nightclub offering sophisticated entertainment and quality service.
+
+## Highlights
+- Stylish atmosphere
+- Sophisticated entertainment
+- Quality service
+
+## Perfect For
+- Stylish nightlife
+- Sophisticated celebrations
+- Quality entertainment seekers`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 213,
+    name: "Tribe Sky Beach Club Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Tribe Sky Beach Club Bangkok
+Tribe Sky Beach Club offers a unique rooftop beach club experience in Bangkok with stunning views and beach-inspired atmosphere.
+
+## Highlights
+- Rooftop beach club concept
+- Stunning city views
+- Beach-inspired atmosphere
+- Pool and lounge areas
+
+## Perfect For
+- Rooftop party lovers
+- Beach club enthusiasts
+- Daytime to nighttime celebrations
+- Scenic views seekers`,
+    hours: "Daily",
+  },
+  {
+    id: 214,
+    name: "Flamenco Sky Bar Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Flamenco Sky Bar Bangkok
+Flamenco Sky Bar is a sophisticated rooftop venue offering panoramic Bangkok views with premium cocktails and entertainment.
+
+## Highlights
+- Rooftop sky bar
+- Panoramic city views
+- Premium cocktails
+- Sophisticated atmosphere
+
+## Perfect For
+- Rooftop bar enthusiasts
+- Scenic view lovers
+- Sophisticated celebrations
+- Cocktail connoisseurs`,
+    hours: "5:00 PM - Late",
+  },
+  {
+    id: 215,
+    name: "Escape Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Escape Bangkok
+Escape is a popular Bangkok nightclub offering energetic entertainment and vibrant atmosphere.
+
+## Highlights
+- Energetic atmosphere
+- Vibrant entertainment
+- Popular nightlife destination
+
+## Perfect For
+- Party enthusiasts
+- Energetic nightlife
+- Weekend celebrations`,
+    hours: "9:00 PM - Late",
+  },
+  {
+    id: 216,
+    name: "CoCo Chill Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About CoCo Chill Bangkok
+CoCo Chill offers a relaxed yet vibrant atmosphere perfect for socializing and enjoying Bangkok's nightlife.
+
+## Highlights
+- Chill atmosphere
+- Social environment
+- Relaxed vibe
+
+## Perfect For
+- Relaxed nightlife
+- Social gatherings
+- Chill party atmosphere`,
+    hours: "6:00 PM - Late",
+  },
+  {
+    id: 217,
+    name: "Veyla Ekkamai Bangkok",
+    main_image_url:
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    images: [],
+    address: "Ekkamai, Bangkok, Thailand",
+    country: "Thailand",
+    phone: "+65 8280 8072",
+    category: "Club",
+    price: "Contact for pricing",
+    description: `## About Veyla Ekkamai Bangkok
+Veyla is a trendy Ekkamai nightclub offering modern entertainment and stylish atmosphere.
+
+## Highlights
+- Ekkamai location
+- Modern atmosphere
+- Stylish entertainment
+- Trendy crowd
+
+## Perfect For
+- Ekkamai nightlife explorers
+- Modern club experience
+- Trendy party seekers`,
+    hours: "9:00 PM - Late",
+  },
+];
