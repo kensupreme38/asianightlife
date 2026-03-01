@@ -107,7 +107,7 @@ export const useVenues = ({
       .map((ktv): Venue => ({
         ...ktv,
         id: ktv.id.toString(),
-        slug: ktv.slug || generateSlug(ktv.name),
+        slug: (ktv as any).slug || generateSlug(ktv.name),
         rating: 4.5,
         status: "open" as const,
         imageHint: "ktv lounge",

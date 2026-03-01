@@ -8,6 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Venue } from "@/hooks/use-venues";
+import { generateSlug } from "@/lib/slug-utils";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -31,6 +32,7 @@ export const SimilarVenues = ({
       (v): Venue => ({
         ...v,
         id: v.id.toString(),
+        slug: generateSlug(v.name),
         rating: 4.5,
         status: "open" as const,
         imageHint: "ktv lounge",

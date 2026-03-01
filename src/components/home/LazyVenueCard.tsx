@@ -10,6 +10,7 @@ const VenueCard = lazy(() =>
 interface LazyVenueCardProps {
   venue: {
     id: string;
+    slug: string;
     name: string;
     main_image_url: string;
     imageHint?: string;
