@@ -14,6 +14,7 @@ import { RelatedVenues } from "@/components/venue/RelatedVenues";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ktvData } from "@/lib/data";
+import { generateSlug } from "@/lib/slug-utils";
 
 // Dynamic imports for heavy components - only load when needed
 const VenueImageMasonry = dynamic(
@@ -73,6 +74,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
       return {
         ...foundVenue,
         id: foundVenue.id.toString(),
+        slug: generateSlug(foundVenue.name),
         phone: foundVenue.phone || "",
         rating: 4.8,
         status: "open" as const,
@@ -142,7 +144,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
           <Breadcrumbs 
             items={[
               { label: 'Home', href: '/' },
-              { label: venue.name, href: `/venue/${id}` }
+              { label: venue.name, href: `/venue/${venue.slug}` }
             ]}
           />
         </nav>

@@ -12,6 +12,7 @@ import { usePathname } from "@/i18n/routing";
 interface VenueCardProps {
   venue: {
     id: string;
+    slug: string;
     name: string;
     main_image_url: string;
     imageHint?: string;
@@ -60,7 +61,7 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
     <MotionHover scale={1.02} y={-4} className="h-full">
     <div className="group card-elevated rounded-xl overflow-hidden hover-glow transition-all duration-300 h-full flex flex-col">
       <Link
-        href={`/venue/${venue.id}`}
+        href={`/venue/${venue.slug}`}
         className="block flex-1 flex flex-col"
         onClick={handleVenueClick}
         prefetch={true}

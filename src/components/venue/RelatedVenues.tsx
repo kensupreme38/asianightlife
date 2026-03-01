@@ -8,6 +8,7 @@ import { Link } from "@/i18n/routing";
 import { Venue } from "@/hooks/use-venues";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { generateSlug } from "@/lib/slug-utils";
 
 interface RelatedVenuesProps {
   currentVenueId: string;
@@ -54,6 +55,7 @@ export const RelatedVenues = ({
       (v): Venue => ({
         ...v,
         id: v.id.toString(),
+        slug: generateSlug(v.name),
         rating: 4.5,
         status: "open" as const,
         imageHint: "ktv lounge",

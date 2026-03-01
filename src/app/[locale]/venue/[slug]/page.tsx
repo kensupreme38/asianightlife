@@ -2,17 +2,23 @@ import VenueDetailClient from "@/components/venue/VenueDetailClient";
 import type { Metadata } from "next";
 import { ktvData } from "@/lib/data";
 import { generateHreflangAlternates } from "@/lib/seo";
+import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
 
 type VenueDetailPageProps = {
-  params: Promise<{ id: string; locale: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 };
 
 export default async function VenueDetailPage({ params }: VenueDetailPageProps) {
-  const { id, locale } = await params;
+  const { slug, locale } = await params;
+  
+  // Find venue by slug or ID (backward compatibility)
+  const venueId = findVenueIdBySlug(slug, ktvData);
+  const id = venueId?.toString() || slug;
+  
   return (
     <>
       <VenueDetailClient id={id} />
-      <StructuredData id={id} locale={locale} />
+      <StructuredData slug={slug} locale={locale} />
     </>
   );
 }
@@ -20,11 +26,15 @@ export default async function VenueDetailPage({ params }: VenueDetailPageProps) 
 export async function generateMetadata(
   { params }: VenueDetailPageProps
 ): Promise<Metadata> {
-  const { id, locale } = await params;
+  const { slug, locale } = await params;
+  
+  // Find venue by slug or ID (backward compatibility)
+  const venueId = findVenueIdBySlug(slug, ktvData);
+  const id = venueId?.toString() || slug;
   const v = ktvData.find((x) => x.id.toString() === id);
 
   if (!v) {
-    const path = `/${locale}/venue/${id}`;
+    const path = `/${locale}/venue/${slug}`;
     return { 
       title: "Venue not found",
       alternates: generateHreflangAlternates(path),
@@ -43,7 +53,8 @@ export async function generateMetadata(
     : descriptionText;
     
   const ogImage = v.main_image_url;
-  const path = `/${locale}/venue/${id}`;
+  const venueSlug = generateSlug(v.name);
+  const path = `/${locale}/venue/${venueSlug}`;
   
   // Generate keywords from venue data
   const keywords = [
@@ -87,12 +98,16 @@ export async function generateMetadata(
   };
 }
 
-async function StructuredData({ id, locale }: { id: string; locale: string }) {
+async function StructuredData({ slug, locale }: { slug: string; locale: string }) {
+  // Find venue by slug or ID (backward compatibility)
+  const venueId = findVenueIdBySlug(slug, ktvData);
+  const id = venueId?.toString() || slug;
   const v = ktvData.find((x) => x.id.toString() === id);
   if (!v) return null;
 
   const baseUrl = "https://asianightlife.sg";
-  const venueUrl = `${baseUrl}/${locale}/venue/${id}`;
+  const venueSlug = generateSlug(v.name);
+  const venueUrl = `${baseUrl}/${locale}/venue/${venueSlug}`;
 
   // Parse opening hours to schema.org format
   const parseOpeningHours = (hours: any) => {

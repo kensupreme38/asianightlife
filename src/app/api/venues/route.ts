@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { ktvData } from "@/lib/data";
+import { generateSlug } from "@/lib/slug-utils";
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -41,8 +42,13 @@ export async function GET(request: Request) {
 
     const total = filteredVenues.length;
 
-    // Apply pagination
-    const paginatedVenues = filteredVenues.slice(offset, offset + limit);
+    // Apply pagination and add slug to each venue
+    const paginatedVenues = filteredVenues
+      .slice(offset, offset + limit)
+      .map((venue) => ({
+        ...venue,
+        slug: generateSlug(venue.name),
+      }));
 
     return NextResponse.json(
       {

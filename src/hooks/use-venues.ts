@@ -2,9 +2,11 @@
 import { useMemo, useCallback } from "react";
 import { ktvData } from "@/lib/data";
 import { useDebounce } from "./use-debounce";
+import { generateSlug } from "@/lib/slug-utils";
 
 export interface Venue {
   id: string;
+  slug: string;
   name: string;
   main_image_url: string;
   imageHint?: string;
@@ -105,6 +107,7 @@ export const useVenues = ({
       .map((ktv): Venue => ({
         ...ktv,
         id: ktv.id.toString(),
+        slug: ktv.slug || generateSlug(ktv.name),
         rating: 4.5,
         status: "open" as const,
         imageHint: "ktv lounge",
