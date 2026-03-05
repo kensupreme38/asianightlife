@@ -9274,8 +9274,11 @@ Sugar Social Club is a premier nightlife destination in Da Nang, offering an ele
     id: 192,
     name: "Palazzo Athena KTV Bangkok",
     main_image_url:
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    images: [],
+      "https://itin-dev.wanderlogstatic.com/freeImage/iYfAHX54crlH8iIDnAVBzcw2UnTMjp5T",
+    images: [
+      "https://itin-dev.wanderlogstatic.com/freeImage/rLDoe0c5dFC4FaIpxD2zxuTsMqIex2Nt",
+      "https://itin-dev.wanderlogstatic.com/freeImage/sJQ5K3YPbGPmwznfy93kmHoQF3cCbLTe",
+    ],
     address: "Bangkok, Thailand",
     country: "Thailand",
     phone: "+65 8280 8072",
@@ -9300,8 +9303,12 @@ Palazzo Athena is a luxury KTV venue in Bangkok offering premium private rooms a
     id: 193,
     name: "Ten10% (Tenpercent) KTV Bangkok",
     main_image_url:
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    images: [],
+      "https://tenpercentbkk.com/wp-content/uploads/tenpercen-gallery3.webp",
+    images: [
+      "https://tenpercentbkk.com/wp-content/uploads/tenpercen-gallery4.webp",
+      "https://tenpercentbkk.com/wp-content/uploads/tenpercen-gallery1.webp",
+      "https://tenpercentbkk.com/wp-content/uploads/tenpercen-gallery2.webp",
+    ],
     address: "Bangkok, Thailand",
     country: "Thailand",
     phone: "+65 8280 8072",
@@ -9358,8 +9365,13 @@ Klub25 offers the ultimate private party experience with exclusive KTV rooms fea
     id: 195,
     name: "Sherbet Booze KTV Bangkok",
     main_image_url:
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    images: [],
+      "https://image.makewebeasy.net/makeweb/crop/nd1Up1oKY/Show/LINE_ALBUM_2025_7_3_250703_5.jpg?v=202405291424&x=2&y=0&w=2044&h=1365&rw=1920",
+    images: [
+      "https://image.makewebeasy.net/makeweb/crop/nd1Up1oKY/Show/LINE_ALBUM_2025_7_3_250703_7.jpg?v=202405291424&x=2&y=0&w=2044&h=1365&rw=1920",
+      "https://image.makewebeasy.net/makeweb/crop/nd1Up1oKY/Food/LINE_ALBUM_2025_7_3__1_250703_58.jpg?v=202405291424&x=0&y=334&w=2000&h=1333&rw=1920",
+      "https://image.makewebeasy.net/makeweb/crop/nd1Up1oKY/Food/LINE_ALBUM_2025_7_3__1_250703_8.jpg?v=202405291424&x=0&y=334&w=2000&h=1333&rw=1920",
+      "https://image.makewebeasy.net/makeweb/crop/nd1Up1oKY/Show/LINE_ALBUM_2025_7_3_250703_6.jpg?v=202405291424&x=2&y=0&w=2044&h=1365&rw=1920",
+    ],
     address: "59 Soi Sukhumvit 63, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",
     country: "Thailand",
     phone: "+65 8280 8072",
@@ -9393,8 +9405,12 @@ Sherbet is a stylish KTV club in Ekamai featuring vibrant decor, chic furnishing
     id: 196,
     name: "The Pimp KTV Bangkok",
     main_image_url:
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    images: [],
+      "https://cdn.prod.website-files.com/5f972aac086b5ecfd0538315/6400892c60a1355f7b30ff69_sexy_thai_party_girls_the_pimp_bangkok_gentlemen_clubs_thailand.webp",
+    images: [
+      "https://cdn.prod.website-files.com/5f972aac086b5ecfd0538315/64590c9ddff2dce8fee18e52_cute_thai_girl_french_maid_costume_the_pimp_bangkok.webp",
+      "https://cdn.prod.website-files.com/5f972aac086b5ecfd0538315/64590c9d81f894b242603129_thai_bikini_model_the_pimp_bangkok.webp",
+      "https://cdn.prod.website-files.com/5f972aac086b5ecfd0538315/64590c9d4a9b73368fce4284_beautiful_busty_thai_girl_the_pimp_bangkok_holding_shots.webp",
+    ],
     address: "496 Rotchanamin Alley, Pracha Uthit Rd, Wang Thonglang, Bangkok 10310, Thailand",
     country: "Thailand",
     phone: "+65 8280 8072",
