@@ -131,7 +131,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
     return null;
   }
 
-  const galleryImages = [venue.main_image_url, ...venue.images];
+  const galleryImages = [venue.main_image_url, ...(venue.images || [])].filter(Boolean);
 
   return (
     <div className="min-h-screen bg-background">
