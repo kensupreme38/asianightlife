@@ -16,15 +16,22 @@ export function generateSlug(name: string, id?: number): string {
 }
 
 /**
- * Find venue by slug - matches against generated slug from venue name
+ * Find venue by slug - matches against venue.slug (if set) or generated slug from venue name
  * Returns the venue ID if found
  */
-export function findVenueIdBySlug(slug: string, venues: Array<{ id: number; name: string }>): number | null {
-  // First try: exact slug match
-  const exactMatch = venues.find(v => generateSlug(v.name) === slug);
+export function findVenueIdBySlug(
+  slug: string,
+  venues: Array<{ id: number; name: string; slug?: string }>
+): number | null {
+  // First try: exact match with venue.slug (custom slug from data)
+  const slugMatch = venues.find((v) => v.slug === slug);
+  if (slugMatch) return slugMatch.id;
+
+  // Second try: exact slug match from generated name
+  const exactMatch = venues.find((v) => generateSlug(v.name) === slug);
   if (exactMatch) return exactMatch.id;
-  
-  // Second try: check if slug is a number (backward compatibility with old ID-based URLs)
+
+  // Third try: check if slug is a number (backward compatibility with old ID-based URLs)
   const numericId = parseInt(slug, 10);
   if (!isNaN(numericId)) {
     const venueExists = venues.find(v => v.id === numericId);

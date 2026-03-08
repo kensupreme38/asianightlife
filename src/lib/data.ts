@@ -10166,4 +10166,45 @@ The statue of a woman wearing headphones is not just an ordinary sculpture. She 
 - Unique nightlife experiences`,
     hours: "9:00 PM - Late",
   },
+  {
+    id: 218,
+    name: "Gravity Bistro",
+    slug: "gravity-bistro-sibu",
+    main_image_url:
+      "https://drive.google.com/thumbnail?id=1WemaBQCGQHSCfzs2CUIZvvYwrnN8Le18&sz=w2000",
+    images: [
+      "https://drive.google.com/thumbnail?id=1-_IiVCRTwZOyxXoIUP07LSccTCv2IhsA&sz=w2000",
+      "https://drive.google.com/thumbnail?id=12fDndph6LeIqCw33g4Yxy_z8bpiPXC-G&sz=w2000",
+      "https://drive.google.com/thumbnail?id=19S6kKA6i3nI9mQPECGTbCW6vBbG8TkFd&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1_72fIEl_8-3msHWhyeQIK9cU8gv69oSH&sz=w2000",
+      "https://drive.google.com/thumbnail?id=1Xea0sz4na9sx6MXaLHMkAcgfpncdcU8c&sz=w2000",
+    ],
+    address:
+      "Ground Floor, Lot 4572, Lorong Aman 1, 96000 Sibu, Sarawak, Malaysia",
+    country: "Malaysia",
+    phone: "",
+    category: "Darts Bar / Bistro",
+    price: "Contact for pricing",
+    description: `## About Gravity Bistro
+Gravity Bistro is a darts bar and bistro located in Sibu, Sarawak, Malaysia. The venue is registered on the DARTSLIVE network and combines dining with recreational darts entertainment.
+
+## Venue Features
+- **DARTSLIVE Equipment**: Features DARTSLIVE2 and DARTSLIVE3 darts machines
+- **Official League**: Hosts DARTSLIVE Official League competitions
+- **Bistro & Bar**: Dining and drinks in a casual, social atmosphere
+- **East Sarawak**: Part of the DARTSLIVE East Sarawak region
+
+## Highlights
+- Darts enthusiasts destination in Sibu
+- Official DARTSLIVE venue with league play
+- Bistro dining with bar atmosphere
+- Social hub for darts and casual gatherings
+
+## Perfect For
+- Darts players and enthusiasts
+- Casual dining and drinks
+- Social gatherings
+- Sibu nightlife explorers`,
+    hours: "Check with venue",
+  },
 ];
