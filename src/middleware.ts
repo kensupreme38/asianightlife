@@ -7,45 +7,42 @@ const intlMiddleware = createMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  
+
   // Skip middleware for sitemap.xml and robots.txt
   if (pathname === '/sitemap.xml' || pathname === '/robots.txt') {
     return NextResponse.next();
   }
-  
+
   // Skip locale prefixing for /auth routes (OAuth callbacks don't need locale)
   if (pathname.startsWith('/auth')) {
-    const supabaseResponse = await updateSession(request);
-    return supabaseResponse;
+    return updateSession(request);
   }
-  
-  // First handle i18n routing - this handles locale detection and redirects
+
+  // Handle i18n routing first
   const intlResponse = intlMiddleware(request);
-  
-  // If intl middleware returns a redirect (307 or 308), use it immediately
+
+  // If intl middleware returns a redirect (307/308), use it immediately
   if (intlResponse && (intlResponse.status === 307 || intlResponse.status === 308)) {
     return intlResponse;
   }
-  
-  // Then handle Supabase session on the locale-prefixed path
-  // Only if intl didn't redirect
+
+  // If intl middleware rewrote the URL (e.g. / -> /en internally),
+  // we must run Supabase auth on the rewritten request, not the original.
+  // Copy intl rewrite headers into the Supabase response.
   const supabaseResponse = await updateSession(request);
-  
+
+  // Propagate intl headers (rewrite, locale, etc.) onto the Supabase response
+  if (intlResponse) {
+    intlResponse.headers.forEach((value, key) => {
+      supabaseResponse.headers.set(key, value);
+    });
+  }
+
   return supabaseResponse;
 }
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - api (API routes)
-     * - sitemap.xml (sitemap file)
-     * - robots.txt (robots file)
-     * Feel free to modify this pattern to include more paths.
-     */
     '/((?!_next/static|_next/image|favicon.ico|api|sitemap\\.xml|robots\\.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
