@@ -124,7 +124,7 @@ export const BookingForm = ({
 
     // Open WhatsApp with booking details
     window.open(
-      `https://wa.me/6582808072?text=${encodeURIComponent(message)}`,
+      `https://api.whatsapp.com/send/?phone=6582668669&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
 

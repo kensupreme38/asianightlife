@@ -10,7 +10,7 @@ const contactLinks = [
   {
     name: 'WhatsApp',
     icon: <Image src="https://theme.hstatic.net/1000268128/1001303877/14/new_one_addthis_icon1_imec.png?v=156" alt="WhatsApp" width={48} height={48} className="rounded-full shadow-lg hover:scale-110 transition-transform" />,
-    href: 'https://wa.me/6582808072',
+    href: 'https://api.whatsapp.com/send/?phone=6582668669&text&type=phone_number&app_absent=0',
     isImage: true,
     isWhatsApp: true,
   },
