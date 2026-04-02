@@ -92,11 +92,13 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
               </Badge>
             </div>
 
-            <div className="absolute top-3 right-3 hidden md:block">
-              <div className="hidden md:block text-white font-bold text-xs bg-black/60 px-4 py-1 rounded-xl">
-                {distanceLabel ?? null}
-              </div>
-            </div>
+            {
+              distanceLabel && (<div className="absolute top-3 right-3 hidden md:block">
+                <div className="hidden md:block text-white font-bold text-xs bg-black/60 px-4 py-1 rounded-xl">
+                  {distanceLabel}
+                </div>
+              </div>)
+            }
 
             {/* Category & Price */}
             <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end">
