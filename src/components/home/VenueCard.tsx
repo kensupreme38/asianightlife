@@ -92,13 +92,14 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
               </Badge>
             </div>
 
-            {
-              distanceLabel && (<div className="absolute top-3 right-3 hidden md:block">
-                <div className="hidden md:block text-white font-bold text-xs bg-black/60 px-4 py-1 rounded-xl">
-                  {distanceLabel}
+            {distanceLabel && (
+              <div className="absolute top-3 right-3 hidden md:block">
+                <div className="hidden md:flex items-center gap-1.5 text-black font-bold text-xs bg-white px-3 py-1 rounded-xl shadow-sm">
+                  <MapPin className="h-3.5 w-3.5" />
+                  <span>{distanceLabel}</span>
                 </div>
-              </div>)
-            }
+              </div>
+            )}
 
             {/* Category & Price */}
             <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end">
