@@ -33,6 +33,9 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
   const pathname = usePathname();
   const { distanceLabel } = useDistanceToAddress(venue.address);
 
+
+  console.log({ distanceLabel, address: venue.address })
+
   const handleBooking = () => {
     setIsBookingOpen(true);
   };

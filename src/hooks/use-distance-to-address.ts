@@ -19,6 +19,30 @@ const inflightGeocode = new Map<string, Promise<Coordinates | null>>();
 let inflightLocation: Promise<Coordinates | null> | null = null;
 let lastGeocodeRequestAt = 0;
 
+const isGeoDebugEnabled = () => {
+  if (typeof window === "undefined") return false;
+  try {
+    const queryEnabled = new URLSearchParams(window.location.search).get("geoDebug") === "1";
+    const storageEnabled = window.localStorage.getItem("geoDebug") === "1";
+    return queryEnabled || storageEnabled;
+  } catch {
+    return false;
+  }
+};
+
+const geoDebug = (...args: unknown[]) => {
+  if (isGeoDebugEnabled()) {
+    console.log("[geo-distance]", ...args);
+  }
+};
+
+const toErrorInfo = (error: unknown) => {
+  if (error instanceof Error) {
+    return { name: error.name, message: error.message };
+  }
+  return { message: String(error) };
+};
+
 const toRad = (deg: number) => (deg * Math.PI) / 180;
 
 const haversineKm = (a: Coordinates, b: Coordinates) => {
@@ -50,31 +74,43 @@ const geocodeAddress = async (address: string): Promise<Coordinates | null> => {
   const now = Date.now();
   const cached = memoryGeocodeCache.get(address);
   if (cached && now - cached.ts < DISTANCE_CACHE_TTL_MS) {
+    geoDebug("memory geocode cache hit", { address });
     return cached.value;
   }
 
   const inflight = inflightGeocode.get(address);
-  if (inflight) return inflight;
+  if (inflight) {
+    geoDebug("reuse inflight geocode request", { address });
+    return inflight;
+  }
 
   const requestPromise = (async () => {
     const waitMs = Math.max(0, GEOCODE_MIN_INTERVAL_MS - (Date.now() - lastGeocodeRequestAt));
     if (waitMs > 0) {
+      geoDebug("throttle geocode request", { address, waitMs });
       await new Promise((resolve) => setTimeout(resolve, waitMs));
     }
 
     lastGeocodeRequestAt = Date.now();
-    const res = await fetch(`/api/geocode?address=${encodeURIComponent(address)}`);
+    const debug = isGeoDebugEnabled();
+    geoDebug("call /api/geocode", { address, debug });
+    const query = new URLSearchParams({ address });
+    if (debug) query.set("geoDebug", "1");
+    const res = await fetch(`/api/geocode?${query.toString()}`);
     if (!res.ok) {
+      geoDebug("/api/geocode failed", { address, status: res.status });
       memoryGeocodeCache.set(address, { value: null, ts: Date.now() });
       return null;
     }
     const data = (await res.json()) as { lat: number | null; lon: number | null };
     if (typeof data.lat !== "number" || typeof data.lon !== "number") {
+      geoDebug("/api/geocode returned empty coordinates", { address, data });
       memoryGeocodeCache.set(address, { value: null, ts: Date.now() });
       return null;
     }
 
     const value = { lat: data.lat, lon: data.lon };
+    geoDebug("/api/geocode success", { address, value });
     memoryGeocodeCache.set(address, { value, ts: Date.now() });
     return value;
   })();
@@ -88,7 +124,10 @@ const geocodeAddress = async (address: string): Promise<Coordinates | null> => {
 };
 
 const getMyLocation = async (): Promise<Coordinates | null> => {
-  if (inflightLocation) return inflightLocation;
+  if (inflightLocation) {
+    geoDebug("reuse inflight geolocation request");
+    return inflightLocation;
+  }
 
   inflightLocation = (async () => {
     const now = Date.now();
@@ -103,6 +142,10 @@ const getMyLocation = async (): Promise<Coordinates | null> => {
           typeof parsed?.ts === "number" &&
           now - parsed.ts < LOCATION_CACHE_TTL_MS
         ) {
+          geoDebug("session geolocation cache hit", {
+            ageMs: now - parsed.ts,
+            coords: { lat: parsed.lat, lon: parsed.lon },
+          });
           return { lat: parsed.lat, lon: parsed.lon };
         }
       }
@@ -117,7 +160,9 @@ const getMyLocation = async (): Promise<Coordinates | null> => {
         .permissions;
       if (permissions?.query) {
         const status = await permissions.query({ name: "geolocation" });
+        geoDebug("geolocation permission status", { state: status?.state });
         if (status?.state === "prompt") {
+          geoDebug("waiting for first user gesture");
           await afterFirstUserGesture();
         }
       }
@@ -130,6 +175,7 @@ const getMyLocation = async (): Promise<Coordinates | null> => {
       lat: pos.coords.latitude,
       lon: pos.coords.longitude,
     };
+    geoDebug("geolocation success", me);
     try {
       sessionStorage.setItem(locKey, JSON.stringify({ ...me, ts: Date.now() }));
     } catch {
@@ -140,7 +186,8 @@ const getMyLocation = async (): Promise<Coordinates | null> => {
 
   try {
     return await inflightLocation;
-  } catch {
+  } catch (error: unknown) {
+    geoDebug("geolocation failed", toErrorInfo(error));
     return null;
   } finally {
     inflightLocation = null;
@@ -160,6 +207,7 @@ const loadVenueGeoFromStorage = (address: string): Coordinates | null => {
       typeof parsed?.ts === "number" &&
       now - parsed.ts < DISTANCE_CACHE_TTL_MS
     ) {
+      geoDebug("local geocode cache hit", { address });
       return { lat: parsed.lat, lon: parsed.lon };
     }
   } catch {
@@ -204,21 +252,32 @@ export const useDistanceToAddress = (address: string) => {
 
     const run = async () => {
       try {
-        if (!window.isSecureContext) return;
+        if (!window.isSecureContext) {
+          geoDebug("abort: insecure context");
+          return;
+        }
         const me = await getMyLocation();
-        if (!me) return;
+        if (!me) {
+          geoDebug("abort: cannot resolve current location");
+          return;
+        }
 
         let venueGeo = loadVenueGeoFromStorage(address);
 
         if (!venueGeo) {
           venueGeo = await geocodeAddress(address);
-          if (!venueGeo) return;
+          if (!venueGeo) {
+            geoDebug("abort: geocode returned null", { address });
+            return;
+          }
           saveVenueGeoToStorage(address, venueGeo);
         }
 
         const km = haversineKm(me, venueGeo);
+        geoDebug("distance calculated", { address, km });
         if (!cancelled) setDistanceKm(km);
-      } catch {
+      } catch (error: unknown) {
+        geoDebug("distance pipeline failed", { address, ...toErrorInfo(error) });
         // ignore geolocation/geocoding errors
       }
     };
