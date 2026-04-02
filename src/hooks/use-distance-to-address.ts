@@ -35,28 +35,30 @@ const getCurrentPosition = () =>
   });
 
 const geocodeAddress = async (address: string): Promise<Coordinates | null> => {
-  const url = new URL("https://nominatim.openstreetmap.org/search");
-  url.searchParams.set("format", "jsonv2");
-  url.searchParams.set("limit", "1");
-  url.searchParams.set("q", address);
-
-  const res = await fetch(url.toString(), {
-    headers: {
-      Accept: "application/json",
-    },
-  });
+  const res = await fetch(`/api/geocode?address=${encodeURIComponent(address)}`);
   if (!res.ok) return null;
+  const data = (await res.json()) as { lat: number | null; lon: number | null };
+  if (typeof data.lat !== "number" || typeof data.lon !== "number") return null;
+  return { lat: data.lat, lon: data.lon };
+};
 
-  const data = (await res.json()) as Array<{ lat?: string; lon?: string }>;
-  const first = data?.[0];
-  const lat = first?.lat !== undefined ? Number(first.lat) : null;
-  const lon = first?.lon !== undefined ? Number(first.lon) : null;
+const afterFirstUserGesture = () =>
+  new Promise<void>((resolve) => {
+    const handler = () => {
+      window.removeEventListener("pointerdown", handler, true);
+      window.removeEventListener("keydown", handler, true);
+      resolve();
+    };
+    window.addEventListener("pointerdown", handler, true);
+    window.addEventListener("keydown", handler, true);
+  });
 
-  if (lat === null || lon === null || Number.isNaN(lat) || Number.isNaN(lon)) {
-    return null;
-  }
-
-  return { lat, lon };
+type PermissionStateLike = "granted" | "denied" | "prompt";
+type GeolocationPermissionName = "geolocation";
+type PermissionsLike = {
+  query: (descriptor: { name: GeolocationPermissionName }) => Promise<{
+    state: PermissionStateLike;
+  }>;
 };
 
 export const useDistanceToAddress = (address: string) => {
@@ -67,6 +69,7 @@ export const useDistanceToAddress = (address: string) => {
 
     const run = async () => {
       try {
+        if (!window.isSecureContext) return;
         const now = Date.now();
 
         const locKey = "geo:me:v1";
@@ -89,6 +92,21 @@ export const useDistanceToAddress = (address: string) => {
         }
 
         if (!me) {
+          // If browser is in "prompt" state, some environments only show the dialog
+          // after a user gesture (click/tap/keydown). We'll wait for one.
+          try {
+            const permissions = (navigator as unknown as { permissions?: PermissionsLike })
+              .permissions;
+            if (permissions?.query) {
+              const status = await permissions.query({ name: "geolocation" });
+              if (status?.state === "prompt") {
+                await afterFirstUserGesture();
+              }
+            }
+          } catch {
+            // ignore Permissions API errors
+          }
+
           const pos = await getCurrentPosition();
           me = {
             lat: pos.coords.latitude,
