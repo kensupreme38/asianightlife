@@ -7,6 +7,18 @@ interface Coordinates {
   lon: number;
 }
 
+const DISTANCE_CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+const LOCATION_CACHE_TTL_MS = 10 * 60 * 1000; // 10 mins
+const GEOCODE_MIN_INTERVAL_MS = 1200; // Nominatim-friendly throttle
+
+const memoryGeocodeCache = new Map<
+  string,
+  { value: Coordinates | null; ts: number }
+>();
+const inflightGeocode = new Map<string, Promise<Coordinates | null>>();
+let inflightLocation: Promise<Coordinates | null> | null = null;
+let lastGeocodeRequestAt = 0;
+
 const toRad = (deg: number) => (deg * Math.PI) / 180;
 
 const haversineKm = (a: Coordinates, b: Coordinates) => {
@@ -35,11 +47,134 @@ const getCurrentPosition = () =>
   });
 
 const geocodeAddress = async (address: string): Promise<Coordinates | null> => {
-  const res = await fetch(`/api/geocode?address=${encodeURIComponent(address)}`);
-  if (!res.ok) return null;
-  const data = (await res.json()) as { lat: number | null; lon: number | null };
-  if (typeof data.lat !== "number" || typeof data.lon !== "number") return null;
-  return { lat: data.lat, lon: data.lon };
+  const now = Date.now();
+  const cached = memoryGeocodeCache.get(address);
+  if (cached && now - cached.ts < DISTANCE_CACHE_TTL_MS) {
+    return cached.value;
+  }
+
+  const inflight = inflightGeocode.get(address);
+  if (inflight) return inflight;
+
+  const requestPromise = (async () => {
+    const waitMs = Math.max(0, GEOCODE_MIN_INTERVAL_MS - (Date.now() - lastGeocodeRequestAt));
+    if (waitMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, waitMs));
+    }
+
+    lastGeocodeRequestAt = Date.now();
+    const res = await fetch(`/api/geocode?address=${encodeURIComponent(address)}`);
+    if (!res.ok) {
+      memoryGeocodeCache.set(address, { value: null, ts: Date.now() });
+      return null;
+    }
+    const data = (await res.json()) as { lat: number | null; lon: number | null };
+    if (typeof data.lat !== "number" || typeof data.lon !== "number") {
+      memoryGeocodeCache.set(address, { value: null, ts: Date.now() });
+      return null;
+    }
+
+    const value = { lat: data.lat, lon: data.lon };
+    memoryGeocodeCache.set(address, { value, ts: Date.now() });
+    return value;
+  })();
+
+  inflightGeocode.set(address, requestPromise);
+  try {
+    return await requestPromise;
+  } finally {
+    inflightGeocode.delete(address);
+  }
+};
+
+const getMyLocation = async (): Promise<Coordinates | null> => {
+  if (inflightLocation) return inflightLocation;
+
+  inflightLocation = (async () => {
+    const now = Date.now();
+    const locKey = "geo:me:v1";
+    try {
+      const cached = sessionStorage.getItem(locKey);
+      if (cached) {
+        const parsed = JSON.parse(cached) as Coordinates & { ts: number };
+        if (
+          typeof parsed?.lat === "number" &&
+          typeof parsed?.lon === "number" &&
+          typeof parsed?.ts === "number" &&
+          now - parsed.ts < LOCATION_CACHE_TTL_MS
+        ) {
+          return { lat: parsed.lat, lon: parsed.lon };
+        }
+      }
+    } catch {
+      // ignore cache parsing errors
+    }
+
+    // If browser is in "prompt" state, some environments only show the dialog
+    // after a user gesture (click/tap/keydown). We'll wait for one.
+    try {
+      const permissions = (navigator as unknown as { permissions?: PermissionsLike })
+        .permissions;
+      if (permissions?.query) {
+        const status = await permissions.query({ name: "geolocation" });
+        if (status?.state === "prompt") {
+          await afterFirstUserGesture();
+        }
+      }
+    } catch {
+      // ignore Permissions API errors
+    }
+
+    const pos = await getCurrentPosition();
+    const me = {
+      lat: pos.coords.latitude,
+      lon: pos.coords.longitude,
+    };
+    try {
+      sessionStorage.setItem(locKey, JSON.stringify({ ...me, ts: Date.now() }));
+    } catch {
+      // ignore storage errors
+    }
+    return me;
+  })();
+
+  try {
+    return await inflightLocation;
+  } catch {
+    return null;
+  } finally {
+    inflightLocation = null;
+  }
+};
+
+const loadVenueGeoFromStorage = (address: string): Coordinates | null => {
+  const now = Date.now();
+  const addrKey = `geocode:${address}`;
+  try {
+    const cached = localStorage.getItem(addrKey);
+    if (!cached) return null;
+    const parsed = JSON.parse(cached) as Coordinates & { ts: number };
+    if (
+      typeof parsed?.lat === "number" &&
+      typeof parsed?.lon === "number" &&
+      typeof parsed?.ts === "number" &&
+      now - parsed.ts < DISTANCE_CACHE_TTL_MS
+    ) {
+      return { lat: parsed.lat, lon: parsed.lon };
+    }
+  } catch {
+    // ignore cache parsing errors
+  }
+  return null;
+};
+
+const saveVenueGeoToStorage = (address: string, venueGeo: Coordinates) => {
+  const addrKey = `geocode:${address}`;
+  try {
+    localStorage.setItem(addrKey, JSON.stringify({ ...venueGeo, ts: Date.now() }));
+  } catch {
+    // ignore storage errors
+  }
 };
 
 const afterFirstUserGesture = () =>
@@ -70,82 +205,15 @@ export const useDistanceToAddress = (address: string) => {
     const run = async () => {
       try {
         if (!window.isSecureContext) return;
-        const now = Date.now();
+        const me = await getMyLocation();
+        if (!me) return;
 
-        const locKey = "geo:me:v1";
-        let me: Coordinates | null = null;
-        try {
-          const cached = sessionStorage.getItem(locKey);
-          if (cached) {
-            const parsed = JSON.parse(cached) as Coordinates & { ts: number };
-            if (
-              typeof parsed?.lat === "number" &&
-              typeof parsed?.lon === "number" &&
-              typeof parsed?.ts === "number" &&
-              now - parsed.ts < 10 * 60 * 1000
-            ) {
-              me = { lat: parsed.lat, lon: parsed.lon };
-            }
-          }
-        } catch {
-          // ignore cache parsing errors
-        }
-
-        if (!me) {
-          // If browser is in "prompt" state, some environments only show the dialog
-          // after a user gesture (click/tap/keydown). We'll wait for one.
-          try {
-            const permissions = (navigator as unknown as { permissions?: PermissionsLike })
-              .permissions;
-            if (permissions?.query) {
-              const status = await permissions.query({ name: "geolocation" });
-              if (status?.state === "prompt") {
-                await afterFirstUserGesture();
-              }
-            }
-          } catch {
-            // ignore Permissions API errors
-          }
-
-          const pos = await getCurrentPosition();
-          me = {
-            lat: pos.coords.latitude,
-            lon: pos.coords.longitude,
-          };
-          try {
-            sessionStorage.setItem(locKey, JSON.stringify({ ...me, ts: now }));
-          } catch {
-            // ignore storage errors
-          }
-        }
-
-        const addrKey = `geocode:${address}`;
-        let venueGeo: Coordinates | null = null;
-        try {
-          const cached = localStorage.getItem(addrKey);
-          if (cached) {
-            const parsed = JSON.parse(cached) as Coordinates & { ts: number };
-            if (
-              typeof parsed?.lat === "number" &&
-              typeof parsed?.lon === "number" &&
-              typeof parsed?.ts === "number" &&
-              now - parsed.ts < 30 * 24 * 60 * 60 * 1000
-            ) {
-              venueGeo = { lat: parsed.lat, lon: parsed.lon };
-            }
-          }
-        } catch {
-          // ignore cache parsing errors
-        }
+        let venueGeo = loadVenueGeoFromStorage(address);
 
         if (!venueGeo) {
           venueGeo = await geocodeAddress(address);
           if (!venueGeo) return;
-          try {
-            localStorage.setItem(addrKey, JSON.stringify({ ...venueGeo, ts: now }));
-          } catch {
-            // ignore storage errors
-          }
+          saveVenueGeoToStorage(address, venueGeo);
         }
 
         const km = haversineKm(me, venueGeo);

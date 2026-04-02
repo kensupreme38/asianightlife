@@ -2,7 +2,7 @@
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, MessageCircle, Tag, DollarSign } from "lucide-react";
+import { MapPin, Clock, MessageCircle, DollarSign } from "lucide-react";
 import { SimpleImage } from "@/components/ui/simple-image";
 import { BookingForm } from "@/components/venue/BookingForm";
 import { useState } from "react";
@@ -118,6 +118,11 @@ export const VenueCard = ({ venue }: VenueCardProps) => {
                   {venue.address}
                 </span>
               </div>
+              {distanceLabel ? (
+                <div className="mt-1 text-xs text-foreground/70 md:hidden">
+                  {distanceLabel} away
+                </div>
+              ) : null}
 
               <div className="mt-1 text-xs font-semibold text-foreground/80 flex items-center gap-1">
                 <DollarSign className="h-3.5 w-3.5 shrink-0 opacity-80" />
