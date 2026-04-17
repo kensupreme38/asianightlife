@@ -8,8 +8,8 @@ export const routing = defineRouting({
   // Used when no locale matches
   defaultLocale: 'en',
   
-  // Always show locale prefix in URL
-  localePrefix: 'always',
+  // Only show locale prefix for non-default locales
+  localePrefix: 'as-needed',
   
   // Detect locale from cookie (NEXT_LOCALE) or Accept-Language header
   localeDetection: true

@@ -10,7 +10,7 @@ const QuickCallButton = () => {
     setHasMounted(true);
   }, []);
 
-  // const phoneNumber = '6582808072'; // WhatsApp number
+  // const phoneNumber = '6582668669'; // WhatsApp number
 
   // const handleWhatsApp = () => {
   //   const message = 'Hello! I would like to get more information about your services.';
@@ -21,7 +21,7 @@ const QuickCallButton = () => {
   // };
 
 
-  const phoneNumber = '+6582808072'; // số điện thoại
+  const phoneNumber = '+6582668669'; // số điện thoại
 
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;

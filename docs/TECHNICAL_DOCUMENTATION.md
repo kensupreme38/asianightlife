@@ -423,7 +423,7 @@ Get detailed information for a venue.
   "images": [...],
   "address": "...",
   "country": "Singapore",
-  "phone": "+65 8280 8072",
+  "phone": "+65 8266 8669",
   "category": "KTV",
   "price": "800-900k",
   "description": "...",

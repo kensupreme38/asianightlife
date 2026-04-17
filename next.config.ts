@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
   },
   // Headers for CORS, security, and SEO
   async headers() {
-    return [
+    return await Promise.resolve([
       {
         source: "/(.*)",
         headers: [
@@ -74,7 +74,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=()",
+            value: "camera=(), microphone=(), geolocation=(self)",
           },
         ],
       },
@@ -88,7 +88,7 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-    ];
+    ]);
   },
   // Compiler optimizations
   compiler: {

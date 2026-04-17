@@ -566,7 +566,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                   <div className="flex flex-col">
                     {/* WhatsApp */}
                     <a
-                      href="https://wa.me/6582808072"
+                      href="https://api.whatsapp.com/send/?phone=6582668669&text&type=phone_number&app_absent=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 py-1 px-2 rounded-md hover:bg-secondary"
@@ -582,7 +582,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                       <div className="flex flex-col min-w-0">
                         <span className="font-medium text-sm">{t('header.whatsapp')}</span>
                         <span className="text-xs text-muted-foreground">
-                          +65 8280 8072
+                          +65 8266 8669
                         </span>
                       </div>
                     </a>

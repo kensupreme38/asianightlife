@@ -18,7 +18,7 @@ export function VisitUsMap({ address, venueName, country, phone, mapEmbedUrl, on
   const encoded = encodeURIComponent(address);
   const mapSrc = mapEmbedUrl || `https://www.google.com/maps?q=${encoded}&output=embed`;
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
-  const defaultPhone = "+65 8280 8072";
+  const defaultPhone = "+65 8266 8669";
   const phoneToUse = phone && phone !== "N/A" ? phone : defaultPhone;
 
   return (

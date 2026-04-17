@@ -16,25 +16,47 @@ const localeToLanguage: Record<string, string> = {
 };
 
 /**
+ * Strip locale prefix from a path
+ */
+function stripLocalePrefix(path: string, locale: string): string {
+  return path.startsWith(`/${locale}`) ? path.slice(`/${locale}`.length) || "/" : path;
+}
+
+/**
  * Generate hreflang alternates for all locales
+ * Respects localePrefix: 'as-needed' — default locale (en) has no prefix
  */
 export function generateHreflangAlternates(path: string = ""): Metadata["alternates"] {
+  const defaultLocale = routing.defaultLocale;
+
+  // Normalize path: strip any locale prefix to get the bare path
+  let barePath = path;
+  for (const locale of routing.locales) {
+    if (path.startsWith(`/${locale}/`) || path === `/${locale}`) {
+      barePath = stripLocalePrefix(path, locale);
+      break;
+    }
+  }
+
+  // Canonical is the default locale URL (no prefix for 'as-needed')
+  const canonicalPath = barePath === "/" ? "" : barePath;
   const alternates: Metadata["alternates"] = {
-    canonical: `${baseUrl}${path}`,
+    canonical: `${baseUrl}${canonicalPath}`,
     languages: {},
   };
 
   // Generate hreflang for each locale
   routing.locales.forEach((locale) => {
-    const localePath = path.startsWith(`/${locale}`) 
-      ? path 
-      : `/${locale}${path}`;
-    
+    // Default locale uses no prefix (as-needed)
+    const localePath = locale === defaultLocale
+      ? canonicalPath
+      : `/${locale}${canonicalPath}`;
+
     alternates.languages![localeToLanguage[locale] || locale] = `${baseUrl}${localePath}`;
   });
 
-  // Add x-default pointing to English
-  alternates.languages!["x-default"] = `${baseUrl}/en${path.replace(/^\/en/, "")}`;
+  // x-default points to the default locale URL (no prefix)
+  alternates.languages!["x-default"] = `${baseUrl}${canonicalPath}`;
 
   return alternates;
 }
@@ -69,21 +91,22 @@ export function generatePageMetadata({
     images?: string[];
   };
 }): Metadata {
-  const fullPath = path.startsWith(`/${locale}`) ? path : `/${locale}${path}`;
-  const canonicalPath = path.startsWith(`/${locale}`) 
-    ? path 
-    : `/${locale}${path}`;
+  const defaultLocale = routing.defaultLocale;
+  // Bare path without locale prefix
+  const barePath = path.startsWith(`/${locale}`) ? path.slice(`/${locale}`.length) || "/" : path;
+  // URL for this locale (default locale has no prefix)
+  const localePath = locale === defaultLocale ? barePath : `/${locale}${barePath}`;
 
   return {
     metadataBase: new URL(baseUrl),
     title,
     description,
     keywords,
-    alternates: generateHreflangAlternates(canonicalPath),
+    alternates: generateHreflangAlternates(localePath),
     openGraph: {
       title: openGraph?.title || title,
       description: openGraph?.description || description,
-      url: fullPath,
+      url: localePath,
       siteName: "Asia Night Life",
       locale: localeToLanguage[locale] || locale,
       type: openGraph?.type || "website",

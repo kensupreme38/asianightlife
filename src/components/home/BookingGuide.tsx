@@ -132,7 +132,7 @@ export const BookingGuide = () => {
         {
           icon: Phone,
           title: t('bookingGuide.bookByPhone'),
-          description: "+65 8280 8072",
+          description: "+65 8266 8669",
         },
         {
           icon: Headset,
