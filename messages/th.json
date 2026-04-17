@@ -89,6 +89,7 @@
     "couldNotShare": "ไม่สามารถแชร์หรือคัดลอกลิงก์ได้"
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "กลับหน้าแรก",
     "share": "แชร์",
     "bookNow": "จองตอนนี้",

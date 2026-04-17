@@ -1,14 +1,11 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { VenueCard } from "@/components/home/VenueCard";
-import { ktvData } from "@/lib/data";
-import { useTranslations } from 'next-intl';
 import { Link } from "@/i18n/routing";
 import { Venue } from "@/hooks/use-venues";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { generateSlug } from "@/lib/slug-utils";
 
 interface RelatedVenuesProps {
   currentVenueId: string;
@@ -17,10 +14,28 @@ interface RelatedVenuesProps {
   initialLimit?: number;
 }
 
+function mapApiVenueToVenue(venue: any): Venue {
+  return {
+    id: String(venue.id),
+    slug: venue.slug,
+    name: venue.name,
+    main_image_url: venue.main_image_url || "",
+    imageHint: "ktv lounge",
+    category: venue.category,
+    address: venue.address || "",
+    price: venue.price || "",
+    rating: Number(venue.rating ?? 4.5),
+    status: venue.status === "closed" ? "closed" : "open",
+    country: venue.country || "Unknown",
+    phone: venue.phone,
+    hours: venue.hours,
+    description: venue.description,
+    images: venue.images || [],
+  };
+}
+
 /**
- * Related Venues Component
- * Shows venues related by category, country, or both
- * Improves internal linking and user engagement
+ * Related Venues — loads from the same `/api/venues` source as the rest of the site (Supabase), not data.ts.
  */
 export const RelatedVenues = ({
   currentVenueId,
@@ -28,40 +43,37 @@ export const RelatedVenues = ({
   country,
   initialLimit = 6,
 }: RelatedVenuesProps) => {
-  const t = useTranslations();
   const [showAll, setShowAll] = useState(false);
+  const [allRelatedVenues, setAllRelatedVenues] = useState<Venue[]>([]);
 
-  // Find all related venues
-  const allRelatedVenues = ktvData
-    .filter((venue) => {
-      if (venue.id.toString() === currentVenueId) return false;
-      
-      // Match by category and country if both provided
-      if (category && country) {
-        return venue.category === category && venue.country === country;
+  useEffect(() => {
+    let cancelled = false;
+
+    async function load() {
+      try {
+        const params = new URLSearchParams({
+          limit: "80",
+          offset: "0",
+        });
+        if (category) params.set("category", category);
+        if (country) params.set("country", country);
+
+        const res = await fetch(`/api/venues?${params.toString()}`, { cache: "no-store" });
+        if (!res.ok || cancelled) return;
+        const json = await res.json();
+        const raw = json.venues || [];
+        const mapped: Venue[] = raw.map(mapApiVenueToVenue).filter((v: Venue) => v.id !== currentVenueId);
+        if (!cancelled) setAllRelatedVenues(mapped);
+      } catch {
+        if (!cancelled) setAllRelatedVenues([]);
       }
-      // Match by category only
-      if (category) {
-        return venue.category === category;
-      }
-      // Match by country only
-      if (country) {
-        return venue.country === country;
-      }
-      // No filter, show random venues
-      return true;
-    })
-    .map(
-      (v): Venue => ({
-        ...v,
-        id: v.id.toString(),
-        slug: generateSlug(v.name),
-        rating: 4.5,
-        status: "open" as const,
-        imageHint: "ktv lounge",
-        country: v.country || country || "",
-      })
-    );
+    }
+
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, [currentVenueId, category, country]);
 
   if (allRelatedVenues.length === 0) {
     return null;

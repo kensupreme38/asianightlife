@@ -14,7 +14,8 @@ import { RelatedVenues } from "@/components/venue/RelatedVenues";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ktvData } from "@/lib/data";
-import { generateSlug } from "@/lib/slug-utils";
+import { isClientVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
+import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
 
 // Dynamic imports for heavy components - only load when needed
 const VenueImageMasonry = dynamic(
@@ -42,6 +43,8 @@ const BookingForm = dynamic(
 const VenueDetailClient = ({ id }: { id: string }) => {
   const t = useTranslations();
   const [hasMounted, setHasMounted] = useState(false);
+  const [apiVenue, setApiVenue] = useState<any>(null);
+  const [loadStatus, setLoadStatus] = useState<"loading" | "done">("loading");
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -56,6 +59,39 @@ const VenueDetailClient = ({ id }: { id: string }) => {
     setHasMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (!hasMounted || !id) return;
+
+    let cancelled = false;
+    setLoadStatus("loading");
+    setApiVenue(null);
+
+    const fetchVenue = async () => {
+      try {
+        const response = await fetch(`/api/venues/${id}`, { cache: "no-store" });
+        if (!response.ok) {
+          if (!cancelled) setApiVenue(null);
+          return;
+        }
+        const data = await response.json();
+        if (!cancelled && data?.id) {
+          setApiVenue(data);
+        } else if (!cancelled) {
+          setApiVenue(null);
+        }
+      } catch {
+        if (!cancelled) setApiVenue(null);
+      } finally {
+        if (!cancelled) setLoadStatus("done");
+      }
+    };
+
+    fetchVenue();
+    return () => {
+      cancelled = true;
+    };
+  }, [hasMounted, id]);
+
   const handleSearchChange = (query: string) => {
     const newParams = new URLSearchParams(params.toString());
     if (query) {
@@ -67,9 +103,41 @@ const VenueDetailClient = ({ id }: { id: string }) => {
   };
 
   const venue = useMemo(() => {
-    if (!hasMounted) return null;
+    if (!hasMounted || loadStatus !== "done") return null;
 
-    const foundVenue = ktvData.find((v) => v.id.toString() === id);
+    if (apiVenue) {
+      return {
+        ...apiVenue,
+        id: String(apiVenue.id),
+        slug: apiVenue.slug || generateSlug(apiVenue.name),
+        phone: apiVenue.phone || "",
+        rating: Number(apiVenue.rating || 4.8),
+        status: apiVenue.status === "closed" ? "closed" : "open",
+        amenities: [
+          "Free Wifi",
+          "Parking",
+          "Premium Sound",
+          "VIP Rooms",
+          "Card Payment",
+        ],
+        hours:
+          typeof apiVenue.hours === "string"
+            ? apiVenue.hours
+            : "Check with venue",
+        description: apiVenue.description || "No description available",
+        mapEmbedUrl: apiVenue.mapEmbedUrl,
+        country: apiVenue.country || "Unknown",
+      };
+    }
+
+    // Optional legacy fallback from data.ts (opt-in via NEXT_PUBLIC_VENUES_STATIC_FALLBACK=true)
+    if (!isClientVenueStaticFallbackEnabled()) return null;
+
+    const staticId = findVenueIdBySlug(id, ktvData);
+    const foundVenue =
+      staticId != null
+        ? ktvData.find((v) => v.id === staticId)
+        : ktvData.find((v) => v.id.toString() === id);
     if (foundVenue) {
       return {
         ...foundVenue,
@@ -95,7 +163,7 @@ const VenueDetailClient = ({ id }: { id: string }) => {
       };
     }
     return null;
-  }, [id, hasMounted]);
+  }, [id, hasMounted, apiVenue, loadStatus]);
 
   const handleShare = useCallback(async () => {
     if (typeof window === "undefined" || !venue) return;
@@ -127,8 +195,41 @@ const VenueDetailClient = ({ id }: { id: string }) => {
 
   const [bookingOpen, setBookingOpen] = useState(false);
 
-  if (!hasMounted || !venue) {
+  if (!hasMounted) {
     return null;
+  }
+
+  if (loadStatus === "loading") {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+        <main className="container py-8 px-4 sm:px-8">
+          <Skeleton className="mb-6 h-10 w-48" />
+          <Skeleton className="mb-8 h-72 w-full rounded-xl" />
+          <div className="grid gap-4">
+            <Skeleton className="h-6 w-full max-w-md" />
+            <Skeleton className="h-6 w-full max-w-lg" />
+            <Skeleton className="h-32 w-full" />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (!venue) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+        <main className="container py-16 px-4 text-center">
+          <p className="text-lg text-muted-foreground mb-6">{t("venue.notFound")}</p>
+          <Button variant="default" onClick={() => router.push("/")}>
+            {t("venue.backToHome")}
+          </Button>
+        </main>
+        <Footer />
+      </div>
+    );
   }
 
   const galleryImages = [venue.main_image_url, ...(venue.images || [])].filter(Boolean);

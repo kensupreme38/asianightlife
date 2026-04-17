@@ -89,6 +89,7 @@
     "couldNotShare": "Tidak dapat berbagi atau menyalin tautan."
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "Kembali ke Beranda",
     "share": "Bagikan",
     "bookNow": "Pesan Sekarang",

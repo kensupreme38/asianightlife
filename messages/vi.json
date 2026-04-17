@@ -89,6 +89,7 @@
     "couldNotShare": "Không thể chia sẻ hoặc sao chép liên kết."
   },
   "venue": {
+    "notFound": "Không tìm thấy địa điểm này.",
     "backToHome": "Về trang chủ",
     "share": "Chia sẻ",
     "bookNow": "Đặt ngay",

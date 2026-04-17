@@ -89,6 +89,7 @@
     "couldNotShare": "Не удалось поделиться или скопировать ссылку."
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "Вернуться на главную",
     "share": "Поделиться",
     "bookNow": "Забронировать сейчас",

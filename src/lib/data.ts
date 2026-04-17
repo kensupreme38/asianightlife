@@ -10207,4 +10207,432 @@ Gravity Bistro is a darts bar and bistro located in Sibu, Sarawak, Malaysia. The
 - Sibu nightlife explorers`,
     hours: "Check with venue",
   },
+  {
+    id: 219,
+    name: "Nhà hàng Đông Dương",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-dong-duong-truong-dinh-1-normal.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-dong-duong-truong-dinh-1-normal.webp",
+    ],
+    address: "26 Trương Định, Phường Xuân Hòa, Quận 3, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "150,000 - 250,000₫ per person",
+    description: `## About Nhà hàng Đông Dương
+Nhà hàng Đông Dương tọa lạc tại 26 Trương Định, Quận 3, TP. Hồ Chí Minh. Không gian đậm nét kiến trúc Đông Dương với gỗ, gạch đất nung, tranh dân gian và hoa văn truyền thống. Chuyên phục vụ ẩm thực Việt truyền thống.
+
+## Highlights
+- **Sức chứa**: 400 khách (150 tầng 1, 250 tầng 2), 2 phòng riêng 8-12 và 15-25 khách
+- **Món đặc sắc**: Bánh Khọt hải sản, Bánh Tôm Hồ Tây, Cá Lóc quay me, Lẩu riêu cua, Lẩu măng chua cá Bông Lau, mâm cơm Bắc Bộ
+- **Tiện ích**: WiFi, điều hòa, phòng riêng, gửi xe máy miễn phí
+- **Đặt chỗ**: Tối thiểu 15 phút trước
+
+## Perfect For
+- Ăn gia đình, tụ tập bạn bè, sinh nhật
+- Người yêu ẩm thực Việt truyền thống`,
+    hours: "10:00 - 14:00, 17:00 - 22:00 (Daily)",
+  },
+  {
+    id: 220,
+    name: "Lẩu Bò Tươi Triều Châu",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "38 Đường số 6, Khu đô thị Him Lam, Quận 7, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "Contact for pricing",
+    description: `## About Lẩu Bò Tươi Triều Châu
+Nhà hàng chuyên lẩu bò tươi phong cách Triều Châu tại Khu Him Lam, Quận 7. Thịt bò tươi trong ngày, nước lẩu ninh từ xương bò nhiều giờ, thanh ngọt, không bột ngọt.
+
+## Highlights
+- **Sức chứa**: ~200 khách, không gian tối giản, thoáng mát
+- **Nước lẩu**: Nin từ xương bò, theo triết lý ẩm thực Triều Châu
+- **Tiện ích**: Bãi xe ô tô, thanh toán thẻ, WiFi, trang trí sự kiện
+- **Khu vực**: Bàn gia đình, bàn nhóm 4-10 người, khu ngoài trời
+
+## Perfect For
+- Nhóm bạn, gia đình, họp mặt
+- Người thích lẩu bò thanh ngọt`,
+    hours: "11:00 - 23:00 (Daily)",
+  },
+  {
+    id: 221,
+    name: "MI DAM - Nhà hàng Hàn Quốc",
+    main_image_url:
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+    images: [
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/a1ed6234-d3ce-4b3d-a352-6da460a5c41a_rs1g3eb.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/de6bb32c-48e9-4236-96e3-478897a4fc57r7utv3zw.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/1520daaa-4f53-4186-a5ec-5c04c3298a2b_7hk_sxd.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/ef4fa0a7-a055-4f89-a7f9-4dca5a632176f3ujnnji.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg",
+    ],
+    address: "2 Thi Sách, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "Contact for pricing",
+    description: `## About MI DAM Korean Premium BBQ
+MI DAM (Midam) là nhà hàng BBQ Hàn Quốc cao cấp tại 2 Thi Sách, Quận 1, TP. Hồ Chí Minh. Không gian sang trọng, phục vụ các món nướng Hàn Quốc premium và ẩm thực Hàn đa dạng.
+
+## Highlights
+- **Vị trí**: Trung tâm Quận 1, gần khu Bến Nghé
+- **Ẩm thực**: BBQ Hàn Quốc cao cấp, thịt nướng chất lượng
+- **Không gian**: Hiện đại, phù hợp nhóm bạn và gia đình
+
+## Perfect For
+- Fan ẩm thực Hàn Quốc
+- Tiệc BBQ, tụ tập bạn bè`,
+    hours: "Check with venue",
+  },
+  {
+    id: 222,
+    name: "Tân Hải Vân",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "152-154 Nguyễn Trãi, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "188,000₫+ (Dimsum buffet from 188k)",
+    description: `## About Tân Hải Vân
+Tân Hải Vân là nhà hàng ẩm thực Trung Hoa hơn 30 năm tại Sài Gòn. Không gian sang trọng, ấm cúng, phục vụ đa dạng món Trung Hoa từ nhiều vùng.
+
+## Highlights
+- **Dimsum**: Buffet từ 188,000₫
+- **Đặc sản**: Vịt quay Bắc Kinh, hải sản (cua, tôm sú ~700k), lẩu, cơm, món xào tiềm súp
+- **Giờ**: Thứ 2–Chủ nhật 6:00–23:00
+- **Đặt bàn**: Online qua tanhaivan.com
+
+## Perfect For
+- Dimsum và ẩm thực Trung Hoa
+- Gia đình, tiệc đoàn`,
+    hours: "6:00 - 23:00 (Mon-Sun)",
+  },
+  {
+    id: 223,
+    name: "Nori - Nhà hàng Nhật - Izakaya",
+    main_image_url:
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+    images: [
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/a1ed6234-d3ce-4b3d-a352-6da460a5c41a_rs1g3eb.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/de6bb32c-48e9-4236-96e3-478897a4fc57r7utv3zw.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/1520daaa-4f53-4186-a5ec-5c04c3298a2b_7hk_sxd.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/ef4fa0a7-a055-4f89-a7f9-4dca5a632176f3ujnnji.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg",
+    ],
+    address:
+      "114-114A Lý Tự Trọng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "200,000 - 500,000₫ per person",
+    description: `## About Nori Modern Izakaya
+NORI Modern Izakaya là quán Nhật phong cách izakaya tại trung tâm Quận 1. Không gian ấm cúng, có DJ vào cuối tuần, phù hợp vừa ăn vừa nhậu kiểu Nhật.
+
+## Highlights
+- **Sức chứa**: 95 chỗ (45 tầng trệt, 50 ngoài trời)
+- **Món đặc trưng**: Wagyu steak sốt Nhật, sò điệp nướng mentaiko mayo, cua lột tempura nori, yakitori udon, donburi hải sản, lẩu nội tạng bò, bạch tuộc wasabi, gỏi rong biển
+- **Giải trí**: DJ thứ 6–Chủ nhật
+- **Tiện ích**: Gửi xe miễn phí, WiFi, Visa/Mastercard, hóa đơn VAT
+- **Đặt bàn**: Tối thiểu 60 phút, tối thiểu 2 khách
+
+## Perfect For
+- Nightlife Nhật giữa Sài Gòn
+- Nhóm bạn, hẹn hò`,
+    hours: "18:00 - 02:00 (Daily)",
+  },
+  {
+    id: 224,
+    name: "Mì Bò Đài Loan (BoBa)",
+    main_image_url:
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+    images: [
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/a1ed6234-d3ce-4b3d-a352-6da460a5c41a_rs1g3eb.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/de6bb32c-48e9-4236-96e3-478897a4fc57r7utv3zw.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/1520daaa-4f53-4186-a5ec-5c04c3298a2b_7hk_sxd.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/ef4fa0a7-a055-4f89-a7f9-4dca5a632176f3ujnnji.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg",
+    ],
+    address:
+      "215 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "Contact for pricing",
+    description: `## About Bo Bar - Mì Bò Đài Loan
+Bo Bar Signature (BoBa) phục vụ mì bò Đài Loan chuẩn vị tại 215 Nguyễn Công Trứ, Quận 1. Nước dùng hầm kỹ, thịt bò mềm, topping đa dạng, giá hợp lý.
+
+## Highlights
+- **Món chính**: Mì bò Đài Loan chính gốc
+- **Tiện ích**: Giao hàng, WiFi, điều hòa, chỗ đậu xe
+- **Website**: bobar.site
+
+## Perfect For
+- Người thích mì bò Đài Loan
+- Ăn nhanh, ăn vặt chất lượng`,
+    hours: "10:00 - 22:00",
+  },
+  {
+    id: 225,
+    name: "Elite - Ăn tối trên sông Bạch Đằng",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address: "1D Nguyễn Tất Thành, Quận 4, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "1,790,000 - 2,290,000₫ (buffet tối)",
+    description: `## About Elite Of Saigon - Du thuyền 5 sao
+Du thuyền Elite Of Saigon là nhà hàng du thuyền 5 sao tại cảng Sài Gòn (khu vực Nguyễn Tất Thành/Bạch Đằng). Ăn tối buffet trên sông, ngắm cảnh Sài Gòn về đêm.
+
+## Highlights
+- **Tàu**: Dài 75m, cao 11,5m, rộng 13,9m; sức chứa ~500 khách; 3 tầng, bể bơi infinity, sân golf mini, view 360°
+- **Hành trình tối**: Đón 18:00, xuất phát 19:30, cập bến ~21:30; đi qua Bến Nhà Rồng, Bến Bạch Đằng, Tượng Trần Hưng Đạo, Cầu Ba Son, Thủ Thiêm, Landmark 81
+- **Buffet**: Món quốc tế, hải sản, đặc sản Việt
+- **Giá**: Người lớn 1.990.000₫, trẻ em 4–11 tuổi 995.000₫; set đặc biệt 1.790.000–2.290.000₫
+
+## Perfect For
+- Trải nghiệm ăn tối trên sông
+- Sự kiện, kỷ niệm đặc biệt`,
+    hours: "Boarding from 18:00, departs 19:30",
+  },
+  {
+    id: 226,
+    name: "Nhà Hàng Hoa Dragon Palace",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "2 Bis Nguyễn Thị Minh Khai, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "350,000 - 600,000₫ per person",
+    description: `## About Dragon Palace Restaurant
+Dragon Palace (Nhà Hàng Hoa Dragon Palace) chuyên ẩm thực Quảng Đông tại 2 Bis Nguyễn Thị Minh Khai, Q1. Bếp trưởng Lam Hei Ming hơn 45 năm kinh nghiệm tại các nhà hàng Trung Hoa ở Singapore, Hong Kong, Trung Quốc.
+
+## Highlights
+- **Món đặc trưng**: Vịt quay Bắc Kinh kiểu Long Palace, gà hấp sò điệp, sườn kho cà phê, dim sum thủ công
+- **Không gian**: ~300 chỗ, 7 phòng VIP 10–20 khách; thiết kế Đông Á, gỗ ấm, nhấn nhá jade, tranh sơn thủy, đèn lồng
+- **Giải trí**: Thứ 6–7 tối có múa lân, ca kịch Quảng Đông, âm nhạc
+- **Giờ**: 11:00–14:00, 17:00–22:00
+
+## Perfect For
+- Ẩm thực Quảng Đông cao cấp
+- Tiệc gia đình, tiếp khách`,
+    hours: "11:00 - 14:00, 17:00 - 22:00 (Daily)",
+  },
+  {
+    id: 227,
+    name: "Dahu Hotpot",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "Tầng B3, Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "Contact for pricing",
+    description: `## About Dahu Hotpot
+Dahu là thương hiệu lẩu Trùng Khánh truyền thống, giữ vị chuẩn hơn 13 năm, từng nằm trong top 10 lẩu Trùng Khánh. Chi nhánh tại Vincom Center Đồng Khởi, Q1.
+
+## Highlights
+- **Nước lẩu**: Chuẩn Trùng Khánh, tỷ lệ dầu/nước 7:3, nguyên liệu tươi
+- **Món đặc trưng**: Cơm cà chua bò, bò cay, thịt viên đầu sư tử
+- **Không gian**: Thiết kế hiện đại, tối giản, không khí trẻ
+- **Khác**: Tráng miệng và đồ uống chất lượng, trà sữa đặc sản
+- **Chi nhánh khác**: Vincom Mega Mall Grand Park, Q9 (L4)
+
+## Perfect For
+- Người thích lẩu cay Trùng Khánh
+- Ăn tại trung tâm Q1`,
+    hours: "Check with venue",
+  },
+  {
+    id: 228,
+    name: "Nhà hàng lẩu cừu con vui vẻ (Happy Lamb)",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "329 Trần Hưng Đạo, Phường Cô Giang, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "~199,000₫+ (lẩu uyên ương từ 199k)",
+    description: `## About Happy Lamb - Lẩu Cừu Con Vui Vẻ
+Happy Lamb (Lẩu cừu con vui vẻ) là nhà hàng lẩu Trung Hoa nổi tiếng tại 329 Trần Hưng Đạo, Q1. Không gian sang trọng, phục vụ lẩu cừu và các món ăn kèm đa dạng.
+
+## Highlights
+- **Món**: Lẩu uyên ương ~199k, cừu nướng 25k/xiên, cừu non cuộn 109k, nước chấm 25k/người
+- **Không gian**: Trang trí hoành tráng, thoải mái
+- **Đánh giá**: Được khen dịch vụ tốt, đồ ăn ngon
+- **Website**: happylambrestaurant.com
+
+## Perfect For
+- Nhóm bạn, gia đình thích lẩu cừu
+- Trải nghiệm lẩu kiểu Haidilao`,
+    hours: "Open daily (check with venue)",
+  },
+  {
+    id: 229,
+    name: "Nhà hàng Las Vegas",
+    main_image_url:
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+    images: [
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/7ee5f62e-0565-4c8f-855e-c7fb2cf1fb259lugghpm.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/a1ed6234-d3ce-4b3d-a352-6da460a5c41a_rs1g3eb.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/de6bb32c-48e9-4236-96e3-478897a4fc57r7utv3zw.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/1520daaa-4f53-4186-a5ec-5c04c3298a2b_7hk_sxd.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/ef4fa0a7-a055-4f89-a7f9-4dca5a632176f3ujnnji.jpeg",
+      "https://attachment.momocdn.net/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/8e214370-8e12-4774-b62c-d1d906d6f4d50vbp2dds.jpeg",
+    ],
+    address:
+      "188-192 Nguyễn Văn Linh, Phường Tân Thuận Tây, Quận 7, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "49,000 - 300,000₫",
+    description: `## About Nhà hàng Las Vegas
+Nhà hàng Las Vegas tại 192 Nguyễn Văn Linh, Quận 7, chuyên ẩm thực Hàn Quốc. Không gian phù hợp gia đình, nhóm hội, giới văn phòng; nổi bật với hải sản tươi như tôm hùm, ốc, sashimi cá hồi.
+
+## Highlights
+- **Ẩm thực**: Món Hàn, hải sản tươi
+- **Tiện ích**: Bãi đỗ xe, đặt bàn, giao hàng (ShopeeFood)
+- **Đánh giá**: Chất lượng và phục vụ được đánh giá cao
+
+## Perfect For
+- Người thích ẩm thực Hàn và hải sản
+- Tiệc gia đình, nhóm bạn tại Q7`,
+    hours: "16:00 - 23:30",
+  },
+  {
+    id: 230,
+    name: "Nhà hàng Tứ Lẩu",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "6 Nam Quốc Cang, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "Contact for pricing",
+    description: `## About Nhà hàng Tứ Lẩu (Tửu Lầu 13)
+Nhà hàng Trung Hoa tại 6 Nam Quốc Cang, Q1, với kiến trúc Trung Hoa cổ kính: đá tự nhiên, cây xanh, đèn lồng đỏ. Chuyên hải sản tươi sống chế biến tại chỗ và các món đặc biệt.
+
+## Highlights
+- **Hải sản**: Tôm hùm Alaska, king crab, cua huỳnh đế, cá mặt quỷ; set sashimi nhập khẩu
+- **Món đặc biệt**: Gà H'mông ủ rượu, bò Fuji dát vàng, bồ câu quay Tứ Xuyên
+- **Không gian**: Nhiều phòng VIP sang trọng, phù hợp tiệc gia đình, tiếp khách
+- **Phục vụ**: Đội ngũ chuyên nghiệp
+
+## Perfect For
+- Tiệc gia đình, bạn bè, tiếp khách quan trọng
+- Người thích hải sản và ẩm thực Trung Hoa cao cấp`,
+    hours: "Check with venue",
+  },
+  {
+    id: 231,
+    name: "Biển Dương - Nguyễn Tri Phương",
+    main_image_url:
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+    images: [
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-1-normal-2379854052145.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-2-normal-2379854152146.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-3-normal-2379854252147.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-4-normal-2379854352148.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-5-normal-2379854452149.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-cach-mang-thag-8-6-normal-2379854552150.webp",
+      "https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-bien-duong-6-8-normal-2169846952152.webp",
+    ],
+    address:
+      "103-105 Nguyễn Tri Phương, Phường 7, Quận 5, Thành phố Hồ Chí Minh",
+    country: "Vietnam",
+    phone: "+65 8280 8072",
+    category: "Restaurants",
+    price: "120,000 - 400,000₫ per person",
+    description: `## About Biển Dương 1 - Nguyễn Tri Phương
+Biển Dương 1 là một trong những nhà hàng hải sản nổi tiếng lâu đời tại Sài Gòn (gần 20 năm), chi nhánh tại 103-105 Nguyễn Tri Phương, Quận 5. Kết hợp ăn uống và karaoke giải trí.
+
+## Highlights
+- **Sức chứa**: ~500 khách (sảnh 120, sân vườn 300), 4 phòng VIP 8-40 khách
+- **Thực đơn**: Hải sản tươi bắt trực tiếp, ẩm thực Việt và Trung Hoa, hơn 100 món (mực chiên giòn, tôm sú, cua, cá, sò nướng mỡ hành, ghẹ hấp...)
+- **Tiện ích**: WiFi, điều hòa, gửi xe ô tô 30,000₫/lần, xe máy 5,000₫/lần, phòng riêng, karaoke, máy chiếu, hóa đơn VAT
+- **Giờ**: 10:00 - 23:59
+
+## Perfect For
+- Hải sản tươi, tiệc đoàn, gia đình
+- Vừa ăn vừa karaoke (chi nhánh khác Biển Dương 6 - Cách Mạng Tháng 8)`,
+    hours: "10:00 - 23:59 (Daily)",
+  },
 ];

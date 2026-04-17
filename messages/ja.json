@@ -89,6 +89,7 @@
     "couldNotShare": "リンクを共有またはコピーできませんでした。"
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "ホームに戻る",
     "share": "共有",
     "bookNow": "今すぐ予約",

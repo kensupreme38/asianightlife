@@ -89,6 +89,7 @@
     "couldNotShare": "링크를 공유하거나 복사할 수 없습니다."
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "홈으로 돌아가기",
     "share": "공유",
     "bookNow": "지금 예약",

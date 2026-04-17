@@ -1,8 +1,6 @@
 "use client";
-import { useMemo, useCallback } from "react";
-import { ktvData } from "@/lib/data";
+import { useEffect, useState } from "react";
 import { useDebounce } from "./use-debounce";
-import { generateSlug } from "@/lib/slug-utils";
 
 export interface Venue {
   id: string;
@@ -69,83 +67,73 @@ export const useVenues = ({
   page,
   pageSize,
 }: UseVenuesProps = {}) => {
-  // Debounce search query to avoid excessive filtering
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
+  const [venues, setVenues] = useState<Venue[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Memoized filtering functions
-  const filterByCountry = useCallback((venue: any) => 
-    selectedCountry === "all" || venue.country === selectedCountry, 
-    [selectedCountry]
-  );
+  useEffect(() => {
+    const fetchVenues = async () => {
+      setIsLoading(true);
+      try {
+        const calculatedOffset =
+          page !== undefined && pageSize !== undefined ? (page - 1) * pageSize : offset || 0;
+        const effectiveLimit = limit || (pageSize !== undefined ? pageSize : 100);
+        const params = new URLSearchParams({
+          offset: String(calculatedOffset),
+          limit: String(effectiveLimit),
+        });
 
-  const filterByCity = useCallback((venue: any) => {
-    if (selectedCity === "all") return true;
-    const address = venue.address.toLowerCase();
-    const city = selectedCity.toLowerCase();
-    const patterns = CITY_PATTERNS[city] || [city];
-    return patterns.some((pattern) => address.includes(pattern));
-  }, [selectedCity]);
+        if (selectedCountry !== "all") params.set("country", selectedCountry);
+        if (selectedCategory !== "all") params.set("category", selectedCategory);
+        if (debouncedSearchQuery) params.set("search", debouncedSearchQuery);
 
-  const filterByCategory = useCallback((venue: any) => 
-    selectedCategory === "all" || venue.category === selectedCategory, 
-    [selectedCategory]
-  );
+        const response = await fetch(`/api/venues?${params.toString()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error("Failed to fetch venues");
 
-  const filterBySearch = useCallback((venue: any) => {
-    if (!debouncedSearchQuery) return true;
-    const query = debouncedSearchQuery.toLowerCase();
-    return venue.name.toLowerCase().includes(query) || 
-           venue.address.toLowerCase().includes(query);
-  }, [debouncedSearchQuery]);
+        const result = await response.json();
+        let fetchedVenues: Venue[] = (result.venues || []).map((venue: any) => ({
+          id: String(venue.id),
+          slug: venue.slug,
+          name: venue.name,
+          main_image_url: venue.main_image_url,
+          imageHint: "ktv lounge",
+          category: venue.category,
+          address: venue.address || "",
+          price: venue.price || "",
+          rating: Number(venue.rating || 4.5),
+          status: venue.status === "closed" ? "closed" : "open",
+          country: venue.country || "Unknown",
+          phone: venue.phone,
+          hours: venue.hours,
+          description: venue.description,
+          images: venue.images || [],
+        }));
 
-  const venues = useMemo(() => {
-    let filteredVenues = ktvData
-      .filter(filterByCountry)
-      .filter(filterByCity)
-      .filter(filterByCategory)
-      .filter(filterBySearch)
-      .map((ktv): Venue => ({
-        ...ktv,
-        id: ktv.id.toString(),
-        slug: (ktv as any).slug || generateSlug(ktv.name),
-        rating: 4.5,
-        status: "open" as const,
-        imageHint: "ktv lounge",
-        country: ktv.country || "Unknown",
-      }));
+        if (selectedCity !== "all") {
+          const city = selectedCity.toLowerCase();
+          const patterns = CITY_PATTERNS[city] || [city];
+          fetchedVenues = fetchedVenues.filter((venue) =>
+            patterns.some((pattern) => (venue.address || "").toLowerCase().includes(pattern))
+          );
+        }
 
-    // Calculate offset from page/pageSize if provided, otherwise use offset directly
-    let calculatedOffset = offset;
-    if (page !== undefined && pageSize !== undefined) {
-      calculatedOffset = (page - 1) * pageSize;
-    }
+        setVenues(fetchedVenues);
+        setTotalCount(result.total || fetchedVenues.length);
+      } catch (error) {
+        setVenues([]);
+        setTotalCount(0);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-    // Apply pagination: first slice by offset, then by limit
-    if (calculatedOffset !== undefined && calculatedOffset > 0) {
-      filteredVenues = filteredVenues.slice(calculatedOffset);
-    }
-
-    // Apply limit if specified (or use pageSize)
-    const effectiveLimit = limit || (pageSize !== undefined ? pageSize : undefined);
-    if (effectiveLimit && effectiveLimit > 0) {
-      filteredVenues = filteredVenues.slice(0, effectiveLimit);
-    }
-
-    return filteredVenues;
-  }, [filterByCountry, filterByCity, filterByCategory, filterBySearch, limit, offset, page, pageSize]);
-
-  const totalCount = useMemo(() => {
-    return ktvData
-      .filter(filterByCountry)
-      .filter(filterByCity)
-      .filter(filterByCategory)
-      .filter(filterBySearch)
-      .length;
-  }, [filterByCountry, filterByCity, filterByCategory, filterBySearch]);
+    fetchVenues();
+  }, [selectedCountry, selectedCity, selectedCategory, debouncedSearchQuery, limit, offset, page, pageSize]);
 
   return {
     venues,
     totalCount,
-    isLoading: false, // Since we're using static data
+    isLoading,
   };
 };

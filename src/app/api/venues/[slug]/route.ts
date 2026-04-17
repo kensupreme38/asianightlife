@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import { ktvData } from "@/lib/data";
+import { isVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
 import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
+import { createVenuesReader } from "@/utils/supabase/venues-reader";
 
-export const revalidate = 3600; // Revalidate every hour
+export const dynamic = "force-dynamic";
 
 export async function GET(
   request: Request,
@@ -10,35 +12,66 @@ export async function GET(
 ) {
   try {
     const { slug } = await params;
-    
-    // Find venue by slug or ID (backward compatibility)
-    const venueId = findVenueIdBySlug(slug, ktvData);
-    
-    if (!venueId) {
+
+    let venueWithSlug: any = null;
+    let dbError: unknown = null;
+
+    try {
+      const supabase = await createVenuesReader();
+      const query = supabase.from("venues").select("*").eq("status", "active");
+
+      let dbResult = await query.eq("slug", slug).maybeSingle();
+      if (dbResult.error) {
+        dbError = dbResult.error;
+      } else if (!dbResult.data) {
+        dbResult = await supabase.from("venues").select("*").eq("id", slug).eq("status", "active").maybeSingle();
+        if (dbResult.error) {
+          dbError = dbResult.error;
+        }
+      }
+
+      if (!dbError && dbResult.data) {
+        venueWithSlug = {
+          ...dbResult.data,
+          id: String(dbResult.data.id),
+          slug: dbResult.data.slug || generateSlug(dbResult.data.name),
+          mapEmbedUrl: dbResult.data.map_embed_url || undefined,
+        };
+      }
+    } catch (err) {
+      dbError = err;
+    }
+
+    if (!venueWithSlug && dbError) {
       return NextResponse.json(
-        { error: "Invalid venue slug or ID" },
-        { status: 400 }
+        { error: "Venue data is temporarily unavailable" },
+        { status: 503 }
       );
     }
 
-    const venue = ktvData.find((v) => v.id === venueId);
-
-    if (!venue) {
-      return NextResponse.json(
-        { error: "Venue not found" },
-        { status: 404 }
-      );
+    if (!venueWithSlug && isVenueStaticFallbackEnabled()) {
+      const venueId = findVenueIdBySlug(slug, ktvData);
+      if (!venueId) {
+        return NextResponse.json({ error: "Venue not found" }, { status: 404 });
+      }
+      const venue = ktvData.find((v) => v.id === venueId);
+      if (!venue) {
+        return NextResponse.json({ error: "Venue not found" }, { status: 404 });
+      }
+      venueWithSlug = {
+        ...venue,
+        id: String(venue.id),
+        slug: generateSlug(venue.name),
+      };
     }
 
-    // Add slug to response
-    const venueWithSlug = {
-      ...venue,
-      slug: generateSlug(venue.name),
-    };
+    if (!venueWithSlug) {
+      return NextResponse.json({ error: "Venue not found" }, { status: 404 });
+    }
 
     return NextResponse.json(venueWithSlug, {
       headers: {
-        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=7200",
+        "Cache-Control": "no-store, must-revalidate",
       },
     });
   } catch (error) {

@@ -89,6 +89,7 @@
     "couldNotShare": "无法分享或复制链接。"
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "返回首页",
     "share": "分享",
     "bookNow": "立即预订",

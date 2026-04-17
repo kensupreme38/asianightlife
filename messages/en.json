@@ -89,6 +89,7 @@
     "couldNotShare": "Could not share or copy link."
   },
   "venue": {
+    "notFound": "This venue could not be found.",
     "backToHome": "Back to Home",
     "share": "Share",
     "bookNow": "Book Now",

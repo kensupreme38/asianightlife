@@ -1,7 +1,7 @@
 import VenueDetailClient from "@/components/venue/VenueDetailClient";
 import type { Metadata } from "next";
-import { ktvData } from "@/lib/data";
-import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
+import { resolveVenueBySlug } from "@/lib/venue-server";
+import { generateSlug } from "@/lib/slug-utils";
 
 type VenueDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -9,14 +9,10 @@ type VenueDetailPageProps = {
 
 export default async function VenueDetailPage({ params }: VenueDetailPageProps) {
   const { slug } = await params;
-  
-  // Find venue by slug or ID (backward compatibility)
-  const venueId = findVenueIdBySlug(slug, ktvData);
-  const id = venueId?.toString() || slug;
-  
+
   return (
     <>
-      <VenueDetailClient id={id} />
+      <VenueDetailClient id={slug} />
       <StructuredData slug={slug} />
     </>
   );
@@ -26,11 +22,8 @@ export async function generateMetadata(
   { params }: VenueDetailPageProps
 ): Promise<Metadata> {
   const { slug } = await params;
-  
-  // Find venue by slug or ID (backward compatibility)
-  const venueId = findVenueIdBySlug(slug, ktvData);
-  const id = venueId?.toString() || slug;
-  const v = ktvData.find((x) => x.id.toString() === id);
+
+  const v = await resolveVenueBySlug(slug);
 
   if (!v) {
     return { title: "Venue not found" };
@@ -40,8 +33,7 @@ export async function generateMetadata(
   const description =
     v.description || `Book ${v.name} at ${v.address}. Discover pricing, hours, and amenities.`;
   const ogImage = v.main_image_url;
-  const venueSlug = generateSlug(v.name);
-  const url = `/venue/${venueSlug}`;
+  const url = `/venue/${v.pathSlug}`;
 
   return {
     title,
@@ -64,13 +56,10 @@ export async function generateMetadata(
 }
 
 async function StructuredData({ slug }: { slug: string }) {
-  // Find venue by slug or ID (backward compatibility)
-  const venueId = findVenueIdBySlug(slug, ktvData);
-  const id = venueId?.toString() || slug;
-  const v = ktvData.find((x) => x.id.toString() === id);
+  const v = await resolveVenueBySlug(slug);
   if (!v) return null;
 
-  const venueSlug = generateSlug(v.name);
+  const venueSlug = v.pathSlug || generateSlug(v.name);
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
