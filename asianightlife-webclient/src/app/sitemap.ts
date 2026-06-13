@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { ktvData } from "@/lib/data";
 import { CITY_SLUGS } from "@/lib/cities";
 import { GUIDE_SLUGS } from "@/lib/guides";
 import { TRAVEL_SLUGS } from "@/lib/travel-packages";
@@ -48,19 +47,6 @@ async function collectVenuePaths(): Promise<VenueSitemapEntry[]> {
     }
   } catch {
     // Continue with static venue data
-  }
-
-  for (const venue of ktvData) {
-    const slug = (venue as { slug?: string }).slug || generateSlug(venue.name);
-    const path = getVenueUrl({
-      slug,
-      name: venue.name,
-      country: venue.country ?? "Singapore",
-      address: venue.address ?? "",
-    });
-    if (seen.has(path)) continue;
-    seen.add(path);
-    entries.push({ path });
   }
 
   return entries;

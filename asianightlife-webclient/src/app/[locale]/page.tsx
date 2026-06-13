@@ -3,7 +3,7 @@ import HomeClient from '@/components/home/HomeClient';
 import Loading from './loading';
 import { Metadata } from 'next';
 import { generatePageMetadata, SITE_URL } from '@/lib/seo';
-import { ktvData } from '@/lib/data';
+import { createVenuesReader } from "@/utils/supabase/venues-reader";
 
 export async function generateMetadata({
   params,
@@ -48,7 +48,14 @@ export async function generateMetadata({
   });
 }
 
-export default function Page() {
+export default async function Page() {
+  const supabase = await createVenuesReader();
+  const { data: venues } = await supabase
+    .from("venues")
+    .select("name, address")
+    .eq("status", "active")
+    .limit(10);
+
   const websiteLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -69,8 +76,8 @@ export default function Page() {
     "@type": "ItemList",
     name: "Nightlife Venues — Asia Night Life",
     description: "Verified KTVs, clubs and VIP lounges across Southeast Asia",
-    numberOfItems: ktvData.length,
-    itemListElement: ktvData.slice(0, 10).map((venue, index) => ({
+    numberOfItems: venues?.length || 0,
+    itemListElement: (venues || []).map((venue, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: venue.name,
