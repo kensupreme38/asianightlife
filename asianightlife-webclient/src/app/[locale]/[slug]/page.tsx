@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { CityLandingClient } from "@/components/city/CityLandingClient";
 import { CITY_SLUGS, getCityBySlug } from "@/lib/cities";
+import { staticParamsForSlugs } from "@/lib/i18n-static-params";
 import { generatePageMetadata } from "@/lib/seo";
 import { generateCitySEOContent } from "@/lib/seo-content";
 import type { Metadata } from "next";
@@ -10,7 +11,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return CITY_SLUGS.map((slug) => ({ slug }));
+  return staticParamsForSlugs(CITY_SLUGS);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -1,58 +1,151 @@
 import { NextResponse } from "next/server";
-import { ktvData } from "@/lib/data";
+import {
+  buildCitiesContext,
+  buildVenueContextForQuestion,
+  formatVenueMarkdownLink,
+  hasGeminiApiKey,
+  selectRelevantVenues,
+} from "@/ai/concierge-context";
+import { answerConciergeQuestion } from "@/ai/flows/concierge-chat";
+import { normalizeConciergeMarkdown } from "@/lib/concierge-markdown";
 import { CITIES } from "@/lib/cities";
-
-const VENUE_SUMMARY = ktvData.slice(0, 30).map((v) => ({
-  name: v.name,
-  country: v.country,
-  category: v.category,
-  price: v.price,
-  address: v.address?.substring(0, 60),
-}));
+import { fetchActiveVenues, type VenueRow } from "@/lib/venues-db";
 
 const CITY_LIST = CITIES.map((c) => `${c.name} (${c.country})`).join(", ");
 
-function ruleBasedAnswer(question: string): string {
+type VenueFields = Pick<
+  VenueRow,
+  "id" | "name" | "country" | "category" | "price" | "address" | "slug" | "hours"
+>;
+
+function ruleBasedAnswer(question: string, venues: VenueFields[]): string {
   const q = question.toLowerCase();
+  const relevant = selectRelevantVenues(question, venues as VenueRow[], 6);
 
-  if (q.includes("ktv") && (q.includes("tonight") || q.includes("best"))) {
-    if (q.includes("singapore") || q.includes("sg")) {
-      const sg = ktvData.filter((v) => v.country === "Singapore" && v.category === "KTV").slice(0, 3);
-      return `Top Singapore KTV picks tonight:\n${sg.map((v) => `• ${v.name} — ${v.price}`).join("\n")}\n\nBook via WhatsApp for instant confirmation.`;
-    }
-    return `For KTV tonight, tell us your city (Singapore, HCMC, Bangkok, etc.) and group size. Popular picks:\n• Iconic KTV (Singapore)\n• Boss KTV (HCMC)\n• Onyx Bangkok\n\nWhatsApp us to confirm availability.`;
+  const listVenues = (items: VenueFields[]) =>
+    items.length
+      ? items.map((v) => `- ${formatVenueMarkdownLink(v as VenueRow)}`).join("\n")
+      : `- [Browse venues](/book)`;
+
+  if (q.includes("book") || q.includes("booking") || q.includes("reserve") || q.includes("đặt")) {
+    return `**How to book with Asia Night Life:**
+
+1. Choose a venue — [Browse all venues](/book) or pick from our listings below
+2. Select date, time & group size on the venue page
+3. Confirm via WhatsApp — our concierge responds within 15–30 minutes
+
+**Suggested venues for you:**
+${listVenues(relevant)}
+
+Questions? WhatsApp us anytime.`;
   }
 
-  if (q.includes("hcmc") || q.includes("saigon") || q.includes("ho chi minh")) {
-    const hcmc = ktvData.filter((v) => v.country === "Vietnam").slice(0, 4);
-    return `Best HCMC nightlife areas: District 1, District 3, District 5.\n\nRecommended venues:\n${hcmc.map((v) => `• ${v.name} — ${v.price}`).join("\n")}\n\nExplore: asianightlife.sg/ho-chi-minh-city-nightlife`;
+  if (q.includes("ktv")) {
+    const ktvs = relevant.filter((v) => v.category?.toLowerCase().includes("ktv"));
+    const picks = ktvs.length ? ktvs : relevant;
+    const cityHint =
+      q.includes("singapore") || q.includes("sg")
+        ? "[Singapore nightlife](/singapore-nightlife)"
+        : q.includes("hcmc") || q.includes("saigon") || q.includes("ho chi minh")
+          ? "[Ho Chi Minh City nightlife](/ho-chi-minh-city-nightlife)"
+          : q.includes("bangkok")
+            ? "[Bangkok nightlife](/bangkok-nightlife)"
+            : q.includes("kuala") || q.includes(" kl")
+              ? "[Kuala Lumpur nightlife](/kuala-lumpur-nightlife)"
+              : "[Browse cities](/book)";
+
+    return `**KTV recommendations** (from our verified listings):
+
+${listVenues(picks.slice(0, 5))}
+
+Explore more in ${cityHint}. Book via WhatsApp for instant confirmation.`;
   }
 
-  if (q.includes("vip") && q.includes("singapore")) {
-    return `Top VIP room options in Singapore:\n• Iconic KTV — premium rooms, 30+ hostesses\n• Supreme KTV — established, great packages\n• Matrix KTV — Orchard area\n\nVIP sessions typically SGD 700–900+. Book 24h ahead on weekends.`;
+  if (q.includes("club")) {
+    const clubs = relevant.filter((v) => v.category?.toLowerCase().includes("club"));
+    return `**Club picks:**
+
+${listVenues((clubs.length ? clubs : relevant).slice(0, 5))}
+
+See [Bangkok nightlife](/bangkok-nightlife) or [Singapore nightlife](/singapore-nightlife) for more.`;
+  }
+
+  if (q.includes("vip")) {
+    return `**VIP room options** (from database):
+
+${listVenues(relevant.slice(0, 5))}
+
+VIP sessions typically SGD 700–900+ in Singapore. Book 24h ahead on weekends — [Book now](/book).`;
   }
 
   if (q.includes("budget") || q.includes("500") || q.includes("cheap")) {
-    return `Budget-friendly options under SGD 500:\n• Vietnam HCMC KTV — VND 2–3M (~SGD 150–250)\n• JB (Johor Bahru) — great value near Singapore\n• Happy hour slots (before 8 PM) in Singapore KTVs\n\nTell us your city and date for exact packages.`;
+    const budget = venues.filter((v) => v.country === "Vietnam" || v.country === "Malaysia").slice(0, 4);
+    return `**Budget-friendly options:**
+
+${listVenues(budget.length ? budget : relevant.slice(0, 4))}
+
+- Vietnam HCMC — often VND 2–3M (~SGD 150–250)
+- [Johor Bahru nightlife](/johor-bahru-nightlife) — great value near Singapore
+
+Tell us your city and date for exact packages — [Book](/book).`;
   }
 
-  if (q.includes("bangkok") || q.includes("club")) {
-    const bkk = ktvData.filter((v) => v.address?.toLowerCase().includes("bangkok") || v.slug?.includes("bangkok")).slice(0, 4);
-    return `Bangkok club highlights (Sukhumvit/RCA):\n${bkk.length ? bkk.map((v) => `• ${v.name}`).join("\n") : "• Onyx Bangkok\n• Route 66\n• Insanity\n• Levels Club"}\n\nBrowse: asianightlife.sg/bangkok-nightlife`;
+  if (relevant.length > 0) {
+    return `**Recommendations for you:**
+
+${listVenues(relevant.slice(0, 6))}
+
+Browse all venues at [Book](/book) or explore our city pages. We cover: ${CITY_LIST}.`;
   }
 
-  return `Thanks for your question! Our concierge covers: ${CITY_LIST}.\n\nFor personalised recommendations, share:\n1. City\n2. Date & time\n3. Group size\n4. Budget\n\nOr browse venues at asianightlife.sg/book`;
+  return `Thanks for your question! Our concierge covers: ${CITY_LIST}.
+
+Share your **city**, **date**, **group size** and **budget** for personalised picks.
+
+[Browse venues](/book) · WhatsApp concierge 24/7`;
 }
 
 export async function POST(request: Request) {
   try {
-    const { question } = await request.json();
+    const { question, locale } = await request.json();
     if (!question || typeof question !== "string") {
       return NextResponse.json({ error: "Question required" }, { status: 400 });
     }
 
-    // Rule-based concierge (always available; no external AI dependency)
-    return NextResponse.json({ answer: ruleBasedAnswer(question) });
+    const trimmed = question.trim().slice(0, 500);
+    const { venues } = await fetchActiveVenues(
+      "id, name, country, category, price, address, slug, hours"
+    );
+
+    const venueContext = buildVenueContextForQuestion(trimmed, venues);
+
+    if (hasGeminiApiKey()) {
+      try {
+        const { answer } = await answerConciergeQuestion({
+          question: trimmed,
+          locale: typeof locale === "string" ? locale : undefined,
+          citiesContext: buildCitiesContext(),
+          venueContext,
+        });
+        return NextResponse.json({
+          answer: normalizeConciergeMarkdown(answer),
+          source: "gemini",
+        });
+      } catch (error) {
+        if (process.env.NODE_ENV === "development") {
+          console.error("[POST /api/concierge] Gemini error:", error);
+        }
+      }
+    } else if (process.env.NODE_ENV === "development") {
+      console.warn(
+        "[POST /api/concierge] GEMINI_API_KEY not set — using rule-based fallback."
+      );
+    }
+
+    return NextResponse.json({
+      answer: normalizeConciergeMarkdown(ruleBasedAnswer(trimmed, venues)),
+      source: "fallback",
+    });
   } catch {
     return NextResponse.json({ error: "Failed to process" }, { status: 500 });
   }

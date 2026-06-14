@@ -2,6 +2,11 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import ClientLayout from '@/components/layout/ClientLayout';
+import { staticParamsForLocales } from '@/lib/i18n-static-params';
+
+export function generateStaticParams() {
+  return staticParamsForLocales();
+}
 
 export default async function LocaleLayout({
   children,

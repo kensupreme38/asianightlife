@@ -13,9 +13,7 @@ import { VenueInfo } from "@/components/venue/VenueInfo";
 import { RelatedVenues } from "@/components/venue/RelatedVenues";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ktvData } from "@/lib/data";
-import { isClientVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
-import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
+import { generateSlug } from "@/lib/slug-utils";
 import { detectCityFromVenue } from "@/lib/cities";
 import { getVenueUrl } from "@/lib/venue-url";
 
@@ -135,38 +133,6 @@ const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) 
       };
     }
 
-    // Optional legacy fallback from data.ts (opt-in via NEXT_PUBLIC_VENUES_STATIC_FALLBACK=true)
-    if (!isClientVenueStaticFallbackEnabled()) return null;
-
-    const staticId = findVenueIdBySlug(id, ktvData);
-    const foundVenue =
-      staticId != null
-        ? ktvData.find((v) => v.id === staticId)
-        : ktvData.find((v) => v.id.toString() === id);
-    if (foundVenue) {
-      return {
-        ...foundVenue,
-        id: foundVenue.id.toString(),
-        slug: generateSlug(foundVenue.name),
-        phone: foundVenue.phone || "",
-        rating: 4.8,
-        status: "open" as const,
-        amenities: [
-          "Free Wifi",
-          "Parking",
-          "Premium Sound",
-          "VIP Rooms",
-          "Card Payment",
-        ],
-        hours:
-          typeof foundVenue.hours === "string"
-            ? foundVenue.hours
-            : "Check with venue",
-        description: foundVenue.description || "No description available",
-        mapEmbedUrl: (foundVenue as any).mapEmbedUrl,
-        country: foundVenue.country || "Unknown",
-      };
-    }
     return null;
   }, [id, hasMounted, apiVenue, loadStatus]);
 

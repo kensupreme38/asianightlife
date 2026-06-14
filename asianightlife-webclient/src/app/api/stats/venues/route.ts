@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { CITIES, matchesCity } from "@/lib/cities";
-import { ktvData } from "@/lib/data";
-import { isVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
-import { createVenuesReader } from "@/utils/supabase/venues-reader";
+import { fetchActiveVenues } from "@/lib/venues-db";
 
 export const revalidate = 3600;
 
@@ -41,30 +39,12 @@ function aggregateStats(venues: VenueRow[]) {
 
 export async function GET() {
   try {
-    let fromDatabase = false;
     let venues: VenueRow[] = [];
-
-    try {
-      const supabase = await createVenuesReader();
-      const { data, error } = await supabase
-        .from("venues")
-        .select("country, category, address")
-        .eq("status", "active");
-
-      if (!error && data != null) {
-        fromDatabase = true;
-        venues = data;
-      }
-    } catch {
-      // fall through to static
-    }
-
-    if (!fromDatabase && isVenueStaticFallbackEnabled()) {
-      venues = ktvData.map((venue) => ({
-        country: venue.country,
-        category: venue.category,
-        address: venue.address,
-      }));
+    const { venues: dbVenues, fromDatabase } = await fetchActiveVenues("country, category, address");
+    if (fromDatabase) {
+      venues = dbVenues;
+    } else if (process.env.NODE_ENV === "development") {
+      console.warn("[GET /api/stats/venues] Database unavailable — returning empty stats.");
     }
 
     const stats = aggregateStats(venues);

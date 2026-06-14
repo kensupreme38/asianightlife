@@ -1,14 +1,13 @@
 "use client";
 import { VenueCard } from "@/components/home/VenueCard";
-import { ktvData } from "@/lib/data";
 import { useTranslations } from 'next-intl';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { Venue } from "@/hooks/use-venues";
-import { generateSlug } from "@/lib/slug-utils";
+import { useVenues } from "@/hooks/use-venues";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface SimilarVenuesProps {
   currentVenueId: string;
@@ -22,23 +21,30 @@ export const SimilarVenues = ({
   country,
 }: SimilarVenuesProps) => {
   const t = useTranslations();
-  const similarVenues = ktvData
-    .filter(
-      (venue) =>
-        venue.id.toString() !== currentVenueId && venue.category === category
-    )
-    .slice(0, 8)
-    .map(
-      (v): Venue => ({
-        ...v,
-        id: v.id.toString(),
-        slug: generateSlug(v.name),
-        rating: 4.5,
-        status: "open" as const,
-        imageHint: "ktv lounge",
-        country: v.country || country,
-      })
+  const { venues, isLoading } = useVenues({
+    selectedCategory: category,
+    selectedCountry: country,
+    limit: 12,
+  });
+
+  const similarVenues = venues
+    .filter((venue) => venue.id !== currentVenueId)
+    .slice(0, 8);
+
+  if (isLoading) {
+    return (
+      <section className="border-t border-border/40 w-full overflow-hidden">
+        <div className="container py-8">
+          <Skeleton className="h-8 w-64 mb-4" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <Skeleton key={i} className="h-48 w-full rounded-lg" />
+            ))}
+          </div>
+        </div>
+      </section>
     );
+  }
 
   if (similarVenues.length === 0) {
     return null;

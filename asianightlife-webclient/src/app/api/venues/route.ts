@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { matchesCity } from "@/lib/cities";
-import { ktvData } from "@/lib/data";
-import { isVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
-import { generateSlug } from "@/lib/slug-utils";
+import { getVenueSlug } from "@/lib/slug-utils";
 import { createVenuesReader } from "@/utils/supabase/venues-reader";
 
 /** Always read fresh data from Supabase so admin edits appear immediately. */
@@ -58,7 +56,7 @@ export async function GET(request: Request) {
           filteredVenues = cityFiltered.slice(offset, offset + limit).map((venue: any) => ({
             ...venue,
             id: String(venue.id),
-            slug: venue.slug || generateSlug(venue.name),
+            slug: getVenueSlug({ slug: venue.slug, name: venue.name }),
             mapEmbedUrl: venue.map_embed_url || undefined,
           }));
         }
@@ -76,7 +74,7 @@ export async function GET(request: Request) {
           filteredVenues = dbVenues.map((venue: any) => ({
             ...venue,
             id: String(venue.id),
-            slug: venue.slug || generateSlug(venue.name),
+            slug: getVenueSlug({ slug: venue.slug, name: venue.name }),
             mapEmbedUrl: venue.map_embed_url || undefined,
           }));
           total = count ?? dbVenues.length;
@@ -88,46 +86,10 @@ export async function GET(request: Request) {
       }
     }
 
-    if (!fromDatabase && isVenueStaticFallbackEnabled() && process.env.NODE_ENV === "development") {
+    if (!fromDatabase && process.env.NODE_ENV === "development") {
       console.warn(
-        "[GET /api/venues] Using static data.ts. Add SUPABASE_SERVICE_ROLE_KEY to asianightlife-webclient/.env (same key as admin), or run SQL: supabase/migrations/202604170003_venues_public_select_policy.sql"
+        "[GET /api/venues] Database unavailable. Add SUPABASE_SERVICE_ROLE_KEY to asianightlife-webclient/.env (same key as admin), or run SQL: supabase/migrations/202604170003_venues_public_select_policy.sql"
       );
-    }
-
-    // Only use data.ts when DB failed and static fallback is allowed (no service role key)
-    if (!fromDatabase && isVenueStaticFallbackEnabled()) {
-      let staticVenues = [...ktvData];
-
-      if (search) {
-        const searchLower = search.toLowerCase();
-        staticVenues = staticVenues.filter(
-          (venue) =>
-            venue.name.toLowerCase().includes(searchLower) ||
-            venue.address?.toLowerCase().includes(searchLower) ||
-            venue.description?.toLowerCase().includes(searchLower)
-        );
-      }
-
-      if (country) {
-        staticVenues = staticVenues.filter((venue) => venue.country === country);
-      }
-
-      if (category) {
-        staticVenues = staticVenues.filter((venue) => venue.category === category);
-      }
-
-      if (city) {
-        staticVenues = staticVenues.filter((venue) =>
-          matchesCity(venue.address || "", city.toLowerCase())
-        );
-      }
-
-      total = staticVenues.length;
-      filteredVenues = staticVenues.slice(offset, offset + limit).map((venue) => ({
-        ...venue,
-        id: String(venue.id),
-        slug: generateSlug(venue.name),
-      }));
     }
 
     return NextResponse.json(

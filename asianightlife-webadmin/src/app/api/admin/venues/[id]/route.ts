@@ -1,15 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createAdminClient, createClient } from "@/lib/supabase/server";
 import { requireAuth } from "@/lib/auth/session";
-
-function generateSlug(name: string) {
-  return name
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
-}
+import { generateSlug } from "@/lib/slug-utils";
 
 function normalizeImages(value: unknown): string[] {
   if (Array.isArray(value)) {

@@ -1,13 +1,14 @@
 import { notFound } from "next/navigation";
 import { GuideDetailClient } from "@/components/guides/GuideDetailClient";
-import { GUIDES, GUIDE_SLUGS, getGuideBySlug } from "@/lib/guides";
+import { GUIDE_SLUGS, getGuideBySlug } from "@/lib/guides";
+import { staticParamsForSlugs } from "@/lib/i18n-static-params";
 import { generatePageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string; locale: string }> };
 
 export function generateStaticParams() {
-  return GUIDE_SLUGS.map((slug) => ({ slug }));
+  return staticParamsForSlugs(GUIDE_SLUGS);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

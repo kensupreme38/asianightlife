@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-import { ktvData } from "@/lib/data";
-import { isVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
-import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
+import { getVenueSlug, generateSlug, legacyGenerateSlug } from "@/lib/slug-utils";
 import { createVenuesReader } from "@/utils/supabase/venues-reader";
 
 export const dynamic = "force-dynamic";
@@ -34,9 +32,29 @@ export async function GET(
         venueWithSlug = {
           ...dbResult.data,
           id: String(dbResult.data.id),
-          slug: dbResult.data.slug || generateSlug(dbResult.data.name),
+          slug: getVenueSlug({ slug: dbResult.data.slug, name: dbResult.data.name }),
           mapEmbedUrl: dbResult.data.map_embed_url || undefined,
         };
+      } else if (!dbError) {
+        const { data: activeVenues } = await supabase
+          .from("venues")
+          .select("*")
+          .eq("status", "active");
+
+        const matched = activeVenues?.find(
+          (row) =>
+            generateSlug(String(row.name ?? "")) === slug ||
+            legacyGenerateSlug(String(row.name ?? "")) === slug
+        );
+
+        if (matched) {
+          venueWithSlug = {
+            ...matched,
+            id: String(matched.id),
+            slug: getVenueSlug({ slug: matched.slug, name: matched.name }),
+            mapEmbedUrl: matched.map_embed_url || undefined,
+          };
+        }
       }
     } catch (err) {
       dbError = err;
@@ -47,22 +65,6 @@ export async function GET(
         { error: "Venue data is temporarily unavailable" },
         { status: 503 }
       );
-    }
-
-    if (!venueWithSlug && isVenueStaticFallbackEnabled()) {
-      const venueId = findVenueIdBySlug(slug, ktvData);
-      if (!venueId) {
-        return NextResponse.json({ error: "Venue not found" }, { status: 404 });
-      }
-      const venue = ktvData.find((v) => v.id === venueId);
-      if (!venue) {
-        return NextResponse.json({ error: "Venue not found" }, { status: 404 });
-      }
-      venueWithSlug = {
-        ...venue,
-        id: String(venue.id),
-        slug: generateSlug(venue.name),
-      };
     }
 
     if (!venueWithSlug) {

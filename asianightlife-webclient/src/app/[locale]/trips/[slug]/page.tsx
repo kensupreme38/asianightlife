@@ -1,13 +1,14 @@
 import { notFound } from "next/navigation";
 import { TripDetailClient } from "@/components/trips/TripDetailClient";
 import { TRAVEL_SLUGS, getTravelPackageBySlug } from "@/lib/travel-packages";
+import { staticParamsForSlugs } from "@/lib/i18n-static-params";
 import { generatePageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string; locale: string }> };
 
 export function generateStaticParams() {
-  return TRAVEL_SLUGS.map((slug) => ({ slug }));
+  return staticParamsForSlugs(TRAVEL_SLUGS);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

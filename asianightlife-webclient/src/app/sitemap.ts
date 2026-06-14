@@ -3,7 +3,6 @@ import { CITY_SLUGS } from "@/lib/cities";
 import { GUIDE_SLUGS } from "@/lib/guides";
 import { TRAVEL_SLUGS } from "@/lib/travel-packages";
 import { getVenueUrl } from "@/lib/venue-url";
-import { generateSlug } from "@/lib/slug-utils";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/seo";
 import { createVenuesReader } from "@/utils/supabase/venues-reader";
@@ -32,7 +31,7 @@ async function collectVenuePaths(): Promise<VenueSitemapEntry[]> {
 
     for (const venue of venues ?? []) {
       const path = getVenueUrl({
-        slug: String(venue.slug || generateSlug(String(venue.name ?? ""))),
+        slug: venue.slug ? String(venue.slug) : undefined,
         name: String(venue.name ?? ""),
         country: String(venue.country ?? "Singapore"),
         address: String(venue.address ?? ""),

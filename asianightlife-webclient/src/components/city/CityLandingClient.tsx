@@ -37,7 +37,7 @@ export function CityLandingClient({ city }: CityLandingClientProps) {
 
       <main id="main-content">
         {/* Hero */}
-        <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        <section className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden">
           <Image
             src={heroImage?.imageUrl || "https://picsum.photos/seed/city/1200/600"}
             alt={`${city.name} nightlife`}
@@ -45,49 +45,54 @@ export function CityLandingClient({ city }: CityLandingClientProps) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30" />
-          <div className="container relative z-10 py-16">
-            <Badge className="mb-4 bg-red-bright/20 text-red-bright border-red-bright/30 flex items-center gap-2 w-fit">
-              <CountryFlag country={city.countryCode} size={20} />
-              {city.country}
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3 gradient-text">
-              {city.heroTitle}
-            </h1>
-            <p className="text-lg text-muted-foreground mb-2 flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-red-bright" />
-              {city.heroSubtitle}
-            </p>
-            <p className="text-foreground/80 max-w-2xl mb-8 leading-relaxed">
-              {city.intro}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button variant="neon" size="lg" asChild>
-                <Link href="/book">{t("city.bookNow")}</Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href={whatsappMsg} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  {t("city.whatsappConcierge")}
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
-                  <Send className="h-4 w-4 mr-2" />
-                  {t("city.telegramConcierge")}
-                </a>
-              </Button>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/50 md:bg-gradient-to-r md:from-background/95 md:via-background/70 md:to-background/30" />
+
+          <div className="relative z-10 flex items-end md:items-center min-h-[55vh] md:min-h-[50vh] py-10 sm:py-12 md:py-16">
+            <div className="container px-4 sm:px-6">
+              <div className="max-w-3xl">
+                <Badge className="mb-3 sm:mb-4 bg-red-bright/20 text-red-bright border-red-bright/30 flex items-center gap-2 w-fit text-xs sm:text-sm">
+                  <CountryFlag country={city.countryCode} size={20} />
+                  {city.country}
+                </Badge>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-headline mb-2 sm:mb-3 gradient-text leading-tight">
+                  {city.heroTitle}
+                </h1>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-2 flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <MapPin className="h-4 w-4 text-red-bright shrink-0" />
+                  <span>{city.heroSubtitle}</span>
+                </p>
+                <p className="text-sm sm:text-base text-foreground/80 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+                  {city.intro}
+                </p>
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 md:gap-3">
+                  <Button variant="neon" size="lg" className="w-full sm:w-auto" asChild>
+                    <Link href="/book">{t("city.bookNow")}</Link>
+                  </Button>
+                  <Button variant="outline" size="sm" className="w-full sm:w-auto md:size-lg" asChild>
+                    <a href={whatsappMsg} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="h-4 w-4 mr-2" />
+                      {t("city.whatsappConcierge")}
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="sm" className="w-full sm:w-auto md:size-lg" asChild>
+                    <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
+                      <Send className="h-4 w-4 mr-2" />
+                      {t("city.telegramConcierge")}
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Venues */}
-        <section className="py-12" aria-label={`${city.name} venues`}>
-          <div className="container mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold font-headline">
+        <section className="py-8 sm:py-12" aria-label={`${city.name} venues`}>
+          <div className="container px-4 sm:px-6 mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-headline">
               {t("city.venuesIn", { city: city.name })}
             </h2>
-            <p className="text-muted-foreground mt-2">
+            <p className="text-sm sm:text-base text-muted-foreground mt-2">
               {t("city.venuesSubtitle")}
             </p>
           </div>

@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import { ktvData } from "@/lib/data";
-import { isVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
 import { createVenuesReader } from "@/utils/supabase/venues-reader";
 
 export const dynamic = "force-dynamic";
@@ -25,8 +23,8 @@ export async function GET() {
       // Fall back to static data
     }
 
-    if (!fromDatabase && isVenueStaticFallbackEnabled()) {
-      categories = Array.from(new Set(ktvData.map((venue) => venue.category).filter(Boolean))).sort();
+    if (!fromDatabase && process.env.NODE_ENV === "development") {
+      console.warn("[GET /api/venues/categories] Database unavailable — returning empty list.");
     }
 
     return NextResponse.json(

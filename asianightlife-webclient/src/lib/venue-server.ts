@@ -1,9 +1,7 @@
-import { ktvData } from "@/lib/data";
-import { isVenueStaticFallbackEnabled } from "@/lib/venue-static-fallback";
-import { findVenueIdBySlug, generateSlug } from "@/lib/slug-utils";
+import { generateSlug, getVenueSlug, legacyGenerateSlug } from "@/lib/slug-utils";
 import { createVenuesReader } from "@/utils/supabase/venues-reader";
 
-/** Unified shape for metadata / JSON-LD (DB or static fallback). */
+/** Unified shape for metadata / JSON-LD (from Supabase). */
 export type VenueMeta = {
   name: string;
   category: string;
@@ -32,12 +30,15 @@ function rowToMeta(row: Record<string, unknown>): VenueMeta {
     hours: (row.hours as string) ?? null,
     phone: (row.phone as string) ?? null,
     price: (row.price as string) ?? null,
-    pathSlug: String((row.slug as string) || generateSlug(String(row.name ?? ""))),
+    pathSlug: getVenueSlug({
+      slug: row.slug as string | undefined,
+      name: String(row.name ?? ""),
+    }),
   };
 }
 
 /**
- * Resolve venue for server components: Supabase first (same reader as /api/venues), then data.ts.
+ * Resolve venue for server components from Supabase.
  */
 export async function resolveVenueBySlug(slug: string): Promise<VenueMeta | null> {
   try {
@@ -51,6 +52,22 @@ export async function resolveVenueBySlug(slug: string): Promise<VenueMeta | null
 
     if (!bySlug.error && bySlug.data) {
       return rowToMeta(bySlug.data as Record<string, unknown>);
+    }
+
+    const { data: activeVenues, error: listError } = await supabase
+      .from("venues")
+      .select("*")
+      .eq("status", "active");
+
+    if (!listError && activeVenues?.length) {
+      const matched = activeVenues.find(
+        (row) =>
+          generateSlug(String(row.name ?? "")) === slug ||
+          legacyGenerateSlug(String(row.name ?? "")) === slug
+      );
+      if (matched) {
+        return rowToMeta(matched as Record<string, unknown>);
+      }
     }
 
     const looksUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(slug);
@@ -71,27 +88,9 @@ export async function resolveVenueBySlug(slug: string): Promise<VenueMeta | null
     }
   }
 
-  if (!isVenueStaticFallbackEnabled()) return null;
+  if (process.env.NODE_ENV === "development") {
+    console.warn("[resolveVenueBySlug] Venue not found in database:", slug);
+  }
 
-  const staticId = findVenueIdBySlug(slug, ktvData);
-  const v =
-    staticId != null
-      ? ktvData.find((x) => x.id === staticId)
-      : ktvData.find((x) => x.id.toString() === slug);
-  if (!v) return null;
-
-  const slugFromStatic = (v as { slug?: string }).slug;
-  return {
-    name: v.name,
-    category: v.category,
-    country: v.country ?? "",
-    address: v.address,
-    description: v.description,
-    main_image_url: v.main_image_url,
-    images: v.images,
-    hours: typeof v.hours === "string" ? v.hours : undefined,
-    phone: v.phone,
-    price: v.price,
-    pathSlug: slugFromStatic || generateSlug(v.name),
-  };
+  return null;
 }

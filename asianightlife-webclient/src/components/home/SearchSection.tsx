@@ -11,8 +11,8 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { ktvData } from "@/lib/data";
 import { useDebounce } from "@/hooks/use-debounce";
+import { useVenueStats } from "@/hooks/use-venue-stats";
 
 interface SearchSectionProps {
   searchQuery: string;
@@ -30,23 +30,58 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
   const [inputValue, setInputValue] = useState(searchQuery);
   const [isOpen, setIsOpen] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
+  const [venueHits, setVenueHits] = useState<Array<{ name: string; address?: string }>>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const debouncedInput = useDebounce(inputValue, 200);
+  const stats = useVenueStats();
 
   useEffect(() => {
     setInputValue(searchQuery);
   }, [searchQuery]);
 
+  useEffect(() => {
+    if (!debouncedInput || debouncedInput.length < 1) {
+      setVenueHits([]);
+      return;
+    }
+
+    let cancelled = false;
+    fetch(`/api/venues?search=${encodeURIComponent(debouncedInput)}&limit=10`, {
+      cache: "no-store",
+    })
+      .then((response) => (response.ok ? response.json() : { venues: [] }))
+      .then((data) => {
+        if (!cancelled) {
+          setVenueHits(
+            (data.venues || []).map((venue: { name: string; address?: string }) => ({
+              name: venue.name,
+              address: venue.address,
+            }))
+          );
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setVenueHits([]);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [debouncedInput]);
+
   // Generate suggestions based on input
   const suggestions = useMemo(() => {
     if (!debouncedInput || debouncedInput.length < 1) {
-      // Return popular suggestions when empty
-      const categories = Array.from(new Set(ktvData.map(v => v.category).filter(cat => cat != null))).filter(cat => cat && typeof cat === 'string');
-      const countries = Array.from(new Set(ktvData.map(v => v.country).filter(country => country != null))).filter(country => country && typeof country === 'string');
-      
+      const categories = stats
+        ? Object.keys(stats.category_stats).slice(0, 3)
+        : [];
+      const countries = stats
+        ? Object.keys(stats.country_stats).slice(0, 2)
+        : [];
+
       return [
-        ...categories.slice(0, 3).map(cat => ({ type: 'category' as const, text: cat })),
-        ...countries.slice(0, 2).map(country => ({ type: 'country' as const, text: country })),
+        ...categories.map((cat) => ({ type: 'category' as const, text: cat })),
+        ...countries.map((country) => ({ type: 'country' as const, text: country })),
       ];
     }
 
@@ -54,31 +89,29 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
     const suggestions: Suggestion[] = [];
     const seen = new Set<string>();
 
-    // Search venues by name
-    ktvData.forEach(venue => {
-      if (venue.name && typeof venue.name === 'string' && venue.name.toLowerCase().includes(query) && !seen.has(venue.name)) {
+    venueHits.forEach((venue) => {
+      if (venue.name && venue.name.toLowerCase().includes(query) && !seen.has(venue.name)) {
         suggestions.push({ type: 'venue', text: venue.name });
         seen.add(venue.name);
       }
     });
 
-    // Search by category
-    const categories = Array.from(new Set(ktvData.map(v => v.category).filter(cat => cat != null)));
-    categories.forEach(cat => {
-      if (cat && typeof cat === 'string' && cat.toLowerCase().includes(query) && !seen.has(`category:${cat}`)) {
-        const count = ktvData.filter(v => v.category === cat).length;
-        suggestions.push({ type: 'category', text: cat, count });
+    const categories = stats ? Object.keys(stats.category_stats) : [];
+    categories.forEach((cat) => {
+      if (cat.toLowerCase().includes(query) && !seen.has(`category:${cat}`)) {
+        suggestions.push({
+          type: 'category',
+          text: cat,
+          count: stats?.category_stats[cat],
+        });
         seen.add(`category:${cat}`);
       }
     });
 
-    // Search by city/area from address
-    ktvData.forEach(venue => {
-      if (venue.address && typeof venue.address === 'string') {
-        const address = venue.address.toLowerCase();
-        // Extract potential city/area names (simple heuristic)
-        const parts = address.split(/[,\s]+/);
-        parts.forEach(part => {
+    venueHits.forEach((venue) => {
+      if (venue.address && typeof venue.address === "string") {
+        const parts = venue.address.toLowerCase().split(/[,\s]+/);
+        parts.forEach((part) => {
           if (part.length > 2 && part.includes(query) && !seen.has(`city:${part}`)) {
             suggestions.push({ type: 'city', text: part });
             seen.add(`city:${part}`);
@@ -87,18 +120,20 @@ export const SearchSection = ({ searchQuery, onSearchChange }: SearchSectionProp
       }
     });
 
-    // Search by country
-    const countries = Array.from(new Set(ktvData.map(v => v.country).filter(country => country != null)));
-    countries.forEach(country => {
-      if (country && typeof country === 'string' && country.toLowerCase().includes(query) && !seen.has(`country:${country}`)) {
-        const count = ktvData.filter(v => v.country === country).length;
-        suggestions.push({ type: 'country', text: country, count });
+    const countries = stats ? Object.keys(stats.country_stats) : [];
+    countries.forEach((country) => {
+      if (country.toLowerCase().includes(query) && !seen.has(`country:${country}`)) {
+        suggestions.push({
+          type: 'country',
+          text: country,
+          count: stats?.country_stats[country],
+        });
         seen.add(`country:${country}`);
       }
     });
 
-    return suggestions.slice(0, 10); // Limit to 10 suggestions
-  }, [debouncedInput]);
+    return suggestions.slice(0, 10);
+  }, [debouncedInput, stats, venueHits]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;

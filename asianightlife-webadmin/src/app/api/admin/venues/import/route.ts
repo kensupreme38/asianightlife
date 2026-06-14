@@ -4,6 +4,7 @@ import path from "node:path";
 import { createAdminClient, createClient } from "@/lib/supabase/server";
 import { requireAuth } from "@/lib/auth/session";
 import { inferCityFromAddress } from "@/lib/venue-filters";
+import { generateSlug } from "@/lib/slug-utils";
 
 type RawVenue = {
   name?: string;
@@ -39,17 +40,8 @@ type NormalizedVenue = {
   status: string;
 };
 
-function generateSlug(name: string) {
-  return name
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
-}
-
 async function loadRawData(): Promise<RawVenue[]> {
-  const dataFile = path.resolve(process.cwd(), "../asianightlife/src/lib/data.ts");
+  const dataFile = path.resolve(process.cwd(), "../asianightlife-webclient/src/lib/data.ts");
   const source = await readFile(dataFile, "utf-8");
   const executableSource = source.replace("export const ktvData =", "const ktvData =");
   const loader = new Function(`${executableSource}\nreturn ktvData;`);
