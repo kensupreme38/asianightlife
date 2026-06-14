@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { resolveVenueBySlug } from "@/lib/venue-server";
 import { getVenueUrl } from "@/lib/venue-url";
