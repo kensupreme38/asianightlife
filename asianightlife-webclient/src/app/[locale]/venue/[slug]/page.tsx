@@ -11,19 +11,18 @@ type VenueDetailPageProps = {
 export default async function VenueDetailPage({ params }: VenueDetailPageProps) {
   const { slug } = await params;
   const v = await resolveVenueBySlug(slug);
-  if (v) {
-    redirect(
-      getVenueUrl({
-        slug: v.pathSlug,
-        name: v.name,
-        country: v.country,
-        address: v.address ?? "",
-      })
-    );
+  if (!v) {
+    notFound();
   }
 
-  const VenueDetailClient = (await import("@/components/venue/VenueDetailClient")).default;
-  return <VenueDetailClient id={slug} />;
+  redirect(
+    getVenueUrl({
+      slug: v.pathSlug,
+      name: v.name,
+      country: v.country,
+      address: v.address ?? "",
+    })
+  );
 }
 
 export async function generateMetadata({ params }: VenueDetailPageProps): Promise<Metadata> {

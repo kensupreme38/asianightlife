@@ -67,11 +67,11 @@ export const HeroBanner = () => {
 
   return (
     <section
-      className="relative w-full min-h-[55vh] md:min-h-[65vh] overflow-hidden"
+      className="relative w-full min-h-[72vh] sm:min-h-[65vh] md:min-h-[65vh] overflow-x-hidden"
       aria-roledescription="carousel"
       aria-label="Hero banner"
     >
-      <div className="relative w-full min-h-[55vh] md:min-h-[65vh]">
+      <div className="relative w-full min-h-[72vh] sm:min-h-[65vh] md:min-h-[65vh]">
         {banners.map((banner, index) => (
           <div
             key={banner.id}
@@ -92,17 +92,17 @@ export const HeroBanner = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
 
-            <div className="relative h-full flex items-center py-12 md:py-16 min-h-[55vh] md:min-h-[65vh]">
-              <div className="container px-4">
+            <div className="relative h-full flex items-center py-10 sm:py-12 md:py-16 min-h-[72vh] sm:min-h-[65vh] md:min-h-[65vh]">
+              <div className="container px-4 pb-14 sm:pb-12">
                 <div className="max-w-3xl">
-                  <div className="flex items-center space-x-2 mb-4">
+                  <div className="flex items-center space-x-2 mb-3 sm:mb-4">
                     <Star className="h-5 w-5 text-red-orange fill-current" />
                     <span className="text-sm font-medium text-red-orange uppercase tracking-wide">
                       {banner.badge}
                     </span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-headline">
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight font-headline">
                     <span className="gradient-text">{banner.title}</span>
                   </h1>
 
@@ -110,34 +110,54 @@ export const HeroBanner = () => {
                     {banner.subtitle}
                   </p>
 
-                  <p className="text-sm md:text-base text-muted-foreground mb-6 max-w-2xl">
+                  <p className="text-sm md:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl">
                     {banner.description}
                   </p>
 
                   {banner.showCTAs && (
-                    <div className="flex flex-wrap gap-2 md:gap-3">
-                      <Button variant="neon" size="lg" asChild>
+                    <div className="grid grid-cols-2 gap-2 w-full max-w-md sm:max-w-none sm:flex sm:flex-wrap sm:gap-3">
+                      <Button
+                        variant="neon"
+                        size="sm"
+                        className="w-full h-9 px-2.5 text-xs sm:w-auto sm:h-10 sm:px-4 sm:text-sm md:h-11 md:px-8"
+                        asChild
+                      >
                         <Link href="/book">
-                          <Sparkles className="h-4 w-4 mr-2" />
-                          {t("hero.bookNow")}
+                          <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2 shrink-0" />
+                          <span className="truncate">{t("hero.bookNow")}</span>
                         </Link>
                       </Button>
-                      <Button variant="outline" size="lg" asChild>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full h-9 px-2.5 text-xs sm:w-auto sm:h-10 sm:px-4 sm:text-sm md:h-11 md:px-8"
+                        asChild
+                      >
                         <Link href="/singapore-nightlife">
-                          <MapPin className="h-4 w-4 mr-2" />
-                          {t("hero.exploreCities")}
+                          <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2 shrink-0" />
+                          <span className="truncate">{t("hero.exploreCities")}</span>
                         </Link>
                       </Button>
-                      <Button variant="outline" size="sm" className="md:size-lg" asChild>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full h-9 px-2.5 text-xs sm:w-auto sm:h-10 sm:px-4 sm:text-sm md:h-11 md:px-8"
+                        asChild
+                      >
                         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                          <MessageCircle className="h-4 w-4 mr-2" />
-                          {t("hero.whatsappConcierge")}
+                          <MessageCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2 shrink-0" />
+                          <span className="truncate">{t("hero.whatsappConcierge")}</span>
                         </a>
                       </Button>
-                      <Button variant="outline" size="sm" className="md:size-lg" asChild>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full h-9 px-2.5 text-xs sm:w-auto sm:h-10 sm:px-4 sm:text-sm md:h-11 md:px-8"
+                        asChild
+                      >
                         <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
-                          <Send className="h-4 w-4 mr-2" />
-                          {t("hero.telegramConcierge")}
+                          <Send className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2 shrink-0" />
+                          <span className="truncate">{t("hero.telegramConcierge")}</span>
                         </a>
                       </Button>
                     </div>
@@ -181,7 +201,7 @@ export const HeroBanner = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
         {banners.map((_, index) => (
           <button
             key={index}

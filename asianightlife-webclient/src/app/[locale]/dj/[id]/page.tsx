@@ -123,6 +123,20 @@ async function DJStructuredData({ id, locale }: { id: string; locale: string }) 
 export default async function DJDetailPage({ params }: DJDetailPageProps) {
   const { id, locale } = await params;
 
+  // Verify if the DJ exists on the server to prevent Soft 404
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://asianightlife.sg"}/api/djs/${id}`,
+      { cache: "no-store" }
+    );
+    if (!response.ok) {
+      notFound();
+    }
+  } catch (error) {
+    // Fail-safe: if the API request fails (e.g., during build phase or network issues),
+    // let it fall back to client-side loading to avoid breaking valid pages.
+  }
+
   return (
     <>
       <DJDetailClient id={id} />
