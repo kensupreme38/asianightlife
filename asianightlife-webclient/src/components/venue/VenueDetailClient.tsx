@@ -11,10 +11,11 @@ import { Footer } from "@/components/layout/Footer";
 import { VenueGallery } from "@/components/venue/VenueGallery";
 import { VenueInfo } from "@/components/venue/VenueInfo";
 import { RelatedVenues } from "@/components/venue/RelatedVenues";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageBreadcrumbBar } from "@/components/layout/Breadcrumbs";
+import { venueBreadcrumbs } from "@/lib/breadcrumbs";
 import { Skeleton } from "@/components/ui/skeleton";
 import { generateSlug } from "@/lib/slug-utils";
-import { detectCityFromVenue } from "@/lib/cities";
+import type { VenueRecord } from "@/lib/venue-server";
 import { getVenueUrl } from "@/lib/venue-url";
 
 // Dynamic imports for heavy components - only load when needed
@@ -43,11 +44,19 @@ const BookingForm = dynamic(
   { loading: () => null }
 );
 
-const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) => {
+const VenueDetailClient = ({
+  id,
+  cityCode,
+  initialVenue,
+}: {
+  id: string;
+  cityCode?: string;
+  initialVenue?: VenueRecord;
+}) => {
   const t = useTranslations();
   const [hasMounted, setHasMounted] = useState(false);
-  const [apiVenue, setApiVenue] = useState<any>(null);
-  const [loadStatus, setLoadStatus] = useState<"loading" | "done">("loading");
+  const [apiVenue, setApiVenue] = useState<any>(initialVenue ?? null);
+  const [loadStatus, setLoadStatus] = useState<"loading" | "done">(initialVenue ? "done" : "loading");
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -64,6 +73,7 @@ const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) 
 
   useEffect(() => {
     if (!hasMounted || !id) return;
+    if (initialVenue) return;
 
     let cancelled = false;
     setLoadStatus("loading");
@@ -93,7 +103,7 @@ const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) 
     return () => {
       cancelled = true;
     };
-  }, [hasMounted, id]);
+  }, [hasMounted, id, initialVenue]);
 
   const handleSearchChange = (query: string) => {
     const newParams = new URLSearchParams(params.toString());
@@ -130,6 +140,7 @@ const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) 
         description: apiVenue.description || "No description available",
         mapEmbedUrl: apiVenue.mapEmbedUrl,
         country: apiVenue.country || "Unknown",
+        updated_at: apiVenue.updated_at ?? null,
       };
     }
 
@@ -205,9 +216,6 @@ const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) 
 
   const galleryImages = [venue.main_image_url, ...(venue.images || [])].filter(Boolean);
 
-  const city = cityCode
-    ? detectCityFromVenue(venue.country, venue.address)
-    : detectCityFromVenue(venue.country, venue.address);
   const venuePath = getVenueUrl({
     slug: venue.slug,
     name: venue.name,
@@ -215,26 +223,22 @@ const VenueDetailClient = ({ id, cityCode }: { id: string; cityCode?: string }) 
     address: venue.address,
   });
 
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    ...(city
-      ? [{ label: city.heroTitle, href: `/${city.slug}` }]
-      : []),
-    { label: venue.name, href: venuePath },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+      <PageBreadcrumbBar
+        items={venueBreadcrumbs(
+          { name: venue.name, country: venue.country },
+          venuePath,
+          {
+            home: t("common.home"),
+            countries: t("breadcrumbs.countries"),
+          }
+        )}
+      />
 
       <main id="main-content" className="container py-8 px-4 sm:px-8">
-
-        {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb">
-          <Breadcrumbs items={breadcrumbItems} />
-        </nav>
-        
-        {/* Breadcrumb & Actions */}
+        {/* Actions */}
         <div className="flex items-center justify-between mb-8">
           <Button 
             variant="ghost" 

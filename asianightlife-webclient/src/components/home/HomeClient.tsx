@@ -5,8 +5,11 @@ import { useRouter, usePathname } from "@/i18n/routing";
 import HomeComponent from "@/components/home/HomeComponent";
 import { WelcomeDialog } from "@/components/home/WelcomeDialog";
 import { SplashScreen } from "@/components/ui/splash-screen";
+import {
+  filtersToSearchParams,
+  sanitizeVenueFilters,
+} from "@/lib/venue-filters";
 
-// Component riêng để sử dụng useSearchParams
 const HomeClientContent = () => {
   const [isWelcomeDialogOpen, setWelcomeDialogOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
@@ -17,7 +20,7 @@ const HomeClientContent = () => {
   const pathname = usePathname();
 
   const params = useMemo(() => {
-    const sp = searchParams ?? new URLSearchParams(); // fallback rỗng nếu null
+    const sp = searchParams ?? new URLSearchParams();
     return new URLSearchParams(sp.toString());
   }, [searchParams]);
 
@@ -26,15 +29,39 @@ const HomeClientContent = () => {
   const selectedCity = params.get("city") || "all";
   const searchQuery = params.get("q") || "";
 
+  // Fix broken URL combos (e.g. country=Vietnam + city=Bangkok, or city=Jakarta).
   useEffect(() => {
-    // Check if user has seen splash screen before
+    const sanitized = sanitizeVenueFilters({
+      country: selectedCountry,
+      city: selectedCity,
+      category: selectedCategory,
+    });
+
+    const countryChanged = sanitized.country !== selectedCountry;
+    const cityChanged = sanitized.city !== selectedCity;
+
+    if (!countryChanged && !cityChanged) return;
+
+    const nextParams = filtersToSearchParams(sanitized, params);
+    nextParams.delete("page");
+    const query = nextParams.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  }, [
+    selectedCountry,
+    selectedCity,
+    selectedCategory,
+    params,
+    pathname,
+    router,
+  ]);
+
+  useEffect(() => {
     const hasSeenSplash = sessionStorage.getItem("hasSeenSplashScreen");
 
     if (!hasSeenSplash) {
       setShowSplash(true);
       sessionStorage.setItem("hasSeenSplashScreen", "true");
     } else {
-      // If already seen splash, mount immediately
       setHasMounted(true);
     }
   }, []);
@@ -46,59 +73,39 @@ const HomeClientContent = () => {
         const timer = setTimeout(() => {
           setWelcomeDialogOpen(true);
           sessionStorage.setItem("hasSeenWelcomeDialog", "true");
-        }, 1000); // Show dialog after 1 second
+        }, 1000);
         return () => clearTimeout(timer);
       }
     }
   }, [hasMounted]);
 
-  const handleCategoryChange = useCallback((category: string) => {
-    const newParams = new URLSearchParams(params.toString());
-    if (category === "all") {
-      newParams.delete("type");
-    } else {
-      newParams.set("type", category);
-    }
-    const newUrl = `${pathname}?${newParams.toString()}`;
-    router.replace(newUrl, { scroll: false });
+  const handleClearFilters = useCallback(() => {
+    const nextParams = new URLSearchParams(params.toString());
+    nextParams.delete("country");
+    nextParams.delete("city");
+    nextParams.delete("type");
+    nextParams.delete("page");
+    const query = nextParams.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
   }, [params, pathname, router]);
 
-  const handleCountryChange = useCallback((country: string) => {
-    const newParams = new URLSearchParams(params.toString());
-    if (country === "all") {
-      newParams.delete("country");
-    } else {
-      newParams.set("country", country);
-    }
-    // Reset city when country changes
-    newParams.delete("city");
-    const newUrl = `${pathname}?${newParams.toString()}`;
-    router.replace(newUrl, { scroll: false });
-  }, [params, pathname, router]);
+  const handleSearchChange = useCallback(
+    (query: string) => {
+      const newParams = new URLSearchParams(params.toString());
+      if (query) {
+        newParams.set("q", query);
+      } else {
+        newParams.delete("q");
+      }
+      newParams.delete("page");
+      const newUrl = newParams.toString()
+        ? `${pathname}?${newParams.toString()}`
+        : pathname;
+      router.replace(newUrl, { scroll: false });
+    },
+    [params, pathname, router]
+  );
 
-  const handleCityChange = useCallback((city: string) => {
-    const newParams = new URLSearchParams(params.toString());
-    if (city === "all") {
-      newParams.delete("city");
-    } else {
-      newParams.set("city", city);
-    }
-    const newUrl = `${pathname}?${newParams.toString()}`;
-    router.replace(newUrl, { scroll: false });
-  }, [params, pathname, router]);
-
-  const handleSearchChange = useCallback((query: string) => {
-    const newParams = new URLSearchParams(params.toString());
-    if (query) {
-      newParams.set("q", query);
-    } else {
-      newParams.delete("q");
-    }
-    const newUrl = `${pathname}?${newParams.toString()}`;
-    router.replace(newUrl, { scroll: false });
-  }, [params, pathname, router]);
-
-  // Show splash screen only on first visit to homepage
   if (showSplash) {
     return (
       <SplashScreen
@@ -111,7 +118,6 @@ const HomeClientContent = () => {
     );
   }
 
-  // No loading state - just show content directly if not showing splash
   if (!hasMounted) {
     return null;
   }
@@ -123,9 +129,7 @@ const HomeClientContent = () => {
         selectedCountry={selectedCountry}
         selectedCity={selectedCity}
         searchQuery={searchQuery}
-        onCategoryChange={handleCategoryChange}
-        onCountryChange={handleCountryChange}
-        onCityChange={handleCityChange}
+        onClearFilters={handleClearFilters}
         onSearchChange={handleSearchChange}
       />
       <WelcomeDialog
@@ -136,7 +140,6 @@ const HomeClientContent = () => {
   );
 };
 
-// Wrapper component với Suspense
 const HomeClient = () => {
   return (
     <Suspense fallback={null}>

@@ -1,238 +1,78 @@
 "use client";
-import {
-  Building2,
-  Globe,
-  Utensils,
-  Music,
-  Mic,
-  Radio,
-  Beer,
-  Martini,
-  Building,
-  Bath,
-  HeartHandshake,
-  Hotel,
-  Coffee,
-  Soup,
-} from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { cn } from "@/lib/utils";
-import { useMemo } from "react";
-import { useTranslations } from 'next-intl';
-import { CountryFlag } from "@/components/ui/country-flag";
+
+import { Globe, LayoutGrid } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useVenueStats } from "@/hooks/use-venue-stats";
+import { useBrowseHighlights } from "@/hooks/use-browse-highlights";
+import { BROWSE_COUNTRIES, VENUE_TYPE_GROUPS } from "@/lib/browse-cards-data";
+import { getCountrySlug } from "@/lib/countries";
+import { getCategorySlug } from "@/lib/categories";
+import { BrowseCard, BrowseSection } from "@/components/home/BrowseCard";
+import { BrowseWidgets } from "@/components/home/BrowseWidgets";
 
 interface CountrySelectorProps {
   selectedCountry: string;
-  onCountryChange: (country: string) => void;
   selectedCity: string;
-  onCityChange: (city: string) => void;
   selectedCategory: string;
-  onCategoryChange: (category: string) => void;
 }
-
-const getCountries = (t: any) => [
-  { id: "all", name: t('home.allCountries'), countryCode: null as string | null },
-  { id: "Singapore", name: "Singapore", countryCode: "sg" },
-  { id: "Vietnam", name: "Vietnam", countryCode: "vn" },
-  { id: "Thailand", name: "Thailand", countryCode: "th" },
-  { id: "Malaysia", name: "Malaysia", countryCode: "my" },
-  { id: "Cambodia", name: "Cambodia", countryCode: "kh" },
-  { id: "Indonesia", name: "Indonesia", countryCode: "id" },
-  { id: "Japan", name: "Japan", countryCode: "jp" },
-  { id: "Macao", name: "Macao", countryCode: "mo" },
-  { id: "Philippines", name: "Philippines", countryCode: "ph" },
-  { id: "South Korea", name: "South Korea", countryCode: "kr" },
-  { id: "Taiwan", name: "Taiwan", countryCode: "tw" },
-];
-
-const getCategories = (t: any) => [
-  { id: "all", name: t('home.all'), icon: Music },
-  // Nightlife
-  { id: "Night market", name: "Night market", icon: Utensils },
-  { id: "KTV", name: "KTV", icon: Mic },
-  { id: "Nightclub / clubbing", name: "Nightclub / clubbing", icon: Radio },
-  { id: "Live house / Beer club", name: "Live house / Beer club", icon: Beer },
-  { id: "Pub", name: "Pub", icon: Beer },
-  {
-    id: "Lounge / Speakeasy bar",
-    name: "Lounge / Speakeasy bar",
-    icon: Martini,
-  },
-  { id: "Sky Bar", name: "Sky Bar", icon: Building },
-  // Relax
-  { id: "Spa / Osen", name: "Spa / Osen", icon: Bath },
-  { id: "Massage", name: "Massage", icon: HeartHandshake },
-  // Hotel
-  { id: "Hotel", name: "Hotel", icon: Hotel },
-  // Food
-  { id: "Restaurants", name: "Restaurants", icon: Utensils },
-  { id: "Breakfast", name: "Breakfast", icon: Coffee },
-  {
-    id: "Supper (after 12 midnight)",
-    name: "Supper (after 12 midnight)",
-    icon: Soup,
-  },
-];
-
-const getCitiesByCountry = (t: any): Record<string, { id: string; name: string }[]> => ({
-  Vietnam: [
-    { id: "all", name: t('home.allCities') },
-    { id: "Hanoi", name: "Hanoi" },
-    { id: "Ha Long Bay", name: "Ha Long Bay" },
-    { id: "Danang", name: "Danang" },
-    { id: "Nha Trang", name: "Nha Trang" },
-    { id: "Ho Chi Minh City", name: "Ho Chi Minh City" },
-    { id: "Vung Tau", name: "Vung Tau" },
-    { id: "Can Tho", name: "Can Tho" },
-    { id: "Phu Quoc", name: "Phu Quoc" },
-  ],
-  Thailand: [
-    { id: "all", name: t('home.allCities') },
-    { id: "Bangkok", name: "Bangkok" },
-    { id: "Chiang Mai", name: "Chiang Mai" },
-    { id: "Pattaya", name: "Pattaya" },
-    { id: "Phuket", name: "Phuket" },
-    { id: "Hat Yai", name: "Hat Yai" },
-  ],
-  Malaysia: [
-    { id: "all", name: t('home.allCities') },
-    { id: "Penang", name: "Penang" },
-    { id: "Kuala Lumpur", name: "Kuala Lumpur" },
-    { id: "Johor Bahru", name: "Johor Bahru" },
-    { id: "Kota Kinabalu", name: "Kota Kinabalu" },
-  ],
-});
 
 export const CountrySelector = ({
   selectedCountry,
-  onCountryChange,
   selectedCity,
-  onCityChange,
   selectedCategory,
-  onCategoryChange,
 }: CountrySelectorProps) => {
   const t = useTranslations();
-  const countries = useMemo(() => getCountries(t), [t]);
-  const citiesByCountry = useMemo(() => getCitiesByCountry(t), [t]);
-  const availableCities = citiesByCountry[selectedCountry] || [];
-  const isCitySelectorEnabled = availableCities.length > 0;
-
-  const categories = useMemo(() => getCategories(t), [t]);
   const stats = useVenueStats();
+  const { topVenues, newUpdates, isLoading } = useBrowseHighlights({
+    country: selectedCountry,
+    city: selectedCity,
+  });
 
-  const categoryCounts = stats?.category_stats ?? {};
+  const getCountrySubtitle = (countryName: string) => {
+    const count = stats?.country_stats?.[countryName];
+    if (count && count > 0) return t("cities.venueCount", { count });
+    return t("home.comingSoon");
+  };
+
+  const isVenueTypeSelected = (filterCategoryId: string) =>
+    selectedCategory === filterCategoryId;
 
   return (
     <section id="country-selector" className="py-8 border-b border-border/40">
-      <div className="md:container px-3">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-          {/* Countries */}
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2">
-              <Globe className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              <h2 className="text-xl md:text-2xl font-bold font-headline">
-                {t('home.selectCountry')}
-              </h2>
-            </div>
-            <Select value={selectedCountry} onValueChange={onCountryChange}>
-              <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder={t('home.selectCountryPlaceholder')} />
-              </SelectTrigger>
-              <SelectContent position="item-aligned">
-                {countries.map((country) => (
-                  <SelectItem key={country.id} value={country.id}>
-                    <div className="flex items-center gap-2">
-                      {country.countryCode ? (
-                        <CountryFlag country={country.countryCode} size={20} />
-                      ) : (
-                        <Globe className="h-5 w-5 text-muted-foreground" />
-                      )}
-                      <span>{country.name}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+      <div className="container px-4 space-y-10">
+        <BrowseWidgets
+          topVenues={topVenues}
+          newUpdates={newUpdates}
+          isLoading={isLoading}
+        />
 
-          {/* Cities */}
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2">
-              <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              <h2 className="text-xl md:text-2xl font-bold font-headline">
-                {t('home.selectCity')}
-              </h2>
-            </div>
-            <Select
-              value={selectedCity}
-              onValueChange={onCityChange}
-              disabled={!isCitySelectorEnabled}
-            >
-              <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
-                <SelectValue
-                  placeholder={
-                    isCitySelectorEnabled
-                      ? t('home.selectCityPlaceholder')
-                      : t('home.selectCityFirst')
-                  }
-                />
-              </SelectTrigger>
-              <SelectContent position="item-aligned">
-                {availableCities.map((city) => (
-                  <SelectItem key={city.id} value={city.id}>
-                    {city.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+        {/* Countries */}
+        <BrowseSection title={t("home.selectCountry")} icon={Globe}>
+          {BROWSE_COUNTRIES.map((country) => (
+            <BrowseCard
+              key={country.id}
+              name={country.name}
+              subtitle={getCountrySubtitle(country.name)}
+              imageUrl={country.imageUrl}
+              isSelected={selectedCountry === country.id}
+              href={`/countries/${getCountrySlug(country.id)}`}
+            />
+          ))}
+        </BrowseSection>
 
-          {/* Categories */}
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2">
-              <Music className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              <h2 className="text-xl md:text-2xl font-bold font-headline">
-                {t('home.entertainmentType')}
-              </h2>
-            </div>
-            <Select value={selectedCategory} onValueChange={onCategoryChange}>
-              <SelectTrigger className="h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder={t('home.selectType')} />
-              </SelectTrigger>
-              <SelectContent position="item-aligned">
-                {categories.map((category) => {
-                  const Icon = category.icon;
-                  const count =
-                    category.id === "all"
-                      ? stats?.total_venues ?? 0
-                      : categoryCounts[category.id] || 0;
-                  return (
-                    <SelectItem key={category.id} value={category.id}>
-                      <div className="flex items-center justify-between w-full gap-2">
-                        <div className="flex items-center gap-2">
-                          <Icon className="h-4 w-4" />
-                          <span>{category.name}</span>
-                        </div>
-                        {count > 0 && (
-                          <span className="text-muted-foreground text-sm">
-                            ({count})
-                          </span>
-                        )}
-                      </div>
-                    </SelectItem>
-                  );
-                })}
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
+        {/* Venue types */}
+        <BrowseSection title={t("browse.venueTypes")} icon={LayoutGrid}>
+          {VENUE_TYPE_GROUPS.map((group) => (
+            <BrowseCard
+              key={group.id}
+              name={group.name}
+              subtitle={group.description}
+              imageUrl={group.imageUrl}
+              isSelected={isVenueTypeSelected(group.filterCategoryId)}
+              href={`/categories/${getCategorySlug(group.filterCategoryId)}`}
+            />
+          ))}
+        </BrowseSection>
       </div>
     </section>
   );

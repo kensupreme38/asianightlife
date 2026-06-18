@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { CITY_SLUGS } from "@/lib/cities";
+import { COUNTRY_SLUGS } from "@/lib/countries";
+import { CATEGORY_SLUGS } from "@/lib/categories";
 import { GUIDE_SLUGS } from "@/lib/guides";
 import { TRAVEL_SLUGS } from "@/lib/travel-packages";
 import { getVenueUrl } from "@/lib/venue-url";
@@ -61,7 +63,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/guides",
     "/trips",
     "/dj",
+    "/about",
+    "/contact",
+    "/terms",
+    "/privacy",
+    "/booking-policy",
     ...CITY_SLUGS.map((s) => `/${s}`),
+    ...COUNTRY_SLUGS.map((s) => `/countries/${s}`),
+    ...CATEGORY_SLUGS.map((s) => `/categories/${s}`),
     ...GUIDE_SLUGS.map((s) => `/guides/${s}`),
     ...TRAVEL_SLUGS.map((s) => `/trips/${s}`),
   ];

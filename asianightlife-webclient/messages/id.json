@@ -176,6 +176,32 @@
     "relatedGuides": "Panduan Terkait",
     "readGuide": "Baca panduan"
   },
+  "browseLanding": {
+    "venuesIn": "Venue di {name}",
+    "citiesIn": "Jelajahi kota di {name}",
+    "browseByCountry": "Lihat per negara",
+    "categoryVenues": "Venue {name}",
+    "faqTitle": "FAQ Nightlife {name}",
+    "categoryFaq": "FAQ {name}"
+  },
+  "browse": {
+    "topVenues": "Venue Teratas",
+    "newUpdates": "Pembaruan Baru",
+    "community": "Komunitas",
+    "guides": "Panduan",
+    "compare": "Bandingkan",
+    "recentChanges": "Perubahan Terbaru",
+    "random": "Acak",
+    "telegram": "Telegram",
+    "buyBeer": "Traktir kami bir",
+    "noVenues": "Belum ada venue",
+    "cities": "Kota",
+    "venueTypes": "Jenis Venue"
+  },
+  "breadcrumbs": {
+    "countries": "Negara",
+    "categories": "Hiburan"
+  },
   "cities": {
     "title": "Jelajahi Nightlife per Kota",
     "subtitle": "Halaman kota dengan daftar venue terverifikasi",
@@ -252,6 +278,8 @@
     "entertainmentType": "Jenis Hiburan",
     "selectType": "Pilih jenis",
     "all": "Semua",
+    "comingSoon": "Segera hadir",
+    "clearFilters": "Hapus semua filter",
     "noVenuesFound": "Tidak ada tempat ditemukan",
     "tryAdjustingFilters": "Coba sesuaikan filter Anda untuk menemukan apa yang Anda cari.",
     "noVenuesAvailable": "Tidak ada tempat yang tersedia saat ini.",

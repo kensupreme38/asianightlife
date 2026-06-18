@@ -13,9 +13,7 @@ type HomeComponentProps = {
   selectedCity: string;
   selectedCategory: string;
   searchQuery: string;
-  onCountryChange: (country: string) => void;
-  onCityChange: (city: string) => void;
-  onCategoryChange: (category: string) => void;
+  onClearFilters?: () => void;
   onSearchChange: (query: string) => void;
 };
 
@@ -25,9 +23,7 @@ const HomeComponent = memo(
     selectedCity,
     selectedCategory,
     searchQuery,
-    onCountryChange,
-    onCityChange,
-    onCategoryChange,
+    onClearFilters,
     onSearchChange,
   }: HomeComponentProps) => {
     return (
@@ -40,19 +36,17 @@ const HomeComponent = memo(
           <section aria-label="Country and category selector">
             <CountrySelector
               selectedCountry={selectedCountry}
-              onCountryChange={onCountryChange}
               selectedCity={selectedCity}
-              onCityChange={onCityChange}
               selectedCategory={selectedCategory}
-              onCategoryChange={onCategoryChange}
             />
           </section>
-          <section aria-label="Venue listings">
+          <section id="venue-listings" aria-label="Venue listings">
             <VenueGrid
               selectedCountry={selectedCountry}
               selectedCity={selectedCity}
               selectedCategory={selectedCategory}
               searchQuery={searchQuery}
+              onClearFilters={onClearFilters}
             />
           </section>
           <CitiesSection />

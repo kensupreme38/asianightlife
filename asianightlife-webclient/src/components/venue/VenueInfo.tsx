@@ -5,6 +5,8 @@ import { MapPin, Clock, MessageCircle, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { BookingForm } from "@/components/venue/BookingForm";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 interface VenueInfoProps {
   venue: {
@@ -20,10 +22,12 @@ interface VenueInfoProps {
     description: string;
     amenities: string[];
     country: string;
+    updated_at?: string | null;
   };
 }
 
 export const VenueInfo = ({ venue }: VenueInfoProps) => {
+  const t = useTranslations();
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const isOpen = venue.status === "open";
 
@@ -66,6 +70,17 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
                 <MapPin className="h-4 w-4" />
                 <span>{venue.address}</span>
               </div>
+              {venue.updated_at && (
+                <span className="text-xs">
+                  {t("venue.lastUpdated", {
+                    date: new Date(venue.updated_at).toLocaleDateString(undefined, {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    }),
+                  })}
+                </span>
+              )}
             </div>
           </div>
 
@@ -74,6 +89,12 @@ export const VenueInfo = ({ venue }: VenueInfoProps) => {
               {venue.price}
             </div>
             <div className="text-sm text-muted-foreground">Starting price</div>
+            <Link
+              href="/booking-policy"
+              className="text-xs text-muted-foreground hover:text-primary underline mt-1 inline-block"
+            >
+              {t("footer.bookingPolicy")}
+            </Link>
           </div>
         </div>
 

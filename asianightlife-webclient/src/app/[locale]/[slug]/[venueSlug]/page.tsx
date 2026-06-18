@@ -1,9 +1,10 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import VenueDetailClient from "@/components/venue/VenueDetailClient";
 import { getCityByCode } from "@/lib/cities";
-import { resolveVenueBySlug } from "@/lib/venue-server";
+import { getCountryById } from "@/lib/countries";
+import { resolveVenueBySlug, resolveVenueRecordBySlug } from "@/lib/venue-server";
 import { getVenueUrl } from "@/lib/venue-url";
-import { generatePageMetadata } from "@/lib/seo";
+import { generatePageMetadata, privatePageRobots, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
 type Props = {
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return { title: "Not Found" };
 
   const v = await resolveVenueBySlug(venueSlug);
-  if (!v) return { title: "Venue not found" };
+  if (!v) return { title: "Venue not found", robots: privatePageRobots };
 
   const title = `${v.name} – ${v.category} in ${city.name} | Book Now | Asia Night Life`;
   const description =
@@ -47,6 +48,9 @@ export default async function CityVenuePage({ params }: Props) {
   const v = await resolveVenueBySlug(venueSlug);
   if (!v) notFound();
 
+  const venueRecord = await resolveVenueRecordBySlug(venueSlug);
+  if (!venueRecord) notFound();
+
   const canonicalPath = getVenueUrl({
     slug: v.pathSlug,
     name: v.name,
@@ -55,10 +59,10 @@ export default async function CityVenuePage({ params }: Props) {
   });
   const expectedPath = `/${slug}/${v.pathSlug}`;
   if (canonicalPath !== expectedPath) {
-    redirect(canonicalPath);
+    permanentRedirect(canonicalPath);
   }
 
-  const baseUrl = "https://asianightlife.sg";
+  const baseUrl = SITE_URL;
   const venueUrl = `${baseUrl}${canonicalPath}`;
 
   const venueLd = {
@@ -78,6 +82,8 @@ export default async function CityVenuePage({ params }: Props) {
     url: venueUrl,
   };
 
+  const country = getCountryById(v.country);
+
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -86,16 +92,71 @@ export default async function CityVenuePage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 2,
-        name: city.heroTitle,
-        item: `${baseUrl}/${city.slug}`,
+        name: "Countries",
+        item: `${baseUrl}/#country-selector`,
       },
-      { "@type": "ListItem", position: 3, name: v.name, item: venueUrl },
+      ...(country
+        ? [
+            {
+              "@type": "ListItem" as const,
+              position: 3,
+              name: country.name,
+              item: `${baseUrl}/countries/${country.slug}`,
+            },
+            {
+              "@type": "ListItem" as const,
+              position: 4,
+              name: v.name,
+              item: venueUrl,
+            },
+          ]
+        : [
+            {
+              "@type": "ListItem" as const,
+              position: 3,
+              name: v.name,
+              item: venueUrl,
+            },
+          ]),
+    ],
+  };
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `How do I book ${v.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Contact Asia Night Life via WhatsApp at +65 8266 8669 or use the booking form on this page. Our concierge confirms availability, packages and pricing within 15–30 minutes.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What is the price range at ${v.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: v.price
+            ? `Packages at ${v.name} typically start from ${v.price}. Final pricing depends on room type, date, time and group size.`
+            : `Pricing varies by room type and date. WhatsApp our concierge for the latest packages at ${v.name}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Where is ${v.name} located?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${v.name} is located at ${v.address ?? city.name}, ${v.country}.`,
+        },
+      },
     ],
   };
 
   return (
     <>
-      <VenueDetailClient id={venueSlug} cityCode={slug} />
+      <VenueDetailClient id={venueSlug} cityCode={slug} initialVenue={venueRecord} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(venueLd) }}
@@ -103,6 +164,10 @@ export default async function CityVenuePage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
     </>
   );

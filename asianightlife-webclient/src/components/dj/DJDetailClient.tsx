@@ -12,16 +12,19 @@ import { DJ } from "./DJCard";
 import { Link } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageBreadcrumbBar } from "@/components/layout/Breadcrumbs";
+import { djBreadcrumbs } from "@/lib/breadcrumbs";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { useMemo, useCallback } from "react";
 import { Separator } from "@/components/ui/separator";
+import { useTranslations } from "next-intl";
 
 interface DJDetailClientProps {
   id: string;
 }
 
 export default function DJDetailClient({ id }: DJDetailClientProps) {
+  const t = useTranslations();
   const [dj, setDJ] = useState<DJ & { user_id?: string } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasVoted, setHasVoted] = useState(false);
@@ -204,6 +207,12 @@ export default function DJDetailClient({ id }: DJDetailClientProps) {
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+      <PageBreadcrumbBar
+        items={djBreadcrumbs(dj, id, {
+          home: t("common.home"),
+          djs: t("common.djVoting"),
+        })}
+      />
       <main className="relative">
         {/* Hero Section with DJ Image */}
         <section className="relative w-full min-h-[60vh] md:min-h-[70vh] overflow-hidden">
@@ -222,17 +231,6 @@ export default function DJDetailClient({ id }: DJDetailClientProps) {
           </div>
           
           <div className="relative z-10 container px-3 py-8 md:py-12">
-            {/* Breadcrumb Navigation */}
-            <ScrollReveal animation="fade-up" delay={0} threshold={0.2}>
-              <Breadcrumbs 
-                items={[
-                  { label: 'Home', href: '/' },
-                  { label: 'DJs', href: '/dj' },
-                  { label: dj.name, href: `/dj/${id}` }
-                ]}
-              />
-            </ScrollReveal>
-            
             {/* Back Button */}
             <ScrollReveal animation="fade-up" delay={0} threshold={0.2}>
               <Button

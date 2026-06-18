@@ -163,6 +163,33 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Asia Night Life",
+              url: SITE_URL,
+              logo: `${SITE_URL}/logo.jpg`,
+              description: "Southeast Asia's trusted nightlife booking concierge",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+65-8266-8669",
+                contactType: "customer service",
+                availableLanguage: ["English", "Vietnamese", "Chinese", "Thai", "Korean", "Japanese"],
+                areaServed: ["SG", "VN", "TH", "MY"],
+              },
+              sameAs: [
+                "https://t.me/asianightlifeanl",
+                "https://youtube.com/@asianightlifeanl",
+                "https://www.instagram.com/asianightlife.sg",
+                "https://www.tiktok.com/@asianightlife.sg",
+                "https://www.facebook.com/profile.php?id=61581713529692",
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Asia Night Life Singapore",
               description: "Southeast Asia's leading nightlife booking platform",

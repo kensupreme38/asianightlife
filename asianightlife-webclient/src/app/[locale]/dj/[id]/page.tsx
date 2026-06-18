@@ -39,14 +39,32 @@ export async function generateMetadata({
       openGraph: {
         title: `${dj.name} - DJ Profile`,
         description: dj.bio || `View ${dj.name}'s DJ profile and vote`,
-        images: dj.image_url ? [dj.image_url] : undefined,
+        images: dj.image_url ? [dj.image_url] : ["/logo.jpg"],
         type: "profile",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `${dj.name} - DJ Profile`,
+        description: dj.bio || `View ${dj.name}'s DJ profile and vote`,
+        images: dj.image_url ? [dj.image_url] : ["/logo.jpg"],
       },
     };
   } catch (error) {
     return {
       title: "DJ Profile - Asia Night Life",
+      description: "Discover top DJs, view profiles, vote, and see rankings on Asia Night Life's DJ voting platform.",
       alternates: generateHreflangAlternates(path),
+      openGraph: {
+        title: "DJ Profile - Asia Night Life",
+        description: "Discover top DJs, view profiles, vote, and see rankings on Asia Night Life's DJ voting platform.",
+        images: ["/logo.jpg"],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "DJ Profile - Asia Night Life",
+        description: "Discover top DJs, view profiles, vote, and see rankings on Asia Night Life's DJ voting platform.",
+        images: ["/logo.jpg"],
+      },
     };
   }
 }

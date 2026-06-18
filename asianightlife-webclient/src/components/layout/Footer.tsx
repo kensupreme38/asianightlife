@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useTranslations } from 'next-intl';
 import { CITIES } from "@/lib/cities";
 import { CountryFlag } from "@/components/ui/country-flag";
+import { WHATSAPP_URL, TELEGRAM_URL } from "@/lib/constants";
 
 export const Footer = () => {
   const t = useTranslations();
@@ -46,7 +47,7 @@ export const Footer = () => {
   return (
     <footer className="border-t border-border/40 bg-secondary/20">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -104,7 +105,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-3">
               {/* WhatsApp */}
               <Link
-                href="https://api.whatsapp.com/send/?phone=6582668669&text&type=phone_number&app_absent=0"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
@@ -124,7 +125,7 @@ export const Footer = () => {
 
               {/* Telegram */}
               <Link
-                href="https://t.me/asianightlifeanl"
+                href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
@@ -170,6 +171,41 @@ export const Footer = () => {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Legal & Trust */}
+          <div>
+            <h3 className="font-semibold mb-4">{t('footer.legal').toUpperCase()}</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.about')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.contact')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/booking-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.bookingPolicy')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.terms')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.privacy')}
+                </Link>
+              </li>
+            </ul>
+            <p className="text-xs text-muted-foreground mt-4">
+              {t('footer.copyright', { year: new Date().getFullYear() })}
+            </p>
           </div>
         </div>
       </div>

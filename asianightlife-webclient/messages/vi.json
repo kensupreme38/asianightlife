@@ -111,7 +111,8 @@
     "premiumSound": "Âm thanh cao cấp",
     "vipRooms": "Phòng VIP",
     "cardPayment": "Thanh toán bằng thẻ",
-    "discover": "Khám phá {venueName} - {address}"
+    "discover": "Khám phá {venueName} - {address}",
+    "lastUpdated": "Cập nhật lần cuối: {date}"
   },
   "dj": {
     "title": "Bình chọn DJ",
@@ -172,7 +173,19 @@
     "exploreCities": "Khám phá Thành phố",
     "wikiGuides": "Wiki & Hướng dẫn Nightlife",
     "tripPackages": "Gói Bay + Nightlife",
-    "bookNow": "Đặt Ngay"
+    "bookNow": "Đặt Ngay",
+    "legal": "Pháp lý & Tin cậy",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ",
+    "bookingPolicy": "Chính sách đặt chỗ",
+    "terms": "Điều khoản",
+    "privacy": "Bảo mật",
+    "copyright": "© {year} Asia Night Life. Bảo lưu mọi quyền."
+  },
+  "trust": {
+    "needHelp": "Cần hỗ trợ đặt chỗ?",
+    "conciergeDesc": "Concierge WhatsApp hỗ trợ 24/7",
+    "whatsappMessage": "Xin chào Asia Night Life! Tôi muốn đặt chỗ nightlife."
   },
   "city": {
     "bookNow": "Đặt Ngay",
@@ -183,6 +196,32 @@
     "faqTitle": "FAQ Nightlife {city}",
     "relatedGuides": "Hướng dẫn liên quan",
     "readGuide": "Đọc hướng dẫn"
+  },
+  "browseLanding": {
+    "venuesIn": "Địa điểm tại {name}",
+    "citiesIn": "Khám phá thành phố tại {name}",
+    "browseByCountry": "Xem theo quốc gia",
+    "categoryVenues": "Địa điểm {name}",
+    "faqTitle": "FAQ Nightlife {name}",
+    "categoryFaq": "FAQ {name}"
+  },
+  "browse": {
+    "topVenues": "Top địa điểm",
+    "newUpdates": "Cập nhật mới",
+    "community": "Cộng đồng",
+    "guides": "Hướng dẫn",
+    "compare": "So sánh",
+    "recentChanges": "Thay đổi gần đây",
+    "random": "Ngẫu nhiên",
+    "telegram": "Telegram",
+    "buyBeer": "Mua bia cho team",
+    "noVenues": "Chưa có địa điểm",
+    "cities": "Thành phố",
+    "venueTypes": "Loại hình"
+  },
+  "breadcrumbs": {
+    "countries": "Quốc gia",
+    "categories": "Loại hình giải trí"
   },
   "cities": {
     "title": "Khám phá Nightlife theo Thành phố",
@@ -260,6 +299,8 @@
     "entertainmentType": "Loại giải trí",
     "selectType": "Chọn một loại",
     "all": "Tất cả",
+    "comingSoon": "Sắp ra mắt",
+    "clearFilters": "Xóa tất cả bộ lọc",
     "noVenuesFound": "Không tìm thấy địa điểm",
     "tryAdjustingFilters": "Thử điều chỉnh bộ lọc để tìm những gì bạn đang tìm kiếm.",
     "noVenuesAvailable": "Hiện tại không có địa điểm nào.",

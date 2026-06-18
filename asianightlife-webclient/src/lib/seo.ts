@@ -136,13 +136,13 @@ export function generatePageMetadata({
       siteName: "Asia Night Life",
       locale: localeToLanguage[locale] || locale,
       type: openGraph?.type || "website",
-      images: openGraph?.images || [],
+      images: openGraph?.images && openGraph.images.length > 0 ? openGraph.images : ["/logo.jpg"],
     },
     twitter: {
       card: twitter?.card || "summary_large_image",
       title: twitter?.title || title,
       description: twitter?.description || description,
-      images: twitter?.images || [],
+      images: twitter?.images && twitter.images.length > 0 ? twitter.images : ["/logo.jpg"],
     },
   };
 }

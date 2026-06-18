@@ -176,6 +176,32 @@
     "relatedGuides": "相关指南",
     "readGuide": "阅读指南"
   },
+  "browseLanding": {
+    "venuesIn": "{name} 的场所",
+    "citiesIn": "探索 {name} 的城市",
+    "browseByCountry": "按国家浏览",
+    "categoryVenues": "{name} 场所",
+    "faqTitle": "{name} 夜生活 FAQ",
+    "categoryFaq": "{name} FAQ"
+  },
+  "browse": {
+    "topVenues": "热门场所",
+    "newUpdates": "最新更新",
+    "community": "社区",
+    "guides": "指南",
+    "compare": "对比",
+    "recentChanges": "最近变更",
+    "random": "随机",
+    "telegram": "Telegram",
+    "buyBeer": "请我们喝啤酒",
+    "noVenues": "暂无场所",
+    "cities": "城市",
+    "venueTypes": "场所类型"
+  },
+  "breadcrumbs": {
+    "countries": "国家",
+    "categories": "娱乐类型"
+  },
   "cities": {
     "title": "按城市探索夜生活",
     "subtitle": "专属城市页面，含已验证场所列表",
@@ -252,6 +278,8 @@
     "entertainmentType": "娱乐类型",
     "selectType": "选择类型",
     "all": "全部",
+    "comingSoon": "即将推出",
+    "clearFilters": "清除所有筛选",
     "noVenuesFound": "未找到场所",
     "tryAdjustingFilters": "尝试调整您的筛选条件以找到您要找的内容。",
     "noVenuesAvailable": "目前没有可用的场所。",

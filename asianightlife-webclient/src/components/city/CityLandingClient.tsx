@@ -14,6 +14,8 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { CountryFlag } from "@/components/ui/country-flag";
 import { getImage } from "@/lib/placeholder-images";
+import { PageBreadcrumbBar } from "@/components/layout/Breadcrumbs";
+import { cityBreadcrumbs } from "@/lib/breadcrumbs";
 
 interface CityLandingClientProps {
   city: CityConfig;
@@ -34,6 +36,12 @@ export function CityLandingClient({ city }: CityLandingClientProps) {
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery="" onSearchChange={() => {}} />
+      <PageBreadcrumbBar
+        items={cityBreadcrumbs(city, {
+          home: t("common.home"),
+          countries: t("breadcrumbs.countries"),
+        })}
+      />
 
       <main id="main-content">
         {/* Hero */}

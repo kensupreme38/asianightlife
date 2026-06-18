@@ -1,4 +1,4 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { resolveVenueBySlug } from "@/lib/venue-server";
 import { getVenueUrl } from "@/lib/venue-url";
 
@@ -13,7 +13,7 @@ export default async function VenueDetailPage({ params }: VenueDetailPageProps) 
     notFound();
   }
 
-  redirect(
+  permanentRedirect(
     getVenueUrl({
       slug: v.pathSlug,
       name: v.name,

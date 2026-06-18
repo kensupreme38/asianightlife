@@ -1,8 +1,8 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { resolveVenueBySlug } from "@/lib/venue-server";
 import { getVenueUrl } from "@/lib/venue-url";
-import { generateHreflangAlternates } from "@/lib/seo";
+import { privatePageRobots, generateHreflangAlternates } from "@/lib/seo";
 
 type VenueDetailPageProps = {
   params: Promise<{ slug: string; locale: string }>;
@@ -15,7 +15,7 @@ export default async function VenueDetailPage({ params }: VenueDetailPageProps) 
     notFound();
   }
 
-  redirect(
+  permanentRedirect(
     getVenueUrl({
       slug: v.pathSlug,
       name: v.name,
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: VenueDetailPageProps): Promis
   const { slug, locale } = await params;
   const v = await resolveVenueBySlug(slug);
   if (!v) {
-    return { title: "Venue not found", alternates: generateHreflangAlternates(`/venue/${slug}`) };
+    return { title: "Venue not found", robots: privatePageRobots };
   }
 
   const canonicalPath = getVenueUrl({

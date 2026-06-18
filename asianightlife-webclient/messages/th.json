@@ -176,6 +176,32 @@
     "relatedGuides": "คู่มือที่เกี่ยวข้อง",
     "readGuide": "อ่านคู่มือ"
   },
+  "browseLanding": {
+    "venuesIn": "สถานที่ใน {name}",
+    "citiesIn": "สำรวจเมืองใน {name}",
+    "browseByCountry": "ดูตามประเทศ",
+    "categoryVenues": "สถานที่ {name}",
+    "faqTitle": "FAQ ไนท์ไลฟ์ {name}",
+    "categoryFaq": "FAQ {name}"
+  },
+  "browse": {
+    "topVenues": "สถานที่ยอดนิยม",
+    "newUpdates": "อัปเดตใหม่",
+    "community": "ชุมชน",
+    "guides": "คู่มือ",
+    "compare": "เปรียบเทียบ",
+    "recentChanges": "การเปลี่ยนแปลงล่าสุด",
+    "random": "สุ่ม",
+    "telegram": "Telegram",
+    "buyBeer": "เลี้ยงเบียร์",
+    "noVenues": "ยังไม่มีสถานที่",
+    "cities": "เมือง",
+    "venueTypes": "ประเภทสถานที่"
+  },
+  "breadcrumbs": {
+    "countries": "ประเทศ",
+    "categories": "ประเภทความบันเทิง"
+  },
   "cities": {
     "title": "สำรวจไนท์ไลฟ์ตามเมือง",
     "subtitle": "หน้าเมืองพร้อมรายการสถานที่ที่ verified",
@@ -252,6 +278,8 @@
     "entertainmentType": "ประเภทความบันเทิง",
     "selectType": "เลือกประเภท",
     "all": "ทั้งหมด",
+    "comingSoon": "เร็วๆ นี้",
+    "clearFilters": "ล้างตัวกรองทั้งหมด",
     "noVenuesFound": "ไม่พบสถานที่",
     "tryAdjustingFilters": "ลองปรับตัวกรองของคุณเพื่อค้นหาสิ่งที่คุณกำลังมองหา",
     "noVenuesAvailable": "ไม่มีสถานที่ที่พร้อมใช้งานในขณะนี้",

@@ -9,6 +9,8 @@ import { useAuth } from "@/contexts/auth-context";
 import { toast } from "@/hooks/use-toast";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { PageBreadcrumbBar } from "@/components/layout/Breadcrumbs";
+import { djIndexBreadcrumbs } from "@/lib/breadcrumbs";
 import { DJHeroBanner } from "./DJHeroBanner";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -162,6 +164,12 @@ export default function DJClient() {
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery="" onSearchChange={() => {}} />
+      <PageBreadcrumbBar
+        items={djIndexBreadcrumbs({
+          home: t("common.home"),
+          djs: t("common.djVoting"),
+        })}
+      />
       <main id="main-content">
         <section aria-label="DJ hero banner">
           <DJHeroBanner />

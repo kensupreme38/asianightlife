@@ -176,6 +176,32 @@
     "relatedGuides": "관련 가이드",
     "readGuide": "가이드 읽기"
   },
+  "browseLanding": {
+    "venuesIn": "{name}의 장소",
+    "citiesIn": "{name}의 도시 탐색",
+    "browseByCountry": "국가별 보기",
+    "categoryVenues": "{name} 장소",
+    "faqTitle": "{name} 나이트라이프 FAQ",
+    "categoryFaq": "{name} FAQ"
+  },
+  "browse": {
+    "topVenues": "인기 장소",
+    "newUpdates": "새 업데이트",
+    "community": "커뮤니티",
+    "guides": "가이드",
+    "compare": "비교",
+    "recentChanges": "최근 변경",
+    "random": "랜덤",
+    "telegram": "Telegram",
+    "buyBeer": "맥주 사주기",
+    "noVenues": "장소 없음",
+    "cities": "도시",
+    "venueTypes": "장소 유형"
+  },
+  "breadcrumbs": {
+    "countries": "국가",
+    "categories": "엔터테인먼트"
+  },
   "cities": {
     "title": "도시별 나이트라이프 탐색",
     "subtitle": "인증된 장소 목록이 있는 도시 페이지",
@@ -252,6 +278,8 @@
     "entertainmentType": "엔터테인먼트 유형",
     "selectType": "유형 선택",
     "all": "전체",
+    "comingSoon": "곧 출시",
+    "clearFilters": "모든 필터 지우기",
     "noVenuesFound": "장소를 찾을 수 없습니다",
     "tryAdjustingFilters": "필터를 조정하여 찾고 있는 것을 찾아보세요.",
     "noVenuesAvailable": "현재 사용 가능한 장소가 없습니다.",

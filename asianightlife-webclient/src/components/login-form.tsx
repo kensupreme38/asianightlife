@@ -18,13 +18,14 @@ import Image from "next/image"
 import { createClient } from "@/utils/supabase/client"
 import { useSearchParams } from "next/navigation"
 import { useLocale } from "next-intl"
+import { sanitizeAuthRedirect } from "@/lib/auth-redirect"
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   const searchParams = useSearchParams()
-  const redirect = searchParams?.get("redirect") || "/"
+  const redirect = sanitizeAuthRedirect(searchParams?.get("redirect") || "/")
   const locale = useLocale()
   const supabase = createClient()
   

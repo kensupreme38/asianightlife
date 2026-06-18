@@ -176,6 +176,32 @@
     "relatedGuides": "Связанные гиды",
     "readGuide": "Читать гид"
   },
+  "browseLanding": {
+    "venuesIn": "Заведения в {name}",
+    "citiesIn": "Города в {name}",
+    "browseByCountry": "По странам",
+    "categoryVenues": "Заведения: {name}",
+    "faqTitle": "FAQ: nightlife {name}",
+    "categoryFaq": "FAQ: {name}"
+  },
+  "browse": {
+    "topVenues": "Топ заведений",
+    "newUpdates": "Новые обновления",
+    "community": "Сообщество",
+    "guides": "Гайды",
+    "compare": "Сравнить",
+    "recentChanges": "Недавние изменения",
+    "random": "Случайное",
+    "telegram": "Telegram",
+    "buyBeer": "Угостить пивом",
+    "noVenues": "Пока нет заведений",
+    "cities": "Города",
+    "venueTypes": "Типы заведений"
+  },
+  "breadcrumbs": {
+    "countries": "Страны",
+    "categories": "Развлечения"
+  },
   "cities": {
     "title": "Nightlife по городам",
     "subtitle": "Страницы городов с проверенными заведениями",
@@ -252,6 +278,8 @@
     "entertainmentType": "Тип развлечения",
     "selectType": "Выберите тип",
     "all": "Все",
+    "comingSoon": "Скоро",
+    "clearFilters": "Сбросить все фильтры",
     "noVenuesFound": "Заведения не найдены",
     "tryAdjustingFilters": "Попробуйте настроить фильтры, чтобы найти то, что вы ищете.",
     "noVenuesAvailable": "В данный момент нет доступных заведений.",

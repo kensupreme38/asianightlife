@@ -30,5 +30,23 @@ export default async function TripPage({ params }: Props) {
   const { slug } = await params;
   const pkg = getTravelPackageBySlug(slug);
   if (!pkg) notFound();
-  return <TripDetailClient pkg={pkg} />;
+
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: pkg.title,
+    description: pkg.description,
+    author: { "@type": "Organization", name: "Asia Night Life" },
+    publisher: { "@type": "Organization", name: "Asia Night Life" },
+  };
+
+  return (
+    <>
+      <TripDetailClient pkg={pkg} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+    </>
+  );
 }

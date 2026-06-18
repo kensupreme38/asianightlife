@@ -111,7 +111,8 @@
     "premiumSound": "Premium Sound",
     "vipRooms": "VIP Rooms",
     "cardPayment": "Card Payment",
-    "discover": "Discover {venueName} - {address}"
+    "discover": "Discover {venueName} - {address}",
+    "lastUpdated": "Listing last updated: {date}"
   },
   "dj": {
     "title": "DJ Voting",
@@ -172,7 +173,19 @@
     "exploreCities": "Explore Cities",
     "wikiGuides": "Nightlife Wiki & Guides",
     "tripPackages": "Flight + Nightlife Packages",
-    "bookNow": "Book Now"
+    "bookNow": "Book Now",
+    "legal": "Legal & Trust",
+    "about": "About Us",
+    "contact": "Contact",
+    "bookingPolicy": "Booking Policy",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "copyright": "© {year} Asia Night Life. All rights reserved."
+  },
+  "trust": {
+    "needHelp": "Need help booking?",
+    "conciergeDesc": "Our WhatsApp concierge is available 24/7",
+    "whatsappMessage": "Hi Asia Night Life! I'd like help with a nightlife booking."
   },
   "city": {
     "bookNow": "Book Now",
@@ -183,6 +196,32 @@
     "faqTitle": "{city} Nightlife FAQ",
     "relatedGuides": "Related Guides",
     "readGuide": "Read guide"
+  },
+  "browseLanding": {
+    "venuesIn": "Venues in {name}",
+    "citiesIn": "Explore cities in {name}",
+    "browseByCountry": "Browse by country",
+    "categoryVenues": "{name} venues",
+    "faqTitle": "{name} Nightlife FAQ",
+    "categoryFaq": "{name} FAQ"
+  },
+  "browse": {
+    "topVenues": "Top Venues",
+    "newUpdates": "New Updates",
+    "community": "Community",
+    "guides": "Guides",
+    "compare": "Compare",
+    "recentChanges": "Recent Changes",
+    "random": "Random",
+    "telegram": "Telegram",
+    "buyBeer": "Buy us a beer",
+    "noVenues": "No venues yet",
+    "cities": "Cities",
+    "venueTypes": "Venue Types"
+  },
+  "breadcrumbs": {
+    "countries": "Countries",
+    "categories": "Entertainment"
   },
   "cities": {
     "title": "Explore Nightlife by City",
@@ -260,6 +299,8 @@
     "entertainmentType": "Entertainment Type",
     "selectType": "Select a type",
     "all": "All",
+    "comingSoon": "Coming soon",
+    "clearFilters": "Clear all filters",
     "noVenuesFound": "No venues found",
     "tryAdjustingFilters": "Try adjusting your filters to find what you're looking for.",
     "noVenuesAvailable": "No venues available at the moment.",

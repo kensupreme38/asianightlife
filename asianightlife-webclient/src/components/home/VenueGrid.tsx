@@ -17,6 +17,7 @@ interface VenueGridProps {
   selectedCity: string;
   selectedCategory: string;
   searchQuery: string;
+  onClearFilters?: () => void;
   /** City landing pages should not inherit ?page= from homepage navigation */
   ignoreUrlPage?: boolean;
 }
@@ -33,6 +34,7 @@ export const VenueGrid = ({
   selectedCity,
   selectedCategory,
   searchQuery,
+  onClearFilters,
   ignoreUrlPage = false,
 }: VenueGridProps) => {
   const t = useTranslations();
@@ -457,6 +459,28 @@ export const VenueGrid = ({
             <p className="mt-2 text-sm text-muted-foreground">
               {t('home.tryAdjustingFilters')}
             </p>
+            {(selectedCountry !== "all" ||
+              selectedCity !== "all" ||
+              selectedCategory !== "all" ||
+              searchQuery) && (
+              <div className="mt-4 flex flex-col items-center gap-3">
+                <p className="text-xs text-muted-foreground">
+                  {[
+                    selectedCountry !== "all" ? selectedCountry : null,
+                    selectedCity !== "all" ? selectedCity : null,
+                    selectedCategory !== "all" ? selectedCategory : null,
+                    searchQuery ? `"${searchQuery}"` : null,
+                  ]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </p>
+                {onClearFilters && (
+                  <Button variant="outline" size="sm" onClick={onClearFilters}>
+                    {t("home.clearFilters")}
+                  </Button>
+                )}
+              </div>
+            )}
           </div>
         )}
       </div>

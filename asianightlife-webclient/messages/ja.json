@@ -176,6 +176,32 @@
     "relatedGuides": "関連ガイド",
     "readGuide": "ガイドを読む"
   },
+  "browseLanding": {
+    "venuesIn": "{name}の会場",
+    "citiesIn": "{name}の都市を探索",
+    "browseByCountry": "国別に見る",
+    "categoryVenues": "{name}の会場",
+    "faqTitle": "{name}ナイトライフ FAQ",
+    "categoryFaq": "{name} FAQ"
+  },
+  "browse": {
+    "topVenues": "人気の会場",
+    "newUpdates": "新着情報",
+    "community": "コミュニティ",
+    "guides": "ガイド",
+    "compare": "比較",
+    "recentChanges": "最近の変更",
+    "random": "ランダム",
+    "telegram": "Telegram",
+    "buyBeer": "ビールをおごる",
+    "noVenues": "会場がありません",
+    "cities": "都市",
+    "venueTypes": "会場タイプ"
+  },
+  "breadcrumbs": {
+    "countries": "国",
+    "categories": "エンターテイメント"
+  },
   "cities": {
     "title": "都市別ナイトライフ",
     "subtitle": "認証済み会場リスト付きの都市ページ",
@@ -252,6 +278,8 @@
     "entertainmentType": "エンターテインメントタイプ",
     "selectType": "タイプを選択",
     "all": "すべて",
+    "comingSoon": "近日公開",
+    "clearFilters": "すべてのフィルターをクリア",
     "noVenuesFound": "会場が見つかりません",
     "tryAdjustingFilters": "フィルターを調整して、探しているものを見つけてください。",
     "noVenuesAvailable": "現在利用可能な会場はありません。",

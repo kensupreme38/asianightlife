@@ -83,6 +83,7 @@ export function generateDJSEOContent(
 }
 
 import type { CityConfig } from "./cities";
+import type { CountryConfig } from "./countries";
 
 /**
  * Generate SEO content for city landing pages
@@ -93,6 +94,18 @@ export function generateCitySEOContent(city: CityConfig): SEOContent {
     description: city.seoDescription,
     keywords: city.seoKeywords,
     heading: city.heroTitle,
+  };
+}
+
+/**
+ * Generate SEO content for country landing pages
+ */
+export function generateCountrySEOContent(country: CountryConfig): SEOContent {
+  return {
+    title: country.seoTitle,
+    description: country.seoDescription,
+    keywords: country.seoKeywords,
+    heading: country.heroTitle,
   };
 }
 

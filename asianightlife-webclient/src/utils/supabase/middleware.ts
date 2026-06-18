@@ -1,5 +1,21 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import {
+  loginPathForLocale,
+  sanitizeAuthRedirect,
+  splitLocalePath,
+} from "@/lib/auth-redirect";
+import { routing } from "@/i18n/routing";
+
+const DEFAULT_LOCALE = routing.defaultLocale;
+
+function redirectToLogin(request: NextRequest, pathname: string) {
+  const { locale, pathWithoutLocale } = splitLocalePath(pathname);
+  const url = request.nextUrl.clone();
+  url.pathname = loginPathForLocale(locale);
+  url.searchParams.set("redirect", sanitizeAuthRedirect(pathWithoutLocale));
+  return NextResponse.redirect(url);
+}
 
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
@@ -40,9 +56,7 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const pathname = request.nextUrl.pathname;
-  
-  // Remove locale prefix for route checking (e.g., /en/login -> /login)
-  const pathWithoutLocale = pathname.replace(/^\/(en|vi)/, '') || '/';
+  const { pathWithoutLocale } = splitLocalePath(pathname);
 
   // Các route public (không yêu cầu đăng nhập)
   const publicRoutes = ["/", "/login", "/auth", "/error"];
@@ -53,33 +67,39 @@ export async function updateSession(request: NextRequest) {
   // DJ routes - cho phép xem công khai, chỉ yêu cầu login cho profile management
   const isDJProfilePage = pathWithoutLocale.startsWith("/dj/profile/");
   const isDJViewPage =
-    pathWithoutLocale === "/dj" || (pathWithoutLocale.startsWith("/dj/") && !isDJProfilePage);
+    pathWithoutLocale === "/dj" ||
+    (pathWithoutLocale.startsWith("/dj/") && !isDJProfilePage);
 
   // Nếu route là public, /venue/[id], hoặc DJ view pages thì cho qua
   if (publicRoutes.includes(pathWithoutLocale) || isVenuePage || isDJViewPage) {
     return supabaseResponse;
   }
 
+  // Legacy/invalid employee login URL → login (guests) or /employee (signed in)
+  if (
+    pathWithoutLocale === "/employee/login" ||
+    pathWithoutLocale.startsWith("/employee/login/")
+  ) {
+    if (!user) {
+      return redirectToLogin(request, pathname);
+    }
+    const { locale } = splitLocalePath(pathname);
+    const url = request.nextUrl.clone();
+    url.pathname = locale === DEFAULT_LOCALE ? "/employee" : `/${locale}/employee`;
+    url.search = "";
+    return NextResponse.redirect(url);
+  }
+
   // Nếu route là DJ profile management (create/edit) => cần login
   if (isDJProfilePage && !user) {
-    const url = request.nextUrl.clone();
-    // Preserve locale in redirect
-    const locale = pathname.split('/')[1] || 'en';
-    url.pathname = `/${locale}/login`;
-    url.searchParams.set("redirect", pathname);
-    return NextResponse.redirect(url);
+    return redirectToLogin(request, pathname);
   }
 
   // Employee routes - yêu cầu đăng nhập
   const isEmployeeRoute =
     pathWithoutLocale === "/employee" || pathWithoutLocale.startsWith("/employee/");
   if (isEmployeeRoute && !user) {
-    const url = request.nextUrl.clone();
-    // Preserve locale in redirect
-    const locale = pathname.split('/')[1] || 'en';
-    url.pathname = `/${locale}/login`;
-    url.searchParams.set("redirect", pathname);
-    return NextResponse.redirect(url);
+    return redirectToLogin(request, pathname);
   }
 
   return supabaseResponse;

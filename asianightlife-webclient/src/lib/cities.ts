@@ -75,7 +75,7 @@ export const CITIES: CityConfig[] = [
   },
   {
     slug: "ho-chi-minh-city-nightlife",
-    code: "hcmc",
+    code: "ho-chi-minh-city",
     name: "Ho Chi Minh City",
     country: "Vietnam",
     countryCode: "vn",
@@ -229,7 +229,8 @@ export function getCityBySlug(slug: string): CityConfig | undefined {
 }
 
 export function getCityByCode(code: string): CityConfig | undefined {
-  return CITIES.find((c) => c.code === code);
+  const normalized = code === "hcmc" ? "ho-chi-minh-city" : code;
+  return CITIES.find((c) => c.code === normalized);
 }
 
 export function matchesCity(address: string, filterKey: string): boolean {

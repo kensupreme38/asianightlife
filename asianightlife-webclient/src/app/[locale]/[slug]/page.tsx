@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { CityLandingClient } from "@/components/city/CityLandingClient";
 import { CITY_SLUGS, getCityBySlug } from "@/lib/cities";
+import { getCountryById } from "@/lib/countries";
 import { staticParamsForSlugs } from "@/lib/i18n-static-params";
 import { generatePageMetadata } from "@/lib/seo";
 import { generateCitySEOContent } from "@/lib/seo-content";
@@ -64,12 +65,42 @@ export default async function CityLandingPage({ params }: Props) {
       }
     : null;
 
+  const country = getCountryById(city.country);
+
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-      { "@type": "ListItem", position: 2, name: city.heroTitle, item: pageUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Countries",
+        item: `${baseUrl}/#country-selector`,
+      },
+      ...(country
+        ? [
+            {
+              "@type": "ListItem" as const,
+              position: 3,
+              name: country.name,
+              item: `${baseUrl}/countries/${country.slug}`,
+            },
+            {
+              "@type": "ListItem" as const,
+              position: 4,
+              name: city.heroTitle,
+              item: pageUrl,
+            },
+          ]
+        : [
+            {
+              "@type": "ListItem" as const,
+              position: 3,
+              name: city.heroTitle,
+              item: pageUrl,
+            },
+          ]),
     ],
   };
 

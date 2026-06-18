@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { PageBreadcrumbBar } from "@/components/layout/Breadcrumbs";
+import { bookBreadcrumbs } from "@/lib/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 import {
@@ -82,7 +84,13 @@ export function BookingFunnelClient() {
   return (
     <div className="min-h-screen bg-background">
       <Header searchQuery="" onSearchChange={() => {}} />
-      <main className="container py-8 px-4 max-w-2xl">
+      <PageBreadcrumbBar
+        items={bookBreadcrumbs({
+          home: t("common.home"),
+          book: t("book.title"),
+        })}
+      />
+      <main id="main-content" className="container py-8 px-4 max-w-2xl">
         <h1 className="text-3xl font-bold font-headline mb-2 gradient-text">
           {t("book.title")}
         </h1>
