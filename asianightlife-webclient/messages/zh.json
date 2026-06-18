@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "首页",
+    "blog": "博客",
     "djVoting": "DJs (排名)",
     "employee": "ANL成员",
     "search": "搜索",
@@ -163,6 +164,7 @@
     "followUs": "在社交媒体上关注我们",
     "exploreCities": "探索城市",
     "wikiGuides": "夜生活百科与指南",
+    "blog": "夜生活博客",
     "tripPackages": "机票+夜生活套餐",
     "bookNow": "立即预订"
   },
@@ -218,6 +220,32 @@
     "needHelp": "需要预订帮助？",
     "conciergeDesc": "WhatsApp礼宾24/7在线",
     "exploreCity": "探索城市场所"
+  },
+  "blog": {
+    "title": "夜生活博客",
+    "subtitle": "亚洲夜生活场景的技巧、趋势、行程和内幕故事",
+    "read": "阅读",
+    "featured": "精选",
+    "allCategories": "全部",
+    "noPosts": "该分类暂无文章。",
+    "guidesCtaTitle": "需要更深入的指南？",
+    "guidesCtaDesc": "浏览夜生活百科 — KTV基础、城市指南和预订教程。",
+    "viewGuides": "查看百科与指南",
+    "byAuthor": "作者：{author}",
+    "tags": "标签",
+    "share": "分享",
+    "copyLink": "复制链接",
+    "linkCopied": "链接已复制！",
+    "relatedPosts": "相关文章",
+    "needHelp": "想规划你的夜晚？",
+    "conciergeDesc": "WhatsApp礼宾可帮您预订完美场所",
+    "exploreCity": "探索城市场所",
+    "categories": {
+      "tips": "技巧",
+      "trends": "趋势",
+      "itinerary": "行程",
+      "culture": "文化"
+    }
   },
   "trips": {
     "title": "机票+夜生活套餐",

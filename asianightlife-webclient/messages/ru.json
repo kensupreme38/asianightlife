@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "Главная",
+    "blog": "Блог",
     "djVoting": "DJs (рейтинг)",
     "employee": "Участники ANL",
     "search": "Поиск",
@@ -163,6 +164,7 @@
     "followUs": "Следите за нами в социальных сетях",
     "exploreCities": "Исследовать города",
     "wikiGuides": "Wiki и гиды по nightlife",
+    "blog": "Блог о nightlife",
     "tripPackages": "Пакеты перелёт + nightlife",
     "bookNow": "Забронировать"
   },
@@ -218,6 +220,32 @@
     "needHelp": "Нужна помощь с бронированием?",
     "conciergeDesc": "WhatsApp консьерж доступен 24/7",
     "exploreCity": "Смотреть заведения города"
+  },
+  "blog": {
+    "title": "Блог о nightlife",
+    "subtitle": "Советы, тренды, маршруты и истории из мира азиатского nightlife",
+    "read": "Читать",
+    "featured": "Избранное",
+    "allCategories": "Все",
+    "noPosts": "В этой категории пока нет статей.",
+    "guidesCtaTitle": "Нужны подробные гиды?",
+    "guidesCtaDesc": "Смотрите Wiki nightlife — основы KTV, гиды по городам и инструкции по бронированию.",
+    "viewGuides": "Wiki и гиды",
+    "byAuthor": "Автор: {author}",
+    "tags": "Теги",
+    "share": "Поделиться",
+    "copyLink": "Копировать ссылку",
+    "linkCopied": "Ссылка скопирована!",
+    "relatedPosts": "Похожие статьи",
+    "needHelp": "Хотите спланировать вечер?",
+    "conciergeDesc": "WhatsApp консьерж поможет забронировать идеальное место",
+    "exploreCity": "Смотреть заведения города",
+    "categories": {
+      "tips": "Советы",
+      "trends": "Тренды",
+      "itinerary": "Маршрут",
+      "culture": "Культура"
+    }
   },
   "trips": {
     "title": "Пакеты перелёт + nightlife",

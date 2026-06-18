@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "Trang chủ",
+    "blog": "Blog",
     "djVoting": "DJs (xếp hạng)",
     "employee": "Thành viên ANL",
     "search": "Tìm kiếm",
@@ -172,6 +173,7 @@
     "followUs": "Theo dõi chúng tôi trên mạng xã hội",
     "exploreCities": "Khám phá Thành phố",
     "wikiGuides": "Wiki & Hướng dẫn Nightlife",
+    "blog": "Blog Nightlife",
     "tripPackages": "Gói Bay + Nightlife",
     "bookNow": "Đặt Ngay",
     "legal": "Pháp lý & Tin cậy",
@@ -239,6 +241,32 @@
     "needHelp": "Cần hỗ trợ đặt chỗ?",
     "conciergeDesc": "WhatsApp concierge của chúng tôi hoạt động 24/7",
     "exploreCity": "Xem địa điểm thành phố"
+  },
+  "blog": {
+    "title": "Blog Nightlife",
+    "subtitle": "Mẹo, xu hướng, lịch trình và câu chuyện từ thế giới nightlife châu Á",
+    "read": "Đọc",
+    "featured": "Nổi bật",
+    "allCategories": "Tất cả",
+    "noPosts": "Chưa có bài viết trong danh mục này.",
+    "guidesCtaTitle": "Cần hướng dẫn chi tiết hơn?",
+    "guidesCtaDesc": "Xem Wiki Nightlife — cơ bản KTV, hướng dẫn theo thành phố và cách đặt chỗ.",
+    "viewGuides": "Xem Wiki & Hướng dẫn",
+    "byAuthor": "Bởi {author}",
+    "tags": "Thẻ",
+    "share": "Chia sẻ",
+    "copyLink": "Sao chép link",
+    "linkCopied": "Đã sao chép link!",
+    "relatedPosts": "Bài viết liên quan",
+    "needHelp": "Muốn lên kế hoạch đi chơi?",
+    "conciergeDesc": "WhatsApp concierge giúp bạn đặt địa điểm phù hợp",
+    "exploreCity": "Xem địa điểm thành phố",
+    "categories": {
+      "tips": "Mẹo",
+      "trends": "Xu hướng",
+      "itinerary": "Lịch trình",
+      "culture": "Văn hóa"
+    }
   },
   "trips": {
     "title": "Gói Bay + Nightlife",

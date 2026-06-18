@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "Beranda",
+    "blog": "Blog",
     "djVoting": "DJs (peringkat)",
     "employee": "Anggota ANL",
     "search": "Cari",
@@ -163,6 +164,7 @@
     "followUs": "Ikuti kami di media sosial",
     "exploreCities": "Jelajahi Kota",
     "wikiGuides": "Wiki & Panduan Nightlife",
+    "blog": "Blog Nightlife",
     "tripPackages": "Paket Penerbangan + Nightlife",
     "bookNow": "Pesan Sekarang"
   },
@@ -218,6 +220,32 @@
     "needHelp": "Butuh bantuan booking?",
     "conciergeDesc": "WhatsApp concierge kami tersedia 24/7",
     "exploreCity": "Jelajahi venue kota"
+  },
+  "blog": {
+    "title": "Blog Nightlife",
+    "subtitle": "Tips, tren, itinerary, dan cerita dari dunia nightlife Asia",
+    "read": "Baca",
+    "featured": "Unggulan",
+    "allCategories": "Semua",
+    "noPosts": "Belum ada artikel di kategori ini.",
+    "guidesCtaTitle": "Butuh panduan lebih mendalam?",
+    "guidesCtaDesc": "Jelajahi Wiki Nightlife — dasar KTV, panduan kota, dan cara booking.",
+    "viewGuides": "Lihat Wiki & Panduan",
+    "byAuthor": "Oleh {author}",
+    "tags": "Tag",
+    "share": "Bagikan",
+    "copyLink": "Salin tautan",
+    "linkCopied": "Tautan disalin!",
+    "relatedPosts": "Artikel Terkait",
+    "needHelp": "Ingin merencanakan malam Anda?",
+    "conciergeDesc": "WhatsApp concierge membantu memesan venue yang tepat",
+    "exploreCity": "Jelajahi venue kota",
+    "categories": {
+      "tips": "Tips",
+      "trends": "Tren",
+      "itinerary": "Itinerary",
+      "culture": "Budaya"
+    }
   },
   "trips": {
     "title": "Paket Penerbangan + Nightlife",

@@ -152,6 +152,7 @@ export const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   // Use useMemo to recreate links when translations change
   const primaryLinks = useMemo(() => [
     { href: "/", label: t('common.home') },
+    { href: "/blog", label: t('common.blog') },
     { href: "/dj", label: t('common.djVoting') },
     {
       href: "/employee",

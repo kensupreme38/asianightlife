@@ -38,6 +38,7 @@ export function Breadcrumbs({
     countries: t("breadcrumbs.countries"),
     categories: t("breadcrumbs.categories"),
     guides: t("guides.title"),
+    blog: t("blog.title"),
     trips: t("trips.title"),
     djs: t("common.djVoting"),
   };

@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "홈",
+    "blog": "블로그",
     "djVoting": "DJs (순위)",
     "employee": "ANL 멤버",
     "search": "검색",
@@ -163,6 +164,7 @@
     "followUs": "소셜 미디어에서 팔로우",
     "exploreCities": "도시 탐색",
     "wikiGuides": "나이트라이프 위키 & 가이드",
+    "blog": "나이트라이프 블로그",
     "tripPackages": "항공+나이트라이프 패키지",
     "bookNow": "지금 예약"
   },
@@ -218,6 +220,32 @@
     "needHelp": "예약 도움이 필요하신가요?",
     "conciergeDesc": "WhatsApp 컨시어지 24시간 운영",
     "exploreCity": "도시 장소 탐색"
+  },
+  "blog": {
+    "title": "나이트라이프 블로그",
+    "subtitle": "아시아 나이트라이프의 팁, 트렌드, 일정 및 인사이더 스토리",
+    "read": "읽기",
+    "featured": "추천",
+    "allCategories": "전체",
+    "noPosts": "이 카테고리에 아직 글이 없습니다.",
+    "guidesCtaTitle": "더 자세한 가이드가 필요하신가요?",
+    "guidesCtaDesc": "나이트라이프 위키 — KTV 기초, 도시 가이드, 예약 방법을 확인하세요.",
+    "viewGuides": "위키 & 가이드 보기",
+    "byAuthor": "작성: {author}",
+    "tags": "태그",
+    "share": "공유",
+    "copyLink": "링크 복사",
+    "linkCopied": "링크가 복사되었습니다!",
+    "relatedPosts": "관련 글",
+    "needHelp": "밤 외출을 계획하고 싶으신가요?",
+    "conciergeDesc": "WhatsApp 컨시어지가 완벽한 장소 예약을 도와드립니다",
+    "exploreCity": "도시 장소 탐색",
+    "categories": {
+      "tips": "팁",
+      "trends": "트렌드",
+      "itinerary": "일정",
+      "culture": "문화"
+    }
   },
   "trips": {
     "title": "항공+나이트라이프 패키지",

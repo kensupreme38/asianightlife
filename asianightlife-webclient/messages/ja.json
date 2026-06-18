@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "ホーム",
+    "blog": "ブログ",
     "djVoting": "DJs (ランキング)",
     "employee": "ANLメンバー",
     "search": "検索",
@@ -163,6 +164,7 @@
     "followUs": "ソーシャルメディアでフォロー",
     "exploreCities": "都市を探索",
     "wikiGuides": "ナイトライフWiki & ガイド",
+    "blog": "ナイトライフブログ",
     "tripPackages": "フライト+ナイトライフパッケージ",
     "bookNow": "今すぐ予約"
   },
@@ -218,6 +220,32 @@
     "needHelp": "予約のお手伝いが必要ですか？",
     "conciergeDesc": "WhatsAppコンシェルジュ24時間対応",
     "exploreCity": "都市の会場を見る"
+  },
+  "blog": {
+    "title": "ナイトライフブログ",
+    "subtitle": "アジアのナイトライフシーンからのヒント、トレンド、旅程、インサイダーストーリー",
+    "read": "読む",
+    "featured": "注目",
+    "allCategories": "すべて",
+    "noPosts": "このカテゴリにはまだ記事がありません。",
+    "guidesCtaTitle": "詳しいガイドをお探しですか？",
+    "guidesCtaDesc": "ナイトライフWiki — KTVの基礎、都市ガイド、予約方法をご覧ください。",
+    "viewGuides": "Wiki & ガイドを見る",
+    "byAuthor": "著者: {author}",
+    "tags": "タグ",
+    "share": "シェア",
+    "copyLink": "リンクをコピー",
+    "linkCopied": "リンクをコピーしました！",
+    "relatedPosts": "関連記事",
+    "needHelp": "夜の計画を立てたいですか？",
+    "conciergeDesc": "WhatsAppコンシェルジュが最適な会場の予約をお手伝いします",
+    "exploreCity": "都市の会場を見る",
+    "categories": {
+      "tips": "ヒント",
+      "trends": "トレンド",
+      "itinerary": "旅程",
+      "culture": "文化"
+    }
   },
   "trips": {
     "title": "フライト+ナイトライフパッケージ",

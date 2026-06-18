@@ -91,6 +91,7 @@ export const Footer = () => {
             </ul>
             <div className="mt-4 space-y-2 text-sm">
               <Link href="/guides" className="text-muted-foreground hover:text-primary block">{t('footer.wikiGuides')}</Link>
+              <Link href="/blog" className="text-muted-foreground hover:text-primary block">{t('footer.blog')}</Link>
               <Link href="/trips" className="text-muted-foreground hover:text-primary block">{t('footer.tripPackages')}</Link>
               <Link href="/book" className="text-muted-foreground hover:text-primary block">{t('footer.bookNow')}</Link>
             </div>

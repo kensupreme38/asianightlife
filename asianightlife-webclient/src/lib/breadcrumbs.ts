@@ -27,6 +27,9 @@ function resolveSegmentLabel(segment: string, parentSegment?: string): string {
   if (parentSegment === "guides") {
     return formatSlug(segment);
   }
+  if (parentSegment === "blog") {
+    return formatSlug(segment);
+  }
   if (parentSegment === "trips") {
     return formatSlug(segment);
   }
@@ -41,6 +44,7 @@ function resolveSegmentLabel(segment: string, parentSegment?: string): string {
   if (cityByCode) return cityByCode.name;
 
   if (segment === "guides") return "Guides";
+  if (segment === "blog") return "Blog";
   if (segment === "trips") return "Trips";
   if (segment === "dj") return "DJs";
   if (segment === "book") return "Book";
@@ -55,7 +59,7 @@ function resolveSegmentLabel(segment: string, parentSegment?: string): string {
 /** Build breadcrumb items from a pathname (locale-aware). */
 export function breadcrumbsFromPathname(
   pathname: string,
-  labels: { home: string; countries: string; categories: string; guides: string; trips: string; djs: string }
+  labels: { home: string; countries: string; categories: string; guides: string; blog: string; trips: string; djs: string }
 ): BreadcrumbItem[] {
   const paths = pathname.split("/").filter(Boolean);
   const result: BreadcrumbItem[] = [{ label: labels.home, href: "/" }];
@@ -79,6 +83,8 @@ export function breadcrumbsFromPathname(
       label = labels.categories;
     } else if (segment === "guides" && i < paths.length - 1) {
       label = labels.guides;
+    } else if (segment === "blog" && i < paths.length - 1) {
+      label = labels.blog;
     } else if (segment === "trips" && i < paths.length - 1) {
       label = labels.trips;
     } else if (segment === "dj" && i < paths.length - 1) {
@@ -151,6 +157,27 @@ export function guideBreadcrumbs(
     { label: labels.home, href: "/" },
     { label: labels.guides, href: "/guides" },
     { label: guide.title, href: `/guides/${guide.slug}` },
+  ];
+}
+
+export function blogIndexBreadcrumbs(labels: {
+  home: string;
+  blog: string;
+}): BreadcrumbItem[] {
+  return [
+    { label: labels.home, href: "/" },
+    { label: labels.blog, href: "/blog" },
+  ];
+}
+
+export function blogBreadcrumbs(
+  post: { title: string; slug: string },
+  labels: { home: string; blog: string }
+): BreadcrumbItem[] {
+  return [
+    { label: labels.home, href: "/" },
+    { label: labels.blog, href: "/blog" },
+    { label: post.title, href: `/blog/${post.slug}` },
   ];
 }
 

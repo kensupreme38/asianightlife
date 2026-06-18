@@ -1,6 +1,7 @@
 {
   "common": {
     "home": "Home",
+    "blog": "Blog",
     "djVoting": "DJs (ranking)",
     "employee": "ANL members",
     "search": "Search",
@@ -172,6 +173,7 @@
     "followUs": "Follow us on social media",
     "exploreCities": "Explore Cities",
     "wikiGuides": "Nightlife Wiki & Guides",
+    "blog": "Nightlife Blog",
     "tripPackages": "Flight + Nightlife Packages",
     "bookNow": "Book Now",
     "legal": "Legal & Trust",
@@ -239,6 +241,32 @@
     "needHelp": "Need help booking?",
     "conciergeDesc": "Our WhatsApp concierge is available 24/7",
     "exploreCity": "Explore city venues"
+  },
+  "blog": {
+    "title": "Nightlife Blog",
+    "subtitle": "Tips, trends, itineraries and insider stories from Asia's nightlife scene",
+    "read": "Read",
+    "featured": "Featured",
+    "allCategories": "All",
+    "noPosts": "No articles in this category yet.",
+    "guidesCtaTitle": "Looking for in-depth guides?",
+    "guidesCtaDesc": "Browse our Nightlife Wiki for KTV basics, city guides and booking how-tos.",
+    "viewGuides": "View Wiki & Guides",
+    "byAuthor": "By {author}",
+    "tags": "Tags",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "relatedPosts": "Related Articles",
+    "needHelp": "Want to plan your night out?",
+    "conciergeDesc": "Our WhatsApp concierge can help you book the perfect venue",
+    "exploreCity": "Explore city venues",
+    "categories": {
+      "tips": "Tips",
+      "trends": "Trends",
+      "itinerary": "Itinerary",
+      "culture": "Culture"
+    }
   },
   "trips": {
     "title": "Flight + Nightlife Packages",
