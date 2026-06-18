@@ -13,7 +13,7 @@ export interface TravelPackage {
 
 export const TRAVEL_PACKAGES: TravelPackage[] = [
   {
-    slug: "singapore-to-hcmc-nightlife-trip",
+    slug: "singapore-to-ho-chi-minh-city-nightlife-trip",
     title: "Singapore to Ho Chi Minh City Nightlife Trip",
     description:
       "Plan your Singapore to HCMC nightlife weekend — flights, best districts, KTV booking and travel tips.",
